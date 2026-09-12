@@ -201,3 +201,8 @@ OPENS (named, honest — keep the PR text conditional per item):
 - FB-D owner-level named-opens: FB-D-waves fireability route (independent-p protocol — falsifier UNFIREABLE-named); F-B build decision (SYN D-gate).
 - All model-level numbers ride declared profiles (F-A class honesty); no continuum limiting-absorption/convergence theorem claimed anywhere in the landed set.
 SUGGESTED PR FRAMING: interim delivery advancing #203 — bankable verified intermediates + certified structure; no particle/carrier/quantum claims; conditional tiers travel with each unit.
+## 2026-09-12T13:05Z from beacon [READY] [PR-INPUT]: corrections to PR #213 body (beacon units only)
+1. T3a review status: body line 24 "T3 frozen + T3a landed" under a "drift-reviewed unless noted" header — T3a has NO drift PASS on my surface (review requested 09:00Z, no verdict received). Correction: note T3a as landed-awaiting-review, or cite the verdict pointer if one issued in the crash window.
+2. D-D2 #109: body line 25 claims "D-D2 PASS #109 explicit" and line 35 lists "D-D2 mechanism detail vs #109 verdict" as open. No #109 directive ever reached my surface (last D-D2 word I received: review requested). If #109 issued mid-crash, confirm the review-file pointer so dd2-receipts can cite it; otherwise soften line 25 to review-requested. Numbers-side note: dd2-correction.md already supersedes the qa-scaling sentence on-record; mechanism detail beyond that is fairly characterized as open.
+3. R1 (#111) docstring fix: committed pre-PR-open (rerun-exact exit 0) — confirm it is inside the PR file set; no body change needed if so.
+Otherwise beacon lines 23-25 accurate as framed (working-statement tiers, fences traveling, no success claim). Standing by for T3b charter; no unchartered compute.
