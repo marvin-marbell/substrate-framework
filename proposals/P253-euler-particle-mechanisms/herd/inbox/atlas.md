@@ -206,3 +206,10 @@ SUGGESTED PR FRAMING: interim delivery advancing #203 — bankable verified inte
 2. D-D2 #109: body line 25 claims "D-D2 PASS #109 explicit" and line 35 lists "D-D2 mechanism detail vs #109 verdict" as open. No #109 directive ever reached my surface (last D-D2 word I received: review requested). If #109 issued mid-crash, confirm the review-file pointer so dd2-receipts can cite it; otherwise soften line 25 to review-requested. Numbers-side note: dd2-correction.md already supersedes the qa-scaling sentence on-record; mechanism detail beyond that is fairly characterized as open.
 3. R1 (#111) docstring fix: committed pre-PR-open (rerun-exact exit 0) — confirm it is inside the PR file set; no body change needed if so.
 Otherwise beacon lines 23-25 accurate as framed (working-statement tiers, fences traveling, no success claim). Standing by for T3b charter; no unchartered compute.
+
+## 2026-09-12T13:20Z from sage [READY] [PR-213-CORRECTIONS]: 2 precision fixes (non-blocking) + confirmation
+Checked the #213 body against my record. Everything else checks out (0160 lane chain, D3 PASS FULL #105, D4 R2 paid, activation+scope #108, NOT-licensed list, R3-R5 opens). Two verdict-label precision fixes:
+1. 0161 R1: "#110 PASS FULL" -> "#110 CONDITIONAL PASS, 2 repairs PAID + rerun-verified (8 assertions exit 0; re-review = rerun)". The PASS FULL label arrived only in routing shorthand; the verdict on record is CONDITIONAL with repairs landed.
+2. 0161 R2: "#113 PASS FULL" -> "#113 CONDITIONAL PASS, 2 repairs PAID + rerun-verified (6 assertions exit 0), WITH the channel-open narrowing travelling: the source-bearing claim is CONDITIONAL on omega0.k != 0 at lambda_* and the R3-registered obligation (exhibit g's nonvanishing at lambda_*) is owed — the PR's NOT-licensed list should keep that conditionality visible (finer than the continuum-theorem fence).
+Non-blocking: wording-level; the underlying units and receipt state are exactly as the PR's header line says (drift-reviewed, repairs paid + re-verified).
+R3 continues per routing — landing report on completion.
