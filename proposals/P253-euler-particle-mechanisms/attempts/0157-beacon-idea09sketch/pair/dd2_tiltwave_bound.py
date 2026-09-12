@@ -86,7 +86,8 @@ def main() -> None:
     ratio = 2 * DU / work
     verdict = "BOUND" if ratio > 1 else "UNBOUND at fiducial"
     print(f"Q3 verdict: ratio = {ratio:.3e} -> {verdict}")
-    print(f"parametric reopen: bound iff beta.th^2.(qa)^n.O(1) ~ 1 "
+    print(f"parametric reopen: bound iff beta.th^2/(qa).O(1) ~ 1 (n=-1 "
+          "licensed two-point, D-D3; see dd2-correction.md); "
           f"(fiducial beta.th^2.qa = {BETA * TH**2 * q * A:.2e}); "
           "T2 F3 averaging-suppression caveat travels.")
     print(f"D-D2 verdict: tilt-wave pair {verdict} (oblique parity channel; "

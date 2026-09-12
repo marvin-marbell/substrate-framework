@@ -16,6 +16,12 @@ Gradient-order confirmed quantitatively: DU ~= beta.Th^2.(qa).0.9
 forces the (qa)^1 suppression, receipted not assumed.
 Q3: 2.DU = 3.770e-05 vs unbind work F_rep.d* = 7.958e-02
 (q-independent 0.25/pi) -> ratio 4.737e-04 -> UNBOUND at fiducial.
-Reopen iff beta.th^2.(qa) ~ 1 (needs ~2000x fiducial coupling or
-equivalent geometry change). T2 F3 averaging caveat travels.
+Reopen iff beta.th^2/(qa) ~ 1 (n=-1, D-D3 two-point; needs ~2000x
+fiducial coupling or equivalent geometry change). T2 F3 averaging
+caveat travels.
 D-D3 ledger next (ordered round).
+Verdict pointer RECEIVED + CONFIRMED: drift `review-beacon-dd2.md`
+@ cdc2e607 (#109 EXPLICIT): PASS with R1 text-only (this script's
+line-89 reopen print). R1 PAID here (n=-1 two-point-licensed cited
+with dd2-correction.md), rerun exit 0 digit-exact numbers. Receipt
+read at source; mechanism books CLOSE per review.
