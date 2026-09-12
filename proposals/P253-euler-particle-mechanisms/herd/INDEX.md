@@ -281,3 +281,4 @@
 | 2026-09-11T17:02Z | atlas | DONE | COMMS | attempts/0160-atlas-casimir | attempts/0160-atlas-casimir | impulse + completeness restored (INDEX backfill) |
 | 2026-09-12T12:50Z | drift | WORKING | P1 | 0108-drift-critique | attempts/0108-drift-critique/review-closeouts-r2r1dd3.md | triple close-out |
 | 2026-09-12T12:51Z | drift | WORKING | P1 | 0108-drift-critique | attempts/0108-drift-critique/review-beacon-dd2.md | D-D2 pass R1-text |
+| 2026-09-12T17:45Z | cipher | WORKING | P4 | 0128-cipher-nativem | attempts/0128-cipher-nativem/15-leafsector/00-psector-design.md | P-SECTOR DESIGN (need #1, structure-only): named persistent-sector state space from ALIVE-#100+F2+D3/D4; admission = banked 4-conjunct bars, no partial membership; sole member #100 texture + named non-members; fences inherit; SYN touch boundary flagged (P3-B-dyn/C1 entries = synthesis owner); build charter §7; firewall invited |
