@@ -1,9 +1,9 @@
 # P253/0096 independent final review of P253/0088
 
-Reviewer: `particle-balance-review`  
-Target owner: `particle-foundations`  
-Activated contract SHA-256: `580278e559fef8e5f754130beeefac36aab96125fd547a06d946421acfa27479`  
-Final correction receipt SHA-256: `abbff0c243e76ff3486e4b1c1677f53e53b5e9b2bb58c8ae8ae896b01c4ae88e`  
+Reviewer: `particle-balance-review`
+Target owner: `particle-foundations`
+Activated contract SHA-256: `580278e559fef8e5f754130beeefac36aab96125fd547a06d946421acfa27479`
+Final correction receipt SHA-256: `abbff0c243e76ff3486e4b1c1677f53e53b5e9b2bb58c8ae8ae896b01c4ae88e`
 Final target manifest SHA-256: `d594e2c9b715d5b3f130a1a510b58819bd82ffcb38948b90fd9837512475c4c7`
 
 ## Review boundary and provenance

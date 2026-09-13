@@ -1,8 +1,8 @@
 # P253/0099 independent final review of P253/0097
 
-Reviewer: `particle-balance-review`  
-Target owner: `root`  
-Activated review README SHA-256: `4f727893fbf6ad13ce757c6b4bf43bf52a141449a38838f6cc9885b9999ea290`  
+Reviewer: `particle-balance-review`
+Target owner: `root`
+Activated review README SHA-256: `4f727893fbf6ad13ce757c6b4bf43bf52a141449a38838f6cc9885b9999ea290`
 Frozen target manifest SHA-256: `0fd97e6c7e452f0c5d590cdd447cae37ce182c7986b808ab7cb182893cd6a582`
 
 ## Boundary and provenance
