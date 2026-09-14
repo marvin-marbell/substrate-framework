@@ -1,0 +1,38 @@
+openwave-labs/openwave @ 55fcc168b347011ade787493d8aedf2d7bbbb442: their own form-level audit m5_32_r20_0_audit.py, executed in a clean clone on 2026-09-14T06:18:01Z
+Outcome: claims 1-2 (exact Hessians, gradients) all PASS in-clone; run stops at claim 3 on missing heavy array data/m5_32_r19_1/I1_un_single_d0_n32_g8.npz (regenerable, not git-tracked per REPRODUCE.md / _DATASETS.md convention).
+
+[   0.0s] claim 1: exact Hessians
+PASS A1_stack_s_minus_1_code_vacuum_and_C_p_are_the_power_sums_of_q: vac4 diag [8.0, 1.0, 0.3, 0.0], N spectrum [-8.0, 1.0, 0.3, 0.0], c4_of [-6.7, 65.09, -510.973, 4097.0081] vs power sums [-6.7, 65.09, -510.973, 4097.0081]
+PASS A1_stack_s_minus_1_V4_exact_hessian_equals_D_2JtJ_D_and_zero_off_the_diagonal_block: exact diag-block deviation zero True, off/cross max 0.0, rank 4, H_00 8462850.0
+PASS A1_stack_s_minus_1_V4_eigs_match_script_1e-8: own ['0.154824', '3.27711', '33.8029', '8.46288e+06'] vs script ['0.154824', '3.27711', '33.8029', '8.46288e+06'], rel 1.1e-12
+PASS A1_stack_s_minus_1_Vspec_exact_hessian_is_2Pprime2_diag_and_zero_off_the_diagonal_block: exact diag-block deviation zero True, off/cross max 0.0, diag ['714252', '79.38', '6.0761', '11.52']
+PASS A1_stack_s_minus_1_Vspec_diag_and_Pprime_match_script_1e-8: rel diag 4.8e-13, rel P' 0.0e+00
+PASS A1_report_s_plus_1_code_vacuum_and_C_p_are_the_power_sums_of_q: vac4 diag [-8.0, 1.0, 0.3, 0.0], N spectrum [8.0, 1.0, 0.3, 0.0], c4_of [9.3, 65.09, 513.027, 4097.0081] vs power sums [9.3, 65.09, 513.027, 4097.0081]
+PASS A1_report_s_plus_1_V4_exact_hessian_equals_D_2JtJ_D_and_zero_off_the_diagonal_block: exact diag-block deviation zero True, off/cross max 0.0, rank 4, H_00 8462850.0
+PASS A1_report_s_plus_1_V4_eigs_match_script_1e-8: own ['0.118566', '2.99756', '25.1242', '8.46289e+06'] vs script ['0.118566', '2.99756', '25.1242', '8.46289e+06'], rel 1.1e-12
+PASS A1_report_s_plus_1_Vspec_exact_hessian_is_2Pprime2_diag_and_zero_off_the_diagonal_block: exact diag-block deviation zero True, off/cross max 0.0, diag ['371867', '48.02', '5.22938', '11.52']
+PASS A1_report_s_plus_1_Vspec_diag_and_Pprime_match_script_1e-8: rel diag 4.8e-13, rel P' 2.1e-18
+PASS A2_author_numbers_reproduce_on_8_1_0.3_0_within_1e-4_and_NOT_on_-8_1_0.3_0: max rel dev on (8, 1, 0.3, 0) 7.2e-05; on (-8, 1, 0.3, 0) 0.92 (own (-8) numbers ['7.1425e+05', '79.38', '6.0761', '11.52'])
+PASS A2b_ledger_6.9_numbers_for_-g_1_delta_0_reproduce_within_1e-3: 714251 / 79.4 / 6.08 / 11.52 vs own, max rel dev 6.4e-04
+PASS A3_Pprime2_invariant_under_full_q_to_minus_q_but_not_under_a_single_root_flip: full reflection max rel change 0.0e+00; single flip q_0 -> -q_0 rel change 8634.13: the (8) vs (-8) sets are a SINGLE flip, so the invariance note does not identify them
+[  10.3s] claim 2: exact gradient
+PASS B1_exact_gradient_equals_2sym4_eta_P_Pprime_T_exactly: exact rel deviation 0.0 (scale 1.477e+05)
+PASS B2_mutants_eta_dropped_eta_right_factor_1_Pp_as_P_all_FAIL_by_more_than_1e-2: rel deviations eta_dropped 2.000, eta_right 0.156, factor_1 0.500, Pp_as_P 2.077
+PASS B3_transpose_omitted_is_NOT_a_failing_mutant_sym4_absorbs_it: rel deviation with the transpose omitted 0.0 (sym4(X^T) = sym4(X)): the class docstring's transpose is redundant, not load-bearing
+PASS B4_own_formula_complex_step_1e-12_on_a_random_field: worst rel 3.8e-15 over 8 directions, n 5
+PASS B5_shipped_vspec_energy_grad_matches_own_horner_formula_1e-12: grad rel 7.7e-16, E rel 2.5e-16
+[  11.9s] claim 3: gamma
+Traceback (most recent call last):
+  File "/tmp/openwave/openwave/xperiments/m5_liquid_crystal/research/scripts/m5_32_r20_0_audit.py", line 730, in <module>
+    main()
+  File "/tmp/openwave/openwave/xperiments/m5_liquid_crystal/research/scripts/m5_32_r20_0_audit.py", line 713, in main
+    out["claim3_gamma"] = audit_3(cls)
+                          ^^^^^^^^^^^^
+  File "/tmp/openwave/openwave/xperiments/m5_liquid_crystal/research/scripts/m5_32_r20_0_audit.py", line 446, in audit_3
+    M = np.load(RECORD_SINGLE)["M"]
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/openwave/openwave/xperiments/m5_liquid_crystal/research/scripts/../data/m5_32_r19_1/I1_un_single_d0_n32_g8.npz'
+[exit: 1]

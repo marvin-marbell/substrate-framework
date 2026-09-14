@@ -2,7 +2,7 @@
 description: "Referee verdict on the 2026-09-11 Newton sign-flip announcement (d186 comment 18406566, rev 294): no sign was flipped; form-level algebra verified, energy-level claim pending OpenWave R19-1"
 author: giuliano
 created: '2026-09-11'
-updated: '2026-09-12'
+updated: '2026-09-14'
 confidence: established
 status: active
 category: decisions
@@ -34,3 +34,34 @@ The auditee posted a pre-audit disclosure agreeing with the headline verdict; re
 - New oracle B10: the double-eps operator inc(h) = eps eps eta^{ar} d^b d^s h^{ct} equals +2 G^(1) exactly in Euclid and -2 G^(1) exactly in Lorentz (mostly-minus Ricci) - the identity's sign is signature-carried, a second instance of the flip; it is invariant under a global eps flip (not eps-fixable) and re-slotting destroys it.  The source's Lorentzian +2 pin needs the round291/rev-294 definition (D2 sharpened, still open).
 - D3 pinned at comment level: their 2mp counting reduces to the verified R^{3-2p} law at m = 1.
 - Blocked-on-artifact follow-ups formally requested: the G-02 source-contracted propagator (settles their sections 256/261 power-counting extension) and a Hamiltonian cross-term oracle (F_{mu nu} shape factors); both need the rev-294 bundle re-shared on #211.
+
+## Addendum 3 (2026-09-14 owner-directed extension: full discussion #186)
+
+Scope extended to all 41 top-level comments + 5 replies of discussion #186
+(four poster accounts, all agent-run) plus a packaging-for-review assessment
+of the two external repos.  Inventory: 665 atomic claim IDs vendored with
+verbatim thread sources (sources/claim-inventory/, sources/thread/).
+JarekDuda's side carries 48 claims labeled unverifiable (bundle not
+fetchable: the linked Zenodo record holds a PDF, none of the cited
+round-scripts) and 11 withdrawals; xrodz's side pins artifacts by SHA whose
+committed data matches every posted R20 number exactly.
+
+- New oracles B14-B18: mjmikulski 016 null-tilt family F identically zero
+  for every profile (nilpotency P^2 = (l^T eta l) P; commutator cancellation
+  by symmetric P-proportional products), spectrum pin at a*, V <= 2 Delta^2,
+  radial charge direction (hedgehog degree 1) - the "most serious result
+  against the framework" VERIFIES at the form level; Koide arithmetic exact
+  (0.666803 / 0.666661 both reproduce; canonical shape anchored at
+  Wikipedia); posted vacuum curvatures 371866.88 / 48.02 / 5.229 / 11.52 and
+  714251 / 79.4 / 6.08 / 11.52 are exact rationals 2 P'(q_i)^2; Derrick
+  virial reads exact; B18 artifact-consistency green on 25 energies + reads.
+- Extension tally: ALL 29 CHECKS PASS, ALL 9 MUTATIONS BREAK.  Combined
+  audit: 70 checks / 24 mutations, all green.
+- Packaging verdict: openwave HIGH (REPRODUCE.md task-doc convention,
+  AI_HYGIENE adversarial-audit rule, pre-reg -> PR -> blind-run history);
+  mjmikulski HIGH-MEDIUM (PR-per-report, review rounds, negatives recorded);
+  JarekDuda stack UNRESOLVABLE FROM THREAD (PDF-rev receipts, no links,
+  same-day rev churn, one comment lost items 2-3 in an HTML paste).
+- New debts D8-D12 recorded in audit.md Addendum 3 (ratio round-speak,
+  energy-Q naming hazard, unregenerated npz receipts, lost paste items,
+  self-reported withdrawal rate).

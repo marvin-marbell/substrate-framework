@@ -294,3 +294,137 @@ issue - a mechanical gap, recorded verbatim).
 
 Addendum-1 tally (superseded by Addendum 2): ALL 41 CHECKS PASS; ALL 15
 MUTATIONS BREAK.
+
+
+## Addendum 3: full-discussion claim inventory, packaging review, and new
+## oracle blocks (2026-09-14)
+
+Scope extension by owner direction (Dan, 2026-09-14, relayed; recorded on
+issue #211, comment 5659508492): beyond comment 18406566, validate the
+checkable claims of the FULL discussion #186 thread — all four posters —
+and assess how well the two external artifact repositories are packaged for
+review.  Method per the owner's standing rule (2026-08-10): oracles first,
+prose checked against oracle output; every number below was re-derived or
+artifact-checked before the prose was assessed.  The base audit's tally is
+unchanged; this addendum adds blocks B14-B18 (extension verifier
+`verify_d186_extension.py`).
+
+### A3.1 Claim inventory (the checkpoint)
+
+Verbatim per-poster thread sources are vendored under `sources/thread/`
+(41 top-level comments + 5 replies, 2026-08-29..2026-09-14, ~394 KB) and
+the atomic claim ledgers under `sources/claim-inventory/` (all MD5-pinned
+in `sources/MD5SUMS`):
+
+| Poster (agent-run accounts) | Units | Claim IDs | Self-status profile |
+|---|---|---|---|
+| JarekDuda ("audit stack": rev 626/663, round*.py bundles) | 19 + 3 replies | 305 | 11 withdrawn, 28 corrected, **48 labeled unverifiable (bundle not fetchable)** |
+| xrodz (OpenWave stack, rungs R3-R20) | 15 | 172 | 15 pre-registrations, 14 corrected, 3 withdrawn, 36 negative-results recorded as negatives |
+| vantasnerdan ("our side": 4 comments) | 4 | 188* | 87 substrate-canon citations (SF-artifact receipts), 59 in-thread assertions |
+| mjmikulski (reports 001-016 repo) | 3 | (included in *) | artifact-pinned to `mjmikulski/the-final-lagrangian-of-physics`, public repo, `reproduce.sh` per report |
+
+*the vantasnerdan and mjmikulski ledgers are one file
+(`vantasnerdan_mjmikulski_claims.json`); IDs are per-comment.
+
+Validation-route distribution of the inventory:
+
+1. **Already audited** — comment 18406566 and companions: C1-C13 and
+   addendum blocks of the base audit (unchanged).
+2. **Form-level checkable** — oracle-ized here as B14-B17 (below).
+3. **Lattice/numerical claims from the openwave side** — checked for
+   ARTIFACT CONSISTENCY against the pinned commit's committed data (B18);
+   no lattice rerun is claimed (AP-8/AP-14 discipline, D5 class).
+4. **Provenance claims** — the two repo pins resolve: cloned at the exact
+   SHAs cited in-thread (`55fcc168...` for openwave R20, `65c6177f` for
+   mjmikulski's ledger pin); the R20 pre-registration commit `5dd2cc04` is
+   an ancestor of the results commit with PR-reviewed history in between.
+5. **PDF-revision receipts without a fetchable link** — 48 JarekDuda-side
+   claims cite "rev 626/663, §§..." and "round606-round608 in the bundle"
+   with no URL; the only Zenodo record linked in that comment wave
+   (22736302) contains a single PDF and none of the cited scripts.
+   Labeled unverifiable from the thread; not verified by proxy.
+
+### A3.2 Packaging-for-review assessment (owner question)
+
+**openwave-labs/openwave — HIGH.**  Apache-2.0; `REPRODUCE.md` is a clean-
+clone front door with a single-source task-doc convention (task-id prefixes
+bind scripts/data/plots/findings to the regeneration commands); per-model
+roadmaps and a MODELS.md status matrix; `AI_HYGIENE.md` states the working
+contract ("a model's output is a draft or a hypothesis, never a result",
+with an adversarial-audit cardinal rule and per-claim
+CONFIRMED/REFUTED/QUALIFIED verdicts); git history shows the discipline
+operating (M8.10 pre-registration PR #546 -> blind run PR #547 -> merge;
+R20 landed on the xrodz branch at the pinned SHA).  Decisive check: **every
+number in the R20 results post [39] matches the committed
+`m5_32_r20_1_axes.json` at the pinned commit** - all 25 row energies to the
+quoted digits, the Koide read 0.380137, the AXES_DEGENERATE outcome and
+resolution 22.86, the g32 control 18.9631 vs record 18.970 (computed
+in-repo), winding degrees 1.0784/1.0615, string-tension reads 0.4221
+(S_d n64) and 0.0179/0.0144 (S_1), box increments +1.835/+20.141/+0.537,
+the virial range [14.45, 80.08] ("14 to 80"), S_1 R* in [14.53, 17.76]
+("13 to 18"), and saddle flags on all rows (B18).  Their own form-level
+audit `m5_32_r20_0_audit.py` (exact sympy Hessians by independent methods,
+with must-FAIL mutants) executes green in a clean clone for its claims 1-2
+(receipt: `attempts/0002/openwave_r20_0_audit_receipt.log`, 19 PASS lines)
+and stops at claim 3 on a heavy field array that is regenerable but not
+git-tracked (their documented `_DATASETS.md` convention) - claims 3-6 of
+that audit are therefore receipt-recorded, not re-executed here (D10).
+
+**mjmikulski/the-final-lagrangian-of-physics — HIGH-MEDIUM.**  Public
+throughout (comment [21] corrects the Zenodo report's "unavailable" note);
+`METHOD.md`, per-report directories with `reproduce.sh`, one PR per report
+with visible review rounds that narrowed wording (014 rounds 1-2: pair-law
+estimate withdrawn, collapse formula labelled an approximation), draft PR
+#25 for the 008 L-ladder whose partial table is exactly what comment [40]
+posts; negatives recorded as negatives ("a shortcut ... lands in a
+different static minimum, so it is recorded as a negative and not used").
+GPU legs are optional and flagged; PDFs on request.
+
+**JarekDuda stack — UNRESOLVABLE FROM THE THREAD.**  The load-bearing
+receipts of comments [34]/[37]/[38] are section numbers of PDF revisions
+(rev 626, 663) and script names "in the bundle", with no fetchable link in
+the thread; revisions churn same-day (626 -> 663 in three hours); comment
+[38] is a clipboard-HTML paste carrying `StartFragment` debris that **lost
+items 2 and 3 in transport** (independently confirmed by xrodz [39]: "the
+pasted body jumps from 1 to 4" - those two items remain unaddressed in the
+thread).  The self-contained mathematics in those comments IS checked here
+(B15, B16); the rest is labeled, not proxied.  The contrast with the two
+repo-backed stacks is the packaging answer in one line: two of the three
+stacks are reviewable at a pinned SHA; the third is not reviewable from
+anything the thread provides.
+
+### A3.3 New oracle blocks (extension verifier, ALL GREEN)
+
+| Block | Claim (source) | Independent route | Result |
+|---|---|---|---|
+| B14/C14a-c | mjmikulski 016 null-tilt family `N = C - a(r) l l^T eta`, `l = (1, n(x))` null: `F = [d_i N, d_j N] identically zero for EVERY profile a(r)` ([36], report 016 (i)) | nilpotency structure: `P^2 = (l^T eta l) P = 0`; `P dP_i = dP_i P = 0`; `dP_i dP_j - dP_j dP_i = 0` (P-proportional with symmetric coefficient - the actual cancellation mechanism); commutators verified with `a, a'` symbolic at a generic rational point | PASS (exact) |
+| B14/C14d-f | spectrum `(B, B)` plus roots of `lam^2 - (A+B) lam + AB + a(A-B)`; exactly `(E0, E1)` at `a* = (E1-B)(E0-B)/(E0+E1-2B)`; `V(a) <= 2 Delta^2` on `[0, a*]` (report 016 (ii)-(iii)) | exact charpoly factorization at rational values; symbolic `a*` pin; endpoint + no-interior-critical-point argument on the exact `V(a)` | PASS (exact) |
+| B14/C14g | "the charge (degree of the charge direction on spheres r > R) is 1" (report 016 (iii)) | numeric: E1-eigenvector spatial part radial to 2e-16 on 200 sampled directions - hedgehog structure survives; degree 1 under the stack's own `v1 -> x_hat` convention | PASS (numeric) |
+| B15/C15a-e | Koide arithmetic ([37]): `Q(1, 4.5, 162) = 0.666803`; "the measured 1 : 207 : 3477 gives 0.666661"; Q = 2/3 is one equation on three masses | canonical shape `Q = sum m / (sum sqrt m)^2` anchored at Wikipedia (Q_PDG = 0.66666446, m_tau prediction 1776.969): 0.666803385, 0.666660511 (older PDG m_tau = 1776.86 - the posted 0.666661), explicit two-parameter solution family | PASS (mpmath 40 digits) |
+| B16/C16a-d | xrodz [35]/[39]: four posted curvatures `371866.88 / 48.02 / 5.229 / 11.52` and `714251 / 79.4 / 6.08 / 11.52`; Hessian closed forms; branch distinguishability | exact sympy differentiation of `V_spec = tr P(N)^2` and `V4 = sum (tr N^p - C_p)^2` at `M_vac = diag(8, 1, 3/10, 0)` (rational delta = 3/10): the posted numbers are EXACT rationals `2 P'(q_i)^2` (truncated/rounded in posting); V4 Hessian = `D (2 J^T J) D` with `H_00 = 8462850`, conjugation-direction entries zero; single-root-flip probe distinguishes the branches | PASS (exact) |
+| B16/C16e | "ours ... 7e7 times stiffer ..., yours ... 7e4" ([35]) | exact spectra from the closed forms: V4 eigenvalue ratio 7.138e7, V_spec diagonal ratio 6.200e4 - order-of-magnitude round-speak | PASS as order-of-magnitude only (D8) |
+| B17/C17a-c | xrodz [39] + script docstring: virial `E_curv / V = 3` at the quartic + potential equilibrium; `R* = r (E_curv / 3V)^(1/4)` | exact algebra on `E = A/R + B R^3`: `R* = (A/3B)^(1/4)`, virial 3 at stationarity, estimator identity under `A = E_curv r`, `B = V/r^3` | PASS (exact) |
+| B18/C18a-i | artifact consistency of every posted R20 number (provenance grade) | vendored byte-exact `m5_32_r20_1_axes.json` at the pinned commit (MD5): 25 energies, reads, controls, labels (see A3.2) | PASS (consistency, not rerun) |
+
+**Tally (this addendum): ALL 29 CHECKS PASS; ALL 9 MUTATIONS BREAK**
+(`attempts/0002/full_run.log`, exit 0).  Combined audit: 70 checks / 24
+mutations, all green.
+
+### A3.4 New debts and notes
+
+| Debt | Content | Disposition |
+|---|---|---|
+| D8 | the Hessian-stiffness figures "7e7"/"7e4" ([35]) are order-of-magnitude speech for the exact 7.138e7 / 6.200e4 | recorded; exact pins required before any downstream use |
+| D9 | openwave's "Koide Q" on ENERGY triples (0.380137 committed) is the canonical Q shape applied to energies - scale-covariant, and not the lepton-mass statement; their own docstring marks it "a read, not a gate" | naming hazard only; no gate depends on it |
+| D10 | openwave heavy field arrays are regenerable but not git-tracked; their R20-0 audit claims 3-6 receipts were not re-executed here (claim 3 stops on the missing npz in a clean clone) | provenance_only; regeneration compute not spent in this audit |
+| D11 | comment [38] lost items 2 and 3 in an HTML clipboard paste; the thread never received them and R20 measured items 1 and 4 only | open on the JarekDuda side; re-post in plain markdown requested |
+| D12 | JarekDuda's in-thread self-report "roughly one conclusion in six has needed withdrawing" ([34]) is consistent with this inventory's WITHDR/C-CORR counts (11 withdrawn / 28 corrected of 305 IDs) but is HIS count, not audited here | context on reliability, source-asserted |
+
+### A3.5 What this addendum does NOT claim
+
+No lattice rerun of any openwave or mjmikulski computation was performed;
+B18 is byte-identity plus consistency of posted numbers with committed
+artifacts at pinned SHAs.  The unverifiable JarekDuda-side receipts remain
+labeled, per the base audit's D5 discipline.  No registry claims are
+proposed or changed; the extension touches only
+`proposals/P252-newton-sign-external-audit/**`.

@@ -1,0 +1,48 @@
+P252 Addendum 3 receipt: verify_d186_extension.py
+date: 2026-09-14T06:18:01Z
+env: python 3.12.3, sympy 1.14.0, numpy 1.26.4, mpmath 1.3.0
+modes: --verify and --mutate (full run)
+
+== CHECKS ==
+[PASS] B14_C14a_P_nilpotent_on_null_cone  (P^2 = (l^T eta l) P exactly; zero on the null cone l^T eta l = 0)
+[PASS] B14_C14b_tilt_jet_commutative_up_to_P  (P*dP_i = dP_i*P = 0; dP_i*dP_j - dP_j*dP_i = 0 (P-proportional with symmetric coefficient) at r=3)
+[PASS] B14_C14c_F_identity_zero_for_any_profile  ([d_i N, d_j N] = 0 identically in (a, a') at the generic point)
+[PASS] B14_C14d_spectrum_two_B_plus_pinned_quadratic  (charpoly = (lam - B)^2 (lam^2 - (A+B) lam + AB + a(A-B)))
+[PASS] B14_C14e_spectrum_exactly_vacuum_at_a_star  (quad(a*) - (lam - E0)(lam - E1) simplifies to 0)
+[PASS] B14_C14f_potential_bound_2Delta2_on_0_a_star  (V(0) = 2 Delta^2, V(a*) = 0, no interior critical point: max V = 2 Delta^2 exactly)
+[PASS] B14_C14g_charge_direction_stays_radial_degree_one  (|f(n).n| = 1 to machine precision on 200 sampled sphere directions: radial charge direction, hedgehog degree 1 under the stack's orientation convention (numeric))
+[PASS] B15_C15a_Q_one_4_5_162_is_0_666803  (Q = 0.666803385 vs posted 0.666803)
+[PASS] B15_C15b_Q_PDG2024_is_0_66666446  (Q = 0.666664463 vs Wikipedia 0.66666446(508))
+[PASS] B15_C15c_Q_PDG_pre2024_is_posted_0_666661  (Q = 0.666660511 vs posted 0.666661 (older m_tau))
+[PASS] B15_C15d_Q_two_thirds_predicts_mtau_1776_969  (m_tau = 1776.969 MeV)
+[PASS] B15_C15e_two_parameter_solution_family  (m3(m1, m2) explicit: the Q = 2/3 set is parametrised by two free masses)
+[PASS] B16_C16a_posted_curvatures_8_1_03_0_exact  (371866.88 / 48.02 / 5.229378 / 11.52 = 2 P'(q_i)^2 exactly)
+[PASS] B16_C16b_posted_curvatures_minus8_1_03_0_exact  (714251.52 / 79.38 / 6.076098 / 11.52 exact on the certified branch (posted rounded/truncated))
+[PASS] B16_C16c_V4_hessian_D_2JtJ_D_structure  (diagonal-direction block = D (2 J^T J) D at w = 1 (H_00 = 8462850); all conjugation-direction entries 0)
+[PASS] B16_C16d_single_root_flip_distinguishes_branches  (2 P'(q)^2 changes under q_0 -> -q_0 (the two posted quadruples))
+[PASS] B16_C16e_ratio_pins_order_of_magnitude_only  (V4 eig ratio 7.138e+07 (posted '7e7'); V_spec diag ratio 6.200e+04 (posted '7e4'): round-speak, not exact pins)
+[PASS] B17_C17a_stationary_radius_A_over_3B_quarter  (R* = (A / 3B)^(1/4))
+[PASS] B17_C17b_virial_E_curv_over_V_is_3_at_R_star  (E_curv / V = 3 exactly at the quartic + potential equilibrium)
+[PASS] B17_C17c_posted_R_star_estimator_exact_in_two_term_ansatz  (R* = r (E_curv / 3 V)^(1/4) is the exact A/3B radius under A = E_curv r, B = V / r^3)
+[PASS] B18_C18a_vendored_json_matches_recorded_md5  (md5 954879cf75fbcb89694811d9cb807464 of the byte-exact vendored copy at pin 55fcc168b347011ade787493d8aedf2d7bbbb442)
+[PASS] B18_C18b_all_25_posted_energies_in_committed_rows  (every posted table energy matches the committed row value)
+[PASS] B18_C18c_g32_control_and_R3_record  (committed 18.9631031 vs posted '18.963 vs 18.970')
+[PASS] B18_C18d_triple_reads_koide_outcome_resolution  (koide_Q 0.380137 (posted 0.38), outcome AXES_DEGENERATE)
+[PASS] B18_C18e_S1_winding_degree_1_08_1_06  (committed end degree 1.0786 / 1.0616)
+[PASS] B18_C18f_tension_reads_Sd_string_S1_not  (Sd(n64) 0.4221 (posted 0.42); S1 0.0179/0.0144 (posted 0.02/0.01))
+[PASS] B18_C18g_box_increments_1_8_20_1_0_5  (S1 1.835, Sd 20.141, S0 0.537)
+[PASS] B18_C18h_virial_14_to_80_and_S1_R_star_13_to_18  (virial range [14.45, 80.08] (posted '14 to 80'); S1 R* in [14.53, 17.76] (posted '13 to 18'))
+[PASS] B18_C18i_all_rows_saddle_along_boost_dressing  (committed saddle flags true on all 25 rows (posted claim 6))
+CHECKS: 29/29 PASS
+== MUTATIONS ==
+[BROKE] B14_M14a_spacelike_tilt_breaks_nilpotency_and_F0  (s^T eta s = -1: P_s^2 != 0 and [d_i N, d_j N] != 0)
+[BROKE] B14_M14b_a_shifted_off_star_loses_vacuum_spectrum  (quad(a* + 1/100) != (lam - E0)(lam - E1))
+[BROKE] B15_M15a_squared_mass_shape_fails_to_reproduce  ((sum m)^2/(3 sum m^2) = 0.356063: the inverted-algebra shape does NOT reproduce the posted values)
+[BROKE] B15_M15b_off_surface_triple_leaves_two_thirds  (Q(1, 4.5, 163) = 0.667476507 != 2/3)
+[BROKE] B16_M16a_wrong_branch_numbers_do_not_match  (code-branch Hessians differ from the certified quadruple)
+[BROKE] B16_M16b_eta_conjugation_dropped_breaks_V4_form  (without D = eta the closed form misses the exact Hessian on the eta_00 cross terms)
+[BROKE] B17_M17a_cubic_exponent_breaks_radius  (R* = (A/3B)^(1/3) is not a stationary point)
+[BROKE] B17_M17b_virial_1_breaks_equilibrium_claim  (E_curv / V = 1 is false at the stationary point)
+[BROKE] B18_M18a_recorded_hash_tamper_detected  (any byte flip breaks the recorded-md5 identity)
+MUTATIONS: 9/9 BREAK
+ALL 29 CHECKS PASS; ALL 9 MUTATIONS BREAK

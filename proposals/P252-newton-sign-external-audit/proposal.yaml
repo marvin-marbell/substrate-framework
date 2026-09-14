@@ -12,7 +12,10 @@ question: >-
   the winding-sector divergence scaling, the Weitzenbock zero-curvature
   structure with the Lorentzian cross-term flip, and the composition numbers;
   and what is the honest referee verdict on the announcement's headline
-  against the report's own content?
+  against the report's own content?  Owner-directed extension (2026-09-14,
+  issue #211 comment 5659508492): additionally validate the checkable claims
+  of the FULL discussion #186 thread from all four posters and assess how
+  well the two external artifact repositories are packaged for review.
 source_inventory:
   - source: >-
       substrate-framework discussion #186 comment 18406566 (JarekDuda,
@@ -51,6 +54,35 @@ source_inventory:
       not fetched; not load-bearing — the cross-term flip is audited directly
       at the Maurer-Cartan level with explicit generator matrices
     extracted: nothing beyond the comment's own summary
+  - source: >-
+      FULL discussion #186 thread (41 top-level comments + 5 replies by
+      JarekDuda, xrodz, vantasnerdan, mjmikulski, 2026-08-29..2026-09-14)
+    access: >-
+      in hand — verbatim per-poster markdown vendored under sources/thread/
+      (MD5SUMS pinned); atomic claim ledgers vendored under
+      sources/claim-inventory/ (665 claim IDs total)
+    extracted: >-
+      per-claim kind, self-status, artifact pin, and validation route;
+      correction/withdrawal edges; receipts fetchability classification
+  - source: >-
+      openwave-labs/openwave pinned at 55fcc168b347011ade787493d8aedf2d7bbbb442
+      (the R20 results commit cited by xrodz comments 35/39) and its R20
+      results data/m5_32_r20_1_axes.json (vendored byte-exact, MD5 pinned)
+    access: >-
+      in hand — cloned at the exact pinned commit; every posted R20 number
+      cross-checked against the committed rows (B18)
+    extracted: >-
+      energies, winding/tension/virial reads, Koide read, controls, and the
+      in-repo audit-script receipts
+  - source: >-
+      mjmikulski/the-final-lagrangian-of-physics pinned at 65c6177f (ledger
+      pin cited by comment 36), main branch for merged reports 014-016
+    access: >-
+      in hand — cloned; report 016 definitions (screened_infimum.py,
+      README) ground oracle block B14
+    extracted: >-
+      the null-tilt screening family statement, spectrum pin, potential
+      bound, and charge-degree claim
 invariants:
   - >-
     accepted release v0.183.0, governance/claims.yaml, and all canonical
