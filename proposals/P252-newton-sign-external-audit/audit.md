@@ -9,10 +9,14 @@ Source snapshot: `sources/comment-thread-snapshot.md` (verbatim jq extraction,
 MD5 in `sources/MD5SUMS`).
 
 Framing: per the referee template the report is the last artifact.  Every
-checkable claim below carries one independent oracle (derived from explicit
-generator matrices, static-source field equations, and direct differentiation -
-never from the source's own derivations) and one mutation that was observed to
-break.  Modes: `--verify` and `--mutate` of `verify_newton_sign_audit.py`.
+verified result in the original bounded audit is tied to an independent oracle
+(derived from explicit generator matrices, static-source field equations, and
+direct differentiation - never from the source's own derivations), and each
+executable oracle block carries a mutation suite observed to break its
+load-bearing assumptions.  Modes: `--verify` and `--mutate` of
+`verify_newton_sign_audit.py`.  Addendum 3 preserves a much larger discussion
+inventory and validates selected high-value claims; it is not an exhaustive
+oracle for every atomized line item.
 
 ## Headline verdict (claim C12)
 
@@ -27,8 +31,15 @@ frequency" is qualified in section 7: the clock turned out to be massless and
 the surviving finite frequency is omega = K/I with K topologically fixed - the
 clock survives by topological protection, not by energetic preference.  The
 announcement therefore does not resolve the two issues it names ("wrong Newton
-sign and diverging omega"): the sign was a sector-confusion artifact, and the
-frequency is the already-known topological-protection structure.
+sign and diverging omega"): the sign was a sector-confusion artifact, while
+the claimed gap derivation was withdrawn.  The remaining `omega = K/I` is a
+conditional split-vacuum statement; there is no mode at the degenerate vacuum,
+and the later thread withdraws 0.694 as a measurement on the tested field.
+The later OpenWave R19 pair experiment recorded in the full thread supplies the
+formerly pending energy-level read: the proposed boost-bilinear candidate is
+repulsive at every reported budget and box and is `CANDIDATE_REFUTED` under its
+pre-registered rule.  That later result reinforces, rather than repairs, the
+headline verdict.
 
 ## Claim ledger
 
@@ -110,34 +121,56 @@ MUTATIONS BREAK", exit 0 (main audit 37/13; addendum block B10 adds
    repel, spin-2 attract, with the Fourier kernel verified exactly off origin
    and numerically to ~1e-16; the spin-2 attraction independently reproduced
    through the linearized field-equation route.
-3. **C5, C6, C8 - VERIFIED (exact).**  The trace identity, the
-   eps-contraction vanishing (with a genuinely nonzero commutator contrast),
-   and the 1/d, 1/d^3, 1/d^5 multipole hierarchy all hold as stated.
+3. **C5, C6, C8 - VERIFIED at their stated general scope (exact).**  The trace
+   identity, the eps-contraction vanishing (with a genuinely nonzero
+   commutator contrast), and the generic 0/1/2-derivative multipole ladder
+   1/d, 1/d^3, 1/d^5 all hold.  They do not determine the range of the
+   report's concrete two-Goldstone vertex: Addendum 2/B12 instead verifies the
+   source's corrected spectral-density result 1/d^7, superseding its earlier
+   1/d^5 and 1/d^3 assignments for that vertex.
 4. **C9 - PARTIAL, sharpened by the addendum.**  The linearized Einstein
    tensor side is validated (pure-gauge annihilation, linearized Bianchi).
    Block B10 (addendum) proves the inc identity's sign is
-   signature-carried: +2 G^(1) in Euclid, -2 G^(1) in Lorentz, exactly;
-   the source's Lorentzian +2 pin needs its own operator definition
-   (D2).  The generic Derrick scaling law R^{3-2p} is verified exactly,
+   signature-carried: +2 G^(1) in Euclid, -2 G^(1) in Lorentz, exactly.  The
+   source subsequently confirmed its +2 script was three-dimensional
+   Euclidean by construction, closing D2 rather than leaving a Lorentzian
+   discrepancy.  The generic Derrick scaling law R^{3-2p} is verified exactly,
    and the source's 2mp counting reduces to it at m = 1 (B10/C12d, D3).
 5. **C11 - VERIFIED (numeric).**  The three EM mass fractions reproduce to
    better than 1% in the Z^2 liquid-drop convention and the 9.1x spread is
    right; the Z(Z-1) variant is excluded by the quoted numbers (mutation M13).
-6. **C12 - REFUTED AS STATED.**  Nothing was flipped.  The honest status of
-   "gravity from M5" after this report: the sign was never the obstruction;
-   range (Goldstone derivative coupling, 1/d^5 - and their own section 10
-   flags that this rests on power counting, not a computed propagator),
-   universality (any partial stress-tensor coupling is composition-dependent
-   and excluded far beyond Eotvos precision), and strength all remain failed,
-   and the energy-level static sign is an open, pre-registered test (R19-1).
+6. **C12 - REFUTED AS STATED.**  Nothing was flipped.  The integrated status
+   of "gravity from M5" after the later disclosures and full-thread evidence
+   is stronger than the initial review: the audited vertex has corrected range
+   1/d^7 (B12), universality and strength remain failed, and OpenWave R19-1
+   completed the formerly open energy-level test with a repulsive candidate,
+   `CANDIDATE_REFUTED` under the frozen gate.  None of these facts establishes
+   a Newton sector.
 
 ## Relation to framework canon
 
 No registry claims are proposed or changed.  P236 (two-clock GEM Newton) and
 P245 (nonlinear self-gravity) scopes are adjacent context and remain
-unchanged.  If the framework later engages the EH-analogue term
-(M . inc M) or the boost-bilinear coupling, that work must first pin the
-rev-294 conventions (D2/D3) and run under its own preregistration.
+unchanged.  The most consequential external comparison is with the accepted
+P249/P250 completion:
+
+- mjmikulski report 016's null-tilt family is a genuine form-level obstruction
+  for a free time axis with an action built only from `F` and the spectrum: it
+  keeps `F = 0`, restores the vacuum spectrum, preserves the radial degree, and
+  drives the fixed-charge infimum to zero.  It exposes why P249's constrained
+  auxiliary orthonormal frame is load-bearing.  It does not refute
+  C-M5C-001..004, whose accepted hypotheses quotient that frame and declare
+  only the six spatial tensor components plus the complex scalar physical.
+- OpenWave's R13-W/R20 failures live on its certified 4x4 action.  They do not
+  refute P250's `C-M5W-001..008`, which use the separate C-M5C-001 positive
+  completion and distinguish an exact phase-decoupling/bookkeeping theorem,
+  a numerically constructed slice wall and bag family, and an explicitly
+  reduced radial saddle.  Conversely, P249/P250 do not validate a clock or
+  Newton sector on OpenWave's action.
+
+Any future framework use of `M . inc M` or the boost-bilinear coupling still
+needs its own declared action and preregistered consumer-level test; D2 itself
+is closed by the source's Euclidean-scope correction.
 
 ## Addendum: disclosure received during the audit window (2026-09-12)
 
@@ -193,7 +226,8 @@ pending rev-294 text.  Processing of the disclosure:
    (B10/M1).  The source's Lorentzian +2 pin consequently requires the
    round291/rev-294 operator definition; both parallel efforts are
    internally consistent and no error is derivable from the comment alone
-   (D2 stays open, sharpened).
+   (This was the Addendum-1 state; Addendum 2 supersedes it and closes D2 after
+   the source identified its script as Euclidean by construction.)
 5. **2mp counting pin (D3, resolved at comment level).**  The disclosure
    states the counting (m = 1, p = 1, 2mp = 2 < 3, divergent), which
    reduces to this audit's verified generic Derrick law R^{3-2p} at m = 1
@@ -213,9 +247,10 @@ pending rev-294 text.  Processing of the disclosure:
 - G-02 source-contracted propagator: DELIVERED by the auditee (rev 328
   section 277, U ~ 1/d^7) and independently verified in B12 - see
   Addendum 2.
-- Hamiltonian cross-term oracle: PARTIALLY delivered (B11, quadratic-form
-  level with rational textures); the full R-decomposition version still
-  needs the section 254 definitions from the rev bundle.
+- Hamiltonian cross-term request: B11 supplies a separate commutator
+  quadratic-form witness with rational textures.  It does not verify the
+  report's full R-decomposition or its energy/force conclusion; those remain
+  dependent on the section 254 definitions and the consumer-level pair test.
 
 The rev-294/328 bundle remains unfetchable (the auditee cannot push or
 attach; a mechanical gap).  Everything self-contained in the inline
@@ -256,7 +291,7 @@ issue - a mechanical gap, recorded verbatim).
    1/d^3 case is B6.  The vertex identification itself remains
    source-asserted (debt D4 class).  Net effect per the disclosure: each
    correction moved the range FURTHER from Newton.
-3. **Hamiltonian cross-term - partial delivery (B11).**  For the
+3. **Hamiltonian cross-term - bounded witness only (B11).**  For the
    quadratic form of F_{mu nu} = [d_mu M, d_nu M] with a fixed spectrum
    and rotating orientation (a diagonal M would commute with its own
    derivatives - F = 0 identically - so the orientation texture is the
@@ -265,7 +300,9 @@ issue - a mechanical gap, recorded verbatim).
    block carries the Lorentzian relative minus exactly
    (Q_Lorentz = Q_Euclid - 4 x boosts on an exact rational witness).  The
    full R-decomposition claim remains the report's section 254.6
-   conjecture; the attraction verdict stays with R19-1.
+   conjecture.  B11 therefore does not deliver the requested Hamiltonian
+   oracle; the later R19-1 pair experiment supplies the relevant candidate
+   outcome and finds repulsion.
 4. **Disclosure spot checks (B13) - all verify.**  Section 309: the
    clock's inertia is exactly ||[zeta, M]||^2 = 2 (lambda3 - lambda2)^2,
    so omega = K/I DIVERGES as the splitting closes and a charged clock is
@@ -296,25 +333,26 @@ Addendum-1 tally (superseded by Addendum 2): ALL 41 CHECKS PASS; ALL 15
 MUTATIONS BREAK.
 
 
-## Addendum 3: full-discussion claim inventory, packaging review, and new
+## Addendum 3: discussion inventory, packaging review, and selected new
 ## oracle blocks (2026-09-14)
 
 Scope extension by owner direction (Dan, 2026-09-14, relayed; recorded on
-issue #211, comment 5659508492): beyond comment 18406566, validate the
-checkable claims of the FULL discussion #186 thread — all four posters —
-and assess how well the two external artifact repositories are packaged for
-review.  Method per the owner's standing rule (2026-08-10): oracles first,
-prose checked against oracle output; every number below was re-derived or
-artifact-checked before the prose was assessed.  The base audit's tally is
-unchanged; this addendum adds blocks B14-B18 (extension verifier
-`verify_d186_extension.py`).
+issue #211, comment 5659508492): beyond comment 18406566, preserve and
+inventory the full discussion #186 source surface — all four posters —,
+validate selected load-bearing self-contained claims, and assess how well the
+two external artifact repositories are packaged for review.  Method per the
+owner's standing rule (2026-08-10): oracles first, prose checked against oracle
+output.  The base audit's tally is unchanged; this addendum adds selected
+blocks B14-B18 (`verify_d186_extension.py`).  It does not claim exhaustive
+validation of all 665 atomized assertions.
 
 ### A3.1 Claim inventory (the checkpoint)
 
 Verbatim per-poster thread sources are vendored under `sources/thread/`
 (41 top-level comments + 5 replies, 2026-08-29..2026-09-14, ~394 KB) and
 the atomic claim ledgers under `sources/claim-inventory/` (all MD5-pinned
-in `sources/MD5SUMS`):
+in `sources/MD5SUMS`).  The source snapshot is complete; the claim ledgers
+cover all 41 top-level comments and three of the five replies:
 
 | Poster (agent-run accounts) | Units | Claim IDs | Self-status profile |
 |---|---|---|---|
@@ -325,19 +363,27 @@ in `sources/MD5SUMS`):
 
 *the vantasnerdan and mjmikulski ledgers are one file
 (`vantasnerdan_mjmikulski_claims.json`); IDs are per-comment.
+The two JarekDuda replies `[12.r0]` and `[12.r1]` embedded in `xrodz.md` are
+vendored verbatim but explicitly excluded from both authors' atomic ledgers;
+their non-atomized status is frontier rather than hidden completion.
 
-Validation-route distribution of the inventory:
+Validation-route distribution of the reviewed subset:
 
 1. **Already audited** — comment 18406566 and companions: C1-C13 and
    addendum blocks of the base audit (unchanged).
-2. **Form-level checkable** — oracle-ized here as B14-B17 (below).
-3. **Lattice/numerical claims from the openwave side** — checked for
+2. **Selected load-bearing form-level claims** — oracle-ized here as B14-B17
+   (below); other `checkable_here=true` ledger entries retain their named route
+   and are not promoted to verified by this addendum.
+3. **Selected R20 numerical claims from the openwave side** — checked for
    ARTIFACT CONSISTENCY against the pinned commit's committed data (B18);
    no lattice rerun is claimed (AP-8/AP-14 discipline, D5 class).
 4. **Provenance claims** — the two repo pins resolve: cloned at the exact
-   SHAs cited in-thread (`55fcc168...` for openwave R20, `65c6177f` for
-   mjmikulski's ledger pin); the R20 pre-registration commit `5dd2cc04` is
-   an ancestor of the results commit with PR-reviewed history in between.
+   SHAs cited in-thread (`55fcc168...` for openwave R20 and `65c6177f` for
+   mjmikulski's older 001-013 ledger).  Reports 014-016 are pinned separately
+   to repository snapshot `210bbff25f71d5078d11bbd0a9e212d59d6f3f71`
+   at comment [36] time; report 016 last changed at `112bd1e04ede...`.  The
+   R20 pre-registration commit `5dd2cc04` is an ancestor of the results commit
+   with PR-reviewed history in between.
 5. **PDF-revision receipts without a fetchable link** — 48 JarekDuda-side
    claims cite "rev 626/663, §§..." and "round606-round608 in the bundle"
    with no URL; the only Zenodo record linked in that comment wave
@@ -364,11 +410,15 @@ in-repo), winding degrees 1.0784/1.0615, string-tension reads 0.4221
 the virial range [14.45, 80.08] ("14 to 80"), S_1 R* in [14.53, 17.76]
 ("13 to 18"), and saddle flags on all rows (B18).  Their own form-level
 audit `m5_32_r20_0_audit.py` (exact sympy Hessians by independent methods,
-with must-FAIL mutants) executes green in a clean clone for its claims 1-2
-(receipt: `attempts/0002/openwave_r20_0_audit_receipt.log`, 19 PASS lines)
-and stops at claim 3 on a heavy field array that is regenerable but not
-git-tracked (their documented `_DATASETS.md` convention) - claims 3-6 of
-that audit are therefore receipt-recorded, not re-executed here (D10).
+with must-FAIL mutants) has a committed clean-clone receipt recording 19 PASS
+lines for claims 1-2, then stops at claim 3 on a heavy field array that is
+regenerable but not git-tracked
+(`attempts/0002/openwave_r20_0_audit_receipt.log`; their documented
+`_DATASETS.md` convention).  A merger-review clean clone in the framework
+environment lacked `matplotlib` and stopped before those checks, so this audit relies
+on its independent B16 algebra plus the preserved receipt, not on a second
+claim of full source-script reproduction.  Claims 3-6 remain receipt-recorded,
+not re-executed here (D10).
 
 **mjmikulski/the-final-lagrangian-of-physics — HIGH-MEDIUM.**  Public
 throughout (comment [21] corrects the Zenodo report's "unavailable" note);
@@ -397,18 +447,19 @@ anything the thread provides.
 
 | Block | Claim (source) | Independent route | Result |
 |---|---|---|---|
-| B14/C14a-c | mjmikulski 016 null-tilt family `N = C - a(r) l l^T eta`, `l = (1, n(x))` null: `F = [d_i N, d_j N] identically zero for EVERY profile a(r)` ([36], report 016 (i)) | nilpotency structure: `P^2 = (l^T eta l) P = 0`; `P dP_i = dP_i P = 0`; `dP_i dP_j - dP_j dP_i = 0` (P-proportional with symmetric coefficient - the actual cancellation mechanism); commutators verified with `a, a'` symbolic at a generic rational point | PASS (exact) |
+| B14/C14a-c | mjmikulski 016 null-tilt family `N = C - a(r) l l^T eta`, `l = (1, n(x))` null: `F = [d_i N, d_j N] identically zero for EVERY profile a(r)` ([36], report 016 (i)) | nilpotency structure: `P^2 = (l^T eta l) P = 0`; `P dP_i = dP_i P = 0`; `dP_i dP_j - dP_j dP_i = 0` (P-proportional with symmetric coefficient - the actual cancellation mechanism), verified as coordinate identities on `r > 0`; the commutator follows coefficient-by-coefficient for symbolic `a, a'` | PASS (exact) |
 | B14/C14d-f | spectrum `(B, B)` plus roots of `lam^2 - (A+B) lam + AB + a(A-B)`; exactly `(E0, E1)` at `a* = (E1-B)(E0-B)/(E0+E1-2B)`; `V(a) <= 2 Delta^2` on `[0, a*]` (report 016 (ii)-(iii)) | exact charpoly factorization at rational values; symbolic `a*` pin; endpoint + no-interior-critical-point argument on the exact `V(a)` | PASS (exact) |
-| B14/C14g | "the charge (degree of the charge direction on spheres r > R) is 1" (report 016 (iii)) | numeric: E1-eigenvector spatial part radial to 2e-16 on 200 sampled directions - hedgehog structure survives; degree 1 under the stack's own `v1 -> x_hat` convention | PASS (numeric) |
+| B14/C14g | "the charge (degree of the charge direction on spheres r > R) is 1" (report 016 (iii)) | exact E1-eigenvector `(B-E1, (A-E1)n)` has spatial part proportional to `n` on every sphere; degree +1 under the stack's own `v1 -> n` orientation convention | PASS (exact) |
 | B15/C15a-e | Koide arithmetic ([37]): `Q(1, 4.5, 162) = 0.666803`; "the measured 1 : 207 : 3477 gives 0.666661"; Q = 2/3 is one equation on three masses | canonical shape `Q = sum m / (sum sqrt m)^2` anchored at Wikipedia (Q_PDG = 0.66666446, m_tau prediction 1776.969): 0.666803385, 0.666660511 (older PDG m_tau = 1776.86 - the posted 0.666661), explicit two-parameter solution family | PASS (mpmath 40 digits) |
 | B16/C16a-d | xrodz [35]/[39]: four posted curvatures `371866.88 / 48.02 / 5.229 / 11.52` and `714251 / 79.4 / 6.08 / 11.52`; Hessian closed forms; branch distinguishability | exact sympy differentiation of `V_spec = tr P(N)^2` and `V4 = sum (tr N^p - C_p)^2` at `M_vac = diag(8, 1, 3/10, 0)` (rational delta = 3/10): the posted numbers are EXACT rationals `2 P'(q_i)^2` (truncated/rounded in posting); V4 Hessian = `D (2 J^T J) D` with `H_00 = 8462850`, conjugation-direction entries zero; single-root-flip probe distinguishes the branches | PASS (exact) |
 | B16/C16e | "ours ... 7e7 times stiffer ..., yours ... 7e4" ([35]) | exact spectra from the closed forms: V4 eigenvalue ratio 7.138e7, V_spec diagonal ratio 6.200e4 - order-of-magnitude round-speak | PASS as order-of-magnitude only (D8) |
 | B17/C17a-c | xrodz [39] + script docstring: virial `E_curv / V = 3` at the quartic + potential equilibrium; `R* = r (E_curv / 3V)^(1/4)` | exact algebra on `E = A/R + B R^3`: `R* = (A/3B)^(1/4)`, virial 3 at stationarity, estimator identity under `A = E_curv r`, `B = V/r^3` | PASS (exact) |
 | B18/C18a-i | artifact consistency of every posted R20 number (provenance grade) | vendored byte-exact `m5_32_r20_1_axes.json` at the pinned commit (MD5): 25 energies, reads, controls, labels (see A3.2) | PASS (consistency, not rerun) |
 
-**Tally (this addendum): ALL 29 CHECKS PASS; ALL 9 MUTATIONS BREAK**
-(`attempts/0002/full_run.log`, exit 0).  Combined audit: 70 checks / 24
-mutations, all green.
+**Current tally (this addendum): ALL 29 CHECKS PASS; ALL 10 MUTATIONS BREAK**
+(`attempts/0003/full_run.log`, exit 0).  The original 29/9 receipt remains
+preserved in attempt 0002.  Combined audit: 70 checks / 25 mutations, all
+green.
 
 ### A3.4 New debts and notes
 
@@ -419,12 +470,15 @@ mutations, all green.
 | D10 | openwave heavy field arrays are regenerable but not git-tracked; their R20-0 audit claims 3-6 receipts were not re-executed here (claim 3 stops on the missing npz in a clean clone) | provenance_only; regeneration compute not spent in this audit |
 | D11 | comment [38] lost items 2 and 3 in an HTML clipboard paste; the thread never received them and R20 measured items 1 and 4 only | open on the JarekDuda side; re-post in plain markdown requested |
 | D12 | JarekDuda's in-thread self-report "roughly one conclusion in six has needed withdrawing" ([34]) is consistent with this inventory's WITHDR/C-CORR counts (11 withdrawn / 28 corrected of 305 IDs) but is HIS count, not audited here | context on reliability, source-asserted |
+| D13 | the complete source snapshot contains five replies, while the atomic ledgers cover only three; JarekDuda replies `[12.r0]`/`[12.r1]` are preserved in `xrodz.md` but not atomized | explicit frontier; issue #211 remains open for completion or an owner-approved narrower endpoint |
+| D14 | Addendum 3 originally called selected B14-B18 checks exhaustive validation of all 665 claims | corrected at harvest: source inventory, atomization, artifact consistency, and selected validation are now separate scopes |
 
 ### A3.5 What this addendum does NOT claim
 
 No lattice rerun of any openwave or mjmikulski computation was performed;
 B18 is byte-identity plus consistency of posted numbers with committed
 artifacts at pinned SHAs.  The unverifiable JarekDuda-side receipts remain
-labeled, per the base audit's D5 discipline.  No registry claims are
-proposed or changed; the extension touches only
+labeled, per the base audit's D5 discipline.  Nor does this addendum validate
+every `checkable_here=true` item or atomize the two cross-thread replies.  No
+registry claims are proposed or changed; the extension touches only
 `proposals/P252-newton-sign-external-audit/**`.

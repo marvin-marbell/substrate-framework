@@ -13,17 +13,19 @@ question: >-
   structure with the Lorentzian cross-term flip, and the composition numbers;
   and what is the honest referee verdict on the announcement's headline
   against the report's own content?  Owner-directed extension (2026-09-14,
-  issue #211 comment 5659508492): additionally validate the checkable claims
-  of the FULL discussion #186 thread from all four posters and assess how
-  well the two external artifact repositories are packaged for review.
+  issue #211 comment 5659508492): additionally preserve and inventory the
+  full discussion #186 thread from all four posters, validate selected
+  load-bearing self-contained claims, and assess how well the two external
+  artifact repositories are packaged for review.
 source_inventory:
   - source: >-
       substrate-framework discussion #186 comment 18406566 (JarekDuda,
       2026-09-11T21:15:12Z), "The gravity sector, reorganised: the sign was
       never the problem" (report revision 294)
     access: >-
-      in hand — full GraphQL thread snapshot fetched 2026-09-11; complete body
-      extracted verbatim to sources/comment-18406566.md (MD5 pinned alongside)
+      in hand — GraphQL thread snapshot fetched 2026-09-11; complete body
+      extracted verbatim to sources/comment-thread-snapshot.md (MD5 pinned
+      alongside)
     extracted: >-
       sections 1-10 constitute the claim ledger of this audit
   - source: >-
@@ -59,8 +61,10 @@ source_inventory:
       JarekDuda, xrodz, vantasnerdan, mjmikulski, 2026-08-29..2026-09-14)
     access: >-
       in hand — verbatim per-poster markdown vendored under sources/thread/
-      (MD5SUMS pinned); atomic claim ledgers vendored under
-      sources/claim-inventory/ (665 claim IDs total)
+      (MD5SUMS pinned); atomic claim ledgers under sources/claim-inventory/
+      contain 665 claim IDs from all 41 top-level comments and three of the
+      five replies. The two JarekDuda replies [12.r0]/[12.r1] embedded in
+      xrodz.md remain verbatim source but were not atomized by the author.
     extracted: >-
       per-claim kind, self-status, artifact pin, and validation route;
       correction/withdrawal edges; receipts fetchability classification
@@ -75,8 +79,10 @@ source_inventory:
       energies, winding/tension/virial reads, Koide read, controls, and the
       in-repo audit-script receipts
   - source: >-
-      mjmikulski/the-final-lagrangian-of-physics pinned at 65c6177f (ledger
-      pin cited by comment 36), main branch for merged reports 014-016
+      mjmikulski/the-final-lagrangian-of-physics ledger pin 65c6177f cited by
+      comment 36; repository snapshot 210bbff25f71d5078d11bbd0a9e212d59d6f3f71
+      at comment time for merged reports 014-016 (report 016 last changed at
+      112bd1e04ede4e03c292083d1e0f9cca653ad42f)
     access: >-
       in hand — cloned; report 016 definitions (screened_infimum.py,
       README) ground oracle block B14
@@ -133,7 +139,8 @@ uniqueness_evidence: null
 selection_criteria:
   - exactness (integer and symbolic arithmetic wherever tractable)
   - independence from the source's own derivations
-  - mutation sensitivity for every check
+  - mutation sensitivity for every executable oracle block, with mutations
+    targeted at the load-bearing identities and precision assumptions
   - one declared metric convention used consistently across blocks
 claims_proposed: []
 comparators_blinded_until: null

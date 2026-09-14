@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""P252 extension (Addendum 3): discussion #186 full-thread form-level checks.
+"""P252 extension (Addendum 3): selected discussion #186 form-level checks.
 
 Scope (owner direction 2026-09-14, issue #211 comment 5659508492): beyond the
 original object (comment 18406566, audited in `verify_newton_sign_audit.py`),
-this module checks the newly checkable claims of the FULL thread:
+this module checks selected load-bearing, self-contained claims surfaced by the
+full-thread inventory.  It is not an exhaustive oracle for every claim in the
+discussion:
 
   B14  mjmikulski [36] / report 016: the null-tilt screening family
        N = C - a(r) P, P = l l^T eta with l = (1, n(x)) null:
@@ -92,7 +94,7 @@ def _tilt_structures(eta, lvec):
 def block_b14(led: Ledger) -> None:
     x, y, z = sp.symbols("x y z", real=True)
     r = sp.sqrt(x**2 + y**2 + z**2)
-    a, ap = sp.symbols("a ap", real=True)
+    a = sp.symbols("a", real=True)
     eta = ETA_MJ
 
     # -- symbolic direction components under the null constraint ------------
@@ -116,36 +118,33 @@ def block_b14(led: Ledger) -> None:
     # C14b: the tilt jet is commutative up to P-multiples: P * dP_i =
     # dP_i * P = 0, and the dP_i * dP_j products are P-proportional with a
     # SYMMETRIC coefficient (d_i n . d_j n) - which is what makes the
-    # commutators vanish (C14c).  Verified at a generic rational point.
+    # commutators vanish (C14c).  These are verified as coordinate identities
+    # on R^3 minus the origin, rather than at one sampled direction.
     pt = {x: 1, y: 2, z: 2}  # r = 3, all entries rational
     Pv = P.subs(pt)
-    dPv = [Pi.subs(pt) for Pi in dP]
     cross_zero = all(
-        sp.simplify(M * N) == sp.zeros(4)
-        for M, N in [(Pv, Pv)] + [(Pv, dPv[i]) for i in range(3)]
-        + [(dPv[i], Pv) for i in range(3)]
+        all(sp.simplify(entry) == 0 for entry in M * N)
+        for M, N in [(P, P)] + [(P, dP[i]) for i in range(3)]
+        + [(dP[i], P) for i in range(3)]
     )
     dPdP_sym = all(
-        sp.simplify(dPv[i] * dPv[j] - dPv[j] * dPv[i]) == sp.zeros(4)
+        all(sp.simplify(entry) == 0
+            for entry in dP[i] * dP[j] - dP[j] * dP[i])
         for i in range(3) for j in range(3)
     )
     led.check("B14_C14b_tilt_jet_commutative_up_to_P",
               cross_zero and dPdP_sym,
               "P*dP_i = dP_i*P = 0; dP_i*dP_j - dP_j*dP_i = 0 "
-              "(P-proportional with symmetric coefficient) at r=3")
+              "identically on r>0 (P-proportional with symmetric coefficient)")
     # C14c: F = [d_i N, d_j N] identically zero, a and a' symbolic:
     #   d_i N = -a' (x_i/r) P - a dP_i, and by C14b every commutator term
     #   carries a vanishing or symmetric-coefficient product.
-    C_zero = True
-    dN = [-(ap * (v / r)) * P - a * dPv_i for v, dPv_i in zip((x, y, z), dP)]
-    dN_pt = [D.subs(pt) for D in dN]
-    for i in range(3):
-        for j in range(3):
-            comm = sp.expand(dN_pt[i] * dN_pt[j] - dN_pt[j] * dN_pt[i])
-            if sp.simplify(comm) != sp.zeros(4):
-                C_zero = False
+    # Expanding dN follows only the four exact identities just checked:
+    # [P,P] = [P,dP_i] = [dP_i,P] = [dP_i,dP_j] = 0.  Therefore every
+    # coefficient of a^2, a*a', and a'^2 in [d_i N,d_j N] vanishes.
+    C_zero = cross_zero and dPdP_sym
     led.check("B14_C14c_F_identity_zero_for_any_profile", C_zero,
-              "[d_i N, d_j N] = 0 identically in (a, a') at the generic point")
+              "[d_i N, d_j N] = 0 identically in (a, a') on r>0")
 
     # C14d: spectrum of N = C - a P: (B, B) plus roots of the pinned
     # quadratic (orientation-independent by the rank-one structure with the
@@ -191,38 +190,25 @@ def block_b14(led: Ledger) -> None:
               and interior == [],
               "V(0) = 2 Delta^2, V(a*) = 0, no interior critical point: "
               "max V = 2 Delta^2 exactly")
-    # C14g (numeric, labeled): outside R the charge direction (the E1-
-    # eigenvector v1) stays RADIAL: its spatial part is parallel to n to
-    # machine precision on sampled sphere directions - the hedgehog charge
-    # structure survives the screening family, hence its degree under the
-    # stack's own orientation convention (v1 -> x_hat at infinity) is 1.
-    E0f, E1f, Bf = 100.0, 1.0, 0.01
-    Af = E0f + (E1f - Bf)
-    a_star_f = float(a_star_v)
-    rng = np.random.default_rng(20260914)
-    ok_par = True
-    tested = 0
-    for _ in range(200):
-        n = rng.normal(size=3)
-        n /= np.linalg.norm(n)
-        lv = np.array([1.0, *n])
-        Pn = np.outer(lv, lv) @ np.array(ETA_MJ.tolist(), dtype=float)
-        Nn = np.diag([Af, Bf, Bf, Bf]) - a_star_f * Pn
-        w, Vv = np.linalg.eig(Nn)
-        k = int(np.argmin(np.abs(w.real - E1f)))
-        v1 = Vv[:, k].real
-        sp_part = v1[1:]
-        nrm = np.linalg.norm(sp_part)
-        if nrm < 1e-9:
-            continue
-        tested += 1
-        if abs(float(np.dot(sp_part / nrm, n))) < 1 - 1e-9:
-            ok_par = False
+    # C14g (exact): at a* an E1 eigenvector is
+    # (B-E1, (A-E1)n).  Its nonzero spatial part is a constant multiple of n
+    # on every sphere, so the normalized charge-direction map is the identity
+    # or antipodal map.  The source fixes the v1 -> n orientation, hence
+    # degree +1.
+    eigvec = sp.Matrix([
+        B_ - E1,
+        (A_ - E1) * x / r,
+        (A_ - E1) * y / r,
+        (A_ - E1) * z / r,
+    ])
+    Nfam = C - a * P
+    eig_residual = (Nfam.subs({A_: E0 + E1 - B_, a: a_star})
+                    - E1 * sp.eye(4)) * eigvec.subs(A_, E0 + E1 - B_)
+    eig_exact = all(sp.factor(entry) == 0 for entry in eig_residual)
     led.check("B14_C14g_charge_direction_stays_radial_degree_one",
-              ok_par and tested > 150,
-              f"|f(n).n| = 1 to machine precision on {tested} sampled "
-              "sphere directions: radial charge direction, hedgehog degree "
-              "1 under the stack's orientation convention (numeric)")
+              eig_exact,
+              "exact E1 eigenvector has spatial part (A-E1)n; degree +1 "
+              "under the stack's v1 -> n orientation convention")
 
     # Mutations ---------------------------------------------------------------
     # M14a: the radial SPACELIKE tilt s = (0, n(x)) is not null: P_s is not
@@ -514,13 +500,17 @@ def _load_json(path):
 def _close(val, posted, abs_tol=None):
     """Posted decimal within half-unit-of-last-digit (or explicit absolute)
     tolerance."""
+    posted_value = float(posted)
     if abs_tol is not None:
-        return abs(val - posted) <= abs_tol
-    return abs(val - posted) <= 0.5 * 10 ** (-_decimals(posted)) + 1e-12
+        return abs(val - posted_value) <= abs_tol
+    return abs(val - posted_value) <= 0.5 * 10 ** (-_decimals(posted)) + 1e-12
 
 
 def _decimals(posted):
-    s = repr(float(posted))
+    # Callers that need significant trailing zeroes pass a string.  Converting
+    # through float here would turn "11.290" into "11.29" and weaken the
+    # quoted-digit tolerance by a factor of ten.
+    s = str(posted)
     if "e" in s or "E" in s:
         return abs(int(s.split("e")[1]))
     if "." in s:
@@ -544,23 +534,23 @@ def block_b18(led: Ledger) -> None:
 
     # posted energies table of comment [39]
     posted = {
-        "S1_v4std_n32_g8": 11.290, "Sd_v4std_n32_g8": 63.592,
-        "S0_v4std_n32_g8": 30.385,
-        "S1_v4std_n32_g8_x4500": 9.781, "Sd_v4std_n32_g8_x4500": 60.876,
-        "S0_v4std_n32_g8_x4500": 22.758,
-        "S1_v4std_n64_g8": 13.125, "Sd_v4std_n64_g8": 83.733,
-        "S0_v4std_n64_g8": 30.922,
-        "S1p_v4std_n32_g8": 11.094, "Sdp_v4std_n32_g8": 64.981,
-        "S0p_v4std_n32_g8": 26.316,
-        "S1p_v4std_n32_g8_x4500": 9.642, "Sdp_v4std_n32_g8_x4500": 61.858,
-        "S0p_v4std_n32_g8_x4500": 22.895,
-        "S1dd_v4dd_n32_g8": 4.502, "Sddd_v4dd_n32_g8": 17.812,
-        "S0dd_v4dd_n32_g8": 18.672,
-        "S1dd_v4dd_n32_g8_x4500": 3.993, "Sddd_v4dd_n32_g8_x4500": 16.554,
-        "S0dd_v4dd_n32_g8_x4500": 17.213,
-        "S1_vspec_n32_g8": 4.885, "Sd_vspec_n32_g8": 55.856,
-        "S0_vspec_n32_g8": 16.444,
-        "S1_v4std_n32_g32": 18.963,
+        "S1_v4std_n32_g8": "11.290", "Sd_v4std_n32_g8": "63.592",
+        "S0_v4std_n32_g8": "30.385",
+        "S1_v4std_n32_g8_x4500": "9.781", "Sd_v4std_n32_g8_x4500": "60.876",
+        "S0_v4std_n32_g8_x4500": "22.758",
+        "S1_v4std_n64_g8": "13.125", "Sd_v4std_n64_g8": "83.733",
+        "S0_v4std_n64_g8": "30.922",
+        "S1p_v4std_n32_g8": "11.094", "Sdp_v4std_n32_g8": "64.981",
+        "S0p_v4std_n32_g8": "26.316",
+        "S1p_v4std_n32_g8_x4500": "9.642", "Sdp_v4std_n32_g8_x4500": "61.858",
+        "S0p_v4std_n32_g8_x4500": "22.895",
+        "S1dd_v4dd_n32_g8": "4.502", "Sddd_v4dd_n32_g8": "17.812",
+        "S0dd_v4dd_n32_g8": "18.672",
+        "S1dd_v4dd_n32_g8_x4500": "3.993", "Sddd_v4dd_n32_g8_x4500": "16.554",
+        "S0dd_v4dd_n32_g8_x4500": "17.213",
+        "S1_vspec_n32_g8": "4.885", "Sd_vspec_n32_g8": "55.856",
+        "S0_vspec_n32_g8": "16.444",
+        "S1_v4std_n32_g32": "18.963",
     }
     bad = {t: (E(t), p) for t, p in posted.items()
            if not _close(E(t), p)}
@@ -630,6 +620,10 @@ def block_b18(led: Ledger) -> None:
     led.mutation("B18_M18a_recorded_hash_tamper_detected",
                  hashlib.md5(raw + b"\x00").hexdigest() != VENDORED_MD5,
                  "any byte flip breaks the recorded-md5 identity")
+    led.mutation("B18_M18b_trailing_zero_precision_is_preserved",
+                 not _close(11.294, "11.290"),
+                 "11.294 lies outside the half-unit tolerance of posted 11.290; "
+                 "the trailing zero remains load-bearing")
 
 
 BLOCKS = [block_b14, block_b15, block_b16, block_b17, block_b18]
