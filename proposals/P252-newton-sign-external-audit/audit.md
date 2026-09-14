@@ -167,6 +167,9 @@ P249/P250 completion:
   a numerically constructed slice wall and bag family, and an explicitly
   reduced radial saddle.  Conversely, P249/P250 do not validate a clock or
   Newton sector on OpenWave's action.
+- The current P253 Euler-particle campaign on `main` uses a different parent
+  objective and field representation.  It supplies neither a dependency nor a
+  falsifier for this M5 audit, so no P253 frontier result is imported here.
 
 Any future framework use of `M . inc M` or the boost-bilinear coupling still
 needs its own declared action and preregistered consumer-level test; D2 itself

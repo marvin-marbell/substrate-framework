@@ -75,8 +75,11 @@ embedded in `xrodz.md`.
 - Python compilation: both verifier modules compile.
 - `scripts/validate_repository.py`: workflow valid, 271 accepted claims,
   14 proposals, zero pending/partial migration units.
-- `scripts/validate_changed.py --base origin/main --head HEAD --print-only`:
-  fixed-only selected; the final receipt is run after the correction commit.
+- `scripts/validate_changed.py --base origin/main --head HEAD`: fixed-only
+  selected; all fixed repository checks pass.  All 1069 memory files are
+  structurally valid.  The 44 repository-wide TOC-readability warnings are
+  advisory, pre-existing outside the P252 memory entries, and do not invalidate
+  the receipt.
 - `git diff --check`: clean.
 
 The OpenWave source audit was also attempted from the exact `55fcc168...`
