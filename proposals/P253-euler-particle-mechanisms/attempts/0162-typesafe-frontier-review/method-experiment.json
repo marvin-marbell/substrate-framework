@@ -1,0 +1,500 @@
+{
+  "implicit": {
+    "classification": {
+      "accuracy": 0.8333333333333334,
+      "rows": [
+        {
+          "case": "p253_current",
+          "correct": true,
+          "expected": true,
+          "field": "authorized_active",
+          "value": 0.75
+        },
+        {
+          "case": "p253_current",
+          "correct": true,
+          "expected": true,
+          "field": "direct_parent",
+          "value": 0.92
+        },
+        {
+          "case": "p253_current",
+          "correct": true,
+          "expected": false,
+          "field": "record_conflict",
+          "value": 0.4
+        },
+        {
+          "case": "p247_stale_active",
+          "correct": true,
+          "expected": false,
+          "field": "authorized_active",
+          "value": 0.07
+        },
+        {
+          "case": "p247_stale_active",
+          "correct": true,
+          "expected": false,
+          "field": "direct_parent",
+          "value": 0.07
+        },
+        {
+          "case": "p247_stale_active",
+          "correct": true,
+          "expected": true,
+          "field": "record_conflict",
+          "value": 0.93
+        },
+        {
+          "case": "p240_stale_active",
+          "correct": true,
+          "expected": false,
+          "field": "authorized_active",
+          "value": 0.07
+        },
+        {
+          "case": "p240_stale_active",
+          "correct": true,
+          "expected": false,
+          "field": "direct_parent",
+          "value": 0.07
+        },
+        {
+          "case": "p240_stale_active",
+          "correct": true,
+          "expected": true,
+          "field": "record_conflict",
+          "value": 0.93
+        },
+        {
+          "case": "p251_complete",
+          "correct": true,
+          "expected": false,
+          "field": "authorized_active",
+          "value": 0.12
+        },
+        {
+          "case": "p251_complete",
+          "correct": true,
+          "expected": false,
+          "field": "direct_parent",
+          "value": 0.08
+        },
+        {
+          "case": "p251_complete",
+          "correct": true,
+          "expected": false,
+          "field": "record_conflict",
+          "value": 0.46
+        },
+        {
+          "case": "p252_extension",
+          "correct": false,
+          "expected": true,
+          "field": "authorized_active",
+          "value": 0.46
+        },
+        {
+          "case": "p252_extension",
+          "correct": true,
+          "expected": false,
+          "field": "direct_parent",
+          "value": 0.09
+        },
+        {
+          "case": "p252_extension",
+          "correct": false,
+          "expected": false,
+          "field": "record_conflict",
+          "value": 0.57
+        },
+        {
+          "case": "p253_frontier_drift",
+          "correct": false,
+          "expected": true,
+          "field": "authorized_active",
+          "value": 0.32
+        },
+        {
+          "case": "p253_frontier_drift",
+          "correct": true,
+          "expected": true,
+          "field": "direct_parent",
+          "value": 0.54
+        },
+        {
+          "case": "p253_frontier_drift",
+          "correct": true,
+          "expected": true,
+          "field": "record_conflict",
+          "value": 0.92
+        }
+      ]
+    },
+    "mutations": {
+      "directional_accuracy": 1.0,
+      "directional_checks": {
+        "consumer": true,
+        "failure": true,
+        "inputs": true,
+        "license": true
+      },
+      "false_green_delta": -1.48,
+      "false_green_invariant_within_0_15": false,
+      "scores": {
+        "consumer_present": 2.9,
+        "consumer_removed": 2.0,
+        "false_green": 1.35,
+        "inputs_missing": 1.71,
+        "inputs_ready": 3.76,
+        "licensed_euler": 3.65,
+        "major_failure": 3.89,
+        "minor_failure": 1.18,
+        "plain_evidence": 2.83,
+        "unlicensed_law": 1.94
+      }
+    },
+    "usage": {
+      "input_tokens": 2348,
+      "output_tokens": 595
+    }
+  },
+  "structured": {
+    "classification": {
+      "accuracy": 1.0,
+      "rows": [
+        {
+          "case": "p253_current",
+          "correct": true,
+          "expected": true,
+          "field": "authorized_active",
+          "value": 0.94
+        },
+        {
+          "case": "p253_current",
+          "correct": true,
+          "expected": true,
+          "field": "direct_parent",
+          "value": 0.76
+        },
+        {
+          "case": "p253_current",
+          "correct": true,
+          "expected": false,
+          "field": "record_conflict",
+          "value": 0.25
+        },
+        {
+          "case": "p247_stale_active",
+          "correct": true,
+          "expected": false,
+          "field": "authorized_active",
+          "value": 0.06
+        },
+        {
+          "case": "p247_stale_active",
+          "correct": true,
+          "expected": false,
+          "field": "direct_parent",
+          "value": 0.04
+        },
+        {
+          "case": "p247_stale_active",
+          "correct": true,
+          "expected": true,
+          "field": "record_conflict",
+          "value": 0.94
+        },
+        {
+          "case": "p240_stale_active",
+          "correct": true,
+          "expected": false,
+          "field": "authorized_active",
+          "value": 0.06
+        },
+        {
+          "case": "p240_stale_active",
+          "correct": true,
+          "expected": false,
+          "field": "direct_parent",
+          "value": 0.04
+        },
+        {
+          "case": "p240_stale_active",
+          "correct": true,
+          "expected": true,
+          "field": "record_conflict",
+          "value": 0.93
+        },
+        {
+          "case": "p251_complete",
+          "correct": true,
+          "expected": false,
+          "field": "authorized_active",
+          "value": 0.06
+        },
+        {
+          "case": "p251_complete",
+          "correct": true,
+          "expected": false,
+          "field": "direct_parent",
+          "value": 0.04
+        },
+        {
+          "case": "p251_complete",
+          "correct": true,
+          "expected": false,
+          "field": "record_conflict",
+          "value": 0.07
+        },
+        {
+          "case": "p252_extension",
+          "correct": true,
+          "expected": true,
+          "field": "authorized_active",
+          "value": 0.86
+        },
+        {
+          "case": "p252_extension",
+          "correct": true,
+          "expected": false,
+          "field": "direct_parent",
+          "value": 0.05
+        },
+        {
+          "case": "p252_extension",
+          "correct": true,
+          "expected": false,
+          "field": "record_conflict",
+          "value": 0.24
+        },
+        {
+          "case": "p253_frontier_drift",
+          "correct": true,
+          "expected": true,
+          "field": "authorized_active",
+          "value": 0.91
+        },
+        {
+          "case": "p253_frontier_drift",
+          "correct": true,
+          "expected": true,
+          "field": "direct_parent",
+          "value": 0.56
+        },
+        {
+          "case": "p253_frontier_drift",
+          "correct": true,
+          "expected": true,
+          "field": "record_conflict",
+          "value": 0.92
+        }
+      ]
+    },
+    "mutations": {
+      "directional_accuracy": 1.0,
+      "directional_checks": {
+        "consumer": true,
+        "failure": true,
+        "inputs": true,
+        "license": true
+      },
+      "false_green_delta": -1.1,
+      "false_green_invariant_within_0_15": false,
+      "scores": {
+        "consumer_present": 2.9,
+        "consumer_removed": 0.16,
+        "false_green": 0.44,
+        "inputs_missing": 1.73,
+        "inputs_ready": 2.45,
+        "licensed_euler": 3.1,
+        "major_failure": 2.86,
+        "minor_failure": 0.61,
+        "plain_evidence": 1.54,
+        "unlicensed_law": 0.58
+      }
+    },
+    "usage": {
+      "input_tokens": 5363,
+      "output_tokens": 595
+    }
+  },
+  "structured_order_stability": {
+    "max_abs_delta": 0.79,
+    "mean_abs_delta": 0.08607142857142858,
+    "rows": [
+      {
+        "delta": 0.0,
+        "normal": 0.94,
+        "question": "p253_current__authorized_active",
+        "reverse": 0.94
+      },
+      {
+        "delta": 0.05999999999999994,
+        "normal": 0.76,
+        "question": "p253_current__direct_parent",
+        "reverse": 0.82
+      },
+      {
+        "delta": 0.53,
+        "normal": 0.25,
+        "question": "p253_current__record_conflict",
+        "reverse": 0.78
+      },
+      {
+        "delta": 0.0,
+        "normal": 0.06,
+        "question": "p247_stale_active__authorized_active",
+        "reverse": 0.06
+      },
+      {
+        "delta": 0.0,
+        "normal": 0.04,
+        "question": "p247_stale_active__direct_parent",
+        "reverse": 0.04
+      },
+      {
+        "delta": -0.009999999999999898,
+        "normal": 0.94,
+        "question": "p247_stale_active__record_conflict",
+        "reverse": 0.93
+      },
+      {
+        "delta": 0.0,
+        "normal": 0.06,
+        "question": "p240_stale_active__authorized_active",
+        "reverse": 0.06
+      },
+      {
+        "delta": 0.0,
+        "normal": 0.04,
+        "question": "p240_stale_active__direct_parent",
+        "reverse": 0.04
+      },
+      {
+        "delta": 0.0,
+        "normal": 0.93,
+        "question": "p240_stale_active__record_conflict",
+        "reverse": 0.93
+      },
+      {
+        "delta": -0.009999999999999995,
+        "normal": 0.06,
+        "question": "p251_complete__authorized_active",
+        "reverse": 0.05
+      },
+      {
+        "delta": 0.0,
+        "normal": 0.04,
+        "question": "p251_complete__direct_parent",
+        "reverse": 0.04
+      },
+      {
+        "delta": 0.0,
+        "normal": 0.07,
+        "question": "p251_complete__record_conflict",
+        "reverse": 0.07
+      },
+      {
+        "delta": 0.030000000000000027,
+        "normal": 0.86,
+        "question": "p252_extension__authorized_active",
+        "reverse": 0.89
+      },
+      {
+        "delta": 0.009999999999999995,
+        "normal": 0.05,
+        "question": "p252_extension__direct_parent",
+        "reverse": 0.06
+      },
+      {
+        "delta": 0.030000000000000027,
+        "normal": 0.24,
+        "question": "p252_extension__record_conflict",
+        "reverse": 0.27
+      },
+      {
+        "delta": 0.020000000000000018,
+        "normal": 0.91,
+        "question": "p253_frontier_drift__authorized_active",
+        "reverse": 0.93
+      },
+      {
+        "delta": -0.020000000000000018,
+        "normal": 0.56,
+        "question": "p253_frontier_drift__direct_parent",
+        "reverse": 0.54
+      },
+      {
+        "delta": -0.06000000000000005,
+        "normal": 0.92,
+        "question": "p253_frontier_drift__record_conflict",
+        "reverse": 0.86
+      },
+      {
+        "delta": 0.020000000000000018,
+        "normal": 2.9,
+        "question": "consumer_present",
+        "reverse": 2.92
+      },
+      {
+        "delta": -0.010000000000000009,
+        "normal": 0.16,
+        "question": "consumer_removed",
+        "reverse": 0.15
+      },
+      {
+        "delta": 0.31999999999999984,
+        "normal": 2.45,
+        "question": "inputs_ready",
+        "reverse": 2.77
+      },
+      {
+        "delta": 0.1100000000000001,
+        "normal": 1.73,
+        "question": "inputs_missing",
+        "reverse": 1.84
+      },
+      {
+        "delta": 0.009999999999999787,
+        "normal": 3.1,
+        "question": "licensed_euler",
+        "reverse": 3.11
+      },
+      {
+        "delta": 0.09000000000000008,
+        "normal": 0.58,
+        "question": "unlicensed_law",
+        "reverse": 0.67
+      },
+      {
+        "delta": -0.020000000000000018,
+        "normal": 2.86,
+        "question": "major_failure",
+        "reverse": 2.84
+      },
+      {
+        "delta": 0.18000000000000005,
+        "normal": 0.61,
+        "question": "minor_failure",
+        "reverse": 0.79
+      },
+      {
+        "delta": -0.79,
+        "normal": 1.54,
+        "question": "plain_evidence",
+        "reverse": 0.75
+      },
+      {
+        "delta": -0.08000000000000002,
+        "normal": 0.44,
+        "question": "false_green",
+        "reverse": 0.36
+      }
+    ],
+    "usage": {
+      "input_tokens": 5363,
+      "output_tokens": 595
+    }
+  }
+}
