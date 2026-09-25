@@ -2,6 +2,8 @@
 
 Read from [comment 18303935](https://github.com/vantasnerdan/substrate-framework/discussions/186#discussioncomment-18303935) through [comment 18601274](https://github.com/vantasnerdan/substrate-framework/discussions/186#discussioncomment-18601274). The source has 74 top-level comments, 61 at/after the requested starting ID, and eight replies overall at the pinned September 25 read. Earlier [P252 audit](../P252-newton-sign-external-audit/audit.md) inventories pre-September-15 contributions (665 identified atoms through September 14) and independently checks **selected** oracles, not every mathematical/physical statement. This document triages later claims by action and evidence; it is not a claim that 61 comments or all advertised scripts were independently validated. The user-visible result is the independently checked **conditional strand theorem** in [proof.md](proof.md); issue #211 retains the wider referee frontier.
 
+The subsequent [P255 full-thread supplement](../P255-discussion186-full-harvest/harvest-decision.md) indexes all 74 comments, eight replies and linked-script occurrences, independently promotes six separate bounded identities, and leaves numerical/physical bridges explicitly open. P254's original one-claim acceptance scope is unchanged.
+
 Related [PR #216](https://github.com/vantasnerdan/substrate-framework/pull/216) closed unmerged on September 14 as a **duplicate of merged #215** (`90323480`): its sole change was the P252 decision-memory sync. Neither PR promoted the later R25/Report-018 strand theorem. This P254 claim has a separate canonical issue and review boundary rather than reopening or rewriting the closed memory-only PR.
 
 | Comments and immutable source | Claim and best local evidence | Boundary/decision |
