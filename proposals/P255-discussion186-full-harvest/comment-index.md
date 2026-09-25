@@ -1,5 +1,5 @@
-# Discussion #186 snapshot 2026-09-25
-74 top-level comments, 8 replies; GraphQL `comments(first:5)` pages 01–15 with each `replies(first:100)` and all `hasNextPage:false`.
+# Discussion #186 snapshot and subsequent R26 arrival, 2026-09-25
+Original GraphQL `comments(first:5)` pages 01–15 captured 74 top-level comments and eight replies, with all pages exhausted. A 75th top-level comment (zero replies) arrived at 18:30:05Z before the discussion receipt: 75 top-level comments and eight replies in this **union of two dated cuts**. See [R26 addendum](r26-addendum.md); no claim that page 16 is part of the earlier 74-comment frozen snapshot.
 Raw discussion bodies and reply pagination are retained locally by the reviewer; this tracked index records public locators only.
 
 Discussion body 6786 characters.
@@ -80,3 +80,4 @@ Discussion body 6786 characters.
 | 72 | 2026-09-24T16:03:19Z | mjmikulski | [18583989](https://github.com/vantasnerdan/substrate-framework/discussions/186#discussioncomment-18583989) | 3452 | 1 | 1 |
 | 73 | 2026-09-24T16:08:46Z | JarekDuda | [18584055](https://github.com/vantasnerdan/substrate-framework/discussions/186#discussioncomment-18584055) | 4599 | 0 | 0 |
 | 74 | 2026-09-25T14:57:51Z | mjmikulski | [18601274](https://github.com/vantasnerdan/substrate-framework/discussions/186#discussioncomment-18601274) | 2704 | 0 | 1 |
+| 75 | 2026-09-25T18:30:05Z | xrodz | [18603873](https://github.com/vantasnerdan/substrate-framework/discussions/186#discussioncomment-18603873) | 19844 | 0 | 2 |

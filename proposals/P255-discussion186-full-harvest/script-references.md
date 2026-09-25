@@ -544,3 +544,10 @@ URLs (0):
 Files (1): reproduce.sh
 URLs (1):
 - https://github.com/mjmikulski/the-final-lagrangian-of-physics/tree/main/reports/018-electron-pair-biaxial
+
+## Comment 75 (arrived after first 74-comment snapshot) https://github.com/vantasnerdan/substrate-framework/discussions/186#discussioncomment-18603873
+Files (5 source-text patterns): m5_32_r26_*.py, m5_32_r26_*_audit.py, m5_21_3_f_confirm.py, m5_22_4_b_omega.py, m5_32_lagrangian.py
+URLs (2 in comment; the wildcard resolves to ten files in the pinned tree):
+- https://github.com/openwave-labs/openwave/blob/3705fdfd/openwave/xperiments/m5_liquid_crystal/research/tasks/m5_32_task_details.md
+- https://github.com/openwave-labs/openwave/blob/3705fdfd/openwave/xperiments/m5_liquid_crystal/research/findings/m5_32_candidate_ledger.md
+Resolved tree and exact script names: [R26 addendum](r26-addendum.md). Presence does not imply execution of audits or stored-lattice data.
