@@ -13,10 +13,11 @@ status: active
 Complete the full issue203 electron AND neutrino particle mechanism contract frozen verbatim in issue203-frozen.md; P0–P7 are conjunctive, electron first does not reduce scope.
 
 The 2026-09-07 pause is historical; PR #213 subsequently merged the
-author/review checkpoint to `main` without claim promotion. Issue #220
-continues the physical Euler-carrier dependency on its own isolated branch
-and records the new attempt 0162 below. The full P253/#203 objective remains
-scientifically open; this continuation is not a terminal PR or a particle claim.
+author/review checkpoint to `main` without claim promotion. Issue #220 was
+closed `not_planned`: attempt 0162 preserved two scoped negative route results
+but did not deliver its physical-carrier bridge. The constructive #203
+continuation on the fork is attempt 0163 below. The full P253/#203 objective
+remains scientifically open; neither attempt is a terminal PR or particle claim.
 
 ## Obligation Graph and Closure Map
 The matching proposal manifest records each exact node, prerequisites and non-implications. LP0 is earned at initial source/inventory scope; LP1–LP7 remain unearned.
@@ -951,7 +952,41 @@ exterior-field substitutions refuted at their specified classes. The
 source-specific weighted DA graph, whole-space Hodge/limiting-absorption
 adjoint, KKS-normalized physical `V_*` (undefined, not zero), transparent
 same-leaf branch, global pressure and nonlinear 3D persistence remain
-open. Next prove the source-specific full-Hodge adjoint/transparency on
-the actual carrier or prove a materially different *global* Euler carrier;
-a local elliptic saddle germ is not such a carrier. No accepted claim,
-release, P2 completion, electron, neutrino or #203 completion follows.
+open. User correction closed #220 as an abandoned route, **not** a completed
+physical bridge. Neither a source-specific adjoint chase nor a no-go inventory
+is the positive result; 0163 instead tests a full-3D material interaction on
+one actual carrier family. No accepted claim, release, P2 completion,
+electron, neutrino or #203 completion follows.
+
+## Issue 203: constructive full-3D lateral impulse exchange (0163)
+
+On isolated branch `research/203-lateral-impulse`, 0163 centrally registers
+and schema-activates an actual pair of smooth finite-energy Cao ring fields
+placed at *lateral* separation on `R^3`. Their sum is one globally
+nonaxisymmetric initial Euler field with real whole-space pressure and
+Biot–Savart velocity. The separate compact vorticities are material labels
+under its common local classical flow, not independently prescribed ring
+solutions. The physical label impulses satisfy the exact exchange law
+`dot I_1=rho integral u_2 cross omega_1`, `dot I_2=-dot I_1`.
+
+For identical parallel rings of kinematic axial impulse `J>0`, fixed
+positive density `rho` and sufficiently large lateral distance `d`, the
+reviewed proof in `attempts/0163/derivation.md` derives
+`dot I_(1,x)(0)=3rho J^2/(4pi d^4)+O(d^-5)>0`, with an explicit fixed-carrier
+moment error and opposite label-2 response. Continuity gives a nonzero
+short-time transverse impulse exchange on the exact 3D Euler solution.
+P253/0007 already supplies the physical dipole; 0163 adds the first-moment
+cross-velocity dynamics, not a guessed force from static cross energy.
+Coaxial placement nulls the transverse response by symmetry. The reviewed
+claim is new only relative to the identified campaign attempts; global
+literature originality is unasserted.
+
+**Positive next construction:** find an actual return of this material
+vector-impulse crossing in the *full* labeled Euler state, retaining both
+shapes, exterior field, pressure and symmetry-breaking 3D perturbations;
+then prove a shape-retaining invariant return neighborhood on that *same*
+carrier family. The exact time-periodic axisymmetric GHM patch pair offers
+a separate all-time impulse-exchange mechanism, not a stability theorem
+or source transfer to Cao. 0163 establishes no geometric ring-plane tilt,
+nonlinear recurrence, full-3D persistence, quantum/spin/electric bridge,
+electron, neutrino, accepted claim, release or #203 completion.
