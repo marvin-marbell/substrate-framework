@@ -2,7 +2,7 @@
 description: Derive electron and neutrino mechanisms from actual Euler substrate dynamics
 author: codex
 created: "2026-09-06T00:00:00+00:00"
-updated: "2026-09-07T00:00:00+00:00"
+updated: "2026-09-28T00:00:00+00:00"
 tags: [substrate-framework, campaign-proposal, P253]
 category: proposals
 confidence: exploratory
@@ -12,11 +12,11 @@ status: active
 ## Question and Positive Deliverable
 Complete the full issue203 electron AND neutrino particle mechanism contract frozen verbatim in issue203-frozen.md; P0–P7 are conjunctive, electron first does not reduce scope.
 
-Execution is paused at the user's explicit request on 2026-09-07. Start future
-recovery at `proposals/P253-euler-particle-mechanisms/PAUSED.md` and its linked
-0107 pause state. The last reviewed boundary is 0104/0106; 0107 is interrupted
-author work. The campaign remains scientifically open, with no terminal PR or
-claim promotion implied by this checkpoint.
+The 2026-09-07 pause is historical; PR #213 subsequently merged the
+author/review checkpoint to `main` without claim promotion. Issue #220
+continues the physical Euler-carrier dependency on its own isolated branch
+and records the new attempt 0162 below. The full P253/#203 objective remains
+scientifically open; this continuation is not a terminal PR or a particle claim.
 
 ## Obligation Graph and Closure Map
 The matching proposal manifest records each exact node, prerequisites and non-implications. LP0 is earned at initial source/inventory scope; LP1–LP7 remain unearned.
@@ -907,3 +907,51 @@ and verdict SHA-256
 Complementary charge, the whole-core `K=4ZR/Omega^2` and `b` classification,
 the zero-frequency sector, exact relative-momentum leaf restoration, complete
 P2, and alternative coercive carriers remain active.
+
+## Issue 220: physical thin-Cao topology and exterior DA obstruction
+
+P253/0162 on isolated branch `research/220-physical-euler-carrier` consumes
+the source-established smooth finite-energy Cao ring, the independently
+reviewed 0066/0073 fixed-thin-member one-center foliation, and the
+0062/0063 whole-space Hodge/positive-core DA identities. It does **not**
+promote the two-mode 0161 R3--R5 adjoint, model `V=-12`, or toy saddle to a
+continuum physical result.
+
+Two new exact physical-carrier route results are recorded in
+`attempts/0162/derivation.md`, with an independent scope review and one
+bounded correction in `attempts/0162/independent-review.md`. (T1) Every
+`C^2` divergence-free global centralizer of a fixed sufficiently thin Cao
+positive core, with arbitrary toroidal drift, has only unit-modulus
+periodic-orbit normal multipliers: regular travelling levels are shear
+conjugate; stalled regular levels are unipotent; the sole negative-definite
+center has an elliptic/zero meridional linearization. Smooth same-leaf
+conjugacy preserves those multipliers. The 0161 model partition-2
+hyperbolic-orbit mechanism is therefore unavailable **on this selected
+positive core**; boundary/exterior, other carriers and nonsmooth charts
+are not excluded. This is a new three-dimensional Floquet implication of
+the previously reviewed 0066 no-saddle foliation, not a second claim that
+the no-saddle lemma was newly proved.
+
+(T2) For every fixed `|n|>=2`, smooth compact positive-core DA sources
+have infinitely many linearly independent physical exterior spherical
+multipole functionals under the decaying whole-space Biot--Savart/Leray map.
+One explicit deep-core source has a nonzero far field and its exact Euler
+generator is nonzero in every positive-core boundary collar, even though
+the source vorticity vanishes in a fixed collar. A zero of one multipole is
+possible and does not establish full transparency. Thus a finite
+exterior-field/core-only replacement cannot implement the full smooth DA
+class; a finite resonant adjoint cokernel **after** the complete Green solve
+remains possible. The review caught a frozen-draft domain error: rank
+independence needs source tests over the entire positive core, not one
+fixed interior disk; that quantifier and the center Morse linearization
+passed its correction-only check.
+
+Route status: physical positive-core hyperbolic matching and finite
+exterior-field substitutions refuted at their specified classes. The
+source-specific weighted DA graph, whole-space Hodge/limiting-absorption
+adjoint, KKS-normalized physical `V_*` (undefined, not zero), transparent
+same-leaf branch, global pressure and nonlinear 3D persistence remain
+open. Next prove the source-specific full-Hodge adjoint/transparency on
+the actual carrier or prove a materially different *global* Euler carrier;
+a local elliptic saddle germ is not such a carrier. No accepted claim,
+release, P2 completion, electron, neutrino or #203 completion follows.
