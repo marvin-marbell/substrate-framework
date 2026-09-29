@@ -1,0 +1,46 @@
+attempt: P253/0166
+issue: 203
+owner: positive-euler-cell
+status: exact_scoped_two_euler_candidate_obstruction_not_target_theorem
+physical_law: unforced_constant_density_incompressible_3D_Euler_single_common_flow_and_pressure
+artifact: derivation.md
+assumptions:
+  intersecting_columns: smooth_periodic_T3_alpha_beta_nonzero_initial_data_locally_smooth_Euler
+  slab: smooth_compact_nonzero_transverse_profile_on_T2_times_R_locally_smooth_Euler_with_decay
+  no_internal_wall_or_independent_second_action: true
+results:
+  self_euler_controls:
+    statement: separately_each_non_affine_planar_column_has_full_2D_Euler_transport_plus_nonconstant_self_pressure
+    limit: making_either_velocity_amplitude_zero_leaves_only_one_nonzero_sector_not_two_independent_cell_fluids
+  intersecting_columns:
+    statement: exact_full_3D_pressure_produces_nonzero_initial_mixed_solenoidal_acceleration_outside_both_column_spaces
+    formula: "u_t(0)=(2 alpha beta/3)*(-sin(x)cos(2y)cos(z),cos(x)sin(2y)cos(z),-cos(x)cos(2y)sin(z))"
+    l2_escape_rate: "|alpha beta| sqrt(|T3|/6)"
+    positive_time: leaves_column_sum_for_all_sufficiently_small_positive_times
+  one_action_stress:
+    statement: common_incompressible_virtual_displacement_gives_mixed_stress_rho_times_u1_tensor_u2_plus_u2_tensor_u1_and_unique_common_pressure
+    cross_energy_caveat: integrated_cross_energy_is_zero_for_this_Fourier_pair_but_variational_stress_and_force_are_nonzero
+    conservation: full_Euler_energy_only_no_closed_independent_sheet_energy_exchange_after_escape
+  transverse_slab:
+    statement: compact_horizontal_sheet_with_genuine_2D_self_pressure_necessarily_creates_vertical_acceleration_in_initially_motionless_exterior
+    formula: "for z>1, u_z,t(0)=alpha^2*I_plus*exp(-2z)*(cos(2x)+cos(2y))/2, I_plus=int exp(2s)chi(s)^2 ds>0"
+    exterior_l2_rate: "pi alpha^2 I_plus exp(-2Z)/2 for z>Z>=1"
+    pressure_boundary: decaying_whole_waveguide_Poisson_pressure_no_slabs_as_walls
+  near_family:
+    statement: exact_positive_initial_L2_escape_with_O(t^2)_smooth_local_time_remainder_and_explicit_L2_adverse_perturbation_bound
+    limitation: no_autonomous_positive_time_two_Euler_remainder_or_generic_3D_invariant_manifold_proved
+criteria:
+  single_action_no_free_coefficient: yes
+  two_isolated_nonlinear_euler_self_laws: yes
+  invariant_nontrivial_material_cell_with_two_nonzero_self_euler_fields: no_for_the_two_tested_families_general_question_open
+  independent_coarse_center_and_internal_Euler_laws: not_constructed
+  coupling_and_pressure_from_original_action: yes_as_obstruction_diagnostic_not_closed_model
+  near_family_full_pressure_probe: yes_at_initial_acceleration_with_local_time_Taylor_remainder
+  particle_or_full_issue203: not_claimed
+verification:
+  numerical_oracle: verify_column_escape.py_checks_full_3D_pressure_at_three_points_with_2e_minus9_tolerance_wrong_pressure_control_and_nonzero_slab_exterior_acceleration
+  analytic_oracle: divergence_free_Fourier_projection_Poisson_Green_kernel_and_L2_orthogonality
+  receipt: validation.md
+claim_promotion: none
+parent_issue_203: open
+independent_review: pending
