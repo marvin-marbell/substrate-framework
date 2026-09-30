@@ -1,0 +1,33 @@
+attempt: P253/0163
+issue: 203
+base_commit: 9032348018fd03c921d819dc660e85587a832bce
+parent_branch: research/203-lateral-impulse
+owner: root
+status: independently_reviewed_initial_response_at_fixed_physical_scope
+physical_object: two_laterally_separated_parallel_smooth_Cao_rings_as_one_full_R3_Euler_initial_state
+imports:
+  Cao_primary: arXiv:2206.10165v2 fixed smooth finite-energy compact-vorticity ring
+  P253_0002: source_transfer_and_ring_regularities
+  P253_0007: whole_space_kinematic_impulse_dipole_and_moment_remainder
+results:
+  material_vector_impulse:
+    scope: exact_local_classical_full_3D_Euler_for_two_disjoint_initial_Cao_vorticity_labels
+    statement: dot_I_j_equals_rho_integral_cross_velocity_cross_label_vorticity_and_total_impulse_conserved
+    consequence: 'for J>0 and sufficiently large lateral d, dot I_1x(0)=3 rho J^2/(4 pi d^4)+O(d^-5)>0; dot I_2x(0)=-dot I_1x(0)'
+    positive_construction: exact_short_time_signed_transverse_material_impulse_exchange_with_whole_space_pressure_and_Biot_Savart
+    countercase: coaxial_pair_has_zero_transverse_exchange_by_axisymmetry
+    does_not_license: [closed_two_ring_impulse_ODE, ring_plane_tilt, nonlinear_return, full_3D_orbital_stability, electron_or_neutrino]
+  conditional_return_probe:
+    scope: exact_full_3D_material_impulse_identity_at_a_hypothetical_first_transverse_zero_with_separated_labeled_cores_and_ordering_retained
+    statement: return_requires_axial_offset_or_impulse_redistribution_or_shape_exterior_error_to_leave_explicit_controlled_cone
+    countercase: separately_prepared_axially_offset_pair_reverses_initial_dipole_slope_but_is_not_a_time_evolved_return
+    review_status: author_integration_pending_independent_revision_bound_review
+    does_not_license: [actual_return, long_time_shape_control, unrestricted_3D_stability, electron, neutrino]
+  continuation:
+    target: actual_labeled_full_3D_return_and_invariant_shape_retaining_neighborhood
+    status: open_unproved
+    alternative: GHM_axisymmetric_patch_pair_material_impulse_event_map_without_family_transfer
+claim_promotion: none
+release_changed: false
+parent_issue_203: open
+independent_review: attempts/0163/independent-review.md

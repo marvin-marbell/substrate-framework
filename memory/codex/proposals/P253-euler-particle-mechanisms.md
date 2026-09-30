@@ -2,7 +2,7 @@
 description: Derive electron and neutrino mechanisms from actual Euler substrate dynamics
 author: codex
 created: "2026-09-06T00:00:00+00:00"
-updated: "2026-09-07T00:00:00+00:00"
+updated: "2026-09-28T00:00:00+00:00"
 tags: [substrate-framework, campaign-proposal, P253]
 category: proposals
 confidence: exploratory
@@ -12,11 +12,12 @@ status: active
 ## Question and Positive Deliverable
 Complete the full issue203 electron AND neutrino particle mechanism contract frozen verbatim in issue203-frozen.md; P0–P7 are conjunctive, electron first does not reduce scope.
 
-Execution is paused at the user's explicit request on 2026-09-07. Start future
-recovery at `proposals/P253-euler-particle-mechanisms/PAUSED.md` and its linked
-0107 pause state. The last reviewed boundary is 0104/0106; 0107 is interrupted
-author work. The campaign remains scientifically open, with no terminal PR or
-claim promotion implied by this checkpoint.
+The 2026-09-07 pause is historical; PR #213 subsequently merged the
+author/review checkpoint to `main` without claim promotion. Issue #220 was
+closed `not_planned`: attempt 0162 preserved two scoped negative route results
+but did not deliver its physical-carrier bridge. The constructive #203
+continuation on the fork is attempt 0163 below. The full P253/#203 objective
+remains scientifically open; neither attempt is a terminal PR or particle claim.
 
 ## Obligation Graph and Closure Map
 The matching proposal manifest records each exact node, prerequisites and non-implications. LP0 is earned at initial source/inventory scope; LP1–LP7 remain unearned.
@@ -907,3 +908,85 @@ and verdict SHA-256
 Complementary charge, the whole-core `K=4ZR/Omega^2` and `b` classification,
 the zero-frequency sector, exact relative-momentum leaf restoration, complete
 P2, and alternative coercive carriers remain active.
+
+## Issue 220: physical thin-Cao topology and exterior DA obstruction
+
+P253/0162 on isolated branch `research/220-physical-euler-carrier` consumes
+the source-established smooth finite-energy Cao ring, the independently
+reviewed 0066/0073 fixed-thin-member one-center foliation, and the
+0062/0063 whole-space Hodge/positive-core DA identities. It does **not**
+promote the two-mode 0161 R3--R5 adjoint, model `V=-12`, or toy saddle to a
+continuum physical result.
+
+Two new exact physical-carrier route results are recorded in
+`attempts/0162/derivation.md`, with an independent scope review and one
+bounded correction in `attempts/0162/independent-review.md`. (T1) Every
+`C^2` divergence-free global centralizer of a fixed sufficiently thin Cao
+positive core, with arbitrary toroidal drift, has only unit-modulus
+periodic-orbit normal multipliers: regular travelling levels are shear
+conjugate; stalled regular levels are unipotent; the sole negative-definite
+center has an elliptic/zero meridional linearization. Smooth same-leaf
+conjugacy preserves those multipliers. The 0161 model partition-2
+hyperbolic-orbit mechanism is therefore unavailable **on this selected
+positive core**; boundary/exterior, other carriers and nonsmooth charts
+are not excluded. This is a new three-dimensional Floquet implication of
+the previously reviewed 0066 no-saddle foliation, not a second claim that
+the no-saddle lemma was newly proved.
+
+(T2) For every fixed `|n|>=2`, smooth compact positive-core DA sources
+have infinitely many linearly independent physical exterior spherical
+multipole functionals under the decaying whole-space Biot--Savart/Leray map.
+One explicit deep-core source has a nonzero far field and its exact Euler
+generator is nonzero in every positive-core boundary collar, even though
+the source vorticity vanishes in a fixed collar. A zero of one multipole is
+possible and does not establish full transparency. Thus a finite
+exterior-field/core-only replacement cannot implement the full smooth DA
+class; a finite resonant adjoint cokernel **after** the complete Green solve
+remains possible. The review caught a frozen-draft domain error: rank
+independence needs source tests over the entire positive core, not one
+fixed interior disk; that quantifier and the center Morse linearization
+passed its correction-only check.
+
+Route status: physical positive-core hyperbolic matching and finite
+exterior-field substitutions refuted at their specified classes. The
+source-specific weighted DA graph, whole-space Hodge/limiting-absorption
+adjoint, KKS-normalized physical `V_*` (undefined, not zero), transparent
+same-leaf branch, global pressure and nonlinear 3D persistence remain
+open. User correction closed #220 as an abandoned route, **not** a completed
+physical bridge. Neither a source-specific adjoint chase nor a no-go inventory
+is the positive result; 0163 instead tests a full-3D material interaction on
+one actual carrier family. No accepted claim, release, P2 completion,
+electron, neutrino or #203 completion follows.
+
+## Issue 203: constructive full-3D lateral impulse exchange (0163)
+
+On isolated branch `research/203-lateral-impulse`, 0163 centrally registers
+and schema-activates an actual pair of smooth finite-energy Cao ring fields
+placed at *lateral* separation on `R^3`. Their sum is one globally
+nonaxisymmetric initial Euler field with real whole-space pressure and
+Biot–Savart velocity. The separate compact vorticities are material labels
+under its common local classical flow, not independently prescribed ring
+solutions. The physical label impulses satisfy the exact exchange law
+`dot I_1=rho integral u_2 cross omega_1`, `dot I_2=-dot I_1`.
+
+For identical parallel rings of kinematic axial impulse `J>0`, fixed
+positive density `rho` and sufficiently large lateral distance `d`, the
+reviewed proof in `attempts/0163/derivation.md` derives
+`dot I_(1,x)(0)=3rho J^2/(4pi d^4)+O(d^-5)>0`, with an explicit fixed-carrier
+moment error and opposite label-2 response. Continuity gives a nonzero
+short-time transverse impulse exchange on the exact 3D Euler solution.
+P253/0007 already supplies the physical dipole; 0163 adds the first-moment
+cross-velocity dynamics, not a guessed force from static cross energy.
+Coaxial placement nulls the transverse response by symmetry. The reviewed
+claim is new only relative to the identified campaign attempts; global
+literature originality is unasserted.
+
+**Positive next construction:** find an actual return of this material
+vector-impulse crossing in the *full* labeled Euler state, retaining both
+shapes, exterior field, pressure and symmetry-breaking 3D perturbations;
+then prove a shape-retaining invariant return neighborhood on that *same*
+carrier family. The exact time-periodic axisymmetric GHM patch pair offers
+a separate all-time impulse-exchange mechanism, not a stability theorem
+or source transfer to Cao. 0163 establishes no geometric ring-plane tilt,
+nonlinear recurrence, full-3D persistence, quantum/spin/electric bridge,
+electron, neutrino, accepted claim, release or #203 completion.

@@ -1,0 +1,38 @@
+attempt: P253/0162
+issue: 220
+base_release: v0.183.0
+base_commit: 9032348018fd03c921d819dc660e85587a832bce
+owner: root
+status: independently_reviewed_theorems_at_fixed_physical_scope
+physical_object: fixed_sufficiently_thin_smooth_p_ge_6_Cao_ring_on_R3
+imports:
+  Cao_primary: arXiv:2206.10165v2 Proposition 1.4, Proposition 3.2, Appendix A Lemma A.2
+  P253_0066_0073: independently_reviewed_thin_profile_foliation_one_elliptic_center
+  P253_0062_0063: corrected_positive_core_centralizer_and_whole_space_Hodge_DA_block
+  P253_0161: model_only_not_a_physical_resonance_or_saddle
+results:
+  full_3d_positive_core_Floquet:
+    route_verdict: established_at_fixed_thin_carrier_positive_core
+    scope: all_C2_divergence_free_global_centralizers_and_smooth_same_leaf_conjugates_of_one_fixed_thin_Cao_ring_positive_core
+    implication: no_hyperbolic_positive_core_periodic_orbit_so_0161_model_partition_2_does_not_transfer_to_this_carrier
+    countercase: local_positive_elliptic_PDE_saddle_germ_is_not_a_global_Euler_ring
+    not_licensed: [boundary_or_exterior_orbit_classification, no_go_for_other_carriers, Euler_branch_nonexistence]
+  exterior_DA_response:
+    route_verdict: established_for_full_smooth_positive_core_DA_source_class
+    scope: smooth_compact_positive_core_DA_sources_at_each_fixed_abs_n_ge_2
+    implication: exterior_harmonic_response_infinite_rank_and_selected_source_exact_generator_leaks_into_every_positive_core_boundary_collar
+    countercase: nonzero_smooth_DA_source_can_have_vanishing_single_degree_n_moment
+    not_licensed: [infinite_dimensional_resonant_cokernel, failure_of_weighted_DA_graph, nonzero_boundary_trace]
+  continuum_trace_and_residue:
+    route_verdict: blocked
+    missing_construction: source_specific_graph_bounded_whole_space_Hodge_and_limiting_absorption_adjoint_with_KKS_normalization
+    V_star: undefined_not_zero
+  rotating_Euler_branch_and_3d_persistence:
+    route_verdict: blocked
+    missing_construction: exact_transparency_or_other_compatible_same_leaf_branch_with_physical_pressure_and_persistence_neighborhood
+next_decisive_action: construct_and_review_source_specific_full_Hodge_weighted_DA_adjoint_or_a_different_actual_global_carrier
+claims_promoted: []
+release_changed: false
+parent_issue_203: open
+independent_review: attempts/0162/independent-review.md
+correction: rank_quantifier_globalized_and_center_Morse_argument_passed_correction_only
