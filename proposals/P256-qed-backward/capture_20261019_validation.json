@@ -1,0 +1,1922 @@
+{
+  "schema": 1,
+  "kind": "PUBLICATION_CAPTURE_VALIDATION_NOT_NEW_SCIENTIFIC_ADMISSION",
+  "recorded_at": "2026-10-19T08:47:11.759Z",
+  "source_snapshot_commit": "9d0e6195d967cf7b3ac3f3d04bc260a61ee85a2f",
+  "base_commit": "14e0b08f6099698b6d117840e65f86cbe70d4efb",
+  "publication_branch": "research/222-campaign-capture-20261019",
+  "capture_manifest_sha256": "8060d834ea6b8efc52400ad878c748909e6295b8ecae98d8ce9d59c85d38ebdc",
+  "excluded_inventory_sha256": "44c0bcbdc13f0df5cc2eb77d8e8d61d4c3df721139733cce2c0a826bf87b1420",
+  "scientific_reruns_for_capture": false,
+  "commands": [
+    {
+      "scope": "worktree existing regressions",
+      "command": "/home/administrator/substrate-framework/.venv/bin/python -m pytest -q tests/test_centre_flux_sea.py tests/test_original_gram_stationarity.py tests/test_original_quantum_mass.py tests/test_original_temporal_green.py tests/test_pair_separated_charge.py tests/test_photon_matching.py",
+      "exit": 0,
+      "result": "13 passed",
+      "pytest_seconds": 69.05
+    },
+    {
+      "scope": "clean Git-index export existing regressions",
+      "command": "Same explicit six-file pytest scope in clean index export",
+      "exit": 0,
+      "result": "13 passed",
+      "pytest_seconds": 73.15
+    },
+    {
+      "scope": "clean Git-index export repository workflow",
+      "command": "env PYTHON=<project-python3.12> scripts/validate.sh --pytest-scope tests/test_centre_flux_sea.py tests/test_original_gram_stationarity.py tests/test_original_quantum_mass.py tests/test_original_temporal_green.py tests/test_pair_separated_charge.py tests/test_photon_matching.py",
+      "exit": 0,
+      "result": "All fixed repository checks and requested pytest scope pass; 13 passed in72.17s; 271claims/15proposals/5skills,1069 memory files valid,44 memory warnings retained.",
+      "wall_seconds": 104.17
+    },
+    {
+      "scope": "actual entrypoint in clean index export",
+      "command": "python proposals/P256-qed-backward/integrate.py --help",
+      "exit": 0,
+      "result": "Argument help returned without launching research suite."
+    },
+    {
+      "scope": "repository impact selection at scientific snapshot",
+      "command": "python scripts/validate_changed.py --base 14e0b08f6099698b6d117840e65f86cbe70d4efb --head 9d0e6195d967cf7b3ac3f3d04bc260a61ee85a2f --print-only",
+      "exit": 0,
+      "result": "scoped; selects exactly the six test files executed above."
+    },
+    {
+      "scope": "initial selected loose scientific sources/receipts",
+      "command": "Python ast.parse of selected .py and json.loads of selected .json",
+      "exit": 1,
+      "result": "All1967 Python sources parse; four historical malformed JSON records are preserved; one NaN-bearing record is retained.",
+      "details": {
+        "python_files": 1967,
+        "syntax_errors": [],
+        "json_files": 8253,
+        "json_errors": [
+          {
+            "path": "proposals/P256-qed-backward/magnetic_band_review_actual2_20261012_receipt.json",
+            "error": "Expecting value: line 287 column 31 (char 14725)"
+          },
+          {
+            "path": "proposals/P256-qed-backward/principal_arc_review_actual1_20261011_receipt.json",
+            "error": "Expecting value: line 45 column 9 (char 11136)"
+          },
+          {
+            "path": "proposals/P256-qed-backward/rich_photon_20261014_synthesis.json",
+            "error": "Expecting value: line 22 column 39 (char 4256)"
+          },
+          {
+            "path": "proposals/P256-qed-backward/star_factor_review_actual1_20261011_receipt.json",
+            "error": "Expecting value: line 73 column 44 (char 2508)"
+          }
+        ],
+        "nonfinite_json": [
+          {
+            "path": "proposals/P256-qed-backward/rich_recoil_current_wave_20261016_actual4_N54_baseline_seed.json",
+            "constants": [
+              "NaN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "scope": "added public historical scientific records",
+      "command": "JSON parse of all eight recovered scientific JSONs",
+      "exit": 0,
+      "result": "All8 valid; immutable byte hashes match recorded bindings."
+    },
+    {
+      "scope": "all included files from clean Git-index export",
+      "command": "Python manifest consumer: compare existence, byte count and SHA256 for every files[] entry",
+      "exit": 0,
+      "result": {
+        "verified_files": 13349,
+        "mismatches": []
+      }
+    },
+    {
+      "scope": "staged historical source/evidence formatting",
+      "command": "git diff --cached --check",
+      "exit": 2,
+      "result": "Historical trailing whitespace and EOF blank lines reported; no rewriting of hashed source/evidence to make archival formatting green."
+    },
+    {
+      "scope": "bulk omitted evidence",
+      "command": "sha256sum over the explicit600 requested files>50MiB",
+      "result": "Completed; all600 digests/paths consumed with no missing or trailing output.",
+      "files": 600,
+      "bytes": 271657177523,
+      "wall_seconds": 2234.41,
+      "output_sha256": "85f3c3401983038326f97f901060575fcc67340b7bedd9ba07a24b694a19e5eb"
+    }
+  ],
+  "publication_secret_screen": {
+    "scanner": "gitleaks8.30.1",
+    "official_archive_sha256": "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb",
+    "source_scope": "Clean Git index export of proposals/P256-qed-backward; no local cache/venv/private tree.",
+    "archive_depth": 8,
+    "raw_exit": 1,
+    "raw_findings": 251,
+    "findings_classified": 251,
+    "unresolved_findings": 0,
+    "classifications": {
+      "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE": 232,
+      "PUBLIC_SCIENTIFIC_SOURCE_FILENAME_ALIAS": 4,
+      "SHA256_BYTECODE_MANIFEST_VALUE": 12,
+      "SHA256_API_SOURCE_EPOCH": 1,
+      "DOCUMENTED_ROOT_INPUT_SHA256": 1,
+      "PHYSICAL_COMPARISON_ROW_LABEL": 1
+    },
+    "positive_control": {
+      "kind": "Unissued random token-shaped data, never authenticated",
+      "expected_rule": "github-pat",
+      "observed_rules": [
+        "github-pat"
+      ],
+      "observed_exit": 1,
+      "earlier_alphabetic_example_did_not_trigger": true
+    },
+    "rules_disabled": false,
+    "scan_claim": "All reported hits classified against scientific source/artifact digest fields, filenames, documented hash prose or a physical comparison-row label. This is a scoped publication screen, not a universal absence proof.",
+    "final_metadata_screen": {
+      "exit": 0,
+      "findings": 0,
+      "bytes_reported": 5625411
+    },
+    "finding_dispositions": [
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_lowfree_cover_typed2_invocation_20261011_request.json",
+        "line": 16,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_lowfree_cover_typed3_invocation_20261011_exit.json",
+        "line": 11,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_lowfree_cover_typed2_invocation_20261011_exit.json",
+        "line": 11,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_lowfree_cover_typed2_invocation_20261011_stderr.txt",
+        "line": 7,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_ground_review_20261011_preexecution.json",
+        "line": 49,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_lowfree_cover_actual1_20261011_natural_exit.json",
+        "line": 21,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_lowfree_cover_typed3_invocation_20261011_request.json",
+        "line": 16,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_odd_vector_actual1_20261011_natural_exit.json",
+        "line": 17,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_lowfree_cover_control_20261011.py",
+        "line": 22,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_ground_review_typed2_20261011_invocation_exit.json",
+        "line": 53,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_ground_review_typed2_20261011_invocation_request.json",
+        "line": 57,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_ground_review_typed2_20261011_preexecution.json",
+        "line": 49,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_odd_vector_actual2_20261011_natural_exit.json",
+        "line": 21,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_odd_vector_delivery_20261011.json",
+        "line": 55,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_odd_vector_actual1_20261011_receipt.json",
+        "line": 11,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_odd_vector_scalar_actual1_20261011_natural_exit.json",
+        "line": 48,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_odd_vector_actual2_20261011_receipt.json",
+        "line": 11,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_odd_vector_scalar_actual1_20261011_receipt.json",
+        "line": 13,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_ground_review_20261011_control_receipt.json",
+        "line": 56,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_ground_review_typed2_20261011_control_receipt.json",
+        "line": 56,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_native_attempt2_20261010.json",
+        "line": 736,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_native_attempt2_20261010.json",
+        "line": 737,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_native_attempt2_20261010.json",
+        "line": 852,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_native_attempt2_20261010.json",
+        "line": 905,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_native_attempt2_20261010.json",
+        "line": 939,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_native_attempt2_20261010.json",
+        "line": 1002,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_native_attempt2_20261010.json",
+        "line": 1003,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_native_attempt2_20261010.json",
+        "line": 1016,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_lowfree_cover_actual1_20261011_receipt.json",
+        "line": 8,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_delivered_20261010.json",
+        "line": 736,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_delivered_20261010.json",
+        "line": 737,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_delivered_20261010.json",
+        "line": 852,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_delivered_20261010.json",
+        "line": 956,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_delivered_20261010.json",
+        "line": 979,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_delivered_20261010.json",
+        "line": 1002,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_delivered_20261010.json",
+        "line": 1003,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_delivered_20261010.json",
+        "line": 1016,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_actual_attempt1_20261010.json",
+        "line": 731,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_actual_attempt1_20261010.json",
+        "line": 732,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_actual_attempt1_20261010.json",
+        "line": 847,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_actual_attempt1_20261010.json",
+        "line": 905,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_actual_attempt1_20261010.json",
+        "line": 916,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_actual_attempt1_20261010.json",
+        "line": 997,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_actual_attempt1_20261010.json",
+        "line": 998,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_actual_attempt1_20261010.json",
+        "line": 1011,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_typed_20261010.json",
+        "line": 736,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_typed_20261010.json",
+        "line": 737,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_typed_20261010.json",
+        "line": 852,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_typed_20261010.json",
+        "line": 908,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_typed_20261010.json",
+        "line": 943,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_typed_20261010.json",
+        "line": 1002,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_typed_20261010.json",
+        "line": 1003,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/bulk_electric_phase_typed_20261010.json",
+        "line": 1016,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4861,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4862,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4861,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4862,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/canonical_lowfree_cover_typed3_20261011_receipt.json",
+        "line": 8,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4944,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5005,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5081,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4944,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5005,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5081,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5105,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5106,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5119,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4861,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4862,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4944,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5105,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5106,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_rooted_source_inverse_guard_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5119,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5005,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5081,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5105,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5106,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5119,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/connected_sea_parenttyped_pin_alias_validation_20261012.json",
+        "line": 97,
+        "classification": "PUBLIC_SCIENTIFIC_SOURCE_FILENAME_ALIAS",
+        "label": "original_key\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/connected_sea_parenttyped_pin_alias_validation_20261012.json",
+        "line": 98,
+        "classification": "PUBLIC_SCIENTIFIC_SOURCE_FILENAME_ALIAS",
+        "label": "typed_key\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/connected_sea_parenttyped_pin_alias_validation_20261012.json",
+        "line": 193,
+        "classification": "PUBLIC_SCIENTIFIC_SOURCE_FILENAME_ALIAS",
+        "label": "original_key\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/connected_sea_parenttyped_pin_alias_validation_20261012.json",
+        "line": 194,
+        "classification": "PUBLIC_SCIENTIFIC_SOURCE_FILENAME_ALIAS",
+        "label": "typed_key\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual03_20261011_receipt.json",
+        "line": 4861,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual03_20261011_receipt.json",
+        "line": 4862,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual03_20261011_receipt.json",
+        "line": 4944,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual03_20261011_receipt.json",
+        "line": 5001,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual03_20261011_receipt.json",
+        "line": 5085,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual03_20261011_receipt.json",
+        "line": 5105,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual03_20261011_receipt.json",
+        "line": 5106,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/charged_first_shell_actual03_20261011_receipt.json",
+        "line": 5119,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_canonical_neutral_parent_attempt1_20261011_exit.json",
+        "line": 124,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_canonical_neutral_parent_attempt1_20261011_request.json",
+        "line": 132,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_canonical_neutral_parent_attempt2_20261011_request.json",
+        "line": 131,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_canonical_neutral_parent_attempt1_manifest_20261011.json",
+        "line": 133,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_canonical_neutral_parent_attempt2_manifest_20261011.json",
+        "line": 135,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_canonical_neutral_parent_attempt2_20261011_exit.json",
+        "line": 124,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_canonical_neutral_parent_attempt1_20261011_receipt.json",
+        "line": 123,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 175,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 176,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "token.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 177,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 178,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "tokenize.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 381,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 492,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 519,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 520,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "secrets.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 657,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 659,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 685,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_corrected_metric_20261010_natural_exit.json",
+        "line": 686,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "_array_api.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 175,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 176,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "token.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 177,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 178,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "tokenize.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 381,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 481,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 502,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 503,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "secrets.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 657,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 659,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 685,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_closed_parity_20261010_natural_exit.json",
+        "line": 686,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "_array_api.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 175,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 176,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "token.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 177,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 178,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "tokenize.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 381,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 555,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 556,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "secrets.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 617,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 657,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 659,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 685,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_bulk_flux_ring_delivered_20261010_natural_exit.json",
+        "line": 686,
+        "classification": "SHA256_BYTECODE_MANIFEST_VALUE",
+        "label": "_array_api.cpython-312.pyc\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_canonical_neutral_parent_attempt2_20261011_receipt.json",
+        "line": 123,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4861,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4862,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4861,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4862,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4944,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5005,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5081,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5105,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5106,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5119,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4944,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5005,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5081,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5105,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5106,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5119,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/neutral_all64_review_actual1_20261011_receipt.json",
+        "line": 15,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/neutral_all64_review_actual1_20261011_receipt.json",
+        "line": 30,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/neutral_all64_review_actual1_20261011_exit.json",
+        "line": 11,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/neutral_all64_review_actual1_20261011_request.json",
+        "line": 17,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/neutral_return_image_delivery_20261011.json",
+        "line": 12,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/neutral_all64_review_actual1_20261011_stdout.txt",
+        "line": 15,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/neutral_all64_review_actual1_20261011_stdout.txt",
+        "line": 30,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt1_20261011_exit.json",
+        "line": 9,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt2_20261011_exit.json",
+        "line": 10,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt1_20261011_receipt.json",
+        "line": 9,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt2_20261011_request.json",
+        "line": 16,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt3_20261011_receipt.json",
+        "line": 11,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt1_20261011_stdout.txt",
+        "line": 9,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_typed4_20261011_exit.json",
+        "line": 14,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt2_20261011_stdout.txt",
+        "line": 10,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt3_20261011_exit.json",
+        "line": 11,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt3_20261011_stdout.txt",
+        "line": 11,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_typed4_20261011_receipt.json",
+        "line": 11,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt1_20261011_request.json",
+        "line": 15,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt3_20261011_request.json",
+        "line": 17,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_attempt2_20261011_receipt.json",
+        "line": 10,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_typed4_20261011_request.json",
+        "line": 19,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_typed4_20261011_stdout.txt",
+        "line": 11,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/parent_neutral_return_all64_20261011.py",
+        "line": 32,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "neutral_return_image_API_20261011.json"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_c_bare_electric_mass_v4_api_consumer_final_exit_20261008.json",
+        "line": 146,
+        "classification": "SHA256_API_SOURCE_EPOCH",
+        "label": "final_API_source_epoch\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt4_20261011_receipt.json",
+        "line": 122,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt4_20261011_receipt.json",
+        "line": 123,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt4_20261011_receipt.json",
+        "line": 205,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt4_20261011_receipt.json",
+        "line": 330,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt4_20261011_receipt.json",
+        "line": 340,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt4_20261011_receipt.json",
+        "line": 366,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt4_20261011_receipt.json",
+        "line": 367,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt4_20261011_receipt.json",
+        "line": 380,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt8_20261011_receipt.json",
+        "line": 122,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt8_20261011_receipt.json",
+        "line": 123,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt8_20261011_receipt.json",
+        "line": 205,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt8_20261011_receipt.json",
+        "line": 257,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt8_20261011_receipt.json",
+        "line": 291,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt8_20261011_receipt.json",
+        "line": 366,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt8_20261011_receipt.json",
+        "line": 367,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt8_20261011_receipt.json",
+        "line": 380,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt6_20261011_receipt.json",
+        "line": 122,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt6_20261011_receipt.json",
+        "line": 123,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt6_20261011_receipt.json",
+        "line": 205,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt6_20261011_receipt.json",
+        "line": 314,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt6_20261011_receipt.json",
+        "line": 324,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt6_20261011_receipt.json",
+        "line": 366,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt6_20261011_receipt.json",
+        "line": 367,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt6_20261011_receipt.json",
+        "line": 380,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt7_20261011_receipt.json",
+        "line": 122,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt7_20261011_receipt.json",
+        "line": 123,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt7_20261011_receipt.json",
+        "line": 205,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt7_20261011_receipt.json",
+        "line": 271,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt7_20261011_receipt.json",
+        "line": 340,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt7_20261011_receipt.json",
+        "line": 366,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt7_20261011_receipt.json",
+        "line": 367,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_corrected_attempt7_20261011_receipt.json",
+        "line": 380,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt5_20261011_receipt.json",
+        "line": 122,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt5_20261011_receipt.json",
+        "line": 123,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt5_20261011_receipt.json",
+        "line": 205,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt5_20261011_receipt.json",
+        "line": 254,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt5_20261011_receipt.json",
+        "line": 297,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt5_20261011_receipt.json",
+        "line": 366,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt5_20261011_receipt.json",
+        "line": 367,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/physical_charged_descent_attempt5_20261011_receipt.json",
+        "line": 380,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/prepared_neutral_full_field.md",
+        "line": 464,
+        "classification": "DOCUMENTED_ROOT_INPUT_SHA256",
+        "label": "keys,\nREDACTED"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/rich_review_wave49_20261016_quadrature_shared_input.json",
+        "line": 17,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "rich_review_wave49_20261016_quadrature_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/rich_review_wave49_20261016_language_final.json",
+        "line": 6015,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "rich_review_wave49_20261016_quadrature_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/rich_spatial_connected_20261015_observed.json",
+        "line": 166,
+        "classification": "PHYSICAL_COMPARISON_ROW_LABEL",
+        "label": "key\": \"REDACTED\""
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4861,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4862,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4944,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5005,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5081,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5105,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5106,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5119,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4861,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4862,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4944,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5005,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5081,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5105,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5106,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!charged_rooted_source_inverse_guard_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5119,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4861,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4862,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4944,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5005,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5081,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5105,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5106,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_preexecution.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5119,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4861,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/token.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4862,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/tokenize.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 4944,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_array_api_info.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5005,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/f2py/capi_maps.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5081,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/usr/lib/python3.12/secrets.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5105,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api_override.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5106,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_external/_array_api_compat_vendor.py"
+      },
+      {
+        "rule": "generic-api-key",
+        "path": "proposals/P256-qed-backward/joined_phi_u1_full_source_memory_charged_integration_attempt1_20261011_executed.zip!joined_phi_u1_same_local_ground_response_moment_composition_attempt1_20261011_executed.zip!charged_first_shell_actual04_20261011_receipt.json",
+        "line": 5119,
+        "classification": "SHA256_SOURCE_OR_ARTIFACT_MANIFEST_VALUE",
+        "label": "runtime_imports/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/_lib/_array_api.py"
+      }
+    ]
+  },
+  "mercury_review": {
+    "role": "Read-only completeness/source-closure/scope validator, not Git owner or scientific rerun.",
+    "must_have_family_probes": 13,
+    "present": 13,
+    "current427_source_epoch_gap": "Closed: originals recovered and hash-verified as immutable runtime archive members.",
+    "verdict": "Approve scoped draft capture after excluded inventory and completed bulk hashes; both conditions now satisfied.",
+    "private_world_state_distributed": false
+  },
+  "limits": [
+    "No new scientific admission, terminal campaign state or Nature identification.",
+    "No blanket static-analysis or numerical-convergence claim.",
+    "No full public distribution/replay of large runtime data; omitted inputs remain local.",
+    "Historical malformed JSON, NaN, static diagnostics and whitespace defects remain visible.",
+    "GitNexus not reindexed; no symbol rename/refactor or graph freshness claim."
+  ],
+  "delivery_stage": "Local capture committed; publication metadata to be committed next, then fork push/draft PR/issue readback tracked by GitHub and governing plan."
+}
