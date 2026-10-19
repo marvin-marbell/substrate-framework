@@ -1,0 +1,83 @@
+{
+  "benchmark": {
+    "CAR_error": 0.0,
+    "Gauss_commutators": [
+      0.0,
+      0.0
+    ],
+    "physical_dimension": 6,
+    "ground": -0.8238721633416013,
+    "analytic_error": 0.0,
+    "full_dimension": 48
+  },
+  "charge_proof": {
+    "encoding": "N+64[sum_v G_v 32^v+(2Sz)32^8],target8",
+    "bounds": {
+      "N": [
+        0,
+        16
+      ],
+      "G_v": [
+        -7,
+        7
+      ],
+      "2Sz": [
+        -8,
+        8
+      ]
+    },
+    "proof": "Modulo64 forces N=8 as |N-8|<=8<64. Then lowest signed digit G0 is divisible32 and |G0|<=7<32, hence zero; divide32 and repeat through G7; remaining2Sz=0. Integer no-carry decoding, not unsigned-digit assumption.",
+    "int64_absolute_upper_bound": 578839669848528,
+    "fermion_parity": "q mod2=n mod2; nevertheless explicit JW used. Field contributions even. No intrinsic grading assumed."
+  },
+  "MPO_bonds": [
+    2,
+    6,
+    10,
+    18,
+    18,
+    20,
+    28,
+    32,
+    30,
+    28,
+    36,
+    38,
+    34,
+    34,
+    38,
+    36,
+    34,
+    32,
+    30,
+    38,
+    34,
+    30,
+    28,
+    32,
+    30,
+    22,
+    20,
+    22,
+    18,
+    8,
+    6,
+    4,
+    2
+  ],
+  "seed_energy": 0.0,
+  "seed_total_charge": [
+    8
+  ],
+  "library": "physics-tenpy1.1.1",
+  "method": "explicit JW, U(1) block-exact 32-node MPS/MPO; fresh Neel E0 then full-H image expansion; no old evolved state",
+  "actual_tensor_H_image_norm_benchmark": {
+    "physical_H_image_norm2": 16.00000000000001,
+    "mixed_H_image_real": 16.000000000000004,
+    "mixed_error": 7.105427357601002e-15,
+    "scaled_bra_factor": 3.25,
+    "scaled_H_image_real": 52.000000000000014,
+    "scaling_error": 0.0,
+    "consumer": "actual32node spinfulCAR/gaugeMPO H acting on fresh Gauss0 Neel state; finite-MPS norm factors, not copy/wiring"
+  }
+}

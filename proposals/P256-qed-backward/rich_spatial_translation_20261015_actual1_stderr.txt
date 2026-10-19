@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_translation_20261015_calculate.py", line 156, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_translation_20261015_calculate.py", line 103, in main
+    coupled,states=trajectory(model,initial,kicked,receivers,spin,vacuum,config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_translation_20261015_calculate.py", line 75, in trajectory
+    for state in [initial,kicked]:states.append(expm_multiply(-1j*sec['h'],state,start=0,stop=times[-1],num=len(times),traceA=-1j*sec['trace']))
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_expm_multiply.py", line 209, in expm_multiply
+    X, status = _expm_multiply_interval(A, B, start, stop, num,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_expm_multiply.py", line 696, in _expm_multiply_interval
+    A_1_norm = onenormest(A) if is_linear_operator else _exact_1_norm(A)
+               ^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_onenormest.py", line 107, in onenormest
+    est, v, w, nmults, nresamples = _onenormest_core(A, A.H, t, itmax)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_onenormest.py", line 302, in _onenormest_core
+    Y = np.asarray(A_linear_operator.matmat(X))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 491, in matmat
+    return self._shared_matmat(X)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 451, in _shared_matmat
+    Y = self._rmatmat(X) if adjoint else self._matmat(X)
+                                         ^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 996, in _matmat
+    return self.args[0].matmat(x) + self.args[1].matmat(x)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 491, in matmat
+    return self._shared_matmat(X)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 451, in _shared_matmat
+    Y = self._rmatmat(X) if adjoint else self._matmat(X)
+                                         ^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 1063, in _matmat
+    return self.args[1] * self.args[0].matmat(x)
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 491, in matmat
+    return self._shared_matmat(X)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 451, in _shared_matmat
+    Y = self._rmatmat(X) if adjoint else self._matmat(X)
+                                         ^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 886, in _matmat
+    return self.__matmat_impl(X)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_translation_20261015_model.py", line 169, in matmat
+    def matmat(matrix):return np.column_stack([action(v) for v in matrix.T])
+                                               ^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_translation_20261015_model.py", line 164, in action
+    vector=np.asarray(vector).reshape(-1);out=apply_terms(sec,terms,vector)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_translation_20261015_model.py", line 154, in apply_terms
+    if k.nnz:out+=(k@(f@a).T).T
+             ^^^^^^^^^^^^^^^^^^
+numpy._core._exceptions._UFuncOutputCastingError: Cannot cast ufunc 'add' output from dtype('complex128') to dtype('float64') with casting rule 'same_kind'

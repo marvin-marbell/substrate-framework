@@ -1,0 +1,122 @@
+{
+  "kind": "FINAL_EXACT_SELECTED_INTERCELL_PHASE_FIVE_SOURCE_CHECKER",
+  "captured_governor": "1f8909e85cf23c2c05668ec99d9dd69e3a630f4b08bf0d1e5d74828fffafcfd8",
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--project",
+    "/tmp/issue222_intercell_phase_pyright_x2_3gsii/pyrightconfig.json",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--outputjson",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/spatial_intercell_source.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/spatial_intercell_capsule.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/bulk_electric_phase_consumer.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/bulk_electric_phase_capsule.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/spatial_intercell_complete_action_parent.py"
+  ],
+  "config": {
+    "include": [
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/spatial_intercell_source.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/spatial_intercell_capsule.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/bulk_electric_phase_consumer.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/bulk_electric_phase_capsule.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/spatial_intercell_complete_action_parent.py"
+    ],
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward"
+    ],
+    "typeCheckingMode": "basic",
+    "pythonVersion": "3.12"
+  },
+  "source_sha256": {
+    "spatial_intercell_source.py": "2c323b844cfafb27692b3e7e5f107272477c4448c92481b65b932768b7886713",
+    "spatial_intercell_capsule.py": "de9419db524371046349f595c0ce9c71b85804dbf0f2afdc352ea45cc91e710c",
+    "bulk_electric_phase_consumer.py": "4c8dd6fd6202411c6c56f5d9ac6f1ff61c52bcb64bcd2f9e8d0e40737ee02515",
+    "bulk_electric_phase_capsule.py": "5bbc4f1d8a0593d62dc30ea6ce0305c2d3a30d07361727d782c677af27080868",
+    "spatial_intercell_complete_action_parent.py": "fc822f2d15b27f4fe78c34e7c6bda643db864ce5d2e15b4de4ad712f8ddbbf6a"
+  },
+  "sources_unchanged": true,
+  "returncode": 1,
+  "natural_exit": true,
+  "elapsed_seconds": 18.59903137398942,
+  "stdout": "{\n    \"version\": \"1.1.414\",\n    \"time\": \"1791674507674\",\n    \"generalDiagnostics\": [\n        {\n            \"file\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/bulk_electric_phase_consumer.py\",\n            \"severity\": \"error\",\n            \"message\": \"Cannot access attribute \\\"real\\\" for class \\\"ndarray[_AnyShape, dtype[Any]]\\\"\\n\u00a0\u00a0No overloads for \\\"__get__\\\" match the provided arguments\\n\u00a0\u00a0Argument of type \\\"ndarray[_AnyShape, dtype[Any]]\\\" cannot be assigned to parameter \\\"obj\\\" of type \\\"None\\\" in function \\\"__get__\\\"\\n\u00a0\u00a0\u00a0\u00a0\\\"ndarray[_AnyShape, dtype[Any]]\\\" is not assignable to \\\"None\\\"\",\n            \"range\": {\n                \"start\": {\n                    \"line\": 182,\n                    \"character\": 44\n                },\n                \"end\": {\n                    \"line\": 182,\n                    \"character\": 48\n                }\n            },\n            \"rule\": \"reportAttributeAccessIssue\"\n        },\n        {\n            \"file\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/bulk_electric_phase_consumer.py\",\n            \"severity\": \"error\",\n            \"message\": \"Argument of type \\\"tuple[Fraction, int]\\\" cannot be assigned to parameter \\\"b\\\" of type \\\"C\\\" in function \\\"mul\\\"\\n\u00a0\u00a0\\\"int\\\" is not assignable to \\\"Fraction\\\"\",\n            \"range\": {\n                \"start\": {\n                    \"line\": 450,\n                    \"character\": 42\n                },\n                \"end\": {\n                    \"line\": 450,\n                    \"character\": 58\n                }\n            },\n            \"rule\": \"reportArgumentType\"\n        },\n        {\n            \"file\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/spatial_intercell_source.py\",\n            \"severity\": \"error\",\n            \"message\": \"Cannot access attribute \\\"conj\\\" for class \\\"tuple[Unknown | Any | ndarray[_AnyShape, dtype[Any]], Unknown | Any | ndarray[_AnyShape, dtype[Any]]]\\\"\\n\u00a0\u00a0Attribute \\\"conj\\\" is unknown\",\n            \"range\": {\n                \"start\": {\n                    \"line\": 113,\n                    \"character\": 99\n                },\n                \"end\": {\n                    \"line\": 113,\n                    \"character\": 103\n                }\n            },\n            \"rule\": \"reportAttributeAccessIssue\"\n        },\n        {\n            \"file\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/spatial_intercell_source.py\",\n            \"severity\": \"error\",\n            \"message\": \"Cannot access attribute \\\"conj\\\" for class \\\"tuple[Unknown | Any | ndarray[_AnyShape, dtype[Any]], Unknown | Any | ndarray[_AnyShape, dtype[Any]]]\\\"\\n\u00a0\u00a0Attribute \\\"conj\\\" is unknown\",\n            \"range\": {\n                \"start\": {\n                    \"line\": 115,\n                    \"character\": 61\n                },\n                \"end\": {\n                    \"line\": 115,\n                    \"character\": 65\n                }\n            },\n            \"rule\": \"reportAttributeAccessIssue\"\n        }\n    ],\n    \"summary\": {\n        \"filesAnalyzed\": 5,\n        \"errorCount\": 4,\n        \"warningCount\": 0,\n        \"informationCount\": 0,\n        \"timeInSec\": 17.861\n    }\n}\n\n",
+  "stderr": "",
+  "result": {
+    "version": "1.1.414",
+    "time": "1791674507674",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/bulk_electric_phase_consumer.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"real\" for class \"ndarray[_AnyShape, dtype[Any]]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"ndarray[_AnyShape, dtype[Any]]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 182,
+            "character": 44
+          },
+          "end": {
+            "line": 182,
+            "character": 48
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/bulk_electric_phase_consumer.py",
+        "severity": "error",
+        "message": "Argument of type \"tuple[Fraction, int]\" cannot be assigned to parameter \"b\" of type \"C\" in function \"mul\"\n\u00a0\u00a0\"int\" is not assignable to \"Fraction\"",
+        "range": {
+          "start": {
+            "line": 450,
+            "character": 42
+          },
+          "end": {
+            "line": 450,
+            "character": 58
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/spatial_intercell_source.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"conj\" for class \"tuple[Unknown | Any | ndarray[_AnyShape, dtype[Any]], Unknown | Any | ndarray[_AnyShape, dtype[Any]]]\"\n\u00a0\u00a0Attribute \"conj\" is unknown",
+        "range": {
+          "start": {
+            "line": 113,
+            "character": 99
+          },
+          "end": {
+            "line": 113,
+            "character": 103
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/spatial_intercell_source.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"conj\" for class \"tuple[Unknown | Any | ndarray[_AnyShape, dtype[Any]], Unknown | Any | ndarray[_AnyShape, dtype[Any]]]\"\n\u00a0\u00a0Attribute \"conj\" is unknown",
+        "range": {
+          "start": {
+            "line": 115,
+            "character": 61
+          },
+          "end": {
+            "line": 115,
+            "character": 65
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 5,
+      "errorCount": 4,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 17.861
+    }
+  },
+  "external_config_removed": false
+}

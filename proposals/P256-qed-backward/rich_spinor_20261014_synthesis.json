@@ -1,0 +1,73 @@
+{
+  "candidate": "Dynamic-neutral-orientation transfer molecular spinor",
+  "law_id": "octahedron-neutral-orientor-spin-transfer-v1",
+  "verdict": "PROMISING NEW FINITE MOLECULAR ELECTRON/INTERACTION CANDIDATE: nonzero geometric 4-state Clifford current emerges AFTER full correlated diagonalization, while FULL48-state current/contact response develops reversible spin/helicity dependence and a nonzero orbital magnetic moment. No complete QED/substrate/relativistic-particle claim.",
+  "physical_idea": "A six-site octahedral charged molecule has even s, odd p-triplet and retained higher even d-like orbitals. A separate quantum neutral s/p orientor moves and exchanges angular momentum with primitive spin. Real onsite position-orientation interaction transfers neutral rotation back into charged orbital current. No direct electronic spin-orbit coupling or Dirac matrices are installed. The actual lowest odd doublet is mostly electronic s times excited odd neutral orientation, a correlated molecular representation that outperformed the simpler purely-electronic p interpretation. Physical inversion acts on BOTH matter geometry and orientor.",
+  "backward_path": [
+    "Required charged spinor: use microscopic canonical fermion/primitive spin and inversion/real site geometry, label those unexplained inputs rather than claim emergence.",
+    "Required vector current with noncommuting spin blocks: obtain current by differentiating actual gauged octahedral hopping, with commuting full-space site positions and all orbital virtual states retained.",
+    "Required orientation-generated spin dependence: quantum neutral orientor supplies angular dynamics; kappa Ln.S and g R.n together correlate actual eigenstates. kappa is still microscopic spin-orientation input; its substrate origin remains open.",
+    "Required mass/parity sectors: complete coupled molecular H selects even2 at -0.0737216256 and odd2 at0.7664910902, split from odd4 at1.2897364392. Effective parity half-gap0.4201063579 is derived from these correlated energies, NOT an asserted relativistic rest mass.",
+    "Required full current/scattering rather than CG identity: all48 charged-state intermediates and actual contact yield nonforward transverse-probe spin/helicity-dependent response. Nearly removal of the regulator does not erase it; turning either coupling off does.",
+    "Required actual charged propagation/source: full12x12 CAR retardedG about occupied N1 doublet retains ALL264 N2 addition and ALL4 N0 removal states. Current/spin-current/contact APIs can form a declared NEW coupled root without silent Hubbard/Phi splice. Spatial recoil/lattice propagation and photon feedback are NOT yet present."
+  ],
+  "selected_parameters": {"p_gap":1.4,"d_gap":3.2,"rotor_gap":2.0,"orientation":0.85,"rotor_spin":1.1,"charging":2.3},
+  "actual_results": {
+    "molecular_H_dimension":48,
+    "lowest_even_doublet":-0.07372162562064745,
+    "lowest_odd_doublet":0.766491090248894,
+    "next_odd_quartet":1.2897364392268766,
+    "derived_parity_gap":0.8402127158695414,
+    "projected_vector_current_speed_squared":0.02211296706813171,
+    "normalized_anticommutator_residual":5.092978542864988e-14,
+    "meaning_of_clifford_result": "In the actual selected even2+odd2 basis, {PJ_iP,PJ_jP}=2 v^2 delta_ij I4. Both nonzero current strength and multiplet isolation matter; this is not an identity fitted by importing gamma matrices. It does not establish free Dirac spatial propagation.",
+    "odd_doublet_electronic_weights": {"s":0.8173458281106267,"p":0.1814809345762219,"d":0.001173237313150865},
+    "odd_doublet_neutral_excitation_weight":0.8185190654237777,
+    "even_doublet_neutral_excitation_weight":0.02359402787305408,
+    "physical_electron_orbital_magnetic_moment_z_by_ground_spin": [0.003224840186574207,-0.0032248401865741967],
+    "magnetic_interpretation": "Actual orbital bond Peierls magnetic source, not installed spin Zeeman or g2. Values above are PHYSICAL electron moments; raw actual1 field stores number/linkphase moment and has opposite sign. Magnitude is small, not the electron gyromagnetic ratio.",
+    "nonforward_external_probe": {
+      "q_in":[0,0,0.35],"q_out":[0.35,0,0],"omega":0.35,"eta":0.000001,
+      "incoming_circular_epsilon":"(x+i y)/sqrt2","outgoing_polarizations":"sum of y and -z transverse to qout",
+      "summed_response_rates_by_initial_spin_minus_plus":[0.002438035507165998,0.002165128669130823],
+      "spin_rate_asymmetry":-0.059286792211422835,
+      "opposite_helicity_asymmetry":0.059286792211380036,
+      "spin_flip_response_rate_sum":0.00000852947948292632,
+      "angle60deg_asymmetry":-0.08148427932121638,
+      "angle120deg_asymmetry":-0.04969999826537151,
+      "meaning": "Squared normalized molecular KH amplitudes, NOT physical cross sections. All states/contact retained; fixed molecule has no center-of-mass recoil. External transverse probes are not a massless photon phase."
+    },
+    "full_H_time_dependent_cross_current_response": "i <ground|[Jx(t),Jy(0)]|ground> develops opposite diagonal spin values: t0 ±.0025798721,t1 ±.0205169768,t2 ±.0502322841,t4 ∓.0870811369. Exact complete-H evolution, not4-state propagator.",
+    "full_static_current_contact_pure_gauge_norm":1.2510345311907464e-14,
+    "current_position_identity_residual_xyz":[0,0,0],
+    "CAR_G_sum_rule_residual":2.4074959994247004e-15,
+    "charged_G_sector_dimensions":{"N0":4,"N1":48,"N2":264},
+    "addition_gap":2.2354208544149112,
+    "minimum_removal_energy":0.07372162562064537
+  },
+  "executed_decision_controls": [
+    {"change":"kappa=0, same orientation motion g=.85","result":"Odd sector lowest dimension6, not2; normalized 2+6 current-Clifford residual2.8284; spin asymmetry at90deg/.35/eta1e-6=-5.18e-14; orbital moment≈0. Thus spin-symmetric moving orientation alone does NOT supply this spin-current structure."},
+    {"change":"g=0, same microscopic neutral Ln.S","result":"Low odd neutral/spin doublet still exists but is optically dark: projected current speed²1.387e-29 versus.022113 delivered; spin response asymmetry1.25e-13 and orbital moment≈0. Mere CG-doublet labels do NOT suffice. Raw normalized Clifford diagnostic nearzero on this control is a zero-current artifact and is explicitly NOT a positive result."},
+    {"change":"kappa=-1.1, g=.85","result":"Actual lowest odd multiplet becomes quartet; 2+4 projected current residual1.7321, despite finite spin response. Sign of neutral orientation-spin interaction makes a MATERIAL representation selection, not generic Clifford magic."},
+    {"change":"Replace full virtual sum by only lowest even/odd multiplets","result":"On delivered branch with eta.025, relative amplitude errors13.3486 (y polarization) and1.6180 (z). Retained oddquartet/higher orbitals are ESSENTIAL even when low-current Clifford algebra is accurate. Current contact stays actual in this comparison."},
+    {"change":"eta .025 ->1e-6, omega.15/.35/.6, angles60/90/120deg, both incident helicities","result":"Executed108 angle/frequency/regulator/helicity rows across dynamic and two controls. Spin asymmetry survives on dynamic branch and flips with helicity; both controls remain spin-independent at selected90deg/.35 datum. Complete scan in actual2_result.json."
+    }
+  ],
+  "physical_coupling_retained": ["Quantum orientor motion and matter/orientor entanglement", "Primitive spin torque and orientation angular transfer", "All12 charged spin/site orbitals, not early4 projection", "Complete48-state N1 virtual scattering sum and source-derived contact", "Full264-state N2 addition with repulsive charging and4-state N0 hole sector", "Exact finite-q straight-link source geometry", "Actual orbital magnetic Peierls source and exact full-H time-dependent cross-current response"],
+  "important_boundaries": [
+    "This octahedral finite molecule is cubic, not exactlySO3: full continuous rotation commutator norm2.7761; selected4-state rotation algebra residual.0016553. Lowest odd Jz values±.4988268 are near half, not exactly guaranteed physical jhalf. Canonical primitive spinhalf remains an INPUT.",
+    "No lattice Bloch dispersion, recoil, stable self-localized charged body, or relativistic Lorentz relation has been derived. Paritygap/Clifford current alone must not be relabeled a relativistic electron.",
+    "Hole/removal negative-frequency poles are NOT positrons. Numberphase current has positive number convention; physical negative electron EMcurrent is minus it.",
+    "Photon modes here are EXTERNAL transverse probes, not two dynamical propagating photons; no Gauss electric dressing, current-photon feedback, massless-phase or classical-to-quantum origin claim.",
+    "Canonical CAR, primitive spin/charge, neutral orientor quantization and kappa Ln.S input remain unexplained. The improvement is a demonstrated DYNAMIC supplier of spin-dependent charged current, not derivation of those primitives.",
+    "Only explicitly NEW coupled-root integration can join this interface to a photon candidate. Other peer roots retain distinct identities."
+  ],
+  "API": "rich_spinor_20261014_interface.json: build_sector/solve, current/contact/spin_current, car_source/charged_spectral/charged_green, complete scattering. Dense exact pure-function matrices, units/source signs/basis/charge specified.",
+  "equations": "rich_spinor_20261014_equations.json",
+  "natural_exit_evidence": [
+    {"capsule":"rich_spinor_20261014_actual1_capsule.zip","receipt":"rich_spinor_20261014_actual1_exit.json","returncode":0,"natural_exit":true,"wall_seconds":1.2741868495941162,"scope":"Four materially different orientor/spin coupling branches, actual multiplets/full current/contact/G and truncated-sector comparator"},
+    {"capsule":"rich_spinor_20261014_actual2_capsule.zip","receipt":"rich_spinor_20261014_actual2_exit.json","returncode":0,"natural_exit":true,"wall_seconds":5.462431192398071,"scope":"NEW full angle/frequency/regulator/helicity scan, full-H time response, orbital character, static contact/rotation discriminators"}
+  ],
+  "next_material_move": "Keep this genuinely spin-dependent geometric-current supplier, but replace cubic incomplete angular shells by a larger rotational geometry and locally dynamic orientors with complete l2 virtual sectors. Then translate the SAME charged molecular states on a lattice, couple all hopping to explicit quantum EM links/two transverse coordinates in a NEW Gauss root, and execute recoil/nonforward feedback without discarding the quartet. Separately seek exchange/chiral neutral dynamics that produce the effective kappa Ln.S rather than treating it as fundamental. These are next material constructions, not evidence already obtained.",
+  "review_handoff": "ScientificReviewWave2 receives frozen sources/capsules for actual consumer diagnostics. No builds/lint/tests/project validation run by worker. Parent reads synthesis; reviewer owns final diagnostics. Shared governing plan parent sole writer."
+}

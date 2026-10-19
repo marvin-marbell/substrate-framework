@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/source_tail_review_consumer_20261012.py", line 196, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/source_tail_review_consumer_20261012.py", line 188, in main
+    result = run(json.loads(args.request.read_text()))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/source_tail_review_consumer_20261012.py", line 169, in run
+    coefficient = coefficient_and_covariance(descriptor)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/source_tail_review_consumer_20261012.py", line 94, in coefficient_and_covariance
+    assert transformed == gx*h*gy.adjoint()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

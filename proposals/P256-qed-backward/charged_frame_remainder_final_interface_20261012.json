@@ -1,0 +1,152 @@
+{
+  "kind": "ACTUAL_FULL64_SOURCE_REMAINDER_AND_EXECUTED_JOINT_CENTRE_KERNEL_FINAL_INTERFACE_NOT_PHASE",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "32fd1409abbc013242735994b8a4a9e64f5bbf3c36a9dd6f3257ac2b54cae88f",
+    "accepted_scoped_science": "4084310261f5f3d8a9978fcca58bca8c458808a0602940ec00c4eb5876620c64",
+    "template": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "requirements": [
+      "outcome",
+      "verification"
+    ],
+    "parent_sole_plan_writer": true
+  },
+  "source_envelope": {
+    "root_onsite_per_charged_species": 1,
+    "labelled_incident_NN_two_AP_per_species": 12,
+    "active_load": 1,
+    "auxiliary_load": 63,
+    "onsite_weight_modulus_max": 1,
+    "path_forward_and_adjoint_weight_modulus_max": 2,
+    "all65_Ref": "neutral and fullRef exact spectators; every species canonical2V and exterior identity retained; no neutral Lambda-scaled approximation"
+  },
+  "geometry_consumed": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/clifford_source_geometry_interface_20261012.json",
+    "sha256": "257516083c7e604175221f2df857cbbabfe422368b9469f4194fd21f8a9a13b2",
+    "C_orbit": 2305843009213693952,
+    "distance": "D<=2d2+2^61 eta"
+  },
+  "derived_constants": {
+    "C_source": 4503599627370496,
+    "C_D": 2561623003529216,
+    "C_a": 1280788339359744,
+    "centre_link_error": "L<=1728(2D+a)",
+    "source_error_squared_exact": "(64*2378)^2[2D+32*1728(2D+a)]",
+    "source_error_squared_coarse": "2^52(2d2+2^61 eta+a+c)<2^-45",
+    "large_N_gate": "every even N>=2^257",
+    "native_colour_normalization": "C_face=4-ReTr Uface=||I-Uface||HS\u00b2/2",
+    "centre_cocycle_mismatch_probability": "<=c/2+4L; centre values and global windings NOT discarded"
+  },
+  "physical_comparator": {
+    "definition": "Average selected-frame onsite/path coefficients over covariant nearest-frame kernel g=h f(h\u2020Phi h), h normalized SU4 Haar, and uniform nearest-centre tie kernels. Retain original once-shared integer U1 flows and AP phases. This defines bounded invariant local O0 on SAME physical module, not an adopted frame Hamiltonian.",
+    "why_needed": "Bare nearest selector is not globally equivariant at Phi=0; field-frame choice alone is not a physical H-domain unitary. Covariant coefficient averaging fixes only physical Hilbert-source covariance.",
+    "comparator_operator_norm_bound": "<2^20 for specified local envelope",
+    "actual_wholeP0": "u=(1-P0)O sqrt(rho_N),v=(1-P0)O0 sqrt(rho_N), SAME actual rho_N and ENTIRE actual P0; ||u-v||HS\u00b2<2^-45",
+    "complex_cross": "All complex/cross-species terms retained. Gram/resolvent upper differences via source errors, SAME fullH positive-s resolvent only.",
+    "unpaid_derivative_domain": "No derivative of selector/centre discontinuities or transformed Phi/Haar kinetics paid; no Q(H)/D(H) preservation, source graph bound, effective-H intertwiner, transported P0, lowband range or continuous infinite-volume algebra adoption"
+  },
+  "scientific_controls": {
+    "NEW_N": [
+      4,
+      6,
+      8
+    ],
+    "all_native_labelled_paths_and_AP_aliases": true,
+    "full_complex_CAR_cross": "11/5 + I",
+    "shared64_vs_wrong_independent_source_squared": [
+      4096,
+      64
+    ],
+    "shared_E_squared_vs_wrong_copy_memory": [
+      1040,
+      32
+    ],
+    "flat_centre_winding": "i with a=c=0; wrong trivial phase gives HS\u00b28",
+    "noncommuting_endpoint_average_replacement_rejected": true,
+    "native_ground_computed": false
+  },
+  "proof": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_proof_20261012.json",
+    "sha256": "67fae60ba818e6855e3d8570647199d0dac1878dadaadec4958057e0bd51aa3b"
+  },
+  "consumer": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_consumer_20261012.py",
+    "sha256": "f105bcf3cac54fd1fae6909145a967846827734354d4a73dd32b920c2243cd8a"
+  },
+  "receipt": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_actual1_20261012_receipt.json",
+    "sha256": "8c189fa23af39d19d99d3431a444614da145027417a6dd32fbf77d932c93176f"
+  },
+  "capsule": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_actual1_20261012_capsule.json",
+    "sha256": "9bc9ee68a638491e14d7c6e0eda56319c8833ac5c3f4ca2edec22c269c4f6b0f"
+  },
+  "execution": {
+    "natural_returncode": 0,
+    "wall_seconds": 10.721456415,
+    "post_inputs_unchanged": true,
+    "preexecution": {
+      "path": "charged_frame_remainder_actual1_20261012_preexecution.zip",
+      "sha256": "a88bc91cef6e030752e2590b39da81d57aa742dac504695da84eb93bcd1082c2"
+    },
+    "executed": {
+      "path": "charged_frame_remainder_actual1_20261012_executed.zip",
+      "sha256": "9fd57b8744df2d1f6f44049ccfc9a2eb2b45b133858a3a9151f47924186cdff1"
+    },
+    "historical_producers_imported_or_replayed": false
+  },
+  "first_remaining_physical_debt": "N-uniform actual full-H low-energy form/range transport of these same-rho_N entireP0 sources, with quantum frame derivatives and exterior memory, then a lower magnetic Gram/order/stiffness and sharp IR atom/commoncone/Compton. Source upper alone supplies none of these.",
+  "parent_checks_to_run": [
+    "Selected new Python diagnostics, parent-owned after integration",
+    "Independent review of covariant kernel averaging and centre/endpoint estimates",
+    "Review source-weight envelope before using the bound for larger supports or derivatives"
+  ],
+  "diagnostics_build_lint_tests_formatters_not_run": true,
+  "language": "Native root-bound pyright-langserver symbols plus positive native_clifford AST exercised; mounted LSP absent",
+  "memory": "Parent sole governing plan; memory status ready, explicit bind output overflow; no plan writes",
+  "scientific_admission": false,
+  "law_changed": false,
+  "actual_state_or_ground_adopted": false,
+  "campaign_complete": false,
+  "joint_centre_supplement": {
+    "proof": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_centre_proof_20261012.json",
+    "sha256": "6af26ca8aa387ec14f2ee2321274395ab1a3ba40d20f10cd49af6e85cfcd3886",
+    "kernel": "g_x K [ordered product z(g_v\u2020 U_e g_w)] g_y\u2020; centres jointly conditioned on SAME sampled frames; uniform nearest-centre ties respect Z4 coboundaries",
+    "exact_PhiC_UI_cases": 8,
+    "exact_native_profile_NN_two_AP_cases": 36,
+    "wrong_independent_bare_kernel_zero": true,
+    "joint_kernel_native_carrier_exact": true,
+    "true_nearest_selector_not_sequential_polar_map": true,
+    "noncommuting_SU4_frames_and_original_shared_integer_flow": true
+  },
+  "centre_consumer": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_centre_consumer_exact_20261012.py",
+    "sha256": "7aa6451e3b9f7732dd5410e247861059a842dd6fc15440df36e10001522590b4"
+  },
+  "joint_centre_execution": {
+    "receipt": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_actual3_20261012_receipt.json",
+    "receipt_sha256": "597be8e277810d2fe8f03c3fed6f9050585b0164a5a87fae7669a562b2ea21aa",
+    "capsule": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_actual3_20261012_capsule.json",
+    "capsule_sha256": "78b224538389c3ce35558e723427a3768567d58e58be0e58c9888975c589b5f1",
+    "natural_returncode": 0,
+    "wall_seconds": 23.042620603,
+    "inputs_unchanged": true,
+    "preexecution": {
+      "path": "charged_frame_remainder_actual3_20261012_preexecution.zip",
+      "sha256": "8b31cabbecdd34fc44419f3c3ef43df6e5d7671fad6bb2f5a7d3b6c93d278340"
+    },
+    "executed": {
+      "path": "charged_frame_remainder_actual3_20261012_executed.zip",
+      "sha256": "9272c253fe1e2d4779ccd32c6774ed5bcf3070bc6574a280910557a49f4447d0"
+    }
+  },
+  "retained_epoch2_failure": {
+    "capsule": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_actual2_20261012_capsule.json",
+    "natural_returncode": 1,
+    "correction": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_centre_correction_20261012.json",
+    "observed": "Raw SymPy expression equality failed; NEW AST-cloned consumer exact HS\u00b2 difference equality succeeds, no tolerance or false fallback; prior source/archives immutable."
+  },
+  "successor_of_immutable_interface": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_frame_remainder_interface_20261012.json"
+}

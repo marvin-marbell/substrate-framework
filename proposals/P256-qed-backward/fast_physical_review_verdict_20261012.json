@@ -1,0 +1,105 @@
+{
+  "kind": "INDEPENDENT_REVIEW_VERDICT_LOCAL_THEOREM_ACCEPTABLE_WITH_TWO_SEA_PROOF_CORRECTIONS_NOT_PHYSICAL_GAP_APPROVAL",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "f2549b02b58c6591e77f81d14fabc1c40c9f177fdefd5d6c09b3f8a716bf8e65",
+    "accepted_scoped_science": "4084310261f5f3d8a9978fcca58bca8c458808a0602940ec00c4eb5876620c64",
+    "template": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "requirements": [
+      "outcome",
+      "verification"
+    ],
+    "parent_sole_plan_writer": true
+  },
+  "targets": {
+    "fast_proof": {
+      "path": "fast_quantum_body_proof_20261012.json",
+      "sha256": "9a4747d447e0051d4f0c74fcec6cd9cfb4b0f58a39507918692b24e947c6dba5"
+    },
+    "fast_local_sea": {
+      "path": "fast_quantum_body_local_sea_graph_20261012.json",
+      "sha256": "e40de0852d26fd2f3d3a15da2b6cf9112b772645456a49375c4b263b9ae4ce88"
+    },
+    "fast_intertwiner": {
+      "path": "fast_quantum_body_intertwiner_proof_20261012.json",
+      "sha256": "3254fa21d98726d0f5ce658f54fa56c707cb3d5df9e225d41bdffd4f16620578"
+    },
+    "fast_interface": {
+      "path": "fast_quantum_body_interface_20261012.json",
+      "sha256": "0fd9a7146d576ac4bd805921a4a8a4013f0b4a2e032ed27762f55069afd476d4"
+    }
+  },
+  "verdict": "VALID_LOCAL_DOMAIN_AND_COLOCAL_FAST_RANGE; CONDITIONAL_SEA_PROJECTION_VALID_WITH_EXPLICIT_NATIVE_MARGIN_AND_PROJECTION_CALCULUS_CORRECTION",
+  "proof": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/fast_physical_review_proof_20261012.json",
+    "sha256": "4abce3a3d57cf9bce7330ce19633103a6fd7ecc7ef7d2b17773d784347b549b0"
+  },
+  "smallest_target_corrections": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/fast_physical_review_target_corrections_20261012.json",
+    "sha256": "14d829ad01db6dcd57972877769b2b60f8d3616c80c82aad07626172a9813c84",
+    "applied_to_frozen_targets": false
+  },
+  "findings": [
+    {
+      "id": "FAST_RIGHT_EDGE_MARGIN",
+      "revision": "e40de0852d26fd2f3d3a15da2b6cf9112b772645456a49375c4b263b9ae4ce88",
+      "location": "derivation[1], all resolvents on Re z=256",
+      "trigger": "Using ||h||<256 alone to assert ||(h-z)^-1||<=256 on the rightmost contour edge",
+      "consequence": "Strict norm bound alone admits h=256-1/65536 with right-edge resolvent65536, invalidating claimed DP/D2P constants unless a native quantitative margin is supplied",
+      "smallest_repair": "Insert native U=(3/2)(|m|+6(|c0|+|ci|))+2^-18<156, hence256-U>100>1/256. Existing contour and conservative constants can stay."
+    },
+    {
+      "id": "FAST_SEA_RAY_CURVATURE",
+      "revision": "e40de0852d26fd2f3d3a15da2b6cf9112b772645456a49375c4b263b9ae4ce88",
+      "location": "derivation[3], ordered DyDx ray formula",
+      "trigger": "Treating the Kato anti-Hermitian connection as a jointly horizontal multidir ray with no Berry phase/curvature qualification",
+      "consequence": "Native rank2 Clifford sea has nonzero determinant Berry curvature for the specified uniform Phi0 variations; a single ray cannot satisfy the proposed first-jet rule in every direction, so its ordered second-ray formula is not a global chart identity",
+      "smallest_repair": "Replace multidir ray sentence by exact whole-sea projection formulas DPi=[dGamma(A),Pi], DyDxPi=[dGamma(DyAx),Pi]+[dGamma(Ax),[dGamma(Ay),Pi]]. Retain all2V columns, both orders and the existing2^46/2^96 projection prices. If ray jets are desired, specify ordered parallel-transport paths or retain phase-connection terms."
+    }
+  ],
+  "constant_decision": "No constant correction needed: exact inverse row norm b=1,c=1; unit nonzero eigenvalues32x10,48x20,64x15. Thus body c/32768 equals interface1/32768. This is still quotient cost only.",
+  "valid_local_scope": {
+    "valid": "Compact algebraic quotient/link costs; exact mixed metric under inherited compact coordinate realization; unconditional local K_D quarter-graph/nonreal resolvent/IMS/scalar fullH commutator; exact COLOCAL fullRef fast-source domain/COMMON ABSOLUTE bounded-Borel transport",
+    "conditional_after_small_corrections": "Moving full canonical neutral electronic SEA projection local trace-ideal jets on simultaneous tube, with explicit quantitative right-edge margin and projection-not-joint-horizontal-ray calculus",
+    "unproved": "Actual physical N-uniform quantum fast gap, simultaneous actual-ground support, actual charged/Ref source weights, general current QHP complement/range/exterior transport at physical1, fullH spectral intertwining, magnetic phase, IR atom/nonzero residue, two polarizations, commoncone and Compton"
+  },
+  "source_weight_scope": "fullRef||E||<=2; Ref4-only E^*E=(4-nactive)/4; no global square or nonzero actual overlap",
+  "new_consumer": {
+    "capsule": "/home/administrator/substrate-222/proposals/P256-qed-backward/fast_physical_review_actual3_20261012_capsule.json",
+    "capsule_sha256": "3ff4c78a3a3e61982c256fb5c0a6616a30619176cccbb6b0827be4b5e945f6e3",
+    "receipt": "/home/administrator/substrate-222/proposals/P256-qed-backward/fast_physical_review_actual3_20261012_receipt.json",
+    "receipt_sha256": "24148e75cf5b1abe157fba2240c53de146a51f0c899a45af4da953d42b798c59",
+    "natural_exit": true,
+    "returncode": 0,
+    "seconds": 20.535806058032904,
+    "preexecution": {
+      "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/fast_physical_review_actual3_20261012_preexecution.zip",
+      "sha256": "41cb8d8b3ce26ce550e93434eb4cfd79c1dde008664f5d2e68d837f70ce7e923"
+    },
+    "executed": {
+      "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/fast_physical_review_actual3_20261012_executed.zip",
+      "sha256": "182b1282dcdce3aa203a6a74c0135a32a8dad976eb5c7e8ff28f68fc0247ac99"
+    },
+    "captured_and_original_source_input_unchanged": true
+  },
+  "failures_preserved": [
+    {
+      "returncode": 1,
+      "capsule": "/home/administrator/substrate-222/proposals/P256-qed-backward/fast_physical_review_actual1_20261012_capsule.json"
+    },
+    {
+      "returncode": 1,
+      "capsule": "/home/administrator/substrate-222/proposals/P256-qed-backward/fast_physical_review_actual2_20261012_capsule.json"
+    }
+  ],
+  "first_unpaid_transition": "N-uniform actual covariant fast cluster or weighted complement with actualrho source/range/wholeP0 current response and exterior transport at physical1",
+  "parent_checks_to_run_once": "Current selected diagnostics for fast_physical_review_consumer_20261012.py and fast_physical_review_execute_20261012.py; inspect proposed target repairs and own integrated consumer. Do not replay author original scientific entrypoints.",
+  "scientific_admission": false,
+  "uniform_quantum_fast_gap_proved": false,
+  "actual_ground_overlap_proved": false,
+  "law_changed": false,
+  "SOURCE_adopted": false,
+  "campaign_complete": false
+}

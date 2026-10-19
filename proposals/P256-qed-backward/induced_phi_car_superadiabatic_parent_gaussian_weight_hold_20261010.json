@@ -1,0 +1,20 @@
+{
+  "kind": "PARENT_REVIEW_HOLD_UNIFORM90_PACKET_BUDGET_ONLY",
+  "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+  "captured_revision": "712b1723921b52c5cc7b0fced4b6428a6c5b37ad6278d074bae0895dc40a1416",
+  "historical_primary_sha256": "480fd3f4c6b6ebd4aba9e163134fef590cb61427a629e50d354399411ddec4d1",
+  "historical_source_sha256": "0b963c8b3e32753df491e9dd1c17391d078886ac42b9c2a142dd0cda6813cc1a",
+  "finding": "packet_budget radial_Kato_connection_variation assumes a covariance-independent Gaussian score/radius product. For the actual mixed90 source C=.5 A^-1, the frozen Cmax/Cmin ratio is about 10^308; no unit/condition-free cap was derived. The first-connection variation must include W/S conjugation and S differential terms, bounded by C2+(C1+Ct)^2+Ct^2, and the weighted A-radius product. Separately, rho*(1-P) and rho^2*(1-P) require Gaussian L4 radial moments multiplying the supplied corrector L4 bound, not their L2 moments.",
+  "abstract_falsifier": {
+    "dimension": 90,
+    "covariance_first_two_exact": ["1/1267650600228229401496703205376", "1/1393796574908163946345982392040522594123776"],
+    "precision": "A=.5 C^-1",
+    "radial_Kato": "W(r)=exp(i r1 r2 sigma_x), P(r)=W P0 Wdag with P0=(I+sigma_z)/2; radial generator is offdiagonal and equals the actual radial Kato connection",
+    "Gaussian_score_variation_norm_exact": "1099511627777/2097152",
+    "wrong_dimension90_connection_L3_upper": "270",
+    "adverse_result": "Exact Gaussian norm exceeds the covariance-independent claimed shape. Abstract bound falsifier only; not an observed violation of the actual N4 packet residual, ZPE or source law. Compact-source moment repair will use conservative global Gaussian majorants."
+  },
+  "preserved": ["Completed coefficient and nonlinear W_Kato point execution", "q/-q ABI/sign/asymmetric controls", "old primary natural0/input/source capsule", "exact source state and frozen scalar Gaussian/corrector", "distinct uniform105/90 law without Pi/HC"],
+  "next": "Fix future packet_budget and perform NEW cheap frozen-coefficient reprice, then NEW same-H endpoint consumer; do not rerun the completed 22509-second coefficient/point calculation or backfill its source epoch.",
+  "admission": "Prepared-state budget and inherited endpoint price held; never previously parent-admitted. No global physical/ground/pole/cone claim."
+}

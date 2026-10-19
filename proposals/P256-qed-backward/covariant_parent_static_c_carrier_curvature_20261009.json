@@ -1,0 +1,143 @@
+{
+  "kind": "Parent static meanPhi point-C curvature diagnostic; no interacting commoncone claim",
+  "program_utf8": "import numpy as np,json,hashlib\nimport physical_c_real_cover_kernel as k\nassert hashlib.sha256(k.SOURCE_BYTES).hexdigest()==\"89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2\"\np=k.NativeParameters();law,reference,direction=k.native_law(p)\ncolour=np.broadcast_to(np.eye(4),(2,3,4,4)).astype(complex).copy()\ndef energy(axis,phase):\n phases=np.zeros((2,3));phases[:,axis]=phase\n h=law.potential(phases,np.zeros((2,4,4,4)),colour,None)[\"h\"]\n ev=np.linalg.eigvalsh(h)\n positive=ev[ev>0]\n return float(positive[0]),float(np.linalg.norm(h-h.conj().T)),ev.tolist()\ne0,herm,ev0=energy(0,0)\nrows=[]\nfor axis in range(3):\n for q in [.01,.005,.0025,.00125]:\n  ep,_,_=energy(axis,q);em,_,_=energy(axis,-q)\n  v2=(.5*(ep*ep+em*em)-e0*e0)/(q*q)\n  rows.append(dict(axis=axis,link_phase=q,physical_momentum=q/p.spacing,positive_point_energy=ep/p.spacing,curvature_v_squared=v2,parity_defect=abs(ep-em)))\nprint(json.dumps(dict(scope=\"NEW STATIC native meanPhi identitycolour C-carrier curvature; not interacting/electric/macro dispersion or commoncone admission\",parameters=k.asdict(p),source_sha256=hashlib.sha256(k.SOURCE_BYTES).hexdigest(),ledger_sha256=hashlib.sha256(k.LEDGER_BYTES).hexdigest(),frozen_native_sha256=hashlib.sha256(k.FROZEN_NATIVE_BYTES).hexdigest(),base_point_positive_physical_energy=e0/p.spacing,base_onebody_eigenvalues=ev0,hermitian_defect=herm,rows=rows)))\n",
+  "program_sha256": "97af60c9d22df47afdea65b169909d0db5fa4db0f549c0eb064fa76d8f77bff7",
+  "natural_exit": 0,
+  "stderr": "",
+  "observed": {
+    "scope": "NEW STATIC native meanPhi identitycolour C-carrier curvature; not interacting/electric/macro dispersion or commoncone admission",
+    "parameters": {
+      "photon_grade": 1,
+      "quadrature_order": 2,
+      "normal_order": 3,
+      "colour_order": 2,
+      "normal_sigma": 0.01,
+      "colour_sigma": 0.003,
+      "chart_radius": 0.02,
+      "centre_penalty": 10.0,
+      "harmonic_free_coefficient": 0.02,
+      "outside_quartic": 0.02,
+      "outside_couplings": [
+        0.07,
+        0.02,
+        0.03
+      ],
+      "prefix_steps": 4,
+      "critical_bare_mass": -2.0282053185612114,
+      "spacing": 0.01
+    },
+    "source_sha256": "89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2",
+    "ledger_sha256": "567985093c8e3e512d78b064427996aa92a5a7abab36886d7cf21b4e1d623c87",
+    "frozen_native_sha256": "569e932d9cee150395fa4a27dd9a4355dace8b7de367db9c271b6c7bcca84d51",
+    "base_point_positive_physical_energy": 2.0282053185610787,
+    "base_onebody_eigenvalues": [
+      -1.0918972076044495,
+      -1.091897207604449,
+      -0.02028205318561222,
+      -0.020282053185611625,
+      0.020282053185610785,
+      0.02028205318561198,
+      1.09189720760445,
+      1.0918972076044513
+    ],
+    "hermitian_defect": 0.0,
+    "rows": [
+      {
+        "axis": 0,
+        "link_phase": 0.01,
+        "physical_momentum": 1.0,
+        "positive_point_energy": 2.2612542325523832,
+        "curvature_v_squared": 0.9996538899965662,
+        "parity_defect": 2.463307335887066e-16
+      },
+      {
+        "axis": 0,
+        "link_phase": 0.005,
+        "physical_momentum": 0.5,
+        "positive_point_energy": 2.088909517843935,
+        "curvature_v_squared": 0.9997046379991948,
+        "parity_defect": 1.2628786905111156e-15
+      },
+      {
+        "axis": 0,
+        "link_phase": 0.0025,
+        "physical_momentum": 0.25,
+        "positive_point_energy": 2.0435506225935476,
+        "curvature_v_squared": 0.9997173258118747,
+        "parity_defect": 1.0408340855860843e-15
+      },
+      {
+        "axis": 0,
+        "link_phase": 0.00125,
+        "physical_momentum": 0.125,
+        "positive_point_energy": 2.0320525207331337,
+        "curvature_v_squared": 0.9997204978282048,
+        "parity_defect": 6.314393452555578e-16
+      },
+      {
+        "axis": 1,
+        "link_phase": 0.01,
+        "physical_momentum": 1.0,
+        "positive_point_energy": 2.2612542325521794,
+        "curvature_v_squared": 0.9996538899956621,
+        "parity_defect": 1.700029006457271e-16
+      },
+      {
+        "axis": 1,
+        "link_phase": 0.005,
+        "physical_momentum": 0.5,
+        "positive_point_energy": 2.08890951784401,
+        "curvature_v_squared": 0.9997046379989692,
+        "parity_defect": 5.065392549852277e-16
+      },
+      {
+        "axis": 1,
+        "link_phase": 0.0025,
+        "physical_momentum": 0.25,
+        "positive_point_energy": 2.043550622593541,
+        "curvature_v_squared": 0.9997173258081536,
+        "parity_defect": 3.469446951953614e-17
+      },
+      {
+        "axis": 1,
+        "link_phase": 0.00125,
+        "physical_momentum": 0.125,
+        "positive_point_energy": 2.0320525207331697,
+        "curvature_v_squared": 0.9997204978303905,
+        "parity_defect": 8.326672684688674e-17
+      },
+      {
+        "axis": 2,
+        "link_phase": 0.01,
+        "physical_momentum": 1.0,
+        "positive_point_energy": 2.2612542325523144,
+        "curvature_v_squared": 0.9996538899961532,
+        "parity_defect": 7.008282842946301e-16
+      },
+      {
+        "axis": 2,
+        "link_phase": 0.005,
+        "physical_momentum": 0.5,
+        "positive_point_energy": 2.088909517843884,
+        "curvature_v_squared": 0.9997046379987568,
+        "parity_defect": 1.7555401576885288e-15
+      },
+      {
+        "axis": 2,
+        "link_phase": 0.0025,
+        "physical_momentum": 0.25,
+        "positive_point_energy": 2.043550622593525,
+        "curvature_v_squared": 0.999717325810747,
+        "parity_defect": 1.1449174941446927e-15
+      },
+      {
+        "axis": 2,
+        "link_phase": 0.00125,
+        "physical_momentum": 0.125,
+        "positive_point_energy": 2.0320525207332367,
+        "curvature_v_squared": 0.9997204978298702,
+        "parity_defect": 1.3010426069826053e-15
+      }
+    ]
+  }
+}

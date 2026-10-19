@@ -1,0 +1,114 @@
+{
+  "status": "PARENT_REVIEW_COMPLETE_AT_EXPLICIT_SUBSET_SCOPES",
+  "exact_integer_cycle_controls": true,
+  "two_vector_Ritz_energy_recomputed": -162028.1410090095,
+  "stieltjes_wrong_sign_and_contact_controls": [
+    {
+      "cut": 1,
+      "q": [
+        0,
+        0,
+        0
+      ],
+      "correct_static": 5.773159728050814e-15,
+      "wrong_resolvent_sign": 3.343214663722438,
+      "weighted_gap": 112.50496639020389
+    },
+    {
+      "cut": 1,
+      "q": [
+        1,
+        0,
+        0
+      ],
+      "correct_static": -6.661338147750939e-16,
+      "wrong_resolvent_sign": 3.3432146637224447,
+      "weighted_gap": 112.53769785195561
+    },
+    {
+      "cut": 1,
+      "q": [
+        2,
+        0,
+        0
+      ],
+      "correct_static": 5.773159728050814e-15,
+      "wrong_resolvent_sign": 3.343214663722438,
+      "weighted_gap": 112.50496639020389
+    },
+    {
+      "cut": 2,
+      "q": [
+        0,
+        0,
+        0
+      ],
+      "correct_static": -3.774758283725532e-15,
+      "wrong_resolvent_sign": 3.343214663723658,
+      "weighted_gap": 112.50496639021725
+    },
+    {
+      "cut": 2,
+      "q": [
+        1,
+        0,
+        0
+      ],
+      "correct_static": 1.5543122344752192e-15,
+      "wrong_resolvent_sign": 3.3432146637236526,
+      "weighted_gap": 112.53769785196874
+    },
+    {
+      "cut": 2,
+      "q": [
+        2,
+        0,
+        0
+      ],
+      "correct_static": -3.774758283725532e-15,
+      "wrong_resolvent_sign": 3.343214663723658,
+      "weighted_gap": 112.50496639021725
+    }
+  ],
+  "physical_kernel_review": {
+    "source": "xi=E0_FULL T psi; not T E0_BODY psi",
+    "mass": "Interval around1/2, no source normalization",
+    "own_initials_paid": true,
+    "global_quartic_source_graph": true,
+    "Dcar": "all64x64 OP q; nuclear4q <= old paid VALUE; native-only rationale withdrawn"
+  },
+  "stationary_review": {
+    "accepted": "Finite variational and CAR/Fourier prototypes plus integer-cycle/Floquet description",
+    "returned_sparse_spacing": "Ritz spacing, not independently certified lowest full/compressed gap",
+    "ground_open": true
+  },
+  "photon_review": {
+    "accepted": "Actual finite CAR/Pi/HC loop and dense collective-onePH PHP spectral diagnostic",
+    "rejected": "Pi-independent magnetic potential inferred from zero-Pi Feshbach kernel",
+    "counterfactual_speed_not_adopted": true,
+    "massless_pole_open": true,
+    "multiPH_tail_unpaid": true
+  },
+  "limitations": [
+    "Conditional compact-Phi/root/chart/intertwiner suppliers",
+    "No measured129 time evolution",
+    "No full N4/Phi stationary ground, photon pole, thermodynamic dispersion, commoncone or Compton admission"
+  ],
+  "bindings": {
+    "joined_phi_u1_stationary_n4_parent_checked_receipt_20261010.json": "b874981241fd6165d66e66b09c6eb320ea31279fed51ec1641c26d5fea3c0699",
+    "joined_phi_u1_stationary_photon_parent_checked_receipt_20261010.json": "289b3a33d1a6e1bc0704c00b24e34812a2fadab2d57bebbff0e7fe705dba7f06",
+    "joined_phi_u1_long_clock_physical_kernel_composition_receipt_20261010.json": "5cce2f22b635bde0c38a947f106311441b834ad697e4dbcae6cd577696a329da",
+    "joined_phi_u1_stationary_n4_parent_checked_natural_exit_capsule_20261010.json": "cdab5c22f0c9a4a46026b57025aa2bdbbd1262ae099d82314a98f85e9222cae4",
+    "joined_phi_u1_stationary_photon_parent_checked_natural_exit_capsule_20261010.json": "c980ad981d59900687312a4e3a90cfa7cbc716c0ef55dea161fbb91bd92c7113",
+    "joined_phi_u1_long_clock_physical_kernel_composition_natural_exit_capsule_20261010.json": "eca9f924b9238617f7a1ec94703bd8fa1777f0c163401bddffbe5cda05874f5a",
+    "joined_phi_u1_long_clock_core_selected_checker_final_receipt_20261010.json": "750c730547681ea5a3348793b148ecc601ee6f960c3ff41a6e8156aa26ede4e3"
+  },
+  "elapsed_seconds": 0.21463099399989005,
+  "natural_exit": true,
+  "returncode": 0,
+  "program": "import hashlib,json,sys,time\nfrom pathlib import Path\nfrom fractions import Fraction as F\nimport numpy as np\nsys.set_int_max_str_digits(0)\nr=Path(sys.argv[1]); t=time.monotonic()\ndef raw(n): return (r/n).read_bytes()\ndef pin(n): return hashlib.sha256(raw(n)).hexdigest()\ndef load(n): return json.loads(raw(n))\nnames=['joined_phi_u1_stationary_n4_parent_checked_receipt_20261010.json','joined_phi_u1_stationary_photon_parent_checked_receipt_20261010.json','joined_phi_u1_long_clock_physical_kernel_composition_receipt_20261010.json']\na,p,k=[load(n) for n in names]\ncaps=['joined_phi_u1_stationary_n4_parent_checked_natural_exit_capsule_20261010.json','joined_phi_u1_stationary_photon_parent_checked_natural_exit_capsule_20261010.json']\nfor n,capname in zip(names,caps):\n c=load(capname)\n assert c['natural_exit'] and c['returncode']==0 and c['source_unchanged'] and c['inputs_unchanged']\n assert c['receipt_sha256']==pin(n)\n for f,h in {**c['source_sha256'],**c['input_sha256']}.items(): assert pin(f)==h\nkc=load('joined_phi_u1_long_clock_physical_kernel_composition_natural_exit_capsule_20261010.json')\nassert kc['natural_exit'] and kc['returncode']==0 and kc['source_stable'] and kc['receipt_own_source_matches']\nassert kc['receipt_sha256']==pin(names[2])\nassert pin('joined_phi_u1_long_clock_physical_kernel_composition.py')==kc['source_sha256_before']==kc['source_sha256_after']\nfor f,h in kc['inputs_sha256'].items(): assert pin(f)==h\ncheck=load('joined_phi_u1_long_clock_core_selected_checker_final_receipt_20261010.json')\nassert check['returncode']==0 and check['source_unchanged'] and check['diagnostics']['summary']['errorCount']==0\nfor f,h in check['source_sha256'].items(): assert pin(f)==h\nD=np.array(a['graph']['incidence'],dtype=np.int64); C=np.array(a['graph']['integer_cycle_basis'],dtype=np.int64)\nch=a['graph']['chord_edges']; assert D.shape==(64,192) and C.shape==(192,129)\nassert np.array_equal(D@C,np.zeros((64,129),dtype=np.int64))\nassert np.array_equal(C[ch],np.eye(129,dtype=np.int64))\nref=a['fullN4_onsite_reference_and_two_vector_variational']\nm=np.array(ref['H_in_reference_residual_basis']); e=float(np.linalg.eigvalsh(m)[0])\nassert abs(e-ref['two_vector_Ritz_energy'])<1e-7 and e<ref['onsite_energy']\nassert all(min(x['wrong_pi_period_defect'],1e5)>1 for x in a['graph']['period_controls'])\nring=p['ring_results'][0]\nassert abs(ring['incoming_cycle_to_two_cycles_kernel']-ring['all_charged_ring_coefficient'])>.1\nstieltjes=[]\nfor b in p['materially_different_route']['results']:\n assert b['ground_residual']<1e-8 and b['minimum_excitation_gap']>100\n for s in b['spectra']:\n  response=s['contact_real']-sum((x['plus']+x['minus'])/x['gap'] for x in s['poles'])\n  wrong=s['contact_real']+sum((x['plus']+x['minus'])/x['gap'] for x in s['poles'])\n  assert abs(response-s['static_contact_minus_resolvent'])<1e-10\n  assert abs(response)<1e-10 and abs(wrong)>1\n  assert abs(s['omitted_contact_wrong_static'])>1\n  stieltjes.append(dict(cut=b['winding_cut'],q=s['spatial_q_integer'],correct_static=response,wrong_resolvent_sign=wrong,weighted_gap=s['lowest_current_weighted_gap']))\nq=k['Dcar_global_rescue']; assert F(q['nuclear_shadow_upper_exact'])==4*F(q['connected_operator_upper_exact'])<=F(q['old_paid_upper_exact'])\nassert q['native_endpoint_only_rationale_withdrawn'] and not q['old_numeric_value_changed']\nassert not k['clock_adopted'] and not k['measured_time_evolution'] and not k['originalSOURCE_adopted']\nassert not k['actual_source_bridge']['normalization_applied']\nassert all(F(x['whole129_physical_HS_lower_from_own_initial_exact'])>0 and not x['physical_initial_zero_assumed'] for x in k['all129_current_states'].values())\nassert len(k['all12_nonlocal_receivers'])==12\nassert all(F(x['signed_change_from_own_initial_lower_exact'])>0 and not x['physical_C0_zero_assumed'] for x in k['all12_nonlocal_receivers'])\nassert k['exact_CAR_Ref_control']['correct_commutator_entry']==0 and k['exact_CAR_Ref_control']['wrong_omit_Ref_commutator_entry']==64\nout=dict(status='PARENT_REVIEW_COMPLETE_AT_EXPLICIT_SUBSET_SCOPES',exact_integer_cycle_controls=True,two_vector_Ritz_energy_recomputed=e,stieltjes_wrong_sign_and_contact_controls=stieltjes,physical_kernel_review=dict(source='xi=E0_FULL T psi; not T E0_BODY psi',mass='Interval around1/2, no source normalization',own_initials_paid=True,global_quartic_source_graph=True,Dcar='all64x64 OP q; nuclear4q <= old paid VALUE; native-only rationale withdrawn'),stationary_review=dict(accepted='Finite variational and CAR/Fourier prototypes plus integer-cycle/Floquet description',returned_sparse_spacing='Ritz spacing, not independently certified lowest full/compressed gap',ground_open=True),photon_review=dict(accepted='Actual finite CAR/Pi/HC loop and dense collective-onePH PHP spectral diagnostic',rejected='Pi-independent magnetic potential inferred from zero-Pi Feshbach kernel',counterfactual_speed_not_adopted=True,massless_pole_open=True,multiPH_tail_unpaid=True),limitations=['Conditional compact-Phi/root/chart/intertwiner suppliers','No measured129 time evolution','No full N4/Phi stationary ground, photon pole, thermodynamic dispersion, commoncone or Compton admission'],bindings={n:pin(n) for n in names+caps+['joined_phi_u1_long_clock_physical_kernel_composition_natural_exit_capsule_20261010.json','joined_phi_u1_long_clock_core_selected_checker_final_receipt_20261010.json']},elapsed_seconds=time.monotonic()-t)\nprint(json.dumps(out,indent=2))\n",
+  "program_sha256": "c19e3dae87648b0749ddd6f8b4cbf450c1a27224ade881bf8d000e8caebbbad8",
+  "runtime_executable": "/home/administrator/substrate-framework/.venv/bin/python",
+  "captured_revision": "9ea88239ef1b96d1414978150fd9e2c919e29de24d91834808068dfd13a33340",
+  "stderr": ""
+}

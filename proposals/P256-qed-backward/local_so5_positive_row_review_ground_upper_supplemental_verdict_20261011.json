@@ -1,0 +1,91 @@
+{
+  "kind": "SEPARATE_SUPPLEMENTAL_COMPLETE_ACTION_GUARD_TEMPLE_FIDELITY_REVIEW",
+  "reviewer": "PositiveRowInertiaReview",
+  "verdict": "VALID",
+  "scope": "Under the explicitly declared standard binary64 rounding model and separately proved exact corrected native harmonic representation, the normalized exact binary candidate has residual around the recorded binary mean <=1/65536. Together with the independently reviewed lambda2>=-5123 lower certificate this proves a unique ground ONLY in the selected14x690880 local harmonic sector, the stated energy enclosure and an infidelity bound. This is a new supplemental scope, not a retrospective ground claim for the original lower-only verdict.",
+  "target": {
+    "source": "local_so5_ground_upper_complete_state_consumer_20261011.py",
+    "source_sha256": "7715337d20651610d2ed73f3c56f1f7c1d5b23543fe0d2b093424fa47e4d6bb2",
+    "receipt": "local_so5_ground_upper_complete_state_consumer_20261011_receipt.json",
+    "receipt_sha256": "b3c60f0df1994942db53e754dd6a0927784ee1720f918f0ef5ad0b2d813f67f2",
+    "serialized_state_sha256": "dd06400e1b7f70df935cf7ca02cf5ebf598481a8d5e209d1241aba5ed3fea2a2",
+    "lower_receipt_sha256": "f6c8823eb6b5005cdb8067088d14fb561cdacbd3bba9c54e0c5042fe160e4e73",
+    "corrected_joint_intertwiner_sha256": "102966f32c49f40d79d55343925a630e30a9cf7e4a8074cf8628142ba9c5b6e8",
+    "actual04_receipt_sha256": "a31c2d5be2a368b7de703d92461e230af59adf7e8ee8f4eaca0944fe4f556fc1"
+  },
+  "parent_scope_extension": "Explicit Main request to review source7715337d and its NEW complete-action receipt; parent records separate plan evidence. This reviewer did not change pinned original requirements or any shared plan.",
+  "assumptions": [
+    "Each binary64 product/sum/division/square root obeys the declared standard relative rounding model when normal; any subnormal absolute contribution is enclosed by the substantial unused guard margin. The code uses default njit rather than fastmath. No overflow occurs with the observed near-unit finite source and bounded coefficients.",
+    "BLAS norm/dot reduction uses ordinary binary64 or more accurate arithmetic, not an undocumented low-precision reduction. The guard covers arbitrary ordinary summation order, rather than assuming reproducible exact summation. The compiler/library/hardware rounding model itself was not independently certified by this review.",
+    "The exact native neighbor recurrence and selected harmonic basis are those bound by corrected proof102966; their joint free/rho representation is not replaced by an energy-only spectrum match.",
+    "The separately executed parent full-action run and its immutable state/input capsule are accepted as execution evidence. This reviewer did not load or re-execute the9.6M-state action or rerun a solver/checker."
+  ],
+  "guard_audit": [
+    {
+      "claim": "Coefficient count and complete action",
+      "argument": "Each role has at most four d transitions, two forward c transitions and two backward c transitions: eight offdiagonal entries. Two roles plus one diagonal give at most17 terms, safely below20. rho=p-q is an exact integer with |rho_active+rho_aux|<=128;64rho^2 is exactly representable. The source traverses every native harmonic state of dimensions14 and690880, not a trial-support PHP or density crop."
+    },
+    {
+      "claim": "Absolute row/column bound",
+      "argument": "Captured role parameters satisfy |m|<20 and |c|,|d|<6. The diagonal magnitude is bounded by64*128^2+2*20*128. Each normalized offdiagonal radical coefficient is below2*6*128 and there are at most16 per full row. Exact reverse-edge coefficients agree algebraically, so the same bound holds for columns. The actual rowcap expression is1078272<2^22. The inequality ||A||2<=sqrt(||A||1||A||infinity) controls action errors without requiring the rounded matrix to remain exactly symmetric."
+    },
+    {
+      "claim": "Radicals and parameter perturbations",
+      "argument": "For n<=126 all integer products in the radical formulas are far below2^53, and the nonzero coefficient paths contain fewer than32 elementary positive operations; gamma64 conservatively encloses coefficient formation. Diagonal cancellations must be treated by an absolute sum bound, not relative error of a cancelled diagonal. Parameter differences were independently recomputed exactly from their binary floats and are all<2^-48. The additive768*2^-48 parameter guard is an OPERATOR-NORM bound: each collective A/B/C is the restriction of a sum of n norm2 one-particle generators, so ||delta H||<=2(sum n)(delta m+delta c+delta d)<=6*128*2^-48. It is not a count of individual entry errors. This interpretation is necessary to justify that smaller parameter term."
+    },
+    {
+      "claim": "Arithmetic cap",
+      "argument": "Formation gamma64*2^22 plus parameter perturbation, accumulation gamma40*2^22, and subtraction4u*(2^22+|mu|) sum exactly to5.0296423189253486e-8<2^-18.17 product terms and16 additions fit within40 operations; diagonal coefficient formation is separately enclosed. No exact numerical solver convergence is assumed."
+    },
+    {
+      "claim": "Normalized residual",
+      "argument": "For D=9672320, gamma(2D+8)=2418081/1125899904424543<2^-27. Products/sums in both squared norms and the square-root/division normalization are covered with room by this operation count. Normalize the exact finite binary source with its exact norm, not the rounded norm. The rounded residual ratio can underestimate the exact ratio by at most the chosen1/(1-gamma) factor under the declared model. Adding the action/subtraction cap yields3.8714878895601434e-6<1/65536, so the reported sigma is conservative. The observed norm1.0000000000000002 prevents any tiny-norm normalization singularity."
+    },
+    {
+      "claim": "Rayleigh and variance",
+      "argument": "For exact normalized u, ||(H-muq)u||<=sigma gives |E-muq|<=sigma by Cauchy-Schwarz. The centered variance is Var(H)=||(H-E)u||^2=||(H-muq)u||^2-(E-muq)^2<=sigma^2. Thus the residual NORM is not inserted as a variance."
+    },
+    {
+      "claim": "Temple, uniqueness and gap",
+      "argument": "With beta=-5123 and E_upper<beta, Rayleigh-minmax implies lambda1<=E<=E_upper<beta<=lambda2, hence existence and uniqueness of the ground in the selected finite sector. Temple gives lambda1>=E-Var/(beta-E)>=E_lower-sigma^2/(beta-E_upper). The denominator uses the UPPER Rayleigh endpoint, hence the smallest safe separation. Since lambda1<=E_upper, the actual selected spectral gap is at least beta-E_upper. All exact output fractions were independently recomputed and match the receipt."
+    },
+    {
+      "claim": "Fidelity direction and field meaning",
+      "argument": "All excited spectral values obey lambda_j-E>=beta-E>=beta-E_upper, so infidelity ||(I-Pground)u||^2=1-<u,Pground u><=sigma^2/(beta-E_upper)^2. The bound274877906944/2204801412260314559041 refers to SQUARED source projection error/infidelity, not unsquared vector error or operator-norm distance between projectors. An unsquared source error bound would be sigma/(beta-E_upper)."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "field_semantics_clarification",
+      "field": "selected_ground_projector_error_upper_exact",
+      "meaning": "Squared projection error of the normalized candidate, equivalently infidelity1-<u,Pground u>.",
+      "not_meaning": "Unsquared vector projection error, trace distance or operator-norm projector error.",
+      "consequence_if_misread": "The squared error cannot be used directly as an unsquared norm budget.",
+      "smallest_correction": "Parent should explicitly label this field as infidelity/squared source projection error in integrated consumer evidence; numerical fraction is correct."
+    }
+  ],
+  "exact_results": {
+    "residual_upper": "1/65536",
+    "Rayleigh_interval": ["-176071896020769/34359738368", "-176071894972193/34359738368"],
+    "ground_energy_interval": ["-8267510975657833156129345/1613372267228007759872", "-176071894972193/34359738368"],
+    "selected_gap_lower": "46955312929/34359738368",
+    "infidelity_upper": "274877906944/2204801412260314559041"
+  },
+  "independent_contrary_controls": {
+    "source": "local_so5_positive_row_review_ground_upper_controls_20261011.py",
+    "source_sha256": "c72fe43aa541771b6bdd2082dd468fcac3937c7124419f3c571a8a4e61d93a29",
+    "receipt": "local_so5_positive_row_review_ground_upper_controls_20261011_receipt.json",
+    "receipt_sha256": "7c08462b7639105627c3fc246a8331e2d3ecfd00722ae429e2e7818c25ff4295",
+    "exit_capsule": "local_so5_positive_row_review_ground_upper_controls_20261011_exit.json",
+    "exit_code": 0,
+    "elapsed_seconds": 0.11981720400217455,
+    "input_unchanged": true,
+    "results": [
+      "All rational guard calculations, exact parameter differences and Temple/fidelity output fractions independently reproduced without loading the serialized state.",
+      "H=diag(0,10) with equal spectral weights has mean5, residual norm5 and variance25. Correct Temple lower is0; wrong norm-as-variance lower is4>trueground0, so that mistake is rejected.",
+      "H=diag(0,2) with excited spectral weight1/10 has mean1/5 and variance9/25. Correct Temple lower is0; wrong denominator beta instead of beta-E gives1/50>trueground0. Correct infidelity cap1/9 covers actual1/10; wrong denominator gives9/100<actual1/10 and is rejected."
+    ]
+  },
+  "no_admission": ["other_canonical_spin_representations", "ambient_fullground", "wholePhi_ground", "lattice_ground", "whole_rho_zero_projector_equals_spectral_ground", "bulk_stiffness", "phase", "IRatom", "photon", "commoncone", "originalSOURCE", "law", "coupling", "vfit"],
+  "parent_only": "Parent owns integration, final checker, explicit rounding-model assumptions and scientific admission. Original lower-only verdict remains unchanged."
+}

@@ -1,0 +1,69 @@
+{
+  "governing_plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "governing_revision": "f4e8ad04d46c6e0812cf213dd46e856c682e142a69df13092b04c75ffca413bc",
+  "retained_wrong_half_electric_science": [
+    {
+      "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_body_word_probe_receipt.json",
+      "sha256": "7dddff85234bc4844d63eb2b03ab895df356699e2c25599c66ea8a6846f1a3e7",
+      "natural_returncode": 0,
+      "wall_seconds_tool": 22.97,
+      "science_seconds": 20.242217547998735,
+      "source_sha256": "8d45825b7afa086f4108061b1a05310a51127c6a22a6da717e9dff30128480d3",
+      "input_descriptor_sha256": "04006b8572c6d7848afbbbb5417b888f13e1cc0858cd486e935fe79f0e89b813",
+      "admission": "REJECTED wrong-half-electric coefficient HE32, NOT authoritative HE64 law; retain as scientific wrong control only",
+      "captured_sources_unchanged": true,
+      "captured_inputs_unchanged": true
+    },
+    {
+      "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_body_word_variance_probe_receipt.json",
+      "sha256": "a81554eb428538b1f696f0366dd8f372b429b2b974d650f05e90bba86787be52",
+      "natural_returncode": 0,
+      "wall_seconds_tool": 65.66,
+      "science_seconds": 63.12011404500299,
+      "source_sha256": "877993478398bc444dff3f72041392522c11c19923cc04b688ca6672a217f17d",
+      "input_descriptor_sha256": "f85e90946e0b05c36dc9d8c2ecc6e2f99966ad9ecf768551e7822c53bfcc9e80",
+      "admission": "REJECTED wrong-half-electric coefficient HE32, NOT authoritative HE64 law; retain as scientific wrong control only",
+      "captured_sources_unchanged": true,
+      "captured_inputs_unchanged": true
+    }
+  ],
+  "failed_repaired_runs": [
+    {
+      "natural_returncode": 1,
+      "wall_seconds": 3.01,
+      "failure": "Tuple path edges indexed numpy Q as multi-axis indices; fixed explicit list; reverse sparse block entries independently fixed to conjugate with swapped coordinates."
+    },
+    {
+      "natural_returncode": 1,
+      "wall_seconds": 3.29,
+      "failure": "Rejected wrong assertion Coul-only transition vacancy=.5 pointwise; actual Gaussian/CAR Coul-only integral=.5 but sampled transition vacancy varies. Derived exact Coul-only cofactor baseline and verified co-local Ref phase cancellation."
+    },
+    {
+      "natural_returncode": 1,
+      "wall_seconds": 3.44,
+      "failure": "Complex raw path coefficients cannot directly form Fraction; rational Hmax now uses exact c0,ci primitive paths."
+    }
+  ],
+  "material_variance_repair": "Coul-only cofactor and closed-background unitary control variates cancel source-independent63-sea fluctuations, without empirical normalization. Analytic means fixed by exact identities, polynomial bias separately priced. Contour turn duplicate represented exactly by transpose-Cholesky, rather than warning-suppressed singular matrix sqrt.",
+  "cancelled_wrong_coefficient_attempt": {
+    "job": "bg_52",
+    "natural_exit": false,
+    "cancelled_by_owner": true,
+    "source_sha256": "40e90b6f50f13ec70bd76541fb4860d9349356d564f6051edddb8beed1002857",
+    "reason": "HE32 mapping conflicts with captured model-owned HE64; cancelled promptly on authoritative source witness. No authoritative science admission from this attempt."
+  },
+  "coefficient_correction": {
+    "authority_source": "induced_phi_em_gaussian_variational.py",
+    "authority_sha256": "986c34d93435be153d1b23600f4ffe01c600655a06da0bf8ab0943d6b10d7ef8",
+    "witness_lines": [
+      162,
+      251,
+      301,
+      444
+    ],
+    "actual_HE": 64,
+    "actual_HC": 64,
+    "actual_heat_covariance_per_kappa": 128,
+    "attribution": "Own halfkinetic mapping was wrong. The governing contract precision1/(2g kappa) already implies heat variance2g kappa. No parent-contract blame or physical-parameter retune."
+  }
+}

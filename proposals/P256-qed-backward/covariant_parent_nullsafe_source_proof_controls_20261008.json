@@ -1,0 +1,309 @@
+{
+  "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+  "plan_revision_at_recording": "6ebc34a912158254456c535bd10259fca04201b14f446a778bba68d5ef63ecf2",
+  "kind": "Parent scoped mathematical/source discriminating controls; not joined physics admission",
+  "runtime_executable": "/home/administrator/substrate-framework/.venv/bin/python",
+  "whole_half_complex_power": {
+    "claim": "For bounded positive A,B, nu=t/a, fnu(x)=x^(1/2+i nu), fnu(0)=0: ||fnu(A)-fnu(B)|| <=9(1+|nu|)^(3/2)*sqrt(||A-B||). Charged A=KC/lambdaN need not be a contraction.",
+    "proof": [
+      "Set z=1/2+i nu and epsilon=pi/[2(1+|nu|)]; rotate Mellin contour s=r exp(i phi), phi=sign(nu)*(pi-epsilon); choose positive phi at nu=0.",
+      "x^z=(sin(pi z)/pi) integral s^(z-1) x/(x+s) ds; functional calculus and resolvent identity apply to positive bounded operators.",
+      "c=sin epsilon >=1/(1+|nu|); difference of resolvent ratios <=min(2/c,||A-B||/(r c^2)).",
+      "Rotated prefactor <=exp(pi/2)/pi. Integral r^(-1/2) min(2/c,delta/(r c^2)) dr=4 sqrt(2 delta)/c^(3/2).",
+      "Exact universal coefficient4sqrt2 exp(pi/2)/pi=8.661902549175618<9. No spectral minimum or log-norm bound."
+    ],
+    "primary_related_theorem": "Aleksandrov/Peller Operator Holder-Zygmund functions, Theorem4.1, https://arxiv.org/abs/0907.3049v2; explicit9 is the parent contour derivation, not the paper constant",
+    "previous_observed_matrix_control": {
+      "natural_exit": 0,
+      "near_null_diagonal_delta": 1e-12,
+      "nu": 1,
+      "damped_whole_half_delta": 1.0000000008220317e-06,
+      "undamped_log_phase_delta": 1.9089428222253018,
+      "explicit_bound": 2.5455844122715712e-05,
+      "limitation": "Previous projectPython foreground result in conversation; original eval variables lost on runtime reset; not rerun."
+    },
+    "charged_normalization_rule": "deltaA_C <= ||KC1-KC0||/lambdaN0 + gammaN*||KC1/lambdaN1||, gammaN=|lambdaN1-lambdaN0|/lambdaN0. No assumption lambdaC<=lambdaN.",
+    "unpriced": "Actual source M0, photon weighted graphs, hard Pe thresholds, current and receiver remain separate."
+  },
+  "weighted_Gaussian_Schur": {
+    "program": "import os\nfor k in (\"OPENBLAS_NUM_THREADS\",\"OMP_NUM_THREADS\",\"MKL_NUM_THREADS\"):os.environ[k]=\"1\"\nimport json,numpy as np,math\nfrom scipy.linalg import eigh\nbeta=1.;magnetic=1.;a=beta/2+magnetic/4;b=beta;c=math.sqrt(a*a-b*b/4);C=math.sqrt(beta/(2*math.pi));lam=C*math.sqrt(math.pi/(a+c));r=b/(2*(a+c));variance=1/(4*c);eps=1e-5\nx=np.linspace(-9,9,301);dx=x[1]-x[0];G=C*np.exp(-a*(x[:,None]**2+x[None,:]**2)+b*x[:,None]*x[None,:]);K=dx*G\nw=np.exp(-c*x*x);w/=np.linalg.norm(w)\nphase=x[:,None]-x[None,:];D=np.empty((len(x),2,len(x),2),complex)\nD[:,0,:,0]=D[:,1,:,1]=eps*K*np.cos(phase)\nD[:,0,:,1]=D[:,1,:,0]=1j*eps*K*np.sin(phase)\nD=D.reshape(2*len(x),2*len(x));D=(D+D.conj().T)/2\nvals=eigh(D,eigvals_only=True);dnorm=float(max(abs(vals[0]),abs(vals[-1])))\npsi=np.zeros((len(x),2),complex);psi[:,0]=w;v=psi.ravel();p=psi*x[:,None]/math.sqrt(variance)\nweighted_ground=float(np.linalg.norm((D@v).reshape(-1,2)*x[:,None]));weighted_photon=float(np.linalg.norm((D@p.ravel()).reshape(-1,2)*x[:,None]))\nground_bound=eps*lam*math.sqrt(variance);photon_bound=eps*lam*math.sqrt(variance*(1+2*r*r))\nassert dnorm<=eps*lam*(1+1e-10)\nassert weighted_ground<=ground_bound*(1+1e-10) and weighted_photon<=photon_bound*(1+1e-10)\nprint(json.dumps(dict(primitive_Gaussian_parameters=dict(beta=beta,magnetic=magnetic),lambda_analytic=lam,lambda_discrete=float(eigh(K,eigvals_only=True)[-1]),ground_eigenvector_residual=float(np.linalg.norm(K@w-lam*w)),CAR_noncommuting_kernel_delta_norm=dnorm,weighted_Schur_operator_upper=eps*lam,ground_field_weighted_delta=weighted_ground,ground_field_weighted_upper=ground_bound,one_photon_node_field_weighted_delta=weighted_photon,one_photon_node_field_weighted_upper=photon_bound,Gaussian_variance=variance,Mehler_correlation=r,unweighted_row_to_lambda_ratio=(C*math.sqrt(math.pi/a))/lam,log10_unweighted_loss_for_1024_independent_modes=1024*math.log10((C*math.sqrt(math.pi/a))/lam),scope='Analytic dimension-independent Gaussian/field-weighted Schur lemma plus CAR matrix falsifier; NOT actual primitive/source/Gram admission'),indent=2))\n",
+    "natural_exit": 0,
+    "stderr": "",
+    "observed": {
+      "primitive_Gaussian_parameters": {
+        "beta": 1.0,
+        "magnetic": 1.0
+      },
+      "lambda_analytic": 0.6180339887498948,
+      "lambda_discrete": 0.6180339887498999,
+      "ground_eigenvector_residual": 5.240541778883974e-15,
+      "CAR_noncommuting_kernel_delta_norm": 6.180339887498998e-06,
+      "weighted_Schur_operator_upper": 6.1803398874989485e-06,
+      "ground_field_weighted_delta": 3.414499026122821e-06,
+      "ground_field_weighted_upper": 4.133042381223992e-06,
+      "one_photon_node_field_weighted_delta": 2.9843815797611336e-06,
+      "one_photon_node_field_weighted_upper": 4.6975005295282276e-06,
+      "Gaussian_variance": 0.4472135954999579,
+      "Mehler_correlation": 0.38196601125010515,
+      "unweighted_row_to_lambda_ratio": 1.3211192196391401,
+      "log10_unweighted_loss_for_1024_independent_modes": 123.8446189794695,
+      "scope": "Analytic dimension-independent Gaussian/field-weighted Schur lemma plus CAR matrix falsifier; NOT actual primitive/source/Gram admission"
+    },
+    "proof": [
+      "Positive G=C exp[-a(x^2+y^2)+bxy], c=sqrt(a^2-b^2/4), w0=exp(-c x^2), lambda0=C sqrt(pi/(a+c)). Exact weighted row integral G w0=lambda0 w0.",
+      "Operator-valued kernel ||DeltaK(x,y)||<=eps G(x,y) implies ||DeltaK||<=eps lambda0 by weighted Schur; harmonic weight1 can be used as a Schur weight, never an asserted L2 ground.",
+      "Ground-vector pointwise error <=eps lambda0 w0, hence ||X DeltaK w0||<=eps lambda0||Xw0||.",
+      "For one-photon node P(Y)=Y/sigma and field observable X, conditional Gaussian Jensen gives ||X DeltaK(Pw0)||<=eps lambda0 sigma sqrt(1+2r^2); sigma^2=1/(4c), r=b/[2(a+c)].",
+      "For K0=G tensor constant CAR factor of norm1 and ||K1-K0||pointwise<=eps G, telescoping positive-kernel domination gives ||K1^m-K0^m||pointwise<=[(1+eps)^m-1]G^m. Actual primitive domination/normalizer/source hypotheses must be established separately."
+    ]
+  },
+  "source_buffered_Pe": {
+    "program": "import numpy as np,json,math\nfrom scipy.linalg import eigh\nspacing=.01;low=math.exp(-4*spacing);A0=np.diag([.98,low,1.01,.9]);M=np.zeros((4,4));M[0,1]=M[1,0]=.5;M[1,1]=-.7;eps=1e-6;A1=A0+eps*M\ndef projector(A):\n vals,U=eigh(A);selected=(vals>=low)&(vals<=1)\n return (U*selected)@U.T\nP0=projector(A0);P1=projector(A1);source=np.eye(4)[:,0];bad=np.eye(4)[:,1];delta=float(np.linalg.norm(A1-A0,2));dminus=.98-low;dplus=1-.98;bound=delta*math.sqrt(dminus**-2+dplus**-2)\nobserved=float(np.linalg.norm((P1-P0)@source));baderror=float(np.linalg.norm((P1-P0)@bad))\nassert observed<=bound and baderror>.99\nprint(json.dumps(dict(spacing=spacing,physical_energy_interval=[0,4],transfer_kernel_interval=[low,1],reference_source_physical_energy=-math.log(.98)/spacing,kernel_operator_delta=delta,buffered_source_projector_error=observed,explicit_buffer_Sylvester_bound=bound,global_reference_threshold_gap=0.,global_projector_difference=float(np.linalg.norm(P1-P0,2)),wrong_unbuffered_source_error=baderror,scope='PSD source-buffered spectral projection proof/control; not actual source support or charged gap'),indent=2))\n",
+    "natural_exit": 0,
+    "stderr": "",
+    "observed": {
+      "spacing": 0.01,
+      "physical_energy_interval": [
+        0,
+        4
+      ],
+      "transfer_kernel_interval": [
+        0.9607894391523232,
+        1
+      ],
+      "reference_source_physical_energy": 2.0202707317519466,
+      "kernel_operator_delta": 9.603277807588489e-07,
+      "buffered_source_projector_error": 2.6026402090752686e-05,
+      "explicit_buffer_Sylvester_bound": 6.931472620601199e-05,
+      "global_reference_threshold_gap": 0.0,
+      "global_projector_difference": 1.0,
+      "wrong_unbuffered_source_error": 0.9999999996613131,
+      "scope": "PSD source-buffered spectral projection proof/control; not actual source support or charged gap"
+    },
+    "proof": "For a reference SOURCE supported strictly within allowed spectral interval, outside upper/lower projections give separated Sylvester equations, each leakage <=deltaA/distance. Their orthogonality gives sqrt(sum squared bounds); add actual reference source tail and state error. Global spectrum may touch threshold. No new source projector, global gap or pole required.",
+    "actual_source_support_unproved": true
+  },
+  "physical_Peierls_parent_consumer": {
+    "program": "import os\nfor k in (\"OPENBLAS_NUM_THREADS\",\"OMP_NUM_THREADS\",\"MKL_NUM_THREADS\"):os.environ[k]=\"1\"\nimport numpy as np,json\nfrom pathlib import Path\nfrom induced_reference_electric_graph import build_native,path_derivative\nfrom induced_phi_em_gaussian_variational import matter_hamiltonian\nP=Path.cwd();native=build_native(P/\"induced_phi_ir_mean_certificate_normal_transfer_final_receipt.json\",2)\nrng=np.random.default_rng(20261024);theta=rng.normal(size=3*native[\"V\"]);f=np.zeros_like(theta);f[1::3]=np.cos(np.pi*native[\"sites\"][:,0]);f/=np.linalg.norm(f)\na=1/64;epsilon=1e-3;rows=[]\nfor profile in native[\"Pprofiles\"]:\n J=path_derivative(native,profile,theta,f);C=path_derivative(native,profile,theta,f,2)\n hp=matter_hamiltonian(native,profile,theta+a*epsilon*f);hm=matter_hamiltonian(native,profile,theta-a*epsilon*f);h0=matter_hamiltonian(native,profile,theta)\n fdJ=(hp-hm)/(2*epsilon);fdC=(hp-2*h0+hm)/epsilon**2\n row=dict(load=profile[\"load\"],J_error=float(np.max(abs(fdJ-a*J))),C_error=float(np.max(abs(fdC-a*a*C))),wrong_inverse_J_error=float(np.max(abs(fdJ-J/a))))\n assert row[\"J_error\"]<1e-7 and row[\"C_error\"]<1e-6 and row[\"wrong_inverse_J_error\"]>1\n rows.append(row)\nprint(json.dumps(rows,indent=2))\n",
+    "natural_exit": 0,
+    "stderr": "",
+    "observed": [
+      {
+        "load": 1,
+        "J_error": 2.770495638459991e-12,
+        "C_error": 5.113821212408137e-09,
+        "wrong_inverse_J_error": 206.79039837674068
+      },
+      {
+        "load": 63,
+        "J_error": 2.770495638459991e-12,
+        "C_error": 5.386584100178183e-09,
+        "wrong_inverse_J_error": 206.79039837674068
+      }
+    ],
+    "successor_sha256": "1ae61c72bbfaba5115309522ebaa9c28237d4e89a028d7a4e97b67aa0ab36e85",
+    "claim": "Literal Theta=a Aphys, JA=a JTheta, CA=a^2 CTheta; actual primitive physical finite difference and wrong inverse scaling exercised."
+  },
+  "point_mean_and_short_flat_toron_control": {
+    "point_program": "import os\nfor k in (\"OPENBLAS_NUM_THREADS\",\"OMP_NUM_THREADS\",\"MKL_NUM_THREADS\"):os.environ[k]=\"1\"\nimport numpy as np,json,hashlib\nimport physical_c_real_cover_kernel as k\np=k.NativeParameters();law,reference,direction=k.native_law(p)\ncolour=np.broadcast_to(np.eye(4),(2,3,4,4)).astype(complex).copy()\nr=law.potential(np.zeros((2,3)),np.zeros((2,4,4,4)),colour,None)\nv=np.linalg.eigvalsh(r['h']);source_gap=-float(v[-5]);n4=float(v[-4:].sum());n5=float(v[-5:].sum())\nprint(json.dumps(dict(kernel_source_sha256=hashlib.sha256(k.SOURCE_BYTES).hexdigest(),captured_ledger_sha256=k.LEDGER_HASH,spacing=p.spacing,bare_mass=p.critical_bare_mass,point_reference_h_eigenvalues=v.tolist(),point_source_addition_gap_transfer=source_gap,point_source_addition_gap_physical=source_gap/p.spacing,point_neutral_lognorm_minus_common_pref=n4,point_charged_lognorm_minus_common_pref=n5,scope='Point mean Phi+identitycolour+zeroEM; no outside/fieldheat/refCoulomb/source-projection physical gap'),indent=2))\n",
+    "point_natural_exit": 0,
+    "point_observed": {
+      "kernel_source_sha256": "89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2",
+      "captured_ledger_sha256": "567985093c8e3e512d78b064427996aa92a5a7abab36886d7cf21b4e1d623c87",
+      "spacing": 0.01,
+      "bare_mass": -2.0282053185612114,
+      "point_reference_h_eigenvalues": [
+        -1.0918972076044495,
+        -1.091897207604449,
+        -0.02028205318561222,
+        -0.020282053185611625,
+        0.020282053185610785,
+        0.02028205318561198,
+        1.09189720760445,
+        1.0918972076044513
+      ],
+      "point_source_addition_gap_transfer": 0.020282053185611625,
+      "point_source_addition_gap_physical": 2.0282053185611626,
+      "point_neutral_lognorm_minus_common_pref": 2.224358521580124,
+      "point_charged_lognorm_minus_common_pref": 2.204076468394512,
+      "scope": "Point mean Phi+identitycolour+zeroEM; no outside/fieldheat/refCoulomb/source-projection physical gap"
+    },
+    "toron_program": "import os\nfor k in (\"OPENBLAS_NUM_THREADS\",\"OMP_NUM_THREADS\",\"MKL_NUM_THREADS\"):os.environ[k]=\"1\"\nimport numpy as np,json\nimport physical_c_real_cover_kernel as k\np=k.NativeParameters();law,_,_=k.native_law(p);colour=np.broadcast_to(np.eye(4),(2,3,4,4)).astype(complex).copy();rows=[]\nfor axis in range(3):\n for phase in [0.,.1,.2,.5,1.,np.pi/2,np.pi]:\n  phases=np.zeros((2,3));phases[:,axis]=phase;r=law.potential(phases,np.zeros((2,4,4,4)),colour,None);ev=np.linalg.eigvalsh(r['h']);pref=float(np.real(r['pref']))\n  rows.append(dict(axis=axis,uniform_flat_phase=phase,full_scalar_pref=pref,neutral_whole_SF_vacuum_lognorm=pref+float(ev[-4:].sum()),charged_whole_SF_vacuum_lognorm=pref+float(ev[-5:].sum()),point_charged_gap_physical=-float(ev[-5])/p.spacing))\nprint(json.dumps(dict(rows=rows,scope='Actual REF89 pointPhi, exact whole scalar+fullvalence; flat zero-curl finite2x1x1 torons. No quantum heat/source mass or instability claim.'),indent=2))\n",
+    "toron_natural_exit": 0,
+    "toron_observed": {
+      "rows": [
+        {
+          "axis": 0,
+          "uniform_flat_phase": 0.0,
+          "full_scalar_pref": 2.1432303088376754,
+          "neutral_whole_SF_vacuum_lognorm": 4.3675888304178,
+          "charged_whole_SF_vacuum_lognorm": 4.347306777232188,
+          "point_charged_gap_physical": 2.0282053185611626
+        },
+        {
+          "axis": 0,
+          "uniform_flat_phase": 0.1,
+          "full_scalar_pref": 2.150044984833627,
+          "neutral_whole_SF_vacuum_lognorm": 4.536405777596494,
+          "charged_whole_SF_vacuum_lognorm": 4.434713288003174,
+          "point_charged_gap_physical": 10.169248959332135
+        },
+        {
+          "axis": 0,
+          "uniform_flat_phase": 0.2,
+          "full_scalar_pref": 2.170082295689839,
+          "neutral_whole_SF_vacuum_lognorm": 4.747308200747968,
+          "charged_whole_SF_vacuum_lognorm": 4.548949830974028,
+          "point_charged_gap_physical": 19.835836977394077
+        },
+        {
+          "axis": 0,
+          "uniform_flat_phase": 0.5,
+          "full_scalar_pref": 2.294767406836555,
+          "neutral_whole_SF_vacuum_lognorm": 5.383097833519544,
+          "charged_whole_SF_vacuum_lognorm": 4.920321877554671,
+          "point_charged_gap_physical": 46.277595596487345
+        },
+        {
+          "axis": 0,
+          "uniform_flat_phase": 1.0,
+          "full_scalar_pref": 2.5774543033786577,
+          "neutral_whole_SF_vacuum_lognorm": 6.2136674327695935,
+          "charged_whole_SF_vacuum_lognorm": 5.441716138123276,
+          "point_charged_gap_physical": 77.19512946463166
+        },
+        {
+          "axis": 0,
+          "uniform_flat_phase": 1.5707963267948966,
+          "full_scalar_pref": 2.732230293183979,
+          "neutral_whole_SF_vacuum_lognorm": 6.564095658694546,
+          "charged_whole_SF_vacuum_lognorm": 5.606129317316913,
+          "point_charged_gap_physical": 95.79663413776336
+        },
+        {
+          "axis": 0,
+          "uniform_flat_phase": 3.141592653589793,
+          "full_scalar_pref": 2.1432303088376745,
+          "neutral_whole_SF_vacuum_lognorm": 4.367588830417802,
+          "charged_whole_SF_vacuum_lognorm": 4.347306777232189,
+          "point_charged_gap_physical": 2.028205318561171
+        },
+        {
+          "axis": 1,
+          "uniform_flat_phase": 0.0,
+          "full_scalar_pref": 2.1432303088376754,
+          "neutral_whole_SF_vacuum_lognorm": 4.3675888304178,
+          "charged_whole_SF_vacuum_lognorm": 4.347306777232188,
+          "point_charged_gap_physical": 2.0282053185611626
+        },
+        {
+          "axis": 1,
+          "uniform_flat_phase": 0.1,
+          "full_scalar_pref": 2.15675098451174,
+          "neutral_whole_SF_vacuum_lognorm": 4.549798693574456,
+          "charged_whole_SF_vacuum_lognorm": 4.448106203981135,
+          "point_charged_gap_physical": 10.169248959332121
+        },
+        {
+          "axis": 1,
+          "uniform_flat_phase": 0.2,
+          "full_scalar_pref": 2.196839664301554,
+          "neutral_whole_SF_vacuum_lognorm": 4.800522913326946,
+          "charged_whole_SF_vacuum_lognorm": 4.602164543553004,
+          "point_charged_gap_physical": 19.835836977394138
+        },
+        {
+          "axis": 1,
+          "uniform_flat_phase": 0.5,
+          "full_scalar_pref": 2.459182935726285,
+          "neutral_whole_SF_vacuum_lognorm": 5.7014960401500785,
+          "charged_whole_SF_vacuum_lognorm": 5.238720084185205,
+          "point_charged_gap_physical": 46.27759559648729
+        },
+        {
+          "axis": 1,
+          "uniform_flat_phase": 1.0,
+          "full_scalar_pref": 3.199480258422877,
+          "neutral_whole_SF_vacuum_lognorm": 7.340070229988815,
+          "charged_whole_SF_vacuum_lognorm": 6.5681189353425,
+          "point_charged_gap_physical": 77.19512946463163
+        },
+        {
+          "axis": 1,
+          "uniform_flat_phase": 1.5707963267948966,
+          "full_scalar_pref": 4.128639711503557,
+          "neutral_whole_SF_vacuum_lognorm": 8.936990269294334,
+          "charged_whole_SF_vacuum_lognorm": 7.979023927916694,
+          "point_charged_gap_physical": 95.79663413776399
+        },
+        {
+          "axis": 1,
+          "uniform_flat_phase": 3.141592653589793,
+          "full_scalar_pref": 5.394622969782861,
+          "neutral_whole_SF_vacuum_lognorm": 10.789245939565713,
+          "charged_whole_SF_vacuum_lognorm": 9.697348731961267,
+          "point_charged_gap_physical": 109.1897207604448
+        },
+        {
+          "axis": 2,
+          "uniform_flat_phase": 0.0,
+          "full_scalar_pref": 2.1432303088376754,
+          "neutral_whole_SF_vacuum_lognorm": 4.3675888304178,
+          "charged_whole_SF_vacuum_lognorm": 4.347306777232188,
+          "point_charged_gap_physical": 2.0282053185611626
+        },
+        {
+          "axis": 2,
+          "uniform_flat_phase": 0.1,
+          "full_scalar_pref": 2.1567509845117407,
+          "neutral_whole_SF_vacuum_lognorm": 4.549798693574457,
+          "charged_whole_SF_vacuum_lognorm": 4.448106203981135,
+          "point_charged_gap_physical": 10.169248959332247
+        },
+        {
+          "axis": 2,
+          "uniform_flat_phase": 0.2,
+          "full_scalar_pref": 2.196839664301554,
+          "neutral_whole_SF_vacuum_lognorm": 4.800522913326948,
+          "charged_whole_SF_vacuum_lognorm": 4.602164543553005,
+          "point_charged_gap_physical": 19.835836977394294
+        },
+        {
+          "axis": 2,
+          "uniform_flat_phase": 0.5,
+          "full_scalar_pref": 2.4591829357262833,
+          "neutral_whole_SF_vacuum_lognorm": 5.701496040150078,
+          "charged_whole_SF_vacuum_lognorm": 5.238720084185205,
+          "point_charged_gap_physical": 46.27759559648721
+        },
+        {
+          "axis": 2,
+          "uniform_flat_phase": 1.0,
+          "full_scalar_pref": 3.199480258422878,
+          "neutral_whole_SF_vacuum_lognorm": 7.340070229988815,
+          "charged_whole_SF_vacuum_lognorm": 6.568118935342499,
+          "point_charged_gap_physical": 77.19512946463172
+        },
+        {
+          "axis": 2,
+          "uniform_flat_phase": 1.5707963267948966,
+          "full_scalar_pref": 4.128639711503557,
+          "neutral_whole_SF_vacuum_lognorm": 8.936990269294338,
+          "charged_whole_SF_vacuum_lognorm": 7.979023927916697,
+          "point_charged_gap_physical": 95.79663413776414
+        },
+        {
+          "axis": 2,
+          "uniform_flat_phase": 3.141592653589793,
+          "full_scalar_pref": 5.394622969782862,
+          "neutral_whole_SF_vacuum_lognorm": 10.789245939565713,
+          "charged_whole_SF_vacuum_lognorm": 9.697348731961265,
+          "point_charged_gap_physical": 109.18972076044489
+        }
+      ],
+      "scope": "Actual REF89 pointPhi, exact whole scalar+fullvalence; flat zero-curl finite2x1x1 torons. No quantum heat/source mass or instability claim."
+    },
+    "limits": "Mean Phi/zero colour/noncompact heat omitted; toron probe includes full scalar pref+valence on finite2x1x1 graph. No quantum charged-gap or magnetic-instability claim. Strong flat short-winding bias means tiny native regulator does not validate largeN all-extents>4 mass/toron physics."
+  },
+  "campaign_status": "OPEN; original finiteSCREEN/CURRENT427 source/state/Z/clock/receiver/gates unchanged; no physical-source/commoncone/particle/scattering admission"
+}

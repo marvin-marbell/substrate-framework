@@ -1,0 +1,120 @@
+{
+  "root": "/home/administrator/substrate-222",
+  "server": "pyright-langserver stdio",
+  "tooling_scope": "LSP symbols and AST intelligence, no build/test/lint rerun; final selected checker owned by parent",
+  "results": [
+    {
+      "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_initial_density_higher_jets_interval.py",
+      "symbols": 157,
+      "positive_AST": [
+        "mm",
+        "trace",
+        "OutwardEngine",
+        "run",
+        "__init__",
+        "factor",
+        "diagonal",
+        "commute",
+        "derivative",
+        "cycle",
+        "expectation",
+        "evaluate"
+      ],
+      "notifications": [
+        {
+          "jsonrpc": "2.0",
+          "method": "window/logMessage",
+          "params": {
+            "type": 3,
+            "message": "[FG] Long operation: analyzing: file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_initial_density_higher_jets.py (3957ms)"
+          }
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "textDocument/publishDiagnostics",
+          "params": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_initial_density_higher_jets.py",
+            "version": 1,
+            "diagnostics": []
+          }
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "textDocument/publishDiagnostics",
+          "params": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_initial_density_higher_jets_natural_exit.py",
+            "version": 1,
+            "diagnostics": []
+          }
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "pyright/beginProgress",
+          "params": [
+            null
+          ]
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "pyright/reportProgress",
+          "params": [
+            "1 file to analyze"
+          ]
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "textDocument/publishDiagnostics",
+          "params": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_initial_density_higher_jets_natural_exit.py",
+            "version": 1,
+            "diagnostics": [
+              {
+                "range": {
+                  "start": {
+                    "line": 34,
+                    "character": 48
+                  },
+                  "end": {
+                    "line": 34,
+                    "character": 66
+                  }
+                },
+                "message": "Argument of type \"dict[str, str | int]\" cannot be assigned to parameter \"value\" of type \"list[str] | int | float | str | dict[str, str]\" in function \"__setitem__\"\n\u00a0\u00a0Type \"dict[str, str | int]\" is not assignable to type \"list[str] | int | float | str | dict[str, str]\"\n\u00a0\u00a0\u00a0\u00a0\"dict[str, str | int]\" is not assignable to \"list[str]\"\n\u00a0\u00a0\u00a0\u00a0\"dict[str, str | int]\" is not assignable to \"int\"\n\u00a0\u00a0\u00a0\u00a0\"dict[str, str | int]\" is not assignable to \"float\"\n\u00a0\u00a0\u00a0\u00a0\"dict[str, str | int]\" is not assignable to \"str\"\n\u00a0\u00a0\u00a0\u00a0\"dict[str, str | int]\" is not assignable to \"dict[str, str]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Type parameter \"_VT@dict\" is invariant, but \"str | int\" is not the same as \"str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Consider switching from \"dict\" to \"Mapping\" which is covariant in the value type",
+                "severity": 1,
+                "code": "reportArgumentType",
+                "source": "Pyright",
+                "codeDescription": {
+                  "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "pyright/endProgress",
+          "params": [
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_initial_density_higher_jets_boundary_controls.py",
+      "symbols": 42,
+      "positive_AST": [
+        "run"
+      ],
+      "notifications": []
+    },
+    {
+      "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_initial_density_higher_jets_shared_field_raw_mixture_controls.py",
+      "symbols": 50,
+      "positive_AST": [
+        "electric_word",
+        "run"
+      ],
+      "notifications": []
+    }
+  ]
+}

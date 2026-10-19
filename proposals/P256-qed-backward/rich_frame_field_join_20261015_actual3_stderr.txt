@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_frame_field_join_20261015_calculate.py", line 107, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_frame_field_join_20261015_calculate.py", line 75, in main
+    print('event',name,flush=True);vm=m_isometry(model,name,.5);h,ha=compress(law(model,name),vm);off,oa=compress(law(model,name,coupled=False),vm)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_frame_field_join_20261015_model.py", line 107, in compress
+    if key not in cache:cache[key]=np.asarray((left['W'][mi].conj().T@sparse.csr_matrix(angle)@right['W'][ni]).toarray())
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_compressed.py", line 95, in __init__
+    coo = self._coo_container(arg1, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_coo.py", line 97, in __init__
+    self.data = getdata(M[coords], copy=copy, dtype=dtype)
+                        ~^^^^^^^^
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 595. KiB for an array with shape (38088,) and data type complex128

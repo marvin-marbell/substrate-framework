@@ -1,0 +1,73 @@
+{
+  "kind": "FINAL_SELECTED_ACTUAL_UNBIASED_OBSERVABLE_SOURCE_PYRIGHT",
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--project",
+    "/tmp/joined_phi_u1_charged_exterior_resummation_unbiased_observable_final_pyright_20261010.json",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--outputjson",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_charged_exterior_resummation_unbiased_observable.py"
+  ],
+  "config": {
+    "typeCheckingMode": "basic",
+    "pythonVersion": "3.12",
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward"
+    ],
+    "reportMissingTypeStubs": false
+  },
+  "selected_sources": {
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_charged_exterior_resummation_unbiased_observable.py": "db3e23d94b9a8d3b138e143d5620ac7370dc0a3bba868ec74c920ad76324eb9a"
+  },
+  "returncode": 1,
+  "natural_exit": true,
+  "wall_seconds": 3.155322338003316,
+  "stdout": "{\n    \"version\": \"1.1.414\",\n    \"time\": \"1791662820677\",\n    \"generalDiagnostics\": [\n        {\n            \"file\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_charged_exterior_resummation_unbiased_observable.py\",\n            \"severity\": \"error\",\n            \"message\": \"Type \\\"bytes\\\" is not assignable to declared type \\\"Local\\\"\\n\u00a0\u00a0\\\"bytes\\\" is not assignable to \\\"dict[tuple[int, Flow], complex]\\\"\",\n            \"range\": {\n                \"start\": {\n                    \"line\": 107,\n                    \"character\": 12\n                },\n                \"end\": {\n                    \"line\": 107,\n                    \"character\": 20\n                }\n            },\n            \"rule\": \"reportAssignmentType\"\n        },\n        {\n            \"file\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_charged_exterior_resummation_unbiased_observable.py\",\n            \"severity\": \"error\",\n            \"message\": \"Argument of type \\\"Local\\\" cannot be assigned to parameter \\\"data\\\" of type \\\"SizedBuffer | str\\\" in function \\\"writestr\\\"\\n\u00a0\u00a0Type \\\"Local\\\" is not assignable to type \\\"SizedBuffer | str\\\"\\n\u00a0\u00a0\u00a0\u00a0\\\"dict[tuple[int, Flow], complex]\\\" is incompatible with protocol \\\"SizedBuffer\\\"\\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\\\"__buffer__\\\" is not present\\n\u00a0\u00a0\u00a0\u00a0\\\"dict[tuple[int, Flow], complex]\\\" is not assignable to \\\"str\\\"\",\n            \"range\": {\n                \"start\": {\n                    \"line\": 107,\n                    \"character\": 63\n                },\n                \"end\": {\n                    \"line\": 107,\n                    \"character\": 66\n                }\n            },\n            \"rule\": \"reportArgumentType\"\n        }\n    ],\n    \"summary\": {\n        \"filesAnalyzed\": 1,\n        \"errorCount\": 2,\n        \"warningCount\": 0,\n        \"informationCount\": 0,\n        \"timeInSec\": 2.417\n    }\n}\n\n",
+  "stderr": "",
+  "result": {
+    "version": "1.1.414",
+    "time": "1791662820677",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_charged_exterior_resummation_unbiased_observable.py",
+        "severity": "error",
+        "message": "Type \"bytes\" is not assignable to declared type \"Local\"\n\u00a0\u00a0\"bytes\" is not assignable to \"dict[tuple[int, Flow], complex]\"",
+        "range": {
+          "start": {
+            "line": 107,
+            "character": 12
+          },
+          "end": {
+            "line": 107,
+            "character": 20
+          }
+        },
+        "rule": "reportAssignmentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_charged_exterior_resummation_unbiased_observable.py",
+        "severity": "error",
+        "message": "Argument of type \"Local\" cannot be assigned to parameter \"data\" of type \"SizedBuffer | str\" in function \"writestr\"\n\u00a0\u00a0Type \"Local\" is not assignable to type \"SizedBuffer | str\"\n\u00a0\u00a0\u00a0\u00a0\"dict[tuple[int, Flow], complex]\" is incompatible with protocol \"SizedBuffer\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__buffer__\" is not present\n\u00a0\u00a0\u00a0\u00a0\"dict[tuple[int, Flow], complex]\" is not assignable to \"str\"",
+        "range": {
+          "start": {
+            "line": 107,
+            "character": 63
+          },
+          "end": {
+            "line": 107,
+            "character": 66
+          }
+        },
+        "rule": "reportArgumentType"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 1,
+      "errorCount": 2,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 2.417
+    }
+  }
+}

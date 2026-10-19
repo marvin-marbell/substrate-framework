@@ -1,0 +1,31 @@
+{
+  "schema":"neutral_return_image/gram-api-v1",
+  "base_interface":"neutral_return_image_interface_20261011.json",
+  "base_interface_sha256":"a0b4d7e530f770d549d4f022e41f2134715e850b93a046449b64e3fe61dd2a43",
+  "module":"neutral_return_image_factorized_20261011.py",
+  "module_sha256":"c906b72557454adbe107478ccd367ecdb49599ddb410b13d83e03c7ee5170973",
+  "parameters_exact":{
+    "m_active":"2961892062647335631959094750571/158456325028528675187087900672",
+    "m_auxiliary":"778817418083908094804051015379/39614081257132168796771975168",
+    "c0_both_roles":"-1308822269340134261433747458349/316912650057057350374175801344",
+    "d_both_roles":"-6551835639726505214210313256407/1267650600228229401496703205376",
+    "electric_density_square_coefficient":64,
+    "active_physical_copy_count":1,"auxiliary_physical_copy_count":63,
+    "active_vector_slot_count":2,"auxiliary_vector_slot_count":126,
+    "return_affine_u":[0,0],"charged_affine_u":"[qA/2,qA/2], qA=+/-1",
+    "source_normalization":"Exact normalized9672320-component binary source: Omega=x/sqrt(sum x_i^2); observed raw norm FLOAT1.0000000000000007. Source and field densities are formed from the same normalized vector.",
+    "native_h":"h_role=m_role A+c0 B+d C; A=diag(-1,1,-1,1), B=X tensor diag(1,-1), C=[[0,iX],[-iX,0]], rho=diag(1/2,1/2,-1/2,-1/2)."
+  },
+  "API":{
+    "feature":"None=identity or ((physical_slot_i,Dirac_i),(physical_slot_k,Dirac_k)) meaning c_i^dagger c_k; physical_slot=2copy+spin, copy0 active/copy1..63auxiliary.",
+    "return_terms":"return_terms(M,copies=64) streams (coefficient,featureA,featureB) for complete actual C, including both contacts and all same/crosscopy exchanges. M actual4x4 spin/endpoint-Dirac in shared source frame. Coincident terms and ALL term-pair cross-Grams remain coherent.",
+    "local_gram":"local_gram(left,right,ann,W5,density): exact bilinear Gram entry; ann four16x16 signed CAR; W5 exact16x5 native source vector embedding. density(ordered_slots) must provide normalized5x5 one-slot or25x25 two-slot reduced density for actual ordered roles. No source-independent auxiliary copy assumption.",
+    "factorized_gram_entry":"factorized_gram_entry(termLeft,termRight,ann,W5,densityA,densityB) returns exact conjugate(cLeft)*cRight*GA*GB. Sum over actual streamed terms to obtain full unprojected norm. Whole spectralP0 correction is specified by base interface and remains distinct from this unprojected kernel.",
+    "matter_commutator":"matter_commutator(feature,profile_h) streams full4Dirac bilinear commutator coefficients with actual profile_h(active/auxiliary), retaining mixed onsite values. For literal endpoint features rho_all commutes, but commutator-generated labels cannot be assumed rho-commuting.",
+    "symbolic_vs_FLOAT":"SymPy exact objects retain exact matrix/density coefficients. Converting a FLOAT extracted density to SymPy does not make it an interval certificate. Field densities Omega,H0Omega and empty-word field overlaps must be supplied separately for complete H-action contractions; local_gram identity=1 is specifically the normalized source Gram API.",
+    "evaluation_strategy":"On-demand Gram entries and streamed terms avoid allocating two-cell Hilbert or dense65537-square Grams. Full all64 double-sum cost can be reduced by exact physical-label equality patterns AFTER CAR rules; active diagnostic is not a substitute for that sum."
+  },
+  "extra_exact_intertwiner":"The latest executed control stores T3=Jhole K, K=diag(1,-1,1,-1) antidiagonal(I4), so T3^dagger dGamma_number3(h) T3=h for each native A/B/C/rho; number1 basis is native identity. This simultaneously preserves matter and rho for both active/aux profiles without an independent diagonal fit.",
+  "new_discriminating_controls":"36 on-demand Gram feature pairs versus independent sparse globally signed CAR; explicit64 identity-hopping kernel66048 terms including auxiliary63 and crosscopy; mixed active/aux full4Dirac free commutator. These supplement scalar/dropcopy/hole/wholeP0 controls and actual selected-source active neutral contraction in the final control receipt.",
+  "parent_checks":"Parent final selected diagnostics on neutral_return_image_control_20261011.py and neutral_return_image_factorized_20261011.py; do not rerun archived source solver or old controls. No project build/lint/test/formatter run by this worker."
+}

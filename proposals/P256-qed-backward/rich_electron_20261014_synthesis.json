@@ -1,0 +1,52 @@
+{
+  "work_item": "electron-candidate",
+  "governing_plan": "issue222-rich-backward-candidates-20261014",
+  "captured_plan_revision": "0b7f69a724b5350437718bf34febf79e8b75fc05704986111e2fa4945f195730",
+  "candidate_id": "rich-photon-hubbard-loop-charged-flux-20261014",
+  "idea": "Use RichPhoton's exact correlated four-site spinful Hubbard plaquette and its Peierls link current, not an independent matrix-field law. Couple its real charged N=3/N=1 sectors to a quantum loop-flux coordinate whose kinetic term is primitive electric inertia and whose potential is induced by the same exact matter Hamiltonian. A correct large-gauge twisted boundary is essential: an open uniform-flux coordinate spuriously lets the charged threshold collapse.",
+  "backward_path": "Target charged excitation requires charge, spin, motion, exchange, mass/propagation and electromagnetic dressing from one source/current. Here CAR occupation combinations furnish charge sectors and exact fermionic signs; the N=2 neutral source, N=3 addition (+e) and N=1 removal (-e) are eigenstates of one Q-dependent Hubbard law. Fourier c†_(k,s)=1/2 sum_l exp(-ikl)c†_(l,s) fixes source normalization at k=0,pi/2. The same phase derivative of the hopping is the link current/vertex and its second derivative is contact. Quantized uniform loop flux has electric inertia and an induced matter potential; its response mixes charged states and produces sideband poles. The N=2 sector includes all double-occupancy/charge-fluctuation configurations, while the removal response supplies negative-frequency Lehmann poles.",
+  "candidate_law": {
+    "identity": "rich-photon-hubbard-plaquette-links-v1-20261014",
+    "parameters": {"hopping": 1.0, "repulsion": 4.0, "electric_inertia": 1.0, "link_charge": 1.0, "particles_per_loop": 2, "sites_per_loop": 4},
+    "matter_hamiltonian": "H_N(Q)=U sum_l n_(l,up)n_(l,down)-t sum_(l,s)[exp(i e Q/4)c†_(l+1,s)c_(l,s)+h.c.]; H_total=H_N(Q)-[1/(2 epsilon)] d²/dQ².",
+    "flux_geometry": "Q in [0,2pi), 32-point periodic finite-difference grid; large-gauge boundary psi(2pi)=V psi(0), V=exp(i sum_l (pi*l/2)n_l). The large-gauge twist makes H(Q+2pi)=V H(Q)V†.",
+    "state_and_source": "Coupled N=2 exact lowest state; N=3 addition and N=1 removal sectors; full spinful CAR basis at each Q; spin-resolved k=0,pi/2 sources normalized by 1/2. Units t=hbar=|e|=link spacing=1.",
+    "approximations": ["One global loop-flux mode only; no local Gauss-law-complete photon or two transverse polarizations.", "Second-order finite-difference electric kinetic operator; 20 lowest states per sector; displayed spectral weight is truncated, not a complete sum rule.", "The removal sector is a correlated Hubbard hole, not a relativistic positron; no negative-energy Dirac sea or Lorentz symmetry is derived."]
+  },
+  "executed_behavior": {
+    "natural_exit": 0,
+    "source_sha256": "e1ab7d01ec17ddb1fb809565ef85fd1b5fa3ea40901813571089f76ef46f4c36",
+    "input_sha256": "a6674ba9e4eab0cd66bef1bd0143d4c6d36a823297fe7bab3f960c60df0b0948",
+    "output_sha256": "c305df1a9d1a574936f3832bb4114ab85c168fea6d251bbe13cab06963ae85f4",
+    "dynamic_addition_threshold_k0_spin_up": 0.2458118079724887,
+    "frozen_q0_addition_threshold": 0.6663927622968107,
+    "dynamic_minus_frozen_addition_threshold": -0.42058095432432197,
+    "dynamic_removal_threshold_k0_spin_up": -1.354314381219359,
+    "low_eigenstate_captured_addition_weight": 0.3507611903733103,
+    "low_eigenstate_captured_removal_weight": 0.4642809731936509,
+    "spin_degeneracy_gap_max": 0.0,
+    "response_features": "Spin-up k=0 addition has poles near omega=0.2458, 0.2459, 0.7145, 0.7153, 1.1607, 1.1663, 1.5804, 1.5951. The separated higher poles are field-dressed satellites. Removal poles occur at negative frequencies. The actual dynamic threshold is 0.42058 below the Q=0 frozen-matter control."
+  },
+  "useful_failure_and_repair": {
+    "attempt1": "An open [-2pi,2pi] flux coordinate with Dirichlet boundaries gave a zero addition threshold versus 0.66639 frozen, an artifact of allowing a uniform gauge coordinate to evade the charged cost. This is recorded in rich_electron_20261014_attempt1_openflux.json.",
+    "material_change": "Replace open boundaries with compact flux and the correct matter-space large-gauge twist; no parameter tuning. The repaired representation restores a positive coupled threshold 0.24581 and a resolved satellite ladder while retaining dynamical electric motion."
+  },
+  "physical_decision": "A useful finite charged, spinful Hubbard-loop excitation with same-law dynamic electromagnetic dressing is constructed: freezing the flux changes its charged threshold and removes its field-dressed pole structure. This is only a one-loop compact-mode candidate, not a continuum electron or a complete QED explanation.",
+  "peer_api": {
+    "module": "proposals/P256-qed-backward/rich_electron_20261014_hubbard_charged.py",
+    "entrypoint": "run() -> response dictionary; script execution serializes rich_electron_20261014_hubbard_charged_result.json.",
+    "response": "For each (spin,k) returns Lehmann poles and nonnegative residues for N=3 addition and N=1 removal. G^R_(s)(k,omega)=sum_a w_a/[omega-(E_(N+1,a)-E_N,0)+i eta]+sum_r v_r/[omega+(E_N,0-E_(N-1,r))+i eta]. Fourier convention exp(-i omega t), eta>0; omega and E measured in hopping t; residues dimensionless.",
+    "source_semantics": "c†_(k,s)=1/2 sum_(l=0..3) exp(-ikl)c†_(l,s), k in radians/cell {0,pi/2}; removal uses the adjoint. Charge sectors are measured relative to N=2 and the fixed ionic background.",
+    "dimensions": "One scalar diagonal spin/momentum response per requested (s,k); no orbital matrix or nonforward vertex returned. Full 32*28 N=2 ground-space embedding and 20 lowest eigenstates in each charged sector; output weights are low-energy partial weights."
+  },
+  "next_material_move": "Join the charged N=1/2/3 source to RichPhoton's actual finite-q two-polarization collective field rather than only a uniform loop-flux coordinate. Retain its Gauss/density constraint and use the same Peierls current/contact in charged sectors. Then probe whether momentum-dependent charged propagation and sidebands persist under the real transverse-mode geometry. In parallel, the missing relativistic negative-energy/virtual-pair structure needs a separate construction; Hubbard particle-hole configurations are not positrons.",
+  "open_inputs": ["Microscopic CAR and SU(2) spin are assumed, not derived.", "The finite loop coordinate is a restricted electromagnetic mode and omits local Gauss constraints and photon polarization structure.", "The same-H Hubbard N=1 hole is not an antiparticle; relativistic pair creation, continuum Lorentz invariance, magnetic moment/g factor and mass parameter closure remain unexplained.", "The result is finite-size/finite-grid with truncated eigenstate spectra; no infinite-volume ground state, exact pole, complete spectral sum, or proton claim."] ,
+  "science_artifacts": {
+    "source": "rich_electron_20261014_hubbard_charged.py",
+    "input": "rich_photon_20261014_loop.py",
+    "response": "rich_electron_20261014_hubbard_charged_result.json",
+    "receipt": "rich_electron_20261014_hubbard_charged_receipt.json",
+    "failed_representation": "rich_electron_20261014_attempt1_openflux.json"
+  },
+  "checks_not_run": "No build/lint/tests/formatters or archived scientific reruns; independent reviewer owns final diagnostics and integrated smoke."
+}

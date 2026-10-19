@@ -1,0 +1,27 @@
+/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/networks/mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_run.py", line 103, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_run.py", line 78, in run
+    info=dmrg.run(psi,model,{'mixer':True,'max_sweeps':3,'min_sweeps':2,'max_E_err':1e-7,'trunc_params':{'chi_max':chi,'svd_min':1e-11},'lanczos_params':{'N_max':12},'combine':True})
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/algorithms/dmrg.py", line 100, in run
+    engine = TwoSiteDMRGEngine(psi, model, options, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/algorithms/dmrg.py", line 199, in __init__
+    super().__init__(psi, model, options, **kwargs)
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/algorithms/mps_common.py", line 141, in __init__
+    super().__init__(psi, model, options, **kwargs)
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/algorithms/algorithm.py", line 103, in __init__
+    consistency_check(
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/tools/misc.py", line 1045, in consistency_check
+    raise TenpyInconsistencyError(msg)
+tenpy.tools.misc.TenpyInconsistencyError: Maximum number of sites per ring (``max_N_sites_per_ring``) exceeded.
+/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/tools/params.py:243: UserWarning: unused options for config DMRG:
+['combine', 'lanczos_params', 'max_E_err', 'max_sweeps', 'min_sweeps', 'mixer']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/tools/params.py:243: UserWarning: unused options for config trunc_params:
+['chi_max', 'svd_min']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))

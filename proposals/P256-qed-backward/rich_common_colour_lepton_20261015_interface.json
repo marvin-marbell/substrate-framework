@@ -1,0 +1,57 @@
+{
+  "kind": "NEW_EXECUTABLE_COMMON_CAR32_ROOT_INTERFACE_NOT_SCIENCE_ADMISSION",
+  "prefix": "rich_common_colour_lepton_20261015_",
+  "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "python": "/home/administrator/substrate-framework/.venv/bin/python",
+  "run": "python rich_common_colour_lepton_20261015_capture.py <new_prefix_with_input_json>",
+  "producer": "rich_common_colour_lepton_20261015_calculate.py <input.json> <result.json>",
+  "model": "rich_common_colour_lepton_20261015_model.py",
+  "pure_imports": [{"file": "rich_colour_composite_20261014_model.py", "symbols": ["epsilon", "generators", "loop_field"], "scope": "Immutable pure SU3/PW19 algebra only. No old build/producer/CLI/state/result replay."}],
+  "governing_plan": {"id": "issue222-rich-backward-candidates-20261014", "captured_revision": "3bd3d2950ee595476e0e177580f2c97254f37dee0c2edf500490f4a75decf9ad", "template": "general", "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe", "writer": "Main sole plan writer"},
+  "review_boundary": "Parent handoff for later explicitly opened Wave12; not added to Wave10 or Wave11. No accepted science, graph admission, close/merge/push or global vacuum claim.",
+  "functions": {
+    "build(parameters)": "Returns root, scalar, loop, five exact source-connected gauge sectors, operators, actual C maps and lepton/B/anti source matrices on ONE CAR32 occupied reference. No pair_cut parameter.",
+    "law(op, scalar, parameters, angle=0)": "Returns analytic SAME-law H(A), J(A)=-H'(A), K(A)=H''(A). Scalar-only in quaternion/frame space; original tau_x mass and current rotate to tau_z density. No Y tensor Fi vector kinetic term.",
+    "occupation_closure(sector)": "Enumerates all H/J/K matter density targets and reports missing_targets. Full available quantum scalar and PW19 loop retained. Exact at arbitrary A because rotated populations are conserved.",
+    "common_root()": "Actual C4 repeated4 matrices, fixed Z rank3+1, monomial algebra rank16 and explicit commutant basis dimension16->10. Algebraic check, not spontaneous phase/charge selection.",
+    "source_matrix(neutral,target,kind,spin)": "Actual CAR lepton creation or epsilon uud odd source, including ORIGINAL-positive leg factors2^-1/2 per creation. Anti sources use actual C rather than charge labels alone."
+  },
+  "inputs": {
+    "scalar_points": "Finite symmetric DVR coordinate nodes; NOT boson Fock number or fermion pair count.",
+    "scalar_extent": "Finite coordinate boundary in chosen dimensionless units.",
+    "scalar_metric": "Positive common scalar kinetic metric input.",
+    "scalar_quartic": "Positive primitive lambda in lambda*phi^4.",
+    "scalar_quadratic": "Primitive POSITIVE mu2 enters potential with a NEGATIVE sign, -mu2*phi^2; not an emergent coefficient.",
+    "scalar_coupling": "Common g to all coloured/colourless members. No species masses.",
+    "electric": "PW19 electric Casimir coefficient2 convention H=electric*C2/2.",
+    "plaquette": "Coefficient of -ReTrU.",
+    "loop_route": "Relative oriented Wilson route coefficient; lepton receives chosen gauge-singlet TrU/3 polarizability, not a colour charge.",
+    "eta": "Positive finite broadening in response denominators, not a decay rate measured from dynamics.",
+    "frequencies": "Dimensionless external frequency list, no spectral-state cutoff.",
+    "times": "Post-pulse H(0) sampling times.",
+    "pulse_angle": "Finite external Q-weighted Wilson flux, C-matched sign for anti.",
+    "pulse_duration": "Actual H(Apulse) evolution duration.",
+    "field_kick": "Parameter of scalar-only unitary exp(-i kick Pphi)."
+  },
+  "result_semantics": {
+    "sectors": "All energies/spins, full eigen-residual, Gauss and closure evidence, actual Q/N expectations, scalar density/purity/variance, PW19 and scalar boundary weights. 'positive' means ROTATED-positive occupation, not original-mirror pair number. Ground S2 can differ across C spectra because halfspin/threehalf poles are degenerate; use source pole_spin, not arbitrary eigenvector order.",
+    "gaps": "Actual SAME-law sector ground energy minus actual occupied neutral reference, without recentering. This does NOT minimize all other disconnected rotated populations or all particle numbers.",
+    "sources": "raw_strength and all_raw_weights are unnormalized insertion strengths; raw_pole_residue sums complete degenerate pole; conditional_pole_fraction divides by raw strength. Lepton raw strength1/2. B raw strength1/4: chosen epsilon/sqrt6 source has rotated bare CAR norm squared2, multiplied by original-leg factor squared1/8. Neither is a creation probability.",
+    "current_response": "Every eigenstate retained with all gaps and weights, both retarded orders, eta and physical contact. Normalized lowest bright halfspin pole selected by source amplitudes, not a species/angular projector on dynamics.",
+    "EM_events": "Normalized finite physical-source evolution, SAME-state untouched baseline, all observable excesses and inclusive eigen-PVM probabilities summing to1. No normalized source strength substituted for a PVM probability.",
+    "source_excess_response": "Kernel and EM injected energy minus actual neutral response, so colour/lepton effects are not confused with common occupied-sea background.",
+    "scalar_field_only_events": "Unitary on scalar alone, initial matter/loop marginal checks then actual delayed scalar-loop/current feedback against SAME untouched state.",
+    "scalar_off_control": "Both neutral and charged sectors recomputed with common g=0; gaps collapse. Different coupling control, never substituted for coupled results.",
+    "occupied_branches": "Opposite fully occupied rotated sea reverses scalar tilt and is exactly related by phi reflection. Conserved populations imply NO interbranch tunnelling and no unique phase proof."
+  },
+  "npz": "Contains actual H/J/K, all eigenvalues/vectors/spins, all observables, raw source matrices and states, normalized pole receivers, C, finite EM/field event and untouched baseline states. Gauge projector CSR is <sector>_P_data/indices/indptr/shape; CAR masks uint64. No dense hidden species projector.",
+  "capture": "For each natural process run: source/input SHA256 before and after, command/cwd/environment, return code and time, exact hashes and byte sizes of stdout/stderr/JSON/NPZ; zip contains all source/input/output/exit bytes. No build/lint/tests/formatters. Source byte hashes bind only that run, not future edits.",
+  "severe_limitations": [
+    "Restricted common radial quantum field only: Clifford orientation and rank3+1 Z splitting frozen. ALL angular/matrix/splitting fluctuations omitted, so not a full quantum matrix-field phase.",
+    "PW19 colour Fourier/Peter-Weyl truncation omits higher irreps; substantial measured boundary occupation makes continuum/general-gauge extrapolation uncontrolled.",
+    "Exact source-connected closure uses the genuine scalar-density conservation law, not rich Dirac interband virtual feedback. Ci=Y tensor Fi does NOT enter kinetic/current Hamiltonian.",
+    "Selected occupied reference branch and source-connected charged blocks are solved, not every disconnected charged/neutral rotated population or all-N vacuum.",
+    "Lepton Wilson-trace polarizability is a chosen common-loop interaction. Rank, flavour, Q pattern, external EM gauging and extra-U1 treatment are inputs.",
+    "Frame S2 is not full spatial Noether angular momentum. No COM, photons, Maxwell continuum, confinement/strong hierarchy or nature identification."
+  ]
+}

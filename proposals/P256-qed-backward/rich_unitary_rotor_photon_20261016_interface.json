@@ -1,0 +1,15 @@
+{
+ "law":"NEW full compact U1 rotor; not S1 repair",
+ "parameters":{"L":4,"V":64,"arcs":192,"t":1,"U":4,"I":16,"ions":1},
+ "H":"sum_e E_e^2/32 + 2 sum_v (nup_v+ndown_v-1)^2 - sum_e,sigma [c_a† exp(i theta_e)c_b+h.c.]",
+ "Gauss":"D E - (nup+ndown-1)=0; D_tail=+1,D_head=-1",
+ "rotor":"E integer unbounded, U=exp(i theta) bilateral unitary. No E cutoff and no B term.",
+ "PH":"d_v=epsilon_v c_down_v†, epsilon=(-1)^(x+y+z). rho=nu-nh, Honsite=-4(nu-1/2)(nh-1/2)+1. Hhole hopping=Hup conjugate, no linear term discarded.",
+ "ensemble":"Gauss-projected trace, original total N=64 exactly. Spin-mixture, not original Nup=Ndown=32 canonical ensemble.",
+ "temporal_projection":"Temporal gauge with compact alpha_v boundary holonomy: rotor K(theta_0-theta_M-1+D^T alpha; dt/32), fermion boundary exp(-i alpha) for up and conjugate for hole. Uniform alpha projects nu_total=nh_total. Integrate all alpha, not mean-density constraint.",
+ "HS":"cosh lambda=exp(dt U/2). exp[-dt Honsite]=sum_s exp[-dt U/2-lambda s] exp[lambda s(nu+nh)]/2. Entire scalar retained.",
+ "positive_weight":"positive compact heat kernels times exp(sum[-dt U/2-lambda s])/2^(M V) times |det(1+exp(-i alpha) prod_l exp(-dt h(theta_l))exp(lambda s_l))|^2",
+ "source":"Peierls A enters fermion h(theta+A) only; J=-partial_A H; contact=partial_A^2 H. No independent bare Maxwell term.",
+ "scope":"Finite beta/Trotter correlated thermal path sampling, imaginary-time correlators; no real-time poles or vacuum claims. Full heat kernel uses Poisson wrapped Gaussian with declared exponentially small omitted winding tails, not an electric-law cutoff.",
+ "plan":{"id":"issue222-rich-backward-candidates-20261014","revision":"b048dbe91b0250f9525e9a07b6d76b95a8080f2f57c071873cad15f8a8fd0e4f","template":"general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe","owner":"Main; child read-only scoped photon-candidate"}
+}

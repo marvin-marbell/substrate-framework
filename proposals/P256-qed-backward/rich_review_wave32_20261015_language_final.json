@@ -1,0 +1,4444 @@
+{
+  "kind": "ONCE_FINAL_FIVE_OWNED_SOURCE_DIAGNOSTICS",
+  "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--outputjson",
+    "rich_review_wave32_20261015_observe.py",
+    "rich_review_wave32_20261015_consume.py",
+    "rich_review_wave32_20261015_capture.py",
+    "rich_review_wave32_20261015_diagnose.py",
+    "rich_review_wave32_20261015_deliver.py"
+  ],
+  "version": "pyright 1.1.414",
+  "source_SHA256": {
+    "rich_review_wave32_20261015_observe.py": "29b49c0336356254bc4fe8a2a1096cc01733ca0ba1e58dcf7873eb5c81b2c56a",
+    "rich_review_wave32_20261015_consume.py": "7e4b0bb7d9b64291badc2f06a833046a8567a084e27f1412ac321d62cfd2866e",
+    "rich_review_wave32_20261015_capture.py": "fe316fdf4f19261060e6d0154327dd4d0d6286b5893afbc8f653f0f64365b101",
+    "rich_review_wave32_20261015_diagnose.py": "1618074235f60a12aff97616d5a251d1b575ea7dfc890691c797aa4785c7a5c1",
+    "rich_review_wave32_20261015_deliver.py": "c4f931c6b07ae922f87f25c562e604390426ffb427cbaf14c9cd392cb676aa11"
+  },
+  "natural_exit": true,
+  "returncode": 1,
+  "checker": {
+    "version": "1.1.414",
+    "time": "1792108874456",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+        "severity": "error",
+        "message": "Argument of type \"list[dict[Unknown, Unknown]]\" cannot be assigned to parameter \"value\" of type \"list[str] | str | dict[Any, dict[Unknown, Unknown]] | float | dict[str, str]\" in function \"__setitem__\"\n\u00a0\u00a0Type \"list[dict[Unknown, Unknown]]\" is not assignable to type \"list[str] | str | dict[Any, dict[Unknown, Unknown]] | float | dict[str, str]\"\n\u00a0\u00a0\u00a0\u00a0\"list[dict[Unknown, Unknown]]\" is not assignable to \"list[str]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Type parameter \"_T@list\" is invariant, but \"dict[Unknown, Unknown]\" is not the same as \"str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Consider switching from \"list\" to \"Sequence\" which is covariant\n\u00a0\u00a0\u00a0\u00a0\"list[dict[Unknown, Unknown]]\" is not assignable to \"str\"\n\u00a0\u00a0\u00a0\u00a0\"list[dict[Unknown, Unknown]]\" is not assignable to \"dict[Any, dict[Unknown, Unknown]]\"\n\u00a0\u00a0\u00a0\u00a0\"list[dict[Unknown, Unknown]]\" is not assignable to \"float\"\n\u00a0\u00a0\u00a0\u00a0\"list[dict[Unknown, Unknown]]\" is not assignable to \"dict[str, str]\"",
+        "range": {
+          "start": {
+            "line": 39,
+            "character": 4
+          },
+          "end": {
+            "line": 39,
+            "character": 22
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "Argument of type \"int\" cannot be assigned to parameter \"key\" of type \"str\" in function \"__getitem__\"\n\u00a0\u00a0\"int\" is not assignable to \"str\"",
+        "range": {
+          "start": {
+            "line": 47,
+            "character": 37
+          },
+          "end": {
+            "line": 47,
+            "character": 48
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "No overloads for \"__getitem__\" match the provided arguments",
+        "range": {
+          "start": {
+            "line": 47,
+            "character": 37
+          },
+          "end": {
+            "line": 47,
+            "character": 55
+          }
+        },
+        "rule": "reportCallIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "Argument of type \"tuple[slice[None, Literal[2], None], slice[None, Literal[2], None]]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, Literal[2], None], slice[None, Literal[2], None]]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+        "range": {
+          "start": {
+            "line": 47,
+            "character": 37
+          },
+          "end": {
+            "line": 47,
+            "character": 55
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "\"__getitem__\" method not defined on type \"float\"",
+        "range": {
+          "start": {
+            "line": 47,
+            "character": 37
+          },
+          "end": {
+            "line": 47,
+            "character": 48
+          }
+        },
+        "rule": "reportIndexIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"real\" for class \"ndarray[_AnyShape, dtype[Any]]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"ndarray[_AnyShape, dtype[Any]]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 57,
+            "character": 66
+          },
+          "end": {
+            "line": 57,
+            "character": 70
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"imag\" for class \"ndarray[_AnyShape, dtype[Any]]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"ndarray[_AnyShape, dtype[Any]]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 57,
+            "character": 112
+          },
+          "end": {
+            "line": 57,
+            "character": 116
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"real\" for class \"NDArray[Unknown]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 117,
+            "character": 106
+          },
+          "end": {
+            "line": 117,
+            "character": 110
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"imag\" for class \"NDArray[Unknown]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 118,
+            "character": 106
+          },
+          "end": {
+            "line": 118,
+            "character": 110
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "Operator \"@\" not supported for types \"int\" and \"float\"",
+        "range": {
+          "start": {
+            "line": 125,
+            "character": 71
+          },
+          "end": {
+            "line": 125,
+            "character": 92
+          }
+        },
+        "rule": "reportOperatorIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "Operator \"@\" not supported for types \"int\" and \"int\"",
+        "range": {
+          "start": {
+            "line": 126,
+            "character": 68
+          },
+          "end": {
+            "line": 126,
+            "character": 87
+          }
+        },
+        "rule": "reportOperatorIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "\"primitive_keys\" is possibly unbound",
+        "range": {
+          "start": {
+            "line": 145,
+            "character": 66
+          },
+          "end": {
+            "line": 145,
+            "character": 80
+          }
+        },
+        "rule": "reportPossiblyUnboundVariable"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+        "severity": "error",
+        "message": "\"primitive_keys\" is possibly unbound",
+        "range": {
+          "start": {
+            "line": 145,
+            "character": 112
+          },
+          "end": {
+            "line": 145,
+            "character": 126
+          }
+        },
+        "rule": "reportPossiblyUnboundVariable"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 19,
+            "character": 47
+          },
+          "end": {
+            "line": 19,
+            "character": 51
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"imag\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 19,
+            "character": 83
+          },
+          "end": {
+            "line": 19,
+            "character": 87
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 20,
+            "character": 68
+          },
+          "end": {
+            "line": 20,
+            "character": 72
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 5,
+      "errorCount": 16,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 25.908
+    }
+  },
+  "stderr": "",
+  "summary": {
+    "filesAnalyzed": 5,
+    "errorCount": 16,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 25.908
+  },
+  "error_counts_by_file": {
+    "rich_review_wave32_20261015_capture.py": 1,
+    "rich_review_wave32_20261015_consume.py": 12,
+    "rich_review_wave32_20261015_observe.py": 3
+  },
+  "rooted_LSP": {
+    "initialization": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "capabilities": {
+          "textDocumentSync": 2,
+          "definitionProvider": {
+            "workDoneProgress": true
+          },
+          "declarationProvider": {
+            "workDoneProgress": true
+          },
+          "typeDefinitionProvider": {
+            "workDoneProgress": true
+          },
+          "referencesProvider": {
+            "workDoneProgress": true
+          },
+          "documentSymbolProvider": {
+            "workDoneProgress": true
+          },
+          "workspaceSymbolProvider": {
+            "workDoneProgress": true
+          },
+          "hoverProvider": {
+            "workDoneProgress": true
+          },
+          "documentHighlightProvider": {
+            "workDoneProgress": true
+          },
+          "renameProvider": {
+            "prepareProvider": true,
+            "workDoneProgress": true
+          },
+          "completionProvider": {
+            "triggerCharacters": [
+              ".",
+              "[",
+              "\"",
+              "'"
+            ],
+            "resolveProvider": true,
+            "workDoneProgress": true,
+            "completionItem": {
+              "labelDetailsSupport": true
+            }
+          },
+          "signatureHelpProvider": {
+            "triggerCharacters": [
+              "(",
+              ",",
+              ")"
+            ],
+            "workDoneProgress": true
+          },
+          "codeActionProvider": {
+            "codeActionKinds": [
+              "quickfix",
+              "source.organizeImports"
+            ],
+            "workDoneProgress": true
+          },
+          "executeCommandProvider": {
+            "commands": [],
+            "workDoneProgress": true
+          },
+          "callHierarchyProvider": true,
+          "workspace": {
+            "workspaceFolders": {
+              "supported": true,
+              "changeNotifications": true
+            }
+          }
+        }
+      }
+    },
+    "selected_files": [
+      "rich_review_wave32_20261015_observe.py",
+      "rich_review_wave32_20261015_consume.py",
+      "rich_review_wave32_20261015_capture.py",
+      "rich_review_wave32_20261015_diagnose.py",
+      "rich_review_wave32_20261015_deliver.py"
+    ],
+    "symbols": {
+      "rich_review_wave32_20261015_observe.py": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": [
+          {
+            "name": "expval",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 7,
+                  "character": 0
+                },
+                "end": {
+                  "line": 8,
+                  "character": 55
+                }
+              }
+            }
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 7,
+                  "character": 11
+                },
+                "end": {
+                  "line": 7,
+                  "character": 21
+                }
+              }
+            },
+            "containerName": "expval"
+          },
+          {
+            "name": "operator",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 7,
+                  "character": 23
+                },
+                "end": {
+                  "line": 7,
+                  "character": 36
+                }
+              }
+            },
+            "containerName": "expval"
+          },
+          {
+            "name": "radial_readout",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 11,
+                  "character": 0
+                },
+                "end": {
+                  "line": 27,
+                  "character": 56
+                }
+              }
+            }
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 11,
+                  "character": 19
+                },
+                "end": {
+                  "line": 11,
+                  "character": 29
+                }
+              }
+            },
+            "containerName": "radial_readout"
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 11,
+                  "character": 31
+                },
+                "end": {
+                  "line": 11,
+                  "character": 41
+                }
+              }
+            },
+            "containerName": "radial_readout"
+          },
+          {
+            "name": "wave",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 12,
+                  "character": 4
+                },
+                "end": {
+                  "line": 12,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "radial_readout"
+          },
+          {
+            "name": "probabilities",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 13,
+                  "character": 4
+                },
+                "end": {
+                  "line": 13,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "radial_readout"
+          },
+          {
+            "name": "local",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 14,
+                  "character": 4
+                },
+                "end": {
+                  "line": 14,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "radial_readout"
+          },
+          {
+            "name": "site",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 8
+                },
+                "end": {
+                  "line": 15,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "radial_readout"
+          },
+          {
+            "name": "moved",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 16,
+                  "character": 8
+                },
+                "end": {
+                  "line": 16,
+                  "character": 13
+                }
+              }
+            },
+            "containerName": "radial_readout"
+          },
+          {
+            "name": "density",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 17,
+                  "character": 8
+                },
+                "end": {
+                  "line": 17,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "radial_readout"
+          },
+          {
+            "name": "weight",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 18,
+                  "character": 8
+                },
+                "end": {
+                  "line": 18,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "radial_readout"
+          },
+          {
+            "name": "outer",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 23,
+                  "character": 4
+                },
+                "end": {
+                  "line": 23,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "radial_readout"
+          },
+          {
+            "name": "conditional_readout",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 30,
+                  "character": 0
+                },
+                "end": {
+                  "line": 43,
+                  "character": 62
+                }
+              }
+            }
+          },
+          {
+            "name": "projected",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 30,
+                  "character": 24
+                },
+                "end": {
+                  "line": 30,
+                  "character": 38
+                }
+              }
+            },
+            "containerName": "conditional_readout"
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 30,
+                  "character": 40
+                },
+                "end": {
+                  "line": 30,
+                  "character": 50
+                }
+              }
+            },
+            "containerName": "conditional_readout"
+          },
+          {
+            "name": "currents",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 30,
+                  "character": 52
+                },
+                "end": {
+                  "line": 30,
+                  "character": 66
+                }
+              }
+            },
+            "containerName": "conditional_readout"
+          },
+          {
+            "name": "weight",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 30,
+                  "character": 68
+                },
+                "end": {
+                  "line": 30,
+                  "character": 81
+                }
+              }
+            },
+            "containerName": "conditional_readout"
+          },
+          {
+            "name": "values",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 33,
+                  "character": 4
+                },
+                "end": {
+                  "line": 33,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "conditional_readout"
+          },
+          {
+            "name": "observe",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 46,
+                  "character": 0
+                },
+                "end": {
+                  "line": 81,
+                  "character": 17
+                }
+              }
+            }
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 46,
+                  "character": 12
+                },
+                "end": {
+                  "line": 46,
+                  "character": 22
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 46,
+                  "character": 24
+                },
+                "end": {
+                  "line": 46,
+                  "character": 34
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "h",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 46,
+                  "character": 36
+                },
+                "end": {
+                  "line": 46,
+                  "character": 42
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "currents",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 46,
+                  "character": 44
+                },
+                "end": {
+                  "line": 46,
+                  "character": 58
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "axis",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 46,
+                  "character": 60
+                },
+                "end": {
+                  "line": 46,
+                  "character": 69
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "receiver",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 47,
+                  "character": 12
+                },
+                "end": {
+                  "line": 47,
+                  "character": 25
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "branch",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 47,
+                  "character": 27
+                },
+                "end": {
+                  "line": 47,
+                  "character": 52
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "answer",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 48,
+                  "character": 4
+                },
+                "end": {
+                  "line": 48,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "density",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 50,
+                  "character": 4
+                },
+                "end": {
+                  "line": 50,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "flat",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 51,
+                  "character": 4
+                },
+                "end": {
+                  "line": 51,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "joint",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 52,
+                  "character": 4
+                },
+                "end": {
+                  "line": 52,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "count",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 53,
+                  "character": 8
+                },
+                "end": {
+                  "line": 53,
+                  "character": 13
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "masked",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 54,
+                  "character": 8
+                },
+                "end": {
+                  "line": 54,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "selected_count",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 60,
+                  "character": 4
+                },
+                "end": {
+                  "line": 60,
+                  "character": 18
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "selected",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 61,
+                  "character": 4
+                },
+                "end": {
+                  "line": 61,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "spin_axis",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 62,
+                  "character": 4
+                },
+                "end": {
+                  "line": 62,
+                  "character": 13
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "spin_action",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 63,
+                  "character": 4
+                },
+                "end": {
+                  "line": 63,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "positive",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 64,
+                  "character": 4
+                },
+                "end": {
+                  "line": 64,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "negative",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 64,
+                  "character": 14
+                },
+                "end": {
+                  "line": 64,
+                  "character": 22
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "rest",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 65,
+                  "character": 4
+                },
+                "end": {
+                  "line": 65,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "p",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 66,
+                  "character": 4
+                },
+                "end": {
+                  "line": 66,
+                  "character": 5
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "plus",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 67,
+                  "character": 4
+                },
+                "end": {
+                  "line": 67,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "observe"
+          },
+          {
+            "name": "minus",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_observe.py",
+              "range": {
+                "start": {
+                  "line": 68,
+                  "character": 4
+                },
+                "end": {
+                  "line": 68,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "observe"
+          }
+        ]
+      },
+      "rich_review_wave32_20261015_consume.py": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "result": [
+          {
+            "name": "ROOT",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 0
+                },
+                "end": {
+                  "line": 15,
+                  "character": 4
+                }
+              }
+            }
+          },
+          {
+            "name": "P",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 16,
+                  "character": 0
+                },
+                "end": {
+                  "line": 16,
+                  "character": 1
+                }
+              }
+            }
+          },
+          {
+            "name": "sha",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 0
+                },
+                "end": {
+                  "line": 20,
+                  "character": 56
+                }
+              }
+            }
+          },
+          {
+            "name": "path",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 8
+                },
+                "end": {
+                  "line": 19,
+                  "character": 18
+                }
+              }
+            },
+            "containerName": "sha"
+          },
+          {
+            "name": "energy",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 23,
+                  "character": 0
+                },
+                "end": {
+                  "line": 26,
+                  "character": 93
+                }
+              }
+            }
+          },
+          {
+            "name": "h",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 23,
+                  "character": 11
+                },
+                "end": {
+                  "line": 23,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "energy"
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 23,
+                  "character": 19
+                },
+                "end": {
+                  "line": 23,
+                  "character": 29
+                }
+              }
+            },
+            "containerName": "energy"
+          },
+          {
+            "name": "action",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 24,
+                  "character": 4
+                },
+                "end": {
+                  "line": 24,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "energy"
+          },
+          {
+            "name": "mean",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 25,
+                  "character": 4
+                },
+                "end": {
+                  "line": 25,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "energy"
+          },
+          {
+            "name": "angular_checks",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 0
+                },
+                "end": {
+                  "line": 32,
+                  "character": 107
+                }
+              }
+            }
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 19
+                },
+                "end": {
+                  "line": 29,
+                  "character": 29
+                }
+              }
+            },
+            "containerName": "angular_checks"
+          },
+          {
+            "name": "h",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 31
+                },
+                "end": {
+                  "line": 29,
+                  "character": 37
+                }
+              }
+            },
+            "containerName": "angular_checks"
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 39
+                },
+                "end": {
+                  "line": 29,
+                  "character": 49
+                }
+              }
+            },
+            "containerName": "angular_checks"
+          },
+          {
+            "name": "lower",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 30,
+                  "character": 4
+                },
+                "end": {
+                  "line": 30,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "angular_checks"
+          },
+          {
+            "name": "main",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 35,
+                  "character": 0
+                },
+                "end": {
+                  "line": 172,
+                  "character": 95
+                }
+              }
+            }
+          },
+          {
+            "name": "start",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 36,
+                  "character": 4
+                },
+                "end": {
+                  "line": 36,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "config",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 37,
+                  "character": 4
+                },
+                "end": {
+                  "line": 37,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "name",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 8
+                },
+                "end": {
+                  "line": 38,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "expected",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 14
+                },
+                "end": {
+                  "line": 38,
+                  "character": 22
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "interface",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 41,
+                  "character": 4
+                },
+                "end": {
+                  "line": 41,
+                  "character": 13
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "parameters",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 42,
+                  "character": 4
+                },
+                "end": {
+                  "line": 42,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "times",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 43,
+                  "character": 4
+                },
+                "end": {
+                  "line": 43,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "axis",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 44,
+                  "character": 4
+                },
+                "end": {
+                  "line": 44,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "neutral_model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 45,
+                  "character": 4
+                },
+                "end": {
+                  "line": 45,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "one_spin",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 46,
+                  "character": 4
+                },
+                "end": {
+                  "line": 46,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "physical_generator",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 47,
+                  "character": 4
+                },
+                "end": {
+                  "line": 47,
+                  "character": 22
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "eigenvalues",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 48,
+                  "character": 4
+                },
+                "end": {
+                  "line": 48,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "eigenvectors",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 48,
+                  "character": 17
+                },
+                "end": {
+                  "line": 48,
+                  "character": 29
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "coefficients",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 49,
+                  "character": 4
+                },
+                "end": {
+                  "line": 49,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "archive",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 52,
+                  "character": 50
+                },
+                "end": {
+                  "line": 52,
+                  "character": 57
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "neutral",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 53,
+                  "character": 8
+                },
+                "end": {
+                  "line": 53,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "output",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 54,
+                  "character": 4
+                },
+                "end": {
+                  "line": 54,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "saved",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 60,
+                  "character": 4
+                },
+                "end": {
+                  "line": 60,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "hn",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 61,
+                  "character": 4
+                },
+                "end": {
+                  "line": 61,
+                  "character": 6
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "matched_states",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 62,
+                  "character": 4
+                },
+                "end": {
+                  "line": 62,
+                  "character": 18
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "matched_logs",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 62,
+                  "character": 20
+                },
+                "end": {
+                  "line": 62,
+                  "character": 32
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "matched_accuracy",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 62,
+                  "character": 34
+                },
+                "end": {
+                  "line": 62,
+                  "character": 50
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "matched",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 64,
+                  "character": 4
+                },
+                "end": {
+                  "line": 64,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "overlap",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 65,
+                  "character": 4
+                },
+                "end": {
+                  "line": 65,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "trace_distance",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 66,
+                  "character": 4
+                },
+                "end": {
+                  "line": 66,
+                  "character": 18
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "neutral_observations",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 77,
+                  "character": 4
+                },
+                "end": {
+                  "line": 77,
+                  "character": 24
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "matched_observations",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 78,
+                  "character": 4
+                },
+                "end": {
+                  "line": 78,
+                  "character": 24
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "variant",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 79,
+                  "character": 8
+                },
+                "end": {
+                  "line": 79,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "h",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 80,
+                  "character": 8
+                },
+                "end": {
+                  "line": 80,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "currents",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 80,
+                  "character": 11
+                },
+                "end": {
+                  "line": 80,
+                  "character": 19
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "states",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 81,
+                  "character": 8
+                },
+                "end": {
+                  "line": 81,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "accuracy",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 81,
+                  "character": 16
+                },
+                "end": {
+                  "line": 81,
+                  "character": 24
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "observations",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 82,
+                  "character": 8
+                },
+                "end": {
+                  "line": 82,
+                  "character": 20
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "index",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 85,
+                  "character": 12
+                },
+                "end": {
+                  "line": 85,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 85,
+                  "character": 18
+                },
+                "end": {
+                  "line": 85,
+                  "character": 23
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "extra_states",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 8
+                },
+                "end": {
+                  "line": 87,
+                  "character": 20
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "extra_accuracy",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 22
+                },
+                "end": {
+                  "line": 87,
+                  "character": 36
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "extra_observations",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 88,
+                  "character": 8
+                },
+                "end": {
+                  "line": 88,
+                  "character": 26
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "branch",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 96,
+                  "character": 8
+                },
+                "end": {
+                  "line": 96,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "number",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 96,
+                  "character": 15
+                },
+                "end": {
+                  "line": 96,
+                  "character": 21
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 97,
+                  "character": 8
+                },
+                "end": {
+                  "line": 97,
+                  "character": 13
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "info",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 98,
+                  "character": 8
+                },
+                "end": {
+                  "line": 98,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "components",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 102,
+                  "character": 12
+                },
+                "end": {
+                  "line": 102,
+                  "character": 22
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "logs",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 103,
+                  "character": 8
+                },
+                "end": {
+                  "line": 103,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "common_log",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 104,
+                  "character": 8
+                },
+                "end": {
+                  "line": 104,
+                  "character": 18
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "raw_scaled",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 105,
+                  "character": 8
+                },
+                "end": {
+                  "line": 105,
+                  "character": 18
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "scaled_norm",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 106,
+                  "character": 8
+                },
+                "end": {
+                  "line": 106,
+                  "character": 19
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "source",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 107,
+                  "character": 8
+                },
+                "end": {
+                  "line": 107,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "bare_components",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 108,
+                  "character": 8
+                },
+                "end": {
+                  "line": 108,
+                  "character": 23
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "bare",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 109,
+                  "character": 8
+                },
+                "end": {
+                  "line": 109,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "bare_strength",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 110,
+                  "character": 8
+                },
+                "end": {
+                  "line": 110,
+                  "character": 21
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "dressed_log_strength",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 111,
+                  "character": 8
+                },
+                "end": {
+                  "line": 111,
+                  "character": 28
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "lowered",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 112,
+                  "character": 8
+                },
+                "end": {
+                  "line": 112,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "lowering_coefficient",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 113,
+                  "character": 8
+                },
+                "end": {
+                  "line": 113,
+                  "character": 28
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "axis_generator",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 114,
+                  "character": 8
+                },
+                "end": {
+                  "line": 114,
+                  "character": 22
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "contacts",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 133,
+                  "character": 25
+                },
+                "end": {
+                  "line": 133,
+                  "character": 33
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "excess",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 136,
+                  "character": 12
+                },
+                "end": {
+                  "line": 136,
+                  "character": 18
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "value",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 137,
+                  "character": 16
+                },
+                "end": {
+                  "line": 137,
+                  "character": 21
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "baseline",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 137,
+                  "character": 22
+                },
+                "end": {
+                  "line": 137,
+                  "character": 30
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "primitive_keys",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 139,
+                  "character": 16
+                },
+                "end": {
+                  "line": 139,
+                  "character": 30
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "matched_excess",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 145,
+                  "character": 12
+                },
+                "end": {
+                  "line": 145,
+                  "character": 26
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "result",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_consume.py",
+              "range": {
+                "start": {
+                  "line": 147,
+                  "character": 12
+                },
+                "end": {
+                  "line": 147,
+                  "character": 18
+                }
+              }
+            },
+            "containerName": "main"
+          }
+        ]
+      },
+      "rich_review_wave32_20261015_capture.py": {
+        "jsonrpc": "2.0",
+        "id": 6,
+        "result": [
+          {
+            "name": "ROOT",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 10,
+                  "character": 0
+                },
+                "end": {
+                  "line": 10,
+                  "character": 4
+                }
+              }
+            }
+          },
+          {
+            "name": "P",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 11,
+                  "character": 0
+                },
+                "end": {
+                  "line": 11,
+                  "character": 1
+                }
+              }
+            }
+          },
+          {
+            "name": "PYTHON",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 12,
+                  "character": 0
+                },
+                "end": {
+                  "line": 12,
+                  "character": 6
+                }
+              }
+            }
+          },
+          {
+            "name": "digest",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 0
+                },
+                "end": {
+                  "line": 16,
+                  "character": 110
+                }
+              }
+            }
+          },
+          {
+            "name": "path",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 11
+                },
+                "end": {
+                  "line": 15,
+                  "character": 21
+                }
+              }
+            },
+            "containerName": "digest"
+          },
+          {
+            "name": "main",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 0
+                },
+                "end": {
+                  "line": 42,
+                  "character": 42
+                }
+              }
+            }
+          },
+          {
+            "name": "config",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 20,
+                  "character": 4
+                },
+                "end": {
+                  "line": 20,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "selected",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 4
+                },
+                "end": {
+                  "line": 21,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "before",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 24,
+                  "character": 4
+                },
+                "end": {
+                  "line": 24,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "capsule",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 25,
+                  "character": 4
+                },
+                "end": {
+                  "line": 25,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "archive",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 26,
+                  "character": 62
+                },
+                "end": {
+                  "line": 26,
+                  "character": 69
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "path",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 27,
+                  "character": 12
+                },
+                "end": {
+                  "line": 27,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "command",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 4
+                },
+                "end": {
+                  "line": 29,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "environment",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 30,
+                  "character": 4
+                },
+                "end": {
+                  "line": 30,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "receipt",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 31,
+                  "character": 4
+                },
+                "end": {
+                  "line": 31,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "start",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 34,
+                  "character": 4
+                },
+                "end": {
+                  "line": 34,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "stdout",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 35,
+                  "character": 46
+                },
+                "end": {
+                  "line": 35,
+                  "character": 52
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "stderr",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 35,
+                  "character": 90
+                },
+                "end": {
+                  "line": 35,
+                  "character": 96
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "completed",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_capture.py",
+              "range": {
+                "start": {
+                  "line": 36,
+                  "character": 8
+                },
+                "end": {
+                  "line": 36,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "main"
+          }
+        ]
+      },
+      "rich_review_wave32_20261015_diagnose.py": {
+        "jsonrpc": "2.0",
+        "id": 8,
+        "result": [
+          {
+            "name": "ROOT",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 10,
+                  "character": 0
+                },
+                "end": {
+                  "line": 10,
+                  "character": 4
+                }
+              }
+            }
+          },
+          {
+            "name": "P",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 11,
+                  "character": 0
+                },
+                "end": {
+                  "line": 11,
+                  "character": 1
+                }
+              }
+            }
+          },
+          {
+            "name": "PYTHON",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 12,
+                  "character": 0
+                },
+                "end": {
+                  "line": 12,
+                  "character": 6
+                }
+              }
+            }
+          },
+          {
+            "name": "main",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 0
+                },
+                "end": {
+                  "line": 32,
+                  "character": 166
+                }
+              }
+            }
+          },
+          {
+            "name": "selected",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 16,
+                  "character": 4
+                },
+                "end": {
+                  "line": 16,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "hashes",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 17,
+                  "character": 4
+                },
+                "end": {
+                  "line": 17,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "command",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 18,
+                  "character": 4
+                },
+                "end": {
+                  "line": 18,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "completed",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 4
+                },
+                "end": {
+                  "line": 19,
+                  "character": 13
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "checker",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 20,
+                  "character": 4
+                },
+                "end": {
+                  "line": 20,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "rooted",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 4
+                },
+                "end": {
+                  "line": 21,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "structural",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 4
+                },
+                "end": {
+                  "line": 22,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "result",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_diagnose.py",
+              "range": {
+                "start": {
+                  "line": 24,
+                  "character": 4
+                },
+                "end": {
+                  "line": 24,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "main"
+          }
+        ]
+      },
+      "rich_review_wave32_20261015_deliver.py": {
+        "jsonrpc": "2.0",
+        "id": 10,
+        "result": [
+          {
+            "name": "ROOT",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 8,
+                  "character": 0
+                },
+                "end": {
+                  "line": 8,
+                  "character": 4
+                }
+              }
+            }
+          },
+          {
+            "name": "P",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 9,
+                  "character": 0
+                },
+                "end": {
+                  "line": 9,
+                  "character": 1
+                }
+              }
+            }
+          },
+          {
+            "name": "digest",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 12,
+                  "character": 0
+                },
+                "end": {
+                  "line": 13,
+                  "character": 110
+                }
+              }
+            }
+          },
+          {
+            "name": "path",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 12,
+                  "character": 11
+                },
+                "end": {
+                  "line": 12,
+                  "character": 21
+                }
+              }
+            },
+            "containerName": "digest"
+          },
+          {
+            "name": "delta",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 16,
+                  "character": 0
+                },
+                "end": {
+                  "line": 17,
+                  "character": 91
+                }
+              }
+            }
+          },
+          {
+            "name": "final",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 16,
+                  "character": 10
+                },
+                "end": {
+                  "line": 16,
+                  "character": 21
+                }
+              }
+            },
+            "containerName": "delta"
+          },
+          {
+            "name": "initial",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 16,
+                  "character": 23
+                },
+                "end": {
+                  "line": 16,
+                  "character": 36
+                }
+              }
+            },
+            "containerName": "delta"
+          },
+          {
+            "name": "keys",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 16,
+                  "character": 38
+                },
+                "end": {
+                  "line": 16,
+                  "character": 48
+                }
+              }
+            },
+            "containerName": "delta"
+          },
+          {
+            "name": "main",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 20,
+                  "character": 0
+                },
+                "end": {
+                  "line": 141,
+                  "character": 311
+                }
+              }
+            }
+          },
+          {
+            "name": "result",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 4
+                },
+                "end": {
+                  "line": 21,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "receipt",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 4
+                },
+                "end": {
+                  "line": 22,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "axis",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 25,
+                  "character": 4
+                },
+                "end": {
+                  "line": 25,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "branch_table",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 26,
+                  "character": 4
+                },
+                "end": {
+                  "line": 26,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "controls",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 27,
+                  "character": 4
+                },
+                "end": {
+                  "line": 27,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "keys",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 28,
+                  "character": 4
+                },
+                "end": {
+                  "line": 28,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "branch",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 8
+                },
+                "end": {
+                  "line": 29,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "sign",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 15
+                },
+                "end": {
+                  "line": 29,
+                  "character": 19
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "item",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 30,
+                  "character": 8
+                },
+                "end": {
+                  "line": 30,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "full",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 31,
+                  "character": 8
+                },
+                "end": {
+                  "line": 31,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "scalar",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 8
+                },
+                "end": {
+                  "line": 32,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "initial",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 33,
+                  "character": 8
+                },
+                "end": {
+                  "line": 33,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "final",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 33,
+                  "character": 16
+                },
+                "end": {
+                  "line": 33,
+                  "character": 21
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "excess0",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 34,
+                  "character": 8
+                },
+                "end": {
+                  "line": 34,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "excess",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 34,
+                  "character": 16
+                },
+                "end": {
+                  "line": 34,
+                  "character": 22
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "detector",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 35,
+                  "character": 8
+                },
+                "end": {
+                  "line": 35,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "receiver",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 36,
+                  "character": 8
+                },
+                "end": {
+                  "line": 36,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "count",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 37,
+                  "character": 8
+                },
+                "end": {
+                  "line": 37,
+                  "character": 13
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "neutral_final",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 8
+                },
+                "end": {
+                  "line": 38,
+                  "character": 21
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "trajectories",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 75,
+                  "character": 4
+                },
+                "end": {
+                  "line": 75,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "samples",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 76,
+                  "character": 4
+                },
+                "end": {
+                  "line": 76,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "charged_samples",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 77,
+                  "character": 4
+                },
+                "end": {
+                  "line": 77,
+                  "character": 19
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "numeric",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 78,
+                  "character": 4
+                },
+                "end": {
+                  "line": 78,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "language",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 88,
+                  "character": 4
+                },
+                "end": {
+                  "line": 88,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "joint_channels",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 89,
+                  "character": 4
+                },
+                "end": {
+                  "line": 89,
+                  "character": 18
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "channels",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 92,
+                  "character": 8
+                },
+                "end": {
+                  "line": 92,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "name",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 93,
+                  "character": 12
+                },
+                "end": {
+                  "line": 93,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "value",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 94,
+                  "character": 12
+                },
+                "end": {
+                  "line": 94,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "probability",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 95,
+                  "character": 12
+                },
+                "end": {
+                  "line": 95,
+                  "character": 23
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "raw",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 96,
+                  "character": 12
+                },
+                "end": {
+                  "line": 96,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "synthesis",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 105,
+                  "character": 4
+                },
+                "end": {
+                  "line": 105,
+                  "character": 13
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "compact",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 119,
+                  "character": 4
+                },
+                "end": {
+                  "line": 119,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "selected",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 130,
+                  "character": 4
+                },
+                "end": {
+                  "line": 130,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "manifest",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 131,
+                  "character": 4
+                },
+                "end": {
+                  "line": 131,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "manifest_path",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 132,
+                  "character": 4
+                },
+                "end": {
+                  "line": 132,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "capsule",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 134,
+                  "character": 4
+                },
+                "end": {
+                  "line": 134,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "archive",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 135,
+                  "character": 62
+                },
+                "end": {
+                  "line": 135,
+                  "character": 69
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "path",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 136,
+                  "character": 12
+                },
+                "end": {
+                  "line": 136,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "delivery",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave32_20261015_deliver.py",
+              "range": {
+                "start": {
+                  "line": 138,
+                  "character": 4
+                },
+                "end": {
+                  "line": 138,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "main"
+          }
+        ]
+      }
+    },
+    "diagnostics": {
+      "rich_review_wave32_20261015_observe.py": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": {
+          "kind": "full",
+          "resultId": "3",
+          "items": [
+            {
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 47
+                },
+                "end": {
+                  "line": 19,
+                  "character": 51
+                }
+              },
+              "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+              "severity": 1,
+              "code": "reportAttributeAccessIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 83
+                },
+                "end": {
+                  "line": 19,
+                  "character": 87
+                }
+              },
+              "message": "Cannot access attribute \"imag\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+              "severity": 1,
+              "code": "reportAttributeAccessIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 20,
+                  "character": 68
+                },
+                "end": {
+                  "line": 20,
+                  "character": 72
+                }
+              },
+              "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+              "severity": 1,
+              "code": "reportAttributeAccessIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+              }
+            }
+          ]
+        }
+      },
+      "rich_review_wave32_20261015_consume.py": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "result": {
+          "kind": "full",
+          "resultId": "3",
+          "items": [
+            {
+              "range": {
+                "start": {
+                  "line": 47,
+                  "character": 37
+                },
+                "end": {
+                  "line": 47,
+                  "character": 48
+                }
+              },
+              "message": "Argument of type \"int\" cannot be assigned to parameter \"key\" of type \"str\" in function \"__getitem__\"\n\u00a0\u00a0\"int\" is not assignable to \"str\"",
+              "severity": 1,
+              "code": "reportArgumentType",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 47,
+                  "character": 37
+                },
+                "end": {
+                  "line": 47,
+                  "character": 55
+                }
+              },
+              "message": "No overloads for \"__getitem__\" match the provided arguments",
+              "severity": 1,
+              "code": "reportCallIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+              },
+              "relatedInformation": [
+                {
+                  "location": {
+                    "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+                    "range": {
+                      "start": {
+                        "line": 1252,
+                        "character": 8
+                      },
+                      "end": {
+                        "line": 1252,
+                        "character": 19
+                      }
+                    }
+                  },
+                  "message": "Overload 2 is the closest match"
+                }
+              ]
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 47,
+                  "character": 37
+                },
+                "end": {
+                  "line": 47,
+                  "character": 55
+                }
+              },
+              "message": "Argument of type \"tuple[slice[None, Literal[2], None], slice[None, Literal[2], None]]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, Literal[2], None], slice[None, Literal[2], None]]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+              "severity": 1,
+              "code": "reportArgumentType",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 47,
+                  "character": 37
+                },
+                "end": {
+                  "line": 47,
+                  "character": 48
+                }
+              },
+              "message": "\"__getitem__\" method not defined on type \"float\"",
+              "severity": 1,
+              "code": "reportIndexIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 57,
+                  "character": 66
+                },
+                "end": {
+                  "line": 57,
+                  "character": 70
+                }
+              },
+              "message": "Cannot access attribute \"real\" for class \"ndarray[_AnyShape, dtype[Any]]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"ndarray[_AnyShape, dtype[Any]]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+              "severity": 1,
+              "code": "reportAttributeAccessIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 57,
+                  "character": 112
+                },
+                "end": {
+                  "line": 57,
+                  "character": 116
+                }
+              },
+              "message": "Cannot access attribute \"imag\" for class \"ndarray[_AnyShape, dtype[Any]]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"ndarray[_AnyShape, dtype[Any]]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+              "severity": 1,
+              "code": "reportAttributeAccessIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 118,
+                  "character": 106
+                },
+                "end": {
+                  "line": 118,
+                  "character": 110
+                }
+              },
+              "message": "Cannot access attribute \"imag\" for class \"NDArray[Unknown]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown]]\" is not assignable to \"None\"",
+              "severity": 1,
+              "code": "reportAttributeAccessIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 117,
+                  "character": 106
+                },
+                "end": {
+                  "line": 117,
+                  "character": 110
+                }
+              },
+              "message": "Cannot access attribute \"real\" for class \"NDArray[Unknown]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown]]\" is not assignable to \"None\"",
+              "severity": 1,
+              "code": "reportAttributeAccessIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 125,
+                  "character": 71
+                },
+                "end": {
+                  "line": 125,
+                  "character": 92
+                }
+              },
+              "message": "Operator \"@\" not supported for types \"int\" and \"float\"",
+              "severity": 1,
+              "code": "reportOperatorIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportOperatorIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 126,
+                  "character": 68
+                },
+                "end": {
+                  "line": 126,
+                  "character": 87
+                }
+              },
+              "message": "Operator \"@\" not supported for types \"int\" and \"int\"",
+              "severity": 1,
+              "code": "reportOperatorIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportOperatorIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 145,
+                  "character": 66
+                },
+                "end": {
+                  "line": 145,
+                  "character": 80
+                }
+              },
+              "message": "\"primitive_keys\" is possibly unbound",
+              "severity": 1,
+              "code": "reportPossiblyUnboundVariable",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportPossiblyUnboundVariable"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 145,
+                  "character": 112
+                },
+                "end": {
+                  "line": 145,
+                  "character": 126
+                }
+              },
+              "message": "\"primitive_keys\" is possibly unbound",
+              "severity": 1,
+              "code": "reportPossiblyUnboundVariable",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportPossiblyUnboundVariable"
+              }
+            }
+          ]
+        }
+      },
+      "rich_review_wave32_20261015_capture.py": {
+        "jsonrpc": "2.0",
+        "id": 7,
+        "result": {
+          "kind": "full",
+          "resultId": "3",
+          "items": [
+            {
+              "range": {
+                "start": {
+                  "line": 39,
+                  "character": 4
+                },
+                "end": {
+                  "line": 39,
+                  "character": 22
+                }
+              },
+              "message": "Argument of type \"list[dict[Unknown, Unknown]]\" cannot be assigned to parameter \"value\" of type \"list[str] | str | dict[Any, dict[Unknown, Unknown]] | float | dict[str, str]\" in function \"__setitem__\"\n\u00a0\u00a0Type \"list[dict[Unknown, Unknown]]\" is not assignable to type \"list[str] | str | dict[Any, dict[Unknown, Unknown]] | float | dict[str, str]\"\n\u00a0\u00a0\u00a0\u00a0\"list[dict[Unknown, Unknown]]\" is not assignable to \"list[str]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Type parameter \"_T@list\" is invariant, but \"dict[Unknown, Unknown]\" is not the same as \"str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Consider switching from \"list\" to \"Sequence\" which is covariant\n\u00a0\u00a0\u00a0\u00a0\"list[dict[Unknown, Unknown]]\" is not assignable to \"str\"\n\u00a0\u00a0\u00a0\u00a0\"list[dict[Unknown, Unknown]]\" is not assignable to \"dict[Any, dict[Unknown, Unknown]]\"\n\u00a0\u00a0\u00a0\u00a0\"list[dict[Unknown, Unknown]]\" is not assignable to \"float\"\n\u00a0\u00a0\u00a0\u00a0\"list[dict[Unknown, Unknown]]\" is not assignable to \"dict[str, str]\"",
+              "severity": 1,
+              "code": "reportArgumentType",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+              }
+            }
+          ]
+        }
+      },
+      "rich_review_wave32_20261015_diagnose.py": {
+        "jsonrpc": "2.0",
+        "id": 9,
+        "result": {
+          "kind": "full",
+          "resultId": "3",
+          "items": []
+        }
+      },
+      "rich_review_wave32_20261015_deliver.py": {
+        "jsonrpc": "2.0",
+        "id": 11,
+        "result": {
+          "kind": "full",
+          "resultId": "3",
+          "items": []
+        }
+      }
+    },
+    "server_exit": 0,
+    "native_device": "unmounted; actual direct protocol"
+  },
+  "positive_AST": {
+    "rich_review_wave32_20261015_observe.py": [
+      {
+        "name": "expval",
+        "line": 8
+      },
+      {
+        "name": "radial_readout",
+        "line": 12
+      },
+      {
+        "name": "conditional_readout",
+        "line": 31
+      },
+      {
+        "name": "observe",
+        "line": 47
+      }
+    ],
+    "rich_review_wave32_20261015_consume.py": [
+      {
+        "name": "sha",
+        "line": 20
+      },
+      {
+        "name": "energy",
+        "line": 24
+      },
+      {
+        "name": "angular_checks",
+        "line": 30
+      },
+      {
+        "name": "main",
+        "line": 36
+      }
+    ],
+    "rich_review_wave32_20261015_capture.py": [
+      {
+        "name": "digest",
+        "line": 16
+      },
+      {
+        "name": "main",
+        "line": 20
+      }
+    ],
+    "rich_review_wave32_20261015_diagnose.py": [
+      {
+        "name": "main",
+        "line": 16
+      }
+    ],
+    "rich_review_wave32_20261015_deliver.py": [
+      {
+        "name": "digest",
+        "line": 13
+      },
+      {
+        "name": "delta",
+        "line": 17
+      },
+      {
+        "name": "main",
+        "line": 21
+      }
+    ]
+  },
+  "sources_unchanged": true,
+  "scope": "Explicit real owned sources; no ancestor checker/producer CLI replay, no native-device claim. xd LSP unmounted; installed rooted direct Pyright JSON-RPC exercised."
+}

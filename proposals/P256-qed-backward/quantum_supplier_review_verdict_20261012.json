@@ -1,0 +1,71 @@
+{
+  "verdict": "SCOPED_PASS_ANALYTIC_SAME_FSTAR_PARAMETERIZED_FULL_QUANTUM_VARIATIONAL_SUPPLIER_WITH_BASIS_RECIPE_CLARIFICATION",
+  "target": "QuantumMinimumSea actual3",
+  "target_source_sha256": "84a265c05f88355b449cea6339c8d72056397c0a23aae8925c805e82ec9ee344",
+  "target_proof_sha256": "5b0c5f3fafc05370c20d58314f3e00f9dfcd61e0dbf9825acadf5cebfe57365f",
+  "review_contract_sha256": "592be3f27f57aabf801cdfe42d3f6ea7178f35c65d5ff1737adaa94d089fcb2d",
+  "independent_proof": "quantum_supplier_review_proof_20261012.json",
+  "review_runtime": {
+    "epoch": "quantum_supplier_review_actual2_20261012",
+    "returncode": 0,
+    "natural_exit": true,
+    "timeout": false,
+    "inputs_unchanged": true,
+    "elapsed_seconds": 1097.204256808007,
+    "source_sha256": "683bef795b835d78fc129a179f55013398affdf5502d3de4e6cdacb5bf24c6e2",
+    "preexecution_sha256": "4d7a6549d6e795a667a825297937b1afcb144cb8900c097ee2ebf364f8e3f675",
+    "executed_sha256": "326a94f8ebefe7b24cf2bf992c970d9d9f47df381abd018097627a77f16c4f52",
+    "receipt": "quantum_supplier_review_actual2_20261012_receipt.json",
+    "delivery": "quantum_supplier_review_actual2_20261012_delivery.json",
+    "preserved_failed_review_epoch": "quantum_supplier_review_actual1_20261012",
+    "review_correction": "quantum_supplier_review_actual1_correction_20261012.json",
+    "failure_not_target_error": true
+  },
+  "checked_scopes": [
+    "Same literal fstar and quarter trace normalization; coercivity;128-strong convexity; boundary derivative; unique interior analytic norm minimum",
+    "Exact domain [1/128,2]^4 INTERSECT norm2<2; rectangle-only Gram16 falsified by Gram32 corner",
+    "Generic full-complex native Clifford spectrum; full60 coefficients/rank45 normals; one connected globalZ4",
+    "FullSU4 Haar measure; triangular determinant; actual source density radial ratio; local normalizer cancellation",
+    "Native all64 N4 positive bands; exact AP Fourier factorization; full global2V exterior normalization; fluctuating local occupation",
+    "Literal inherited neutral U1charge0 versus active1+aux63 charge1 and fullRef; both Gauss constraints",
+    "NEW DFS primitive projected-dual deck; correct character/cell/Bloch units; original physical quotient L2 packet",
+    "One sharedHEHC64 with species crosses; exact E0 divergence; packet E/E2 jets",
+    "NEW centre inverse reconstruction; fullCAR16/entangled wedge70 ordered mixed first-second jets with all distinct-column crosses",
+    "Recomputed compact-domain inverse/Jacobian and integrated covariant bounds; boundary H2; conditional finiteN D(H)",
+    "All fullH expectation prices and exact correction exponents; charged hopping zero expectations but nonzero action; trial not stationary"
+  ],
+  "load_bearing_target_errors": [],
+  "supporting_rationale_findings": [
+    {
+      "id": "NORMAL_BASIS_RECIPE_DIFFERENCE",
+      "target": "source lines45-48 versus proof PROOF[4]/interface construction[0]",
+      "trigger": "Actual source orthonormalizes L.T.nullspace; prose specifies lexicographic independent columns of P.",
+      "consequence": "Can select a different normal-cube trial, but both fixed complete orthonormal complements satisfy the same proof and bounds. This does not falsify the target variational upper.",
+      "narrow_correction": "Parent clarification should identify the source's deterministic nullspace GramSchmidt rule, or allow any fixed orthonormal normal basis; frozen originals remain untouched."
+    }
+  ],
+  "conditional_result": {
+    "upper": "E/V<=Lambda*(f_infinity(xstar)+2^16/N+epsilon_quantum)",
+    "epsilon_quantum": "2^-3304+2^-4820+2*2^-4840+2^-8173 < 2^-3000",
+    "N_scope": "every even N>=4; at N>=2^257 total upper error<2^-240",
+    "realization_condition": "Inherited unchanged finite-lattice smooth-core/selfadjoint Gauss/sewn-cover/Bloch physical realization",
+    "analytic_xstar_not_executed": true,
+    "source_at_xstar_is_mathematically_specified": true,
+    "executed_new_rational_sample": ["1/8", "1/3", "2/3", "1"]
+  },
+  "not_admitted": ["computed xstar", "computed physical ground", "field stationarity", "stationary quantum trial", "ground identification", "phase", "sharp IR atom", "commoncone", "Compton", "source/law/coupling adoption", "campaign closure"],
+  "language": {
+    "root": "/home/administrator/substrate-222",
+    "marker": "pyproject.toml",
+    "server": "pyright-langserver1.1.414 standalone JSON-RPC",
+    "document_symbols": 278,
+    "definition_resolved": true,
+    "AST_positive": "xd://ast_grep on actual native_clifford/centre_geometry functions",
+    "diagnostics_skipped_by_assignment": true,
+    "OMP_LSP_device_unavailable_reported": true
+  },
+  "parent_checks": ["Selected-scope final diagnostics for quantum_supplier_review_consumer_20261012.py and quantum_supplier_review_execute_20261012.py", "Integrate the same-fstar quantum upper with sibling rectangle/probability reviews under the pinned parent contract"],
+  "original_targets_modified_or_rerun": false,
+  "scientific_admission": false,
+  "campaign_complete": false
+}

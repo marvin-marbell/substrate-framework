@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spinor_gauss_20261014_calculate.py", line 72, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spinor_gauss_20261014_calculate.py", line 44, in run
+    s=Sector(params,1,all_e);all_e=s.all_e
+      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spinor_gauss_20261014_model.py", line 60, in __init__
+    h=sparse.kron(sparse.diags(diag),sparse.eye(4),format='csr',dtype=complex)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: kron() got an unexpected keyword argument 'dtype'

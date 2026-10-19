@@ -1,0 +1,692 @@
+{
+  "governing_plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "governing_revision": "a0de34c80c9dae7a8c5ddddcbeb6c0dc5b3fe69213a72993e47e5f7379fdd5dc",
+  "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "input": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_nonuniform_fermionic_source_unitary_resumed_actual_receipt.json",
+    "sha256": "da1998065d6622c4ac780409c29ae10711e01b5c5143edf620557fe15234e9e6"
+  },
+  "derivation": {
+    "exact_counterexample": "Let v be any unit eigenvector of Gamma0. X=(vv*-I4/4)/sqrt(3/2) is traceless Hermitian, commutes with Phi0, and has Cartesian norm sqrt(2TrX^2)=1. Set only deltaPhi0(x)=l_x X, l=(delta_x0-1/64)/sqrt(63/64). This is a unit global fast normal direction, has zero site mean and zero orbit pairing. A one-particle vector supported at site0 has |<v,dh v>|=|onsite|sqrt(63/64)sqrt(3/8); all one/two-link hops leave site0 and contribute zero to this Rayleigh value. The rational lower sqrt(63/64)>=63/64 and sqrt(3/8)>=3/5 already contradicts the stored full-normal D1 for all three profiles. No root rounding is needed for the witness.",
+    "global_field_bound": "Cartesian norm uses Tr(Ta Tb)=delta_ab/2, hence ||sum xa Ta||op<=||x||/sqrt2. Native block-row Schur bound counts forward AND reverse hops. For arbitrary global Phi tangent, Bphi=(|onsite|+2sum_path |c|1)/sqrt2=8*vp. The 8 is sqrt(V), undoing the single-q Fourier 1/8 normalization. For arbitrary link C tangent the generator norm is <=||C||/sqrt2, not the single signed-Clifford generator norm 1/sqrt8. At the mean Bc=16*vc. On the actual support, hopnorm<=hop_mean+|c|1*F1*R/sqrt2, so Bc=16*vc+sum L|c|1*F1*R.",
+    "adapted_composition": "Admitted actual polar-Q envelopes imply F1<=1+9/8+512R and F2<=1025. Thus Dh<=Bphi F1+Bc. Ordered exponential insertions give h_Phi,C<=sum L|c|1 and h_C,C<=sum L^2(hop_mean+|c|1 F1R/sqrt2). The complete second derivative is bounded by Bphi F2+2(sum L|c|1)F1+Bcc. Both endpoints, all ordered one/two-link derivatives and noncommuting matrices retained. These bounds are also uniform in added scalar Peierls phases of modulus one, but do not define a theta-following occupied frame.",
+    "Kato_and_gradient_boundary": "At supported distance>=gap/2-2D1R, use b1=8D1/distance, b2=32D1^2/distance^2+8D2/distance. These are directional one-particle bounds. For a fixed-particle Fock sector, a safe full ambient gradient envelope includes ceil(sqrt5760)=76 times sum Nspecies*b1. Sum Nspecies*b2 is only directional second-frame data; Hessian/kinetic traces must also retain dimension and first-square terms.",
+    "not_certified": "Corrected h/Kato envelopes alone do NOT reprice or certify the whole source. Old Rayleigh/time/probability prices are historical conditional arithmetic with a refuted literal all-normal derivative premise. Global chart/tube/root, other supplier inequalities, source kinetic/Haar propagation, U1Pi/Coulomb and physical poles remain separate."
+  },
+  "numerical_display_g": [
+    0.28917434559291344,
+    0.10475219290309079,
+    0.10475219290309079,
+    0.10475219290309079
+  ],
+  "witness": {
+    "normal_reconstruction_error": 1.1102230246251565e-16,
+    "other_components": 0.0,
+    "global_tangent_norm": 0.9999999999999996,
+    "coefficient_norm": 0.9999999999999998,
+    "orbit_pairing": 0.0
+  },
+  "profiles": [
+    {
+      "role": "neutral heavy -Lambda",
+      "load": 1,
+      "old_stored_claimed_full_normal_D1": 10.558378707476827,
+      "exact_rational_Rayleigh_lower": "4347/320",
+      "observed_Rayleigh_lower": 14.119913796656116,
+      "observed_native_derivative_opnorm": 14.651524137966508,
+      "observed_divided_old_claim": 1.3876679880397882,
+      "repaired_global_D1": {
+        "lower": "24342643565421020627556292097882018242406015285549355292674117642728971851221562665196864454593556291/136703170298938245273281389194851335334573089430825777276610662900622062449960995201469573563940864",
+        "upper": "48685287130842041255112584195764036484812030571098710585348235285457943702443125330393728909187112583/273406340597876490546562778389702670669146178861651554553221325801244124899921990402939147127881728",
+        "lower_decimal": "178.0693418608309085642376027797496947154",
+        "upper_decimal": "178.0693418608309085642376027797496947154"
+      },
+      "repaired_global_D2": {
+        "lower": "10076188337108132358887679823814641106206641115831527998556308487160347472521822423728948059652354285/133499189745056880149688856635597007162669032647290798121690100488888732861290034376435130433536",
+        "upper": "40304753348432529435550719295258564424826564463326111994225233948641389890087289694915792238609417141/533996758980227520598755426542388028650676130589163192486760401955554931445160137505740521734144",
+        "lower_decimal": "75477.52429322311154681635465001670765706",
+        "upper_decimal": "75477.52429322311154681635465001670765706"
+      },
+      "supported_distance_to_zero_lower": {
+        "lower": "37087637099969268106485510216581080155980381581947710806783063883132091028210648754784816526599553621/4374501449566023848745004454235242730706338861786424872851541212819905998398751846447026354046107648",
+        "upper": "74175274199938536212971020433162160311960763163895421613566127766264182056421297509569633053199107243/8749002899132047697490008908470485461412677723572849745703082425639811996797503692894052708092215296",
+        "lower_decimal": "8.478140315543518407206128557751479857196",
+        "upper_decimal": "8.478140315543518407206128557751479857196"
+      },
+      "directional_Kato_first": {
+        "lower": "22969795412130267202849267148078593170479101731551095456737337805049997527075899274941740992861256969/136703170298938245273281389194851335334573089430825777276610662900622062449960995201469573563940864",
+        "upper": "11484897706065133601424633574039296585239550865775547728368668902524998763537949637470870496430628485/68351585149469122636640694597425667667286544715412888638305331450311031224980497600734786781970432",
+        "lower_decimal": "168.026793832949391704171579763590654519",
+        "upper_decimal": "168.026793832949391704171579763590654519"
+      },
+      "directional_Kato_second": {
+        "lower": "45569858825608998985877917193505828874611313333315447755771539731061753855709218475108564057242587971/533996758980227520598755426542388028650676130589163192486760401955554931445160137505740521734144",
+        "upper": "91139717651217997971755834387011657749222626666630895511543079462123507711418436950217128114485175949/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+        "lower_decimal": "85337.33222020609609984375779894778969535",
+        "upper_decimal": "85337.33222020609609984375779894778969535"
+      },
+      "fixed_bulk_particle_count": 128
+    },
+    {
+      "role": "active filled charged",
+      "load": 1,
+      "old_stored_claimed_full_normal_D1": 19.655228018319242,
+      "exact_rational_Rayleigh_lower": "3213/160",
+      "observed_Rayleigh_lower": 21.119113750936606,
+      "observed_native_derivative_opnorm": 22.504147074775133,
+      "observed_divided_old_claim": 1.1449445945781254,
+      "repaired_global_D1": {
+        "lower": "90505092401361190739248688300390158091969502476787692581741358280311552245916619821550364532302465271/273406340597876490546562778389702670669146178861651554553221325801244124899921990402939147127881728",
+        "upper": "90505092401361190739248688300390158091969502476787692581741358280311552245916619821550364532302465273/273406340597876490546562778389702670669146178861651554553221325801244124899921990402939147127881728",
+        "lower_decimal": "331.0277742770978419191657485123956184943",
+        "upper_decimal": "331.0277742770978419191657485123956184943"
+      },
+      "repaired_global_D2": {
+        "lower": "73038530432712445258305973070219980068523820615175278223815059393480879185471675323157034191109300491/533996758980227520598755426542388028650676130589163192486760401955554931445160137505740521734144",
+        "upper": "73038530432712445258305973070219980068523820615175278223815059393480879185471675323157034191109300493/533996758980227520598755426542388028650676130589163192486760401955554931445160137505740521734144",
+        "lower_decimal": "136777.1043633185566523102596226901940213",
+        "upper_decimal": "136777.1043633185566523102596226901940213"
+      },
+      "supported_distance_to_zero_lower": {
+        "lower": "111230550687239798686074506972147554295221548337084678526196238869095817275406982271597525028104619147/8749002899132047697490008908470485461412677723572849745703082425639811996797503692894052708092215296",
+        "upper": "27807637671809949671518626743036888573805387084271169631549059717273954318851745567899381257026154787/2187250724783011924372502227117621365353169430893212436425770606409952999199375923223513177023053824",
+        "lower_decimal": "12.71351169608990762086539534667512330116",
+        "upper_decimal": "12.71351169608990762086539534667512330116"
+      },
+      "directional_Kato_first": {
+        "lower": "113900982909949452996540146697720766020288504933839181455411744869632405465936057030561432395697793947/546812681195752981093125556779405341338292357723303109106442651602488249799843980805878294255763456",
+        "upper": "3559405715935920406141879584303773938134015779182474420481617027176012670810501782205044762365556061/17087896287367280659160173649356416916821636178853222159576332862577757806245124400183696695492608",
+        "lower_decimal": "208.2998197131681778362540832225091725503",
+        "upper_decimal": "208.2998197131681778362540832225091725503"
+      },
+      "directional_Kato_second": {
+        "lower": "115088738648603961194981509538389508252868843151841635584941403441809993931884079040268408403576780821/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+        "upper": "28772184662150990298745377384597377063217210787960408896235350860452498482971019760067102100894195207/266998379490113760299377713271194014325338065294581596243380200977777465722580068752870260867072",
+        "lower_decimal": "107761.6452845038625208637863915924163376",
+        "upper_decimal": "107761.6452845038625208637863915924163376"
+      },
+      "fixed_bulk_particle_count": 129
+    },
+    {
+      "role": "auxiliary filled charged",
+      "load": 63,
+      "old_stored_claimed_full_normal_D1": 19.81440472915739,
+      "exact_rational_Rayleigh_lower": "1701/80",
+      "observed_Rayleigh_lower": 22.212738743792926,
+      "observed_native_derivative_opnorm": 23.53688148541896,
+      "observed_divided_old_claim": 1.1878672010158273,
+      "repaired_global_D1": {
+        "lower": "91244739919359224334865813257694811434366017978656389591643565386791720667818933948633132854665598743/273406340597876490546562778389702670669146178861651554553221325801244124899921990402939147127881728",
+        "upper": "91244739919359224334865813257694811434366017978656389591643565386791720667818933948633132854665598745/273406340597876490546562778389702670669146178861651554553221325801244124899921990402939147127881728",
+        "lower_decimal": "333.7330791957057841674013007205162763224",
+        "upper_decimal": "333.7330791957057841674013007205162763224"
+      },
+      "repaired_global_D2": {
+        "lower": "36867594509233771186702976464463203760867207063579099913722260817412239561699711762318162181896121327/266998379490113760299377713271194014325338065294581596243380200977777465722580068752870260867072",
+        "upper": "2304224656827110699168936029028950235054200441473693744607641301088264972606231985144885136368507583/16687398718132110018711107079449625895333629080911349765211262561111091607661254297054391304192",
+        "lower_decimal": "138081.7163746077347748685116776607625747",
+        "upper_decimal": "138081.7163746077347748685116776607625747"
+      },
+      "supported_distance_to_zero_lower": {
+        "lower": "56163527292688421582845070502841091633068923140679366231254747114787584946733028764868147903807398127/4374501449566023848745004454235242730706338861786424872851541212819905998398751846447026354046107648",
+        "upper": "112327054585376843165690141005682183266137846281358732462509494229575169893466057529736295807614796255/8749002899132047697490008908470485461412677723572849745703082425639811996797503692894052708092215296",
+        "lower_decimal": "12.83884070909615820572069512594391371513",
+        "upper_decimal": "12.83884070909615820572069512594391371513"
+      },
+      "directional_Kato_first": {
+        "lower": "113710877156955102731893690888925790043620327045856758648881508952467944181582956707495616007715165601/546812681195752981093125556779405341338292357723303109106442651602488249799843980805878294255763456",
+        "upper": "113710877156955102731893690888925790043620327045856758648881508952467944181582956707495616007715165605/546812681195752981093125556779405341338292357723303109106442651602488249799843980805878294255763456",
+        "lower_decimal": "207.9521581472757539246156665452603444025",
+        "upper_decimal": "207.9521581472757539246156665452603444025"
+      },
+      "directional_Kato_second": {
+        "lower": "1796599395145086323537888325908953260910511074943692581729303010291674909942401610668827747273994737/16687398718132110018711107079449625895333629080911349765211262561111091607661254297054391304192",
+        "upper": "114982361289285524706424852858173008698272708796396325230675392658667194236313703082804975825535663175/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+        "lower_decimal": "107662.0404109447185418849924684328143142",
+        "upper_decimal": "107662.0404109447185418849924684328143142"
+      },
+      "fixed_bulk_particle_count": 8064
+    }
+  ],
+  "safe_full_ambient_Fock_gradient_price": {
+    "lower": "136756494395153216314801493176347930902110899779475082576731752658876983165480178213685513530109378153/1042962419883256876169444192465601618458351817556959360325703910069443225478828393565899456512",
+    "upper": "136756494395153216314801493176347930902110899779475082576731752658876983165480178213685513530109378161/1042962419883256876169444192465601618458351817556959360325703910069443225478828393565899456512",
+    "lower_decimal": "131123127.5336468401512604720214481255267",
+    "upper_decimal": "131123127.5336468401512604720214481255267"
+  },
+  "directional_Fock_second_data_NOT_Hessian_norm": {
+    "lower": "116422130442117222408099044797399521594164025966071324740735024611161810611072791477729704851054088749/130370302485407109521180524058200202307293977194619920040712988758680403184853549195737432064",
+    "upper": "116422130442117222408099044797399521594164025966071324740735024611161810611072791477729704851054088757/130370302485407109521180524058200202307293977194619920040712988758680403184853549195737432064",
+    "lower_decimal": "893011124.6397455888877320087082229534181",
+    "upper_decimal": "893011124.6397455888877320087082229534181"
+  },
+  "verdict": "Stored literal all-normal D1 premise REFUTED. Repaired support-wide h jet envelope derived conditionally; no revised whole-source admission yet.",
+  "source_at_execution": {
+    "induced_phi_nonuniform_field_car.py": {
+      "sha256": "55661707f096422947a816924664de94e8da1d092e278164e4e9be57a26e775c",
+      "unchanged": true
+    },
+    "induced_phi_uniform_selfconsistent_full_normal_quantum.py": {
+      "sha256": "f63c1590af4fa9922757615b1bfccb788f430760d401d7c66372e8656163251c",
+      "unchanged": true
+    },
+    "induced_phi_uniform_relative_colour_quantum.py": {
+      "sha256": "8f50cdc7ab6f5860fde58a0d0607ced4afd6549c6b4207d916b1b14839faf01b",
+      "unchanged": true
+    },
+    "induced_phi_nonuniform_gauss_quantum.py": {
+      "sha256": "2bd70176910108fd695c5490b31ce490da70c860a9a43693758479ec2ccc2c06",
+      "unchanged": true
+    },
+    "induced_phi_uniform_full_normal_quantum.py": {
+      "sha256": "2832ab998db0bcef0f21fc984a40d63f4e953d36674a63058563a9612260db80",
+      "unchanged": true
+    },
+    "induced_phi_quantum_oscillator_backreaction.py": {
+      "sha256": "404dfbee04a0f8d0ba449c396881675c5763464f0aa81061b69bffc2e6b3ec4c",
+      "unchanged": true
+    },
+    "induced_phi_static_backreaction_bound.py": {
+      "sha256": "cd279069774aa40e78d73b807290ab42095870607321ffc75a8e8b4a47a58b45",
+      "unchanged": true
+    },
+    "induced_phi_pauli_band_volume.py": {
+      "sha256": "00e0c4aa7cbc070449dcaa5b9d8d3b8e1a4f924d44ae41721e59a2e55c472ff4",
+      "unchanged": true
+    },
+    "induced_phi_pauli_band_response_control.py": {
+      "sha256": "bfb1bdbb72d06c54369b5678e62cbd3f7dd2e71effc9a6d6e5a005ae4a22e768",
+      "unchanged": true
+    },
+    "induced_phi_pauli_gaussian_ward.py": {
+      "sha256": "1b4bde56877c9da48ee615bb2ef4ed1fe89da1d1a6097f30cddc9b6840f6a560",
+      "unchanged": true
+    },
+    "induced_reference_electric_graph.py": {
+      "sha256": "a6395a15a6ae26cc2c0afa2a5e39e1a004dc695e792b0774e78ccb3e20db7a3f",
+      "unchanged": true
+    },
+    "induced_reference_field_following.py": {
+      "sha256": "a00017b203dfb24693302d25f017a1d64f48aca3fcbc4009417eecb0c897ceac",
+      "unchanged": true
+    },
+    "induced_phi_em_gaussian_variational.py": {
+      "sha256": "986c34d93435be153d1b23600f4ffe01c600655a06da0bf8ab0943d6b10d7ef8",
+      "unchanged": true
+    },
+    "induced_phi_backreaction.py": {
+      "sha256": "7ef885a77455824ca1e0e296ffaa0c4a0c16a5c8343a59bd5b1470a43cad8148",
+      "unchanged": true
+    },
+    "rotation_band.py": {
+      "sha256": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+      "unchanged": true
+    },
+    "sea_selection.py": {
+      "sha256": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+      "unchanged": true
+    },
+    "soft_budget.py": {
+      "sha256": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286",
+      "unchanged": true
+    },
+    "local_orbital_stability.py": {
+      "sha256": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+      "unchanged": true
+    },
+    "pauli_compton.py": {
+      "sha256": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+      "unchanged": true
+    },
+    "bosonic_statistics.py": {
+      "sha256": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+      "unchanged": true
+    },
+    "lattice_compton.py": {
+      "sha256": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+      "unchanged": true
+    },
+    "compton.py": {
+      "sha256": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+      "unchanged": true
+    },
+    "induced_photon_response.py": {
+      "sha256": "4906bf0bb8c3a80fd20d2b93388878e9975af54bffd7f114ee027d5c3c00e64f",
+      "unchanged": true
+    },
+    "improved_phi_band.py": {
+      "sha256": "da97aa8d9bcdb578db966533714b05a45d3747cca3f0b9dd253afb79bff76a76",
+      "unchanged": true
+    },
+    "original_charged_principal.py": {
+      "sha256": "95242f66759648031475b4a47be0cb3f316fc9dafd283d560cb2726d9c4ddc7c",
+      "unchanged": true
+    },
+    "bulk_flat_holonomy_bound.py": {
+      "sha256": "b9a6f096ac5cede629e18aa15fa615e19165998fa398119e19123683144d30f5",
+      "unchanged": true
+    },
+    "bulk_quantum_selection.py": {
+      "sha256": "0dcdb45b755cc805186e72d1db70cc32bf392fa1a35c2e42d8dd99ff43b8f24f",
+      "unchanged": true
+    },
+    "unrestricted_field_minimum.py": {
+      "sha256": "443840b860a0adfb4fd5455ecf9188ddb63b31fae252619568a60ed4a9915301",
+      "unchanged": true
+    },
+    "centre_flux_sea.py": {
+      "sha256": "b9fd12acd165a0af1003d49dfd34bf45bf481f0723dc393d1c702bb436fda5d1",
+      "unchanged": true
+    },
+    "full_band_gauss_section.py": {
+      "sha256": "1bb48d986e83c5df3b707ad74337a2f4b0ec6a4495af90ba87b6a8e68eb366cb",
+      "unchanged": true
+    },
+    "gauss_charge_intertwiner.py": {
+      "sha256": "861008cb7dea64d2b2e0cef513c62de1d55539a1527a5b6fea8b5b879ea956fa",
+      "unchanged": true
+    },
+    "quantum_spinor_plaquette.py": {
+      "sha256": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+      "unchanged": true
+    },
+    "quantum_su4_gauss.py": {
+      "sha256": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+      "unchanged": true
+    },
+    "full_field_charge_bound.py": {
+      "sha256": "b86f5fe62f2a838f2a5cd84e70c1b3e74e801aef91cd2dda6d4ce123e58541bf",
+      "unchanged": true
+    },
+    "full_band_packet_bound.py": {
+      "sha256": "9b8e6f0d4c20d875389bd38d76d273be8d431a18cbe0331f9925daa72a8450d9",
+      "unchanged": true
+    },
+    "full_spatial_gauge_stability.py": {
+      "sha256": "2c1eb9ba04eef7dc851f0af2e6c70d8ae470396bc15e324fcd58d6fe3c89e0bf",
+      "unchanged": true
+    },
+    "periodic_bulk_frame.py": {
+      "sha256": "b784c7734bc7f35b3b0db5d3e4e4b888d64328647bf9e63e8b70b40b5128c1a8",
+      "unchanged": true
+    },
+    "bosonic_original_law_join.py": {
+      "sha256": "8e107f1fecb8483200c1520b8afd0032a653c24bae5b81d1ecad36a81d0cdd9e",
+      "unchanged": true
+    },
+    "noncompact_coulomb_carrier.py": {
+      "sha256": "073b97c04de1d38bc356cc096a5151cd16acf0d6ff38106f407d648a6e65bba6",
+      "unchanged": true
+    },
+    "noncompact_screened_gauss_dressing.py": {
+      "sha256": "74a5a5155a3f75eb812c8abf80ad5603ccb6945150dbfc01b2c50f2c82773cf2",
+      "unchanged": true
+    },
+    "noncompact_charged_packet_transport.py": {
+      "sha256": "c9296b17432759d95cfbcb9a352e67ebaebc7bc809cf477d0a35fb9c6cb4974c",
+      "unchanged": true
+    },
+    "noncompact_maxwell_phase.py": {
+      "sha256": "f9bfef5e64c597b4f3f095834624c1605c74ac263e4045626c156e4f7c4e2710",
+      "unchanged": true
+    },
+    "original_compact_charge_bound.py": {
+      "sha256": "b980bfb62ed9fa8de18eea39c855cba2833c287118496dbb0a4f08a0c436ccc7",
+      "unchanged": true
+    },
+    "original_centre_charge.py": {
+      "sha256": "37745e237aad5435162f4b44d99efd336fac9933de03aca8dd48719dfdcb7ae5",
+      "unchanged": true
+    },
+    "original_normal_gap_bound.py": {
+      "sha256": "9d9f1ec26995b8be6fa5960a184ab11ebca5b782e82e07624a52fdb4724f9bf8",
+      "unchanged": true
+    },
+    "original_massive_photon_locality.py": {
+      "sha256": "2829890a4a0f8a527ab984aa9bc250b92f78812888c4992c9b041ae3c012fa86",
+      "unchanged": true
+    },
+    "original_uniform_charge_gap.py": {
+      "sha256": "8483a19b8135e6f96e8f92f3f2c3c5ae51b4b024ee83a1b7f12b089feb7697d8",
+      "unchanged": true
+    },
+    "noncompact_marked_metric.py": {
+      "sha256": "552d5153f8ca0d484067d0bbf5e9c49ab429f76e46dc1cd0070235d52e415dd8",
+      "unchanged": true
+    },
+    "noncompact_native_current.py": {
+      "sha256": "83ee632b748d5a5f6b47e8bd72d552ff87a170221cbdc9f97efe8b2a21dfde5b",
+      "unchanged": true
+    },
+    "noncompact_neutral_supplier.py": {
+      "sha256": "314d4bab4695727c4d47dc0752ae7afc0bf9e6bdfec0855e066014d4b9f0a7ad",
+      "unchanged": true
+    },
+    "noncompact_finite_packet_spin.py": {
+      "sha256": "4b85d323c7b96ee1a614a3f80ea9b200ae0b9308ddc83640e1be7f2e5bc1af64",
+      "unchanged": true
+    },
+    "original_physical_rotation_lift.py": {
+      "sha256": "28c84681cb80503def00fece882b5daa1cc3de801ee430db2750e45f39fc7665",
+      "unchanged": true
+    },
+    "physical_spin_boundary.py": {
+      "sha256": "a67649d1abe0664283310a1dd186a443ecdc40560225d6025d89fe954fc7a655",
+      "unchanged": true
+    },
+    "bulk_frame_compton.py": {
+      "sha256": "0d869fa925c7946096ab152d7d415437424f41b031d882f75c089f2d4943f284",
+      "unchanged": true
+    },
+    "photon_matched_compton.py": {
+      "sha256": "3ca0501d1636910c9be90f8a423e592d0c246de3e7286c7a6444268f6caa5c64",
+      "unchanged": true
+    },
+    "photon_matching.py": {
+      "sha256": "efa046a5976b48b7d34b6d1faaeb78927ff00d4b83011e62b89d518994b5f994",
+      "unchanged": true
+    },
+    "vacuum_limit.py": {
+      "sha256": "1ab70e9378d48e4cee9ed2c46e917496d4be2686f34cba87c7b82660ef6c3297",
+      "unchanged": true
+    },
+    "pair_full_field_charge_transfer.py": {
+      "sha256": "b699fad8485d91502f2d6197dcd762fafe7b901af870399156e5f9eb1ab21c47",
+      "unchanged": true
+    },
+    "pair_full_field_concentration.py": {
+      "sha256": "4a485d5ffd1d1c180c13858f09c3f3e3cdcd54242297f12897e4dc66336f5d25",
+      "unchanged": true
+    },
+    "pair_global_field_bound.py": {
+      "sha256": "f419c53c881c6d66175a551e6ee2f074521c8fb726fffc17e5ae82eb9ef533f3",
+      "unchanged": true
+    },
+    "noncompact_wilson_photon_envelope.py": {
+      "sha256": "4b9f10c87d9dfb055a2a718e25cfad23ffc4261d6b8ad48a211b1ddf412957ca",
+      "unchanged": true
+    },
+    "noncompact_centre_source_energy.py": {
+      "sha256": "8cfde5230cac1c1458143fb4b033bd6f54244d971a99d0b5fe1a67d059cdfb19",
+      "unchanged": true
+    },
+    "noncompact_physical_rotation_join.py": {
+      "sha256": "b950319832910770f6ec2777b01ce8abaa6606d2be5de999f5dea82940c23bd6",
+      "unchanged": true
+    },
+    "noncompact_mechanical_pulse.py": {
+      "sha256": "5f6b980cd3a4e712d666ee3197e8a9d25936691dc4b148b8c6d27aafe0e28b25",
+      "unchanged": true
+    },
+    "noncompact_frame_pulse_transfer.py": {
+      "sha256": "368875f9ce5816456d8ad43735320d402d3f1f861688479281d7779b2013812f",
+      "unchanged": true
+    },
+    "bosonic_frame_torque.py": {
+      "sha256": "d6565ce84fddeac23dd76e2eb909e12bf02c51c183d20eaa1c54e276de66a77e",
+      "unchanged": true
+    },
+    "original_total_angular_transfer.py": {
+      "sha256": "0f3ea2d1f7cc0918a03190b5c0babd0996d2d1a6d2985dbc25c6d9409be8718a",
+      "unchanged": true
+    },
+    "original_intrinsic_angular_transfer.py": {
+      "sha256": "c678d2092f29ab3652b6a4579e895f7db0bc7b8ec71e601e47249ccda14d044f",
+      "unchanged": true
+    },
+    "original_slow_kinetic_bo.py": {
+      "sha256": "8ca4f73a2c8f412a1dab42af9a81e44ef714742799f8bfcf398847f12a0fc8d1",
+      "unchanged": true
+    },
+    "noncompact_native_metric_admission.py": {
+      "sha256": "12ab7f5aa353cf4a98d272fc85332485ee36f4741529be96bd42002177003ca9",
+      "unchanged": true
+    },
+    "bulk_global_gram.py": {
+      "sha256": "a078f989b3199c1ceeab274d59ade61e8f96c0352f65aa3be2fd7baf2553e0a5",
+      "unchanged": true
+    },
+    "noncompact_quantitative_normal_budget.py": {
+      "sha256": "bd66f24c524e95e582a4282a9bd758dff97ffddf4e962056189460b122795854",
+      "unchanged": true
+    },
+    "induced_photon_mode_frame.py": {
+      "sha256": "7385772fced5cc6bcc98ff76b81f46f168608783a2932c402fe40d1af4ab075e",
+      "unchanged": true
+    },
+    "induced_compton_transfer.py": {
+      "sha256": "22aee2e714373acad4f7148e436d99b3573bf0532fb845e02ca19b00a0247f3b",
+      "unchanged": true
+    },
+    "induced_phi_ir_well_transfer.py": {
+      "sha256": "d624514808f6947b6558b3ca7487961f389b7babfc18e2f0ed6d4ec5675edc60",
+      "unchanged": true
+    },
+    "induced_reference_electric_graph_enclosure.py": {
+      "sha256": "00a212b54455c3c7d4b997383785f1ebe7f53f174a466d9ee6ddbffbf2542e95",
+      "unchanged": true
+    },
+    "induced_phi_pauli_initial_moment.py": {
+      "sha256": "41d2f6b2a0d28a84e5aa5b1151f420ae725a74fe3defa329b5084d990e2f8845",
+      "unchanged": true
+    },
+    "induced_phi_pauli_beta_continuation.py": {
+      "sha256": "9a52bdb152fff0b744fc4ff03725738bba186ad03397d0f658c98cc0e18ced34",
+      "unchanged": true
+    },
+    "induced_phi_pauli_source_metric.py": {
+      "sha256": "06db8f0d341c6acef7e9ce19b086fdf70a5b5844d2ad115786766a315d021352",
+      "unchanged": true
+    },
+    "induced_phi_em_ygraph_evolving_field_clock.py": {
+      "sha256": "76ad0692682c96986aae3c4ad02e2037d9ec6bdb744ad3a42813afd560ae490d",
+      "unchanged": true
+    },
+    "induced_phi_em_ygraph_centre_bridge.py": {
+      "sha256": "a63e60ef8affd3e027001a2701952e891cf949c6544ef4ebef1e85c5ea6c2c3c",
+      "unchanged": true
+    },
+    "induced_phi_em_ygraph_clock_transfer.py": {
+      "sha256": "72a65537162068a576d8969e6e7eae358617519ab3df428e6ab42ae53af32c23",
+      "unchanged": true
+    },
+    "induced_phi_em_ygraph_full_phi_energy.py": {
+      "sha256": "4e0ac4d8b844855631bafe8f93883b8ebd5cfb3ccf86f52addb384cb42e65540",
+      "unchanged": true
+    },
+    "induced_phi_em_ygraph_initial_contact.py": {
+      "sha256": "1807820746cea2ce87f092a14e7433114b71a545c29dce1bf4067bd1f06d38f1",
+      "unchanged": true
+    },
+    "induced_phi_em_ygraph_weak_domain.py": {
+      "sha256": "0d17640e6522670e7ade8cade6dbde2eed975835849bf3c2452587af39bf4772",
+      "unchanged": true
+    },
+    "induced_phi_em_macro_photon_domain.py": {
+      "sha256": "2a9f3ef2629cc16b1983abab3f9331d8d2514c6604ef199e6623ccbe80586423",
+      "unchanged": true
+    },
+    "induced_phi_em_macro_squeeze.py": {
+      "sha256": "8ca1f3dc93ff1c9523efb58328b58c9df0d9f2bd7ae854b2e4136f54f295882b",
+      "unchanged": true
+    },
+    "induced_phi_em_macro_virial.py": {
+      "sha256": "77908875dca6e24d5a8aec53ca37d8fdfc179274183a6ccc4f7e6454379c844c",
+      "unchanged": true
+    },
+    "induced_phi_em_macro_preparation.py": {
+      "sha256": "a9ec60a853e4ddc27c7009065815444a6104e83e42c765005b7ef9dd89e5f603",
+      "unchanged": true
+    },
+    "induced_phi_em_sw_preparation.py": {
+      "sha256": "57b62db9e98cafbc803cfde8255644a630396699c476fc890ff2bd9aed446c78",
+      "unchanged": true
+    },
+    "induced_phi_em_sw_momentum.py": {
+      "sha256": "dc6a00cd1b0ed65179d28e131bebc6c131b3668a6320dd9cd96879d380a913cb",
+      "unchanged": true
+    },
+    "induced_phi_em_momentum_dressing.py": {
+      "sha256": "01617fd4c72797c26fd8dca6e4e80997d8ee31a62143859eef744bac9593bf15",
+      "unchanged": true
+    },
+    "induced_phi_em_gain_certificate.py": {
+      "sha256": "9225ca3205943f7e8eefec1fdd17df9b7b0e012ac8c117b6fbd70625805e81d3",
+      "unchanged": true
+    },
+    "induced_phi_pauli_magnetic_join.py": {
+      "sha256": "b50da99431dfbb3a0a3be45b5bae05fe1c8c2493d9b20394cc92d1efb4c46724",
+      "unchanged": true
+    },
+    "induced_phi_spin_photon_joined_heat.py": {
+      "sha256": "13ea6c0540a50bea5d502c880a670212b144274ed601c80e8baa596068e7f87d",
+      "unchanged": true
+    },
+    "induced_phi_spin_shape_full_source.py": {
+      "sha256": "ae43a045406b2e89fe74c957cb16c0186bdb5475fb01585587b5104456c0c3c4",
+      "unchanged": true
+    },
+    "induced_phi_spin_shape_contact.py": {
+      "sha256": "6120d968ef2e2bb91e64b4fb91b3e022b821a5f533922a9a6f980e597038c5a9",
+      "unchanged": true
+    },
+    "induced_phi_force_quantum_heat.py": {
+      "sha256": "b235cd760c14adf73e68dc68c91357d58b8fd7a4379d15dccfd1d82b1a1e8099",
+      "unchanged": true
+    },
+    "induced_phi_quantum_force_source_gram.py": {
+      "sha256": "ad509e7181540f79f589f995f00fb0d0804cf3929cfc8052b6244c19784b101e",
+      "unchanged": true
+    },
+    "induced_phi_quantum_source_force.py": {
+      "sha256": "fd07c465720d0241e4e34d8bdbec018f24ae5aaf809cb6e0c678d29691b0aeba",
+      "unchanged": true
+    },
+    "induced_real_em_joined_heat_continuation.py": {
+      "sha256": "428c33096f7df58d980684d751a1e5112818a2cc299546cbe935aae0571d982d",
+      "unchanged": true
+    },
+    "induced_real_em_photon_heat_receiver.py": {
+      "sha256": "ca6698b2497b86dc7fa4990b62e2048ca5628cb45be1599c6cdd009838b88878",
+      "unchanged": true
+    },
+    "induced_real_em_coulomb_heat.py": {
+      "sha256": "569ae5b6a08c81d7563704b1b3c4eb6571394b8f8988e5b8a9b1f366a4a9de63",
+      "unchanged": true
+    },
+    "induced_phi_em_source_translation.py": {
+      "sha256": "17f351e16fd7fc08ded2e8bf1930192a42adc865155d18988f32fed51052c7e1",
+      "unchanged": true
+    },
+    "induced_phi_em_charged_photon_response.py": {
+      "sha256": "e363dbb15d3c8e061915af1a92b55516d374f66c9bda03f57d2b11b829d5a108",
+      "unchanged": true
+    },
+    "induced_phi_em_charged_photon_source.py": {
+      "sha256": "5f26c140d27e2b9a16c259880b8504e9b6c1cc4bfe75c24f7d890cf9381510ca",
+      "unchanged": true
+    },
+    "induced_phi_em_compensated_transition_graph.py": {
+      "sha256": "6ec51626787323ffedf6f17c633de229e84c5abdfff220919d29f1b2d6f2d952",
+      "unchanged": true
+    },
+    "induced_phi_em_compensated_green_receiver_typed.py": {
+      "sha256": "2515ef32242e4cd7e350a1e6adc22e6acba2bbf9c4aa9ee5db430ad72d1c2fa7",
+      "unchanged": true
+    },
+    "induced_phi_em_compensated_source_energy.py": {
+      "sha256": "dcc3580baa77bf8bfdc8ef249ec5cbd699b57168b3d6a0911757eec13530ba23",
+      "unchanged": true
+    },
+    "induced_phi_em_compensated_charged_green.py": {
+      "sha256": "c42d2be614c4b74ab7f8e5689a8706c25cbe838fd60f9223468c79d643d13806",
+      "unchanged": true
+    },
+    "induced_phi_em_full_current_inserted_response.py": {
+      "sha256": "5c6b12d6e00659d6ba0623812a737f4a88a3b9164ba7f4c3d279315257d40fcc",
+      "unchanged": true
+    },
+    "induced_phi_em_full_inserted_response.py": {
+      "sha256": "248f2f03d79cf55420a0690bd5228e4fce07ed162dc22c16ebd11354bc86c8d6",
+      "unchanged": true
+    },
+    "induced_phi_em_full_source_force_clock.py": {
+      "sha256": "e4b38e370f21d43b418c06a50b1e42ceccf9a69efb588420f24cf53fc27e2a2c",
+      "unchanged": true
+    },
+    "induced_phi_em_ygraph_current_source_retarded.py": {
+      "sha256": "4784df39f865cf4415a02f25eeef8d9d079e9bddf2d5dcb07f3202fe490ced44",
+      "unchanged": true
+    },
+    "induced_phi_em_ygraph_retarded_transfer.py": {
+      "sha256": "e8c7c8b7a10451bac62f690af5a1a95769b09e1865b0439f0fbed241f1065b8e",
+      "unchanged": true
+    },
+    "induced_phi_ir_c_full_action.py": {
+      "sha256": "6550aa333c75b1b49b4faded7dbc8b6b8c4526c6b36488e92dfde5507acd73d0",
+      "unchanged": true
+    },
+    "induced_phi_ir_charge_symmetry.py": {
+      "sha256": "6b2f1a003822204d2d937ddca10572d13f9867b16f2a2eab14cfc7c8d843a903",
+      "unchanged": true
+    },
+    "induced_phi_pauli_four_link_loop.py": {
+      "sha256": "fb590dfe3c219e1682471d75ae71cb753fc58661c5dba8351b35d3d377807b80",
+      "unchanged": true
+    },
+    "induced_phi_uniform_quantum_backreaction.py": {
+      "sha256": "0c3d65dce2d22181073cc9bdd373a7ba7c99977f895ffab1a097e7ae070c9da7",
+      "unchanged": true
+    },
+    "induced_phi_nonuniform_fermionic_source_unitary.py": {
+      "sha256": "8c7cd31445476c18e6197b9811d7bc60816a6f89127fdc80649f6097eebd5f70",
+      "unchanged": true
+    },
+    "induced_phi_nonuniform_local_gauss.py": {
+      "sha256": "73ca8d12378d4d5ef6371e11270f967d891f6be0a7e85f200c16440736bf72b4",
+      "unchanged": true
+    },
+    "induced_phi_colour_uniform_global_gauss.py": {
+      "sha256": "c65fb72c037bfbf3892aecf989d923fbfbb32c4bc19c6554dbc9ea545550eb9d",
+      "unchanged": true
+    },
+    "induced_phi_full_normal_global_gauss.py": {
+      "sha256": "ab8c54180797378516aed2056192d71ffc2be10e99368bf064acb2a21325d294",
+      "unchanged": true
+    },
+    "induced_phi_uniform_global_gauss.py": {
+      "sha256": "d0e8707178a99bd742a9f56c1de50c4d4f69f5a35abe3a0f711c7e1a05a4455c",
+      "unchanged": true
+    },
+    "induced_phi_full_uniform_colour_fermionic_source_unitary.py": {
+      "sha256": "8bfeec2518978d9a33e300a342c842755e3f766a5f4c83b4847b7dfda297f91f",
+      "unchanged": true
+    },
+    "induced_phi_quantum_fast_transfer.py": {
+      "sha256": "8916c7da2d96d3bf10100a7839cc4ba19fed8cb5ec646ea5dee8cccafaa8b0a9",
+      "unchanged": true
+    },
+    "induced_phi_uniform_colour_stiffness_resolvent.py": {
+      "sha256": "00ac73b3e00e77bfb73a6b5024778ccf8e09c5a74304e0260a80b1a89b122c6f",
+      "unchanged": true
+    },
+    "induced_phi_full_uniform_fermionic_source_unitary.py": {
+      "sha256": "fb9dc99e3582fbd559ad96a176e427a0a8f3173f70ad13421e15c1879261dd8c",
+      "unchanged": true
+    },
+    "induced_phi_uniform_fermionic_source_unitary.py": {
+      "sha256": "a592f31ac7d78db94b0bbc17a59924cc09e87cb04ab51049d25b50c87a161196",
+      "unchanged": true
+    },
+    "induced_phi_global_normal_h_jet_control.py": {
+      "sha256": "878f9618b3f415851bc78a1b4a2370021d5d78829dd028abe53284f880d688d6",
+      "unchanged": true
+    }
+  },
+  "own_source_utf8": "\"\"\"Counterexample and repaired global-normal h-jet envelope, not source admission.\n\nThe archived source's per-q derivative number is not a full-normal bound.\nThis CLI tests the actual native operator and derives a support-wide envelope.\nFrozen scientific suppliers and their historical receipts remain unchanged.\n\"\"\"\nfrom __future__ import annotations\n\nimport argparse\nfrom fractions import Fraction as F\nimport hashlib\nimport json\nimport math\nfrom pathlib import Path\nimport sys\nimport time\nfrom typing import Any\n\nimport mpmath as mp\nimport numpy as np\nfrom threadpoolctl import threadpool_limits\nimport induced_phi_nonuniform_field_car as field\nimport induced_phi_nonuniform_fermionic_source_unitary as source\n\nROOT = Path(__file__).resolve().parent\nINPUT = ROOT / 'induced_phi_nonuniform_fermionic_source_unitary_resumed_actual_receipt.json'\nINPUT_SHA = 'da1998065d6622c4ac780409c29ae10711e01b5c5143edf620557fe15234e9e6'\nR = F(1, 1 << 20)\nDERIVATION = {\n    'exact_counterexample': (\n        'Let v be any unit eigenvector of Gamma0. X=(vv*-I4/4)/sqrt(3/2) is traceless '\n        'Hermitian, commutes with Phi0, and has Cartesian norm sqrt(2TrX^2)=1. '\n        'Set only deltaPhi0(x)=l_x X, l=(delta_x0-1/64)/sqrt(63/64). This is a '\n        'unit global fast normal direction, has zero site mean and zero orbit pairing. '\n        'A one-particle vector supported at site0 has |<v,dh v>|=|onsite|sqrt(63/64)sqrt(3/8); '\n        'all one/two-link hops leave site0 and contribute zero to this Rayleigh value. '\n        'The rational lower sqrt(63/64)>=63/64 and sqrt(3/8)>=3/5 already contradicts '\n        'the stored full-normal D1 for all three profiles. No root rounding is needed for the witness.'),\n    'global_field_bound': (\n        'Cartesian norm uses Tr(Ta Tb)=delta_ab/2, hence ||sum xa Ta||op<=||x||/sqrt2. '\n        'Native block-row Schur bound counts forward AND reverse hops. '\n        'For arbitrary global Phi tangent, Bphi=(|onsite|+2sum_path |c|1)/sqrt2=8*vp. '\n        'The 8 is sqrt(V), undoing the single-q Fourier 1/8 normalization. '\n        'For arbitrary link C tangent the generator norm is <=||C||/sqrt2, not the '\n        'single signed-Clifford generator norm 1/sqrt8. At the mean Bc=16*vc. '\n        'On the actual support, hopnorm<=hop_mean+|c|1*F1*R/sqrt2, so '\n        'Bc=16*vc+sum L|c|1*F1*R.'),\n    'adapted_composition': (\n        'Admitted actual polar-Q envelopes imply F1<=1+9/8+512R and F2<=1025. '\n        'Thus Dh<=Bphi F1+Bc. Ordered exponential insertions give '\n        'h_Phi,C<=sum L|c|1 and h_C,C<=sum L^2(hop_mean+|c|1 F1R/sqrt2). '\n        'The complete second derivative is bounded by Bphi F2+2(sum L|c|1)F1+Bcc. '\n        'Both endpoints, all ordered one/two-link derivatives and noncommuting matrices retained. '\n        'These bounds are also uniform in added scalar Peierls phases of modulus one, '\n        'but do not define a theta-following occupied frame.'),\n    'Kato_and_gradient_boundary': (\n        'At supported distance>=gap/2-2D1R, use b1=8D1/distance, '\n        'b2=32D1^2/distance^2+8D2/distance. These are directional one-particle bounds. '\n        'For a fixed-particle Fock sector, a safe full ambient gradient envelope includes '\n        'ceil(sqrt5760)=76 times sum Nspecies*b1. Sum Nspecies*b2 is only directional '\n        'second-frame data; Hessian/kinetic traces must also retain dimension and first-square terms.'),\n    'not_certified': (\n        'Corrected h/Kato envelopes alone do NOT reprice or certify the whole source. '\n        'Old Rayleigh/time/probability prices are historical conditional arithmetic with a '\n        'refuted literal all-normal derivative premise. Global chart/tube/root, other supplier '\n        'inequalities, source kinetic/Haar propagation, U1Pi/Coulomb and physical poles remain separate.')\n}\n\n\ndef run() -> dict[str, Any]:\n    started = time.monotonic()\n    raw = INPUT.read_bytes()\n    if hashlib.sha256(raw).hexdigest() != INPUT_SHA:\n        raise ArithmeticError('Historical source-price input changed')\n    cap = json.loads(raw)\n    proof = cap['actual_full5760_local960_corrected_quantum_CAR_source_proof']\n    centres = [F(x) for x in cap['input_descriptor']['exact_NEW_allq_BO_mean']['centre_exact_rational']]\n    field.full.iv.dps = 100\n    mp.mp.dps = 100\n    data = field.load_mean(g_override=[centres[0], centres[1], centres[1], centres[1]],\n                           mean_descriptor={'law': 'NEW derivative control at saved mean display; NOT adopted root'})\n    parameters = cap['input_descriptor']['exact_NEW_allq_BO_mean']['parameters']\n    root_intervals = [field.full.enclosure(F(parameters[k]['lower']), F(parameters[k]['upper'])) for k in ('g0', 'gs')]\n    data['g'] = [root_intervals[0], *[root_intervals[1]]*3]\n    ex, iv = field.full.exact, field.full.iv\n    native, geom = data['native'], data['geom']\n    _, u = np.linalg.eigh(native['frame'][0])\n    v = u[:, -1]\n    X = (np.outer(v, v.conj())-np.eye(4)/4)/np.sqrt(1.5)\n    coeff = 2*np.einsum('aij,ji->a', geom['deltas'][:, 0], X).real\n    normal = np.einsum('a,amij->mij', coeff, geom['deltas'])\n    local = -np.ones(64)/64\n    local[0] += 1\n    local /= np.linalg.norm(local)\n    fd = local[:, None, None, None]*normal[None]\n    fields = np.broadcast_to(native['frame'], (64, 4, 4, 4)).copy()\n    links = np.broadcast_to(np.eye(4), (192, 4, 4)).copy().astype(complex)\n    ld = np.zeros_like(links)\n    state = np.zeros(256, complex)\n    state[:4] = v\n    reconstruction = float(np.max(abs(normal[0]-X)))\n    other = float(np.max(abs(normal[1:])))\n    tangent_norm = float(np.sqrt(2*np.sum(abs(fd)**2)))\n    if max(reconstruction, other, abs(tangent_norm-1)) > 1e-12:\n        raise ArithmeticError('The proposed normal-direction witness is not realized')\n    rows = []\n    first = ex(0)\n    second = ex(0)\n    F1 = ex(F(1)+F(9, 8)+512*R)\n    F2 = ex(1025)\n    for profile, old in zip(data['profiles'], proof['actual_full65_occupied_projector_Kato_prices'], strict=True):\n        if profile['role'] != old['role']:\n            raise ArithmeticError('Profile ordering changed')\n        _, dh = source.h_jet(profile, native, fields, fd, links, ld)\n        ray = float(abs(np.vdot(state, dh@state)))\n        observed = float(np.max(abs(np.linalg.eigvalsh(dh))))\n        claimed = F(old['all_normal_first_h_derivative_upper']['upper'])\n        onsite = abs(F(profile['onsite']))\n        rational_lower = F(math.floor(onsite))*F(63, 64)*F(3, 5)\n        if rational_lower <= claimed or ray <= float(claimed):\n            raise ArithmeticError('The counterexample does not reject the stored premise')\n        bounds = field.exact_operator_bounds(profile, data['g'])\n        vp = ex(F(bounds['Phi_vertex_operator_upper']['upper']))\n        vc = ex(F(bounds['colour_vertex_operator_upper']['upper']))\n        pc = sum(p['length']*(abs(p['c0'])+abs(p['ci'])) for p in profile['paths'])\n        cc = ex(0)\n        for p in profile['paths']:\n            c1 = abs(p['c0'])+abs(p['ci'])\n            hop = abs(ex(p['c0']))*iv.sqrt(data['g'][0])+abs(ex(p['ci']))*iv.sqrt(data['g'][p['axis']+1])\n            cc += ex(p['length']**2)*(hop+ex(c1)*F1*ex(R)/iv.sqrt(ex(2)))\n        Bphi = 8*vp\n        Bc = 16*vc+ex(pc)*F1*ex(R)\n        D1 = Bphi*F1+Bc\n        D2 = Bphi*F2+2*ex(pc)*F1+cc\n        distance = ex(F(bounds['minimum_gap_unscaled']['lower'])/2)-2*D1*ex(R)\n        if field.full.endpoint(distance, 0) <= 0:\n            raise ArithmeticError('Repaired support-wide gap price fails')\n        b1 = 8*D1/distance\n        b2 = 32*D1**2/distance**2+8*D2/distance\n        count = 128*profile['load']+(1 if profile['scale']!='heavy' and profile['load']==1 else 0)\n        first += count*b1\n        second += count*b2\n        D1_upper = F(field.full.bounds(D1)['upper'])\n        if observed >= float(D1_upper):\n            raise ArithmeticError('Repaired envelope misses the actual native witness')\n        rows.append({'role': profile['role'], 'load': profile['load'],\n                     'old_stored_claimed_full_normal_D1': float(claimed),\n                     'exact_rational_Rayleigh_lower': str(rational_lower),\n                     'observed_Rayleigh_lower': ray, 'observed_native_derivative_opnorm': observed,\n                     'observed_divided_old_claim': observed/float(claimed),\n                     'repaired_global_D1': field.full.bounds(D1),\n                     'repaired_global_D2': field.full.bounds(D2),\n                     'supported_distance_to_zero_lower': field.full.bounds(distance),\n                     'directional_Kato_first': field.full.bounds(b1),\n                     'directional_Kato_second': field.full.bounds(b2),\n                     'fixed_bulk_particle_count': count})\n    captured = {**field.CAPTURED, **source.SOURCE_BYTES, Path(__file__).name: Path(__file__).read_bytes()}\n    epochs = {name: {'sha256': hashlib.sha256(data).hexdigest(), 'unchanged': data==(ROOT/name).read_bytes()}\n              for name, data in captured.items()}\n    if not all(record['unchanged'] for record in epochs.values()) or INPUT.read_bytes()!=raw:\n        raise ArithmeticError('Control source/input changed during execution')\n    return {'governing_plan': 'issue-222-induced-photon-delta13-continuation-20261008',\n            'governing_revision': 'a0de34c80c9dae7a8c5ddddcbeb6c0dc5b3fe69213a72993e47e5f7379fdd5dc',\n            'template_revision': '89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe',\n            'input': {'path': str(INPUT), 'sha256': INPUT_SHA}, 'derivation': DERIVATION,\n            'numerical_display_g': data['descriptor']['numerical_display_g'],\n            'witness': {'normal_reconstruction_error': reconstruction, 'other_components': other,\n                        'global_tangent_norm': tangent_norm, 'coefficient_norm': float(np.linalg.norm(coeff)),\n                        'orbit_pairing': float(np.max(abs(sum(native['frame'][m]@normal[m]-normal[m]@native['frame'][m] for m in range(4)))))},\n            'profiles': rows, 'safe_full_ambient_Fock_gradient_price': field.full.bounds(76*first),\n            'directional_Fock_second_data_NOT_Hessian_norm': field.full.bounds(second),\n            'verdict': 'Stored literal all-normal D1 premise REFUTED. Repaired support-wide h jet envelope derived conditionally; no revised whole-source admission yet.',\n            'source_at_execution': epochs, 'own_source_utf8': Path(__file__).read_text(),\n            'runtime': {'executable': sys.executable, 'python': sys.version},\n            'elapsed_seconds': time.monotonic()-started}\n\n\nif __name__ == '__main__':\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument('--output', type=Path, required=True)\n    args = parser.parse_args()\n    with threadpool_limits(limits=1):\n        result = run()\n    args.output.write_text(json.dumps(result, indent=2)+'\\n')\n    print(json.dumps({'verdict': result['verdict'], 'witness': result['witness'],\n                      'profiles': [{k: v for k, v in row.items() if k not in ('repaired_global_D1', 'repaired_global_D2', 'supported_distance_to_zero_lower', 'directional_Kato_first', 'directional_Kato_second')} for row in result['profiles']],\n                      'elapsed_seconds': result['elapsed_seconds']}, indent=2))\n",
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "elapsed_seconds": 0.7256038229988917
+}

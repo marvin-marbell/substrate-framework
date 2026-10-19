@@ -1,0 +1,24 @@
+{
+  "identity": "FREE_SO3_MATERIAL_SPIN_DIFFERENCE_ROTOR_V1",
+  "law_input": "rich_composite_free_rot_20261014_request.json",
+  "model": "rich_composite_free_rot_20261014_model.py",
+  "charge_source": "rich_composite_free_rot_20261014_current.py",
+  "calculation": "rich_composite_free_rot_20261014_calculate.py",
+  "functions": {
+    "material(p,flavors=(0,1,2))": "Recompute full body H, T=S+allL, carrier energy, charge tensor C and literal body Peierls moments/contact. Returns a dict; size49152 in selected threeflavor body. No old state imported.",
+    "sector(mat,p,j)": "Returns H_j CSR and three covariant mechanical body derivatives; shape((2j+1)*mat.size)^2 in one arbitrary conserved labM. EveryK/internal state retained. OtherM copies identical H.",
+    "rotation_matrices(jp,mp,j,m)": "Returns 3x3 list of small ((2jp+1),(2j+1)) Cartesian R_ia exact Haar-product matrices for fixedM/Mp. Spherical convention fixed in SPHERICAL; no position/source fitting.",
+    "magnetic_projected(mat,p,jp,mp,j,m,axis,part='total')": "CSR rectangular actual moment -dH/dB_axis; part total/mechanical/peierls. Includes continuum kinetic symmetric ordering. Can mix physicalj; internal virtual space not reduced.",
+    "magnetic_contact(mat,p,j,m,axis)": "CSR projection of exact continuum magnetic contact before projection, including all allowed intermediate rank1 multiplets, plus hopping contact; not an imported B2 field-energy law.",
+    "lab_internal(mat,jp,mp,j,m,axis,kind='T')": "Rotated laboratory internal angular vector for T/S/L, separately distinct from physical NoetherJ.",
+    "full_multiplet_moment(mat,p,j,axis,part='total')": "Optional completeM diagonal-j CSR Cartesian vector matrix; use rectangular blocks/source action to avoid unneeded allocation.",
+    "current_projected(mat,p,jp,mp,j,m,axis,part='total')": "Uniform labA source containing actual mechanical charge motion and rotated literal Peierls hopping; same total/mechanical/peierls parts.",
+    "dipole_projected(mat,jp,mp,j,m,axis)": "Actual lab charge dipole for i[H,d] current continuity check, with literal lab positionsRr. No artificial spin source substitution."
+  },
+  "saved_state": "rich_composite_free_rot_20261014_actual1_result.npz ground_Mhalf columns: orthonormal low ground orbital copies in jhalf allK/fullbody, physicalM=.5. ground_energy scalar; positions/charges bind geometry. AllM partners follow exact representation, not arbitrary spin polarization of predecessor states.",
+  "response": "Uniform magnetic source spectral/resolvent measure separately in all-internal jhalf and jthreehalf. complex z=response_z[0]+i response_z[1]. 28-step full-state reorthogonalized Lanczos is approximate; low-ground-copy source weight supplied as adverse low-only contrast. Current contact is physical d2H/dB2. No normalization to photon/proton or continuum magnetic moment units.",
+  "captured_output_field_correction": "Immutable actual1 output calls the ground-block projection lowest_four_source_weight, but its producer only used the ground block, NOT four eigenstates. Current producer cleanly renames this ground_block_source_weight. Immutable selected_j means the lowest among the listed angular comparisons; current producer calls this lowest_j_among_compared and labels the actual source_j separately. No old output or capsule was rewritten; exact successor manifest records no-copy typing/metadata-only changes, unrerun.",
+  "receiver": "Actual NEW supplied uniformB finite quadratic receiver, complete jhalf/jthreehalf Mhalf plus projected contact; exact only through quadratic response, not a dynamical photon. No cross-root field/current tensor product claim.",
+  "binding": "Predecessor finite-square breakup retained as antecedent only; no new rigidbody freefragment margin asserted.",
+  "join_boundary": "Independent candidate/root. Other peers differ in microscopic geometry/state/source; cannot multiply their G/D with this current and claim one law without a new actual common H/state calculation."
+}

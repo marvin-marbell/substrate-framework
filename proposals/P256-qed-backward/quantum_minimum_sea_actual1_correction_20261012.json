@@ -1,0 +1,11 @@
+{
+  "kind": "RETAINED_EXECUTION_FAILURE_NOT_SCIENTIFIC_GATE_FAILURE",
+  "failed_archive": "quantum_minimum_sea_actual1_20261012_executed.zip",
+  "failed_source_sha256": "d3d6ca7198b28c10a3b45f9798306586607b139caa680b90d18aebb8d17067ac",
+  "observed_failure": "SymPy structural equality P*P==P rejected unsimplified rational expressions in the generic amplitude projector before any tube/science acceptance gate.",
+  "correction": "Require simplify(P*P-P)==0, simplify(P*L)==0, simplify(trace(P))==45. Retain exact symbolic identity instead of weakening it to a numerical tolerance.",
+  "new_delivery": "Parameterized executable tube coordinate, normal-basis, Jacobian, Haar density, scalar normalizer and band/global-column APIs added and actual local APIs exercised in the next new consumer.",
+  "science_gate_failed": false,
+  "no_old_producer_or_checker_rerun": true,
+  "law_changed": false
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "ANALYTIC_HARMONIC_SELECTED_SLOT_CAR_DERIVATION_WITH_EXECUTED_CONTROLS_SEPARATE",
+  "governing_plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "task_revision": "9a5e0b2cbe54cf4e5fa035b7fec3e31ff0f59bb7ecb7bf97fcea4844f31de2ba",
+  "parent_current_revision_notice": "d015d4a587db2c5c24859f6c079fc6585cdbfe3bae112544bf939a0dc65a383a",
+  "parent_accepted_science": "741e6bde7d8a4a78fddaf9e40e5ff4ddbfb36bf4ff053979609403ebed056bca",
+  "coordinates": ["z", "x00", "x01", "x10", "x11"],
+  "trace": "T = dz^2 - 2(d00*d11 - d01*d10)",
+  "harmonic_polynomial": "For D=n-l, Q=x00*x11-x01*x10 and normalized SO4 polynomial psi_lpq, F_nlpq=sum_{r=0}^{floor(D/2)} D! z^(D-2r) Q^r psi_lpq/[2^r r! (D-2r)! (l+2)_r].",
+  "SO4_polynomial": "psi_lpq=sqrt[p!q!(l-p)!(l-q)!/l!] sum_{k10+k11=p,k01+k11=q,sum k=l} x00^k00*x01^k01*x10^k10*x11^k11/prod(k!).",
+  "Fock_inner_product": "Distinct monomials are orthogonal; ||x^k||^2=prod(k!). SO4 psi is unit norm and (d00*d11-d01*d10)psi=0. Determinant powers obey ||Q^r psi||^2=r! (l+2)_r. Thus ||F||^2 = sum_r D!^2/[4^r r! (D-2r)! (l+2)_r].",
+  "norm_closed_form": {
+    "even_D_2k": "(2k)! (l+k+3/2)_k/(l+2)_k",
+    "odd_D_2k_plus1": "(2k+1)! (l+k+5/2)_k/(l+2)_k",
+    "derivation": "The finite sum is D! * hypergeometric(-D/2,(1-D)/2;l+2;1). One upper parameter is a nonpositive integer; Chu-Vandermonde gives the two expressions. No n126 Fock enumeration is required."
+  },
+  "trace_recursion": "For harmonic SO4 psi, determinant Laplacian applied to Q^r psi equals r(l+r+1) Q^(r-1)psi. Adjacent z and Q terms therefore cancel under T; this fixes the determinant coefficient sign rather than fitting a diagonal spectrum.",
+  "normalized_annihilator": {
+    "selected_slot": "E_i=b_i/sqrt(n). The following coefficients already INCLUDE 1/sqrt(n). They are maps from unit F_nlpq to unit F_(n-1).",
+    "z": "same (l,p,q): sqrt[(n-l)(n+l+2)/(n(2n+1))]",
+    "xij_lower": "target(l-1,p-i,q-j): sqrt[(n+l+1)(n+l+2)s_i(l,p)s_j(l,q)/(2n*l*(l+1)*(2n+1))], s0=l-p,s1=p",
+    "xij_upper": "target(l+1,p+1-i,q+1-j): (-1)^(i+j)sqrt[(n-l)(n-l-1)t_i(l,p)t_j(l,q)/(2n*(l+1)*(l+2)*(2n+1))], t0=p+1,t1=l-p+1",
+    "proof": "Differentiate the finite polynomial expansion. SO4 spinor differentiation decomposes into the lower SO4 polynomial and the Q-multiple upper one. Matching each monomial and using the two parity norm ratios above gives these coefficients. Since [T,b_i]=0, both outputs remain harmonic. The degree-n identity sum b_i^dagger b_i=n proves sum E_i^dagger E_i=I on the complete source, with no crop or post-normalization."
+  },
+  "native_joint_phase": "Solve native A,B,C,rho intertwining simultaneously at n1, anchored by x00=ac. The resulting J is stored by the scientist exact controls. The source numerical state is in gauge i^(p+q-l). The extracted coordinate phases are (1,-i,1,1,i). Corrected freeframe source oneparticle phase diag(1,-1,-1,1) is retained in the physical path consumer at both sites; no independent energy/density diagonal fits.",
+  "individual_CAR": "An individually labelled physical spin replica in the symmetric tensor has selected-slot map E. Compose its slot with the actual signed full16 CAR W5->wedge1 or wedge3; retain all four charged components. This does NOT identify b/sqrt(n) with a collective physical fermion annihilator. Distinct changed replica labels have disjoint canonical number sectors, while within one label arbitrary complex endpoint mixtures remain coherent. Physical64 copies consist of active1 plus auxiliary63, two spin replicas each.",
+  "complete_charged_H": "On each endpoint A_p, H_ch(u)A_p psi=A_p H0 psi+[dGamma(h),A_p]psi+64 A_p(2 delta_p rho+delta_p^2)psi, delta=u-r_p for annihilation and u+r_p for creation. The scientist executes the full original H0 action on the immutable source and streams E_i acting on psi,rho psi,H0 psi. The resulting15x15 Gram yields complete G=<S,S>,T=<S,H_ch S>,U=<H_ch S,H_ch S> without allocating the charged target or two-cell tensor. This is a commutator computation of the full action, not a restriction of H to the source subspace.",
+  "two_cell_consumer": "For a primitive path source Mij A_i^dagger tensor A_j, opposite charge orientations and changed replica-number labels are orthogonal, but different primitive paths sharing the same flow/labels are NOT an orthogonal directsum. Contract complete endpoint G/T/U with M and its conjugate. Derive each internal affine offset from literal native integer path incidence and the actual endpoint density change: u=-delta_rho-k_internal. The axis0 line uses common qA/2; transverse paths have opposite endpoint-dependent shifts. Geometry_attempt4 consumes the N4/6/8 integer-incidence control and only eligible primitive endpoint pairs; Feshbach consumes those SAME recorded offsets. External64*edgecount is paid once. Raw local moments for either u remain valid; historical all-axis common-u heat/Feshbach interpretation is withdrawn. Independent matching-cell copies remain conditional frozen inputs, NOT an interacting fullPhi ground.",
+  "moment_heat_bound": "For x>=g>0 and mean mu>g, x^-2 <= mu^-2-2(x-mu)/mu^3+((mu+2g)/(g^2 mu^3))(x-mu)^2. Its remainder factor is monotone in x; equality at g fixes the maximal coefficient. Equivalently integrate t times the quadratic exponential heat remainder. The source moment bound is w/mu^2+w Var(x)(mu+2g)/(g^2 mu^3), capped by w/g^2. Jensen's w/mu^2 is a LOWER bound and is never used as acceptance.",
+  "evidence_rule": "See exclusive preexecution/executed archives and natural-exit records for observed results. This derivation document is not a statement that an unexecuted epoch passed.",
+  "remaining_scope": ["certified charged moment/heat intervals", "normalized allorder overlapping linked control", "physicalPhi lift", "fullPhi/intercell stationary ground", "phase/stiffness/IRatom/pole/commoncone/originalSOURCE"]
+}

@@ -1,0 +1,70 @@
+{
+  "work_item": "shared-compton-transfer",
+  "law": "ORIGINAL Alpha0226 whole44336 midpoint A=VdagV, M64 seed20261009, common_GLOBALneutral_lambda=4608297.8882118445; frozen original source m(s) and first/mixed source jets",
+  "observable": "F(t,s)=Tr[m(s)dag (A(s)+tI)^-1 m(s)], t>0. This is a source-weighted Stieltjes integrand, not a positive-range physical-current certificate.",
+  "representation": "Fixed orthonormal Q at the jet basepoint; Q is a numerical solver representation, not a law/source/receiver/gate. Derivative-enriched Q is held fixed while differentiating the SAME original family.",
+  "energy_identity": {
+    "definitions": "B=A+tI, R=B^-1, z=Q(Qdag B Q)^-1Qdag m, r=m-Bz; Qdag r=0",
+    "proof": "m= Bz+r. Expanding Tr[m dag R m] gives Tr[z dag B z]+2Re Tr[z dag r]+Tr[r dag R r]; middle term vanishes by Galerkin orthogonality and Tr[m dag z]=Tr[z dag B z]. Thus F-F_Q=E=Tr[r dag Rr]>=0.",
+    "derivative_residuals": {
+      "r_x": "m_x - A_x z - B z_x",
+      "r_y": "m_y - A_y z - B z_y",
+      "r_xy": "m_xy - A_xy z - A_x z_y - A_y z_x - B z_xy"
+    },
+    "resolvent_derivatives": {
+      "R_x": "-R A_x R",
+      "R_y": "-R A_y R",
+      "R_xy": "R A_y R A_x R + R A_x R A_y R - R A_xy R"
+    },
+    "first_energy": "E_x=2Re<r_x,Rr>-<r,R A_x Rr>",
+    "mixed_energy": "E_xy=2Re<r_xy,Rr>+2Re<r_x,Rr_y>-2Re<r_x,R A_y Rr>-2Re<r_y,R A_x Rr>+<r,(R A_y R A_x R+R A_x R A_y R-R A_xy R)r>",
+    "inner_product": "Frobenius, all four Ref columns retained; real trace. Source motion is not removed by normalization."
+  },
+  "majorants": {
+    "definitions": "d_j=||R^(1/2)r_j||_F <= ||r_j||_F/sqrt(t); k_j=||R^(1/2) A_j R^(1/2)||_2 <= ||A_j||_2/t",
+    "E": "0<=E<=d^2",
+    "abs_E_x": "2 d_x d + k_x d^2",
+    "abs_E_xy": "2 d_xy d + 2 d_x d_y + 2 k_y d_x d + 2 k_x d_y d + (2 k_x k_y+k_xy)d^2",
+    "nonnegativity_warning": "E>=0 does NOT imply E_xy>=0. The derivative estimate is absolute, not a variational ordering of contacts.",
+    "two_chart_comparison": "For charts Q1,Q2, |F_Q1,j-F_Q2,j| <= bound(E1,j)+bound(E2,j). Each uses the same complete original A/source; no compressed/fulloperator retag.",
+    "Stieltjes_log": "log A= integral_0^infinity[(1/(1+t))I-(A+tI)^-1]dt. When Q captures the entire source family through mixed order, the scalar log defect is minus integral E; derivative defects need integrable bounds on EVERY residual jet. Source-complement terms otherwise remain additionally explicit.",
+    "Stieltjes_inverse_sqrt": "A^-1/2=(1/pi) integral_0^infinity t^-1/2 (A+tI)^-1 dt. The same residual energy machinery applies to scalar source moments only after controlling this weighted integral and endpoints.",
+    "endpoint_debt": "Two observed positive shifts do not supply integrability at t=0 or infinity, a quadrature error certificate, full inverse-square-root actions, or a noninteger receiver certificate. No measured chart minimum is substituted as a full spectral floor."
+  },
+  "decisive_abstract_control": {
+    "input": "A(k)=[[1,k],[k,delta]], delta=1e-12; m=e1; Q=e1; jets x=y=k at k=0",
+    "base": "r=0 and E=0 exactly",
+    "first": "r_x=r_y=-e2/(1+t)",
+    "mixed": "E_xy=2/((1+t)^2(delta+t)); derivative bound 2/(t(1+t)^2) sees the missed contact although a base-only bound is zero",
+    "integral": "Integral E_xy dt=2*(-log(delta)-1+delta)/(1-delta)^2 = approximately53.26204223196562; full source-log second derivative is its NEGATIVE while compression is zero"
+  },
+  "floating_Galerkin_guard": {
+    "identity_without_orthogonality": "For arbitrary approximate z, r=m-Bz, Re[F-Tr(mdag z)]=Tr(rdag Rr)+Re Tr(zdag r). Thus tiny quadratic energy estimates alone do not imply machine accuracy if Qdag r is nonzero.",
+    "mixed_correction": "Re[<zxy,r>+<zx,ry>+<zy,rx>+<z,rxy>]; computed Qdag residual norms bound these terms for z_j in range(Q).",
+    "independent_error_propagation": "e=Rr; ex=R(rx-Ax e); ey=R(ry-Ay e); exy=R(rxy-Axy e-Ax ey-Ay ex). Norm propagation using ||R||<=1/t bounds scalar source response errors without relying on exact Galerkin orthogonality.",
+    "scope": "Final residual review reports guarded and independently propagated conditional bounds, not just the most flattering quadratic number. Callback arithmetic itself is not directed-rounded."
+  },
+  "material_repair": "Following two explicitly preserved3600s interrupted attempts, avoid iterative/full-Q derivative cost: Qrepair is fixed span of originalQ and ALL four-Ref measured whole residual x/y/xy columns. Compute complete A Qrepair once; differentiate projected Galerkin exactly via B z=m, B z_x=m_x-A_x z, B z_y=m_y-A_y z, B z_xy=m_xy-A_xy z-A_x z_y-A_y z_x projected onto that fixed Qrepair. Only necessary FOUR-Ref Ax z0, Ay z0, Axy z0, Ax zy, Ay zx actions are evaluated and cached for complete residuals. Original source/operator/contact laws are unchanged; basis-column normalization is numerical QR only, not source normalization. This is derivative-enriched shifted Galerkin, not a base-residual analogy.",
+  "actual_wrong_controls": [
+    "Omit A_xy z and BOTH A_x z_y/A_y z_x in the actual whole44336 residual contact; contrast with complete residual.",
+    "Freeze original m_x,m_y,m_xy while retaining inverse/transport jets; contrast with actual noninteger physical-chart source receiver.",
+    "Freeze the entire pulled positive source jets; retain physical operator contact.",
+    "Omit sigma_xy commutator alone from physical-chart contact; retain other physical/source terms."
+  ],
+  "physical_accounting": {
+    "H": "-log A/a, a=.01",
+    "first": "physical_j=h_j+[Omega_j,H]",
+    "mixed": "physical_xy=h_xy+[Omega_x,h_y]+[Omega_y,h_x]+[sigma_xy,H]+([Omega_x,[Omega_y,H]]+[Omega_y,[Omega_x,H]])/2",
+    "source": "n=A^-1/2 m; p=Qpolar n; p_x=n_x+Omega_x n; p_y=n_y+Omega_y n; p_xy=n_xy+Omega_x n_y+Omega_y n_x+[sigma_xy+(Omega_x Omega_y+Omega_y Omega_x)/2]n",
+    "inverse_source_mixed": "n_xy=(A^-1/2)_xy m+(A^-1/2)_x m_y+(A^-1/2)_y m_x+A^-1/2 m_xy",
+    "full_norm_bounds": "All full H, canonical jets, Omega, sigma, commutators/double commutators and pulled-source jets are individually bounded via the recovered matching byte alpha and actual factor tensor norm uppers. They are conditional exact-arithmetic bounds, evaluated in float and prohibitively large; they are NOT accepted numerical physical error bounds.",
+    "source_weighted_chart_prices": "Reported n-dagger contact n divided by n-dagger n are diagnostic ratios only. They do not normalize/adopt a new source or change original receiver probabilities.",
+    "open": "Computing finite-chart physical terms does not identify its Omega/sigma or inverse-half source with the full original immersion. Those full errors remain unpaid and forbid fullphysical current/contact admission."
+  },
+  "nonclaims": [
+    "No imported weak-native amputation graph or Q-ground hypotheses.",
+    "No source/covariance/velocity adoption, fixed-point iteration, parameter fit, new ground, lost channel, hidden floor, lowrank/fulloperator retag, or supplier edits.",
+    "No continuousHaar, wholePhi/SU4/statistical/macrolaw, on-shell Compton or campaign closure.",
+    "Finite integer total identities and noninteger chart finite differences are distinct from individual physical operator certification."
+  ]
+}

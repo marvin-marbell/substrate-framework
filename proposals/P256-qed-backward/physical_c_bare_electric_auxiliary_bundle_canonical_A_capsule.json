@@ -1,0 +1,331 @@
+{
+  "cases": [
+    {
+      "kappa": "0.02",
+      "beta_theta": "100",
+      "Naux": "39062500",
+      "precision": 55,
+      "declared_Utheta": "0.02",
+      "actual_UA": "2.0",
+      "field_nodes_A": [
+        "-0.25",
+        "0.0",
+        "0.25"
+      ],
+      "positive_field_weights": [
+        "0.25",
+        "0.5",
+        "0.25"
+      ],
+      "actual_scalar_AND_valence_loglambda_ratios": [
+        "-0.169939245090534935017072157691219467387004899260776044498114",
+        "0.0",
+        "-0.169939245090534935017072157691219467387004899362733926810591"
+      ],
+      "actual_compressed_kernel_real": [
+        [
+          "0.0420742518681404760856321778574376412623627887527368125149547",
+          "0.0620298270267770591838530975808776772017260418646273542336517",
+          "0.0353741957112109265232621807290336371618959360442249901782842"
+        ],
+        [
+          "0.0620298270267770591838530975808776772017260418646273542336517",
+          "0.0997355701003581694849865149835954671189646577943319790511118",
+          "0.0620298270267770591838530975808776772017260418591922973685269"
+        ],
+        [
+          "0.0353741957112109265232621807290336371618959360442249901782842",
+          "0.0620298270267770591838530975808776772017260418591922973685269",
+          "0.0420742518681404760856321778574376412623627887452631737546439"
+        ]
+      ],
+      "actual_compressed_kernel_imag": [
+        [
+          "3.09894062654718755593397086998518714651891395159063608067714e-160",
+          "-1.42465345877265662237119512282509524884069888120922532462576e-50",
+          "7.57056894629356475274144438173990840508952021739633127509829e-51"
+        ],
+        [
+          "1.42465345877265662237039893167790046179496711741818320480649e-50",
+          "3.15614168401812876748812419724946592911122217131851265327115e-161",
+          "2.75230565180655426143171290043108229691800306761755574717398e-50"
+        ],
+        [
+          "-7.57056894629356475279573214202076006980293620915615673871138e-51",
+          "-2.75230565180655426143219176449158100866609215046313430526221e-50",
+          "1.81548478380088389940382237770938507796664772149955139902001e-160"
+        ]
+      ],
+      "actual_kernel_eigenvalues": [
+        "0.000163631949230161440281368683154206235327921182378212165084371",
+        "0.0067000561569295495623699971284040041004668527047750029553203",
+        "0.177020385730479410653599504886912539307895461405178750193595"
+      ],
+      "actual_hermitian_defect": "7.78907443723846063193372227419629083201471969361667886066187e-71",
+      "actual_sea_overlap_cE_A": "0.56881335752401350153990689619862215089533834390259946621719",
+      "actual_scalar_valence_cB_A": "0.543805584289711792054630904611902295638415677797615954093927",
+      "actual_bare_cE_A": "0.125",
+      "actual_total_cE_A": "0.69381335752401350153990689619862215089533834390259946621719",
+      "conditional_measured_cone_squared": "0.783792324538649710073295661584955844329579660161866733542275",
+      "actual_projected_output_Gram": "0.0312654058069280676005130410535427735417562255687296106687242",
+      "actual_UNCOMPRESSED_canonical_defect_output_Gram": "0.00000154576862210970150579141268917732782490380646147816363164277",
+      "actual_relative_omitted_output_norm": "0.00703137416005986125247528912575155688520336204639080040353425",
+      "actual_operator_spectral_A_certificate": {
+        "fullcanonical_offdiagonal_K_intertwining_norm": "0.00124845803338471133422946882723918744287642943325749089422806",
+        "canonical_Q_K_Q_norm_upper": "0.000408947995847158913487405692164978049815651267737128072953952",
+        "ALL_other_occupation_K_norm_upper": "0.00899685590863749609672292522762951709594432789021681751096465",
+        "complete_ALLoccupation_K_normalizer_interval": [
+          "0.177020385730479410653599504886912539307895461405178750193595",
+          "0.177029210581254214119215755485945081913665635640697882051658"
+        ],
+        "actual_P_A_P_transition_absolute": "0.165263243338094258511100263728146893593875909045632370678155",
+        "complete_canonical_A_transition_error_upper": "0.086608451270309304392686548005013132935499142577322049133368",
+        "complete_canonical_A_transition_absolute_lower": "0.0786547920677849541184137157231337606583767664683103215447869",
+        "complete_canonical_low_transition_TRANSFER_energy_interval": [
+          "3.23914274708867748188173395633245479899671082923951070694356",
+          "3.2741988424970627586856477684703446205476118069832791289174"
+        ],
+        "fullcanonical_A_lowband_nonzero_certified": true,
+        "lowband_state_vector_error_uppers": [
+          "0.0100702923185812511016546100230794811044650600836896505869406",
+          "0.336363512762655966469091581996973050637531510225598545948921"
+        ],
+        "derivation": "Exact Gram is I\u2020K Q K I, so b=||QKI||. Canonical SFdefects carry particle-hole gap>=2g; allother occupation sectors carry at leastg and do NOTcouple to I because particle number/species isconserved. QKQ<=||R\u00b2|| maxlambda exp(-2g); othersectors<=||R\u00b2||maxlambda exp(-g). Schur selfenergy<=b\u00b2/(a-c); positive minmax giveslambda_j in[a_j,(a_j+c+sqrt((a_j-c)\u00b2+4b\u00b2))/2]. Eigenvector rotation plusQleak prices actualA response, withQ A P=0 exactly.",
+        "scope": "FULLcanonical Fock output and alloccupation normalizer bound for declared3field-node AUX subsystem, BEFOREGauss/Coul/colour/Phi/fullfield continuum. No actualfullcore/massless photon pole or activechargedsource inference."
+      },
+      "original_FIXED_meanbody_boundary_initial_sea_projection_Gram": "0.966755197374214460293024754095611215803798994759898251524288",
+      "original_FIXED_meanbody_boundary_projection_loss": "0.0332448026257855397069752459043887841962010052401017484757121",
+      "actual_K_on_original_FIXED_boundary_projected_output_Gram": "0.0303454627899754870532018299039843097976651090481202859762718",
+      "actual_K_on_original_FIXED_boundary_UNCOMPRESSED_defect_output_Gram": "0.00000151131901005401337139297883466757726197731416624209277508157",
+      "actual_K_on_original_FIXED_boundary_relative_defect_output_norm": "0.00705717992386739604911536760146723059850153078132670201680865",
+      "actual_Naux_times_logdet_complement_correction_max": "0.000490814258091250907666312707717700960850780159486055524930693",
+      "original_primitive_occupation0_deleted": false,
+      "scope": "Actual3node REAL-field sampled AUX subsystem, normalizedunitL2 fixedtoron coexactprofile/12sites48Dirac components/Phi0/SU4I. No longitudinalCoul/jointGauss/colour/Phi or activecarrier included. BOTH originalFIXEDmeanbody packet and NEWsea-line packet are executed; canonical24particles/flavour ALLdefects retained. Allotherprimitive occupations bounded, not erased. This is not fullcore or a physicalphoton/sourcepole."
+    },
+    {
+      "kappa": "0.01",
+      "beta_theta": "100",
+      "Naux": "625000000",
+      "precision": 55,
+      "declared_Utheta": "0.02",
+      "actual_UA": "2.0",
+      "field_nodes_A": [
+        "-0.25",
+        "0.0",
+        "0.25"
+      ],
+      "positive_field_weights": [
+        "0.25",
+        "0.5",
+        "0.25"
+      ],
+      "actual_scalar_AND_valence_loglambda_ratios": [
+        "-0.162802789816020090111196552413084947085837170935563875046259",
+        "0.0",
+        "-0.162802789816020090111196552413084947085837170935563875046259"
+      ],
+      "actual_compressed_kernel_real": [
+        [
+          "0.0423755868376830442760151841531168595650936986150035668596455",
+          "0.0623904669883908090240413507157708080096574767471015372586933",
+          "0.0359466020562277260938691092937595084108758627675776657639653"
+        ],
+        [
+          "0.0623904669883908090240413507157708080096574767471015372586933",
+          "0.0997355701003581694849865149835954671189646578903797327233502",
+          "0.0623904669883908090240413507157708080096574768425195356230457"
+        ],
+        [
+          "0.0359466020562277260938691092937595084108758627675776657639653",
+          "0.0623904669883908090240413507157708080096574768425195356230457",
+          "0.0423755868376830442760151841531168595650936987443492869124024"
+        ]
+      ],
+      "actual_compressed_kernel_imag": [
+        [
+          "-2.28284497815964693154727948172242556373568158235133176288211e-159",
+          "-6.41765566152091176175919808941203030604765940339601156629325e-49",
+          "-1.27501785034507194794614983781806788436604636306373827035285e-49"
+        ],
+        [
+          "6.4176556615209117617591792829832555735192175371061641425686e-49",
+          "2.91644446556058501879208317073693510022940711107297430323332e-159",
+          "4.20474606033407305075643912477650445720271957858887171961599e-49"
+        ],
+        [
+          "1.27501785034507194794638627055435062847493192548266555850304e-49",
+          "-4.20474606033407305075641689091044873404949076540218073134931e-49",
+          "-4.04338132333004004845651132275522709567762417573544927704999e-159"
+        ]
+      ],
+      "actual_kernel_eigenvalues": [
+        "0.000148206875173933360969302956119051910669019341784288260790621",
+        "0.00642898478145531818214607485935735115421783591209876112142144",
+        "0.177909552119095006493901505474352783184265199995849537113704"
+      ],
+      "actual_hermitian_defect": "3.36893055283686572052324568597653190964213549748499440171429e-71",
+      "actual_sea_overlap_cE_A": "0.533151412738248483049893347966648523064666413473356116101956",
+      "actual_scalar_valence_cB_A": "0.52096892741126428835582896772187183067467894699380440014803",
+      "actual_bare_cE_A": "0.125",
+      "actual_total_cE_A": "0.658151412738248483049893347966648523064666413473356116101956",
+      "conditional_measured_cone_squared": "0.791563943080765445717013451750350125709910452903665730515031",
+      "actual_projected_output_Gram": "0.0315884525710592853842033517001836614014300945942105357608773",
+      "actual_UNCOMPRESSED_canonical_defect_output_Gram": "0.000000355651974696140932378801713612295814250088949179606392456202",
+      "actual_relative_omitted_output_norm": "0.00335543195693383010822793588785394611374615324645171961387177",
+      "actual_operator_spectral_A_certificate": {
+        "fullcanonical_offdiagonal_K_intertwining_norm": "0.00059858075937454973025975464491646578068398588849448837353611",
+        "canonical_Q_K_Q_norm_upper": "0.0000896020054278066609904501380750789389365211469374241680827112",
+        "ALL_other_occupation_K_norm_upper": "0.00421129425510691306655115648952871013001649390605893585604877",
+        "complete_ALLoccupation_K_normalizer_interval": [
+          "0.177909552119095006493901505474352783184265199995849537113704",
+          "0.177911567049733098028407823432666291065246178518957890006411"
+        ],
+        "actual_P_A_P_transition_absolute": "0.16578775928355963697265683489089872947345278999762394132607",
+        "complete_canonical_A_transition_error_upper": "0.0377881591206951794328372338970182218453417834985697843100713",
+        "complete_canonical_A_transition_absolute_lower": "0.127999600162864457539819600993880507628111006499054157016636",
+        "complete_canonical_low_transition_TRANSFER_energy_interval": [
+          "3.31178205161016742013945190854101155965790649946424825091532",
+          "3.32046997452622792745443570171740269648757984758999752316831"
+        ],
+        "fullcanonical_A_lowband_nonzero_certified": true,
+        "lowband_state_vector_error_uppers": [
+          "0.00477716916093541717985436305668043219906127327670810510891579",
+          "0.146375467321845300551494572531392455182305860717571032130175"
+        ],
+        "derivation": "Exact Gram is I\u2020K Q K I, so b=||QKI||. Canonical SFdefects carry particle-hole gap>=2g; allother occupation sectors carry at leastg and do NOTcouple to I because particle number/species isconserved. QKQ<=||R\u00b2|| maxlambda exp(-2g); othersectors<=||R\u00b2||maxlambda exp(-g). Schur selfenergy<=b\u00b2/(a-c); positive minmax giveslambda_j in[a_j,(a_j+c+sqrt((a_j-c)\u00b2+4b\u00b2))/2]. Eigenvector rotation plusQleak prices actualA response, withQ A P=0 exactly.",
+        "scope": "FULLcanonical Fock output and alloccupation normalizer bound for declared3field-node AUX subsystem, BEFOREGauss/Coul/colour/Phi/fullfield continuum. No actualfullcore/massless photon pole or activechargedsource inference."
+      },
+      "original_FIXED_meanbody_boundary_initial_sea_projection_Gram": "0.968770769163607656200603320741495313992489023259613474401789",
+      "original_FIXED_meanbody_boundary_projection_loss": "0.0312292308363923437993966792585046860075109767403865255982112",
+      "actual_K_on_original_FIXED_boundary_projected_output_Gram": "0.0306755455294414710310853159738405647484744175551813423146904",
+      "actual_K_on_original_FIXED_boundary_UNCOMPRESSED_defect_output_Gram": "0.000000346790951931391147419669122266359057156252059609599116434552",
+      "actual_K_on_original_FIXED_boundary_relative_defect_output_norm": "0.00336230983908420585107351008145130510371985816622325960975273",
+      "actual_Naux_times_logdet_complement_correction_max": "0.000110634984804329648062019067426136239097095171673954348336452",
+      "original_primitive_occupation0_deleted": false,
+      "scope": "Actual3node REAL-field sampled AUX subsystem, normalizedunitL2 fixedtoron coexactprofile/12sites48Dirac components/Phi0/SU4I. No longitudinalCoul/jointGauss/colour/Phi or activecarrier included. BOTH originalFIXEDmeanbody packet and NEWsea-line packet are executed; canonical24particles/flavour ALLdefects retained. Allotherprimitive occupations bounded, not erased. This is not fullcore or a physicalphoton/sourcepole."
+    },
+    {
+      "kappa": "0.01",
+      "beta_theta": "1000",
+      "Naux": "6250000000",
+      "precision": 55,
+      "declared_Utheta": "0.02",
+      "actual_UA": "20.0",
+      "field_nodes_A": [
+        "-0.25",
+        "0.0",
+        "0.25"
+      ],
+      "positive_field_weights": [
+        "0.25",
+        "0.5",
+        "0.25"
+      ],
+      "actual_scalar_AND_valence_loglambda_ratios": [
+        "-0.162807558243158023227198848055371219792680954559762647996052",
+        "0.0",
+        "-0.162807558243158023227198848055371219792680987186284987988674"
+      ],
+      "actual_compressed_kernel_real": [
+        [
+          "0.0134002732609540104941473774773206452207067599535401355255176",
+          "0.0198687606378415407531550715262610399026683520300785946062864",
+          "0.0116914771389097751515331493130743231322707164913057012004834"
+        ],
+        [
+          "0.0198687606378415407531550715262610399026683520300785946062864",
+          "0.0315391565252520006030893690295710493324247510183685556847271",
+          "0.0198687606378415407531550715262610399026683515084410792123619"
+        ],
+        [
+          "0.0116914771389097751515331493130743231322707164913057012004834",
+          "0.0198687606378415407531550715262610399026683515084410792123619",
+          "0.0134002732609540104941473774773206452207067592516222705714646"
+        ]
+      ],
+      "actual_compressed_kernel_imag": [
+        [
+          "3.62459801337749632740812051398589993537343218548210333934204e-159",
+          "3.68000632516961577262847609088474434207357975719402466168343e-49",
+          "-3.17858240459691546793426170111547637355736670943204787081487e-50"
+        ],
+        [
+          "-3.68000632516961577262847615513290390471959571676404389168485e-49",
+          "9.22260718056394635237984619046120728565677750733547732944088e-159",
+          "-4.22012163651747460827027432211562029956718142441966006453261e-49"
+        ],
+        [
+          "3.178582404596915467934251585097281359406398440858033118565e-50",
+          "4.22012163651747460827027386621500665509080350260116601476479e-49",
+          "1.25994884747917921221560619152545700362351500865284114982783e-158"
+        ]
+      ],
+      "actual_kernel_eigenvalues": [
+        "0.0000324628143943551243412019474774841962564511040742685550322925",
+        "0.00170879612204423534261422816424632208843604311127550184844575",
+        "0.0565984441107214311244286938724885334891457760081811913805493"
+      ],
+      "actual_hermitian_defect": "1.57182151451567232512375831813510646933558461492772848517139e-73",
+      "actual_sea_overlap_cE_A": "0.533159890671777757710371687945220681960750843712447800348093",
+      "actual_scalar_valence_cB_A": "0.520984186378105674327036313777187903336579106793676217575562",
+      "actual_bare_cE_A": "0.0124999999999999999999999999999999999999999999999999999999681",
+      "actual_total_cE_A": "0.545659890671777757710371687945220681960750843712447800350132",
+      "conditional_measured_cone_squared": "0.95477823326304393323635798874420734211298181673862355405844",
+      "actual_projected_output_Gram": "0.00319787219232959069462605939279670163559345096189082304839749",
+      "actual_UNCOMPRESSED_canonical_defect_output_Gram": "0.0000000367506260775813781223857674648109877410808104121684118492318",
+      "actual_relative_omitted_output_norm": "0.00339001656038636126841032891029335141461729351188835969481164",
+      "actual_operator_spectral_A_certificate": {
+        "fullcanonical_offdiagonal_K_intertwining_norm": "0.000192255249785590415661949260396842077524775140294196988035281",
+        "canonical_Q_K_Q_norm_upper": "0.0000285328613867130272953420882126889405513765342867542433007454",
+        "ALL_other_occupation_K_norm_upper": "0.00134104448517551228288107814599638020591469711147744942118863",
+        "complete_ALLoccupation_K_normalizer_interval": [
+          "0.0565984441107214311244286938724885334891457760081811913805493",
+          "0.0565990974908195835991470425357828591718807252284204160570336"
+        ],
+        "actual_P_A_P_transition_absolute": "0.166397465107866541473760403939039632926010548869721472837203",
+        "complete_canonical_A_transition_error_upper": "0.0463604735492892189672441800859633776709821982462582272160306",
+        "complete_canonical_A_transition_absolute_lower": "0.120036991558577322506516223853076255255028350623463245620535",
+        "complete_canonical_low_transition_TRANSFER_energy_interval": [
+          "3.48756346983246131926425325737679262351750387155854669373054",
+          "3.5002039393119166014604633678652870789455303845534685727268"
+        ],
+        "fullcanonical_A_lowband_nonzero_certified": true,
+        "lowband_state_vector_error_uppers": [
+          "0.00482309946658312233542372402020289622035229912534736222466963",
+          "0.180618794730573753533552996323650614463576493859685546638417"
+        ],
+        "derivation": "Exact Gram is I\u2020K Q K I, so b=||QKI||. Canonical SFdefects carry particle-hole gap>=2g; allother occupation sectors carry at leastg and do NOTcouple to I because particle number/species isconserved. QKQ<=||R\u00b2|| maxlambda exp(-2g); othersectors<=||R\u00b2||maxlambda exp(-g). Schur selfenergy<=b\u00b2/(a-c); positive minmax giveslambda_j in[a_j,(a_j+c+sqrt((a_j-c)\u00b2+4b\u00b2))/2]. Eigenvector rotation plusQleak prices actualA response, withQ A P=0 exactly.",
+        "scope": "FULLcanonical Fock output and alloccupation normalizer bound for declared3field-node AUX subsystem, BEFOREGauss/Coul/colour/Phi/fullfield continuum. No actualfullcore/massless photon pole or activechargedsource inference."
+      },
+      "original_FIXED_meanbody_boundary_initial_sea_projection_Gram": "0.968770651988407052730922726815508042996911508068334934795716",
+      "original_FIXED_meanbody_boundary_projection_loss": "0.0312293480115929472690772731844919570030884919316650652042844",
+      "actual_K_on_original_FIXED_boundary_projected_output_Gram": "0.00310515170923797341583645713989078298688475797446231161220882",
+      "actual_K_on_original_FIXED_boundary_UNCOMPRESSED_defect_output_Gram": "0.0000000358138182732587958763478104068072040512037207528855698223846",
+      "actual_K_on_original_FIXED_boundary_relative_defect_output_norm": "0.00339612683188389344254327093747086811350005793125619175169037",
+      "actual_Naux_times_logdet_complement_correction_max": "0.000110636750665497041379581238812544011638995368624579666428971",
+      "original_primitive_occupation0_deleted": false,
+      "scope": "Actual3node REAL-field sampled AUX subsystem, normalizedunitL2 fixedtoron coexactprofile/12sites48Dirac components/Phi0/SU4I. No longitudinalCoul/jointGauss/colour/Phi or activecarrier included. BOTH originalFIXEDmeanbody packet and NEWsea-line packet are executed; canonical24particles/flavour ALLdefects retained. Allotherprimitive occupations bounded, not erased. This is not fullcore or a physicalphoton/sourcepole."
+    }
+  ],
+  "derivation": "I(q)=sea(q)^N; I\u2020K I=sqrtlambda(q) R_A\u00b2(q,qprime) sqrtlambda(qprime) det[Vq\u2020Vqprime]^N. Complementary-projector determinant exactly prices operatorQ K I and SAMEoriginalfixedboundary output on positive real-field sampling without hugeNF allocation. SFscalar included. No microscopic-law/source cutover.",
+  "limits": [
+    "Finitek coefficients and short4x3x1 profile do not certify macro remainder/geometry.",
+    "Gauss, fullcolour/Phi, original boundary transformation, alloccupation normalizer, actual activechargedsource/window/pole remain open.",
+    "The mean-sea projector is NOT imposed on microscopic law; output norm outside it is actually measured."
+  ],
+  "predecessor_coordinate_falsifier": "Historical39c0/45dps unnormalizedprofile hadnormE1.2 whileheat usedUA directly: not a canonical-coordinate cone claim. Preserved unchanged. This successor normalizesprofileexactly to1 and raisesprecision55; bareUtheta.02 mapsUA=beta*.02 onthatcanonicalmode.",
+  "execution": {
+    "source_at_IMPORT": "4104b4e425276276b9e3a912f074c1a0a958b4a051ae31657f9d8e853724223b",
+    "source_bytes_at_IMPORT": "#!/usr/bin/env python3\n\"\"\"Actual auxiliary-sea field-bundle compression AND uncompressed output price.\n\nNo microscopic auxiliary occupation is deleted. This DIAGNOSTIC embeds a new\nfield-dependent normalized sea packet and measures its omitted fullcanonical\nFock output via exact Slater determinants, without allocating Naux Fock arrays.\nIt is not an accepted replacement of fixed-boundary/fullGauss dynamics. Uses\nactual intrinsicC scalar+valence SF, not an assumed standard Wilson action.\n\"\"\"\nfrom __future__ import annotations\nimport argparse\nimport ast\nfrom fractions import Fraction\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport sys\nimport time\nfrom typing import Any\nif __name__=='__main__':\n    for name in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[name]='1'\nimport mpmath as mp\nimport physical_c_bare_electric_loops as loops\nSOURCE_BYTES=Path(__file__).read_bytes();LOOP_BYTES=Path(loops.__file__).read_bytes()\nif hashlib.sha256(LOOP_BYTES).hexdigest()!='01245b29b505d724ed8b301d07cb00c022e1f5a1a300cec3db0661c03c943e00':\n    raise ArithmeticError('Aux bundle probe binds captured precise-loop01245')\n\n\ndef extended_precise_state():\n    \"\"\"AST extension exposes existing exact eigensystem locals; no equation edit.\"\"\"\n    tree=ast.parse(LOOP_BYTES)\n    function=next(node for node in tree.body if isinstance(node,ast.FunctionDef) and node.name=='hp_state')\n    function.name='bundle_precise_state'\n    matches=0\n    for node in ast.walk(function):\n        if isinstance(node,ast.Assign) and isinstance(node.value,ast.Call):\n            if any(isinstance(t,ast.Subscript) and isinstance(t.value,ast.Name) and t.value.id=='out' for t in node.targets):\n                node.value.keywords.extend([ast.keyword(arg='eigenvalues',value=ast.Name(id='e',ctx=ast.Load())),\n                    ast.keyword(arg='fullframe',value=ast.Name(id='r',ctx=ast.Load()))]);matches+=1\n    if matches!=1:raise ArithmeticError('Captured precise-state AST contract changed')\n    module=ast.fix_missing_locations(ast.Module(body=[function],type_ignores=[]))\n    namespace=dict(vars(loops));exec(compile(module,'<captured-hp-state-eigensystem-extension>','exec'),namespace)\n    return namespace['bundle_precise_state'],ast.unparse(module)\n\n\nHP_STATE,EXTENDED_SOURCE=extended_precise_state()\n\n\ndef aligned_frame(reference,state):\n    frame=state['W'];overlap=reference.H*frame\n    values,vectors=mp.eighe(overlap.H*overlap)\n    if min(values)<=0:raise ArithmeticError('Actual occupiedframe alignment lost invertibility')\n    inverse_root=vectors*mp.diag([1/mp.sqrt(x) for x in values])*vectors.H\n    return frame*inverse_root*overlap.H\n\n\ndef determinant_correction(state,framej,framek):\n    \"\"\"Exact canonical \u0393(T) complement correction, not only valence eigenvalues.\n\n    det(Vk\u2020 T_i Vj)/det(T_i,+) = det(Ak\u2020)det(Aj)det(I+Z),\n    Z=(Ak\u2020 T+ Aj)^-1 Ck\u2020 T- Cj. Every canonical defect appears in det(I+Z).\n    \"\"\"\n    size=len(state['eigenvalues']);n=size//2\n    vp=state['fullframe'][:,n:];vm=state['fullframe'][:,:n]\n    aj=vp.H*framej;ak=vp.H*framek;cj=vm.H*framej;ck=vm.H*framek\n    plus=mp.diag([mp.exp(x) for x in state['eigenvalues'][n:]])\n    minus=mp.diag([mp.exp(x) for x in state['eigenvalues'][:n]])\n    z=(ak.H*plus*aj)**-1*(ck.H*minus*cj)\n    # Highprecision logdet(I+Z), with Z built from complementary projectors:\n    # never subtract nearly equal full and projected scalar vacuum weights.\n    correction=mp.log(mp.det(mp.eye(n)+z))\n    return correction\n\n\ndef complement_gram(states,frames,inputs,ratios,heat,weights,loglambda,naux):\n    \"\"\"Exact Q K J Gram for any normalized Slater input frame J per fieldnode.\"\"\"\n    size=len(states);result=mp.zeros(size);largest=mp.mpf(0)\n    for i in range(size):\n        for j in range(size):\n            for l in range(size):\n                correction=naux*determinant_correction(states[i],inputs[j],inputs[l])\n                largest=max(largest,abs(correction))\n                sea=mp.exp(naux*(mp.log(mp.det(inputs[l].H*frames[i]))+mp.log(mp.det(frames[i].H*inputs[j]))))\n                term=weights[i]*mp.sqrt(weights[j]*weights[l])*heat[i,j]*heat[i,l]\n                term*=ratios[j]*ratios[l]*mp.exp(loglambda[i]+(loglambda[j]+loglambda[l])/2)\n                result[l,j]+=term*sea*mp.expm1(correction)\n    defect=mp.norm(result-result.H)\n    if defect>mp.mpf('1e-25'):raise ArithmeticError('Exact complementary output Gram lost Hermiticity')\n    eigen,_=mp.eighe((result+result.H)/2)\n    if min(eigen)<-mp.mpf('1e-25'):raise ArithmeticError('Exact complementary output Gram lost positivity')\n    return (result+result.H)/2,largest\n\n\ndef positive_polar_frame(matrix):\n    values,vectors=mp.eighe(matrix.H*matrix)\n    if min(values)<=0:raise ArithmeticError('Actual SF-prepared Slater frame lost rank')\n    return matrix*vectors*mp.diag([1/mp.sqrt(x) for x in values])*vectors.H\n\n\ndef spectral_A_certificate(kernel,gram,heat,weights,loglambda,states,nodes):\n    \"\"\"Fullcanonical K lowband bounds; A commutes with pointwise sea projector.\"\"\"\n    eigen,vectors=mp.eighe((kernel+kernel.H)/2);qe,_=mp.eighe(gram)\n    offdiag=mp.sqrt(max(qe))\n    weighted_heat=mp.matrix([[mp.sqrt(weights[i]*weights[j])*heat[i,j] for j in range(len(nodes))] for i in range(len(nodes))])\n    he,_=mp.eighe(weighted_heat);heatnorm=max(he)\n    gap=min(s['gap'] for s in states);sfmax=max(mp.exp(x) for x in loglambda)\n    canonical_Q_upper=heatnorm*sfmax*mp.exp(-2*gap)\n    other_occupation_upper=heatnorm*sfmax*mp.exp(-gap)\n    a0=eigen[len(eigen)-1];a1=eigen[len(eigen)-2]\n    if not a0>other_occupation_upper:raise ArithmeticError('Alloccupation sectors could dominate the sea normalizer')\n    if not a1>canonical_Q_upper:raise ArithmeticError('Actual canonical low-A band not separated from auxiliary bound')\n    upper=lambda a:(a+canonical_Q_upper+mp.sqrt((a-canonical_Q_upper)**2+4*offdiag**2))/2\n    state_errors=[]\n    for index in (len(eigen)-1,len(eigen)-2):\n        a=eigen[index];selfenergy=offdiag**2/(a-canonical_Q_upper)\n        isolation=min(abs(a-eigen[j]) for j in range(len(eigen)) if j!=index)\n        if selfenergy>=isolation:raise ArithmeticError('Actual low-A eigenvector bound unresolved')\n        p_error=mp.sqrt(2)*selfenergy/(isolation-selfenergy)\n        q_error=mp.sqrt(2)*offdiag/(a-canonical_Q_upper)\n        state_errors.append(p_error+q_error)\n    coordinate=mp.diag(nodes)\n    matrixelement=abs((vectors[:,len(eigen)-2].H*coordinate*vectors[:,len(eigen)-1])[0])\n    response_error=max(abs(x) for x in nodes)*sum(state_errors)\n    return dict(fullcanonical_offdiagonal_K_intertwining_norm=mp.nstr(offdiag,60),\n        canonical_Q_K_Q_norm_upper=mp.nstr(canonical_Q_upper,60),\n        ALL_other_occupation_K_norm_upper=mp.nstr(other_occupation_upper,60),\n        complete_ALLoccupation_K_normalizer_interval=[mp.nstr(a0,60),mp.nstr(upper(a0),60)],\n        actual_P_A_P_transition_absolute=mp.nstr(matrixelement,60),\n        complete_canonical_A_transition_error_upper=mp.nstr(response_error,60),\n        complete_canonical_A_transition_absolute_lower=mp.nstr(max(0,matrixelement-response_error),60),\n        complete_canonical_low_transition_TRANSFER_energy_interval=[mp.nstr(mp.log(a0/upper(a1)),60),mp.nstr(mp.log(upper(a0)/a1),60)],\n        fullcanonical_A_lowband_nonzero_certified=bool(matrixelement>response_error),\n        lowband_state_vector_error_uppers=[mp.nstr(x,60) for x in state_errors],\n        derivation='Exact Gram is I\u2020K Q K I, so b=||QKI||. Canonical SFdefects carry particle-hole gap>=2g; allother occupation sectors carry at leastg and do NOTcouple to I because particle number/species isconserved. QKQ<=||R\u00b2|| maxlambda exp(-2g); othersectors<=||R\u00b2||maxlambda exp(-g). Schur selfenergy<=b\u00b2/(a-c); positive minmax giveslambda_j in[a_j,(a_j+c+sqrt((a_j-c)\u00b2+4b\u00b2))/2]. Eigenvector rotation plusQleak prices actualA response, withQ A P=0 exactly.',\n        scope='FULLcanonical Fock output and alloccupation normalizer bound for declared3field-node AUX subsystem, BEFOREGauss/Coul/colour/Phi/fullfield continuum. No actualfullcore/massless photon pole or activechargedsource inference.')\n\n\ndef run_case(ktext: str,beta_text: str,dps: int,cache: dict[tuple[str,str,int],Any]) -> dict[str,Any]:\n    with mp.workdps(dps):\n        beta=mp.mpf(beta_text);count=Fraction(beta_text)/(16*Fraction(ktext)**4)\n        if count.denominator!=1 or count.numerator%2:raise ArithmeticError('Probe requires exact even integer Naux')\n        naux=mp.mpf(count.numerator)\n        b=loops.background((4,3,1));nodes=[mp.mpf('-.25'),mp.mpf('0'),mp.mpf('.25')]\n        norm=mp.sqrt(sum(mp.mpf(str(x))**2 for row in b['a'] for x in row))\n        b['a']=loops.np.array([[mp.mpf(str(x))/norm for x in row] for row in b['a']],dtype=object)\n        b['normB']=mp.mpf(str(b['normB']))/norm**2;b['normE']=mp.mpf(1)\n        weights=[mp.mpf('.25'),mp.mpf('.5'),mp.mpf('.25')]\n        states=[]\n        for q in nodes:\n            key=(ktext,str(q/mp.sqrt(beta)),dps)\n            if key not in cache:cache[key]=HP_STATE(ktext,b,str(q/mp.sqrt(beta)))['C']\n            states.append(cache[key])\n        origin=states[1]['W'];frames=[aligned_frame(origin,s) for s in states]\n        loglambda=[naux*(s['loglambda']-states[1]['loglambda']) for s in states]\n        utheta=mp.mpf('.02');ua=beta*utheta\n        heat=mp.matrix([[mp.exp(-(x-y)**2/(4*ua))/mp.sqrt(4*mp.pi*ua) for y in nodes] for x in nodes])\n        overlap=mp.matrix([[mp.log(mp.det(x.H*y)) for y in frames] for x in frames])\n        kernel=mp.matrix([[mp.sqrt(weights[i]*weights[j])*heat[i,j]*mp.exp((loglambda[i]+loglambda[j])/2+naux*overlap[i,j]) for j in range(3)] for i in range(3)])\n        hermitian_defect=mp.norm(kernel-kernel.H);eigen,_=mp.eighe((kernel+kernel.H)/2)\n        if min(eigen)<-mp.mpf('1e-25'):raise ArithmeticError('Actual sea-bundle compressed kernel lost positivity')\n        boundary=mp.matrix([mp.sqrt(w)*mp.exp(-q*q/2) for w,q in zip(weights,nodes,strict=True)])\n        boundary/=mp.sqrt(sum(abs(x)**2 for x in boundary));projected=kernel*boundary\n        projected_norm=sum(abs(x)**2 for x in projected)\n        gram,max_log_correction=complement_gram(states,frames,frames,[mp.mpf(1)]*3,heat,weights,loglambda,naux)\n        omitted=mp.re((boundary.H*gram*boundary)[0])\n        spectral=spectral_A_certificate(kernel,gram,heat,weights,loglambda,states,nodes)\n        original_projection=sum(abs(boundary[i])**2*mp.exp(2*naux*mp.re(overlap[i,1])) for i in range(3))\n        original_frames=[];original_ratios=[]\n        for i,state in enumerate(states):\n            r=state['fullframe'];onebodySF=r*mp.diag([mp.exp(x/2) for x in state['eigenvalues']])*r.H\n            original_frames.append(positive_polar_frame(onebodySF*origin))\n            correction=naux*determinant_correction(state,origin,origin)\n            original_ratios.append(mp.exp(naux*mp.re(overlap[i,1])+mp.re(correction)/2))\n        original_kernel=mp.matrix([[mp.sqrt(weights[i]*weights[j])*heat[i,j]*mp.exp((loglambda[i]+loglambda[j])/2)*original_ratios[j]*mp.exp(naux*mp.log(mp.det(frames[i].H*original_frames[j]))) for j in range(3)] for i in range(3)])\n        original_gram,_=complement_gram(states,frames,original_frames,original_ratios,heat,weights,loglambda,naux)\n        original_projected=sum(abs(x)**2 for x in original_kernel*boundary)\n        original_omitted=mp.re((boundary.H*original_gram*boundary)[0])\n        ce=-naux*mp.re(overlap[0,2])/((nodes[2]-nodes[0])**2*mp.mpf(str(b['normE'])))\n        cb=-(loglambda[0]+loglambda[2])/(2*nodes[2]**2*mp.mpf(str(b['normB'])))\n        return dict(kappa=ktext,beta_theta=beta_text,Naux=str(int(naux)),precision=dps,\n            declared_Utheta=str(utheta),actual_UA=mp.nstr(ua,50),field_nodes_A=[str(x) for x in nodes],positive_field_weights=[str(x) for x in weights],\n            actual_scalar_AND_valence_loglambda_ratios=[mp.nstr(x,60) for x in loglambda],\n            actual_compressed_kernel_real=[[mp.nstr(mp.re(kernel[i,j]),60) for j in range(3)] for i in range(3)],\n            actual_compressed_kernel_imag=[[mp.nstr(mp.im(kernel[i,j]),60) for j in range(3)] for i in range(3)],\n            actual_kernel_eigenvalues=[mp.nstr(x,60) for x in eigen],actual_hermitian_defect=mp.nstr(hermitian_defect,60),\n            actual_sea_overlap_cE_A=mp.nstr(ce,60),actual_scalar_valence_cB_A=mp.nstr(cb,60),\n            actual_bare_cE_A=mp.nstr(1/(4*ua),60),actual_total_cE_A=mp.nstr(ce+1/(4*ua),60),\n            conditional_measured_cone_squared=mp.nstr(cb/(ce+1/(4*ua)),60),\n            actual_projected_output_Gram=mp.nstr(projected_norm,60),actual_UNCOMPRESSED_canonical_defect_output_Gram=mp.nstr(omitted,60),\n            actual_relative_omitted_output_norm=mp.nstr(mp.sqrt(omitted/projected_norm),60),\n            actual_operator_spectral_A_certificate=spectral,\n            original_FIXED_meanbody_boundary_initial_sea_projection_Gram=mp.nstr(original_projection,60),\n            original_FIXED_meanbody_boundary_projection_loss=mp.nstr(1-original_projection,60),\n            actual_K_on_original_FIXED_boundary_projected_output_Gram=mp.nstr(original_projected,60),\n            actual_K_on_original_FIXED_boundary_UNCOMPRESSED_defect_output_Gram=mp.nstr(original_omitted,60),\n            actual_K_on_original_FIXED_boundary_relative_defect_output_norm=mp.nstr(mp.sqrt(original_omitted/original_projected),60),\n            actual_Naux_times_logdet_complement_correction_max=mp.nstr(max_log_correction,60),\n            original_primitive_occupation0_deleted=False,\n            scope='Actual3node REAL-field sampled AUX subsystem, normalizedunitL2 fixedtoron coexactprofile/12sites48Dirac components/Phi0/SU4I. No longitudinalCoul/jointGauss/colour/Phi or activecarrier included. BOTH originalFIXEDmeanbody packet and NEWsea-line packet are executed; canonical24particles/flavour ALLdefects retained. Allotherprimitive occupations bounded, not erased. This is not fullcore or a physicalphoton/sourcepole.')\n\n\ndef main():\n    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',required=True);args=parser.parse_args();started=time.time();cache={}\n    cases=[run_case(k,b,55,cache) for k,b in [('0.02','100'),('0.01','100'),('0.01','1000')]]\n    inputs=json.dumps(dict(cases=[['.02','100'],['.01','100'],['.01','1000']],dps=55,field_nodes=['-.25','0','.25'],weights=['.25','.5','.25'],declared_Utheta='.02',mode_link_L2_norm=1,original_fixedbody_boundary_retained=True,captured_loop=hashlib.sha256(LOOP_BYTES).hexdigest()),sort_keys=True,separators=(',',':'))\n    result: dict[str,Any]=dict(cases=cases,derivation='I(q)=sea(q)^N; I\u2020K I=sqrtlambda(q) R_A\u00b2(q,qprime) sqrtlambda(qprime) det[Vq\u2020Vqprime]^N. Complementary-projector determinant exactly prices operatorQ K I and SAMEoriginalfixedboundary output on positive real-field sampling without hugeNF allocation. SFscalar included. No microscopic-law/source cutover.',\n        limits=['Finitek coefficients and short4x3x1 profile do not certify macro remainder/geometry.','Gauss, fullcolour/Phi, original boundary transformation, alloccupation normalizer, actual activechargedsource/window/pole remain open.','The mean-sea projector is NOT imposed on microscopic law; output norm outside it is actually measured.'],\n        predecessor_coordinate_falsifier='Historical39c0/45dps unnormalizedprofile hadnormE1.2 whileheat usedUA directly: not a canonical-coordinate cone claim. Preserved unchanged. This successor normalizesprofileexactly to1 and raisesprecision55; bareUtheta.02 mapsUA=beta*.02 onthatcanonicalmode.',\n        execution=dict(source_at_IMPORT=hashlib.sha256(SOURCE_BYTES).hexdigest(),source_bytes_at_IMPORT=SOURCE_BYTES.decode(),captured_loop_sha256=hashlib.sha256(LOOP_BYTES).hexdigest(),captured_loop_bytes_at_IMPORT=LOOP_BYTES.decode(),\n            exact_AST_extended_function=EXTENDED_SOURCE,input_json=inputs,input_sha256=hashlib.sha256(inputs.encode()).hexdigest(),runtime_seconds=time.time()-started,executable=sys.executable,python=sys.version,mpmath=mp.__version__,\n            startup_unchanged=Path(__file__).read_bytes()==SOURCE_BYTES and Path(loops.__file__).read_bytes()==LOOP_BYTES))\n    Path(args.output).write_text(json.dumps(result,indent=2)+'\\n');print(json.dumps(dict(output=args.output,source=result['execution']['source_at_IMPORT'],cases=cases)))\nif __name__=='__main__':main()\n",
+    "captured_loop_sha256": "01245b29b505d724ed8b301d07cb00c022e1f5a1a300cec3db0661c03c943e00",
+    "captured_loop_bytes_at_IMPORT": "#!/usr/bin/env python3\n\"\"\"Actual scalar+valence C/T4 curl and mixed-temporal diagnostic, no Fock array.\n\nAction convention is S=cB sum Fij\u00b2+cE sum F0j\u00b2; beta=2c.  The\nhigh-precision evaluator is an independent exact-frame evaluation of the\ncaptured CartesianCWilson equations at Phi=0, SU4=I, not a replacement core.\nA nonzero local winding profile is retained as an adverse control.\n\"\"\"\nfrom __future__ import annotations\nimport argparse\nfrom dataclasses import replace\nimport hashlib\nimport json\nimport math\nimport os\nfrom pathlib import Path\nimport platform\nimport sys\nimport time\nfrom typing import Any\nfor _name in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):\n    os.environ[_name]='1'\nimport mpmath as mp\nimport numpy as np\nfrom scipy.linalg import eigh\nROOT=Path(__file__).resolve().parent\nSOURCE_BYTES=Path(__file__).read_bytes()\nCORE_BYTES=(ROOT/'physical_c_bare_electric_kernel.py').read_bytes()\nimport physical_c_bare_electric_kernel as core\nalpha=core.alpha\nIMPORT_EPOCH=dict(core_sha256=hashlib.sha256(CORE_BYTES).hexdigest(),\n    core_bytes=CORE_BYTES.decode(),reference_sha256=core.REFERENCE_HASH,\n    reference_bytes=core.REFERENCE_BYTES.decode(),alpha_sha256=alpha.SOURCE_HASHES,\n    alpha_bytes={name:value.decode() for name,value in alpha.SOURCE_BYTES.items()})\n\n\ndef graph(shape: tuple[int,int,int]) -> tuple[np.ndarray,np.ndarray]:\n    coordinates=np.array(list(np.ndindex(shape)),int)\n    index={tuple(x):i for i,x in enumerate(coordinates)}\n    targets=np.array([[index[tuple((x[q]+(q==j))%shape[q] for q in range(3))]\n        for j in range(3)] for x in coordinates],int)\n    return coordinates,targets\n\n\ndef background(shape: tuple[int,int,int]) -> dict[str,Any]:\n    coordinates,targets=graph(shape);v=len(coordinates)\n    raw=np.zeros((v,3));raw[:,1]=np.cos(2*np.pi*coordinates[:,0]/shape[0])*np.cos(2*np.pi*coordinates[:,1]/shape[1])\n    incidence=np.zeros((v,3*v))\n    for x in range(v):\n        for j in range(3):\n            incidence[x,3*x+j]-=1;incidence[targets[x,j],3*x+j]+=1\n    a=(raw.ravel()-incidence.T@np.linalg.pinv(incidence@incidence.T)@incidence@raw.ravel()).reshape(v,3)\n    # Exact Fourier values are rational for the selected 4x3x1 graph.\n    a=np.round(a,14)\n    curl=np.array([a[:,j]+a[targets[:,j],l]-a[targets[:,l],j]-a[:,l]\n        for j in range(3) for l in range(j+1,3)])\n    line_torons=[]\n    for x in range(v):\n        for j in range(3):\n            y=x;s=0.\n            for _ in range(shape[j]):s+=a[y,j];y=targets[y,j]\n            line_torons.append(s)\n    return dict(coordinates=coordinates,targets=targets,a=a,curl=curl,\n        normB=float(np.sum(curl**2)),normE=float(np.sum(a**2)),\n        divergence=float(np.linalg.norm(incidence@a.ravel())),max_line_toron=float(max(map(abs,line_torons))),\n        phi=np.zeros((v,4,4,4),complex),links=np.tile(np.eye(4),(v,3,1,1)))\n\n\ndef make_law(k: float,b: dict[str,Any]) -> Any:\n    return alpha.CartesianCWilson(alpha.gamma_frame(),replace(alpha.Parameters(),\n        mass=math.log(1/(2*k)-3),spacing=1.),b['targets'])\n\n\ndef float_state(law: Any,b: dict[str,Any],amplitude: float,mode: str,profile: np.ndarray|None=None) -> dict[str,Any]:\n    phases=amplitude*(b['a'] if profile is None else profile)\n    p=law.potential(phases,b['phi'],b['links']) if mode=='C' else law._base(phases,b['phi'],b['links'])\n    e,r=eigh(p['h']);nv=len(e)//2;pref=p['pref'] if mode=='C' else p['scalar']\n    return dict(h=p['h'],pref=pref,e=e,r=r,W=r[:,-nv:],loglambda=float(pref+np.sum(e[-nv:])),\n        valence=float(np.sum(e[-nv:])),gap=float(min(e[nv],-e[nv-1])))\n\n\ndef float_probe(k: float,b: dict[str,Any],amplitude: float) -> dict[str,Any]:\n    law=make_law(k,b);rows={}\n    for mode in ('C','positiveT4'):\n        zero=float_state(law,b,0.,mode);plus=float_state(law,b,amplitude,mode);minus=float_state(law,b,-amplitude,mode)\n        cb=-(plus['loglambda']+minus['loglambda']-2*zero['loglambda'])/(2*amplitude**2*b['normB'])\n        overlap=minus['W'].conj().T@plus['W']\n        loss=-2*float(np.linalg.slogdet(overlap)[1]);denominator=2*(2*amplitude)**2*b['normE']\n        ce=loss/denominator\n        slow=[]\n        n=len(zero['e'])//2\n        delta=zero['e'][n:][None,:]-zero['e'][:n,None]\n        rdecay=np.exp(-delta)\n        for step in (.001,.0005):\n            pstep=float_state(law,b,step,mode);mstep=float_state(law,b,-step,mode)\n            hx=(pstep['h']-mstep['h'])/(2*step)\n            vertex=zero['r'][:,:n].conj().T@hx@zero['W']\n            metric=np.abs(vertex)**2/(2*delta**2*b['normE'])\n            frequencies=[]\n            for omega in (0.,.05,.1,.2):\n                omegaHat2=4*math.sin(omega/2)**2\n                coefficient=float(np.sum(metric*(1-rdecay**2)/((1-rdecay)**2+rdecay*omegaHat2)))\n                frequencies.append(dict(omega=omega,cE=coefficient))\n            slow.append(dict(derivative_step=step,cE_slow=frequencies[0]['cE'],\n                cE_slow_over_k4=frequencies[0]['cE']/k**4,\n                minimum_particle_hole_gap=float(np.min(delta)),frequencies=frequencies))\n        products=[]\n        # Two true temporal seams in the cyclic A^L B^L product.  Positive\n        # symmetric similarity avoids non-Hermitian product eigenvalue errors.\n        for length in (1,2,4,8):\n            ea,eb=minus['e'],plus['e'];ra,rb=minus['r'],plus['r']\n            half=(ra*np.exp(length*(ea-ea[-1])/2))@ra.conj().T\n            full=(rb*np.exp(length*(eb-eb[-1])))@rb.conj().T\n            vals=eigh(half@full@half,eigvals_only=True)[-len(ea)//2:]\n            prod=float(np.sum(np.log(vals))+length*len(vals)*(ea[-1]+eb[-1]))\n            static=length*(minus['valence']+plus['valence'])\n            products.append(dict(plateau_length=length,whole_scalar_log_product=length*(minus['pref']+plus['pref'])+prod,\n                static_whole_scalar_log_product=length*(minus['loglambda']+plus['loglambda']),\n                temporal_excess_action=static-prod,cE=(static-prod)/denominator))\n        rows[mode]=dict(cB=cb,cB_over_k4=cb/k**4,cE=ce,cE_over_k4=ce/k**4,\n            scalar_action=-(plus['pref']+minus['pref']-2*zero['pref'])/(2*amplitude**2*b['normB']),\n            valence_action=-(plus['valence']+minus['valence']-2*zero['valence'])/(2*amplitude**2*b['normB']),\n            two_seam_log_overlap=loss,minimum_overlap_singular_value=float(np.linalg.svd(overlap,compute_uv=False)[-1]),\n            single_particle_defect_gap=zero['gap'],products=products,slow_temporal_response=slow,\n            slow_temporal_derivation='V=(1-r)hprime/Delta, r=exp(-Delta). Exact separated transfer insertion sum: cE(omega)=sum |hprime|\u00b2/(2Delta\u00b2 normE)*(1-r\u00b2)/[(1-r)\u00b2+r omegaHat\u00b2]; cE(0)=seam metric*coth(Delta/2).')\n    rows['C_T4_h_norm_difference']=float(np.linalg.norm(float_state(law,b,amplitude,'C')['h']-float_state(law,b,amplitude,'positiveT4')['h']))\n    adverse=np.zeros_like(b['a']);adverse[:,1]=np.cos(2*np.pi*b['coordinates'][:,0]/4)\n    z=float_state(law,b,0,'C',adverse);p=float_state(law,b,amplitude,'C',adverse);m=float_state(law,b,-amplitude,'C',adverse)\n    rows['nonfixed_local_toron_falsifier']=dict(action_quadratic=-(p['loglambda']+m['loglambda']-2*z['loglambda'])/(2*amplitude**2),\n        reason='A_y=cos(x) has nonzero y-line winding phases despite zero global harmonic average; not contractiblecurl control.')\n    return dict(k=k,amplitude=amplitude,measurements=rows)\n\n\ndef mp_matrix(a: np.ndarray) -> Any:\n    return mp.matrix([[mp.mpc(str(z.real),str(z.imag)) for z in row] for row in a])\n\n\ndef hp_state(k: str,b: dict[str,Any],amplitude: str) -> dict[str,Any]:\n    \"\"\"Independent exact-frame same equation at zero Phi and identity colour.\"\"\"\n    v=len(b['targets']);size=4*v;kappa=mp.mpf(k);amp=mp.mpf(amplitude)\n    gamma=[mp_matrix(g) for g in alpha.gamma_frame()]\n    beta_change=mp.matrix([[1,0,1,0],[0,1,0,1],[1,0,-1,0],[0,1,0,-1]])/mp.sqrt(2)\n    change=mp.zeros(size);C=mp.zeros(size)\n    exact_ch=np.rint(make_law(float(k),b).CH.real)+1j*np.rint(make_law(float(k),b).CH.imag)\n    ch=mp_matrix(exact_ch)\n    # Group all plus modes before all minus modes, as in the captured law.\n    for x in range(v):\n        for i in range(4):\n            for j in range(4):\n                change[4*x+i,2*x+j if j<2 else 2*v+2*x+j-2]=beta_change[i,j]\n                C[4*x+i,4*x+j]=ch[i,j]\n    def base(sign: int) -> tuple[Any,Any,Any]:\n        B=mp.eye(size)/(2*kappa);D=mp.zeros(size)\n        for j in range(3):\n            U=mp.zeros(size);G=mp.zeros(size)\n            for x in range(v):\n                y=int(b['targets'][x,j]);phase=mp.exp(sign*mp.j*amp*mp.mpf(str(b['a'][x,j])))\n                for i in range(4):\n                    U[4*x+i,4*y+i]=phase\n                    for l in range(4):G[4*x+i,4*x+l]=gamma[j+1][i,l]\n            B-=(U+U.H)/2;D+=(G*U-U.H*G)/2\n        transformed=change.H*B*change;current=change.H*D*change\n        n=2*v;bp=transformed[:n,:n];bm=transformed[n:,n:];f=current[:n,n:]\n        L=mp.eye(size);diag=mp.zeros(size);inv=bp**-1\n        for i in range(n):\n            for j in range(n):L[i,n+j]=-f[i,j];diag[i,j]=inv[i,j];diag[n+i,n+j]=bm[i,j]\n        T=change*(L.H*diag*L)*change.H\n        e,r=mp.eighe(T);h=r*mp.diag([mp.log(x) for x in e])*r.H\n        scalar=(mp.log(mp.det(bp)).real+mp.log(mp.det(bm)).real)/2\n        return h,scalar,T\n    h,pref,T=base(1);reverse,reversepref,_=base(-1)\n    hc=(h-C*reverse.T*C.H)/2;hc=(hc+hc.H)/2\n    cpref=(pref+reversepref)/2-sum(hc[i,i].real for i in range(size))/2\n    out={}\n    for mode,H,P in (('C',hc,cpref),('positiveT4',h,pref)):\n        e,r=mp.eighe(H);n=size//2\n        out[mode]=dict(pref=P,valence=sum(e[n:]),loglambda=P+sum(e[n:]),W=r[:,n:],gap=min(e[n],-e[n-1]))\n    return out\n\n\ndef hp_probe(k: str,b: dict[str,Any],amplitude: str,dps: int) -> dict[str,Any]:\n    with mp.workdps(dps):\n        zero=hp_state(k,b,'0');plus=hp_state(k,b,amplitude);minus=hp_state(k,b,str(-mp.mpf(amplitude)))\n        out={};a=mp.mpf(amplitude);kk=mp.mpf(k)\n        for mode in ('C','positiveT4'):\n            z,p,m=zero[mode],plus[mode],minus[mode]\n            cb=-(p['loglambda']+m['loglambda']-2*z['loglambda'])/(2*a*a*mp.mpf(str(b['normB'])))\n            ce=-2*mp.log(abs(mp.det(m['W'].H*p['W'])))/(8*a*a*mp.mpf(str(b['normE'])))\n            out[mode]={name:mp.nstr(value,dps-8) for name,value in dict(cB=cb,cE=ce,cB_over_k4=cb/kk**4,cE_over_k4=ce/kk**4,\n                scalar_cB=-(p['pref']+m['pref']-2*z['pref'])/(2*a*a*mp.mpf(str(b['normB']))),\n                valence_cB=-(p['valence']+m['valence']-2*z['valence'])/(2*a*a*mp.mpf(str(b['normB']))),gap=z['gap']).items()}\n        return dict(k=k,amplitude=amplitude,dps=dps,measurements=out)\n\n\ndef report(args: argparse.Namespace) -> dict[str,Any]:\n    b=background((4,3,1));floats=[float_probe(k,b,.1) for k in (.04,.02,.01,.005)]\n    precision_input=None\n    if args.precision_capsule:\n        input_bytes=Path(args.precision_capsule).read_bytes();previous=json.loads(input_bytes)\n        if previous['execution']['source_sha256']!='9c4fc9dacf5c9985a78fed4ce23b9ddfed3a8f258e1a0c6d57a925d88d505446':\n            raise ValueError('Precision input must be the actual unchanged exact-frame predecessor')\n        if previous['execution']['dependencies_at_IMPORT']['core_sha256']!=IMPORT_EPOCH['core_sha256']:\n            raise ValueError('Precision input core epoch differs')\n        if previous['report']['geometry']['phases_direction']!=b['a'].tolist():\n            raise ValueError('Precision input curl geometry differs')\n        precise=previous['report']['independent_highprecision_same_equations']\n        precision_input=dict(path=args.precision_capsule,sha256=hashlib.sha256(input_bytes).hexdigest(),\n            bytes_at_startup=input_bytes.decode(),meaning='Previously executed exact-frame controls, not remeasured in this successor. Actual float primitive and slow temporal response are re-executed.')\n    else:\n        precise=[hp_probe(k,b,a,dps) for k,a,dps in [('0.02','0.1',40),('0.01','0.1',40),('0.005','0.1',40),('0.01','0.05',40),('0.01','0.1',55)]]\n    low=precise[2]['measurements'];ue=.02\n    dispersion={}\n    for mode in ('C','positiveT4'):\n        cb=float(low[mode]['cB']);seam=float(low[mode]['cE']);k=.005\n        ce=floats[-1]['measurements'][mode]['slow_temporal_response'][-1]['cE_slow']\n        dispersion[mode]=dict(k=k,cB=cb,cE_slow=ce,cE_two_seam_metric=seam,cB_over_cE_slow=cb/ce,\n            bare_electric_UE=ue,temporal_bare_action_coefficient=1/(4*ue),\n            transverse_formula='S2=[(1/(4UE)+Naux*cE_slow)*omegaHat\u00b2+Naux*cB*qHat\u00b2]|A_T|\u00b2; real-time omegaHat\u00b2=Naux*cB/(1/(4UE)+Naux*cE_slow)*qHat\u00b2.',\n            interpretation='Conditional derivative expansion of measured Phi=0 auxiliary valence background, not proof of the complete core photon.',\n            macro_limit_ratio_if_coefficients_uniform=cb/ce)\n    with mp.workdps(60):\n        k=mp.mpf('1e-250');naux=mp.mpf('6.25e1148');beta=16*naux*k**4\n        # All occupation sectors are included by the exact exterior-algebra\n        # character.  These are fixed-background bounds, not full field claims.\n        macro=dict(kaux='1e-250',Naux='6.25e1148',betaTARGET=str(beta),\n            normalized_character='Tr_fullFock(exp(pref) Gamma(exp(h)))/lambdaVac=prod_i(1+exp(-abs(h_i))); no occupation-zero deletion.',\n            exact_norm='For any occupation subset S, exp(pref+sum_{i in S}h_i)/lambdaVac<=1, provided filled modes are all positive h_i.',\n            character_debt='Naux*4V*exp(-gap) is not small if gap~log(1/(2kaux)): scale O(Naux*kaux)=O(1e898). Small operator defect factor per species does not imply small fullFock trace correction.',\n            even_neutral_pairs_debt='Even-only paired defects O(Naux*kaux\u00b2)=O(1e648) also do not vanish.',\n            uniform_loop_remainder_status='NOT CERTIFIED. Finite-k/highprecision ratios are controls, not a uniform all-field analytic remainder at kaux. Multiplication by Naux is conditional, never an observed macro receipt.')\n    return dict(schema='physical-C-bare-electric-loops-v1',geometry=dict(shape=[4,3,1],sites=len(b['targets']),onebody_dimension=4*len(b['targets']),\n        targets=b['targets'].tolist(),phases_direction=b['a'].tolist(),curl=b['curl'].tolist(),sum_spatial_curl_squared=b['normB'],sum_link_squared=b['normE'],\n        divergence=b['divergence'],maximum_straight_line_toron=b['max_line_toron'],Phi='zero full four-component matrices',SU4='identity all links'),\n        precision_input_capture=precision_input,\n        input=dict(k_values=[.04,.02,.01,.005],amplitude=.1,precision_controls=[40,55],bare_electric_UE=ue),\n        actual_float_primitive=floats,independent_highprecision_same_equations=precise,dispersion=dispersion,macro_alloccupation=macro,\n        inference=dict(leading_action_cB_cE='8*k^4 suggested by own measured converging ratios; beta=16*k^4 only when beta=2*c convention.',\n            C_positiveT4_relation='Measured coincident only on Phi=0 and identity SU4; no assertion for full Phi/colour primitive.',\n            alternative_epoch='No paired alternative needed: actual fixedtoron C response is positive. An unsymmetrized positiveT4 C-flavour pair would be a DIFFERENT primitive, not this core.'),\n        falsifiers=['Nonfixed local line torons can reverse the apparent spatial coefficient.','Dropping scalar produces a large uncancelled spatial response.','Scalar lambda alone cannot see temporal waveframe loss.','Counting one seam doubles the inferred cE.','Bare-electric only has no magnetic action before the auxiliary response.'],\n        debts=['Uniform allNF/global Gauss and interacting Phi/colour auxiliary elimination.','Actual core source/current Ward identity and conditioned state response.','Uniform spatial/temporal remainder at macro kaux and volume.','Continuum low-q/omega follows only conditionally from local derivative expansion, not from this finite-volume graph alone.'])\n\n\ndef main() -> None:\n    parser=argparse.ArgumentParser();parser.add_argument('--capsule',required=True);parser.add_argument('--receipt',required=True)\n    parser.add_argument('--precision-capsule',help='Explicit actual predecessor capsule supplying reusable unchanged highprecision measurements')\n    args=parser.parse_args();start=time.time();payload=report(args)\n    execution=dict(source_bytes_at_IMPORT=SOURCE_BYTES.decode(),source_sha256=hashlib.sha256(SOURCE_BYTES).hexdigest(),dependencies_at_IMPORT=IMPORT_EPOCH,\n        argv=sys.argv,python=sys.executable,python_version=platform.python_version(),numpy=np.__version__,mpmath=mp.__version__,\n        cwd=os.getcwd(),startup_thread_environment={name:os.environ.get(name) for name in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS')},elapsed_seconds=time.time()-start)\n    Path(args.capsule).write_text(json.dumps(dict(report=payload,execution=execution),indent=2)+'\\n')\n    print(json.dumps(dict(capsule=args.capsule,source_sha256=execution['source_sha256'],elapsed_seconds=execution['elapsed_seconds'],\n        precise=payload['independent_highprecision_same_equations'],dispersion=payload['dispersion']),indent=2),flush=True)\n\n\nif __name__=='__main__':main()\n",
+    "exact_AST_extended_function": "def bundle_precise_state(k: str, b: dict[str, Any], amplitude: str) -> dict[str, Any]:\n    \"\"\"Independent exact-frame same equation at zero Phi and identity colour.\"\"\"\n    v = len(b['targets'])\n    size = 4 * v\n    kappa = mp.mpf(k)\n    amp = mp.mpf(amplitude)\n    gamma = [mp_matrix(g) for g in alpha.gamma_frame()]\n    beta_change = mp.matrix([[1, 0, 1, 0], [0, 1, 0, 1], [1, 0, -1, 0], [0, 1, 0, -1]]) / mp.sqrt(2)\n    change = mp.zeros(size)\n    C = mp.zeros(size)\n    exact_ch = np.rint(make_law(float(k), b).CH.real) + 1j * np.rint(make_law(float(k), b).CH.imag)\n    ch = mp_matrix(exact_ch)\n    for x in range(v):\n        for i in range(4):\n            for j in range(4):\n                change[4 * x + i, 2 * x + j if j < 2 else 2 * v + 2 * x + j - 2] = beta_change[i, j]\n                C[4 * x + i, 4 * x + j] = ch[i, j]\n\n    def base(sign: int) -> tuple[Any, Any, Any]:\n        B = mp.eye(size) / (2 * kappa)\n        D = mp.zeros(size)\n        for j in range(3):\n            U = mp.zeros(size)\n            G = mp.zeros(size)\n            for x in range(v):\n                y = int(b['targets'][x, j])\n                phase = mp.exp(sign * mp.j * amp * mp.mpf(str(b['a'][x, j])))\n                for i in range(4):\n                    U[4 * x + i, 4 * y + i] = phase\n                    for l in range(4):\n                        G[4 * x + i, 4 * x + l] = gamma[j + 1][i, l]\n            B -= (U + U.H) / 2\n            D += (G * U - U.H * G) / 2\n        transformed = change.H * B * change\n        current = change.H * D * change\n        n = 2 * v\n        bp = transformed[:n, :n]\n        bm = transformed[n:, n:]\n        f = current[:n, n:]\n        L = mp.eye(size)\n        diag = mp.zeros(size)\n        inv = bp ** (-1)\n        for i in range(n):\n            for j in range(n):\n                L[i, n + j] = -f[i, j]\n                diag[i, j] = inv[i, j]\n                diag[n + i, n + j] = bm[i, j]\n        T = change * (L.H * diag * L) * change.H\n        e, r = mp.eighe(T)\n        h = r * mp.diag([mp.log(x) for x in e]) * r.H\n        scalar = (mp.log(mp.det(bp)).real + mp.log(mp.det(bm)).real) / 2\n        return (h, scalar, T)\n    h, pref, T = base(1)\n    reverse, reversepref, _ = base(-1)\n    hc = (h - C * reverse.T * C.H) / 2\n    hc = (hc + hc.H) / 2\n    cpref = (pref + reversepref) / 2 - sum((hc[i, i].real for i in range(size))) / 2\n    out = {}\n    for mode, H, P in (('C', hc, cpref), ('positiveT4', h, pref)):\n        e, r = mp.eighe(H)\n        n = size // 2\n        out[mode] = dict(pref=P, valence=sum(e[n:]), loglambda=P + sum(e[n:]), W=r[:, n:], gap=min(e[n], -e[n - 1]), eigenvalues=e, fullframe=r)\n    return out",
+    "input_json": "{\"captured_loop\":\"01245b29b505d724ed8b301d07cb00c022e1f5a1a300cec3db0661c03c943e00\",\"cases\":[[\".02\",\"100\"],[\".01\",\"100\"],[\".01\",\"1000\"]],\"declared_Utheta\":\".02\",\"dps\":55,\"field_nodes\":[\"-.25\",\"0\",\".25\"],\"mode_link_L2_norm\":1,\"original_fixedbody_boundary_retained\":true,\"weights\":[\".25\",\".5\",\".25\"]}",
+    "input_sha256": "136f37d5ca7f13524d8865c8760abb25755656a5c6a17caa754015c9a74a9247",
+    "runtime_seconds": 653.9966421127319,
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "mpmath": "1.3.0",
+    "startup_unchanged": true
+  }
+}

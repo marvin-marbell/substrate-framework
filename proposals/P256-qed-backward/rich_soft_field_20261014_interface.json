@@ -1,0 +1,19 @@
+{
+  "prefix":"rich_soft_field_20261014_",
+  "root":"/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "python":"/home/administrator/substrate-framework/.venv/bin/python",
+  "pure_imports":["rich_soft_field_20261014_model", "rich_soft_field_20261014_density"],
+  "exports": {
+    "Parameters":"shape,electric,hopping,bridge,hubbard,dx,halfwidth,count; q index supplied separately",
+    "geometry(shape,n)":"actual normalized face m and electric e arrays for two orthogonal transverse modes, gram, lambda,volume,local_flux_factor and divergence residual",
+    "Matter(p)":"64-state full8-site CAR cluster with two actual square loops plus bridge, all global signs; operators(phi,charge=1,cut=False) returns H,J,K",
+    "Joint(p,n,charge=1,cut=False,no_matter=False)":"H=HE+HM, all retained full64 matter/electric amplitude states, F,Q,P,electric_leg,J,K,Rho. spectrum returns low spectral-reporting window; response uses direct full-H resolvents; pulse uses full-H evolution",
+    "DensityJoint(p,n,suppliers=1|2,retain=8|16|33,frozen=False)":"Same operator interface. Each supplier is projected to actual low-energy cluster eigenvectors at phi0; all products of retained supplier/electric states are used. The refined33 states complete a degenerate shell. No static stiffness, imported D or oscillator frequency. frozen=True makes microscopic expectation in actual phi0 ground, not a full feedback model."
+  },
+  "reference":"All response and current insertion use each NEW law's own fixed-number inducing cluster ground. Each cluster has Nup=Ndown=1 and both species charge+1, hence charge+2, NOT neutral. No ionic/background or longitudinal sourced Gauss sector is present. No archived G/D or N±1 source spectra imported. This is an actual quantum current consumer rather than a charged addition consumer, and is not directly the Frame/Collision common Gauss state.",
+  "two_actual_field_legs":"Selected root is exact product of xy cluster/m_z mode and spatially rotated distinct xz cluster/m_y mode: Htotal=Hxy tensor I+I tensor Hxz. E profiles are orthogonal actual cubic cochains and matter orbitals are distinct. Product spectral energies and block-diagonal residues follow exactly for this law; no coupling between these two inducing species is claimed. Do not identify geometryGram2 alone as a common nonlinear bulk two-photon result.",
+  "reconstruction":"Physical E link operator for leg a is g f0 e_a(r) P_phi, where e_a(r)=C m_unit_a and sum|e_a|²=lambda. electric_leg is its normalized total coefficient g f0 sqrt(lambda) P_phi. Flux sinphi is physical selected antinode loop observable.",
+  "capture_commands":["python rich_soft_field_20261014_capture.py", "python rich_soft_field_20261014_density_capture.py", "python rich_soft_field_20261014_refine.py", "python rich_soft_field_20261014_correct.py"],
+  "limitations":["Noncompact single-cosine-q field projection", "Explicit Dirichlet amplitude cutoff with multiwell controls", "No longitudinal sourced Gauss sector", "No coupled multi-q propagating packet", "Finite inducing loops/density, not a thermodynamic bulk phase", "No spin-half electron, charged rest mass, proton or imported QED normalization"],
+  "diagnostics":"Pre-edit actual Pyright stdio symbols/definition/diagnostic exercised representative model at project root, plus positive Python structural AST. Native xd LSP device unavailable. Final selected-file diagnostics belong to ScientificReviewWave5; not rerun by author."
+}

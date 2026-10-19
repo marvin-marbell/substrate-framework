@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<string>", line 15, in <module>
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_flat_holonomy.py", line 268, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_flat_holonomy.py", line 263, in main
+    with threadpool_limits(1):result=run(args.output)
+                                     ^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_flat_holonomy.py", line 249, in run
+    filling=control(profiles[0],native,adverse,[1,3],adverse_angles)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_flat_holonomy.py", line 212, in control
+    if max(errors.values())>2e-9:raise ArithmeticError(json.dumps(errors))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ArithmeticError: {"Fourier_literal_HS": 2.3886002247321063e-13, "Fourier_unitarity_HS": 2.4564707803970343e-14, "global128_spectral": 1.1368683772161603e-13, "gauge_covariance_HS": 2.5201845816030523e-14, "link_determinant": 1.9498558243636472}

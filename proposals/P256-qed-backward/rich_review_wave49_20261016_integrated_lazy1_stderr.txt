@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_integrated_consumer.py", line 203, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_integrated_consumer.py", line 151, in run
+    convection=source_for_terms(m,nohopterms);wholeJ=source_for_terms(m,wholeterms)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_integrated_consumer.py", line 66, in source_for_terms
+    try:m.terms=terms;return m.lab_source(mode)
+                             ^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_local_frame_spatial_carrier_20261016_model.py", line 392, in lab_source
+    return self.mpo(terms)
+           ^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_local_frame_spatial_carrier_20261016_model.py", line 181, in mpo
+    return PhysicalOperatorSum(self,terms) if len(terms)>24 else self.mpo_small(terms)
+                                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_local_frame_spatial_carrier_20261016_model.py", line 177, in mpo_small
+    return self.coupling_model(terms).calc_H_MPO()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/models/model.py", line 1854, in calc_H_MPO
+    H_MPO = H_MPO_graph.build_MPO()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/networks/mpo.py", line 2546, in build_MPO
+    legs, Ws_qtotal = self._calc_legcharges(Ws_qtotal)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/networks/mpo.py", line 2714, in _calc_legcharges
+    raise ValueError("can't determine all charges on the very right leg of the MPO!")
+ValueError: can't determine all charges on the very right leg of the MPO!

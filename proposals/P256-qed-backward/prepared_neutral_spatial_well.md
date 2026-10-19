@@ -1,0 +1,11 @@
+# Spatial quantum chart comparison and its selected successor
+
+PreparedSpatialQuantumSlice supplies the shared tensor bookkeeping, actual improved range-two endpoint averages, original-heavy/scalar field terms, quantum normal/colour coordinates, exact retained CAR and Ref sectors, and before-projection nonlinear SU4/Peierls integration. The two real odd x/y orbitals are physical lattice profiles, not assigned orbital eigenvalues. A single scalar neutral energy shift is used in both charge Hamiltonians. The actual current/contact are derivatives of this same endpoint law.
+
+Its original two global cos(kz) polarizations are an INCOMPLETE EM chart. They are not closed under the physical periodic primitive Noether flow: for xi=(-y,x,0) the flow has an Az-only component outside the chart. An imposed continuum Lpair is therefore not the physical periodic Noether generator. Old spatial executions are retained controls, never a native physical2pi proof.
+
+The selected PreparedSpatialEMQuantumSlice instead keeps all52 coexact and3 harmonic spatial directions. PreparedSpatialGaussQuantumSlice adds the actual pre-square Coulomb/exchange contraction, spectator trace/current/contact, source harmonic phase, quantum F_R dependence and a once-prepared NPZ. ClosedSpatialRotation imports that SAME model, not this obsolete incomplete photon chart, and derives its actual generator including full60Phi-to15Gauss projection and unrepresented linked guard modes.
+
+Current EM coefficients are canonical LAW05 UE Pi²+(K/2)curl² with c²=2UEK. The physical map is sqrt(2UE/omega); colour normalized flat tangent cometric is .6chi. Earlier half-electric/half-colour controls are a different law. Native Phi/colour kinetics are still a flat tangent slice, NOT the exact full-Haar/Gauss Laplacian. Their control evidence cannot close the independent legal-N all-normal/coercivity/source/barrier proposition.
+
+prepare_window is the existing preparation hook used by the Gauss successor for exact cache reuse. A proven entire-spectrum filter plateau is evaluated by functional calculus, not an approximate filter. Reference/CAR counts are invariant Nref blocks with all four holes; they are not occupations capped at2 per site. Literal particle/hole Ref4->3 and Ref0->1 views are supplied by prepared_neutral_spatial_charge_transfer.

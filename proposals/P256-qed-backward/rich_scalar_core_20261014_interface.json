@@ -1,0 +1,16 @@
+{
+  "candidate": "neutral_scalar_transfer_on_physical_frame_Fock_20261014",
+  "module": "rich_scalar_core_20261014_model",
+  "API": {
+    "build(p,k=None,coupling=None,frozen=None)": "Returns sparse common full16*nphi Hamiltonian H; same physical creation source[4], uniform-link current[3] and contact[3]; Q is neutral scalar coordinate (not EM charge), N is fermion number; phi grid, Hscalar, scalar_kinetic and scalar_potential; matter holds raw projected frame and transfer T. frozen=None is physical quantum candidate; frozen number is nonequivalent comparator.",
+    "sector(model,number)": "Returns full-space indices and csr H block with number=0..4; Fock occupation order from actual physical Gauss source algebra, scalar coordinate fastest.",
+    "full_spectrum(model,number)": "Returns indices, all eigenvalues, all eigenvectors in that block. Does not shift energy or discard virtual levels.",
+    "ground_sector(model,number,count=8)": "Convenience sparse low-spectrum helper; reviewer should use complete ground projector and detect degeneracy rather than selecting phi sign. Author consumer uses full_spectrum, not this convenience helper.",
+    "source_block(model,source_index,incoming,outgoing,addition=True)": "Physical source block between same-law sector indices; addition=False uses adjoint. Scalar identity retained at insertion."
+  },
+  "dimension": {"raw_frame_Fock":224,"physical_Fock":16,"full_quantum_at_241":3856,"N1":964,"N2":1446,"N3":964,"full_quantum_at_321":5136},
+  "units_and_conventions": "hbar=1, cell spacing=1, declared hop energy unit, k dimensionless uniform Peierls phase, phi dimensionless scalar transfer amplitude. Retarded z has Im z>0. G source indexing (channel0 m-,channel0 m+,channel1 m-,channel1 m+). J=+dH/dk; conversion to electric-current sign requires explicitly declared Peierls charge and is not inferred from S.",
+  "state": "Proper full occupied N2 ground projector / complete degeneracy. N3 is one negative charge relative to filled neutral N2; N1 is positive hole. N2 is source/reference bookkeeping, not two simultaneously active incoming charged packets.",
+  "receiver": "Independent ScientificReviewWave7 exact quantum consumer can rebuild H, distributions, source gaps/G/CAR and actual link current. CommonMobileFrame may use the transfer coupling idea only by constructing it in its own common mobile H; multiplying this fixed-cell G by another candidate D is not a join.",
+  "material_join_boundary": "This branch deliberately pays scalar quantum feedback, not spatial self-binding/free COM. To join, promote phi to an actual spatial neutral field and couple its local transfer T_x to the SAME mobile right-Gauss/source algebra; retain its kinetic, elastic, all occupied/virtual and N+/-1 sectors. No supplied constant mass may be credited as the result."
+}

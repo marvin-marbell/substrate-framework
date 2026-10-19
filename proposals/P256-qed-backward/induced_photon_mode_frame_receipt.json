@@ -1,0 +1,1810 @@
+{
+  "branch": "NEW uncompressed physical photon multiplet and fixed-state energy-current",
+  "inputs": [
+    {
+      "path": "proposals/P256-qed-backward/induced_photon_response_matrix_checked_receipt_a1p0.json",
+      "sha256": "18476e8a88182631dd873aeaec2f15174688f17cb41fe8bdfd0e06159bec12b5",
+      "config": {
+        "a": 1.0,
+        "m": 0.2,
+        "r": 0.12,
+        "v": 0.4990360130634525,
+        "g0": 0.4187253908699568,
+        "gs": 0.0632221974274214,
+        "flavors": 64,
+        "inertia": 1.0,
+        "orders": [
+          10,
+          12
+        ],
+        "q_values": [
+          0.05,
+          0.1,
+          0.2
+        ],
+        "omega_values": [
+          0.02,
+          0.04,
+          0.08
+        ],
+        "species": []
+      }
+    },
+    {
+      "path": "proposals/P256-qed-backward/induced_photon_response_matrix_checked_receipt_a0p25.json",
+      "sha256": "28d8b4c8e78e89bbdee9c7648fbae18993b5c7e9c5434759e6250e639682fe3e",
+      "config": {
+        "a": 0.25,
+        "m": 0.2,
+        "r": 0.12,
+        "v": 0.4990360130634525,
+        "g0": 0.4187253908699568,
+        "gs": 0.0632221974274214,
+        "flavors": 64,
+        "inertia": 1.0,
+        "orders": [
+          10,
+          12
+        ],
+        "q_values": [
+          0.05,
+          0.1,
+          0.2
+        ],
+        "omega_values": [
+          0.02,
+          0.04,
+          0.08
+        ],
+        "species": []
+      }
+    },
+    {
+      "path": "proposals/P256-qed-backward/induced_photon_response_matrix_checked_mass_receipt.json",
+      "sha256": "d03086236316a926ee4fc4e8f8afe96e10e2164f1f7b50d0cd7e9075d95967a4",
+      "config": {
+        "a": 0.015625,
+        "m": 0.2,
+        "r": 0.12,
+        "v": 0.4990360130634525,
+        "g0": 0.4187253908699568,
+        "gs": 0.0632221974274214,
+        "flavors": 64,
+        "inertia": 1.0,
+        "orders": [
+          10,
+          12
+        ],
+        "q_values": [
+          0.05,
+          0.1,
+          0.2
+        ],
+        "omega_values": [
+          0.02,
+          0.04,
+          0.08
+        ],
+        "species": [
+          [
+            1,
+            0.2
+          ],
+          [
+            63,
+            2.0
+          ]
+        ]
+      }
+    }
+  ],
+  "input_sha256": "b430ee1cc6e39872fd5859a49a6e88bd32378c46ede8fb89b894538a48588198",
+  "rows": [
+    {
+      "supplier_sha256": "18476e8a88182631dd873aeaec2f15174688f17cb41fe8bdfd0e06159bec12b5",
+      "mode": {
+        "q": [
+          0.0,
+          0.0,
+          0.1
+        ],
+        "omega": 0.014809538357977327,
+        "residue": 0.1385441815454072,
+        "two_polarizations": [
+          {
+            "omega": 0.014809538357977327,
+            "residue": 0.1385441815454072,
+            "polarization": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.014816896612181232,
+            "epsilon": 7.203581743301164,
+            "kappa": 0.15827959560460378,
+            "inverse_residual": 1.246832498832383e-16,
+            "backward_error_omega_upper": 8.419117927202385e-15,
+            "raw_scalar_polarization": -1.3694496817641728e-19,
+            "group_velocity": [
+              -3.7190191858065534e-14,
+              -9.2974271644318e-14,
+              0.1479825484062273
+            ]
+          },
+          {
+            "omega": 0.014809538357977327,
+            "residue": 0.1385441815454072,
+            "polarization": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.014816896612181135,
+            "epsilon": 7.203581743301221,
+            "kappa": 0.15827959560460292,
+            "inverse_residual": 1.0885389817184353e-16,
+            "backward_error_omega_upper": 7.350255999925085e-15,
+            "raw_scalar_polarization": -5.867916653645961e-22,
+            "group_velocity": [
+              3.042834421445411e-14,
+              3.871148048688003e-13,
+              0.1479825484070117
+            ]
+          }
+        ],
+        "pair_threshold": 0.2591448841570491,
+        "pair_threshold_lower": 0.2588359761300447,
+        "pair_threshold_kind": "Sampled actual interband minimum; independent analytic 2m sqrt(g0) lower bound also supplied",
+        "polarization_speed_splitting": 0.0,
+        "quadrature_order": 12,
+        "quadrature_points": 304128,
+        "canonical_mode_gram_error": 4.063416270128073e-14,
+        "frame_proof": {
+          "method": "Exact cubic transverse irreducible doublet; group-averaged uncompressed integral, ONE common root",
+          "little_group": "C4 axis",
+          "canonical_mode_gram": [
+            [
+              1.0000000000000406,
+              -6.972982558039775e-19
+            ],
+            [
+              -6.972982558039775e-19,
+              1.0000000000000313
+            ]
+          ],
+          "spatial_frame_gram": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "field_amplitude_gram": [
+            [
+              0.1385441815454072,
+              0.0
+            ],
+            [
+              0.0,
+              0.1385441815454072
+            ]
+          ],
+          "norm": "Ai^T [F(xi)-F(xj)]/(xi-xj) Aj; diagonal Fprime. Analytic divided difference includes actual signed mixed-current/density A0 Schur term.",
+          "gap_bins": 0,
+          "symmetry_residual": [
+            {
+              "omega_squared": 0.0,
+              "inverse_operator_error": 4.33680998800714e-18,
+              "norm_operator_error": 2.0961010731225623e-13
+            },
+            {
+              "omega_squared": 0.00010966121318820089,
+              "inverse_operator_error": 1.116728387059724e-17,
+              "norm_operator_error": 8.970602042293091e-14
+            },
+            {
+              "omega_squared": 0.00021932242637640178,
+              "inverse_operator_error": 1.2446641014813135e-16,
+              "norm_operator_error": 2.930988785026707e-13
+            }
+          ],
+          "backward_error_omega_squared_upper": [
+            2.493664997664766e-16,
+            2.1770779634368706e-16
+          ],
+          "backward_error_scope": "Positive canonical PH realization gives Fprime >= eps_b below the first PH pole; raw-kernel residual / eps_b bounds pole perturbation. BZ quadrature and full-theory errors are separate.",
+          "rigorous_interband_window": true,
+          "new_mode_source_sha256": "14ff91bcc26f47578f125da08e9c788b9ff9b8800469ed02eac93555ed481be6",
+          "old_independent_root_frames": "Not used; old complete two-polarization claims withdrawn. Frozen kernel coefficients are unchanged.",
+          "energy_current": {
+            "identity": "Projected quadratic-action Noether energy flux / one-quantum energy = -Ai.T(dq F)Ai/(2 omega); Ai.T Fprime Ai=1",
+            "derivative": "Actual neighbouring uncompressed kernels at FIXED omega and projected SAME physical field state; Richardson h^2 extrapolation",
+            "step": 0.0001,
+            "coarse": [
+              [
+                -1.0142769283597428e-14,
+                -4.5642686503618506e-14,
+                0.1479825479862418
+              ],
+              [
+                7.099946789433095e-14,
+                -6.592783670690507e-14,
+                0.14798254798579552
+              ]
+            ],
+            "half_step": [
+              [
+                -3.042833621444851e-14,
+                -8.114137535914313e-14,
+                0.14798254830123092
+              ],
+              [
+                4.057112513442332e-14,
+                2.738541444748739e-13,
+                0.14798254830170765
+              ]
+            ],
+            "resolution_error": 3.1591212978909766e-10,
+            "degenerate_velocity_operators": [
+              [
+                [
+                  -3.042833621444851e-14,
+                  -1.514677699078794e-14
+                ],
+                [
+                  -1.514677699078794e-14,
+                  4.057112513442332e-14
+                ]
+              ],
+              [
+                [
+                  -8.114137535914313e-14,
+                  3.0968999258319827e-15
+                ],
+                [
+                  3.0968999222289094e-15,
+                  2.738541444748739e-13
+                ]
+              ],
+              [
+                [
+                  0.14798254830123092,
+                  1.2536482270790003e-16
+                ],
+                [
+                  1.2536482270790003e-16,
+                  0.14798254830170765
+                ]
+              ]
+            ],
+            "degeneracy_scope": "At an exact doublet, these are prepared-frame energy-current expectations; velocity operators need not commute. No unique sorted-band Cartesian gradient is claimed."
+          }
+        },
+        "group_velocity": [
+          -3.3809238218057103e-15,
+          1.4707026661224115e-13,
+          0.1479825484066195
+        ]
+      },
+      "controls": {
+        "actual_current_unpolarized_rotation_error": 1.9655222907027647e-16,
+        "duplicate_state_current_error": 0.9999999999374091,
+        "duplicate_state_canonical_gram_error": 1.0000000000000406,
+        "scope": "Actual literal Peierls current plus onsite density, quantum-normalized field legs. Rotation is a complete-state mixture identity, not a scattering-rate or Ref4 admission claim."
+      }
+    },
+    {
+      "supplier_sha256": "18476e8a88182631dd873aeaec2f15174688f17cb41fe8bdfd0e06159bec12b5",
+      "mode": {
+        "q": [
+          0.22053099201074255,
+          0.22053099201074255,
+          0.22053099201074255
+        ],
+        "omega": 0.05649537737090351,
+        "residue": 0.13795188625227783,
+        "two_polarizations": [
+          {
+            "omega": 0.05649537737090351,
+            "residue": 0.13795188625227783,
+            "polarization": [
+              0.7071067811865475,
+              -0.7071067811865475,
+              0.0
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.056900033626436766,
+            "epsilon": 7.04386539584976,
+            "kappa": 0.15694099859366464,
+            "inverse_residual": 9.368043577139235e-16,
+            "backward_error_omega_upper": 1.658196477852718e-14,
+            "raw_scalar_polarization": 6.081234914990714e-17,
+            "group_velocity": [
+              0.0851279186447222,
+              0.08512791864240492,
+              0.08506988512937234
+            ]
+          },
+          {
+            "omega": 0.05649537737090351,
+            "residue": 0.13795188625227783,
+            "polarization": [
+              0.408248290463863,
+              0.408248290463863,
+              -0.816496580927726
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.056900033626436954,
+            "epsilon": 7.043865395849712,
+            "kappa": 0.1569409985936646,
+            "inverse_residual": 3.054759941938233e-16,
+            "backward_error_omega_upper": 5.407097153954951e-15,
+            "raw_scalar_polarization": 3.4742578010617225e-18,
+            "group_velocity": [
+              0.08508922963370939,
+              0.08508922963455738,
+              0.08514726314929404
+            ]
+          }
+        ],
+        "pair_threshold": 0.2632400407849146,
+        "pair_threshold_lower": 0.2588359761300447,
+        "pair_threshold_kind": "Sampled actual interband minimum; independent analytic 2m sqrt(g0) lower bound also supplied",
+        "polarization_speed_splitting": 0.0,
+        "quadrature_order": 12,
+        "quadrature_points": 304128,
+        "canonical_mode_gram_error": 2.4202861936828413e-14,
+        "frame_proof": {
+          "method": "Exact cubic transverse irreducible doublet; group-averaged uncompressed integral, ONE common root",
+          "little_group": "S3 signed body diagonal",
+          "canonical_mode_gram": [
+            [
+              1.0000000000000242,
+              1.7245091111062164e-16
+            ],
+            [
+              1.7245091111062164e-16,
+              1.0000000000000058
+            ]
+          ],
+          "spatial_frame_gram": [
+            [
+              0.9999999999999998,
+              8.255428088526173e-18
+            ],
+            [
+              8.255428088526173e-18,
+              1.0
+            ]
+          ],
+          "field_amplitude_gram": [
+            [
+              0.13795188625227783,
+              0.0
+            ],
+            [
+              0.0,
+              0.13795188625227783
+            ]
+          ],
+          "norm": "Ai^T [F(xi)-F(xj)]/(xi-xj) Aj; diagonal Fprime. Analytic divided difference includes actual signed mixed-current/density A0 Schur term.",
+          "gap_bins": 0,
+          "symmetry_residual": [
+            {
+              "omega_squared": 0.0,
+              "inverse_operator_error": 3.549715890702934e-18,
+              "norm_operator_error": 1.0874807982978118e-13
+            },
+            {
+              "omega_squared": 0.0015958638321403981,
+              "inverse_operator_error": 4.702208148488275e-16,
+              "norm_operator_error": 4.2632636914599675e-13
+            },
+            {
+              "omega_squared": 0.0031917276642807963,
+              "inverse_operator_error": 9.369099138009966e-16,
+              "norm_operator_error": 1.7764777560502431e-13
+            }
+          ],
+          "backward_error_omega_squared_upper": [
+            1.873608715427847e-15,
+            6.109519883876466e-16
+          ],
+          "backward_error_scope": "Positive canonical PH realization gives Fprime >= eps_b below the first PH pole; raw-kernel residual / eps_b bounds pole perturbation. BZ quadrature and full-theory errors are separate.",
+          "rigorous_interband_window": true,
+          "new_mode_source_sha256": "14ff91bcc26f47578f125da08e9c788b9ff9b8800469ed02eac93555ed481be6",
+          "old_independent_root_frames": "Not used; old complete two-polarization claims withdrawn. Frozen kernel coefficients are unchanged.",
+          "energy_current": {
+            "identity": "Projected quadratic-action Noether energy flux / one-quantum energy = -Ai.T(dq F)Ai/(2 omega); Ai.T Fprime Ai=1",
+            "derivative": "Actual neighbouring uncompressed kernels at FIXED omega and projected SAME physical field state; Richardson h^2 extrapolation",
+            "step": 0.0003819708828061723,
+            "coarse": [
+              [
+                0.08512787287044556,
+                0.08512787287016779,
+                0.08506988158766286
+              ],
+              [
+                0.0850892120166159,
+                0.085089212014648,
+                0.08514720329674264
+              ]
+            ],
+            "half_step": [
+              [
+                0.08512790720115304,
+                0.08512790719934563,
+                0.08506988424394497
+              ],
+              [
+                0.08508922522943602,
+                0.08508922522958004,
+                0.08514724818615618
+              ]
+            ],
+            "resolution_error": 4.488941354741094e-08,
+            "degenerate_velocity_operators": [
+              [
+                [
+                  0.08512790720115304,
+                  3.349957019762809e-05
+                ],
+                [
+                  3.3499570197632795e-05,
+                  0.08508922522943602
+                ]
+              ],
+              [
+                [
+                  0.08512790719934563,
+                  -3.3499569547189534e-05
+                ],
+                [
+                  -3.3499569547188375e-05,
+                  0.08508922522958004
+                ]
+              ],
+              [
+                [
+                  0.08506988424394497,
+                  -3.4990325131822985e-13
+                ],
+                [
+                  -3.499020593098472e-13,
+                  0.08514724818615618
+                ]
+              ]
+            ],
+            "degeneracy_scope": "At an exact doublet, these are prepared-frame energy-current expectations; velocity operators need not commute. No unique sorted-band Cartesian gradient is claimed."
+          }
+        },
+        "group_velocity": [
+          0.0851085741392158,
+          0.08510857413848115,
+          0.08510857413933319
+        ]
+      },
+      "controls": {
+        "actual_current_unpolarized_rotation_error": 2.260980507673267e-16,
+        "duplicate_state_current_error": 0.9999377512726757,
+        "duplicate_state_canonical_gram_error": 1.000000000000024,
+        "scope": "Actual literal Peierls current plus onsite density, quantum-normalized field legs. Rotation is a complete-state mixture identity, not a scattering-rate or Ref4 admission claim."
+      }
+    },
+    {
+      "supplier_sha256": "18476e8a88182631dd873aeaec2f15174688f17cb41fe8bdfd0e06159bec12b5",
+      "mode": {
+        "q": [
+          0.07,
+          0.05,
+          0.03
+        ],
+        "omega": 0.013495464249527127,
+        "residue": 0.13855211076868854,
+        "two_polarizations": [
+          {
+            "omega": 0.013495393996572857,
+            "residue": 0.13855189872153686,
+            "polarization": [
+              -0.16354240335134307,
+              -0.3291131310380184,
+              0.930020660676105
+            ],
+            "scalar_polarization": 1.6359765726248297e-07,
+            "local_omega": 0.01350096273044764,
+            "epsilon": 7.205607964107069,
+            "kappa": 0.15829146298450703,
+            "inverse_residual": 6.048684109509376e-17,
+            "backward_error_omega_upper": 4.48203595318924e-15,
+            "raw_scalar_polarization": 1.6359765726248297e-07,
+            "group_velocity": [
+              0.11376385342558289,
+              0.08128953564011399,
+              0.04878962506405121
+            ]
+          },
+          {
+            "omega": 0.013495534502481397,
+            "residue": 0.1385523228158402,
+            "polarization": [
+              0.6188290098049121,
+              -0.7684064795663614,
+              -0.16310162103517906
+            ],
+            "scalar_polarization": -2.5284817323457803e-07,
+            "local_omega": 0.013501103370197267,
+            "epsilon": 7.205585746482979,
+            "kappa": 0.15829427276837757,
+            "inverse_residual": 5.268484656204633e-17,
+            "backward_error_omega_upper": 3.903872540384322e-15,
+            "raw_scalar_polarization": -2.5284817323457803e-07,
+            "group_velocity": [
+              0.11376734153577332,
+              0.08129515583768403,
+              0.04878615997444552
+            ]
+          }
+        ],
+        "pair_threshold": 0.25909323888650876,
+        "pair_threshold_lower": 0.2588359761300447,
+        "pair_threshold_kind": "Sampled actual interband minimum; independent analytic 2m sqrt(g0) lower bound also supplied",
+        "polarization_speed_splitting": 1.041139729429652e-05,
+        "quadrature_order": 12,
+        "quadrature_points": 304128,
+        "canonical_mode_gram_error": 2.220446049250313e-16,
+        "frame_proof": {
+          "method": "Common uncompressed F/Fprime generalized eigencluster; original nonlinear residual priced",
+          "little_group": "generic q",
+          "canonical_mode_gram": [
+            [
+              0.9999999999999998,
+              -1.1102230246251565e-16
+            ],
+            [
+              0.0,
+              0.9999999999999998
+            ]
+          ],
+          "spatial_frame_gram": [
+            [
+              1.0000000000000002,
+              1.520478244029921e-09
+            ],
+            [
+              1.520478244029921e-09,
+              1.0
+            ]
+          ],
+          "field_amplitude_gram": [
+            [
+              0.13855189872153684,
+              2.1066547151678125e-10
+            ],
+            [
+              2.1066547151678125e-10,
+              0.1385523228158402
+            ]
+          ],
+          "norm": "Ai^T [F(xi)-F(xj)]/(xi-xj) Aj; diagonal Fprime. Analytic divided difference includes actual signed mixed-current/density A0 Schur term.",
+          "gap_bins": 0,
+          "symmetry_residual": [],
+          "backward_error_omega_squared_upper": [
+            1.2097368219018752e-16,
+            1.0536969312409266e-16
+          ],
+          "backward_error_scope": "Positive canonical PH realization gives Fprime >= eps_b below the first PH pole; raw-kernel residual / eps_b bounds pole perturbation. BZ quadrature and full-theory errors are separate.",
+          "rigorous_interband_window": true,
+          "new_mode_source_sha256": "14ff91bcc26f47578f125da08e9c788b9ff9b8800469ed02eac93555ed481be6",
+          "old_independent_root_frames": "Not used; old complete two-polarization claims withdrawn. Frozen kernel coefficients are unchanged.",
+          "energy_current": {
+            "identity": "Projected quadratic-action Noether energy flux / one-quantum energy = -Ai.T(dq F)Ai/(2 omega); Ai.T Fprime Ai=1",
+            "derivative": "Actual neighbouring uncompressed kernels at FIXED omega and projected SAME physical field state; Richardson h^2 extrapolation",
+            "step": 9.1104335791443e-05,
+            "coarse": [
+              [
+                0.11376385011484073,
+                0.08128952664727024,
+                0.04878958273607224
+              ],
+              [
+                0.11376729773640927,
+                0.08129510765839412,
+                0.04878615856134054
+              ]
+            ],
+            "half_step": [
+              [
+                0.11376385259789736,
+                0.08128953339190305,
+                0.048789614482056466
+              ],
+              [
+                0.1137673305859323,
+                0.08129514379286155,
+                0.04878615962116928
+              ]
+            ],
+            "resolution_error": 3.6134467432114015e-08,
+            "degenerate_velocity_operators": [],
+            "degeneracy_scope": "At an exact doublet, these are prepared-frame energy-current expectations; velocity operators need not commute. No unique sorted-band Cartesian gradient is claimed."
+          }
+        },
+        "group_velocity": [
+          0.1137655974806781,
+          0.08129234573889901,
+          0.048787892519248366
+        ]
+      },
+      "controls": {
+        "actual_current_unpolarized_rotation_error": 2.0490626572713073e-16,
+        "duplicate_state_current_error": 0.9999741431319261,
+        "duplicate_state_canonical_gram_error": 0.9999999999999998,
+        "scope": "Actual literal Peierls current plus onsite density, quantum-normalized field legs. Rotation is a complete-state mixture identity, not a scattering-rate or Ref4 admission claim."
+      }
+    },
+    {
+      "supplier_sha256": "28d8b4c8e78e89bbdee9c7648fbae18993b5c7e9c5434759e6250e639682fe3e",
+      "mode": {
+        "q": [
+          0.0,
+          0.0,
+          0.1
+        ],
+        "omega": 0.013733973507663116,
+        "residue": 0.040587194167839756,
+        "two_polarizations": [
+          {
+            "omega": 0.013733973507663116,
+            "residue": 0.040587194167839756,
+            "polarization": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.013736760202654465,
+            "epsilon": 24.618318595974753,
+            "kappa": 0.4645683740002533,
+            "inverse_residual": 6.522560270414555e-16,
+            "backward_error_omega_upper": 4.749215707147808e-14,
+            "raw_scalar_polarization": 8.200944365011903e-20,
+            "group_velocity": [
+              1.9224449584801272e-14,
+              2.1363431161101793e-14,
+              0.13732950741266536
+            ]
+          },
+          {
+            "omega": 0.013733973507663116,
+            "residue": 0.040587194167839756,
+            "polarization": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.013736760202654923,
+            "epsilon": 24.61831859597472,
+            "kappa": 0.4645683740002838,
+            "inverse_residual": 2.194425199315417e-16,
+            "backward_error_omega_upper": 1.5978079454507452e-14,
+            "raw_scalar_polarization": 1.6097086110385367e-20,
+            "group_velocity": [
+              1.7515626892174072e-13,
+              1.3029620949665355e-13,
+              0.13732950741592925
+            ]
+          }
+        ],
+        "pair_threshold": 0.25917286261014977,
+        "pair_threshold_lower": 0.2588359761300447,
+        "pair_threshold_kind": "Sampled actual interband minimum; independent analytic 2m sqrt(g0) lower bound also supplied",
+        "polarization_speed_splitting": 0.0,
+        "quadrature_order": 12,
+        "quadrature_points": 400896,
+        "canonical_mode_gram_error": 1.5987211554602254e-14,
+        "frame_proof": {
+          "method": "Exact cubic transverse irreducible doublet; group-averaged uncompressed integral, ONE common root",
+          "little_group": "C4 axis",
+          "canonical_mode_gram": [
+            [
+              1.0000000000000135,
+              9.86512874024752e-19
+            ],
+            [
+              9.86512874024752e-19,
+              0.999999999999984
+            ]
+          ],
+          "spatial_frame_gram": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "field_amplitude_gram": [
+            [
+              0.040587194167839756,
+              0.0
+            ],
+            [
+              0.0,
+              0.040587194167839756
+            ]
+          ],
+          "norm": "Ai^T [F(xi)-F(xj)]/(xi-xj) Aj; diagonal Fprime. Analytic divided difference includes actual signed mixed-current/density A0 Schur term.",
+          "gap_bins": 0,
+          "symmetry_residual": [
+            {
+              "omega_squared": 0.0,
+              "inverse_operator_error": 1.526556663465528e-16,
+              "norm_operator_error": 1.5276668837293217e-12
+            },
+            {
+              "omega_squared": 9.431101415459617e-05,
+              "inverse_operator_error": 2.914335446139807e-16,
+              "norm_operator_error": 5.968558982994413e-13
+            },
+            {
+              "omega_squared": 0.00018862202830919234,
+              "inverse_operator_error": 7.788908409371549e-16,
+              "norm_operator_error": 3.907985047705268e-13
+            }
+          ],
+          "backward_error_omega_squared_upper": [
+            1.304512054082911e-15,
+            4.388850398630834e-16
+          ],
+          "backward_error_scope": "Positive canonical PH realization gives Fprime >= eps_b below the first PH pole; raw-kernel residual / eps_b bounds pole perturbation. BZ quadrature and full-theory errors are separate.",
+          "rigorous_interband_window": true,
+          "new_mode_source_sha256": "14ff91bcc26f47578f125da08e9c788b9ff9b8800469ed02eac93555ed481be6",
+          "old_independent_root_frames": "Not used; old complete two-polarization claims withdrawn. Frozen kernel coefficients are unchanged.",
+          "energy_current": {
+            "identity": "Projected quadratic-action Noether energy flux / one-quantum energy = -Ai.T(dq F)Ai/(2 omega); Ai.T Fprime Ai=1",
+            "derivative": "Actual neighbouring uncompressed kernels at FIXED omega and projected SAME physical field state; Richardson h^2 extrapolation",
+            "step": 0.0001,
+            "coarse": [
+              [
+                -5.767334875440381e-14,
+                3.844563677678605e-14,
+                0.137329507329103
+              ],
+              [
+                8.971418537323933e-14,
+                -8.330264241398201e-14,
+                0.1373295073277701
+              ]
+            ],
+            "half_step": [
+              [
+                -0.0,
+                2.5633982565022857e-14,
+                0.13732950739177477
+              ],
+              [
+                1.5379574803461536e-13,
+                7.689649651899466e-14,
+                0.13732950739388947
+              ]
+            ],
+            "resolution_error": 6.611935998712681e-11,
+            "degenerate_velocity_operators": [
+              [
+                [
+                  -0.0,
+                  -1.49698514125647e-14
+                ],
+                [
+                  -1.4969851412564702e-14,
+                  1.5379574803461536e-13
+                ]
+              ],
+              [
+                [
+                  2.5633984917709983e-14,
+                  7.098156337748999e-15
+                ],
+                [
+                  7.098156335698898e-15,
+                  7.689649651899466e-14
+                ]
+              ],
+              [
+                [
+                  0.13732950739177477,
+                  1.6484062089283476e-16
+                ],
+                [
+                  1.6484062089283476e-16,
+                  0.13732950739388947
+                ]
+              ]
+            ],
+            "degeneracy_scope": "At an exact doublet, these are prepared-frame energy-current expectations; velocity operators need not commute. No unique sorted-band Cartesian gradient is claimed."
+          }
+        },
+        "group_velocity": [
+          9.719035925327099e-14,
+          7.582982032887767e-14,
+          0.1373295074142973
+        ]
+      },
+      "controls": {
+        "actual_current_unpolarized_rotation_error": 1.7687083621411302e-16,
+        "duplicate_state_current_error": 0.999999999937409,
+        "duplicate_state_canonical_gram_error": 1.0000000000000135,
+        "scope": "Actual literal Peierls current plus onsite density, quantum-normalized field legs. Rotation is a complete-state mixture identity, not a scattering-rate or Ref4 admission claim."
+      }
+    },
+    {
+      "supplier_sha256": "28d8b4c8e78e89bbdee9c7648fbae18993b5c7e9c5434759e6250e639682fe3e",
+      "mode": {
+        "q": [
+          0.22053099201074255,
+          0.22053099201074255,
+          0.22053099201074255
+        ],
+        "omega": 0.05244919396644039,
+        "residue": 0.04049547166693367,
+        "two_polarizations": [
+          {
+            "omega": 0.05244919396644039,
+            "residue": 0.04049547166693367,
+            "polarization": [
+              0.7071067811865475,
+              -0.7071067811865475,
+              0.0
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.05260207949800773,
+            "epsilon": 24.406691188884412,
+            "kappa": 0.4629821274599702,
+            "inverse_residual": 2.179200906964682e-15,
+            "backward_error_omega_upper": 4.1548796886355265e-14,
+            "raw_scalar_polarization": -5.045598360908956e-17,
+            "group_velocity": [
+              0.07924138545572189,
+              0.07924138545812527,
+              0.07923485466914448
+            ]
+          },
+          {
+            "omega": 0.05244919396644039,
+            "residue": 0.04049547166693367,
+            "polarization": [
+              0.408248290463863,
+              0.408248290463863,
+              -0.816496580927726
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.052602079498011614,
+            "epsilon": 24.406691188881116,
+            "kappa": 0.46298212745997597,
+            "inverse_residual": 1.3144239381399881e-15,
+            "backward_error_omega_upper": 2.5060898723839722e-14,
+            "raw_scalar_polarization": -6.682901498010447e-19,
+            "group_velocity": [
+              0.0792370315986113,
+              0.07923703159809671,
+              0.07924356238664265
+            ]
+          }
+        ],
+        "pair_threshold": 0.26326658131843733,
+        "pair_threshold_lower": 0.2588359761300447,
+        "pair_threshold_kind": "Sampled actual interband minimum; independent analytic 2m sqrt(g0) lower bound also supplied",
+        "polarization_speed_splitting": 0.0,
+        "quadrature_order": 12,
+        "quadrature_points": 400896,
+        "canonical_mode_gram_error": 7.749356711883593e-14,
+        "frame_proof": {
+          "method": "Exact cubic transverse irreducible doublet; group-averaged uncompressed integral, ONE common root",
+          "little_group": "S3 signed body diagonal",
+          "canonical_mode_gram": [
+            [
+              0.9999999999999225,
+              -2.908421858573957e-16
+            ],
+            [
+              -2.908421858573957e-16,
+              0.9999999999999917
+            ]
+          ],
+          "spatial_frame_gram": [
+            [
+              0.9999999999999998,
+              8.255428088526173e-18
+            ],
+            [
+              8.255428088526173e-18,
+              1.0
+            ]
+          ],
+          "field_amplitude_gram": [
+            [
+              0.04049547166693367,
+              0.0
+            ],
+            [
+              0.0,
+              0.04049547166693367
+            ]
+          ],
+          "norm": "Ai^T [F(xi)-F(xj)]/(xi-xj) Aj; diagonal Fprime. Analytic divided difference includes actual signed mixed-current/density A0 Schur term.",
+          "gap_bins": 0,
+          "symmetry_residual": [
+            {
+              "omega_squared": 0.0,
+              "inverse_operator_error": 4.94171671064166e-16,
+              "norm_operator_error": 2.6148305060624846e-12
+            },
+            {
+              "omega_squared": 0.0013754589738646436,
+              "inverse_operator_error": 4.031060565760004e-16,
+              "norm_operator_error": 3.588245332040231e-13
+            },
+            {
+              "omega_squared": 0.0027509179477292873,
+              "inverse_operator_error": 2.196654937388163e-15,
+              "norm_operator_error": 1.911389708196127e-12
+            }
+          ],
+          "backward_error_omega_squared_upper": [
+            4.358401813929364e-15,
+            2.6288478762799762e-15
+          ],
+          "backward_error_scope": "Positive canonical PH realization gives Fprime >= eps_b below the first PH pole; raw-kernel residual / eps_b bounds pole perturbation. BZ quadrature and full-theory errors are separate.",
+          "rigorous_interband_window": true,
+          "new_mode_source_sha256": "14ff91bcc26f47578f125da08e9c788b9ff9b8800469ed02eac93555ed481be6",
+          "old_independent_root_frames": "Not used; old complete two-polarization claims withdrawn. Frozen kernel coefficients are unchanged.",
+          "energy_current": {
+            "identity": "Projected quadratic-action Noether energy flux / one-quantum energy = -Ai.T(dq F)Ai/(2 omega); Ai.T Fprime Ai=1",
+            "derivative": "Actual neighbouring uncompressed kernels at FIXED omega and projected SAME physical field state; Richardson h^2 extrapolation",
+            "step": 0.0003819708828061723,
+            "coarse": [
+              [
+                0.07924134513892415,
+                0.07924134513654138,
+                0.07923485395614614
+              ],
+              [
+                0.07923701768552739,
+                0.07923701768258037,
+                0.07924350886321406
+              ]
+            ],
+            "half_step": [
+              [
+                0.07924137537652245,
+                0.0792413753777293,
+                0.0792348544908949
+              ],
+              [
+                0.07923702812034032,
+                0.07923702811921762,
+                0.07924354900578551
+              ]
+            ],
+            "resolution_error": 4.014257144746569e-08,
+            "degenerate_velocity_operators": [
+              [
+                [
+                  0.07924137537652245,
+                  3.7648344588137367e-06
+                ],
+                [
+                  3.764834458811553e-06,
+                  0.0792370281203403
+                ]
+              ],
+              [
+                [
+                  0.0792413753777293,
+                  -3.764835106518595e-06
+                ],
+                [
+                  -3.7648351065210693e-06,
+                  0.07923702811921762
+                ]
+              ],
+              [
+                [
+                  0.0792348544908949,
+                  7.719007237017632e-13
+                ],
+                [
+                  7.719007445886119e-13,
+                  0.07924354900578551
+                ]
+              ]
+            ],
+            "degeneracy_scope": "At an exact doublet, these are prepared-frame energy-current expectations; velocity operators need not commute. No unique sorted-band Cartesian gradient is claimed."
+          }
+        },
+        "group_velocity": [
+          0.0792392085271666,
+          0.07923920852811099,
+          0.07923920852789357
+        ]
+      },
+      "controls": {
+        "actual_current_unpolarized_rotation_error": 5.4362269348614854e-17,
+        "duplicate_state_current_error": 0.999937504374833,
+        "duplicate_state_canonical_gram_error": 0.999999999999922,
+        "scope": "Actual literal Peierls current plus onsite density, quantum-normalized field legs. Rotation is a complete-state mixture identity, not a scattering-rate or Ref4 admission claim."
+      }
+    },
+    {
+      "supplier_sha256": "28d8b4c8e78e89bbdee9c7648fbae18993b5c7e9c5434759e6250e639682fe3e",
+      "mode": {
+        "q": [
+          0.07,
+          0.05,
+          0.03
+        ],
+        "omega": 0.01251250293633522,
+        "residue": 0.04058852924518422,
+        "two_polarizations": [
+          {
+            "omega": 0.012512495168989198,
+            "residue": 0.040588457289474786,
+            "polarization": [
+              0.1634920300209639,
+              0.32912920995281514,
+              -0.9300238272622158
+            ],
+            "scalar_polarization": -1.7555250853432996e-07,
+            "local_omega": 0.012514602894258955,
+            "epsilon": 24.620947323967172,
+            "kappa": 0.4645893828245328,
+            "inverse_residual": 7.893256040959143e-17,
+            "backward_error_omega_upper": 6.30829897183232e-15,
+            "raw_scalar_polarization": -1.7555250853432996e-07,
+            "group_velocity": [
+              0.1055218991277483,
+              0.07537487624491279,
+              0.04522620928381288
+            ]
+          },
+          {
+            "omega": 0.012512510703681241,
+            "residue": 0.04058860120089365,
+            "polarization": [
+              0.6187992136018815,
+              -0.7684186315337102,
+              -0.16315740852793975
+            ],
+            "scalar_polarization": -2.721555767272424e-07,
+            "local_omega": 0.012514618425413434,
+            "epsilon": 24.620860076061973,
+            "kappa": 0.46458888963153067,
+            "inverse_residual": 5.3106988281767624e-17,
+            "backward_error_omega_upper": 4.244311117044103e-15,
+            "raw_scalar_polarization": -2.721555767272424e-07,
+            "group_velocity": [
+              0.1055222850326248,
+              0.07537549774313045,
+              0.04522582639709558
+            ]
+          }
+        ],
+        "pair_threshold": 0.25912119677527856,
+        "pair_threshold_lower": 0.2588359761300447,
+        "pair_threshold_kind": "Sampled actual interband minimum; independent analytic 2m sqrt(g0) lower bound also supplied",
+        "polarization_speed_splitting": 1.241534308915604e-06,
+        "quadrature_order": 12,
+        "quadrature_points": 400896,
+        "canonical_mode_gram_error": 2.220446049250313e-16,
+        "frame_proof": {
+          "method": "Common uncompressed F/Fprime generalized eigencluster; original nonlinear residual priced",
+          "little_group": "generic q",
+          "canonical_mode_gram": [
+            [
+              0.9999999999999998,
+              1.1102230246251565e-16
+            ],
+            [
+              1.1102230246251565e-16,
+              0.9999999999999999
+            ]
+          ],
+          "spatial_frame_gram": [
+            [
+              0.9999999999999998,
+              2.2773692072356165e-11
+            ],
+            [
+              2.2773692072356165e-11,
+              0.9999999999999998
+            ]
+          ],
+          "field_amplitude_gram": [
+            [
+              0.040588457289474786,
+              9.243476581918128e-13
+            ],
+            [
+              9.243476581918128e-13,
+              0.04058860120089365
+            ]
+          ],
+          "norm": "Ai^T [F(xi)-F(xj)]/(xi-xj) Aj; diagonal Fprime. Analytic divided difference includes actual signed mixed-current/density A0 Schur term.",
+          "gap_bins": 0,
+          "symmetry_residual": [],
+          "backward_error_omega_squared_upper": [
+            1.5786512081918285e-16,
+            1.0621397656353525e-16
+          ],
+          "backward_error_scope": "Positive canonical PH realization gives Fprime >= eps_b below the first PH pole; raw-kernel residual / eps_b bounds pole perturbation. BZ quadrature and full-theory errors are separate.",
+          "rigorous_interband_window": true,
+          "new_mode_source_sha256": "14ff91bcc26f47578f125da08e9c788b9ff9b8800469ed02eac93555ed481be6",
+          "old_independent_root_frames": "Not used; old complete two-polarization claims withdrawn. Frozen kernel coefficients are unchanged.",
+          "energy_current": {
+            "identity": "Projected quadratic-action Noether energy flux / one-quantum energy = -Ai.T(dq F)Ai/(2 omega); Ai.T Fprime Ai=1",
+            "derivative": "Actual neighbouring uncompressed kernels at FIXED omega and projected SAME physical field state; Richardson h^2 extrapolation",
+            "step": 9.1104335791443e-05,
+            "coarse": [
+              [
+                0.10552189623013532,
+                0.07537486803945435,
+                0.0452261701601812
+              ],
+              [
+                0.10552224456273333,
+                0.07537545319192099,
+                0.04522582518529828
+              ]
+            ],
+            "half_step": [
+              [
+                0.10552189840334505,
+                0.07537487419354819,
+                0.045226199502904955
+              ],
+              [
+                0.10552227491515194,
+                0.07537548660532808,
+                0.04522582609414626
+              ]
+            ],
+            "resolution_error": 3.3413407096727354e-08,
+            "degenerate_velocity_operators": [],
+            "degeneracy_scope": "At an exact doublet, these are prepared-frame energy-current expectations; velocity operators need not commute. No unique sorted-band Cartesian gradient is claimed."
+          }
+        },
+        "group_velocity": [
+          0.10552209208018655,
+          0.07537518699402163,
+          0.04522601784045423
+        ]
+      },
+      "controls": {
+        "actual_current_unpolarized_rotation_error": 3.622949075714623e-16,
+        "duplicate_state_current_error": 0.9999741383471441,
+        "duplicate_state_canonical_gram_error": 0.9999999999999998,
+        "scope": "Actual literal Peierls current plus onsite density, quantum-normalized field legs. Rotation is a complete-state mixture identity, not a scattering-rate or Ref4 admission claim."
+      }
+    },
+    {
+      "supplier_sha256": "d03086236316a926ee4fc4e8f8afe96e10e2164f1f7b50d0cd7e9075d95967a4",
+      "mode": {
+        "q": [
+          0.0,
+          0.0,
+          0.1
+        ],
+        "omega": 0.013552677614900933,
+        "residue": 0.032349953387228,
+        "two_polarizations": [
+          {
+            "omega": 0.013552677614900933,
+            "residue": 0.032349953387228,
+            "polarization": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.013552730894780228,
+            "epsilon": 30.911459356988825,
+            "kappa": 0.5677710274311113,
+            "inverse_residual": 4.616272641922025e-14,
+            "backward_error_omega_upper": 3.4061701850315645e-12,
+            "raw_scalar_polarization": -1.1791085945588577e-19,
+            "group_velocity": [
+              -7.073775755098233e-14,
+              -1.2421947060052947e-13,
+              0.13552671814311812
+            ]
+          },
+          {
+            "omega": 0.013552677614900933,
+            "residue": 0.032349953387228,
+            "polarization": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.01355273089467043,
+            "epsilon": 30.91145935698828,
+            "kappa": 0.5677710274219017,
+            "inverse_residual": 4.606471454282757e-14,
+            "backward_error_omega_upper": 3.3989382653196308e-12,
+            "raw_scalar_polarization": -2.3340040121488877e-20,
+            "group_velocity": [
+              -1.6390460995570005e-13,
+              9.488914525756253e-14,
+              0.13552671769534452
+            ]
+          }
+        ],
+        "pair_threshold": 0.2591728772236398,
+        "pair_threshold_lower": 0.2588359761300447,
+        "pair_threshold_kind": "Sampled actual interband minimum; independent analytic 2m sqrt(g0) lower bound also supplied",
+        "polarization_speed_splitting": 0.0,
+        "quadrature_order": 12,
+        "quadrature_points": 1285632,
+        "canonical_mode_gram_error": 4.984901380566953e-14,
+        "frame_proof": {
+          "method": "Exact cubic transverse irreducible doublet; group-averaged uncompressed integral, ONE common root",
+          "little_group": "C4 axis",
+          "canonical_mode_gram": [
+            [
+              0.9999999999999502,
+              6.727995973423068e-19
+            ],
+            [
+              6.727995973423068e-19,
+              0.9999999999999545
+            ]
+          ],
+          "spatial_frame_gram": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "field_amplitude_gram": [
+            [
+              0.032349953387228,
+              0.0
+            ],
+            [
+              0.0,
+              0.032349953387228
+            ]
+          ],
+          "norm": "Ai^T [F(xi)-F(xj)]/(xi-xj) Aj; diagonal Fprime. Analytic divided difference includes actual signed mixed-current/density A0 Schur term.",
+          "gap_bins": 0,
+          "symmetry_residual": [
+            {
+              "omega_squared": 0.0,
+              "inverse_operator_error": 4.604823466980622e-14,
+              "norm_operator_error": 1.2683187833407294e-12
+            },
+            {
+              "omega_squared": 9.183753526671842e-05,
+              "inverse_operator_error": 4.6088566990624276e-14,
+              "norm_operator_error": 1.1688428004812233e-12
+            },
+            {
+              "omega_squared": 0.00018367507053343684,
+              "inverse_operator_error": 4.616185905748226e-14,
+              "norm_operator_error": 1.5383250281622169e-12
+            }
+          ],
+          "backward_error_omega_squared_upper": [
+            9.23254528384405e-14,
+            9.212942908565514e-14
+          ],
+          "backward_error_scope": "Positive canonical PH realization gives Fprime >= eps_b below the first PH pole; raw-kernel residual / eps_b bounds pole perturbation. BZ quadrature and full-theory errors are separate.",
+          "rigorous_interband_window": true,
+          "new_mode_source_sha256": "14ff91bcc26f47578f125da08e9c788b9ff9b8800469ed02eac93555ed481be6",
+          "old_independent_root_frames": "Not used; old complete two-polarization claims withdrawn. Frozen kernel coefficients are unchanged.",
+          "energy_current": {
+            "identity": "Projected quadratic-action Noether energy flux / one-quantum energy = -Ai.T(dq F)Ai/(2 omega); Ai.T Fprime Ai=1",
+            "derivative": "Actual neighbouring uncompressed kernels at FIXED omega and projected SAME physical field state; Richardson h^2 extrapolation",
+            "step": 0.0001,
+            "coarse": [
+              [
+                5.1759288273219804e-15,
+                8.439924000983807e-19,
+                0.13552671643096023
+              ],
+              [
+                3.623153993780302e-14,
+                5.1750896032405265e-15,
+                0.13552671621615894
+              ]
+            ],
+            "half_step": [
+              [
+                -5.175933595640625e-14,
+                -9.316439195229707e-14,
+                0.13552671771507865
+              ],
+              [
+                -1.1387057248232427e-13,
+                7.246063134398202e-14,
+                0.13552671732554813
+              ]
+            ],
+            "resolution_error": 1.2841184227063707e-09,
+            "degenerate_velocity_operators": [
+              [
+                [
+                  -5.175933595640625e-14,
+                  -9.5414922608815e-16
+                ],
+                [
+                  -9.5414922608815e-16,
+                  -1.1387057248232427e-13
+                ]
+              ],
+              [
+                [
+                  -9.316439195229707e-14,
+                  -2.190987395300594e-15
+                ],
+                [
+                  -2.1909873945041325e-15,
+                  7.246063134398202e-14
+                ]
+              ],
+              [
+                [
+                  0.13552671771507865,
+                  1.491458811320016e-17
+                ],
+                [
+                  1.491458811320016e-17,
+                  0.13552671732554813
+                ]
+              ]
+            ],
+            "degeneracy_scope": "At an exact doublet, these are prepared-frame energy-current expectations; velocity operators need not commute. No unique sorted-band Cartesian gradient is claimed."
+          }
+        },
+        "group_velocity": [
+          -1.1732118375334118e-13,
+          -1.4665162671483472e-14,
+          0.13552671791923132
+        ]
+      },
+      "controls": {
+        "actual_current_unpolarized_rotation_error": 1.4443115751965284e-16,
+        "duplicate_state_current_error": 0.9999999999374095,
+        "duplicate_state_canonical_gram_error": 0.9999999999999502,
+        "scope": "Actual literal Peierls current plus onsite density, quantum-normalized field legs. Rotation is a complete-state mixture identity, not a scattering-rate or Ref4 admission claim."
+      }
+    },
+    {
+      "supplier_sha256": "d03086236316a926ee4fc4e8f8afe96e10e2164f1f7b50d0cd7e9075d95967a4",
+      "mode": {
+        "q": [
+          0.22053099201074255,
+          0.22053099201074255,
+          0.22053099201074255
+        ],
+        "omega": 0.05176719522600653,
+        "residue": 0.032348880623068996,
+        "two_polarizations": [
+          {
+            "omega": 0.05176719522600653,
+            "residue": 0.032348880623068996,
+            "polarization": [
+              0.7071067811865475,
+              -0.7071067811865475,
+              0.0
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.05177012083519468,
+            "epsilon": 30.905948030175768,
+            "kappa": 0.5677280343686337,
+            "inverse_residual": 5.163828768995895e-14,
+            "backward_error_omega_upper": 9.975098605306936e-13,
+            "raw_scalar_polarization": -7.624909223340015e-17,
+            "group_velocity": [
+              0.07824599901130684,
+              0.07824599914214966,
+              0.0782459755369011
+            ]
+          },
+          {
+            "omega": 0.05176719522600653,
+            "residue": 0.032348880623068996,
+            "polarization": [
+              0.408248290463863,
+              0.408248290463863,
+              -0.816496580927726
+            ],
+            "scalar_polarization": 0.0,
+            "local_omega": 0.05177012083522393,
+            "epsilon": 30.905948030177257,
+            "kappa": 0.5677280343693025,
+            "inverse_residual": 4.891417781616602e-14,
+            "backward_error_omega_upper": 9.44887541281989e-13,
+            "raw_scalar_polarization": -1.6969199815463466e-18,
+            "group_velocity": [
+              0.07824598339759785,
+              0.07824598335640016,
+              0.07824600694256446
+            ]
+          }
+        ],
+        "pair_threshold": 0.2632674541208222,
+        "pair_threshold_lower": 0.2588359761300447,
+        "pair_threshold_kind": "Sampled actual interband minimum; independent analytic 2m sqrt(g0) lower bound also supplied",
+        "polarization_speed_splitting": 0.0,
+        "quadrature_order": 12,
+        "quadrature_points": 1285632,
+        "canonical_mode_gram_error": 4.718447854656915e-14,
+        "frame_proof": {
+          "method": "Exact cubic transverse irreducible doublet; group-averaged uncompressed integral, ONE common root",
+          "little_group": "S3 signed body diagonal",
+          "canonical_mode_gram": [
+            [
+              0.9999999999999934,
+              -2.4125282631391786e-16
+            ],
+            [
+              -2.4125282631391786e-16,
+              0.9999999999999528
+            ]
+          ],
+          "spatial_frame_gram": [
+            [
+              0.9999999999999998,
+              8.255428088526173e-18
+            ],
+            [
+              8.255428088526173e-18,
+              1.0
+            ]
+          ],
+          "field_amplitude_gram": [
+            [
+              0.032348880623068996,
+              0.0
+            ],
+            [
+              0.0,
+              0.032348880623068996
+            ]
+          ],
+          "norm": "Ai^T [F(xi)-F(xj)]/(xi-xj) Aj; diagonal Fprime. Analytic divided difference includes actual signed mixed-current/density A0 Schur term.",
+          "gap_bins": 0,
+          "symmetry_residual": [
+            {
+              "omega_squared": 0.0,
+              "inverse_operator_error": 4.948630991847516e-14,
+              "norm_operator_error": 1.2008225098293837e-12
+            },
+            {
+              "omega_squared": 0.0013399212507837367,
+              "inverse_operator_error": 4.956069568791952e-14,
+              "norm_operator_error": 1.26477061939435e-12
+            },
+            {
+              "omega_squared": 0.0026798425015674733,
+              "inverse_operator_error": 5.176758251931688e-14,
+              "norm_operator_error": 1.4531050724558528e-12
+            }
+          ],
+          "backward_error_omega_squared_upper": [
+            1.032765753799179e-13,
+            9.782835563233204e-14
+          ],
+          "backward_error_scope": "Positive canonical PH realization gives Fprime >= eps_b below the first PH pole; raw-kernel residual / eps_b bounds pole perturbation. BZ quadrature and full-theory errors are separate.",
+          "rigorous_interband_window": true,
+          "new_mode_source_sha256": "14ff91bcc26f47578f125da08e9c788b9ff9b8800469ed02eac93555ed481be6",
+          "old_independent_root_frames": "Not used; old complete two-polarization claims withdrawn. Frozen kernel coefficients are unchanged.",
+          "energy_current": {
+            "identity": "Projected quadratic-action Noether energy flux / one-quantum energy = -Ai.T(dq F)Ai/(2 omega); Ai.T Fprime Ai=1",
+            "derivative": "Actual neighbouring uncompressed kernels at FIXED omega and projected SAME physical field state; Richardson h^2 extrapolation",
+            "step": 0.0003819708828061723,
+            "coarse": [
+              [
+                0.07824596003976711,
+                0.07824596011066678,
+                0.07824597524921999
+              ],
+              [
+                0.07824597011828685,
+                0.07824597019179334,
+                0.07824595517061197
+              ]
+            ],
+            "half_step": [
+              [
+                0.07824598926842191,
+                0.07824598938427894,
+                0.07824597546498083
+              ],
+              [
+                0.0782459800777701,
+                0.07824598006524847,
+                0.07824599399957634
+              ]
+            ],
+            "resolution_error": 3.8828964363246676e-08,
+            "degenerate_velocity_operators": [
+              [
+                [
+                  0.07824598926842191,
+                  7.966137669891345e-09
+                ],
+                [
+                  7.966137668081965e-09,
+                  0.0782459800777701
+                ]
+              ],
+              [
+                [
+                  0.07824598938427894,
+                  -8.01803546308611e-09
+                ],
+                [
+                  -8.018035459269644e-09,
+                  0.07824598006524844
+                ]
+              ],
+              [
+                [
+                  0.07824597546498083,
+                  1.0919016999225603e-11
+                ],
+                [
+                  1.0919014016471501e-11,
+                  0.07824599399957634
+                ]
+              ]
+            ],
+            "degeneracy_scope": "At an exact doublet, these are prepared-frame energy-current expectations; velocity operators need not commute. No unique sorted-band Cartesian gradient is claimed."
+          }
+        },
+        "group_velocity": [
+          0.07824599120445234,
+          0.07824599124927492,
+          0.07824599123973278
+        ]
+      },
+      "controls": {
+        "actual_current_unpolarized_rotation_error": 1.7242893647950638e-16,
+        "duplicate_state_current_error": 0.9999374902139845,
+        "duplicate_state_canonical_gram_error": 0.9999999999999931,
+        "scope": "Actual literal Peierls current plus onsite density, quantum-normalized field legs. Rotation is a complete-state mixture identity, not a scattering-rate or Ref4 admission claim."
+      }
+    },
+    {
+      "supplier_sha256": "d03086236316a926ee4fc4e8f8afe96e10e2164f1f7b50d0cd7e9075d95967a4",
+      "mode": {
+        "q": [
+          0.07,
+          0.05,
+          0.03
+        ],
+        "omega": 0.012347078126081214,
+        "residue": 0.03234996753768721,
+        "two_polarizations": [
+          {
+            "omega": 0.012347078095507067,
+            "residue": 0.032349967249764744,
+            "polarization": [
+              0.16215382115691213,
+              0.3307866680972257,
+              -0.9296700051595448
+            ],
+            "scalar_polarization": -8.665334595373111e-10,
+            "local_omega": 0.012347118391528224,
+            "epsilon": 30.911528723205922,
+            "kappa": 0.5677715788753285,
+            "inverse_residual": 2.057021462472004e-18,
+            "backward_error_omega_upper": 1.665998584086486e-16,
+            "raw_scalar_polarization": -8.665334595373111e-10,
+            "group_velocity": [
+              0.10413196099514711,
+              0.07437996341451608,
+              0.04462800722101007
+            ]
+          },
+          {
+            "omega": 0.012347078156655361,
+            "residue": 0.03234996782560968,
+            "polarization": [
+              0.6191483718669959,
+              -0.7677078567606687,
+              -0.16516640179645745
+            ],
+            "scalar_polarization": -1.3497893025815107e-09,
+            "local_omega": 0.01234711845267637,
+            "epsilon": 30.911528172969795,
+            "kappa": 0.567771574392483,
+            "inverse_residual": 1.5245116952060294e-18,
+            "backward_error_omega_upper": 1.2347145420670089e-16,
+            "raw_scalar_polarization": -1.3497893025815107e-09,
+            "group_velocity": [
+              0.10413195670070118,
+              0.07437996797901784,
+              0.04462799634246548
+            ]
+          }
+        ],
+        "pair_threshold": 0.2591212026965797,
+        "pair_threshold_lower": 0.2588359761300447,
+        "pair_threshold_kind": "Sampled actual interband minimum; independent analytic 2m sqrt(g0) lower bound also supplied",
+        "polarization_speed_splitting": 4.952450449735579e-09,
+        "quadrature_order": 12,
+        "quadrature_points": 1285632,
+        "canonical_mode_gram_error": 2.220446049250313e-16,
+        "frame_proof": {
+          "method": "Common uncompressed F/Fprime generalized eigencluster; original nonlinear residual priced",
+          "little_group": "generic q",
+          "canonical_mode_gram": [
+            [
+              0.9999999999999999,
+              2.220446049250313e-16
+            ],
+            [
+              1.1102230246251565e-16,
+              0.9999999999999998
+            ]
+          ],
+          "spatial_frame_gram": [
+            [
+              1.0,
+              -3.8313541131316044e-11
+            ],
+            [
+              -3.8313541131316044e-11,
+              1.0
+            ]
+          ],
+          "field_amplitude_gram": [
+            [
+              0.032349967249764744,
+              -1.239442517651761e-12
+            ],
+            [
+              -1.239442517651761e-12,
+              0.03234996782560968
+            ]
+          ],
+          "norm": "Ai^T [F(xi)-F(xj)]/(xi-xj) Aj; diagonal Fprime. Analytic divided difference includes actual signed mixed-current/density A0 Schur term.",
+          "gap_bins": 0,
+          "symmetry_residual": [],
+          "backward_error_omega_squared_upper": [
+            4.114042924944008e-18,
+            3.0490233904120588e-18
+          ],
+          "backward_error_scope": "Positive canonical PH realization gives Fprime >= eps_b below the first PH pole; raw-kernel residual / eps_b bounds pole perturbation. BZ quadrature and full-theory errors are separate.",
+          "rigorous_interband_window": true,
+          "new_mode_source_sha256": "14ff91bcc26f47578f125da08e9c788b9ff9b8800469ed02eac93555ed481be6",
+          "old_independent_root_frames": "Not used; old complete two-polarization claims withdrawn. Frozen kernel coefficients are unchanged.",
+          "energy_current": {
+            "identity": "Projected quadratic-action Noether energy flux / one-quantum energy = -Ai.T(dq F)Ai/(2 omega); Ai.T Fprime Ai=1",
+            "derivative": "Actual neighbouring uncompressed kernels at FIXED omega and projected SAME physical field state; Richardson h^2 extrapolation",
+            "step": 9.1104335791443e-05,
+            "coarse": [
+              [
+                0.1041319476285542,
+                0.07437996678679275,
+                0.04462795329344595
+              ],
+              [
+                0.10413191147248539,
+                0.0743799323950686,
+                0.04462799116126747
+              ]
+            ],
+            "half_step": [
+              [
+                0.10413195765349889,
+                0.07437996425758525,
+                0.04462799373911904
+              ],
+              [
+                0.10413194539364723,
+                0.07437995908303054,
+                0.04462799504716598
+              ]
+            ],
+            "resolution_error": 4.044567308847391e-08,
+            "degenerate_velocity_operators": [],
+            "degeneracy_scope": "At an exact doublet, these are prepared-frame energy-current expectations; velocity operators need not commute. No unique sorted-band Cartesian gradient is claimed."
+          }
+        },
+        "group_velocity": [
+          0.10413195884792414,
+          0.07437996569676697,
+          0.04462800178173777
+        ]
+      },
+      "controls": {
+        "actual_current_unpolarized_rotation_error": 3.507200379054352e-16,
+        "duplicate_state_current_error": 0.9999740718965213,
+        "duplicate_state_canonical_gram_error": 0.9999999999999999,
+        "scope": "Actual literal Peierls current plus onsite density, quantum-normalized field legs. Rotation is a complete-state mixture identity, not a scattering-rate or Ref4 admission claim."
+      }
+    }
+  ],
+  "observed_legacy_failure": {
+    "input_sha256": "1e4889e138f408924b054e4628e8558829ee05c2bc4396f4d9e447359b533bee",
+    "source_hashes": {
+      "induced_compton_transfer.py": "6e8f265b647d7329f0c82ee50f0882d3f092cb13bd4f750869ec536912511561",
+      "improved_phi_band.py": "da97aa8d9bcdb578db966533714b05a45d3747cca3f0b9dd253afb79bff76a76",
+      "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+      "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+      "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+      "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+      "induced_photon_response.py": "4906bf0bb8c3a80fd20d2b93388878e9975af54bffd7f114ee027d5c3c00e64f"
+    },
+    "first": {
+      "omega": 0.051767195225990735,
+      "residue": 0.032348880623068996,
+      "local_omega": 0.05177012083519423,
+      "epsilon": 30.90594803017606,
+      "scalar_polarization": -5.802285262331483e-17,
+      "kappa": 0.5677280343686293,
+      "polarization": [
+        0.7387796763144823,
+        -0.6704769391737103,
+        -0.06830273714077179
+      ],
+      "inverse_residual": -6.438299616002904e-16
+    },
+    "second": {
+      "omega": 0.05176719522605229,
+      "residue": 0.03234888062306896,
+      "local_omega": 0.051770120835255784,
+      "epsilon": 30.905948030176074,
+      "scalar_polarization": 5.23872963290612e-18,
+      "kappa": 0.5677280343710512,
+      "polarization": [
+        0.1675565650064157,
+        0.6082792282156906,
+        -0.7758357932221062
+      ],
+      "inverse_residual": -7.119545332450811e-16
+    },
+    "q0": [
+      0.22053099201074255,
+      0.22053099201074255,
+      0.22053099201074255
+    ],
+    "q1": [
+      0.22053099201053444,
+      0.22053099201053444,
+      0.22053099201053444
+    ],
+    "reported_old_overlap": -0.2310581019883451,
+    "scope": "Previously observed legacy separate-root incident-frame failure; NOT rerun. Different printed q values are numerical splitting of the exact cubic degenerate beam, not a claim about Fock overlap of distinct exact momenta."
+  },
+  "source_hashes": {
+    "induced_photon_response.py": "4906bf0bb8c3a80fd20d2b93388878e9975af54bffd7f114ee027d5c3c00e64f",
+    "improved_phi_band.py": "da97aa8d9bcdb578db966533714b05a45d3747cca3f0b9dd253afb79bff76a76",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "bosonic_original_law_join.py": "8e107f1fecb8483200c1520b8afd0032a653c24bae5b81d1ecad36a81d0cdd9e",
+    "reference_photon_current_scattering.py": "b0afc7a8497ea17d26969e57f2296e8537535f55bc6eebb6ac567e9097707963",
+    "induced_photon_mode_frame.py": "14ff91bcc26f47578f125da08e9c788b9ff9b8800469ed02eac93555ed481be6"
+  },
+  "source_snapshot": "#!/usr/bin/env python3\n\"\"\"Physical two-mode RPA frame from the actual uncompressed filled-band kernel.\n\nThe frozen response source is a current/contact/density provider. Its independent\nroot eigenvectors are not used here. Exact cubic little groups give a common\nroot and irreducible transverse frame; generic q uses the nonlinear spectral\npencil and its full field-plus-particle-hole divided-difference norm.\n\"\"\"\nfrom __future__ import annotations\nimport argparse\nfrom dataclasses import asdict\nimport hashlib\nimport json\nimport math\nimport os\nfrom pathlib import Path\nimport time\nfrom typing import Any\n\nif __name__ == '__main__':\n    for key in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):\n        os.environ[key]='1'\nimport numpy as np\nfrom scipy.linalg import eigh\nfrom scipy.optimize import brentq\nfrom induced_photon_response import ResponseConfig, SpectralResponse\n\nROOT=Path(__file__).resolve().parent\nLOADED_SOURCE_BYTES=Path(__file__).read_bytes()\nLOADED_SOURCE_SHA256=hashlib.sha256(LOADED_SOURCE_BYTES).hexdigest()\n\n\ndef transverse_frame(q,qhat):\n    \"\"\"Only exact symmetry directions qualify; there is no angular tolerance.\"\"\"\n    occupied=np.flatnonzero(q)\n    if len(occupied)==1:\n        axis=int(occupied[0])\n        return np.eye(3)[:,[j for j in range(3) if j!=axis]],'C4 axis'\n    if len(occupied)==3 and np.all(np.abs(q)==abs(q[0])):\n        signs=np.sign(q)\n        direction=signs/math.sqrt(3)\n        first=np.array([signs[1],-signs[0],0.])/math.sqrt(2)\n        return np.column_stack((first,np.cross(direction,first))),'S3 signed body diagonal'\n    direction=qhat/np.linalg.norm(qhat)\n    return np.linalg.svd(direction[None,:])[2][1:].T,'generic q'\n\n\nclass ModeKernel:\n    def __init__(self,cfg,data):\n        self.cfg=cfg;self.data=data\n        self.q=np.asarray(data['q']);self.qhat=np.asarray(data['qhat'])\n        if not np.linalg.norm(self.qhat):\n            raise ValueError('Nonzero lattice momentum required')\n        self.t,self.symmetry=transverse_frame(self.q,self.qhat)\n        self.delta=data['delta'];self.delta2=self.delta**2\n        self.factor=cfg.flavors/cfg.a;self.bare=1/(2*cfg.inertia)\n        self.kt=self.factor*(self.t.T@data['static']@self.t)\n        self.wt=np.einsum('ia,bij,jc->bac',self.t,data['weights'],self.t).real\n        self.mt=np.asarray(data['mixed_weights']@self.t).real\n        self.density_delta=data['density']*self.delta\n        self.qphysical2=float(self.qhat@self.qhat)/cfg.a**2\n        self.stiffness=float(np.linalg.norm(self.kt,2))\n        if np.min(np.linalg.eigvalsh(self.kt))<=0:\n            raise ArithmeticError('Actual transverse stiffness is not positive')\n        # Group averaging of the integral, not fitting or subtracting a mass.\n        # Uniform isotropic selected Phi, isotropic Peierls paths and the full\n        # signed cubical BZ rule are invariant under C4/S3. A real symmetric\n        # operator on their transverse irreducible doublet is scalar; density\n        # is the trivial representation and has no transverse matrix element.\n        self.scalar_weight=np.trace(self.wt,axis1=1,axis2=2)/2\n        self.scalar_stiffness=float(np.trace(self.kt)/2)\n\n    def constraint(self,x):\n        inv=1/(self.delta2-x)\n        chi=self.bare*self.qphysical2+self.cfg.flavors/self.cfg.a**3*np.sum(self.density_delta*inv)\n        d=self.cfg.flavors/self.cfg.a**2*np.einsum('bi,b->i',self.mt,inv)\n        cp=self.cfg.flavors/self.cfg.a**3*np.sum(self.density_delta*inv**2)\n        dp=self.cfg.flavors/self.cfg.a**2*np.einsum('bi,b->i',self.mt,inv**2)\n        return float(chi),d,float(cp),dp\n\n    def matrices(self,x):\n        if not 0<=x<float(np.min(self.delta2)):\n            raise ValueError('Real retarded kernel requires frequency below every sampled interband pole')\n        inv=1/(self.delta2-x)\n        chi,d,cp,dp=self.constraint(x)\n        p=self.factor*np.einsum('bij,b->ij',self.wt,inv/self.delta)\n        f=self.bare*x*np.eye(2)-self.kt+x*p-x*np.outer(d,d)/chi\n        g=self.bare*np.eye(2)+self.factor*np.einsum('bij,b->ij',self.wt,self.delta*inv**2)\n        g-=np.outer(d,d)/chi+x*((np.outer(dp,d)+np.outer(d,dp))/chi-np.outer(d,d)*cp/chi**2)\n        return (f+f.T)/2,(g+g.T)/2\n\n    def divided_norm(self,x,y):\n        \"\"\"Stable analytic [F(x)-F(y)]/(x-y), including signed A0 Schur term.\n\n        For coincident roots this is Fprime, not an Euclidean polarization Gram.\n        This eliminates cancellation even when the true splitting is unresolved.\n        \"\"\"\n        invx=1/(self.delta2-x);invy=1/(self.delta2-y)\n        g=self.bare*np.eye(2)+self.factor*np.einsum('bij,b->ij',self.wt,self.delta*invx*invy)\n        cx,dx,_,_=self.constraint(x);cy,dy,_,_=self.constraint(y)\n        dd=self.cfg.flavors/self.cfg.a**2*np.einsum('bi,b->i',self.mt,invx*invy)\n        cd=self.cfg.flavors/self.cfg.a**3*np.sum(self.density_delta*invx*invy)\n        nx=np.outer(dx,dx);ny=np.outer(dy,dy)\n        nd=(np.outer(dd,dx+dy)+np.outer(dx+dy,dd))/2\n        quotient_div=nd*(1/cx+1/cy)/2-(nx+ny)*cd/(2*cx*cy)\n        g-=(nx/cx+ny/cy)/2+(x+y)*quotient_div/2\n        return (g+g.T)/2\n\n    def scalar(self,x):\n        inv=1/(self.delta2-x)\n        f=self.bare*x-self.scalar_stiffness+self.factor*x*np.sum(self.scalar_weight*inv/self.delta)\n        g=self.bare+self.factor*np.sum(self.scalar_weight*self.delta*inv**2)\n        return float(f),float(g)\n\n    def norm_gram(self,x,vectors):\n        return np.array([[vectors[:,i]@self.divided_norm(x[i],x[j])@vectors[:,j]\n                          for j in range(2)] for i in range(2)])\n\n    def solve(self):\n        threshold2=float(np.min(self.delta2))\n        scale=self.scalar_stiffness/(self.bare+self.factor*np.sum(self.scalar_weight/self.delta**3))\n        upper=threshold2*(1-1e-10)/scale\n        if self.symmetry!='generic q':\n            root=scale*brentq(lambda y:self.scalar(y*scale)[0]/self.stiffness,0.,upper,xtol=1e-13,rtol=1e-13)\n            x=np.full(2,root)\n            derivative=self.scalar(root)[1]\n            vectors=np.eye(2)/math.sqrt(derivative)\n            method='Exact cubic transverse irreducible doublet; group-averaged uncompressed integral, ONE common root'\n        else:\n            g0=self.matrices(0.)[1]\n            x=np.asarray(eigh(self.kt,g0,eigvals_only=True))\n            for _ in range(4):\n                center=float(np.mean(x))\n                f,g=self.matrices(center)\n                offset,vectors=eigh(-f,g)\n                x=center+offset\n            if np.min(x)<=0 or np.max(x)>=threshold2:\n                raise ArithmeticError('Clustered physical poles leave their positive interband domain')\n            vectors=np.column_stack([vectors[:,i]/math.sqrt(vectors[:,i]@self.matrices(float(x[i]))[1]@vectors[:,i])\n                                     for i in range(2)])\n            residual=max(np.linalg.norm(self.matrices(float(x[i]))[0]@vectors[:,i])/np.linalg.norm(vectors[:,i])\n                         for i in range(2))/self.stiffness\n            gram=self.norm_gram(x,vectors)\n            method='Common uncompressed F/Fprime generalized eigencluster; original nonlinear residual priced'\n            if residual>1e-8 or np.max(abs(gram-np.eye(2)))>1e-7:\n                # Resolved modes need their exact nonlinear eigenvectors, not a\n                # common-frequency approximation and not Gram-Schmidt repair.\n                roots=[];columns=[]\n                for branch in (1,0):\n                    root=scale*brentq(lambda y:np.linalg.eigvalsh(self.matrices(y*scale)[0])[branch]/self.stiffness,\n                                     0.,upper,xtol=1e-13,rtol=1e-13)\n                    values,frame=np.linalg.eigh(self.matrices(root)[0])\n                    vector=frame[:,int(np.argmin(abs(values)))]\n                    vector/=math.sqrt(vector@self.matrices(root)[1]@vector)\n                    roots.append(root);columns.append(vector)\n                x=np.asarray(roots);vectors=np.column_stack(columns)\n                method='Resolved exact uncompressed nonlinear poles with full field-plus-PH divided-difference norm'\n        gram=self.norm_gram(x,vectors)\n        error=float(np.max(abs(gram-np.eye(2))))\n        if error>1e-7:\n            raise ArithmeticError(f'Physical photon multiplet is not canonically complete: {gram}')\n        return x,vectors,gram,method\n\n\ndef compute_mode(config,q,*,velocity=False,model=None,data=None):\n    \"\"\"Actual uncompressed pair. Optional model/data avoid repeated BZ evaluation.\"\"\"\n    model=SpectralResponse(config,config.orders[-1]) if model is None else model\n    q=np.asarray(q,float)\n    data=model.spectral(q) if data is None else data\n    kernel=ModeKernel(config,data)\n    x,amplitudes,gram,method=kernel.solve()\n    poles=[];backward=[];symmetry_residual=[]\n    gzero=kernel.matrices(0.)[1]\n    for i in range(2):\n        vector=amplitudes[:,i];z=float(vector@vector);unit=vector/math.sqrt(z)\n        physical=kernel.t@unit\n        f,g=kernel.matrices(float(x[i]))\n        chi,d,_,_=kernel.constraint(float(x[i]))\n        residual=float(np.linalg.norm(f@unit))\n        price=residual/kernel.bare\n        backward.append(price)\n        scalar=(0. if kernel.symmetry!='generic q' else math.sqrt(x[i])*float(unit@d)/chi)\n        poles.append(dict(omega=float(math.sqrt(x[i])),residue=z,polarization=physical.tolist(),\n            scalar_polarization=scalar,local_omega=math.sqrt(float(unit@kernel.kt@unit)/(unit@gzero@unit)),\n            epsilon=float(unit@gzero@unit),kappa=float(unit@kernel.kt@unit)/kernel.qphysical2,\n            inverse_residual=residual,backward_error_omega_upper=price/(2*math.sqrt(x[i])),\n            raw_scalar_polarization=float(math.sqrt(x[i])*float(unit@d)/chi)))\n    for point in (0.,float(np.mean(x))/2,float(np.mean(x))):\n        f,g=kernel.matrices(point)\n        if kernel.symmetry!='generic q':\n            fs,gs=kernel.scalar(point)\n            symmetry_residual.append(dict(omega_squared=point,inverse_operator_error=float(np.linalg.norm(f-fs*np.eye(2),2)),\n                                          norm_operator_error=float(np.linalg.norm(g-gs*np.eye(2),2))))\n    result=dict(q=q.tolist(),omega=float(np.mean([p['omega'] for p in poles])),\n        residue=float(np.mean([p['residue'] for p in poles])),two_polarizations=poles,\n        pair_threshold=float(np.min(data['delta'])),pair_threshold_lower=2*config.m*math.sqrt(config.g0),\n        pair_threshold_kind='Sampled actual interband minimum; independent analytic 2m sqrt(g0) lower bound also supplied',\n        polarization_speed_splitting=float(math.sqrt(x[1]/x[0])-1),quadrature_order=model.order,\n        quadrature_points=model.quadrature_points,canonical_mode_gram_error=float(np.max(abs(gram-np.eye(2)))),\n        frame_proof=dict(method=method,little_group=kernel.symmetry,canonical_mode_gram=gram.tolist(),\n            spatial_frame_gram=(np.asarray([p['polarization'] for p in poles])@np.asarray([p['polarization'] for p in poles]).T).tolist(),\n            field_amplitude_gram=(amplitudes.T@amplitudes).tolist(),\n            norm='Ai^T [F(xi)-F(xj)]/(xi-xj) Aj; diagonal Fprime. Analytic divided difference includes actual signed mixed-current/density A0 Schur term.',\n            gap_bins=0,symmetry_residual=symmetry_residual,backward_error_omega_squared_upper=backward,\n            backward_error_scope='Positive canonical PH realization gives Fprime >= eps_b below the first PH pole; raw-kernel residual / eps_b bounds pole perturbation. BZ quadrature and full-theory errors are separate.',\n            rigorous_interband_window=bool(max(p['omega'] for p in poles)<2*config.m*math.sqrt(config.g0)),\n            new_mode_source_sha256=LOADED_SOURCE_SHA256,\n            old_independent_root_frames='Not used; old complete two-polarization claims withdrawn. Frozen kernel coefficients are unchanged.'))\n    if velocity:\n        # Ward-complete quadratic effective action: d(omega)/dq_a =\n        # -Z e^T(dF/dq_a)e/(2omega). This is the one-quantum energy-current\n        # expectation divided by its canonical norm, not a sorted-branch cusp.\n        step=max(float(np.linalg.norm(q))*1e-3,1e-5)\n        gradients=[];operators=[]\n        physical_amplitudes=kernel.t@amplitudes\n        for resolution in (step,step/2):\n            velocity_values=np.zeros((2,3));velocity_operators=[]\n            for axis in range(3):\n                dq=np.eye(3)[axis]*resolution\n                plus=ModeKernel(config,model.spectral(q+dq));minus=ModeKernel(config,model.spectral(q-dq))\n                ap=plus.t.T@physical_amplitudes;am=minus.t.T@physical_amplitudes\n                for i in range(2):\n                    fp=plus.matrices(float(x[i]))[0];fm=minus.matrices(float(x[i]))[0]\n                    velocity_values[i,axis]=-(ap[:,i]@fp@ap[:,i]-am[:,i]@fm@am[:,i])/(4*resolution*math.sqrt(x[i]))\n                if kernel.symmetry!='generic q':\n                    fp=plus.matrices(float(x[0]))[0];fm=minus.matrices(float(x[0]))[0]\n                    velocity_operators.append((-(ap.T@fp@ap-am.T@fm@am)/(4*resolution*math.sqrt(x[0]))).tolist())\n            gradients.append(velocity_values);operators.append(velocity_operators)\n        corrected=(4*gradients[1]-gradients[0])/3\n        result['group_velocity']=np.mean(corrected,axis=0).tolist()\n        for i,pole in enumerate(poles):\n            pole['group_velocity']=corrected[i].tolist()\n        result['frame_proof']['energy_current']=dict(\n            identity='Projected quadratic-action Noether energy flux / one-quantum energy = -Ai.T(dq F)Ai/(2 omega); Ai.T Fprime Ai=1',\n            derivative='Actual neighbouring uncompressed kernels at FIXED omega and projected SAME physical field state; Richardson h^2 extrapolation',\n            step=step,coarse=gradients[0].tolist(),half_step=gradients[1].tolist(),\n            resolution_error=float(np.max(abs(gradients[0]-gradients[1]))),\n            degenerate_velocity_operators=operators[-1],\n            degeneracy_scope='At an exact doublet, these are prepared-frame energy-current expectations; velocity operators need not commute. No unique sorted-band Cartesian gradient is claimed.')\n    return result\n\n\ndef compute_response(config=None):\n    \"\"\"Current physical response entry; all raw independent-root frames discarded.\"\"\"\n    from induced_photon_response import compute_response as raw_response\n    cfg=config or ResponseConfig()\n    result=raw_response(cfg)\n    for row in result['raw_grids']:\n        model=SpectralResponse(cfg,row['order'])\n        for finite in row['finite_q']:\n            finite['modes']=compute_mode(cfg,np.asarray(finite['q']),model=model)\n    result['source_hashes']['induced_photon_mode_frame.py']=LOADED_SOURCE_SHA256\n    result['physical_mode_scope']='Uncompressed physical paired-mode API; frozen raw provider used only for current/contact/density and scalar response statistics. Legacy independent-root two-pol frames are discarded.'\n    return result\n\n\ndef current_frame_control(model,result,data):\n    q=np.asarray(result['q']);p=np.array([.13,-.21,.17])\n    current=model.vertices(p[None,:],model.config.a*q)[0][0]*model.config.a\n    fields=np.column_stack([np.r_[r['scalar_polarization'],r['polarization']]*math.sqrt(r['residue']/(2*r['omega']))\n                            for r in result['two_polarizations']])\n    def superoperator(columns):\n        legs=[columns[0,i]*np.eye(4)-np.einsum('a,aij->ij',columns[1:,i],current) for i in range(2)]\n        return sum(np.kron(leg.conj(),leg) for leg in legs)\n    angle=.731;rotation=np.array([[math.cos(angle),-math.sin(angle)],[math.sin(angle),math.cos(angle)]])\n    good=superoperator(fields);rotated=superoperator(fields@rotation)\n    bad=superoperator(np.column_stack((fields[:,0],fields[:,0])))\n    kernel=ModeKernel(model.config,data)\n    first=result['two_polarizations'][0]\n    amplitude=kernel.t.T@np.asarray(first['polarization'])*math.sqrt(first['residue'])\n    wrong_gram=np.full((2,2),float(amplitude@kernel.divided_norm(first['omega']**2,first['omega']**2)@amplitude))\n    return dict(actual_current_unpolarized_rotation_error=float(np.linalg.norm(good-rotated)/np.linalg.norm(good)),\n                duplicate_state_current_error=float(np.linalg.norm(good-bad)/np.linalg.norm(good)),\n                duplicate_state_canonical_gram_error=float(np.max(abs(wrong_gram-np.eye(2)))),\n                scope='Actual literal Peierls current plus onsite density, quantum-normalized field legs. Rotation is a complete-state mixture identity, not a scattering-rate or Ref4 admission claim.')\n\n\ndef main():\n    parser=argparse.ArgumentParser(description=__doc__)\n    parser.add_argument('--supplier',type=Path,nargs='+',required=True)\n    parser.add_argument('--observed-frame',type=Path)\n    parser.add_argument('--output',type=Path,required=True)\n    args=parser.parse_args();started=time.monotonic();rows=[];inputs=[]\n    for path in args.supplier:\n        raw=path.read_bytes();capsule=json.loads(raw);cfg=ResponseConfig(**capsule['config'])\n        inputs.append(dict(path=str(path),sha256=hashlib.sha256(raw).hexdigest(),config=asdict(cfg)))\n        model=SpectralResponse(cfg,cfg.orders[-1])\n        for q in (np.array([0.,0.,.1]),np.full(3,.22053099201074255),np.array([.07,.05,.03])):\n            data=model.spectral(q)\n            result=compute_mode(cfg,q,velocity=True,model=model,data=data)\n            control=current_frame_control(model,result,data)\n            if control['actual_current_unpolarized_rotation_error']>1e-12 or control['duplicate_state_current_error']<1e-3:\n                raise AssertionError('Actual current does not discriminate incomplete/rotated physical state frames')\n            rows.append(dict(supplier_sha256=inputs[-1]['sha256'],mode=result,controls=control))\n            print(json.dumps(dict(a=cfg.a,q=q.tolist(),Gram=result['canonical_mode_gram_error'],method=result['frame_proof']['method'])),flush=True)\n    observed=None\n    if args.observed_frame:\n        raw=args.observed_frame.read_bytes();old=json.loads(raw)\n        first=old['before']['two_polarizations'][0];second=old['separate']['two_polarizations'][1]\n        observed=dict(input_sha256=hashlib.sha256(raw).hexdigest(),source_hashes=old['source_hashes'],\n            first=first,second=second,q0=old['q0'],q1=old['q1'],reported_old_overlap=old['separate_root_initial_overlap'],\n            scope='Previously observed legacy separate-root incident-frame failure; NOT rerun. Different printed q values are numerical splitting of the exact cubic degenerate beam, not a claim about Fock overlap of distinct exact momenta.')\n    if hashlib.sha256(Path(__file__).read_bytes()).hexdigest()!=LOADED_SOURCE_SHA256:\n        raise RuntimeError('Mode source changed during scientific proof')\n    output=dict(branch='NEW uncompressed physical photon multiplet and fixed-state energy-current',inputs=inputs,\n        input_sha256=hashlib.sha256(json.dumps(inputs,sort_keys=True).encode()).hexdigest(),rows=rows,\n        observed_legacy_failure=observed,source_hashes={**capsule['source_hashes'],'induced_photon_mode_frame.py':LOADED_SOURCE_SHA256},\n        source_snapshot=LOADED_SOURCE_BYTES.decode(),elapsed_seconds=time.monotonic()-started,\n        quantum_scope='Same conditional quadratic large-N/RPA law; full finiteN/Root and cone closure are not promoted.')\n    args.output.write_text(json.dumps(output,indent=2,allow_nan=False)+'\\n')\n    print(f'Natural exit: {args.output}',flush=True)\n\nif __name__=='__main__':\n    main()\n",
+  "elapsed_seconds": 379.5025600551162,
+  "quantum_scope": "Same conditional quadratic large-N/RPA law; full finiteN/Root and cone closure are not promoted."
+}

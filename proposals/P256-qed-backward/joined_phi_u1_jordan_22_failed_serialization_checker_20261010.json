@@ -1,0 +1,52 @@
+{
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--project",
+    "/tmp/joined_phi_u1_jordan_22_pyright_20261010.json",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--stats",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_consumer.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_natural_exit.py"
+  ],
+  "selected_actual_project_files": [
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_consumer.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_natural_exit.py"
+  ],
+  "configuration": {
+    "pythonVersion": "3.12",
+    "typeCheckingMode": "basic",
+    "venvPath": "/home/administrator/substrate-framework",
+    "venv": ".venv",
+    "include": [
+      "../home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_consumer.py",
+      "../home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_natural_exit.py"
+    ],
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward",
+      "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages"
+    ],
+    "executionEnvironments": [
+      {
+        "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+        "extraPaths": [
+          "/home/administrator/substrate-222/proposals/P256-qed-backward",
+          "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages"
+        ]
+      }
+    ]
+  },
+  "configuration_sha256": "9bafa1d24ca48730c773995dc1d0b85f311c0e896caaac0d9fc1812a3729d575",
+  "source_sha256_before": {
+    "joined_phi_u1_jordan_22_consumer.py": "1424ca9dcc295ad1c0981062479376100025a5009634c92733fdf05bdebb7ebe",
+    "joined_phi_u1_jordan_22_natural_exit.py": "35b6472926b6c801e42a2abed10188b85dabbc7a4ab75d8d94b361c429cefd23"
+  },
+  "source_sha256_after": {
+    "joined_phi_u1_jordan_22_consumer.py": "1424ca9dcc295ad1c0981062479376100025a5009634c92733fdf05bdebb7ebe",
+    "joined_phi_u1_jordan_22_natural_exit.py": "35b6472926b6c801e42a2abed10188b85dabbc7a4ab75d8d94b361c429cefd23"
+  },
+  "natural_exit_code": 1,
+  "stdout": "Loading configuration file at /tmp/joined_phi_u1_jordan_22_pyright_20261010.json\nSetting pythonPath for service \"<default>\": \"/home/administrator/substrate-framework/.venv/bin/python\"\nAuto-excluding **/node_modules\nAuto-excluding **/__pycache__\nAuto-excluding **/.*\nAuto-excluding **/__editable__.*\nFound 2 source files\n[FG] Long operation: checking: file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_consumer.py (7304ms)\n[FG] Long operation: analyzing: file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_consumer.py (7770ms)\npyright 1.1.414\n/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_consumer.py\n  /home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_consumer.py:120:30 - error: Cannot access attribute \"real\" for class \"ndarray[_AnyShape, dtype[Any]]\"\n  \u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n  \u00a0\u00a0Argument of type \"ndarray[_AnyShape, dtype[Any]]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n  \u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\" (reportAttributeAccessIssue)\n  /home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_22_consumer.py:120:57 - error: Cannot access attribute \"imag\" for class \"ndarray[_AnyShape, dtype[Any]]\"\n  \u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n  \u00a0\u00a0Argument of type \"ndarray[_AnyShape, dtype[Any]]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n  \u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\" (reportAttributeAccessIssue)\n2 errors, 0 warnings, 0 informations\nCompleted in 8.384sec\n\nAnalysis stats\nTotal files parsed and bound: 518\nTotal files checked: 2\n\nTiming stats\nFind Source Files:    0sec\nRead Source Files:    0.05sec\nTokenize:             0.54sec\nParse:                1.03sec\nResolve Imports:      0.46sec\nBind:                 1.3sec\nCheck:                4.43sec\nDetect Cycles:        0sec\n",
+  "stderr": "",
+  "elapsed_seconds": 8.671256301997346
+}

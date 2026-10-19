@@ -1,0 +1,57 @@
+{
+  "kind": "INDEPENDENT_COMPLETE_GAUSSIAN_FRAME_ACTION_DENSE_CANONICAL_CAR_METHOD_CONTROL",
+  "inputs": {
+    "copies": 2,
+    "orbitals_per_copy": 4,
+    "particles_per_copy": 2,
+    "seed_occupied": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "seed": 2221011,
+    "g": 64,
+    "state_dimension": 36,
+    "R": []
+  },
+  "derivation": "E\u00b2 U Psi0 = U[(dGamma R)\u00b2-i dGamma Rprime]Psi0. Full action has exactly0/1/2PH relative to this Gaussian frame, not a truncation of a nonGaussian source. Distinct role matrices, common generators, trace/Berry terms retained.",
+  "reports": [
+    {
+      "case": "generic_Berry",
+      "complete_action_norm_squared": 1474672.8939128926,
+      "Gaussian_012PH_formula": 1474672.8939128923,
+      "relative_defect": 1.5788629777826695e-16,
+      "grade_norm_squared": {
+        "0": 1116673.830069502,
+        "1": 267523.36493288504,
+        "2": 90475.6989105054,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "wrong_drop_crosscopy": 630283.7866007076,
+      "wrong_average_roles": 1474672.4482289536,
+      "wrong_averaged_role_energy_matches": true,
+      "wrong_PHP_squared": 1384197.1950023868
+    },
+    {
+      "case": "mean_zero",
+      "complete_action_norm_squared": 299479.7772815515,
+      "Gaussian_012PH_formula": 299479.7772815517,
+      "relative_defect": 5.83087727410165e-16,
+      "grade_norm_squared": {
+        "0": 169635.81559984555,
+        "1": 39368.262771200585,
+        "2": 90475.6989105054,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "wrong_drop_crosscopy": 229369.10505492074,
+      "wrong_average_roles": 299479.331597613,
+      "wrong_averaged_role_energy_matches": true,
+      "wrong_PHP_squared": 209004.07837104614
+    }
+  ],
+  "actual_N4_law": false,
+  "stationary_or_photon_claim": false
+}

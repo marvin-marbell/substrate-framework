@@ -1,0 +1,142 @@
+{
+  "input_sha256": "4e82d59a0fb8a5d82897ce4a002eb85389ae82cfb6fe8fb2e6aecb40cb8d5c1d",
+  "same_input": "30a4182e252463319caea5235176a0e5e87018a740ca0a95d76f1487796b4d78",
+  "contrasts": {
+    "energy_per_V": {
+      "four_minus_eight": -1.1250302978528453,
+      "paired_ratio_delta_SE": 0.22327149633661172,
+      "independent_SE_if_wrongly_ignoring_pairing": 5.000231166928957,
+      "four_SE": 3.561187673155656,
+      "eight_SE": 3.5100219485484594,
+      "paired_difference_over_SE": -5.038844260517299
+    },
+    "variance_H": {
+      "four_minus_eight": 17709.314338335535,
+      "paired_ratio_delta_SE": 3180.1199200804826,
+      "independent_SE_if_wrongly_ignoring_pairing": 44354.50214168289,
+      "four_SE": 31901.985296968676,
+      "eight_SE": 30815.34024391985,
+      "paired_difference_over_SE": 5.568756771250106
+    },
+    "contact": {
+      "four_minus_eight": [
+        0.5188822617093933,
+        0.478806171390886
+      ],
+      "paired_ratio_delta_SE": [
+        0.26676103491012404,
+        0.27095580664176105
+      ],
+      "independent_SE_if_wrongly_ignoring_pairing": [
+        15.111344910607245,
+        14.020745866408161
+      ],
+      "four_SE": [
+        10.689131922631807,
+        9.93023558704845
+      ],
+      "eight_SE": [
+        10.68153564558529,
+        9.898067277813281
+      ],
+      "paired_difference_over_SE": [
+        1.9451201405190712,
+        1.7671006107056058
+      ]
+    },
+    "current_mean": {
+      "four_minus_eight": [
+        -0.1845962771763947,
+        -0.15381002512506137
+      ],
+      "paired_ratio_delta_SE": [
+        0.33779425440038463,
+        0.32755754001912113
+      ],
+      "independent_SE_if_wrongly_ignoring_pairing": [
+        14.941151236084648,
+        16.75673430875188
+      ],
+      "four_SE": [
+        10.572437453203419,
+        11.851429895592842
+      ],
+      "eight_SE": [
+        10.557536007878705,
+        11.846170441283991
+      ],
+      "paired_difference_over_SE": [
+        -0.5464754795905863,
+        -0.4695664313393083
+      ]
+    },
+    "current_raw": {
+      "four_minus_eight": [
+        [
+          -188.711992827215,
+          49.51686897948366
+        ],
+        [
+          49.51686897948366,
+          -42.2216588339943
+        ]
+      ],
+      "paired_ratio_delta_SE": [
+        [
+          163.26999255426588,
+          130.32186685196842
+        ],
+        [
+          130.32186685196842,
+          159.9097076025198
+        ]
+      ],
+      "independent_SE_if_wrongly_ignoring_pairing": [
+        [
+          7261.871627227775,
+          5750.443239221701
+        ],
+        [
+          5750.443239221701,
+          7818.435292769515
+        ]
+      ],
+      "four_SE": [
+        [
+          5139.006244659431,
+          4065.0052244923754
+        ],
+        [
+          4065.0052244923754,
+          5525.112305547141
+        ]
+      ],
+      "eight_SE": [
+        [
+          5130.827842335693,
+          4067.349256255266
+        ],
+        [
+          4067.349256255266,
+          5531.82288566034
+        ]
+      ],
+      "paired_difference_over_SE": [
+        [
+          -1.1558277787297195,
+          0.37995825394160043
+        ],
+        [
+          0.37995825394160043,
+          -0.2640343695639963
+        ]
+      ]
+    }
+  },
+  "samples": 2048,
+  "beta": 0.001,
+  "proof": "SameGaussianpaths/innovations arepaired between4/8steps. Selfnormalizedratio influence w_i(x_i-mean), varianceinfluence w_i[curvature_i+(score_i-scoremean)^2-weightedmean], energyinfluence -w_i(score_i-scoremean)/V. TrottercontrastSE MUSTusesum(influence4-influence8)^2, notindependentSE4\u00b2+SE8\u00b2. This prices MonteCarlosamplinguncertainty ofobserveddiscretizationdifference, not continuumTrotterremainder or extrapolation.",
+  "scope": "FROZEN000nativeN2 actualsource stationarity/contact/current observations. Strongpaired4/8bias mustremainvisible. Original4e82receipt remainsunchanged, no rerunconfirmation; newanalysisofretaineddata. No finitebetarigorousvariance/retardedpole/fullPhi/macro/Compton promotion.",
+  "script_snapshot": "from pathlib import Path\nimport hashlib,json,time\nimport numpy as np\nstart=time.monotonic();P=Path('/home/administrator/substrate-222/proposals/P256-qed-backward');p=P/'induced_pure_graph_filter_stationarity_receipt.json';raw=p.read_bytes();source=json.loads(raw);data=source['raw_observation_ledger'];n=len(data['4']);V=8;u=64.;S=2.;beta=.001;values={};influences={}\nfor steps in ('4','8'):\n rows=data[steps];logs=np.array([r['logweight'] for r in rows]);w=np.exp(logs-logs.max());w/=w.sum();score=np.array([r['score'] for r in rows]);curvature=np.array([r['curvature'] for r in rows]);sm=w@score;influence_var=curvature+(score-sm)**2;values[steps]={'energy_per_V':np.array((u*(2*V+1)/(4*S+2*u*beta)-sm)/V),'variance_H':np.array((2*V+1)*u*u/(2*(2*S+u*beta)**2)+w@influence_var)};influences[steps]={'energy_per_V':-w*(score-sm)/V,'variance_H':w*(influence_var-w@influence_var)}\n for field in ('contact','current_mean','current_raw'):\n  x=np.array([r[field] for r in rows]);m=np.tensordot(w,x,axes=1);values[steps][field]=m;shape=(n,)+(1,)*(x.ndim-1);influences[steps][field]=w.reshape(shape)*(x-m)\ncontrasts={}\nfor field in values['4']:\n diff=values['4'][field]-values['8'][field];inf=influences['4'][field]-influences['8'][field];se=np.sqrt(n/(n-1)*np.sum(inf*inf,axis=0));se4=np.sqrt(n/(n-1)*np.sum(influences['4'][field]**2,axis=0));se8=np.sqrt(n/(n-1)*np.sum(influences['8'][field]**2,axis=0));contrasts[field]=dict(four_minus_eight=diff.tolist(),paired_ratio_delta_SE=se.tolist(),independent_SE_if_wrongly_ignoring_pairing=np.sqrt(se4*se4+se8*se8).tolist(),four_SE=se4.tolist(),eight_SE=se8.tolist(),paired_difference_over_SE=(diff/se).tolist())\nreport=dict(input_sha256=hashlib.sha256(raw).hexdigest(),same_input=source['input_sha256'],contrasts=contrasts,samples=n,beta=beta,proof='SameGaussianpaths/innovations arepaired between4/8steps. Selfnormalizedratio influence w_i(x_i-mean), varianceinfluence w_i[curvature_i+(score_i-scoremean)^2-weightedmean], energyinfluence -w_i(score_i-scoremean)/V. TrottercontrastSE MUSTusesum(influence4-influence8)^2, notindependentSE4\u00b2+SE8\u00b2. This prices MonteCarlosamplinguncertainty ofobserveddiscretizationdifference, not continuumTrotterremainder or extrapolation.',scope='FROZEN000nativeN2 actualsource stationarity/contact/current observations. Strongpaired4/8bias mustremainvisible. Original4e82receipt remainsunchanged, no rerunconfirmation; newanalysisofretaineddata. No finitebetarigorousvariance/retardedpole/fullPhi/macro/Compton promotion.',script_snapshot=Path(__file__).read_text(),elapsed_seconds=time.monotonic()-start)\nout=P/'induced_pure_filter_paired_errors_receipt.json';out.write_text(json.dumps(report,indent=2)+'\\n');print(json.dumps({'contrasts':contrasts,'elapsed_seconds':report['elapsed_seconds']},indent=2));print('Natural output:',out)\n",
+  "elapsed_seconds": 0.07347559905610979
+}

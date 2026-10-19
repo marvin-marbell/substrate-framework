@@ -1,0 +1,22 @@
+{
+  "candidate_id": "field-frame-gauss-complete-j-signed-ordered-rotation-cap-path-filled-sea-v1",
+  "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "module": "rich_chiral_sea_20261014_model.py",
+  "model_sha256": "421405c0442f27a8d70ed0f62bc6bf1bc09dadca2ad50c250013592a770e0316",
+  "input": "rich_chiral_sea_20261014_input.json",
+  "functions": {
+    "build": "Parameters -> complete NEW192-state common h0, microscopic linkT[3,192,192], C/J/parity/source, exact finite geometric path/shell/frame operators. No old producer entrypoint executes.",
+    "hamiltonian": "(model,k3) -> h192x192; all k units inverse supplied spacing",
+    "spectrum": "(model,k3) -> all192 energies/vectors, full degeneracies retained",
+    "vertex": "(model,kout3,kin3,epsilon3) -> actual full finite-q current192x192 from same links",
+    "contact": "(model,kout,kin,qin,epsin,qout,epsout) -> same-link two-source contact192x192",
+    "charged_green": "(model,k,z_complex) -> addition/removal/time_ordered/retarded12x12 from actual filled-reference spectral projectors",
+    "pair_response": "(model,k,q,z_complex) -> full one-k occupied96xempty96 pair amplitudes[3,96,96], retarded current tensor3x3 and spectral weight; sum with declared finite BZ measure for full finite response",
+    "pair_creation": "(model,kh,qin,epsin,qout,epsout,omega,particle=0,hole=-1,eta) -> full actual one-real-pair amplitude and complete occupied/empty time-order contributions; finite sea caller MUST use allowed grid momenta"
+  },
+  "helper_reuse": "Finite link/source Wick consumers are imported pure functions from rich_filled_symmetry model; they consume ENTIRELY reconstructed new commonH/source/current/state. FrameGauss and sphere/vector quadratures are pure geometry/source helpers. No transplanted response tensor, selfenergy or magnetic claim.",
+  "filled_reference": {"cells": 64, "Nsea": 6144, "occupied_per_k": 96, "one_particle_modes_per_k": 192, "background_per_cell": 96, "momentum_unit": "pi/2", "neutral_vector": "carried fermionic species, not shared bosons", "charge": -1},
+  "serialized_states": "rich_chiral_sea_20261014_actual1_states.npz: H0/T/C/J/parity/source/rest_e/rest_v/D/X/bridge; exact state matrices, not a projected low4 receiver",
+  "source_scope": "All discrete allowed momenta in delivered calculations. Arbitrary-k API calls are Bloch integrands, not finite64-cell excitations. Full G includes actual addition AND removal poles; energies referenced to occupied Sea without shifted centers.",
+  "join_boundary": "NO photon D compatibility or selfenergy is presumed. A common quantum-field join must reconstruct occupied Fock/Gauss reference and add shared field dynamics/current/contact together; this response cannot simply be multiplied by a peer D. Independent positive frame kinetic demonstrably breaks current C law."
+}

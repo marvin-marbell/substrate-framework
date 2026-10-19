@@ -1,0 +1,56 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave15_20261015_spatial.py", line 60, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave15_20261015_spatial.py", line 42, in main
+    a=expm_multiply(-1j*t*h,initial,traceA=-1j*t*tr);b=expm_multiply(-1j*t*h,kicked,traceA=-1j*t*tr);oa=observe(a);ob=observe(b);states.append(b);delta=oa['density']-first['density']
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_expm_multiply.py", line 207, in expm_multiply
+    X = _expm_multiply_simple(A, B, traceA=traceA)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_expm_multiply.py", line 270, in _expm_multiply_simple
+    A_1_norm = onenormest(A) if is_linear_operator else _exact_1_norm(A)
+               ^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_onenormest.py", line 107, in onenormest
+    est, v, w, nmults, nresamples = _onenormest_core(A, A.H, t, itmax)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_onenormest.py", line 302, in _onenormest_core
+    Y = np.asarray(A_linear_operator.matmat(X))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 491, in matmat
+    return self._shared_matmat(X)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 451, in _shared_matmat
+    Y = self._rmatmat(X) if adjoint else self._matmat(X)
+                                         ^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 996, in _matmat
+    return self.args[0].matmat(x) + self.args[1].matmat(x)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 491, in matmat
+    return self._shared_matmat(X)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 451, in _shared_matmat
+    Y = self._rmatmat(X) if adjoint else self._matmat(X)
+                                         ^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 1063, in _matmat
+    return self.args[1] * self.args[0].matmat(x)
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 491, in matmat
+    return self._shared_matmat(X)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 451, in _shared_matmat
+    Y = self._rmatmat(X) if adjoint else self._matmat(X)
+                                         ^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 886, in _matmat
+    return self.__matmat_impl(X)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave15_20261015_spatial.py", line 28, in mm
+    def mm(v):return np.column_stack([act(x) for x in v.T])
+                                      ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave15_20261015_spatial.py", line 27, in act
+    a=np.asarray(v).reshape(n,nb);return ((field['boson']@a.T).T-offset*a).ravel()+matter(name,v,c)
+                                                                                   ^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave15_20261015_spatial.py", line 22, in matter
+    for op,f in zip(sec[name]['operators'],c):value+=(op@a)*f
+                                              ^^^^^^^^^^^^^^^
+numpy._core._exceptions._UFuncOutputCastingError: Cannot cast ufunc 'add' output from dtype('complex128') to dtype('float64') with casting rule 'same_kind'

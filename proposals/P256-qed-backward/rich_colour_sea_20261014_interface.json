@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "ownership": "ColourSeaExcitation owns rich_colour_sea_20261014_* only. Stable final actual2 source/input/capsule; NEW Wave10 reviewer owns independent consumer/diagnostics, Main synthesis/plan. No old-prefix edits or producer replay.",
+  "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "python": "/home/administrator/substrate-framework/.venv/bin/python",
+  "final": {
+    "input": "rich_colour_sea_20261014_actual2_input.json",
+    "result": "rich_colour_sea_20261014_actual2_result.json",
+    "arrays": "rich_colour_sea_20261014_actual2_result.npz",
+    "exit": "rich_colour_sea_20261014_actual2_exit.json",
+    "capsule": "rich_colour_sea_20261014_actual2_capsule.zip",
+    "capsule_sha256": "04146df6c964eb6cba037ad72b1e091661d4f3a0ee24699ac96c12aac049e1fa",
+    "model_sha256": "e2577d799272611efb94855be1b0a42b4b9f93c9ae924db9219f5ade9ad80eaa",
+    "calculate_sha256": "3a1b454fa4a8064ac8063f8f8297c572d8eb18a5c16bc0e1c3c61d575a11b559"
+  },
+  "notes": "rich_colour_sea_20261014_synthesis.json; rich_colour_sea_20261014_equations.json; rich_colour_sea_20261014_language.json",
+  "pure_imports": {
+    "model": "from rich_colour_sea_20261014_model import mode, apply, string, charge_conjugate, ordered_frame, masks_for, one_body, conjugation, gauge_sector, operators, scalar_field, law, source_matrix, build",
+    "consumer_helper": "from rich_colour_sea_20261014_calculate import at_angle, spectrum, dynamics; main guarded, imports have no producer execution",
+    "old_helper_scope": "Only existing rich_colour_composite_20261014_model.py generators/loop_field/epsilon pure definitions imported. Complete helper bytes frozen in each capsule. No old model.build or old main consumer called."
+  },
+  "interfaces": {
+    "mode": "index=12f+6mirror+3spin+colour; f0u/f1d; mirror0positive/mirror1negative; spin0up/spin1down; colour0..2",
+    "apply_and_string": "Actual finite-CAR24 occupation-mask creation/annihilation and signed ordered operator-string application. string operations supplied LEFT-TO-RIGHT operator order and applied reverse to ket.",
+    "charge_conjugate": "Return(targetmask,CARsign). C c_i^dagger C^-1=(i tau_y tensor i sigma_y)_ij c_j; complement every original CAR mode after mirror/spin permutation. Loop conjugation swaps PW fundamental/bar basis. No second CAR or fictitious hole species.",
+    "build": "model=build(parameters); model['sectors']={neutral,baryon,antibaryon}, each masks/P/G/Q/raw_dimension/dimension/gauge_error. P raw(mattermask x loop19)->Gauss basis. All allowed determinants within declared paircut/exact M, full G=0 kernel. Independently built actual anti raw operators before C-completion.",
+    "operators": "model['operators'][sector] has transfers=[(direct,forwardU,backwardUdagger) per flavour], raw gauge-route commutator norms, positive occupation,S2,matter Casimir/3 as octet weight in retained Gauss space,C(loop Casimir),B(ReTrU),boundary(PW3/bar3).",
+    "law": "Hraw,Jraw,Kraw=law(op,scalar,parameters,angle); scalar direct mirror mixing unphased; EM phases±Q_f A on opposite ordered U/Udagger loop paths. J=-partial_A Hraw, K=partial_A^2 Hraw, same φ and colour-space operators. Raw law already has C at final numerical precision.",
+    "at_angle": "H,J,K=at_angle(model,name,A) returns same completed one-CAR law: neutral .5[rawH(A)+Cn rawH(-A)Cn†]; B .5[rawHB(A)+Cb†rawHA(-A)Cb]; anti=Cb HB(-A)Cb†, J sign reversed, K unchanged. Check nonzero RAW J first; numerical C completion not proof of an incorrect phase. No state or parameters substituted at A≠0.",
+    "sources": "model['sources']['0.5'/'1.5'] neutral161->B882; anti_sources=Cb B Cn† neutral161->anti882. Epsilon colour and CG spin CAR creation; C-related removal acts on occupied original negative modes. Matrices act identity on scalar field. Source raw norm is strength, not probability.",
+    "state_order": "Projected flattened basis = gauge_index * scalar_points + phi_index. Raw P row=mask_index*19+PWloop_index. Scalar grid[-3,-2,-1,0,1,2,3]. Reference actual neutral interacting ground. Cneutral161x161, Cbaryon882x882."
+  },
+  "NPZ": {
+    "common": "reference,Cneutral,Cbaryon",
+    "per_sector": "{neutral,baryon,antibaryon}_{energies,vectors,spins,H,J,K,P,masks,positive_occupation,pair_number,spin_squared,loop_C,loop_B,matter_octet,loop_boundary,phi,phi2,scalar_boundary,scalar_energy,current,contact,receiver_state,pulse_H,event_states,event_baseline}",
+    "source": "{baryon,antibaryon}_source_{0.5,1.5}; {baryon,antibaryon}_source_state_{0.5,1.5}",
+    "field_event": "fieldonly_event_states; scalar-field-only preparation and common untouched baseline also reproducible from stored operators and receiver_state. All eigenvectors/eigenvalues retained, no virtual cutoff beyond declared Hilbert cuts."
+  },
+  "review_focus": [
+    "Exact frozen source/input hashes and natural exit, independently reconstruct actual consumer (not old producer replay).",
+    "Literal original CAR24 Nsea12; ±3 charge/source amplitudes and explicit negative-mode removal C, same reference; paircut and spin/flavour reductions only.",
+    "Raw/completed H(A) true Wilson current/contact derivatives, C signs, positive raw nonzero current residue, full161/882/882 spectral sums and both retarded signs/contact.",
+    "Quantum scalar-generated positive±3 gaps with whole scalaroff reference/control recomputation; loopdecoupled fullpair control clearly a DIFFERENT law, not fullcoupled stability proof.",
+    "Retained j3/2,j5/2 and degenerate full-pole source strengths versus normalized fractions. No unique halfspin assumption.",
+    "Full raw Gauss route commutators/kernel, matter8 x loop8 and actual EM sea/pair/loop feedback/inclusive outcomes. No static Casimir-only attraction.",
+    "External H(A) EM pulse versus genuine scalar-field-only unitary; latter no instantaneous body changes but later pair/loop feedback. Spin stays unchanged.",
+    "Small φ-sign doublet and actual bimodal quantum reference; severe paircut/loop/scalar boundaries; no fullband/global vacuum/COM/photon/proton/electron claims."
+  ],
+  "adverse_frozen_predecessor": {
+    "capsule": "rich_colour_sea_20261014_actual1_capsule.zip",
+    "sha256": "34726736da5fec0190957be721b9d59c027240800bdbb25439e632faccff4995",
+    "meaning": "Old direct mirror-phase current C-even, C-completion erased J. Retained as failure. Current working source is actual2; use frozen capsule bytes for actual1, never replay current files under its label."
+  },
+  "limits": "Selected paircut1 finite CAR sea, not fullfixedN/fullallN stable vacuum; N12 actualpair boundary~.497. Exact all-pair scalar-only control is not finalcoupled model. PW19 nonunitary Galerkin, scalar7points, physicalframe/CAR/flavourcharges/gauging/couplings inputs. Internal closed-loop EMflux current not freeCOM or local spatial density current. No dynamicphotons/EMspintorque/uniquehalfspin/proton/electron/nature/issueclosure."
+}

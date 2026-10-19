@@ -1,0 +1,89 @@
+{
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--project",
+    "/tmp/issue222-three-cell-dynamical-final-w5d4wbk5/pyrightconfig.json",
+    "--outputjson",
+    "three_cell_density_formation_consumer_20261011.py",
+    "density_formation_mathreview_control_20261011.py",
+    "three_cell_metric_transfer_consumer_20261011.py",
+    "source_metric_mathreview_control_20261011.py",
+    "reference_h0_mathreview_control_20261011.py",
+    "root_pair_reference_parent_20261011.py"
+  ],
+  "config": {
+    "include": [
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/three_cell_density_formation_consumer_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/density_formation_mathreview_control_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/three_cell_metric_transfer_consumer_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/source_metric_mathreview_control_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/reference_h0_mathreview_control_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/root_pair_reference_parent_20261011.py"
+    ],
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward"
+    ],
+    "venvPath": "/home/administrator/substrate-framework",
+    "venv": ".venv",
+    "typeCheckingMode": "basic",
+    "pythonVersion": "3.12"
+  },
+  "source_sha256": {
+    "three_cell_density_formation_consumer_20261011.py": "5b44d3f5a159c8908e52c6c2e8cb59373d1b71c7c27e306f49ec3099765ccde7",
+    "density_formation_mathreview_control_20261011.py": "2ef45af1259ad1e3d2b596b96c71200c9405022940a0710a56d26e0c1acd741d",
+    "three_cell_metric_transfer_consumer_20261011.py": "e490b5487f48dbb30a0a3842c2db3cfc83bf433f7e15f8cce8ff2c01f19ac835",
+    "source_metric_mathreview_control_20261011.py": "9fe1aa520daeacffacdf81ceea27d054daffb6ea3e3059eba42963c270b1fda9",
+    "reference_h0_mathreview_control_20261011.py": "d8cbb5b6565b4fa9419c11bc531a38c5bab91774a6e830f44421ff985d4a44e5",
+    "root_pair_reference_parent_20261011.py": "a4eb33e92904274f8ba72ca007d4598ea404144d74d26fc6bf2378833e93fa36"
+  },
+  "returncode": 1,
+  "natural_exit": true,
+  "elapsed_seconds": 13.63919112100848,
+  "stderr": "",
+  "diagnostics": {
+    "version": "1.1.414",
+    "time": "1791704411019",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/root_pair_reference_parent_20261011.py",
+        "severity": "error",
+        "message": "Argument of type \"tuple[int, ...]\" cannot be assigned to parameter \"key\" of type \"tuple[int, int, int]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[int, ...]\" is not assignable to \"tuple[int, int, int]\"\n\u00a0\u00a0\u00a0\u00a0Tuple size mismatch; expected 3 but received indeterminate",
+        "range": {
+          "start": {
+            "line": 180,
+            "character": 18
+          },
+          "end": {
+            "line": 180,
+            "character": 26
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/root_pair_reference_parent_20261011.py",
+        "severity": "error",
+        "message": "Argument of type \"tuple[int, ...]\" cannot be assigned to parameter \"key\" of type \"tuple[int, int, int]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[int, ...]\" is not assignable to \"tuple[int, int, int]\"\n\u00a0\u00a0\u00a0\u00a0Tuple size mismatch; expected 3 but received indeterminate",
+        "range": {
+          "start": {
+            "line": 186,
+            "character": 25
+          },
+          "end": {
+            "line": 186,
+            "character": 33
+          }
+        },
+        "rule": "reportArgumentType"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 6,
+      "errorCount": 2,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 12.847
+    }
+  },
+  "unchanged": true
+}

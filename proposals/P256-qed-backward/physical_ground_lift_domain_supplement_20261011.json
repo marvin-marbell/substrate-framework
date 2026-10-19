@@ -1,0 +1,30 @@
+{
+  "kind": "ANALYTIC_SUPPLEMENT_TO_EXECUTED_ACTUAL3_FULL_FIELD_LIFT",
+  "source_sha256": "31b1c270bf341f75f2364580cd6f646f1d66fda54d93e9b3b227b6ab3985763e",
+  "executed_proof_sha256": "b5db95dd2c56822c32d8975232a7ca60d946a5c62a482164aeb4afb51fa07b17",
+  "scope": "Clarifies standard finite-dimensional inequalities used in the executed conservative first-H bound; not an additional numerical execution or stationary-ground proof.",
+  "Haar_normalizer_lower": [
+    "Use SU4 generators Tr(TaTb)=delta_ab/2 and metric |dq|². Every SU4 element has a traceless Hermitian logarithm with eigenangles of absolute value<=4pi; logarithm coefficient norm=sqrt(2Tr A²)<=sqrt(128)pi<36. Hence geodesic diameter<36.",
+    "The bi-invariant SU4 metric has nonnegative Ricci curvature. Bishop volume comparison bounds total group volume by the Euclidean15-ball of radius36, which is at most the cube volume72^15<2^93. Haar is that Riemannian volume normalized by total volume.",
+    "On the tiny Lie-coordinate box |q_a|<delta/2^10, delta=2^-64, exponential Jacobian is the product of sin(adA/2)/(adA/2) factors. ||adA||<=2||A||<=2^-60, so the full15-dimensional Jacobian exceeds1/2. Normalized exponential Haar density therefore exceeds2^-94, hence the used weaker2^-100. This is a lower on the actual local Haar integral, not a character-count surrogate."
+  ],
+  "scalar_Z_and_derivative_ratios": [
+    "There are M=V/2 independent matching blocks. A Cartesian120-coordinate plus matching-link15-coordinate box per block, side2^-74, has volume2^(-9990M). Haar density>=2^-100/block and squared bump>=1/16/block imply Z>=2^(-10094M). Nonmatching colour links have Haar total1. Neutral and canonical matter pointnorm1 do not change Z.",
+    "The actual compact Phi support is contained in q-coordinate cube[-32,32]^(60V), volume2^(360V). Therefore sqrt(volume_support/Z)<=2^((360V+10094V/2)/2)=2^(2703.5V), strictly below the used2^(16384V). This intentionally wasteful larger bound also absorbs sum/product placement counts for finiteV and chart coordinates.",
+    "Each derivative of the unnormalized scalar bump through order2 has absolute bound2^240. Pointwise fullCAR frame first and second caps2^40,2^90 give each full joined second jet less than2^(16384V+240), after retaining f''U+2f'U'+fU''. No invalid uniform f'/f or f''/f estimate is used at the boundary."
+  ],
+  "g_vs_x_graph_transfer": {
+    "squared_infidelity_upper": "274877906944/2204801412260314559041",
+    "vector_error": "epsg=sqrt(2)*sqrt(squared_infidelity_upper), phase chosen by positive <g,x>; not the squared cap itself",
+    "fullN4_state_difference": "||Psi_g-Psi_x||<=32 epsg",
+    "fullN4_action_difference": "||H(Psi_g-Psi_x)||<=2^1048833*32 epsg",
+    "meaning": "Graph-weighted complete-H bound includes neutralLambda and compact boundary; enormous upper is NOT a stationarity result. Exactg is the mathematical normalized P0x section; numerical controls use immutable normalizedx."
+  },
+  "first_H_exterior": "Intercell hopping leaves matching/harmonic/spin subspaces and is retained by wholeCAR number/operator triangle bounds. It does not move Cartesian fields. At the field support boundary, (1-s)^4 has vanishing value and first/second jets, so zero extension has no delta contributions. Exterior coordinate action is zero for this compact trial; no omitted external source tail. Same complete Hamiltonian acts in the full ambient field/Fock domain.",
+  "compact_trial_stationarity_failure": [
+    "For each finiteN and almost every original-cover beta, the unchanged ambient Hamiltonian has positive second-order principal coefficients4chi on every Cart coordinate,3chi/20 on every SU4 link tangent,64 on every compactU1 link. chi=2^-4096 is small but strictly positive. The finite canonical Fock fibre is finite-dimensional. Polynomial Jordan/alignment/Phi-matter and analytic Wilson/cosine colour/U1 coefficients form an analytic elliptic matrix differential operator.",
+    "If this normalized compactPhi trial obeyed H Psi=E Psi, fibrewise elliptic analytic regularity would make every Fock component real analytic on the connected ambient Cartesian x colour x U1 configuration manifold. Every component vanishes on the open exterior |Phi| sufficiently large, so analytic continuation forces every component to vanish identically, contradicting pointnorm and0<Z. The same argument applies to the gauge-equivariant Gauss subspace because its ambient differential equation is unchanged; it does not require a gauge-fixed degenerating kinetic metric.",
+    "Thus this PARTICULAR compact physical preparation is genuinely nonstationary under the unchanged analytic smooth-core law; exactg replacingx does not cure it. This is not a no-go for an actual noncompact-tail physical ground, nor a numerical variance lower. Missing physical ground directions are extendedPhi tails/body fluctuations, Haar/electric response and intercell/heavy-neutral action. No campaign closure."
+  ],
+  "nonclaims": ["D(H²)", "full-H numerical variance", "stationary physical ground", "energy minimization", "N-uniform phase", "stiffness", "IRatom", "commoncone", "originalSOURCE closure", "campaign completion"]
+}

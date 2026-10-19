@@ -1,0 +1,19 @@
+{
+  "candidate": "COMPOSITE_ELASTIC_BREATHER_V1",
+  "law_and_state_identity": "rich_composite_20261014_request.json defines law and finite domain; actual1_receipt.npz contains its normalized trimer ground preparation; motion2_receipt.npz contains whole lowest translation eigenspaces",
+  "module": "rich_composite_20261014_consumer.py",
+  "pure_API": {
+    "build(p, flavors=(0,1,2))": "(H_csr, positions[npos,nflavor], spin_basis[ns,nflavor], metadata). Basis flat index=((position_index*ns+spin_index)*phonon_levels+phonon_n). N10 trimer dimension30240.",
+    "density(q,positions,metadata)": "complex diagonal rho(+q), length dim; q in inverse lattice-spacing units, charges measured in e; allowed laboratory momenta 2pi integer/N.",
+    "current_contact(p,q,positions,spins,metadata)": "J(q), C(q,-q) sparse dim×dim matrices from same H Peierls derivative; [H,rho(q)]=q J(q); C second derivative, not an independently tuned contact.",
+    "spectral_measure(H,E,source,steps)": "Finite fully reorthogonalized Krylov gaps and actual-source weights. Source=rho(q)psi or J(q)psi with ground expectation removed. Weights dimension charge² or current²; energy gaps use law energy units.",
+    "retarded(measure,frequencies,eta)": "chiR = sum w[(omega-Delta+i eta)^-1-(omega+Delta+i eta)^-1], inversion-paired density/current convention.",
+    "intrinsic(p,positions,probability,charges)": "Local anchored center-of-mass chart form factors and signed charge radius; not laboratory uniform density and not 3D Sachs form factors.",
+    "motion.sector_embedding(p,positions,ns,levels,k)": "Exact U_k embedding of relative hard-core positions×spin×breather into full moving trimer. k=2pi integer/N, exp(+ik R) convention; reduced dimension3024 for N10. Whole target ground block must be used for phase-independent elastic strength."
+  },
+  "source_operator": "Create one primitive fermion of each flavor and a neutral oscillator number superposition using the serialized psi amplitudes: Bdag=sum psi(x,s,n)/sqrt(n!) (bdag)^n cA_xA,sA^dag cB_xB,sB^dag cC_xC,sC^dag. Odd CAR operator. Ground psi already includes neutral dressing.",
+  "charge_spin_content": "Q=+1 input constituent sum; actual S2=3/4, Sz=+1/2 selected dynamically by AF exchange; mu_z=sum qi Si_z with stipulated m=1,g=2. No other worker's mass/source/pole normalization is imported.",
+  "normalization": "psi†psi=1 on the finite hard-core Hilbert basis; oscillator vacuum energy0. Translation sector U†U=I. Density source norms retain actual charge weights, not unit proxies.",
+  "receiver_semantics": "May feed an external receiver that explicitly adopts THIS Hamiltonian, prepared state and units. No actual same-law join to existing electron/photon/interaction roots is asserted. Scattering needs radiative photon receiver and same-law total current including magnetic terms; present API supplies charge/convection-current/Peierls-contact and spin content only.",
+  "limits": "One-dimensional finite dynamic neutral carrier, not local strong field or QCD; no transverse photons, pair sea, 3D spin-resolved Compton amplitude or measured proton parameter matching. Charge inputs and primitive fermion statistics remain unexplained."
+}

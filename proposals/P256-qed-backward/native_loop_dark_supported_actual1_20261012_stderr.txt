@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/sympy/polys/polyutils.py", line 231, in _parallel_dict_from_expr_if_gens
+    monom[indices[base]] = exp
+          ~~~~~~~^^^^^^
+KeyError: 1/(4223997800527190035847608038731964696091624670013326156553674666737091236584555790630649856*q**2 + 1466665902960829927835739065662785671158158020617017294237715811516140142333859924742766592*sqrt(6)*I*q + 6874996420128890541156004198381651293548705828622534845896974016571036886701261383368966144)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/native_loop_dark_supported_consumer_20261012.py", line 100, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/native_loop_dark_supported_consumer_20261012.py", line 93, in main
+    'quantitative_supported_complex_Gram':support_price(profiles),
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/native_loop_dark_supported_consumer_20261012.py", line 26, in support_price
+    determinant=sp.Poly(sp.expand(block.det()),q)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/sympy/polys/polytools.py", line 190, in __new__
+    return cls._from_expr(rep, opt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/sympy/polys/polytools.py", line 319, in _from_expr
+    rep, opt = _dict_from_expr(rep, opt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/sympy/polys/polyutils.py", line 388, in _dict_from_expr
+    rep, gens = _dict_from_expr_if_gens(expr, opt)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/sympy/polys/polyutils.py", line 327, in _dict_from_expr_if_gens
+    (poly,), gens = _parallel_dict_from_expr_if_gens((expr,), opt)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/sympy/polys/polyutils.py", line 236, in _parallel_dict_from_expr_if_gens
+    raise PolynomialError("%s contains an element of "
+sympy.polys.polyerrors.PolynomialError: 1/(4223997800527190035847608038731964696091624670013326156553674666737091236584555790630649856*q**2 + 1466665902960829927835739065662785671158158020617017294237715811516140142333859924742766592*sqrt(6)*I*q + 6874996420128890541156004198381651293548705828622534845896974016571036886701261383368966144) contains an element of the set of generators.

@@ -1,0 +1,1186 @@
+{
+  "model": "two-cell two-flavour selected-orbit quantum SU4 Gauss EFT",
+  "parameters": {
+    "cutoffs": [
+      "minimal"
+    ],
+    "numbers": [
+      3,
+      4,
+      5
+    ],
+    "lambdas": [
+      1.0,
+      8.0,
+      64.0
+    ],
+    "heavy_sign": -1,
+    "heavy_m": null,
+    "heavy_r": null,
+    "heavy_v": null,
+    "inertias": [
+      2.0
+    ],
+    "ue4": 0.3,
+    "ue1": 0.4,
+    "stiffness": 2.0,
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.3,
+    "levels": 3,
+    "tol": 1e-08,
+    "maxiter": 3000,
+    "seed": 222,
+    "operators_only": false
+  },
+  "selected_source": "local_orbital_stability.uniform_data(band,size=3,preferred=0)",
+  "selected_frame_real": [
+    [
+      [
+        0.0,
+        0.0,
+        0.6483983251503319,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.6483983251503319
+      ],
+      [
+        0.6483983251503319,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.6483983251503319,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.23863957694084134,
+        0.0,
+        0.0
+      ],
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.0,
+        -0.23863957694084134
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        -0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.23863957694084134,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        -0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        -0.0,
+        0.23863957694084134
+      ]
+    ]
+  ],
+  "selected_frame_imaginary": [
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        -0.23863957694084134,
+        0.0,
+        0.0
+      ],
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.23863957694084134
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  ],
+  "selected_gram_diagonal": [
+    0.42042038805775556,
+    0.05694884768250374,
+    0.05694884768250374,
+    0.05694884768250374
+  ],
+  "orbit_dimension": 15,
+  "selected_gram_stationarity_residual": 2.220446049250313e-16,
+  "heavy_base_coefficients": {
+    "a": 1.0,
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.3
+  },
+  "light_base_coefficients": {
+    "a": 1.0,
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.3
+  },
+  "heavy_coefficient_relation": {
+    "whole_H_sign": -1,
+    "equal_bare_shapes": true,
+    "balanced_complement_fork": true,
+    "selection_status": "explicit coefficient hypothesis, not dynamically proved"
+  },
+  "hypotheses": [
+    "fixed simultaneous adjoint orbit SU4/Z4 is an EFT restriction, not quantization of all 60 field coordinates",
+    "one genuine SU4 link; exact compact Haar measure and Peter-Weyl projection",
+    "two physical cells, two primitive flavours, four orbitals per flavour; raw Pauli code S=+",
+    "heavy NH=4 EM-neutral; light NL=3/4/5 charge q=NL-4",
+    "positive finite inertia and electric coefficients; Higgs alignment J=0"
+  ],
+  "excluded_claims": [
+    "full 60-coordinate quantum dynamics",
+    "harmonic shapes",
+    "full three-dimensional photon",
+    "infinite-volume or infinite-cutoff spectral gap",
+    "full phase or continuum S-matrix",
+    "full QED"
+  ],
+  "geometry": {
+    "active_bonds": 1,
+    "axis": "x",
+    "onsite_Wilson_axis_count": 1,
+    "onsite_scalar": 0.32,
+    "alignment_J": 0.0
+  },
+  "links": [
+    {
+      "cutoff": [
+        "1",
+        "4",
+        "bar4"
+      ],
+      "dimension": 33,
+      "dimensions": {
+        "1": 1,
+        "4": 4,
+        "bar4": 4
+      },
+      "casimirs": {
+        "1": 0.0,
+        "4": 1.875,
+        "bar4": 1.875,
+        "6": 2.4999999999999996,
+        "10": 4.5,
+        "bar10": 4.5,
+        "15": 4.0
+      },
+      "lie_residual": 3.8718637878417907e-16,
+      "hermiticity_residual": 0.0,
+      "electric_lie_residual": 3.925231146709438e-16,
+      "casimir_residual": 3.076740298213702e-15,
+      "cg_intertwiner_residual": 2.7194799110210365e-16,
+      "cg_isometry_residual": 8.222140951789457e-16,
+      "centre_residual": 5.684383067706609e-15,
+      "multiplication_commutator_residual": 0.0,
+      "adjoint_commutator_residual": 0.0,
+      "left_right_residual": 0.0,
+      "compressed_unitarity_defect": 5.5,
+      "haar_inner_product": "exact Schur delta_rr delta_ac delta_bd; no quadrature",
+      "alignment_J": 0.0,
+      "alignment_scope": "omitted, not factorized compressed U"
+    }
+  ],
+  "runs": [
+    {
+      "cutoff": "minimal",
+      "NH": 4,
+      "NL": 3,
+      "charge": -1,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "heavy_sign": -1,
+      "heavy_whole_H_multiplier": -1.0,
+      "matter_dimension": 3920,
+      "physical_dimension": 130720,
+      "boundary_rep": "4",
+      "boundary_dimension": 4,
+      "blocks": {
+        "1": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            1,
+            1,
+            4
+          ]
+        },
+        "4": {
+          "matter_fibres": 640,
+          "shape": [
+            640,
+            4,
+            4,
+            4
+          ]
+        },
+        "bar4": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "raw_marker_policy": "unchanged parity marker at mode16; marker has no SU4 or EM charge",
+      "pauli_lie_residual": 1.4628004667117093e-14,
+      "operators": {
+        "hermiticity_residual": 1.0544868061002145e-16,
+        "pure_gradient_covariance_residual": 1.207721110983537e-15,
+        "same_H_current_finite_difference_residual": 2.5330329007036303e-11,
+        "same_H_contact_finite_difference_residual": 5.95630333105841e-10,
+        "wrong_orientation_gauss_sign_defect": 1.1049936393686262,
+        "wrong_heavy_EM_count_defect": 0.30493342287615016,
+        "missing_boundary_rejected_matter_fibres": 3280,
+        "current_contact_owner": "analytic derivatives of this exact light Peierls hopping",
+        "full_resolvent_ward": "not computed; exact operator covariance instead"
+      },
+      "spectrum": {
+        "energies": [
+          -0.19045190174250445,
+          0.09512408001363533,
+          0.2034630557323699
+        ],
+        "eigen_residuals": [
+          2.567808876448675e-15,
+          3.0705717586758275e-13,
+          2.5808510212092323e-11
+        ],
+        "scaled_eigen_residuals": [
+          2.567808876448675e-15,
+          3.0705717586758275e-13,
+          2.5808510212092323e-11
+        ],
+        "eigen_residual_scale": "max(1, abs(E)); energy in declared lattice units",
+        "eigen_residual_limit": 1e-08,
+        "eigenvector_orthogonality_residual": 1.9451917470636373e-15,
+        "eigenvector_orthogonality_limit": 8.526512829121202e-14,
+        "lowest_Ritz_vector_observables": {
+          "orientation_gauss_kinetic_expectation": 0.3732650724831276,
+          "rest_field_polarization": {
+            "heavy": [
+              0.7332075105049338,
+              0.5257878880719001
+            ],
+            "light": [
+              -0.733193248809663,
+              -0.3795631011369428
+            ]
+          },
+          "meaning": "Gauge-invariant field-relative c\u2020Phi0 c at each cell; one finite lowest Ritz vector, not an infinite ground certificate"
+        },
+        "ritz_first_spacing": 0.2855759817561398,
+        "spacing_interpretation": "finite Galerkin Ritz spacing, not infinite gap or degeneracy certificate"
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "NH": 4,
+      "NL": 3,
+      "charge": -1,
+      "Lambda": 8.0,
+      "inertia": 2.0,
+      "heavy_sign": -1,
+      "heavy_whole_H_multiplier": -8.0,
+      "matter_dimension": 3920,
+      "physical_dimension": 130720,
+      "boundary_rep": "4",
+      "boundary_dimension": 4,
+      "blocks": {
+        "1": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            1,
+            1,
+            4
+          ]
+        },
+        "4": {
+          "matter_fibres": 640,
+          "shape": [
+            640,
+            4,
+            4,
+            4
+          ]
+        },
+        "bar4": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "raw_marker_policy": "unchanged parity marker at mode16; marker has no SU4 or EM charge",
+      "pauli_lie_residual": 1.4628004667117093e-14,
+      "operators": {
+        "hermiticity_residual": 4.247471847897304e-17,
+        "pure_gradient_covariance_residual": 1.3083510553682206e-15,
+        "same_H_current_finite_difference_residual": 2.5331167494518707e-11,
+        "same_H_contact_finite_difference_residual": 3.16464473664296e-09,
+        "wrong_orientation_gauss_sign_defect": 1.1049936393686262,
+        "wrong_heavy_EM_count_defect": 0.30493342287615016,
+        "missing_boundary_rejected_matter_fibres": 3280,
+        "current_contact_owner": "analytic derivatives of this exact light Peierls hopping",
+        "full_resolvent_ward": "not computed; exact operator covariance instead"
+      },
+      "spectrum": {
+        "energies": [
+          -5.241411882002342,
+          -4.79918750451652,
+          -4.7988439192029455
+        ],
+        "eigen_residuals": [
+          8.568887994994573e-15,
+          1.7470289473988652e-08,
+          1.5603383622846643e-08
+        ],
+        "scaled_eigen_residuals": [
+          1.634843471168127e-15,
+          3.6402598268034634e-09,
+          3.2514880428614265e-09
+        ],
+        "eigen_residual_scale": "max(1, abs(E)); energy in declared lattice units",
+        "eigen_residual_limit": 1e-08,
+        "eigenvector_orthogonality_residual": 6.563108004263042e-16,
+        "eigenvector_orthogonality_limit": 8.526512829121202e-14,
+        "lowest_Ritz_vector_observables": {
+          "orientation_gauss_kinetic_expectation": 1.6639026800335415,
+          "rest_field_polarization": {
+            "heavy": [
+              1.2636882377974445,
+              1.2591666106797248
+            ],
+            "light": [
+              -1.265609771433829,
+              -0.633265998786983
+            ]
+          },
+          "meaning": "Gauge-invariant field-relative c\u2020Phi0 c at each cell; one finite lowest Ritz vector, not an infinite ground certificate"
+        },
+        "ritz_first_spacing": 0.44222437748582166,
+        "spacing_interpretation": "finite Galerkin Ritz spacing, not infinite gap or degeneracy certificate"
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "NH": 4,
+      "NL": 3,
+      "charge": -1,
+      "Lambda": 64.0,
+      "inertia": 2.0,
+      "heavy_sign": -1,
+      "heavy_whole_H_multiplier": -64.0,
+      "matter_dimension": 3920,
+      "physical_dimension": 130720,
+      "boundary_rep": "4",
+      "boundary_dimension": 4,
+      "blocks": {
+        "1": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            1,
+            1,
+            4
+          ]
+        },
+        "4": {
+          "matter_fibres": 640,
+          "shape": [
+            640,
+            4,
+            4,
+            4
+          ]
+        },
+        "bar4": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "raw_marker_policy": "unchanged parity marker at mode16; marker has no SU4 or EM charge",
+      "pauli_lie_residual": 1.4628004667117093e-14,
+      "operators": {
+        "hermiticity_residual": 2.0101845100804726e-16,
+        "pure_gradient_covariance_residual": 4.064113072504245e-15,
+        "same_H_current_finite_difference_residual": 2.533510859603264e-11,
+        "same_H_contact_finite_difference_residual": 2.5487732422495644e-08,
+        "wrong_orientation_gauss_sign_defect": 1.1049936393686262,
+        "wrong_heavy_EM_count_defect": 0.30493342287615016,
+        "missing_boundary_rejected_matter_fibres": 3280,
+        "current_contact_owner": "analytic derivatives of this exact light Peierls hopping",
+        "full_resolvent_ward": "not computed; exact operator covariance instead"
+      },
+      "spectrum": {
+        "energies": [
+          -51.748620242185595,
+          -51.36048252086392,
+          -51.36033943863471
+        ],
+        "eigen_residuals": [
+          1.0724815870753506e-13,
+          2.6280165408730465e-07,
+          2.4887937247876217e-07
+        ],
+        "scaled_eigen_residuals": [
+          2.072483444111349e-15,
+          5.116806563889816e-09,
+          4.8457501488307535e-09
+        ],
+        "eigen_residual_scale": "max(1, abs(E)); energy in declared lattice units",
+        "eigen_residual_limit": 1e-08,
+        "eigenvector_orthogonality_residual": 9.26836472080787e-16,
+        "eigenvector_orthogonality_limit": 8.526512829121202e-14,
+        "lowest_Ritz_vector_observables": {
+          "orientation_gauss_kinetic_expectation": 1.9649901600155417,
+          "rest_field_polarization": {
+            "heavy": [
+              1.2919417817022159,
+              1.291934014140247
+            ],
+            "light": [
+              -1.2956971858584312,
+              -0.6483966531276417
+            ]
+          },
+          "meaning": "Gauge-invariant field-relative c\u2020Phi0 c at each cell; one finite lowest Ritz vector, not an infinite ground certificate"
+        },
+        "ritz_first_spacing": 0.38813772132167657,
+        "spacing_interpretation": "finite Galerkin Ritz spacing, not infinite gap or degeneracy certificate"
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "NH": 4,
+      "NL": 4,
+      "charge": 0,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "heavy_sign": -1,
+      "heavy_whole_H_multiplier": -1.0,
+      "matter_dimension": 4900,
+      "physical_dimension": 40724,
+      "boundary_rep": "1",
+      "boundary_dimension": 1,
+      "blocks": {
+        "1": {
+          "matter_fibres": 1812,
+          "shape": [
+            1812,
+            1,
+            1,
+            1
+          ]
+        },
+        "4": {
+          "matter_fibres": 1216,
+          "shape": [
+            1216,
+            4,
+            4,
+            1
+          ]
+        },
+        "bar4": {
+          "matter_fibres": 1216,
+          "shape": [
+            1216,
+            4,
+            4,
+            1
+          ]
+        }
+      },
+      "raw_marker_policy": "unchanged parity marker at mode16; marker has no SU4 or EM charge",
+      "pauli_lie_residual": 1.66162967242209e-14,
+      "operators": {
+        "hermiticity_residual": 7.364406843765381e-17,
+        "pure_gradient_covariance_residual": 9.373062664128173e-16,
+        "same_H_current_finite_difference_residual": 2.658774697064165e-11,
+        "same_H_contact_finite_difference_residual": 6.27529547226926e-10,
+        "wrong_orientation_gauss_sign_defect": 1.0043468646888465,
+        "wrong_heavy_EM_count_defect": 0.26221584789311403,
+        "missing_boundary_rejected_matter_fibres": 0,
+        "current_contact_owner": "analytic derivatives of this exact light Peierls hopping",
+        "full_resolvent_ward": "not computed; exact operator covariance instead"
+      },
+      "spectrum": {
+        "energies": [
+          -0.47518472796171535,
+          -0.10408015114484609,
+          -0.10404842601993224
+        ],
+        "eigen_residuals": [
+          2.2082924170612397e-15,
+          5.485736653423534e-13,
+          2.3684085126001845e-12
+        ],
+        "scaled_eigen_residuals": [
+          2.2082924170612397e-15,
+          5.485736653423534e-13,
+          2.3684085126001845e-12
+        ],
+        "eigen_residual_scale": "max(1, abs(E)); energy in declared lattice units",
+        "eigen_residual_limit": 1e-08,
+        "eigenvector_orthogonality_residual": 1.901413782232305e-15,
+        "eigenvector_orthogonality_limit": 8.526512829121202e-14,
+        "lowest_Ritz_vector_observables": {
+          "orientation_gauss_kinetic_expectation": 0.466924597525783,
+          "rest_field_polarization": {
+            "heavy": [
+              0.7326335962250208,
+              0.7326335962250207
+            ],
+            "light": [
+              -0.7326693752320572,
+              -0.7326693752320572
+            ]
+          },
+          "meaning": "Gauge-invariant field-relative c\u2020Phi0 c at each cell; one finite lowest Ritz vector, not an infinite ground certificate"
+        },
+        "ritz_first_spacing": 0.37110457681686926,
+        "spacing_interpretation": "finite Galerkin Ritz spacing, not infinite gap or degeneracy certificate"
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "NH": 4,
+      "NL": 4,
+      "charge": 0,
+      "Lambda": 8.0,
+      "inertia": 2.0,
+      "heavy_sign": -1,
+      "heavy_whole_H_multiplier": -8.0,
+      "matter_dimension": 4900,
+      "physical_dimension": 40724,
+      "boundary_rep": "1",
+      "boundary_dimension": 1,
+      "blocks": {
+        "1": {
+          "matter_fibres": 1812,
+          "shape": [
+            1812,
+            1,
+            1,
+            1
+          ]
+        },
+        "4": {
+          "matter_fibres": 1216,
+          "shape": [
+            1216,
+            4,
+            4,
+            1
+          ]
+        },
+        "bar4": {
+          "matter_fibres": 1216,
+          "shape": [
+            1216,
+            4,
+            4,
+            1
+          ]
+        }
+      },
+      "raw_marker_policy": "unchanged parity marker at mode16; marker has no SU4 or EM charge",
+      "pauli_lie_residual": 1.66162967242209e-14,
+      "operators": {
+        "hermiticity_residual": 4.540205825292465e-17,
+        "pure_gradient_covariance_residual": 1.063753549685528e-15,
+        "same_H_current_finite_difference_residual": 2.6588384580139413e-11,
+        "same_H_contact_finite_difference_residual": 3.198405346591127e-09,
+        "wrong_orientation_gauss_sign_defect": 1.0043468646888465,
+        "wrong_heavy_EM_count_defect": 0.26221584789311403,
+        "missing_boundary_rejected_matter_fibres": 0,
+        "current_contact_owner": "analytic derivatives of this exact light Peierls hopping",
+        "full_resolvent_ward": "not computed; exact operator covariance instead"
+      },
+      "spectrum": {
+        "energies": [
+          -5.642682711092237,
+          -4.921608985441386,
+          -4.919942346970209
+        ],
+        "eigen_residuals": [
+          6.037615623352711e-15,
+          9.986958115353728e-11,
+          3.27802926311025e-10
+        ],
+        "scaled_eigen_residuals": [
+          1.0699902745699533e-15,
+          2.0292059253175443e-11,
+          6.662739178496515e-11
+        ],
+        "eigen_residual_scale": "max(1, abs(E)); energy in declared lattice units",
+        "eigen_residual_limit": 1e-08,
+        "eigenvector_orthogonality_residual": 1.2086887831852037e-15,
+        "eigenvector_orthogonality_limit": 8.526512829121202e-14,
+        "lowest_Ritz_vector_observables": {
+          "orientation_gauss_kinetic_expectation": 1.6758875575834564,
+          "rest_field_polarization": {
+            "heavy": [
+              1.2636976433449294,
+              1.2636976433449314
+            ],
+            "light": [
+              -1.266082624200434,
+              -1.2660826242004364
+            ]
+          },
+          "meaning": "Gauge-invariant field-relative c\u2020Phi0 c at each cell; one finite lowest Ritz vector, not an infinite ground certificate"
+        },
+        "ritz_first_spacing": 0.721073725650851,
+        "spacing_interpretation": "finite Galerkin Ritz spacing, not infinite gap or degeneracy certificate"
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "NH": 4,
+      "NL": 4,
+      "charge": 0,
+      "Lambda": 64.0,
+      "inertia": 2.0,
+      "heavy_sign": -1,
+      "heavy_whole_H_multiplier": -64.0,
+      "matter_dimension": 4900,
+      "physical_dimension": 40724,
+      "boundary_rep": "1",
+      "boundary_dimension": 1,
+      "blocks": {
+        "1": {
+          "matter_fibres": 1812,
+          "shape": [
+            1812,
+            1,
+            1,
+            1
+          ]
+        },
+        "4": {
+          "matter_fibres": 1216,
+          "shape": [
+            1216,
+            4,
+            4,
+            1
+          ]
+        },
+        "bar4": {
+          "matter_fibres": 1216,
+          "shape": [
+            1216,
+            4,
+            4,
+            1
+          ]
+        }
+      },
+      "raw_marker_policy": "unchanged parity marker at mode16; marker has no SU4 or EM charge",
+      "pauli_lie_residual": 1.66162967242209e-14,
+      "operators": {
+        "hermiticity_residual": 3.0436364816617974e-16,
+        "pure_gradient_covariance_residual": 4.065259213222732e-15,
+        "same_H_current_finite_difference_residual": 2.660548486723824e-11,
+        "same_H_contact_finite_difference_residual": 2.6134948507656073e-08,
+        "wrong_orientation_gauss_sign_defect": 1.0043468646888465,
+        "wrong_heavy_EM_count_defect": 0.26221584789311403,
+        "missing_boundary_rejected_matter_fibres": 0,
+        "current_contact_owner": "analytic derivatives of this exact light Peierls hopping",
+        "full_resolvent_ward": "not computed; exact operator covariance instead"
+      },
+      "spectrum": {
+        "energies": [
+          -52.155417563884996,
+          -51.48649154054951,
+          -51.485529013871506
+        ],
+        "eigen_residuals": [
+          7.290374954417152e-14,
+          1.2523157338990533e-08,
+          2.8810463817046436e-08
+        ],
+        "scaled_eigen_residuals": [
+          1.3978173879036049e-15,
+          2.432319034426263e-10,
+          5.595837193259521e-10
+        ],
+        "eigen_residual_scale": "max(1, abs(E)); energy in declared lattice units",
+        "eigen_residual_limit": 1e-08,
+        "eigenvector_orthogonality_residual": 1.4504362912907674e-15,
+        "eigenvector_orthogonality_limit": 8.526512829121202e-14,
+        "lowest_Ritz_vector_observables": {
+          "orientation_gauss_kinetic_expectation": 1.9650301232482037,
+          "rest_field_polarization": {
+            "heavy": [
+              1.2919392793504132,
+              1.2919392793504139
+            ],
+            "light": [
+              -1.2960626072490762,
+              -1.2960626072490755
+            ]
+          },
+          "meaning": "Gauge-invariant field-relative c\u2020Phi0 c at each cell; one finite lowest Ritz vector, not an infinite ground certificate"
+        },
+        "ritz_first_spacing": 0.6689260233354872,
+        "spacing_interpretation": "finite Galerkin Ritz spacing, not infinite gap or degeneracy certificate"
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "NH": 4,
+      "NL": 5,
+      "charge": 1,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "heavy_sign": -1,
+      "heavy_whole_H_multiplier": -1.0,
+      "matter_dimension": 3920,
+      "physical_dimension": 130720,
+      "boundary_rep": "bar4",
+      "boundary_dimension": 4,
+      "blocks": {
+        "1": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            1,
+            1,
+            4
+          ]
+        },
+        "4": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            4,
+            4,
+            4
+          ]
+        },
+        "bar4": {
+          "matter_fibres": 640,
+          "shape": [
+            640,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "raw_marker_policy": "unchanged parity marker at mode16; marker has no SU4 or EM charge",
+      "pauli_lie_residual": 1.4628004667117093e-14,
+      "operators": {
+        "hermiticity_residual": 6.296330842669548e-17,
+        "pure_gradient_covariance_residual": 1.2318864935527947e-15,
+        "same_H_current_finite_difference_residual": 2.5350200473717717e-11,
+        "same_H_contact_finite_difference_residual": 5.882758472500622e-10,
+        "wrong_orientation_gauss_sign_defect": 1.1046357727088967,
+        "wrong_heavy_EM_count_defect": 0.30777882673346296,
+        "missing_boundary_rejected_matter_fibres": 3280,
+        "current_contact_owner": "analytic derivatives of this exact light Peierls hopping",
+        "full_resolvent_ward": "not computed; exact operator covariance instead"
+      },
+      "spectrum": {
+        "energies": [
+          -0.1904519017425051,
+          0.09512408001363519,
+          0.20346305573236995
+        ],
+        "eigen_residuals": [
+          3.011425535183411e-15,
+          8.574484390560571e-14,
+          1.729790977588696e-11
+        ],
+        "scaled_eigen_residuals": [
+          3.011425535183411e-15,
+          8.574484390560571e-14,
+          1.729790977588696e-11
+        ],
+        "eigen_residual_scale": "max(1, abs(E)); energy in declared lattice units",
+        "eigen_residual_limit": 1e-08,
+        "eigenvector_orthogonality_residual": 2.5613162990343848e-15,
+        "eigenvector_orthogonality_limit": 8.526512829121202e-14,
+        "lowest_Ritz_vector_observables": {
+          "orientation_gauss_kinetic_expectation": 0.373265072483127,
+          "rest_field_polarization": {
+            "heavy": [
+              0.7332075105049338,
+              0.525787888071902
+            ],
+            "light": [
+              -0.7331932488096654,
+              -0.3795631011369396
+            ]
+          },
+          "meaning": "Gauge-invariant field-relative c\u2020Phi0 c at each cell; one finite lowest Ritz vector, not an infinite ground certificate"
+        },
+        "ritz_first_spacing": 0.2855759817561403,
+        "spacing_interpretation": "finite Galerkin Ritz spacing, not infinite gap or degeneracy certificate"
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "NH": 4,
+      "NL": 5,
+      "charge": 1,
+      "Lambda": 8.0,
+      "inertia": 2.0,
+      "heavy_sign": -1,
+      "heavy_whole_H_multiplier": -8.0,
+      "matter_dimension": 3920,
+      "physical_dimension": 130720,
+      "boundary_rep": "bar4",
+      "boundary_dimension": 4,
+      "blocks": {
+        "1": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            1,
+            1,
+            4
+          ]
+        },
+        "4": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            4,
+            4,
+            4
+          ]
+        },
+        "bar4": {
+          "matter_fibres": 640,
+          "shape": [
+            640,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "raw_marker_policy": "unchanged parity marker at mode16; marker has no SU4 or EM charge",
+      "pauli_lie_residual": 1.4628004667117093e-14,
+      "operators": {
+        "hermiticity_residual": 1.4858238221243868e-16,
+        "pure_gradient_covariance_residual": 1.3326107637752824e-15,
+        "same_H_current_finite_difference_residual": 2.5350113911738284e-11,
+        "same_H_contact_finite_difference_residual": 3.0165950381745228e-09,
+        "wrong_orientation_gauss_sign_defect": 1.1046357727088967,
+        "wrong_heavy_EM_count_defect": 0.30777882673346296,
+        "missing_boundary_rejected_matter_fibres": 3280,
+        "current_contact_owner": "analytic derivatives of this exact light Peierls hopping",
+        "full_resolvent_ward": "not computed; exact operator covariance instead"
+      },
+      "spectrum": {
+        "energies": [
+          -5.24141188200234,
+          -4.799187504516517,
+          -4.798843919202958
+        ],
+        "eigen_residuals": [
+          1.0584817826582441e-14,
+          8.997495385034589e-09,
+          4.6134055266553476e-09
+        ],
+        "scaled_eigen_residuals": [
+          2.019459272591796e-15,
+          1.874795551656826e-09,
+          9.613576945468962e-10
+        ],
+        "eigen_residual_scale": "max(1, abs(E)); energy in declared lattice units",
+        "eigen_residual_limit": 1e-08,
+        "eigenvector_orthogonality_residual": 8.492423128132204e-16,
+        "eigenvector_orthogonality_limit": 8.526512829121202e-14,
+        "lowest_Ritz_vector_observables": {
+          "orientation_gauss_kinetic_expectation": 1.6639026800335404,
+          "rest_field_polarization": {
+            "heavy": [
+              1.2636882377974412,
+              1.2591666106797275
+            ],
+            "light": [
+              -1.2656097714338321,
+              -0.633265998786984
+            ]
+          },
+          "meaning": "Gauge-invariant field-relative c\u2020Phi0 c at each cell; one finite lowest Ritz vector, not an infinite ground certificate"
+        },
+        "ritz_first_spacing": 0.44222437748582255,
+        "spacing_interpretation": "finite Galerkin Ritz spacing, not infinite gap or degeneracy certificate"
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "NH": 4,
+      "NL": 5,
+      "charge": 1,
+      "Lambda": 64.0,
+      "inertia": 2.0,
+      "heavy_sign": -1,
+      "heavy_whole_H_multiplier": -64.0,
+      "matter_dimension": 3920,
+      "physical_dimension": 130720,
+      "boundary_rep": "bar4",
+      "boundary_dimension": 4,
+      "blocks": {
+        "1": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            1,
+            1,
+            4
+          ]
+        },
+        "4": {
+          "matter_fibres": 1320,
+          "shape": [
+            1320,
+            4,
+            4,
+            4
+          ]
+        },
+        "bar4": {
+          "matter_fibres": 640,
+          "shape": [
+            640,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "raw_marker_policy": "unchanged parity marker at mode16; marker has no SU4 or EM charge",
+      "pauli_lie_residual": 1.4628004667117093e-14,
+      "operators": {
+        "hermiticity_residual": 3.1345377990305783e-16,
+        "pure_gradient_covariance_residual": 4.115012447391706e-15,
+        "same_H_current_finite_difference_residual": 2.5356355353839922e-11,
+        "same_H_contact_finite_difference_residual": 2.4365047026037983e-08,
+        "wrong_orientation_gauss_sign_defect": 1.1046357727088967,
+        "wrong_heavy_EM_count_defect": 0.30777882673346296,
+        "missing_boundary_rejected_matter_fibres": 3280,
+        "current_contact_owner": "analytic derivatives of this exact light Peierls hopping",
+        "full_resolvent_ward": "not computed; exact operator covariance instead"
+      },
+      "spectrum": {
+        "energies": [
+          -51.74862024218572,
+          -51.36048252086385,
+          -51.36033943863471
+        ],
+        "eigen_residuals": [
+          7.656028795407535e-14,
+          3.6486401898175477e-07,
+          1.8145521453801523e-07
+        ],
+        "scaled_eigen_residuals": [
+          1.4794652996692468e-15,
+          7.103983472770887e-09,
+          3.5329831640777563e-09
+        ],
+        "eigen_residual_scale": "max(1, abs(E)); energy in declared lattice units",
+        "eigen_residual_limit": 1e-08,
+        "eigenvector_orthogonality_residual": 1.3426855315682138e-15,
+        "eigenvector_orthogonality_limit": 8.526512829121202e-14,
+        "lowest_Ritz_vector_observables": {
+          "orientation_gauss_kinetic_expectation": 1.9649901600155362,
+          "rest_field_polarization": {
+            "heavy": [
+              1.2919417817022107,
+              1.291934014140234
+            ],
+            "light": [
+              -1.2956971858584274,
+              -0.6483966531276395
+            ]
+          },
+          "meaning": "Gauge-invariant field-relative c\u2020Phi0 c at each cell; one finite lowest Ritz vector, not an infinite ground certificate"
+        },
+        "ritz_first_spacing": 0.3881377213218755,
+        "spacing_interpretation": "finite Galerkin Ritz spacing, not infinite gap or degeneracy certificate"
+      }
+    }
+  ],
+  "source_sha256": {
+    "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+    "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+    "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "quantum_su4_gauss.py": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286"
+  }
+}

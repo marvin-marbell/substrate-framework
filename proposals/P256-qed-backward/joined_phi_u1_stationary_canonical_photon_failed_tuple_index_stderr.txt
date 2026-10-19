@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_canonical_photon.py", line 229, in <module>
+    with threadpool_limits(limits=1):r=run(args.output)
+                                       ^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_canonical_photon.py", line 200, in run
+    m=transfer(profile,native,paths,tau,direction);cv=canonical(m,[128,129]);v=cv[128];log=logarithmic(v);alllogs.append(log)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_canonical_photon.py", line 94, in transfer
+    h,dh,ddh=native_h(profile,native,path['fields'],path['links'],path['theta'],direction,probe,omit)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_canonical_photon.py", line 85, in native_h
+    w=float(np.sum(direction[p['edges']]));phase=np.exp(1j*(np.sum(theta[p['edges']])+probe*w))
+                   ~~~~~~~~~^^^^^^^^^^^^
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed

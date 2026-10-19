@@ -1,0 +1,108 @@
+{
+  "kind": "INDEPENDENT_REVISION_BOUND_BOUNDARY_SIGN_REVIEW_NOT_PHASE_ACCEPTANCE",
+  "owner": "QuantumBoundarySignReview",
+  "governing_plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "contract_revision": "d59bee1239b24c4899e385b76c8673d695e274cdcd422d5433db2994969cc9a0",
+  "accepted_science": "491c764fee3f8e2a25ab86ce21c2cc1088483bb275b59337c8b4e4ef145a9b3e",
+  "scope": "Every originating inherited trace-class globally minimizing rho_N, fixed N and bounded physical source slots. No substitution of rho_N or SAME-history operator. No original producer/checker rerun.",
+  "verdicts": [
+    {
+      "scope": "Full canonical exterior-minor boundary",
+      "verdict": "valid",
+      "epistemic": "exact algebra; physical path realization conditional on inherited form/quotient/sewing theorem",
+      "proof": [
+        "For d=4V,k=2V, in the ascending occupation basis e_I, wedge^k B e_J has coefficient det B[I,J]. This is multilinearity/alternation, not a Gaussian assumption.",
+        "On the full 65-copy tensor fibre, transport is tensor_s wedge^k B_s after conditioning on the SAME common HS field. The matrix entry is product_s det B_s[I_s,J_s]. Shared HS integration remains outside this product; replacing it by 65 independent fields changes fullE cross terms.",
+        "Trace rho K = sum_I,J integral dx dy rho(y,J;x,I) K(x,I;y,J). The reversed indices of rho are essential; all offdiagonal copies/occupations/boson/character entries remain. Neither pointwise positivity nor pointwise existence of an endpoint kernel is needed.",
+        "For rank-one |u><v| trace pairing is <v,K u>. Physical sections u,v lie in the original sewn Gauss/deck bundle. Approximate any trace-class rho in trace norm by finite rank, then define its weak contraction by the pairing limit. The construction is independent of approximation because |Tr((rho-rho_r)K)| <= ||rho-rho_r||_1 ||K||.",
+        "A complete boundary Grassmann polynomial is equivalent provided monomial order is fixed to the same ascending CAR convention. Only the identity boundary sums principal minors to coeff[z^k]det(I+zB); no single determinant represents general rho. Arbitrary physical rho may entangle all65 species, so factorizing boundary densities is invalid."
+      ],
+      "independent_control": "Non-Slater offdiagonal pure wedge2 density, full 6x6 exterior transport compared against independently constructed full16 Jordan-Wigner CAR; all256 ordered source coefficients; diagonal/identity/reversed substitutes rejected.",
+      "smallest_correction": "None to boundary proof; retain weak pairing language and physical endpoint sewing."
+    },
+    {
+      "scope": "Strong products imply trace pairing with every originating trace-class density",
+      "verdict": "valid",
+      "epistemic": "exact functional analysis conditional on inherited Dirichlet/Friedrichs form exhaustion",
+      "proof": [
+        "Extend exhausted semigroups from physical Dirichlet subspaces to the full physical Hilbert space. The form lower bound is common Eglob; after shifting by Eglob each finite-exhaustion semigroup is a contraction for tau>=0. At tau=0 the extension is P_R, which converges strongly to I.",
+        "If T_R,j -> T_j strongly with common operator bounds and bounded fixed physical source S_j, induction gives K_R -> K strongly and ||K_R|| <= product_j ||S_j|| (or exp(c sum tau_j) before the nonnegative shift). For trace-class rho choose finite-rank rho_r with ||rho-rho_r||_1 arbitrarily small. Strong convergence gives each finite matrix pairing; remainder is bounded by (||K_R||+||K||)||rho-rho_r||_1. This proves Tr rho K_R -> Tr rho K for EVERY rho, including entangled/nonGaussian densities.",
+        "Strong convergence does not imply Tr K_R -> Tr K: projections P_R converge strongly to I while ordinary traces grow R. Normalized trace-class boundary p_n=1/[n(n+1)] instead has Tr rho P_R=R/(R+1)->1. The density is the essential trace boundary.",
+        "This argument takes operator/product limits first. Exchanging conditional path integrals or asserting pointwise integral domination still requires uniform insertion-weighted path estimates and is not paid here."
+      ],
+      "smallest_correction": "None; do not extend this claim to heat-trace convergence or absolute path-integral exchange."
+    },
+    {
+      "scope": "Source-free denominator1 and SAME-family history",
+      "verdict": "valid",
+      "epistemic": "exact identity under accepted originating globally minimizing density and bounded-history existence",
+      "proof": [
+        "L_N=H_N-Eglob>=0 and rho_N=Pker(L_N) rho_N Pker(L_N), Tr rho_N=1. Functional calculus gives e^{-tau L_N} rho_N=rho_N, hence Tr rho_N e^{-tau L_N}=1, including tau=0. It is not a small thermal denominator.",
+        "The exhausted finite-R boundary pairing need not already be1 because P_R rho_N P_R is not a Dirichlet ground density. Its source-free denominator converges to1; normalizing approximants is legitimate only once it is nonzero. The boundary proof states the limiting identity, not exact finite-R normalization.",
+        "All bounded moments at each N use the ORIGINAL rho_N, original compatible character weights/direct sums and translation lift. Thus every represented moment is equal to the originating moment before taking N/subsequence. Along the SAME accepted full-history subsequence, equality passes to omega. This is identity by evaluation, not a theorem selecting a family from energies or thermal measures.",
+        "WholeP0 is defined from the already fixed limit L; this identity does not transport finite-N P0 or replace wholeP0 by the scalar mean. No allcharacter measure, ordinary-cover trace, Gibbs beta-infinity selection or native numerical ground vector is needed."
+      ],
+      "smallest_correction": "Do not quote denominator1 at finite Dirichlet exhaustion without qualification."
+    },
+    {
+      "scope": "Normalized ordered cumulants and full eightleg insertions",
+      "verdict": "valid",
+      "epistemic": "exact bounded-source identity",
+      "proof": [
+        "For bounded ordered source exponentials Z is analytic near0 and Z(0)=1. In the commutative source-variable algebra the mixed derivative of log Z is sum over set partitions (-1)^(b-1)(b-1)! product_B m_B. Each m_B retains the ORIGINAL relative temporal order of its operators and its same rho boundary.",
+        "The formula follows independently by expanding log(1+(Z-1)); the coefficient of the multilinear monomial counts ordered decompositions into disjoint nonempty blocks. Replacing any proper-subset moment by raw canonical trace or dropping the normalizer changes the cumulant.",
+        "A complete all24 ordered fourcurrent Hermitian A_M is generated by the fourth derivative sums plus adjoint with the original factor1/2. Two A slots need eight current legs, both fourleg order sums, all64^4 per slot and original intervening heat/projector slots. The raw eightleg moment is not itself the connected eightleg cumulant, nor the cumulant of the two composite A slots without regrouping and subtraction.",
+        "Even if each current is bilinear, exp(t A_M) is not a onebody exterior determinant because A_M is a quartic current word. Occupation Pi is inserted as its full CAR spectral polynomial, not as a one-colour filter."
+      ],
+      "independent_control": "Set-partition formula compared to independent nilpotent logarithm for four/eight legs; all proper subsets computed with full offdiagonal boundary. Ordered eightleg with interposed projector rejects dropping that slot.",
+      "smallest_correction": "None to scientist correction; preserve distinction between eightleg derivative and two-composite-slot connected response."
+    },
+    {
+      "scope": "Conditional masks5/10 versus actual physical Pi",
+      "verdict": "invalid if identified; each separately valid on its stated scope",
+      "epistemic": "exact combinatorial/source distinction",
+      "witness": [
+        "Native one-colour mask diagnostic fixes only four selected colour orbitals. Each opposite mask occupies2 modes and has binom(252,126) spectator completions; union count2 binom(252,126). It leaves the remaining12 colour modes at the four sites unrestricted.",
+        "Actual Pi is the union of total site-number patterns(2,0,2,0),(0,2,0,2) for ONE active species, four SU4 colours/site. Each branch has binom(4,2)^2=36 local colour choices,4 face particles and240 spectator modes at filling124. Union count72 binom(240,124), with other64 species unrestricted: multiply binom(256,128)^64. It is SU4 invariant; a selected-colour mask is not.",
+        "Diagnostic state with only colour0 occupied at vertices0,2 has n=(1,0,1,0), hence outside actual Pi. Actual Pi state with colours1,2 at vertices0,2 has colour0 mask0, hence outside diagnostic. Neither contains the other.",
+        "The mask sum24 signed directed conditional kernel is neither Pi A_M Pi nor G_pp=omega(A_p Q0(L+eta)^-1 Q0 A_p). Full actual A_M retains all24/all64^4, complete Hermitian adjoint, interposed projectors and same ground boundary. Its complement includes all three other blocks, not just mask complement."
+      ],
+      "consequence": "Conditional counts/signs cannot furnish an actual Pi response lower, actual branch weight, physical1 stiffness or phase result.",
+      "smallest_correction": "Label the one-colour mask experiment a distinct diagnostic only; do not transfer its count/weight/source to Pi. Frozen boundary proof already retains the actual response debt."
+    },
+    {
+      "scope": "Original executed_adverse compensation prose",
+      "verdict": "invalid in immutable original; explicitly withdrawn by pinned correction",
+      "epistemic": "original claim reported, correction read, independent exact recomputation observed in new receipt",
+      "witness": "Native identity-heat directed sum24 pair=-32512/64515 and complement=-256/64515; total=-32768/64515. Both sums negative, so complement reinforces, not compensates. Individual complement rows can have either sign.",
+      "provenance": "Do not edit/rebind epoch1 proof or old receipts. canonical_quantum_path_scientific_corrections_20261012.json names the precise withdrawn field and preserves epoch1 target hash.",
+      "parent_method_distinction": "canonical_ground_parent_method_20261012.py uses canonical4 of8 modes with positive diagonal fugacity z on the4 active orbitals, raw sum16z+16z^3-96z^2 and selected pair-48z^2. At z=1/16 its complement is positive. Normalization divides by sum_k binom(4,k)binom(4,4-k)z^k>0, so signs persist. This is not the native d256,k128 identity-heat kernel, not the parent's log cumulant control, and not an actual ground Pi response.",
+      "smallest_correction": "Consume pinned withdrawal; preserve exact field-level provenance and distinguish method controls rather than blending their signs."
+    },
+    {
+      "scope": "Signed response Gram and finite eta",
+      "verdict": "valid response/lower algebra; conditional strictly-positive or energy-Hessian promotion",
+      "epistemic": "exact bounded Hermitian sources, nonnegative SAME L and wholeP0",
+      "proof": [
+        "With R_eta=Q0(L+eta)^-1 Q0, G_ab=<R_eta^1/2 A_a Omega,R_eta^1/2 A_b Omega>. For Hermitian A_a it is PSD and G_cp=conjugate G_pc. chi_eta=2(G_pp+G_cc+2Re G_pc), bounded below by2(sqrt(G_pp)-sqrt(G_cc))^2 by reverse triangle. Complex cross remains indispensable.",
+        "Nonzero branches can cancel: PSD Gram[[1,-1],[-1,1]] has both diagonals1 but total0. No sign/branch-existence or norm envelope proves actual separation.",
+        "For the nondegenerate twolevel L=diag(0,3), A offdiagonal1, chi_eta=2/(3+eta), whereas minus actual ground energy Hessian is2/3. At eta=2 these differ2/5 versus2/3. eta->0 and spectral/differentiability/degenerate-branch treatment are required for the energy interpretation."
+      ],
+      "smallest_correction": "None; scientist boundary proof correctly says finite eta is not the literal Hessian. Actual N-uniform separation remains open."
+    },
+    {
+      "scope": "Removing M for four evolved unbounded currents/projectors",
+      "verdict": "conditional/open; invalid if inferred from vacuum tail or fractional graph alone",
+      "epistemic": "fixed-M identity exact; required domain/thermodynamic exchange not proved",
+      "proof": [
+        "Convergence A_M Omega->A Omega and A Omega in D(L^s),s<1/17 controls one vacuum vector. It does not show that the successive evolved current outputs lie in the domains of the other unbounded currents, or that insertion-weighted mixed-time products are uniformly integrable after interposed occupation blocks.",
+        "Domain countercontrol: on l2(N) let normalized Omega_n=n^-2/sqrt(zeta(4)), J multiplication by n and L=I-|Omega><Omega|. Omega is an exact ground and L bounded, so J Omega lies in every D(L^s); cutoff tails ||(J-J_M)Omega||^2<=1/(M zeta(4)). Yet ||J_M^2 Omega||^2=M/zeta(4)->infinity, so J^2 Omega does not exist. Fractional graph/vacuum tail alone cannot license even two, let alone four unbounded insertions. This is a logical method counterexample, not a contrary native ground or no-go.",
+        "Actual removal requires an original-family uniform relative-form/product bound or insertion-weighted normalized density estimate covering all ordered4/eightleg/projector slots. The inherited bare-loop total tail, finite-N bounded identities and SAME fractional graph theorem do not supply it. No heat-trace, thermodynamic, eta/IR, sharp atom or gapped-branch theorem follows."
+      ],
+      "smallest_correction": "Keep M fixed in this representation until the stated mixed-product estimate is proved; preserve the explicitly unpaid obligation."
+    }
+  ],
+  "unchanged": ["fullPhi", "SU4", "noncompactU1", "all65", "Ref", "HEHC64", "once-shared fullE", "canonical2V", "complex cross", "wholeP0", "SAME originating rho_N", "SAME accepted L"],
+  "scientific_admission": false,
+  "campaign_complete": false
+}

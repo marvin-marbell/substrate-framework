@@ -1,0 +1,37 @@
+{
+  "law_id":"rotational-sphere-neutral-orientor-covariant-cavity-v1",
+  "module":"rich_spinor_rot_20261014_model.py",
+  "source_hash":"27039914a2a92c7235e39e4b1e8efc0011f1574e2b572d5d61dc3a53dc292b11",
+  "identity":"NEW rotational sphere/neutral-orientor root; not a correction or state splice into old octahedron/Hubbard/Phi/Gauss roots. Old v1 and every scientific capsule remain immutable.",
+  "units":"hbar=radius=|e|=1; inverse_inertia energies; q inverse radius; physical electron charge q_charge=-1",
+  "state_order":"charged complete(l,m) shells, primitive spin(up,down), neutral complete(l,m) shells, field Focktuple fastest. Every eigensystem retained.",
+  "functions":{
+    "Parameters":"Immutable: charged_lmax2,neutral_lmax1,inverse_inertia1.4,neutral_inverse_inertia2,orientation.85,rotor_spin1.1,omega1.15,coupling0,field_cutoff1,charge-1,particle_gap2 defaults. coupling0 omits field space; nonzero recomputes same covariant body with actual oscillator coordinates.",
+    "angular_geometry(lmax,ntheta=18,nphi=36)":"Complete angular shell basis, quadrature, exactL/L2/parity and projectedmultiplicationR. R matrices do NOT commute; not used to define a fake finite gauge root.",
+    "multiplication(geometry,values)":"P_L f(r)P_L from quadrature. Multiply functions before calling when a continuum contact/product is needed.",
+    "one_current(geometry,params,q,epsilon)":"Physical charged continuum covariant-kinetic derivative BEFORE Galerkin, dimension angular×angular; physical charge sign included.",
+    "one_contact(geometry,params,qout,epsout,qin,epsin)":"Actual source mixed derivative; outgoingepsilon conjugated internally, qout reversed inphase. Product beforeGalerkin, NOT projectedR products.",
+    "field_geometry(cutoff)":"Complete isotropic3oscillator total-excitation shells. ReturnsQ,QQ,fieldL,number,parity. QQ includes higher intermediate shell beforeprojection. Supplied external dipolemode oscillator, NOT Maxwell/Gauss/masslessphotons.",
+    "build(params)":"Dense complete H, bodyH, charged/neutral/fieldgeometry, totalrotation[3],physicalspin[3],parity,parameters/law. Fieldnonzero includes JQ and ALL CijQiQj; no importedresponse. Bodydimension2(lmax+1)^2(neutral_lmax+1)^2; fieldmultiplier1 whenbare,4 forcut1,10 forcut2.",
+    "solve(model)":"FullHermitian energies/vectors with exactdegenerateparity/Jz resolution. Complete72/128/200/288/720/800/1280 states remain available; noforced4projection.",
+    "current(model,q,epsilon)":"Dense physicalnegative-electron current. Same-root fieldfeedback contribution −lambda C(external,mode)Qi included. J(q,epsilon)^dagger=J(-q,conj(epsilon)). Do NOT apply oldv1 numberphase signflip.",
+    "spin_current(model,q,epsilon,axis) from rich_spinor_rot_20261014_spin_current.py":"Physical charged-spin flux {S_axis,J_physical}/2, including same-root quantumfield feedback; axis0/1/2. Primitive spin torque=i[H,S] is generally nonzero, so not an asserted spin-conservation Ward current.",
+    "contact(model,qout,epsout,qin,epsin)":"Dense same-root second derivative with outgoing conjugation internal. Fieldexternalmixed contact is bodycontact tensorIfield.",
+    "amplitude(model,initial,final,jin,jout,co,omega,eta=1e-5,virtual=None)":"Full current/contact KH response, ALL eigenstates default. jin=current(in),jout=current(out); outgoingdagger doneinternally. omegaout=omega+Ei−Ef. virtual argument only for labeledomissioncomparator. No recoil/absolute crosssection.",
+    "vacuum_sources(model)":"Exact canonical one-particle creation columns from EMPTY charged sphere, neutral l0,fieldvac. Chargedsource count18/32/50 for lmax2/3/4. Full all-angular/all-field addition amplitude; no N2 reference/removal G supplied in this epoch.",
+    "charged_green(model,omega,eta=1e-5)":"Full additive retardedG_ab(z), z=omega+i eta, about EMPTYN0 reference; source-normalized fulladdition states. This is NOT oldoccupiedreferenceG and contains NOhole/positron sector. Positive creation offsetparticle_gap2 is input.",
+    "rotate(model,axis,angle)":"Actual U=exp(−i angle axis.Jtotal) rotating chargedgeometry+neutral+primitiveSpin+field (when present); normalizeaxis at caller.",
+    "magnetic_sources(model) from rich_spinor_rot_20261014_probe.py":"Returns actual physicalMz and Bzsecondcontact fromA_B=Bcrossr/2 beforeGalerkin, including quantumfield mixedsource. Enables same-rootH(B)=H−B M+.5B²C_BB; no primitive spinBterm."
+  },
+  "serialized_evidence":{
+    "actual1":"Sixbranch completeH/E/V/rotation/spin/parity/current, current/contactsample and fullchargedaddition sourceamplitudes/G; bodyL2/L3 controls plus quantumfieldcut1/2",
+    "actual2":"Actual magnetic derivative/splitting, beforeGalerkin charge/source finitecutoffWard and staticcontact discriminator atbodyL2/L3/L4 andfieldL2cut1/2",
+    "actual3":"Material angularenrichment of quantumfeedback root: L3fieldcut2 dimension1280, L4fieldcut1 dimension800; fullspinreceiver/G/Noether and literal sourceWard/static/magnetic diagnostics",
+    "capsules":"rich_spinor_rot_20261014_actual{1,2,3}_capsule.zip each freezes exactsource, outputs and ownnaturalexitreceipt; capture.py evolved modes, each originalcapture preserved in its capsule"
+  },
+  "consumer_obligations":[
+    "Use SAME modelH/current/contact and fullvirtualstates; cannot join borrowedphoton/matter tensors by matching dimensions",
+    "Finiteangular/fieldGalerkin does not guarantee exactlocalgaugeclosure. Inspect deliveredWard residual; beforeGalerkin covariant source and exactrotations are distinct facts.",
+    "Three isotropic suppliedcavitycoordinates are explicitfieldmotionfeedback, nottwo propagatedtransversephotons orderivedrestoration. NewGaussreceiver requires actualnewlaw/state/current reconstruction.",
+    "No N2/removal/antiparticle or translational/recoil interface supplied here; oldv1 occupiedCAR reference remains separate."]
+}

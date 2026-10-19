@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_run.py", line 93, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_run.py", line 55, in run
+    start=time.time(); model=GaugeTensor()
+                             ^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_model.py", line 63, in __init__
+    term = [(self.register(i,A), i) for i,A in sorted(factors.items()) if not np.array_equal(A,np.eye(A.shape[0]))]
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_model.py", line 77, in register
+    self.sites[i].add_op(name, A, need_JW=False, permute=True)
+TypeError: Site.add_op() got an unexpected keyword argument 'permute'

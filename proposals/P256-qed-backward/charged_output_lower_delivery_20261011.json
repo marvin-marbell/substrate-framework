@@ -1,0 +1,137 @@
+{
+  "kind": "DELIVERED_EXACT_CHARGED_LAMBDA1_LOWER_AND_TWO_CELL_GAP",
+  "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "plan_revision": "bc2b76efb96c6337de1ed0a5c4ef650824f52609a59c5a048f674725c9e38f6f",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "parent_sole_plan_writer": true
+  },
+  "code": {
+    "charged_output_lower_certificate_20261011.py": "0ffdd14b7f968acb0170d9cb221723a558b1d9924a3de0ee57725eeb45e4255b",
+    "charged_output_lower_capsule_20261011.py": "b72e2400aa8e273faeb95523ea57d7ed581ce7e91e48dd406229b7f03b13bd72"
+  },
+  "selected_receipt": {
+    "path": "charged_output_lower_attempt3_20261011_receipt.json",
+    "sha256": "427f5dbcff0fbfbb126c13b7d6c157a0ac6997248af53ce76f00ddc08384f7c2"
+  },
+  "execution": {
+    "command": "/home/administrator/substrate-framework/.venv/bin/python charged_output_lower_capsule_20261011.py --tag charged_output_lower_attempt3_20261011 --floor -5120 --output-budget 320 --support-budget 402",
+    "natural_exit": {
+      "path": "charged_output_lower_attempt3_20261011_natural_exit.json",
+      "sha256": "a7a27fc212a64539a03c561248cd6d7452f592dbfa0f141e890029bb3d847c1b",
+      "returncode": 0,
+      "elapsed_seconds": 38.02190201600024
+    },
+    "preexecution": {
+      "path": "charged_output_lower_attempt3_20261011_preexecution.json",
+      "sha256": "d040351ec90d09923ed6245d05d60367c7450b505f42851961d244bdcb6e5060"
+    },
+    "executed": {
+      "path": "charged_output_lower_attempt3_20261011_executed.json",
+      "sha256": "04fc43375fa1ea1605282d01c735cf1cace5b71b5034ced7ee0e977ff2266d31"
+    },
+    "frozen_archive": {
+      "path": "charged_output_lower_attempt3_20261011_frozen.zip",
+      "sha256": "1b12affd7d24d1896a334fcfcd91ef4a75d508957e1aad88b90e442b8799ab7c"
+    },
+    "source_inputs_and_archive_unchanged": true,
+    "old_executable_certificates_imported_or_executed": false
+  },
+  "results": {
+    "physical_hopping": 1,
+    "operator": "Dtotal+64(Rtotal+u I)^2",
+    "u": ["1/2", "-1/2"],
+    "active": {
+      "space": "Sym^1(C5)_active x Sym^126(C5)_aux x C4_active_spinor",
+      "lambda1_lower_exact": "-5120",
+      "output_rows": 2622,
+      "input_support": 5948,
+      "negative_free_columns": 18,
+      "lower_and_upper_integer_Bareiss_inertia": {"negative": 0, "positive": 18},
+      "exact_matrix": {
+        "path": "charged_output_lower_attempt3_20261011_active_exact_matrix.json",
+        "sha256": "4f8a5a040c651699d6e946872b13e704fe35f5b488b226b0815aed14d14a7d77"
+      },
+      "binary_witness": {
+        "path": "charged_output_lower_attempt3_20261011_active_witness.npz",
+        "sha256": "885797b09bea52ea5e12bc676d87f93660e8ad3f636f36e58688249a86a47fa4"
+      }
+    },
+    "aux": {
+      "space": "Sym^2(C5)_active x Sym^125(C5)_aux x C4_aux_spinor",
+      "lambda1_lower_exact": "-5120",
+      "output_rows": 5187,
+      "input_support": 12662,
+      "negative_free_columns": 18,
+      "lower_and_upper_integer_Bareiss_inertia": {"negative": 0, "positive": 18},
+      "exact_matrix": {
+        "path": "charged_output_lower_attempt3_20261011_aux_exact_matrix.json",
+        "sha256": "5f45b0a0b1cb80e156c7b7e8d06b2115bcd303a766b4af16145137d26c3475b1"
+      },
+      "binary_witness": {
+        "path": "charged_output_lower_attempt3_20261011_aux_witness.npz",
+        "sha256": "9e5e0464fdfca3b68fc0356c623f6a215d6553838a87d03f52c83f614cd80487"
+      }
+    },
+    "E0_upper_exact": "-176071894972193/34359738368",
+    "two_cell_gap_formula": "64+2*(-5120)-2*E0_upper",
+    "two_cell_gap_lower_exact": "1249546155809/17179869184",
+    "two_cell_gap_positive": true,
+    "E0_usage": "Only the upper Rayleigh/ground interval endpoint is subtracted. No neutral gap is used as charged lower. The supplied E0 upper remains under its stated binary64 model assumptions."
+  },
+  "proof": {
+    "joint_operator_binding": "Use exact 102966f3 active/aux m,c0,d and e^2=m^2+d^2. D5=(-2e,2c0,0,-2c0,2e); R5 has L/B=d/(2e), M/B=m/(sqrt2 e), H/B=-d/(2e) for B=1,3 with symmetric partners. Spinor D4=(-e+c0,-e-c0,e+c0,e-c0), R01=R23=m/(2e), R03=-d/(2e), R12=d/(2e). This is the parent joint phase2b3e220e, not an independently chosen wedge phase. All four spinor components and all unprojected Sym occupation states are part of the containing space.",
+    "output_form": "Set A=Rtotal+I/2 and B=Pout A. Hlo=D+64B*B<=D+64A*A=H on the WHOLE containing space. For every retained output row, enumerate all boson density moves, all spinor moves and affine diagonal, and require their complete input image in support. Therefore B vanishes on the support complement; that block remains exact D, whose lower bound exceeds the trial floor.",
+    "support_enumeration": "Free costs are nonnegative. Recursive pruning uses cost lower endpoints, so no exact state with cost<=402 is omitted. Output selection uses upper endpoints<=320. Every excluded state has exact free cost>402. Add the outward lower endpoint of the full free baseline to pay the entire support complement.",
+    "exact_Schur": "On support write D-floor=diag(DL,DQ), DL<0 and DQ>0. Let K=I+64 BQ DQ^-1 BQ*. The exact finite Schur is DL+64 BL* K^-1 BL. For any fixed dyadic Y, G=BL*Y+Y*BL-Y*KY obeys G<=BL*K^-1 BL, with residual identity difference=(BL-KY)*K^-1(BL-KY). K>=I bounds that difference by the residual Gram. Binary sparse LU only supplies Y; no binary eigenvalue/Cholesky sign is accepted as a lower proof.",
+    "outward_arithmetic": "All profiles, square roots, ratios, bosonic occupation square roots, affine diagonal, DQ inverses, witness products, Schur entries and residual products have integer endpoints in units2^-100. Rational conversion and division round outward; sqrt uses integer isqrt with ceiling for the upper endpoint. The symmetric midpoint integer matrix minus its maximum row-sum interval radius times I is a rigorous Loewner lower enclosure. Integer fraction-free Bareiss proves it has zero negative pivots, all18 positive, in BOTH branches. Hence lambda1(H)>=-5120.",
+    "half_offset_symmetry": "S5=diag(1,-1,1,-1,1) and S4=diag(1,-1,1,-1) commute with their joint D and send their R to -R. Sym^n S5 on each boson factor times S4 on the spinor sends WHOLE Rtotal to -Rtotal without changing D. Thus u=+1/2 and -1/2 are exactly isospectral. Parent control also verifies full number3 CAR/Hodge equivalence to number1; this does not drop a spinor component.",
+    "two_cell_application": "Under the shared affine Gauss chart, each charged dimer contributes one of these containing operators. A unit external edge costs64 ONCE for the pair. Any active/aux combination therefore has energy above2E0 by at least64+L_A+L_B-2E0_upper, here the stated exact positive rational. This is a selected-local charged first-shell statement, not overlapping-root/N-uniform control."
+  },
+  "retained_threshold_failures": [
+    {
+      "receipt": "charged_output_lower_attempt1_20261011_receipt.json",
+      "sha256": "ab65a91062b1636694efa5151787137fd449df6068a727454bdaaa8eef56211e",
+      "floor": "-5110",
+      "output_budget": 240,
+      "support_budget": 322,
+      "both_lower_and_upper_negative_inertia": [2,2],
+      "response": "Increase actual output support from240 to320 and input support from322 to402; retain unchanged floor for a discriminating next calculation."
+    },
+    {
+      "receipt": "charged_output_lower_attempt2_20261011_receipt.json",
+      "sha256": "b567570b355c2a946e8eaca9e85b7e53e78cc5557eea5260f834304dd1ab8d29",
+      "floor": "-5110",
+      "output_budget": 320,
+      "support_budget": 402,
+      "both_lower_and_upper_negative_inertia": [1,1],
+      "response": "Retain larger material support and revise floor to-5120, which then yields zero negative directions. Neither failed lower form proves a negative claim about the full operator, and neither is called a charged gap."
+    }
+  ],
+  "adverse_control": {
+    "actual_small_joint_spinor": {"e": 5, "m": 3, "d": 4, "c0": -1},
+    "input_PHP_substitution_rejected": true,
+    "retained_row0_missing_input_columns": [1,3],
+    "correct_H00": "26",
+    "input_PHP_H00": "10",
+    "omitted_affine_u_rejected": true,
+    "omitted_u_difference_exact": "64R+16I",
+    "exact_positive_output_form_order_checked": true
+  },
+  "language_intelligence": {
+    "LSP": "Actual user-local pyright-langserver --stdio with selected science root; documentSymbol and definition on prior source inertia/sqrt; documentSymbol on new source185symbols; new-source publishDiagnostics empty. xd://lsp is not mounted, so exercised JSON-RPC directly. Parent final selected checker is still required.",
+    "AST": "Positive ast-grep Python def inertia on reviewed source and def bareiss on new source.",
+    "checks_not_run": ["build", "lint", "tests", "formatters", "old solvers", "old checkers"]
+  },
+  "nonclaims": [
+    "No neutral selected gap used for charged lower",
+    "No Ritz eigenvalue presented as a lower bound",
+    "No negative-inertia lambda2 presented as charged gap",
+    "No gap-tautology phase probe",
+    "No neutral or fullPhi/lattice ground identification",
+    "No bulk stiffness, phase, pole, IRatom, commoncone or originalSOURCE adoption",
+    "No N-uniform overlapping-root/coupling control"
+  ]
+}

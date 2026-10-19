@@ -1,0 +1,86 @@
+{
+  "kind": "PRESERVED_ACTUAL_RESOURCE_FAILURE_AND_SAME_LAW_CHECKPOINT_EVIDENCE_NOT_PHYSICS_NO_GO",
+  "failures": {
+    "science1": {
+      "returncode": 1,
+      "natural_exit": true,
+      "stage": "Sparse Ward commutator subtraction during native diagnostic loop",
+      "sector": "Not printed in traceback; no sector label inferred",
+      "reported_allocation": "566MiB complex128 temporary,37105536 elements",
+      "address_space_limit_MiB": 3800,
+      "peak_RSS_KiB": null,
+      "RSS_status": "Not recorded by the then-current wrapper before the unhandled allocation exception; completed proc://bg_197 lookup was unavailable. No failure rerun made to reconstruct RSS.",
+      "source_input_unchanged": true,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_calculate.py\", line 163, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_calculate.py\", line 78, in main\n    ward_one=1j*(h[name].one@charge0.one-charge0.one@h[name].one)+sum(j.one for j in routes)\n                 ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~\n  File \"/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_base.py\", line 856, in __sub__\n    return self._sub_sparse(other)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_compressed.py\", line 261, in _sub_sparse\n    return self._binopt(other, '_minus_')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_compressed.py\", line 1221, in _binopt\n    data = np.empty(maxnnz, dtype=upcast(self.dtype, other.dtype))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nnumpy._core._exceptions._ArrayMemoryError: Unable to allocate 566. MiB for an array with shape (37105536,) and data type complex128\n",
+      "snapshots": {
+        "rich_spatial_colour_charge_20261015_science1_before.json": {
+          "bytes": 2337,
+          "sha256": "893890c0c7b8fb19e7efa05c80efdf559e42bb5ae976680ceb13191d04730cb4"
+        },
+        "rich_spatial_colour_charge_20261015_science1_input.json": {
+          "bytes": 70,
+          "sha256": "b62d3cab48eb30969c91ba837d5829b5394468ba8e8954cf3aa3110b8e4acc70"
+        },
+        "rich_spatial_colour_charge_20261015_science1_stdout.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "rich_spatial_colour_charge_20261015_science1_stderr.txt": {
+          "bytes": 1365,
+          "sha256": "5a5a95187f4156ffa7d0c69b004dcf57d4e8b86c15ec6ee7505787b79996dc01"
+        },
+        "rich_spatial_colour_charge_20261015_science1_raw_source_states.npz": {
+          "bytes": 32492992,
+          "sha256": "ca1281115a886485ac8592ce099ccaa72a84b6e626384e41c4b66f40263cf922"
+        }
+      },
+      "capsule": "rich_spatial_colour_charge_20261015_science1_capsule.zip"
+    },
+    "science2": {
+      "returncode": 1,
+      "natural_exit": true,
+      "stage": "Direct anti-source pole observable magnetic-moment derivative assembly",
+      "sector": "Not printed in traceback; no sector label inferred",
+      "reported_allocation": "469MiB complex128 temporary,30758088 elements",
+      "address_space_limit_MiB": 3800,
+      "peak_RSS_KiB": null,
+      "RSS_status": "Not recorded by the then-current wrapper before the unhandled allocation exception; completed proc://bg_197 lookup was unavailable. No failure rerun made to reconstruct RSS.",
+      "source_input_unchanged": true,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_calculate.py\", line 210, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_calculate.py\", line 153, in main\n    info['observables']=state_observables(data,anti,chosen,p)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_calculate.py\", line 74, in state_observables\n    out['mu']=[mean(state,law(op,data['rotor'],data['scalar'],p,data['geometry'],derivative=(3+a,))) for a in range(3)]\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_root_20261015_model.py\", line 354, in law\n    one+=1j*p['vector_velocity']*scale*(forward-forward.conj().T)\n  File \"/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_base.py\", line 837, in __add__\n    return self._add_sparse(other)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_compressed.py\", line 258, in _add_sparse\n    return self._binopt(other, '_plus_')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_compressed.py\", line 1221, in _binopt\n    data = np.empty(maxnnz, dtype=upcast(self.dtype, other.dtype))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nnumpy._core._exceptions._ArrayMemoryError: Unable to allocate 469. MiB for an array with shape (30758088,) and data type complex128\n",
+      "snapshots": {
+        "rich_spatial_colour_charge_20261015_science2_stderr.txt": {
+          "bytes": 1899,
+          "sha256": "d4a2968db56ca49545f8de0eaaa1e9c4f99b2f5060294d72a335ea705c66b0a4"
+        },
+        "rich_spatial_colour_charge_20261015_science2_stdout.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "rich_spatial_colour_charge_20261015_science2_raw_source_states.npz": {
+          "bytes": 32492992,
+          "sha256": "ca1281115a886485ac8592ce099ccaa72a84b6e626384e41c4b66f40263cf922"
+        },
+        "rich_spatial_colour_charge_20261015_science2_states.npz": {
+          "bytes": 27371845,
+          "sha256": "e9b9a8a2b1e76119c883e15770e28bed75818adc1649a2acf872640f7dbb5069"
+        },
+        "rich_spatial_colour_charge_20261015_science2_input.json": {
+          "bytes": 70,
+          "sha256": "b62d3cab48eb30969c91ba837d5829b5394468ba8e8954cf3aa3110b8e4acc70"
+        },
+        "rich_spatial_colour_charge_20261015_science2_before.json": {
+          "bytes": 2337,
+          "sha256": "a209328ac353cca44eeca121f8e522fa07817f5f87193f737dfe4e3016a87222"
+        }
+      },
+      "capsule": "rich_spatial_colour_charge_20261015_science2_capsule.zip"
+    }
+  },
+  "valid_source_checkpoint": {
+    "prefix": "rich_spatial_colour_charge_20261015_science2",
+    "states_sha256": "e9b9a8a2b1e76119c883e15770e28bed75818adc1649a2acf872640f7dbb5069",
+    "scope": "Positive charged eigen/source states saved BEFORE later mu resource failure. Only SAME immutable construct1 H0/couplings/native coordinates may continue them; not old/EM/frame-law state fallback."
+  },
+  "recovery": "Compact full body-R-phi tensor application with original full phase/mechanical products and unchanged source/couplings/cuts. Source/current/H0 action controls plus postmetric material Ward/PVM/actual response remain required; raw preselection algebra alone is insufficient. No cap increase, rank/seed/coupling sweep, spin fit, current commutator patch, H averaging or state fallback.",
+  "limits": "Historical failure RSS absent, explicitly unknown rather than inferred from AS cap/allocation request or borrowed from another process. Independent reviewer resource figures are not substituted for author measurements."
+}

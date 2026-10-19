@@ -1,0 +1,41 @@
+{
+  "kind":"DERIVED_NUMERICAL_OPERATOR_BASIS_AND_TRAJECTORY_ESTIMATES_NOT_INTERVAL_CERTIFICATES",
+  "owning_result":"rich_spatial_orthogonal_20261015_actual1_result.json",
+  "owning_result_sha256":"25ee5063f30883a0690a815a5f47cee98429ab46aa702452eba54243f97ce0de",
+  "direct_whole_operator":{
+    "neutral_H_Frobenius":2044.7727882879803,"neutral_skew_Frobenius":2.6003885515725313e-13,
+    "charged_H_Frobenius":15418.754018311874,"charged_skew_Frobenius":3.1019523600642086e-12,
+    "hole_H_Frobenius":15418.754018311874,"hole_skew_Frobenius":3.1827300366668556e-12,
+    "interpretation":"Measured direct Kronecker Frobenius norms; actual adjoint used, no H averaging. Operator skew norm is bounded by its Frobenius norm. This is computed floating-point evidence, not an interval-certified error bound."
+  },
+  "trajectory_norm_squared_drift_estimate":{
+    "formula":"For U=exp(-iHt), |norm(Upsi)^2/norm(psi)^2-1| <= exp(t ||H-Hdag||op)-1 <= exp(t ||H-Hdag||F)-1.",
+    "t":1.5,"charged_estimate":4.652928540107138e-12,
+    "observed_maximum_selected_state_norm_error":4.9960036108132044e-14,
+    "scope":"Computed-skew a-posteriori whole-state-space estimate, excluding separate floating-point expm error; not a bound on omitted physical many-body action."
+  },
+  "physical_orthogonality":{
+    "max_local_isometry_Frobenius_defect":2.7762414595258767e-14,
+    "max_TT_core_norm_Frobenius_defect":4.6282160350932386e-14,
+    "conservative_tensor_product_Gram_Frobenius_estimate":3.2265028031834482e-12,
+    "formula":"delta_core + sqrt(162)*(1+delta_core)*(product_9(1+delta_local)-1), using measured Frobenius defects as operator-norm upper estimates. Local-isometry error is NOT ignored when quoting core orthogonality."
+  },
+  "span_departure_estimates":{
+    "max_local_column_reconstruction_Frobenius_residual":8.062009826202413e-14,
+    "neutral_TT_discarded_singular_sum":6.205779001933162e-15,
+    "charged_TT_discarded_singular_sum_max":1.5389137927630164e-14,
+    "neutral_column_reconstruction_triangle_estimate":7.317866633601504e-13,
+    "charged_column_reconstruction_triangle_estimate":1.6758340662296545e-12,
+    "neutral_subspace_sine_estimate":2.224385244543228e-08,
+    "charged_subspace_sine_estimate":5.7057831272727665e-08,
+    "scope":"Conservative telescoping/Wedin-style estimates for normalized physical Slater columns: neutral9*delta_local; charged(8sqrt6+1)*delta_local due repeated neutral labels, plus TT discard; divide by retained smallest physical state singular minus column residual. These are not interval-certified; tiny floating Slater normalization deviations are not separately measured. Actual selected-state cache departures1.44e-10/1.54e-10 are reported separately, NOT substituted for whole-span bounds.",
+    "all_positive_global_directions_retained":"27 neutral and162 per charged block; smallest retained physical state singulars >=2.937e-5, far above numerical discard scale. No two-small-positive Gram-direction drop."
+  },
+  "receivers_and_sources":{
+    "canonical_packet_CAR_operator_defect":1.2614442651595913e-10,
+    "spin_POVM_normalization_operator_defect_max":4.072604748030891e-10,
+    "spin_POVM_effect_Hermiticity_defect_max":8.888312167022616e-11,
+    "meaning":"One-sided physical TT/acted-CP source/receiver maps retain explicit~1e-10 numerical limits; no clipping, polar replacement or probability normalization repair. They are distinct from direct-H roundoff~1e-16 relative."
+  },
+  "metric_definitions":"Spin L1=sum absolute probability differences; TV=L1/2. Mean-Sz difference and momentum/density L2 norms are not TV."
+}

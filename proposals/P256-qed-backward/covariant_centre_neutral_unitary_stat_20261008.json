@@ -1,0 +1,1097 @@
+{
+  "source_bytes": "import hashlib,itertools,json,math,os,sys,tempfile,time\nfrom pathlib import Path\nfor key in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[key]='1'\nimport numpy as np\nfrom scipy.linalg import expm,logm\nstarted=time.monotonic();source=Path(__file__).read_bytes();input_path=Path(sys.argv[1]);raw=input_path.read_bytes();cap=json.loads(raw)\nexpected='bd4d5e1d0e9fcfadef72cc9dba2cc4f7e6efacc6a577ee331fcd5b82574e5e49';assert cap['capsule']['source_sha256']==expected\nwith tempfile.TemporaryDirectory(prefix='centre-unitary-stat-') as directory:\n    replay=Path(directory)\n    for name,text in cap['capsule']['source_bytes_at_IMPORT'].items():\n        assert Path(name).name==name and hashlib.sha256(text.encode()).hexdigest()==cap['capsule']['source_sha256_at_IMPORT'][name]\n        (replay/name).write_text(text)\n    sys.path.insert(0,str(replay))\n    import covariant_root_transfer as root\n    from covariant_induced_photon import Parameters,phi_frame\n    edges=((0,1),(0,2),(0,3),(0,4),(4,5),(4,6),(4,7),(1,5));model=root.BosonicEdgeModel(8,edges)\n    masks=sum((np.rint(np.diag(model.n(i)).real).astype(int)*(1<<i) for i in range(8)),np.zeros(model.dimension,dtype=int))\n    Xstars=root.tensor_pauli(['X' if edge in ((0,1),(0,2),(0,3),(4,5),(4,6),(4,7)) else 'I' for edge in model.edges])\n    adjacency={i:[] for i in range(8)}\n    for a,b in edges[:-1]:adjacency[a].append(b);adjacency[b].append(a)\n    def path(start,end):\n        queue=[(start,)];seen={start}\n        while queue:\n            p=queue.pop(0)\n            if p[-1]==end:return p\n            for other in adjacency[p[-1]]:\n                if other not in seen:seen.add(other);queue.append((*p,other))\n        raise ArithmeticError('Disconnected native primitive graph')\n    E={}\n    for i,j in itertools.product(range(8),repeat=2):E[i,j]=model.n(i) if i==j else model.bilinear(i,j,path=path(j,i))\n    graph={m:[] for m in range(256)};pattern_error=0.\n    for i,j in itertools.product(range(8),repeat=2):\n        actual=Xstars@E[i,j]@Xstars # UNITARY: no coefficient conjugation\n        target=(model.identity if i==j else 0)-E[j,i]\n        pattern_error=max(pattern_error,float(np.linalg.norm((abs(actual)>1e-10).astype(int)-(abs(target)>1e-10).astype(int))))\n        for row,col in np.argwhere(abs(actual)>1e-10):graph[int(masks[col])].append((int(masks[row]),target[row,col]/actual[row,col]))\n    assert pattern_error==0\n    phase={};consistency=0.\n    for seed in range(256):\n        if seed in phase:continue\n        phase[seed]=1.+0j;queue=[seed]\n        while queue:\n            old=queue.pop()\n            for new,ratio in graph[old]:\n                desired=ratio*phase[old]\n                if new in phase:consistency=max(consistency,abs(phase[new]-desired))\n                else:phase[new]=desired;queue.append(new)\n    assert consistency<1e-12\n    PH=np.diag([phase[int(m)] for m in masks])@Xstars\n    all64=max(float(np.linalg.norm(PH@E[i,j]@PH.conj().T-((model.identity if i==j else 0)-E[j,i]))) for i,j in E)\n    direct=model.bilinear(1,5,path=(5,1));reverse=model.bilinear(5,1,path=(1,5))\n    direct_error=float(np.linalg.norm(PH@direct@PH.conj().T+reverse))\n    gamma,_=phi_frame(Parameters());_,basis=np.linalg.eigh(gamma[0]);frame=np.column_stack((basis[:,2:],basis[:,:2]));gb=np.array([frame.conj().T@g@frame for g in gamma])\n    constraints=np.vstack([np.kron(g.conj().T,np.eye(4))-np.kron(np.eye(4),g) for g in gb]);_,_,vh=np.linalg.svd(constraints,full_matrices=False)\n    UT=vh[-1].conj().reshape(4,4,order='F');UT*=2/np.linalg.norm(UT);UT*=np.exp(-.25j*np.angle(np.linalg.det(UT)))\n    UT_error=max(float(np.linalg.norm(UT@g.conj()@UT.conj().T-g)) for g in gb)\n    assert UT_error<1e-12 and np.linalg.norm(UT@UT.conj()+np.eye(4))<1e-12\n    R=-1j*gb[1]@gb[2]@gb[3];CH=R@UT\n    generator=root.native_lift(model,logm(CH))+root.native_lift(model,logm(CH),4)\n    GCH=expm(generator);C=GCH@PH\n    P0=-model.A(0,1)@model.path_A((2,0,3))\n    P1=-model.A(4,5)@model.path_A((6,4,7))\n    PHpauli=P0@P1\n    pauli_all64=max(float(np.linalg.norm(PHpauli@E[i,j]@PHpauli.conj().T-((model.identity if i==j else 0)-E[j,i]))) for i,j in E)\n    pauli_direct=float(np.linalg.norm(PHpauli@direct@PHpauli.conj().T+reverse))\n    Cpauli=GCH@PHpauli\n    assert pauli_all64<1e-11 and pauli_direct<1e-11 and np.linalg.norm(PHpauli@PHpauli.conj().T-model.identity)<1e-11\n    external=[]\n    for index,edge in enumerate(model.edges):\n        if edge not in ((0,4),(1,5)):continue\n        word=['I']*len(model.edges);word[index]='Z';Z=root.tensor_pauli(word)\n        external.append(dict(edge=edge,actual_UNITARY_C_Z_Cdag_error=float(np.linalg.norm(C@Z@C.conj().T-Z)),\n            actual_Pauli_QUARTIC_UNITARY_C_Z_Cdag_error=float(np.linalg.norm(Cpauli@Z@Cpauli.conj().T-Z))))\n    cycles=[]\n    for vertices,S in zip(model.cycles,model.stabilizers):\n        cycles.append(dict(vertices=vertices,length=len(vertices),S_imaginary_matrix_norm=float(np.linalg.norm(S.imag)),\n            K_S_K_minus_S_error=float(np.linalg.norm(S.conj()-S)),\n            actual_UNITARY_C_S_Cdag_error=float(np.linalg.norm(C@S@C.conj().T-S)),\n            PH_unitary_S_error=float(np.linalg.norm(PH@S@PH.conj().T-S)),\n            Gamma_RUT_S_error=float(np.linalg.norm(GCH@S@GCH.conj().T-S))))\n        cycles[-1]['actual_Pauli_QUARTIC_UNITARY_C_S_Cdag_error']=float(np.linalg.norm(Cpauli@S@Cpauli.conj().T-S))\n    odd=root.BosonicEdgeModel(3,((0,1),(0,2),(1,2)));oddS=odd.stabilizers[0]\n    odd_control=dict(length=len(odd.cycles[0]),K_S_K_minus_S_error=float(np.linalg.norm(oddS.conj()-oddS)),K_S_K_plus_S_error=float(np.linalg.norm(oddS.conj()+oddS)))\n    odd4=root.BosonicEdgeModel(4,((0,1),(0,2),(0,3),(1,2)))\n    odd4S=odd4.stabilizers[0];odd4PH=-odd4.A(0,1)@odd4.path_A((2,0,3))\n    odd4C=expm(root.native_lift(odd4,logm(CH)))@odd4PH\n    odd4_control=dict(length=len(odd4.cycles[0]),K_S_K_minus_S_error=float(np.linalg.norm(odd4S.conj()-odd4S)),\n        actual_Pauli_QUARTIC_UNITARY_C_S_Cdag_error=float(np.linalg.norm(odd4C@odd4S@odd4C.conj().T-odd4S)))\n    assert odd4_control['K_S_K_minus_S_error']>1 and odd4_control['actual_Pauli_QUARTIC_UNITARY_C_S_Cdag_error']<1e-11\n    assert all64<1e-11 and direct_error<1e-11 and max(r['actual_UNITARY_C_Z_Cdag_error'] for r in external)<1e-11\n    assert max(r['actual_UNITARY_C_S_Cdag_error'] for r in cycles)<1e-11 and all(r['K_S_K_minus_S_error']==0 for r in cycles)\n    assert max(r['actual_Pauli_QUARTIC_UNITARY_C_S_Cdag_error'] for r in cycles)<1e-11\n    assert max(r['actual_Pauli_QUARTIC_UNITARY_C_Z_Cdag_error'] for r in external)<1e-11\n    assert odd_control['K_S_K_minus_S_error']>1 and odd_control['K_S_K_plus_S_error']==0\n    result=dict(source_bytes=source.decode(),source_sha256=hashlib.sha256(source).hexdigest(),\n        input=dict(path=str(input_path),sha256=hashlib.sha256(raw).hexdigest(),frozen_root_sha256=expected),\n        runtime=dict(executable=sys.executable,python=sys.version,numpy=np.__version__),\n        graph='Actual8-edge/256dim primitive graph with TWO4-modeBODYfibres; no independently seeded local PH product; all64 primitive global phase constraints and direct physical chord used.',\n        actual_GLOBAL_UNITARY_PH_all64_matrixunit_error=all64,actual_UNITARY_PH_direct_spatial_chord_error=direct_error,\n        UT_gamma_intertwiner_error=UT_error,all_physical_spatial_Dstat_Z_controls=external,\n        actual_UNITARY_statistical_cycle_controls=cycles,actual_odd_cycle_reality_negative_control=odd_control,\n        explicit_Pauli_QUARTIC_PH_all64_error=pauli_all64,explicit_Pauli_QUARTIC_PH_direct_chord_error=pauli_direct,\n        explicit_Pauli_QUARTIC_PH_formula='P_site=-A(anchor,1) path_A((2,anchor,3)), with corresponding onsite labels; product over all FOUR-mode BODY fibres. Actual even Majorana quartic, no occupation isometry or local-sector phase seeding.',\n        actual_odd4_cycle_UNITARY_C_control=odd4_control,\n        universal_UNITARY_statistical_proof='S_C is central in the primitive A_e/B_i even algebra: for any A_f the number of anticommuting cycle edges is even, and for B_v the closed cycle has exactly two incident edges. Thus every A_e, B_i and every path_A commutes S_C. P_site is an explicit product of A/path_A and Gamma(RUT) is generated by onsite even matrix units made from A/B. UNITARY C therefore commutes EVERY S_C, for EVEN OR ODD cycles. Coordinate inversion acts only on continuous fields. No K-reality or bipartite hypothesis is required for this explicit Pauli-quartic UNITARY route.',\n        unitary_PH_phase_table={str(k):dict(real=v.real,imag=v.imag) for k,v in phase.items()},\n        exact_even_cycle_reality_proof='primitive_pauli_words assigns one X to its own edge and only Z to other incident edges, so each A_e matrix is REAL. cycle_operator is i^ell product A_e, therefore S is REAL exactly for even ell. Every cycle of a bipartite graph is even; alternatively a complete even-length cycle-space generating set proves even parity for every cycle. This is a geometry proof requirement, not a consequence of real Z2 toron eigenvalues.',\n        ideal_Dstat_support='The UNITARY PH phase is occupation-diagonal times X on onsite T-joins; Gamma(RUT) is built from actual onsite even matrix units. External/spatial edges enter only through Z factors, so ALL physical spatial Z_e commute. Field coordinate inversion acts on continuous Haar coordinates, not these Pauli edges.',\n        scope='DIRECT UNITARY C S Cdag and C Z Cdag executed with global phase solve AND explicit physical Pauli quartic. Native even cycle and an actual ODD4mode cycle both preserve S, although odd-cycle K reality fails. Universal central-algebra argument establishes all-cycle UNITARY preservation. No fullPhi/outside or SAME source CP certificate.',\n        elapsed_seconds=time.monotonic()-started)\n    Path(sys.argv[2]).write_text(json.dumps(result,indent=2)+'\\n')\n    print(json.dumps(dict(output=sys.argv[2],source_sha256=result['source_sha256'],global_UNITARY_PH_error=all64,\n        direct_spatial_error=direct_error,UNITARY_S_error=max(r['actual_UNITARY_C_S_Cdag_error'] for r in cycles),\n        UNITARY_spatial_Z_error=max(r['actual_UNITARY_C_Z_Cdag_error'] for r in external),S_reality_error=max(r['K_S_K_minus_S_error'] for r in cycles),\n        odd_cycle_K_reality_error=odd_control['K_S_K_minus_S_error'],pauli_quartic_all64_error=pauli_all64,\n        odd4_UNITARY_S_error=odd4_control['actual_Pauli_QUARTIC_UNITARY_C_S_Cdag_error'],elapsed_seconds=result['elapsed_seconds'])))\n    print('Natural exit: DIRECT unitary global PH/RUT statistical stabilizer and Dstat conjugation')\n",
+  "source_sha256": "ae5390c2b26c3ee7f8cd0e62ac413b04e3e5fae27fdceb66efa4a9618881523e",
+  "input": {
+    "path": "proposals/P256-qed-backward/covariant_root_transfer_capsule_bd4d5e1d.json",
+    "sha256": "f89f85c6f63f52d011d059fdc4476d416b550fafe360066d4b0615c143688b9d",
+    "frozen_root_sha256": "bd4d5e1d0e9fcfadef72cc9dba2cc4f7e6efacc6a577ee331fcd5b82574e5e49"
+  },
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3"
+  },
+  "graph": "Actual8-edge/256dim primitive graph with TWO4-modeBODYfibres; no independently seeded local PH product; all64 primitive global phase constraints and direct physical chord used.",
+  "actual_GLOBAL_UNITARY_PH_all64_matrixunit_error": 0.0,
+  "actual_UNITARY_PH_direct_spatial_chord_error": 0.0,
+  "UT_gamma_intertwiner_error": 1.224725800054863e-15,
+  "all_physical_spatial_Dstat_Z_controls": [
+    {
+      "edge": [
+        0,
+        4
+      ],
+      "actual_UNITARY_C_Z_Cdag_error": 6.0346914827011e-14,
+      "actual_Pauli_QUARTIC_UNITARY_C_Z_Cdag_error": 6.0346914827011e-14
+    },
+    {
+      "edge": [
+        1,
+        5
+      ],
+      "actual_UNITARY_C_Z_Cdag_error": 6.0346914827011e-14,
+      "actual_Pauli_QUARTIC_UNITARY_C_Z_Cdag_error": 6.0346914827011e-14
+    }
+  ],
+  "actual_UNITARY_statistical_cycle_controls": [
+    {
+      "vertices": [
+        4,
+        5,
+        1,
+        0
+      ],
+      "length": 4,
+      "S_imaginary_matrix_norm": 0.0,
+      "K_S_K_minus_S_error": 0.0,
+      "actual_UNITARY_C_S_Cdag_error": 6.034671057510286e-14,
+      "PH_unitary_S_error": 0.0,
+      "Gamma_RUT_S_error": 6.034671057510286e-14,
+      "actual_Pauli_QUARTIC_UNITARY_C_S_Cdag_error": 6.034671057510286e-14
+    }
+  ],
+  "actual_odd_cycle_reality_negative_control": {
+    "length": 3,
+    "K_S_K_minus_S_error": 5.656854249492381,
+    "K_S_K_plus_S_error": 0.0
+  },
+  "explicit_Pauli_QUARTIC_PH_all64_error": 0.0,
+  "explicit_Pauli_QUARTIC_PH_direct_chord_error": 0.0,
+  "explicit_Pauli_QUARTIC_PH_formula": "P_site=-A(anchor,1) path_A((2,anchor,3)), with corresponding onsite labels; product over all FOUR-mode BODY fibres. Actual even Majorana quartic, no occupation isometry or local-sector phase seeding.",
+  "actual_odd4_cycle_UNITARY_C_control": {
+    "length": 3,
+    "K_S_K_minus_S_error": 8.0,
+    "actual_Pauli_QUARTIC_UNITARY_C_S_Cdag_error": 8.046297726920612e-15
+  },
+  "universal_UNITARY_statistical_proof": "S_C is central in the primitive A_e/B_i even algebra: for any A_f the number of anticommuting cycle edges is even, and for B_v the closed cycle has exactly two incident edges. Thus every A_e, B_i and every path_A commutes S_C. P_site is an explicit product of A/path_A and Gamma(RUT) is generated by onsite even matrix units made from A/B. UNITARY C therefore commutes EVERY S_C, for EVEN OR ODD cycles. Coordinate inversion acts only on continuous fields. No K-reality or bipartite hypothesis is required for this explicit Pauli-quartic UNITARY route.",
+  "unitary_PH_phase_table": {
+    "0": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "1": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "2": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "3": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "6": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "10": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "18": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "34": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "66": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "130": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "5": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "9": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "17": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "33": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "65": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "129": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "132": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "136": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "144": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "160": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "192": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "68": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "72": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "80": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "96": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "36": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "40": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "48": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "20": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "24": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "12": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "4": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "7": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "8": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "11": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "13": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "14": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "15": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "30": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "46": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "78": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "142": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "29": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "45": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "77": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "141": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "27": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "43": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "75": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "139": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "23": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "39": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "71": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "135": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "150": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "166": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "198": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "149": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "165": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "197": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "147": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "163": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "195": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "202": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "210": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "226": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "201": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "209": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "225": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "83": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "99": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "102": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "106": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "114": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "101": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "105": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "113": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "51": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "54": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "58": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "178": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "53": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "57": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "177": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "180": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "184": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "240": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "169": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "153": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "154": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "156": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "216": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "89": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "90": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "92": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "120": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "85": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "86": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "116": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "212": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "204": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "228": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "232": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "172": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "108": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "60": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "170": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "16": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "19": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "21": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "22": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "25": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "26": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "28": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "31": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "32": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "35": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "37": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "38": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "41": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "42": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "44": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "47": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "49": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "50": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "52": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "55": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "56": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "59": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "61": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "62": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "63": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "126": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "190": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "125": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "189": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "123": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "187": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "119": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "183": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "111": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "175": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "95": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "159": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "222": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "221": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "219": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "215": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "207": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "238": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "237": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "235": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "231": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "246": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "245": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "243": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "250": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "249": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "252": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "64": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "67": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "69": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "70": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "73": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "74": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "76": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "79": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "81": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "82": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "84": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "87": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "88": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "91": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "93": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "94": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "97": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "98": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "100": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "103": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "104": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "107": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "109": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "110": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "112": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "115": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "117": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "118": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "121": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "122": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "124": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "127": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "128": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "131": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "133": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "134": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "137": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "138": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "140": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "143": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "145": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "146": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "148": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "151": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "152": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "155": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "157": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "158": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "161": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "162": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "164": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "167": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "168": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "171": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "173": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "174": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "176": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "179": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "181": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "182": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "185": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "186": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "188": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "191": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "193": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "194": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "196": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "199": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "200": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "203": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "205": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "206": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "208": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "211": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "213": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "214": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "217": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "218": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "220": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "223": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "224": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "227": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "229": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "230": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "233": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "234": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "236": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "239": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "241": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "242": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "244": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "247": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "248": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "251": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "253": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "254": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "255": {
+      "real": 1.0,
+      "imag": 0.0
+    }
+  },
+  "exact_even_cycle_reality_proof": "primitive_pauli_words assigns one X to its own edge and only Z to other incident edges, so each A_e matrix is REAL. cycle_operator is i^ell product A_e, therefore S is REAL exactly for even ell. Every cycle of a bipartite graph is even; alternatively a complete even-length cycle-space generating set proves even parity for every cycle. This is a geometry proof requirement, not a consequence of real Z2 toron eigenvalues.",
+  "ideal_Dstat_support": "The UNITARY PH phase is occupation-diagonal times X on onsite T-joins; Gamma(RUT) is built from actual onsite even matrix units. External/spatial edges enter only through Z factors, so ALL physical spatial Z_e commute. Field coordinate inversion acts on continuous Haar coordinates, not these Pauli edges.",
+  "scope": "DIRECT UNITARY C S Cdag and C Z Cdag executed with global phase solve AND explicit physical Pauli quartic. Native even cycle and an actual ODD4mode cycle both preserve S, although odd-cycle K reality fails. Universal central-algebra argument establishes all-cycle UNITARY preservation. No fullPhi/outside or SAME source CP certificate.",
+  "elapsed_seconds": 4.955320248147473
+}

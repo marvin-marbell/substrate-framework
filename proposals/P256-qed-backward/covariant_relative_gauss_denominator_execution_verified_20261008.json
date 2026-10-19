@@ -1,0 +1,876 @@
+{
+  "plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "governing_revision": "b9e13b2491321aa804f7e52cf4ba3cb12c0a224717cb07b23e487afc0768463b",
+  "artifact_sha256": {
+    "covariant_relative_ring_boundary.py": "a32c71d4583487453758f369f555fd49e0926ef74e8464317c3cbfdc17dbdc45",
+    "covariant_relative_gauss_denominator.py": "611884870d36a2fdebfcfcf2dc5768712372a5a344092693178b2016cdc8bcf7",
+    "covariant_relative_ring_boundary_verified_20261008.json": "5d4e967594651698cd18596450da26ea007bc976850d5f883a9ffd6f4eef74c7",
+    "covariant_relative_ring_boundary_exact_stable_20261008.json": "7b33e76e5827f32d2db02fc551ebe220e40614d49a62e22c01dce774b940eac5",
+    "covariant_relative_ring_boundary_even_sobol_20261008.json": "e7f901e5d4ad9adabc300f975502e810b28f43dad18b93f06a7b55c08ac42582",
+    "covariant_relative_gauss_denominator_verified_20261008.json": "c44694d005d6579faae4ae92315e47afe2b2cbf6968dcbbd5d6b3a75b2c0a7a3",
+    "covariant_relative_gauss_conditional_fourier_budget_20261008.json": "2b9ce204ffa174c9401dca19a28832df4277bab1a6f54c4a0b8d45ba2c6b1c9d"
+  },
+  "frozen_prerequisites": {
+    "covariant_prepared_gauss_state": "2a0ecfb2341fceb7866d5062cf33d1da71b2fafa4b148829d21d14f0650fe307",
+    "covariant_root_transfer": "6911f0283dc0f84f4cc05202deb67dcd3266d5c64ca1a05e149f1567451e0f9c",
+    "covariant_canonical_gauss_boundary_kernel": "741fbc1f196061cb7f0e2c479770e992304ac2de90492f002ef4cbd931315d50"
+  },
+  "scoped_science": [
+    {
+      "command": "/home/administrator/substrate-framework/.venv/bin/python covariant_relative_ring_boundary.py --rings 2 --shifts 16 --output covariant_relative_ring_boundary_verified_20261008.json",
+      "actual_exit_code": 0,
+      "scientific_seconds": 4.447760004084557,
+      "wall_seconds": 16.33
+    },
+    {
+      "command": "/home/administrator/substrate-framework/.venv/bin/python covariant_relative_gauss_denominator.py --rings 6 8 10 --shifts 8 --points-power 6 --seeds 222 223 224 --batch 64 --output covariant_relative_gauss_denominator_verified_20261008.json",
+      "actual_exit_code": 0,
+      "scientific_seconds": 332.3930049929768,
+      "wall_seconds": 344.28
+    }
+  ],
+  "literal_all_occupation_controls": {
+    "full_physical_modes": 8,
+    "canonical_number": 4,
+    "canonical_components": 70,
+    "efficient_vs_actual_full_exterior_trace_relative_error": 1.0688630777879514e-15,
+    "source_polynomial_vs_actual_principal_minor_recurrence_relative_error": 1.3867432083440937e-15,
+    "source_polynomial_vs_literal_full70_56_CAR_relative_error": 1.2403408324774196e-15,
+    "full4_component_normal_shear": true
+  },
+  "strong_auxiliary_relative_results": [
+    {
+      "L": 6,
+      "restored_auxiliary_log_scalar_range": 1261.216610215672,
+      "neutral_variation": 8.0000000000005,
+      "source_variation": 8.0000000000005,
+      "max_neutral_replicate_range": 9.304322699201943e-85,
+      "max_source_replicate_range": 9.348417200608593e-85,
+      "covariance_empirical_relative_step_difference": 0.0014270290672269857,
+      "maximum_source_imaginary_fraction": 3.249413341251318e-08,
+      "minimum_restored_neutral_log_trace": 27.262047995620463,
+      "Ns": 12,
+      "actual_samples": 128,
+      "J_log": -66.02572072089745
+    },
+    {
+      "L": 8,
+      "restored_auxiliary_log_scalar_range": 11.945854380343569,
+      "neutral_variation": 5.9151497623009,
+      "source_variation": 5.913661736450696,
+      "max_neutral_replicate_range": 4.85444427766879e-07,
+      "max_source_replicate_range": 4.822010870597637e-07,
+      "covariance_empirical_relative_step_difference": 0.0034392939630530123,
+      "maximum_source_imaginary_fraction": 3.018505542660295e-08,
+      "minimum_restored_neutral_log_trace": 37.061298935938105,
+      "Ns": 16,
+      "actual_samples": 128,
+      "J_log": -93.51429758236021
+    },
+    {
+      "L": 10,
+      "restored_auxiliary_log_scalar_range": 0.11416735404279343,
+      "neutral_variation": 0.11546156739096725,
+      "source_variation": 0.11217558054260812,
+      "max_neutral_replicate_range": 5.6803605252842e-07,
+      "max_source_replicate_range": 5.680090174875474e-07,
+      "covariance_empirical_relative_step_difference": 0.00640061403287689,
+      "maximum_source_imaginary_fraction": 4.4543265380612315e-08,
+      "minimum_restored_neutral_log_trace": 46.94606408688383,
+      "Ns": 20,
+      "actual_samples": 128,
+      "J_log": -121.32585090103795
+    }
+  ],
+  "runtime": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "compiled_source_count": 66,
+  "compiled_source_unchanged": true,
+  "loaded_helper_matches_captured_source": true,
+  "loaded_ring_matches_captured_source": true,
+  "language": {
+    "final_protocol": {
+      "covariant_relative_ring_boundary": {
+        "consumer_sha256": "a32c71d4583487453758f369f555fd49e0926ef74e8464317c3cbfdc17dbdc45",
+        "root": "/home/administrator/substrate-222",
+        "settings": {
+          "python": {
+            "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+            "analysis": {
+              "extraPaths": [
+                "/home/administrator/substrate-222/proposals/P256-qed-backward"
+              ],
+              "typeCheckingMode": "basic",
+              "diagnosticMode": "openFilesOnly"
+            }
+          }
+        },
+        "server": "pyright 1.1.414",
+        "symbols_count": 238,
+        "definitions": [
+          [
+            {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_canonical_gauss_boundary_kernel.py",
+              "range": {
+                "start": {
+                  "line": 117,
+                  "character": 4
+                },
+                "end": {
+                  "line": 117,
+                  "character": 28
+                }
+              }
+            }
+          ],
+          [
+            {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 4
+                },
+                "end": {
+                  "line": 38,
+                  "character": 24
+                }
+              }
+            },
+            {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+              "range": {
+                "start": {
+                  "line": 54,
+                  "character": 32
+                },
+                "end": {
+                  "line": 54,
+                  "character": 52
+                }
+              }
+            },
+            {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+              "range": {
+                "start": {
+                  "line": 178,
+                  "character": 28
+                },
+                "end": {
+                  "line": 178,
+                  "character": 48
+                }
+              }
+            },
+            {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+              "range": {
+                "start": {
+                  "line": 228,
+                  "character": 17
+                },
+                "end": {
+                  "line": 228,
+                  "character": 37
+                }
+              }
+            }
+          ]
+        ],
+        "publishedDiagnostics": {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+          "version": 1,
+          "diagnostics": []
+        },
+        "final_scope": "stable exact canonical/Gauss relative source modules",
+        "positive_AST": [
+          "canonical_polynomial($$$ARGS)",
+          "ring_half($$$ARGS)"
+        ]
+      },
+      "covariant_relative_gauss_denominator": {
+        "consumer_sha256": "611884870d36a2fdebfcfcf2dc5768712372a5a344092693178b2016cdc8bcf7",
+        "root": "/home/administrator/substrate-222",
+        "settings": {
+          "python": {
+            "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+            "analysis": {
+              "extraPaths": [
+                "/home/administrator/substrate-222/proposals/P256-qed-backward"
+              ],
+              "typeCheckingMode": "basic",
+              "diagnosticMode": "openFilesOnly"
+            }
+          }
+        },
+        "server": "pyright 1.1.414",
+        "symbols_count": 133,
+        "definitions": [
+          [
+            {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+              "range": {
+                "start": {
+                  "line": 70,
+                  "character": 4
+                },
+                "end": {
+                  "line": 70,
+                  "character": 13
+                }
+              }
+            }
+          ],
+          [
+            {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_gauss_denominator.py",
+              "range": {
+                "start": {
+                  "line": 53,
+                  "character": 4
+                },
+                "end": {
+                  "line": 53,
+                  "character": 24
+                }
+              }
+            },
+            {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_gauss_denominator.py",
+              "range": {
+                "start": {
+                  "line": 163,
+                  "character": 30
+                },
+                "end": {
+                  "line": 163,
+                  "character": 50
+                }
+              }
+            },
+            {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_gauss_denominator.py",
+              "range": {
+                "start": {
+                  "line": 164,
+                  "character": 33
+                },
+                "end": {
+                  "line": 164,
+                  "character": 53
+                }
+              }
+            }
+          ]
+        ],
+        "publishedDiagnostics": {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_gauss_denominator.py",
+          "version": 1,
+          "diagnostics": []
+        },
+        "final_scope": "stable exact canonical/Gauss relative source modules",
+        "positive_AST": [
+          "canonical_polynomial($$$ARGS)",
+          "ring_half($$$ARGS)"
+        ]
+      }
+    },
+    "pre_ring_protocol": {
+      "consumer_sha256": "687a5468c136dbfbec4de4a3408f04e04e32571c2d7f650f76e98ae385fc613b",
+      "root": "/home/administrator/substrate-222",
+      "settings": {
+        "python": {
+          "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+          "analysis": {
+            "extraPaths": [
+              "/home/administrator/substrate-222/proposals/P256-qed-backward"
+            ],
+            "typeCheckingMode": "basic",
+            "diagnosticMode": "openFilesOnly"
+          }
+        }
+      },
+      "server": "pyright 1.1.414",
+      "symbols_count": 209,
+      "definitions": [
+        [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_canonical_gauss_boundary_kernel.py",
+            "range": {
+              "start": {
+                "line": 117,
+                "character": 4
+              },
+              "end": {
+                "line": 117,
+                "character": 28
+              }
+            }
+          }
+        ],
+        [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+            "range": {
+              "start": {
+                "line": 38,
+                "character": 4
+              },
+              "end": {
+                "line": 38,
+                "character": 24
+              }
+            }
+          },
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 32
+              },
+              "end": {
+                "line": 54,
+                "character": 52
+              }
+            }
+          },
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+            "range": {
+              "start": {
+                "line": 151,
+                "character": 27
+              },
+              "end": {
+                "line": 151,
+                "character": 47
+              }
+            }
+          },
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+            "range": {
+              "start": {
+                "line": 154,
+                "character": 28
+              },
+              "end": {
+                "line": 154,
+                "character": 48
+              }
+            }
+          },
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+            "range": {
+              "start": {
+                "line": 204,
+                "character": 17
+              },
+              "end": {
+                "line": 204,
+                "character": 37
+              }
+            }
+          }
+        ]
+      ],
+      "publishedDiagnostics": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+        "version": 1,
+        "diagnostics": [
+          {
+            "range": {
+              "start": {
+                "line": 111,
+                "character": 51
+              },
+              "end": {
+                "line": 111,
+                "character": 55
+              }
+            },
+            "message": "No parameter named \"seed\"",
+            "severity": 1,
+            "code": "reportCallIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 182,
+                "character": 25
+              },
+              "end": {
+                "line": 182,
+                "character": 29
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 182,
+                "character": 49
+              },
+              "end": {
+                "line": 182,
+                "character": 53
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 184,
+                "character": 40
+              },
+              "end": {
+                "line": 184,
+                "character": 44
+              }
+            },
+            "message": "Cannot access attribute \"imag\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 184,
+                "character": 60
+              },
+              "end": {
+                "line": 184,
+                "character": 64
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 184,
+                "character": 93
+              },
+              "end": {
+                "line": 184,
+                "character": 97
+              }
+            },
+            "message": "Cannot access attribute \"imag\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 184,
+                "character": 112
+              },
+              "end": {
+                "line": 184,
+                "character": 116
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 186,
+                "character": 14
+              },
+              "end": {
+                "line": 186,
+                "character": 18
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 186,
+                "character": 27
+              },
+              "end": {
+                "line": 186,
+                "character": 31
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 186,
+                "character": 48
+              },
+              "end": {
+                "line": 186,
+                "character": 52
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 186,
+                "character": 60
+              },
+              "end": {
+                "line": 186,
+                "character": 64
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 190,
+                "character": 65
+              },
+              "end": {
+                "line": 190,
+                "character": 69
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 190,
+                "character": 78
+              },
+              "end": {
+                "line": 190,
+                "character": 82
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 191,
+                "character": 44
+              },
+              "end": {
+                "line": 191,
+                "character": 48
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 191,
+                "character": 91
+              },
+              "end": {
+                "line": 191,
+                "character": 95
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 192,
+                "character": 68
+              },
+              "end": {
+                "line": 192,
+                "character": 72
+              }
+            },
+            "message": "Cannot access attribute \"imag\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 192,
+                "character": 83
+              },
+              "end": {
+                "line": 192,
+                "character": 87
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 193,
+                "character": 66
+              },
+              "end": {
+                "line": 193,
+                "character": 70
+              }
+            },
+            "message": "Cannot access attribute \"imag\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 193,
+                "character": 80
+              },
+              "end": {
+                "line": 193,
+                "character": 84
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          }
+        ]
+      },
+      "pre_edit_stage": "relative-ring importance denominator extension",
+      "positive_AST": [
+        "def ring_half($$$ARGS) -> $RETURN: $$$BODY",
+        "canonical_polynomial($$$ARGS)"
+      ]
+    },
+    "pre_denominator_protocol": {
+      "consumer_sha256": "cef6660a4c303fecfb4336c2ddd372c73ca3e8f51901cdf632ec82901c762b7e",
+      "root": "/home/administrator/substrate-222",
+      "settings": {
+        "python": {
+          "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+          "analysis": {
+            "extraPaths": [
+              "/home/administrator/substrate-222/proposals/P256-qed-backward"
+            ],
+            "typeCheckingMode": "basic",
+            "diagnosticMode": "openFilesOnly"
+          }
+        }
+      },
+      "server": "pyright 1.1.414",
+      "symbols_count": 115,
+      "definitions": [
+        [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+            "range": {
+              "start": {
+                "line": 70,
+                "character": 4
+              },
+              "end": {
+                "line": 70,
+                "character": 13
+              }
+            }
+          }
+        ],
+        [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_gauss_denominator.py",
+            "range": {
+              "start": {
+                "line": 48,
+                "character": 4
+              },
+              "end": {
+                "line": 48,
+                "character": 24
+              }
+            }
+          },
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_gauss_denominator.py",
+            "range": {
+              "start": {
+                "line": 134,
+                "character": 30
+              },
+              "end": {
+                "line": 134,
+                "character": 50
+              }
+            }
+          },
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_gauss_denominator.py",
+            "range": {
+              "start": {
+                "line": 135,
+                "character": 33
+              },
+              "end": {
+                "line": 135,
+                "character": 53
+              }
+            }
+          }
+        ]
+      ],
+      "publishedDiagnostics": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_gauss_denominator.py",
+        "version": 1,
+        "diagnostics": []
+      },
+      "pre_edit_stage": "relative-ring importance denominator extension",
+      "positive_AST": [
+        "def ring_half($$$ARGS) -> $RETURN: $$$BODY",
+        "canonical_polynomial($$$ARGS)"
+      ]
+    },
+    "external_final_config": {
+      "include": [
+        "../home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+        "../home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_gauss_denominator.py"
+      ],
+      "pythonVersion": "3.12",
+      "typeCheckingMode": "basic",
+      "executionEnvironments": [
+        {
+          "root": "../home/administrator/substrate-222/proposals/P256-qed-backward",
+          "extraPaths": [
+            "../home/administrator/substrate-222/proposals/P256-qed-backward"
+          ]
+        }
+      ]
+    },
+    "actual_final_CLI_command": "/home/administrator/.local/bin/pyright --pythonpath /home/administrator/substrate-framework/.venv/bin/python --project /tmp/issue222-relative-source-pyright.json covariant_relative_ring_boundary.py covariant_relative_gauss_denominator.py",
+    "actual_final_CLI_exit": 0,
+    "actual_final_CLI_stdout": "0 errors, 0 warnings, 0 informations\n",
+    "actual_final_CLI_wall_seconds": 95.66
+  },
+  "discarded_attempts": [
+    "Unoptimized combined larger-ring uniform-character run timed out1800s without a capsule; not evidence.",
+    "First strong-auxiliary run overflowed its genuine holonomy-dependent canonical scalar. The actual scalar is now extracted and fully RESTORED in both log traces; no stationary substitute.",
+    "Large native canonical globalZ4 exponent initially accumulated floating phase error; exact integer modulo4 before exponentiation repairs the physical sector rather than treating it as zero.",
+    "Larger-point combined restored strong run timed out1200s without a capsule; final successful scope retains all three rings, all canonical occupations/Phi/source and reports128 actual antithetic characters with empirical replicate diagnostics.",
+    "Initial external Pyright config wrongly put pythonPath in JSON; imports unresolved, not proof. Corrected final actual CLI passes --pythonpath explicitly and checks only the two actual selected files.",
+    "Initial final LSP timeout under simultaneous scientific/CLI load was retried with240s protocol deadline; both final stable-file protocol proofs have zero diagnostics."
+  ],
+  "conditional_macro_feasibility_artifact": "covariant_relative_gauss_conditional_fourier_budget_20261008.json",
+  "conditional_macro_properties_verified": false,
+  "delivery": "New standalone scientific source suppliers plus the assigned proof continuation. No Source2a/Root6911/741 changes, no source/receiver/prep/clock/gout cutover, no Root/Cnew alias, no macro125/Pe/source/receiver admission, no campaign closure.",
+  "macro_conditioned_admission": false
+}

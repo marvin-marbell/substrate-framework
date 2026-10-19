@@ -1,0 +1,202 @@
+{
+  "kind": "POSITIVE_FINITE_PROJECTED_GAUSS_CUBE_TRANSPORT_NOT_MASSLESS_PHOTONS",
+  "plan_id": "issue222-rich-backward-candidates-20261014",
+  "actual_launch_revision": "b8b88c61c08e2622b9a2b7f5355f5259c1e37ca98c344bccf6263896549353d4",
+  "prepared_contract_revision": "f35603f8ff89f505e8fc769166a9eff9e6af1c6314de50cbd49050c73661027a",
+  "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "work_item": "photon-candidate",
+  "requirement_ids": [
+    "outcome",
+    "verification"
+  ],
+  "parent_sole_plan_writer": true,
+  "law_id": "rich-photon-literal-gauss-cube-transport-20261015",
+  "decision": "One actual finite spatial gauge/matter energy-transfer mechanism passes its first physical discriminator",
+  "positive_finite_mechanism_accepted": true,
+  "material_extension": "ACTUAL eight-site twelve-link three-dimensional cube, five compact chords; complete Nup=Ndown=1 nonlinear Fock/flux sector, dimension15552. Historical ACTUAL fullq was six-site seven-link DOUBLE_FACE, not cube or sea.",
+  "mechanism": "An oriented physical x=0 yz Wilson-loop impulse changes only left-loop electric fields. Under literal E2+Hubbard+CAR link H it changes disjoint x=1 electric energy, endpoint-owned receiving-region energy and actual primitive current/density. Off and physical bridge-cut controls have exact zero receiver DIFFERENCE for the SAME initial states.",
+  "preparation": "New explicit neutral zero-E basis state with static ions/up at(0,0,0), down at(1,0,0); field-only exp(-i0.7 Bleft) pulse. This is a finite nonstationary prepared state, not a ground/sea/free electron or positron.",
+  "observed": {
+    "pulse_work": 0.45126791550690554,
+    "t_final": 4.0,
+    "final_receiver_electric_difference": 0.022427195749224915,
+    "final_receiver_owned_energy_difference": 0.10893660881350842,
+    "fraction_of_pulse_work_in_right_owned_energy": 0.24140118335499394,
+    "fraction_of_pulse_work_in_right_electric_energy": 0.049698183669966055,
+    "initial_receiver_electric_and_owned_energy_differences": [
+      0.0,
+      0.0
+    ],
+    "receiver_electric_difference_at_times": {
+      "0.0": 0.0,
+      "1.0": 1.1022806301497212e-05,
+      "2.0": 0.0021575376405053026,
+      "3.0": 0.011421746665941868,
+      "4.0": 0.022427195749224915
+    },
+    "receiver_owned_energy_difference_at_times": {
+      "0.0": 0.0,
+      "1.0": 0.0018057688802227308,
+      "2.0": 0.02743801123088086,
+      "3.0": 0.07164960518084226,
+      "4.0": 0.10893660881350842
+    },
+    "max_right_edge_current_difference": 0.024160971621915772,
+    "max_right_density_difference": 0.018964607707958103,
+    "max_total_pulse_energy_budget_error": 5.9396931817445875e-15,
+    "same_H_receiver_power_integral": 0.1089238070450599,
+    "receiver_energy_minus_power_quadrature": 1.2801768448519879e-05,
+    "same_H_electric_power_integral": 0.022427804406584144,
+    "receiver_electric_minus_power_quadrature": -6.086573592287148e-07,
+    "quadrature_scope": "33-point Simpson integration only; small finite sampling residual is reported, not hidden as a propagation error",
+    "actual_endpoint_matter_field_entanglement": {
+      "baseline": {
+        "entropy": 3.0290950374950616,
+        "purity": 0.07683742900623054,
+        "trace": 0.9999999999999988
+      },
+      "pulse": {
+        "entropy": 3.188931462588819,
+        "purity": 0.06385824019592073,
+        "trace": 1.0000000000000004
+      }
+    }
+  },
+  "exact_algebra": {
+    "Gauss_all_basis": 0.0,
+    "integer_electric": 0.0,
+    "density_continuity": 0.0,
+    "dotE_minus_J": 0.0,
+    "full_face_electric_support": 0.0,
+    "full_face_matter_support": 0.0,
+    "source_receiver_electric_commutator": 0.0,
+    "source_receiver_owned_energy_commutator": 0.0,
+    "source_receiver_current_commutator": 0.0,
+    "off_receiver_energy_conserved": 0.0,
+    "off_receiver_electric_conserved": 0.0,
+    "cut_left_right_commutator": 0.0,
+    "cut_source_right_commutator": 0.0,
+    "cut_left_receiver_electric_commutator": 0.0,
+    "ownership_sum_error": 0.0
+  },
+  "initial_locality": {
+    "seed_fock_indices": [
+      4981
+    ],
+    "seed_E_max": 0.0,
+    "matter_reduced_state_initial_distance": 2.220446049250313e-16,
+    "initial_receiver_E2_probability_invariance": 0.0,
+    "pulse_alpha": 0.7,
+    "generator": "Bleft=(P product physical U around x0 yz face P - adjoint)/(2i)",
+    "ground_state_claim": false,
+    "reference": "finite prepared state, exact full-H motion"
+  },
+  "exact_controls": {
+    "same_state_hopping_off": {
+      "actual_H": "Hoff=sum E_e^2/2 + U sum doubles",
+      "actual_receiver_energy": "HRoff=sum endpoint_weight E_e^2/2 + U doubles_right",
+      "exact_same_initial_states": true,
+      "exact_no_receiver_difference": true,
+      "proof": "All receiver electric/owned energies diagonal and conserved; pulse commutes with receiver energy. Thus their pulse-baseline difference stays its initial zero for all t, without a duplicated trajectory."
+    },
+    "same_state_plane_cut": {
+      "removed_physical_edges": [
+        2,
+        4,
+        6,
+        7
+      ],
+      "actual_H": "Hcut=H minus literal forward/backward hopping only on four x links",
+      "actual_receiver_energy": "HRcut=HRoff + hopping on four right face links",
+      "exact_same_initial_states": true,
+      "exact_no_receiver_difference": true,
+      "proof": "[HLcut,HRcut]=0, [HLcut,ER]=0, [Bleft,HRcut]=[Bleft,ER]=0. Receiver evolution is HRcut only and its entire ER trajectory is unchanged by the pulse. HRcut itself is conserved."
+    },
+    "susceptibility_warning": "E2 rotors already have finite sin-flux transitions; only spatial pulse-baseline transfer and same-state controls count here."
+  },
+  "independent_resolution": {
+    "independent_method": "Hermitian Chebyshev recurrence, Bessel coefficients",
+    "enclosure": [
+      -6.0,
+      48.5
+    ],
+    "polynomial_degree": 184,
+    "analytic_operator_norm_tail_bound": 1.0117984729616724e-12,
+    "floating_roundoff_not_in_bound": true,
+    "endpoint_state_l2_difference_per_column": [
+      7.37405094072708e-15,
+      6.9551234450886895e-15
+    ],
+    "endpoint_receiver_electric_difference_between_methods": 3.3306690738754696e-16,
+    "endpoint_owned_energy_difference_between_methods": 6.522560269672795e-16,
+    "max_norm_drift": 1.8207657603852567e-14,
+    "max_full_energy_drift": 7.993605777301127e-15,
+    "method": "SciPy expm_multiply adaptive scaled Taylor at each sample, independently checked by global Chebyshev action; not a fixed Krylov schedule"
+  },
+  "critical_projection_limit": {
+    "cutoff": 1,
+    "boundary_probability": {
+      "initial": [
+        0.0,
+        0.22563395775345277
+      ],
+      "endpoint": [
+        0.8748030516800063,
+        0.898367626252144
+      ],
+      "maximum_per_column": [
+        0.930676936852149,
+        0.9426625818848202
+      ]
+    },
+    "meaning": "Large boundary occupancy is actual evidence against treating L1 as a converged integer-rotor calculation. The accepted result is ONLY a finite projected compact gauge-transport mechanism. Projection changes Wilson algebra at boundaries; no cutoff-independent continuum/rotor conclusion is drawn. No cutoff sweep or decimal polishing was substituted for this physical discriminator."
+  },
+  "no_photon_promotion": [
+    "No masslessness or two propagating polarization branches",
+    "No fitted speed, momentum dispersion or common light cone",
+    "No global-vacuum theorem, continuum or thermodynamic limit",
+    "No free charged electron/positron or Nature/proton/QCD closure",
+    "No propagator/source splice into CAR36/CommonCarrierMotion or historical oscillator laws"
+  ],
+  "execution": {
+    "observed_returncode": 0,
+    "natural_exit": true,
+    "interruption": null,
+    "wall_seconds": 4.218597888946533,
+    "sources_unchanged": true,
+    "science_failures_or_interruptions_observed": [],
+    "scope": "One NEW scientific run only; no old CLI replay, mode survey or charged-G run"
+  },
+  "language": {
+    "version": "pyright 1.1.414",
+    "returncode": 0,
+    "summary": {
+      "filesAnalyzed": 4,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 18.139
+    },
+    "errors_by_file": {},
+    "rooted_LSP_exit": 0,
+    "scope": "ONLY four NEW owned Python files; frozen dependency diagnostics were observed before edits and not repaired or relabelled clean"
+  },
+  "artifacts": {
+    "first_discriminator": "rich_photon_gauss_transport_20261015_provisional_synthesis.json",
+    "model": "rich_photon_gauss_transport_20261015_model.py",
+    "consumer": "rich_photon_gauss_transport_20261015_consume.py",
+    "capture": "rich_photon_gauss_transport_20261015_capture.py",
+    "finalizer": "rich_photon_gauss_transport_20261015_finalize.py",
+    "interface": "rich_photon_gauss_transport_20261015_interface.json",
+    "equations": "rich_photon_gauss_transport_20261015_equations.json",
+    "actual_input": "rich_photon_gauss_transport_20261015_actual_input.json",
+    "actual_result": "rich_photon_gauss_transport_20261015_actual_result.json",
+    "actual_states": "rich_photon_gauss_transport_20261015_actual_states.npz",
+    "source_capsule": "rich_photon_gauss_transport_20261015_actual_source_capsule.zip",
+    "actual_exit": "rich_photon_gauss_transport_20261015_actual_exit.json",
+    "actual_capsule": "rich_photon_gauss_transport_20261015_actual_capsule.zip",
+    "selected_diagnostics": "rich_photon_gauss_transport_20261015_language_final.json",
+    "manifest": "rich_photon_gauss_transport_20261015_manifest.json",
+    "delivery_capsule": "rich_photon_gauss_transport_20261015_delivery_capsule.zip"
+  }
+}

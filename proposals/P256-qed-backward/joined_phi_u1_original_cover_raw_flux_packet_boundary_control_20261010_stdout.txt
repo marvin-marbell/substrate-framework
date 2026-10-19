@@ -1,0 +1,74 @@
+{
+  "kind": "ORIGINAL_COVER_BETA_PACKET_RAW_FLUX_REGULARITY_BOUNDARY_CONTROL",
+  "input": {
+    "g": 64,
+    "closed_face_flow_norm_squared": 4,
+    "H_face": "256 p\u00b2",
+    "normalized_momentum_packet": "(2 pi d\u00b2)^(-1/4) exp(-p\u00b2/(4d\u00b2))",
+    "hopping": "0 diagnostic only",
+    "spectral_state": "p0 ground functional limit, not original-cover L2 vacuum",
+    "mpmath_digits": 90
+  },
+  "rows": [
+    {
+      "d_exact": "1/2",
+      "face_H_expectation_exact": "64",
+      "raw_flux_insertion_norm_squared_exact": "1",
+      "fixed_s_exact": "1/16",
+      "Weyl_overlap": "0.998048781107475472710042659082673595255937529"
+    },
+    {
+      "d_exact": "1/4",
+      "face_H_expectation_exact": "16",
+      "raw_flux_insertion_norm_squared_exact": "4",
+      "fixed_s_exact": "1/16",
+      "Weyl_overlap": "0.992217938260243512105937226113617830070890271"
+    },
+    {
+      "d_exact": "1/8",
+      "face_H_expectation_exact": "4",
+      "raw_flux_insertion_norm_squared_exact": "16",
+      "fixed_s_exact": "1/16",
+      "Weyl_overlap": "0.969233234476344081848109193246352783604725754"
+    },
+    {
+      "d_exact": "1/16",
+      "face_H_expectation_exact": "1",
+      "raw_flux_insertion_norm_squared_exact": "64",
+      "fixed_s_exact": "1/16",
+      "Weyl_overlap": "0.882496902584595402864892143229050736222004825"
+    },
+    {
+      "d_exact": "1/64",
+      "face_H_expectation_exact": "1/16",
+      "raw_flux_insertion_norm_squared_exact": "1024",
+      "fixed_s_exact": "1/16",
+      "Weyl_overlap": "0.135335283236612691893999494972484403407631546"
+    },
+    {
+      "d_exact": "1/256",
+      "face_H_expectation_exact": "1/256",
+      "raw_flux_insertion_norm_squared_exact": "16384",
+      "fixed_s_exact": "1/16",
+      "Weyl_overlap": "0.0000000000000126641655490941757231209041559650963821358338"
+    }
+  ],
+  "exact_limits": {
+    "packet_energy": "0",
+    "raw_flux_norm_squared": "infinity",
+    "lim_W_s_for_fixed_nonzero_s": "0",
+    "W_0": 1,
+    "strong_continuity_at_s0": false,
+    "raw_flux_generator_in_this_GNS": false,
+    "bounded_native_sin_flux_measure": "(1/2) delta_256",
+    "sin_flux_time_correlation": "(1/2) exp(-i256t)",
+    "E_J_Ward": "E Omega=J Omega=0 at hopping0"
+  },
+  "wrongcases": {
+    "small_packet_energy_implies_bounded_raw_flux": "REJECTED by exact energy*fieldnorm=64 and divergent fieldnorm",
+    "ground_H0_has_photon_from_noncompact_label": "REJECTED for bounded sin-flux source: fixed spectral energy256, not cq",
+    "zero_E_or_J_weight_implies_no_other_excitations": "REJECTED by positive sin-flux spectral mass1/2"
+  },
+  "scope": "Exact one closed-face electric direction of frozen canonical H0; surrounding degrees use normalized packets separately. Not interacting/fullPhi ground, all thermodynamic ground states, or photon no-go. A Coulomb phase could instead use bounded flux observables with actual defect/phase control; raw-field generator is not a prerequisite invented for that route.",
+  "campaign_complete": false
+}

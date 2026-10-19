@@ -1,0 +1,34 @@
+{
+  "kind": "MIXED_ODD_PAIR_DISTINGUISHED_FULL_WEDGE2_EXACT_PROOF_AND_SCOPE",
+  "governor": "5be2c67fabc3301f4abd92bb36731ece21d8935f45d2e18091ac00f4d7be39ed",
+  "accepted_scoped_science_unchanged": "741e6bde7d8a4a78fddaf9e40e5ff4ddbfb36bf4ff053979609403ebed056bca",
+  "scientific_law": "H0=sum_role dGamma(m_role A+c0 B+d C)+64 (rho_all)^2, no external charge. Role profiles remain distinct. rho_all is summed once across every spectator and distinguished slot before squaring.",
+  "containing_space": "Sym^(2-#active)(C5_active) tensor Sym^(126-#auxiliary)(C5_auxiliary) tensor C6_roleV tensor C4_role1 tensor C4_role3. The C6 is full wedge2: vector5 directsum scalar1; the C4 factors are entire numbers1 and3, not selected source spinors. Roles are ordered (full6, number1, number3).",
+  "role_assignments": ["001", "010", "011", "100", "101", "110", "111"],
+  "infeasible_assignment": "000 uses three distinct active slots but the cell has only two.",
+  "identity_multiplicity": "Each assignment represents all choices of distinct physical slot identities of those roles; identical-role permutation gives exact hfree/rho intertwining. This does not enlarge symmetric spectators to other permutation irreps.",
+  "joint_free_pair": {
+    "D4": ["-e+c0", "-e-c0", "e+c0", "e-c0"],
+    "R4": [["0", "m/(2e)", "0", "-d/(2e)"], ["m/(2e)", "0", "d/(2e)", "0"], ["0", "d/(2e)", "0", "m/(2e)"], ["-d/(2e)", "0", "m/(2e)", "0"]],
+    "D6": ["-2e", "2c0", "0", "-2c0", "2e", "0"],
+    "R6_nonzero_symmetric_edges": {"0,1": "d/(2e)", "0,3": "d/(2e)", "2,1": "m/(sqrt2 e)", "2,3": "m/(sqrt2 e)", "4,1": "-d/(2e)", "4,3": "-d/(2e)"},
+    "scalar_index": 5,
+    "generic_native_CAR_proof": "The new CLI proves simultaneously U*H U=D4,U*rho U=R4, wedge2(D4)V=V D6,wedge2(R4)V=V R6, and U3* dGamma3(H) U3=D4,U3* dGamma3(rho) U3=R4. a^2+b^2=1, m=e(a^2-b^2),d=2eab; all polynomial identities are reduced exactly modulo a^2+b^2-1. No independent fit or energy-only phase convention."
+  },
+  "number0_number4_exact_transfer": {
+    "local_identities": "tr H=tr rho=0; dGamma0(H)=dGamma4(H)=dGamma0(rho)=dGamma4(rho)=0. The wedge2 scalar also has H=rho=0, including no matrix coupling to vector5.",
+    "scalar_physical_vector": "S2=(wedge2 U)V[:,5], V[:,5]=(mask9-mask6)/sqrt2 in increasing four-mode masks, with joint number1 U from the new generic CAR proof.",
+    "hole_map": "T31=U3 U*, U3=J(I2 tensor X)U diag(1,-1,1,-1), J[15 xor 2^p,p]=(-1)^p. It obeys h3 T31=T31 h1 and rho3 T31=T31 rho1 for EACH actual role separately.",
+    "n0_3_3_transfer": "On the scalar+number1+number3 summand, apply |vac><S2| tensor T31_role1 tensor I_role3. This is an isometry onto number0+number3+number3 at the SAME ordered roles and spectator counts; it intertwines sum onsite, totalrho and its square. Number sum changes (2,1,3)->(0,3,3), keeping triple number6 and cell N256.",
+    "n4_1_1_transfer": "Apply |full><S2| tensor I_role1 tensor T31_role3*. This is an isometry onto number4+number1+number1 at the SAME ordered roles and spectator counts, again triple number6 and cell N256, exact H0 equivalence with no energy offset.",
+    "bound_transfer": "If the actual full6 containing-space lambda1 bound is certified at -5123 for an assignment, restricting it to the reducing scalar summand and conjugating by either map certifies that assignment's canonical n0+3+3 and n4+1+1 alternatives without another solve. A failed full6 lower form does not automatically imply failure of the scalar restricted sector; no affirmative bound transfer is claimed in that event.",
+    "unbalanced_alternative": "Replacing only scalar2 by empty0/full4 while retaining one1/one3 is exact H0 equivalence but total N254/N258, not native canonical N256.",
+    "not_paid_here": "Further scalar spectators, multiple empty/full slots, arbitrary spectator permutation irreps, and the entire canonical occupancy decomposition are not certified by this one distinguished full6 containing space. The coverage owner must prove any further containing-space embeddings."
+  },
+  "positive_output_lower_proof": "For retained free-energy output rows Pout, H0-z >= D+64 rho_all* Pout rho_all. Each retained output has its entire density input image, proven by exhaustive occupation lower endpoints and full6/full4/full4 indices. All inputs outside support have D>0 and no retained density output action. This is not the invalid input compression PHP. Split supported inputs into negative free L and positive Q. The positive block DQ+64 BQ* BQ is positive. Schur S=DL+64 BL*(I+64 BQ DQ^-1 BQ*)^-1 BL determines the lower-form negative inertia.",
+  "outward_certificate": "At 100-bit fixed-point outward interval arithmetic, choose binary-rational Y from a floating sparse solve only as a witness. G=BL*Y+Y*BL-Y*K*Y lies below exact BL*K^-1 BL and differs by E*K^-1 E with E=BL-KY. Since K>=I, norm error<=||E||F^2. Integer interval centers with Gershgorin row-radius give exact lower and upper Schur matrices. Fraction-free integer Bareiss computes exact pivot signs/inertia of both. Every matrix and witness is hash-bound in the actual receipt.",
+  "fixed_target": {"z": "-5123", "lambda": 1, "output_budget": 120, "support_budget": 202, "floor_tuning": false},
+  "adverse_controls": ["Highest wedge sign flipped: same energy, wrong density joint pair rejected exactly", "Unsigned hole phase: same energy, wrong density joint pair rejected exactly", "Scalar omitted: a feasible U scalar plus A/A odd pair has negative Hfree-z, so omission cannot pass free-spectrum support justification", "Active/aux role equality rejected on exact actual free-energy intervals", "Remove one necessary density input: retained output image completeness fails"],
+  "delivery_evidence": "Actual run results and natural-exit/source/input/preexecution/executed bindings are in canonical_odd_vector_actual1_20261011_*; proof alone does not claim the bound was certified.",
+  "nonclaims": ["fullcanonical cell ground", "fullPhi ground", "lattice stationary ground", "linked phase", "pole", "source-image harmonic ground multiplicity"]
+}

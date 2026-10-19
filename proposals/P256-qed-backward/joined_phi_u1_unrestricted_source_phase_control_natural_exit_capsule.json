@@ -1,0 +1,37 @@
+{
+  "execution": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_unrestricted_source_phase_control.py",
+      "--output",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_unrestricted_source_phase_control_receipt.json"
+    ],
+    "cwd": "/home/administrator/substrate-222",
+    "returncode": 0,
+    "wall_seconds": 3.63160606800011,
+    "stdout": "{\n  \"output\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_unrestricted_source_phase_control_receipt.json\",\n  \"sha256\": \"7b19e9f5e500d8346ba758a5221a067ffba2eaf42584b01e96a207703389d7e4\",\n  \"m1_interval\": {\n    \"lower\": \"40855108449053963805608960767520693216964406192236973830213096738688168920881352017676259679149135693/4374501449566023848745004454235242730706338861786424872851541212819905998398751846447026354046107648\",\n    \"upper\": \"81710216898107927611217921535041386433928812384473947660426193477376337841762704035352519358298271439/8749002899132047697490008908470485461412677723572849745703082425639811996797503692894052708092215296\",\n    \"lower_decimal\": \"9.339374765347724303852406610336627028809\",\n    \"upper_decimal\": \"9.339374765347724303852406610336627028809\"\n  },\n  \"clocks\": [\n    {\n      \"time\": \"1/4194304\",\n      \"phase_lower\": \"0.000002049695988860975336226562\",\n      \"error\": \"0.000000176984472390217782787321\",\n      \"phase_proven\": true,\n      \"raw_probability_lower\": \"0.2499998230155589332856845\"\n    },\n    {\n      \"time\": \"1/2097152\",\n      \"phase_lower\": \"0.000003744494709500931559280684\",\n      \"error\": \"0.0000007088662130014546787470826\",\n      \"phase_proven\": true,\n      \"raw_probability_lower\": \"0.2499992911342894898532563\"\n    },\n    {\n      \"time\": \"1/1048576\",\n      \"phase_lower\": \"0.000006063830405474285380284813\",\n      \"error\": \"0.00000284289143953048709577072\",\n      \"phase_proven\": true,\n      \"raw_probability_lower\": \"0.24999715711664250124986\"\n    },\n    {\n      \"time\": \"1/262144\",\n      \"phase_lower\": \"-0.00001057232805483686818321882\",\n      \"error\": \"0.00004619921543485595808744095\",\n      \"phase_proven\": false,\n      \"raw_probability_lower\": \"0.2499538029189326508381456\"\n    }\n  ],\n  \"actual_control\": {\n    \"raw_source_norm_squared\": 0.5,\n    \"initial_m1_numeric_real\": 9.339374765347724,\n    \"initial_m1_numeric_imag\": 2.4231937835094857e-16,\n    \"interval_formula_numeric_error\": 2.4231937835094857e-16,\n    \"exact_periodic_path_variance_native_Q_error\": 1.1102230246251565e-15,\n    \"wrong_drop_two_link_cross_character_m1_real\": 9.339374765347724,\n    \"wrong_character_difference\": 1.4791141972893971e-31,\n    \"two_link_source_projection_observed_blind\": true,\n    \"wrong_two_link_primitive_character_difference\": 0.06147706695774982,\n    \"wrong_frozen_Theta_m1_real\": 11.751108089351415,\n    \"wrong_frozen_Theta_difference\": 2.4117333240036913,\n    \"status\": \"Actual N4 native ordered AP paths; numeric control, not a floating interval certificate\"\n  },\n  \"elapsed_seconds\": 1.1622281650015793\n}\n",
+    "stderr": "",
+    "source_sha256": "637624e0bb4aec0bdeea2ccb47eaeccfb98729f81fe472602a271cba11fccc04",
+    "source_unchanged": true,
+    "receipt_sha256": "7b19e9f5e500d8346ba758a5221a067ffba2eaf42584b01e96a207703389d7e4"
+  },
+  "selected_Pyright": {
+    "version": "1.1.414",
+    "configuration": "/tmp/issue222-source-phase-pyright.json",
+    "relative_include": "../home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_unrestricted_source_phase_control.py",
+    "pythonpath": "/home/administrator/substrate-framework/.venv/bin/python",
+    "checked_files": 1,
+    "errors": 0,
+    "warnings": 0,
+    "completed_seconds": 4.488,
+    "full_output_reference": "artifact://314"
+  },
+  "admission": "Derived unrestricted NEW finite-N4 body source phase/survival under the specified fixed-mean Slater and real-Gaussian preparation; not original SOURCE, ground, dressed pole, common cone, current, or finiteword Trotter transfer. Phi embedding remains conditional on separately declared suppliers.",
+  "failed_attempts": {
+    "blind_wrong_control": "Wrong two-link character in the initial source first moment was blind at this N4 AP mean (difference1.4791e-31), retained; independent actual path character contrasts .061477 and frozenTheta first moment contrasts2.41173.",
+    "serialization": "NumPy boolean in observed-blind flag rejected by JSON; explicit Python bool conversion only."
+  },
+  "governing_plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "captured_execution_revision": "b5f1c36f7d60458c9318ffcab64cb99f087072ac35dc173323bcbd0763e0df00",
+  "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe"
+}

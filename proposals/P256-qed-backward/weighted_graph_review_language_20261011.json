@@ -1,0 +1,118 @@
+{
+  "root": "/home/administrator/substrate-222",
+  "server": "/home/administrator/.local/bin/pyright-langserver",
+  "server_info": null,
+  "probe": "original pinned consumer documentSymbol; definition response points at builtins str, not claimed digest definition",
+  "symbols_returned": 145,
+  "diagnostics": {
+    "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/weighted_evolution_closure_consumer_20261011.py",
+    "version": 1,
+    "diagnostics": [
+      {
+        "range": {
+          "start": {
+            "line": 17,
+            "character": 7
+          },
+          "end": {
+            "line": 17,
+            "character": 12
+          }
+        },
+        "message": "Import \"numpy\" could not be resolved",
+        "severity": 1,
+        "code": "reportMissingImports",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportMissingImports"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 18,
+            "character": 7
+          },
+          "end": {
+            "line": 18,
+            "character": 19
+          }
+        },
+        "message": "Import \"scipy.linalg\" could not be resolved",
+        "severity": 1,
+        "code": "reportMissingImports",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportMissingImports"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 19,
+            "character": 7
+          },
+          "end": {
+            "line": 19,
+            "character": 12
+          }
+        },
+        "message": "Import \"sympy\" could not be resolved",
+        "severity": 1,
+        "code": "reportMissingImports",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportMissingImports"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 66,
+            "character": 39
+          },
+          "end": {
+            "line": 66,
+            "character": 46
+          }
+        },
+        "message": "Argument of type \"Fraction | Literal[0]\" cannot be assigned to parameter \"value\" of type \"Fraction\" in function \"rational_record\"\n\u00a0\u00a0Type \"Fraction | Literal[0]\" is not assignable to type \"Fraction\"\n\u00a0\u00a0\u00a0\u00a0\"Literal[0]\" is not assignable to \"Fraction\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 138,
+            "character": 37
+          },
+          "end": {
+            "line": 138,
+            "character": 44
+          }
+        },
+        "message": "Cannot access attribute \"reshape\" for class \"int\"\n\u00a0\u00a0Attribute \"reshape\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      }
+    ]
+  },
+  "AST_positive": "digest($ARG) matched lines31,283,287,297",
+  "AST_nonmatching": "def $NAME($$$ARGS): $$$BODY returned no matches; positive call query recovered",
+  "failures_retained": [
+    {
+      "step": "manual LSP buffered transport",
+      "result": "TimeoutError; corrected unbuffered transport completed",
+      "not_scientific_failure": true
+    }
+  ],
+  "limitation": "xd://lsp not mounted. Root default Pyright does not resolve project venv packages. Final selected diagnostics delegated to parent; no final checks run."
+}

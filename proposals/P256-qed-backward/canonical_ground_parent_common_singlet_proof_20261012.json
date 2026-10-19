@@ -1,0 +1,48 @@
+{
+  "kind": "NEW_COMMON_CHARGED_SU_M_DARK_SOURCE_SUPPORT_ESCAPE_PROPOSAL_NOT_IR_OR_PHASE",
+  "accepted_scoped_science": "491c764fee3f8e2a25ab86ce21c2cc1088483bb275b59337c8b4e4ef145a9b3e",
+  "task_governing_revision": "8f2487dd726dfe5e7a2674f862386ee6b1bb936270002e92771285019ff5bab9",
+  "status": "PARENT_ANALYTIC_DERIVATION_AND_EXACT_FINITE_REPRESENTATION_CONTROL_PENDING_INDEPENDENT_DOMAIN_REVIEW",
+  "source": {
+    "path": "canonical_ground_parent_singlet_20261012.py",
+    "sha256": "a308e99a99fa15b8b1c7f382d19bd56aa7740b11b37404eec5829bf21f40e91a"
+  },
+  "capsule": {
+    "path": "history_operator_reset_parent_common_singlet_actual1_20261012_capsule.json",
+    "sha256": "82db492c33da59dd5797da748371eb6c054d301a255a4fa2afca29ed33a6dbbe"
+  },
+  "receipt": {
+    "path": "history_operator_reset_parent_common_singlet_actual1_20261012_receipt.json",
+    "sha256": "aec1551e5f9ec167c9b401a1b68b6e9757ae1af037a3ecdb80324eabb3b09754"
+  },
+  "construction": {
+    "M": "4V",
+    "k": "M/2=2V for EACH charged copy",
+    "P_S": "Orthogonal projector onto the common SU(M) singlets in (wedge^k C^M)^tensor64, identity on neutral/Ref/fields. This is a global charged representation projector, not a local occupation eligibility sector.",
+    "nonempty": "Pair the64 charged copies into32 complementary wedge^k singlets via the full epsilon tensor; each pair has one particle in each global oneparticle mode.",
+    "all_singlet_multiplicities": "wedge^k C^M is irreducible. Its dual in the other63 factors has any multiplicity. Singlet intertwiners identify R tensor R* within each orthogonal rest multiplicity. Partial trace of any singlet cross matrix over rest is the scalar identity on R times the multiplicity inner product. No unique singlet assumption."
+  },
+  "algebra": {
+    "common_charge": "For every oneparticle a, sum_charged64 dGamma_s(a) P_S=32 Tr(a) P_S. Thus collective n_{x,colour}=32, totaln_x=128, rho_x=0 at inert Ref4. Every traceless common hop leg kills P_S and every ordered full64^4 bare loop kills P_S.",
+    "exact_profile": "ALL active/aux hopping paths equal including fullPhi endpoints, SU4/Peierls/AP and both lengths; active onsite differs by delta=-126663739519795/70368744177664. Ref/neutral not included in charged common action.",
+    "matter": "Hcharged P_S = delta dGamma_active(h0) P_S, h0=directsum_x Phi0(x), Tr(h0)=0. Common auxiliary onebody full trace0 kills P_S; neutral is independent.",
+    "second_identity": "P_S dGamma_active(h0) P_S=0 and P_S dGamma_active(h0)^2 P_S=[k(M-k)/(M(M-1)) Tr(h0^2)]P_S. Derive scalar coefficient from the complete canonical trace: E(n_i)=k/M, E(n_i n_j)=k(k-1)/(M(M-1)); traceless eigenvalues give coefficient. Polarization and singlet intertwiners cover every multiplicity and complex Hermitian h0.",
+    "N4_factor": "64/255; finite M4,k2 exact independent full36CAR control factor1/3, trace2=14 and norm2=14/3; all15 common SU4 generators kill the coupled singlet, uncoupled product does not."
+  },
+  "physical_domain_obligation": {
+    "ambient_frame": "Use original fixed site/colour CAR frame on the ambient equivariant physical Hilbert bundle. P_S is constant in Phi/Haar/Peierls coordinates. It commutes local SU4 matter action because each local traceless colour matrix embeds in su(M); neutral action commutes separately. Under common charged diagonal U1, the determinant scalar is exactly the original fixed128/site background, so rho_x P_S=0.",
+    "connections": "Claim conditional on literal physical covariant connection being the original common charged total-colour/totalrho generators, with independent neutral action and scalar field connection. Then all Phi/Haar covariant derivatives commute P_S; fullE=-i transverse derivative plus linear collective rho also commutes P_S. Any field-frame change must conjugate P_S and use covariant jets; ordinary derivative shortcut is not allowed.",
+    "sewing": "Common local SU4/U1/deck/AP oneparticle transitions preserve the common-singlet subspace; projector commutes them. May acquire determinant scalar phase, which is retained and does not change projector or compatible character. No beta0/new boundary selection.",
+    "form": "Constant finite-dimensional bounded projector with these commutations preserves physical smooth core and closed Friedrichs form; scalar Jordan/alignment/plaquette terms commute. All same-field neutral operators commute it. Hence every primitive EXCEPT active onsite mismatch is reducing for P_S. Ground Q form pays Phi0 multiplication L2; no D(H^2) needed.",
+    "review_required": "Verify these connection/sewing/closed-form claims against actual pinned realization. Representation algebra alone cannot establish a complete physical channel."
+  },
+  "strict_eigen_ground_escape": {
+    "argument": "If an actual finite physical eigen-ground lies entirely in P_S, project its eigen equation with1-P_S. The reducing kinetic/scalar/neutral/common matter terms contribute0; P_S dGamma_active(h0)P_S=0, leaving delta dGamma_active(h0)Psi=0 in L2. Squared norm equals delta^2 k(M-k)/(M(M-1)) integral sum_x Tr(Phi0(x)^2)||Psi||^2. Nonzero delta and positive coefficient force support on all Phi0=0. This is a fullCartesian Phi Lebesgue-null subset; annihilation Gauss equivariance is a differential constraint, not a measure concentrated there. Thus no nonzero L2 eigenvector can have full P_S support, provided the declared literal reducing-domain obligation passes.",
+    "density": "For any actual ground density or purification, Tr rho P_S=1 would place every component in that impossible support; hence strict complement>0.",
+    "limitation": "NOT a quantitative N-uniform bound, NOT bare-loop Q Gram positivity, signed Wilson mean, stiffness or photon. Other loop-kernel cancellations outside P_S remain."
+  },
+  "scientific_admission": false,
+  "native_ground_computed": false,
+  "physical1_phase_stiffness_IR_atom": false,
+  "campaign_complete": false
+}

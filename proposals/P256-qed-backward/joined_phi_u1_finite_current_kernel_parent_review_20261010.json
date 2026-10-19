@@ -1,0 +1,36 @@
+{
+  "actual_parent_consumer": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "-c",
+      "import json,hashlib,numpy as np\nfrom pathlib import Path\nr=Path('.')\nraw=(r/'joined_phi_u1_finite_current_kernel_receipt.json').read_bytes(); report=json.loads(raw)\na=np.load(r/'joined_phi_u1_current_moments_receipt.npz'); z=np.load(r/'joined_phi_u1_finite_current_kernel_receipt.npz')\nout={}\nfor state,price in report['all129_states'].items():\n f=a[state+'_F']; w=f.conj()/np.linalg.norm(f)\n linear=z[state+'_retarded_linear_at_clock']; radius=price['clock']['full_matrix_error_ball_radius']\n observed=float(np.sum(w*linear).real)\n allowance=.99*float(np.linalg.norm(f))*price['clock']['t']\n lower=allowance-radius-abs(float(np.sum(w*a[state+'_retarded_initial']).real))\n if linear.shape!=(129,129) or lower<=0: raise ArithmeticError('No all129 proof-only Hilbert-Schmidt witness margin')\n out[state]={'proof_only_witness_norm':float(np.linalg.norm(w)),'observed_witness_at_linear_approximant':observed,'conditional_lower_with_declared_signal_allowance':lower,'wholematrix_remainder_radius':radius,'clock':price['clock']['t'],'meaning':'Proof-only fullmatrix witness and conditionalerrorball, NOT observedfull129evolution or newdetector/receiver.'}\nprint(json.dumps({'receipt_sha256':hashlib.sha256(raw).hexdigest(),'all129_proof_only_witnesses':out,'numerical_limit':'No independentlycertifiedintervalsignal/prices; same conditional1percent allowance asproducer'},indent=2))\n"
+    ],
+    "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+    "natural_returncode": 0,
+    "wall_seconds": 1.0370067250005377,
+    "stdout": "{\n  \"receipt_sha256\": \"0fff4a884cd6c822851142b04c21f0e2c3d53829a6f92ea752a44ad9edcd18ea\",\n  \"all129_proof_only_witnesses\": {\n    \"background\": {\n      \"proof_only_witness_norm\": 1.0000000000000002,\n      \"observed_witness_at_linear_approximant\": 0.00025643423750221076,\n      \"conditional_lower_with_declared_signal_allowance\": 0.00021680621289219877,\n      \"wholematrix_remainder_radius\": 3.70636822349898e-05,\n      \"clock\": 1.8189894035458565e-12,\n      \"meaning\": \"Proof-only fullmatrix witness and conditionalerrorball, NOT observedfull129evolution or newdetector/receiver.\"\n    },\n    \"raw_source\": {\n      \"proof_only_witness_norm\": 1.0,\n      \"observed_witness_at_linear_approximant\": 0.0001281873107092234,\n      \"conditional_lower_with_declared_signal_allowance\": 0.00010837094971443239,\n      \"wholematrix_remainder_radius\": 1.8534487887698756e-05,\n      \"clock\": 1.8189894035458565e-12,\n      \"meaning\": \"Proof-only fullmatrix witness and conditionalerrorball, NOT observedfull129evolution or newdetector/receiver.\"\n    }\n  },\n  \"numerical_limit\": \"No independentlycertifiedintervalsignal/prices; same conditional1percent allowance asproducer\"\n}\n",
+    "stderr": ""
+  },
+  "artifact_sha256": {
+    "joined_phi_u1_finite_current_kernel.py": "8dcd83f2c161bd6d5ac20f09ffbd73f6e3e4b787e7d4a3dd22600e1f45c3e270",
+    "joined_phi_u1_finite_current_kernel_controls.py": "0daf0b833632d73967b7b81bd5d6567e6b7a70929e69d6ef1e2a84f7c6ba4ee3",
+    "joined_phi_u1_finite_current_kernel_receipt.json": "0fff4a884cd6c822851142b04c21f0e2c3d53829a6f92ea752a44ad9edcd18ea",
+    "joined_phi_u1_finite_current_kernel_receipt.npz": "d4017666e472bba37bb1a8bfdeb78075c65433dcbe873184e4998ef7d0245cde",
+    "joined_phi_u1_finite_current_kernel_input_bytes.zip": "5b905dc9cdd41b9d51bfd6cf3a4ec87d40667911d3c23c3a761e03dc8d447e61",
+    "joined_phi_u1_finite_current_kernel_natural_exit_capsule.json": "536aafe6186f62d1ac28f1bf8d259d6a591380327362bcfce42a0768fa332e3f"
+  },
+  "reviewed_proof": [
+    "Positive commuting T+HC gives conservedH-based globalstate E1/E2 Sobolev bounds; no Pi norm",
+    "Fullcharged Slater cumulants/densitycovariances and Ref3 mean retained",
+    "Nested current adH\u00b2 local path/chain/cross-flavour matrix bounds and HS integration checked",
+    "Independent finitecontroldirectsame-H evolution+secondderivative rejectsstationarycubic shortcut, omissions and normalization"
+  ],
+  "stage": "CONDITIONAL_GLOBAL_INEQUALITY_WITH_FLOAT_PRICE_EVALUATION_AND_FINITE_CONTROLS_NOT_INTERVAL_CERT",
+  "limits": [
+    "Prices/acceptedF/current-insertion norm floating, 1percent signal allowance is explicithypothesis/not certifiedexactlower",
+    "NPZ all129linearapproximants/errorballs not measuredinteracting evolution",
+    "Independent2site/2orb/2Ref/Hermite12/18 control not physicalN4/fourRef or convergenceproof",
+    "No pole/ground/Phi current/SOURCE/cone admission"
+  ],
+  "review_revision": "34c80e78e7fbc97c60c8ac8294df069a56f4dc459f43879d17c8862dce6bd246"
+}

@@ -1,0 +1,980 @@
+{
+  "project_root": "/home/administrator/substrate-222",
+  "root_marker": "pyproject.toml",
+  "server": "/home/administrator/.local/bin/pyright-langserver",
+  "symbols_count": 194,
+  "definition": {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": [
+      {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/connected_quantum_sea_source_20261012.py",
+        "range": {
+          "start": {
+            "line": 219,
+            "character": 4
+          },
+          "end": {
+            "line": 219,
+            "character": 14
+          }
+        }
+      }
+    ]
+  },
+  "diagnostic_response": {
+    "jsonrpc": "2.0",
+    "id": 4,
+    "result": {
+      "kind": "full",
+      "resultId": "3",
+      "items": [
+        {
+          "range": {
+            "start": {
+              "line": 106,
+              "character": 8
+            },
+            "end": {
+              "line": 106,
+              "character": 12
+            }
+          },
+          "message": "Cannot access attribute \"cols\" for class \"MatrixElement\"\n\u00a0\u00a0Attribute \"cols\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 106,
+              "character": 8
+            },
+            "end": {
+              "line": 106,
+              "character": 12
+            }
+          },
+          "message": "Cannot access attribute \"cols\" for class \"list[Unknown]\"\n\u00a0\u00a0Attribute \"cols\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 108,
+              "character": 26
+            },
+            "end": {
+              "line": 108,
+              "character": 28
+            }
+          },
+          "message": "\"__getitem__\" method not defined on type \"MatrixElement\"",
+          "severity": 1,
+          "code": "reportIndexIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 108,
+              "character": 26
+            },
+            "end": {
+              "line": 108,
+              "character": 33
+            }
+          },
+          "message": "No overloads for \"__getitem__\" match the provided arguments",
+          "severity": 1,
+          "code": "reportCallIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+          },
+          "relatedInformation": [
+            {
+              "location": {
+                "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+                "range": {
+                  "start": {
+                    "line": 1252,
+                    "character": 8
+                  },
+                  "end": {
+                    "line": 1252,
+                    "character": 19
+                  }
+                }
+              },
+              "message": "Overload 2 is the closest match"
+            }
+          ]
+        },
+        {
+          "range": {
+            "start": {
+              "line": 108,
+              "character": 26
+            },
+            "end": {
+              "line": 108,
+              "character": 33
+            }
+          },
+          "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+          "severity": 1,
+          "code": "reportArgumentType",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 108,
+              "character": 19
+            },
+            "end": {
+              "line": 108,
+              "character": 20
+            }
+          },
+          "message": "\"__setitem__\" method not defined on type \"MatrixElement\"",
+          "severity": 1,
+          "code": "reportIndexIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 108,
+              "character": 19
+            },
+            "end": {
+              "line": 108,
+              "character": 25
+            }
+          },
+          "message": "No overloads for \"__setitem__\" match the provided arguments",
+          "severity": 1,
+          "code": "reportCallIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+          },
+          "relatedInformation": [
+            {
+              "location": {
+                "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+                "range": {
+                  "start": {
+                    "line": 1257,
+                    "character": 8
+                  },
+                  "end": {
+                    "line": 1257,
+                    "character": 19
+                  }
+                }
+              },
+              "message": "Overload 2 is the closest match"
+            }
+          ]
+        },
+        {
+          "range": {
+            "start": {
+              "line": 108,
+              "character": 19
+            },
+            "end": {
+              "line": 108,
+              "character": 25
+            }
+          },
+          "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"key\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__setitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+          "severity": 1,
+          "code": "reportArgumentType",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 108,
+              "character": 41
+            },
+            "end": {
+              "line": 108,
+              "character": 44
+            }
+          },
+          "message": "Cannot access attribute \"det\" for class \"MatrixElement\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 108,
+              "character": 41
+            },
+            "end": {
+              "line": 108,
+              "character": 44
+            }
+          },
+          "message": "Cannot access attribute \"det\" for class \"list[Unknown]\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 109,
+              "character": 42
+            },
+            "end": {
+              "line": 109,
+              "character": 45
+            }
+          },
+          "message": "Cannot access attribute \"det\" for class \"MatrixElement\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 109,
+              "character": 42
+            },
+            "end": {
+              "line": 109,
+              "character": 45
+            }
+          },
+          "message": "Cannot access attribute \"det\" for class \"list[Unknown]\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 109,
+              "character": 26
+            },
+            "end": {
+              "line": 109,
+              "character": 29
+            }
+          },
+          "message": "\"__getitem__\" method not defined on type \"MatrixElement\"",
+          "severity": 1,
+          "code": "reportIndexIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 109,
+              "character": 26
+            },
+            "end": {
+              "line": 109,
+              "character": 34
+            }
+          },
+          "message": "No overloads for \"__getitem__\" match the provided arguments",
+          "severity": 1,
+          "code": "reportCallIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+          },
+          "relatedInformation": [
+            {
+              "location": {
+                "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+                "range": {
+                  "start": {
+                    "line": 1252,
+                    "character": 8
+                  },
+                  "end": {
+                    "line": 1252,
+                    "character": 19
+                  }
+                }
+              },
+              "message": "Overload 2 is the closest match"
+            }
+          ]
+        },
+        {
+          "range": {
+            "start": {
+              "line": 109,
+              "character": 26
+            },
+            "end": {
+              "line": 109,
+              "character": 34
+            }
+          },
+          "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+          "severity": 1,
+          "code": "reportArgumentType",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 109,
+              "character": 19
+            },
+            "end": {
+              "line": 109,
+              "character": 20
+            }
+          },
+          "message": "\"__setitem__\" method not defined on type \"MatrixElement\"",
+          "severity": 1,
+          "code": "reportIndexIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 109,
+              "character": 19
+            },
+            "end": {
+              "line": 109,
+              "character": 25
+            }
+          },
+          "message": "No overloads for \"__setitem__\" match the provided arguments",
+          "severity": 1,
+          "code": "reportCallIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+          },
+          "relatedInformation": [
+            {
+              "location": {
+                "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+                "range": {
+                  "start": {
+                    "line": 1257,
+                    "character": 8
+                  },
+                  "end": {
+                    "line": 1257,
+                    "character": 19
+                  }
+                }
+              },
+              "message": "Overload 2 is the closest match"
+            }
+          ]
+        },
+        {
+          "range": {
+            "start": {
+              "line": 109,
+              "character": 19
+            },
+            "end": {
+              "line": 109,
+              "character": 25
+            }
+          },
+          "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"key\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__setitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+          "severity": 1,
+          "code": "reportArgumentType",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 64
+            },
+            "end": {
+              "line": 112,
+              "character": 67
+            }
+          },
+          "message": "Cannot access attribute \"det\" for class \"MatrixElement\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 64
+            },
+            "end": {
+              "line": 112,
+              "character": 67
+            }
+          },
+          "message": "Cannot access attribute \"det\" for class \"list[Unknown]\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 34
+            },
+            "end": {
+              "line": 112,
+              "character": 36
+            }
+          },
+          "message": "\"__getitem__\" method not defined on type \"MatrixElement\"",
+          "severity": 1,
+          "code": "reportIndexIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 34
+            },
+            "end": {
+              "line": 112,
+              "character": 41
+            }
+          },
+          "message": "No overloads for \"__getitem__\" match the provided arguments",
+          "severity": 1,
+          "code": "reportCallIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+          },
+          "relatedInformation": [
+            {
+              "location": {
+                "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+                "range": {
+                  "start": {
+                    "line": 1252,
+                    "character": 8
+                  },
+                  "end": {
+                    "line": 1252,
+                    "character": 19
+                  }
+                }
+              },
+              "message": "Overload 2 is the closest match"
+            }
+          ]
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 34
+            },
+            "end": {
+              "line": 112,
+              "character": 41
+            }
+          },
+          "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+          "severity": 1,
+          "code": "reportArgumentType",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 27
+            },
+            "end": {
+              "line": 112,
+              "character": 28
+            }
+          },
+          "message": "\"__setitem__\" method not defined on type \"MatrixElement\"",
+          "severity": 1,
+          "code": "reportIndexIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 27
+            },
+            "end": {
+              "line": 112,
+              "character": 33
+            }
+          },
+          "message": "No overloads for \"__setitem__\" match the provided arguments",
+          "severity": 1,
+          "code": "reportCallIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+          },
+          "relatedInformation": [
+            {
+              "location": {
+                "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+                "range": {
+                  "start": {
+                    "line": 1257,
+                    "character": 8
+                  },
+                  "end": {
+                    "line": 1257,
+                    "character": 19
+                  }
+                }
+              },
+              "message": "Overload 2 is the closest match"
+            }
+          ]
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 27
+            },
+            "end": {
+              "line": 112,
+              "character": 33
+            }
+          },
+          "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"key\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__setitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+          "severity": 1,
+          "code": "reportArgumentType",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 49
+            },
+            "end": {
+              "line": 112,
+              "character": 51
+            }
+          },
+          "message": "\"__getitem__\" method not defined on type \"MatrixElement\"",
+          "severity": 1,
+          "code": "reportIndexIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 49
+            },
+            "end": {
+              "line": 112,
+              "character": 56
+            }
+          },
+          "message": "No overloads for \"__getitem__\" match the provided arguments",
+          "severity": 1,
+          "code": "reportCallIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+          },
+          "relatedInformation": [
+            {
+              "location": {
+                "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+                "range": {
+                  "start": {
+                    "line": 1252,
+                    "character": 8
+                  },
+                  "end": {
+                    "line": 1252,
+                    "character": 19
+                  }
+                }
+              },
+              "message": "Overload 2 is the closest match"
+            }
+          ]
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 49
+            },
+            "end": {
+              "line": 112,
+              "character": 56
+            }
+          },
+          "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+          "severity": 1,
+          "code": "reportArgumentType",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 42
+            },
+            "end": {
+              "line": 112,
+              "character": 43
+            }
+          },
+          "message": "\"__setitem__\" method not defined on type \"MatrixElement\"",
+          "severity": 1,
+          "code": "reportIndexIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 42
+            },
+            "end": {
+              "line": 112,
+              "character": 48
+            }
+          },
+          "message": "No overloads for \"__setitem__\" match the provided arguments",
+          "severity": 1,
+          "code": "reportCallIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+          },
+          "relatedInformation": [
+            {
+              "location": {
+                "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+                "range": {
+                  "start": {
+                    "line": 1257,
+                    "character": 8
+                  },
+                  "end": {
+                    "line": 1257,
+                    "character": 19
+                  }
+                }
+              },
+              "message": "Overload 2 is the closest match"
+            }
+          ]
+        },
+        {
+          "range": {
+            "start": {
+              "line": 112,
+              "character": 42
+            },
+            "end": {
+              "line": 112,
+              "character": 48
+            }
+          },
+          "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"key\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__setitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+          "severity": 1,
+          "code": "reportArgumentType",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 113,
+              "character": 13
+            },
+            "end": {
+              "line": 113,
+              "character": 16
+            }
+          },
+          "message": "Cannot access attribute \"det\" for class \"MatrixElement\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 113,
+              "character": 13
+            },
+            "end": {
+              "line": 113,
+              "character": 16
+            }
+          },
+          "message": "Cannot access attribute \"det\" for class \"list[Unknown]\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 135,
+              "character": 49
+            },
+            "end": {
+              "line": 135,
+              "character": 50
+            }
+          },
+          "message": "\"__setitem__\" method not defined on type \"MatrixElement\"",
+          "severity": 1,
+          "code": "reportIndexIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 135,
+              "character": 49
+            },
+            "end": {
+              "line": 135,
+              "character": 60
+            }
+          },
+          "message": "No overloads for \"__setitem__\" match the provided arguments",
+          "severity": 1,
+          "code": "reportCallIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+          },
+          "relatedInformation": [
+            {
+              "location": {
+                "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+                "range": {
+                  "start": {
+                    "line": 1255,
+                    "character": 8
+                  },
+                  "end": {
+                    "line": 1255,
+                    "character": 19
+                  }
+                }
+              },
+              "message": "Overload 1 is the closest match"
+            }
+          ]
+        },
+        {
+          "range": {
+            "start": {
+              "line": 135,
+              "character": 49
+            },
+            "end": {
+              "line": 135,
+              "character": 60
+            }
+          },
+          "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"key\" of type \"SupportsIndex\" in function \"__setitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is incompatible with protocol \"SupportsIndex\"\n\u00a0\u00a0\u00a0\u00a0\"__index__\" is not present",
+          "severity": 1,
+          "code": "reportArgumentType",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 136,
+              "character": 33
+            },
+            "end": {
+              "line": 136,
+              "character": 36
+            }
+          },
+          "message": "Cannot access attribute \"det\" for class \"MatrixElement\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 136,
+              "character": 33
+            },
+            "end": {
+              "line": 136,
+              "character": 36
+            }
+          },
+          "message": "Cannot access attribute \"det\" for class \"list[Unknown]\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 157,
+              "character": 16
+            },
+            "end": {
+              "line": 157,
+              "character": 25
+            }
+          },
+          "message": "Argument of type \"tuple[int, Unknown, Unknown]\" cannot be assigned to parameter \"value\" of type \"None\" in function \"__setitem__\"\n\u00a0\u00a0\"tuple[int, Unknown, Unknown]\" is not assignable to \"None\"",
+          "severity": 1,
+          "code": "reportArgumentType",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+          }
+        },
+        {
+          "range": {
+            "start": {
+              "line": 163,
+              "character": 28
+            },
+            "end": {
+              "line": 163,
+              "character": 37
+            }
+          },
+          "message": "\"None\" is not iterable\n\u00a0\u00a0\"__iter__\" method not defined",
+          "severity": 1,
+          "code": "reportGeneralTypeIssues",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportGeneralTypeIssues"
+          }
+        }
+      ]
+    }
+  },
+  "AST": "positive energy_bound structural query through xd://ast_grep",
+  "python": "/home/administrator/substrate-framework/.venv/bin/python",
+  "missing_device": "xd://lsp not mounted; direct JSON-RPC exercised",
+  "diagnostic_limitation": "Original source has Pyright SymPy Matrix typing diagnostics; preserved and not a claim of clean diagnostics. Parent owns post-edit diagnostics."
+}

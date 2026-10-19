@@ -1,0 +1,65 @@
+NEW LAW / NOT A REPAIR OF THE OLD S1 QUANTUM-LINK LAW
+L4 periodic cubic lattice, V64, 192 positive arcs; t1,U4,I16, ions1.
+Hilbert: two original same-charge fermions per site; every link l2(Z).
+E|m>=m|m>, U|m>=|m+1>, Udag U=U Udag=1, [E,U]=U.
+Dtail=+1,Dhead=-1; G=DE-(nup+ndown-1).
+H=ΣE²/32+2Σ(nup+ndown-1)²-Σ[c_a†U_e c_b+h.c.].
+H preserves every G. No magnetic plaquette or Maxwell term is added.
+
+EXACT DOWN-PARTICLE-HOLE CHANGE OF VARIABLES
+On even periodic L4, epsilon_a epsilon_b=-1 on every primitive arc.
+h_v=epsilon_v c_down,v†; n_down=1-n_h, rho=n_u-n_h.
+The down hopping becomes -h_a† U_e† h_b+h.c. (complex-conjugate phases).
+The physical charge of the original fields has NOT been changed.
+2(nup+ndown-1)² = -4(nu-1/2)(nh-1/2)+1.
+Equivalently 2nu+2nh-4nu nh; ALL constant and linear terms remain.
+G=DE-nu+nh. Periodic Gauss imposes sum nu=sum nh, i.e. original N=64.
+This allows every original spin mixture; it is NOT canonical32up/32down.
+
+TEMPORAL PROJECTOR AND POSITIVE PATH MEASURE
+P_G=∫[dalpha/2pi] exp(i alpha·DE) exp(-i alpha·nu)exp(+i alpha·nh).
+Gauge fixing temporal transport to one boundary leaves compact alpha_v.
+Let M slices, dt=beta/M, h(theta)ab=-exp(i theta_e), B_l=exp(-dt h_l)exp(lambda s_l).
+cosh(lambda)=exp(dt U/2), s=±1 independently at each site and slice.
+exp(-dt Honsite)=Σ_s exp(-dt U/2-lambda s)exp(lambda s(nu+nh))/2.
+Fermion trace D_u=det[1+diag(exp(-i alpha)) B_M-1...B_0].
+Hole trace is exactly D_u*, including its boundary holonomy and real HS.
+The full scalar exp[-M V dt U/2-lambda Σs]/2^(MV) multiplies |D_u|².
+Rotor factor is Π_l,e K_dt(theta_l+1-theta_l+delta_l,M-1 D^T alpha).
+K_dt(delta)=Σ_m∈Z exp(-dt m²/(2I)+i m delta)>0.
+Poisson form sqrt(2pi I/dt)Σ_w∈Z exp[-I(delta+2pi w)²/(2dt)] is used.
+Numerical wrapped-image sum w=-2..2 omits |delta+2piw|>=5pi, not |E|>Emax.
+The log omitted-image leading suppression is -(5pi)² I/(2dt); scope is reported.
+All alpha are integrated; replacing projection with mean half filling is invalid.
+
+ACTUAL ESTIMATORS AND DYNAMICAL MEANING
+Finite-beta, finite-Trotter determinant MC, no claimed exact ground state.
+Angles static-link/full-time-bridge, joint alpha/linear-path, uniform-alpha and HS moves.
+Local HS slices use exact rank-one determinant ratios; no fake positive weights.
+Bridge proposal q=product K_dt(delta)/K_beta(g), g=D^T alpha; MH ratio uses qold/qnew.
+Generate winding w with p(w) proportional exp[-I(gwrapped+2piw)²/(2beta)],
+then Gaussian increments conditioned on sum=gwrapped+2piw and wrap all angles.
+Numerical winding-image sampler -4..4 has omitted distances >=9pi (bound7pi reported).
+Other proposals are symmetric or exact HS conditional updates; no clipped determinants.
+First fixed-time-initialization attempt is preserved and rejected as insufficiently mixed.
+Finite chains do not prove equilibration, every winding visited, or small errors.
+No electric sector is projected out by the law, estimator, or Gaussian heat kernel.
+J_e=-dH/dA_e=i(c_a†U_e c_b-h.c.), A enters fermion Peierls phase only.
+Contact d²H/dA_e²=c_a†U_e c_b+h.c.; primitive derivatives are benchmarked.
+E insertions on kinetic bonds: -i K'/K; coincident E² is -K''/K.
+Separated current correlators use full Gaussian Wick virtuals, then path averaging.
+Two transverse modes y/z at q=(±pi/2,0,0), normalized by sqrt(V), are measured.
+EE, JJ, EJ and contact are imaginary-time thermal correlators, not real-time poles.
+Finite-dt operator insertions are not falsely asserted to satisfy continuum Ward zero.
+The same-H electric-only baseline fails: i[H,E_e]=J_e, so dropping hopping changes H.
+Rotor unitarity enables genuine Wilson orbitals, but no photon/Nature/c claim follows.
+Band40's finite-tree frame construction is a separate new law, not silently joined.
+
+FIELD-CURRENT LINK WITHOUT FITTING THE NOISY DIRECT ELECTRIC TRACE
+For the exact thermal H, J=i[H,E], K=[E,[H,E]], CEE''(tau)=CJJ(tau).
+Thermal spectral pairing gives CEE'(0+)=-<K>/2.
+Hence DeltaCEE(tau)=-tau<K>/2+integral_0^tau (tau-u)CJJ(u)du.
+Reported continuity_delta_EE applies trapezoidal quadrature to finite-dt measured JJ.
+It is a derived current-linked SHAPE, not direct resolved EE, a discrete Ward proof,
+an absolute field variance, a real-time pole, or a repair of the noisy electric estimator.
+Raw corrected V64 EE is explicitly seed/noise-limited; no field-decay fit is made.

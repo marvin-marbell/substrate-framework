@@ -1,0 +1,34 @@
+{
+  "law": "triangle-active-neutral-rotor-charged-supplier-shared-gauss-v1-20261014",
+  "geometry": "Three vertices 0,1,2; oriented links l: l->(l+1)%3. One active +1 spin1/2 particle, one distinguishable supplier +1 particle and static -2 at vertex0. Supplier plus its static -1 reference is a neutral microscopic supplier, NOT an additional bare magnetic term. A neutral three-position orientor r=0,1,2 shares geometry but has no electric charge.",
+  "hilbert_space": "All tuples (x,y,r,E0,E1,E2), integer E, sum E_l^2<=cutoff, B E + delta_x + delta_y -2 delta_0=0. Both active spin +/- blocks retained, full dimension306 at cutoff24. No supplier comparator omits y and changes reference to -1. Vacuum source omits x and changes reference to -1. This is a literal finite-energy projected link Hilbert space, not a low-mode spinor projection.",
+  "operators": {
+    "B": [[1,0,-1],[-1,1,0],[0,-1,1]],
+    "Ta_l": "-ta |x=l+1><x=l| U_l, U_l raises E_l by1; projected at the outer energy boundary",
+    "Tm_l": "-tm |y=l+1><y=l| U_l; the SAME U_l as active particle, not an independent field copy",
+    "R": "sum_r |r+1><r|, cyclic; Ln=i(R-Rdagger)/sqrt3, eigenvalues0,+/-1",
+    "W": "P U0 U1 U2 P; maps E->E+(1,1,1) at fixed x,y,r, commutes with Gauss",
+    "F": "(W-Wdagger)/(2i), dimensionless compact sin holonomy, not continuum B",
+    "C": "(W+Wdagger)/2",
+    "Ja_l": "-i(Ta_l-Ta_l dagger); Ja_l=-partial H/partial A_l at Ta_l->exp(i A_l)Ta_l, so H(A)=H-Ja_l A_l+O(A_l^2)",
+    "Jm_l": "-i(Tm_l-Tm_l dagger)",
+    "contact_l": "-(Ta_l+Ta_l dagger+Tm_l+Tm_l dagger)",
+    "circulations": "Ia=sum_l Ja_l/3; Im=sum_l Jm_l/3; It=Ia+Im; these are loop circulation units, not a continuum magnetic moment normalization"
+  },
+  "hamiltonian": "H=sum_l E_l^2/(2 inertia) + sum_l(Ta_l+Ta_l dagger+Tm_l+Tm_l dagger) -tn(R+Rdagger) -v cos(2pi(x-r)/3) + kappa Sz Ln. NO Wilson restoring or B^2 term.",
+  "input_torque": "Chosen axial Sz Ln transfers spin dependence into the neutral rotor's actual orbital circulation and into charged motion through the chosen positional alignment. Sz conserved, not a full SO3-derived torque law. Full spin Hamiltonian Hup direct-sum Hdown; transverse Sx is offdiagonal identity/2. No claim this primitive spin/torque/geometry is derived.",
+  "identities": [
+    "Gauss: B E+rho=0 exactly on every basis state.",
+    "dot rho=i[H,rho]=-B(Ja+Jm).",
+    "dot E_l=i[H,E_l]=Ja_l+Jm_l. Therefore EVERY stationary zero-source total current vanishes; active and supplier counterflow can nevertheless be nonzero and physical sinWilson flux need not vanish.",
+    "H(lambda)=H-lambda F is a physical gauge-invariant loop source, not an arbitrary simultaneous Peierls coordinate shift. dEground/dlambda=-<F>.",
+    "With source, dot E_l=Ja_l+Jm_l+lambda C, hence stationary total circulation=-lambda<C>. The probe supplies a loop current; species current alone is not the full external-source current.",
+    "Unconstrained uniform-link phase family H(A)=exp(i sum A_l E_l) H(0) exp(-i sum A_l E_l), so its ground energy derivative is not an intrinsic magnetic moment measurement.",
+    "Physical retarded commutator convention chi_AB(z)=<delta A (z-H+E)^-1 delta B>-<delta B (z+H-E)^-1 delta A>. For perturbation -lambda B, static derivative delta<A>/delta lambda=-chi_AB(0); stored retarded chi and positive static flux susceptibility thus have opposite signs."
+  ],
+  "actual_induction_not_splicing": "Supplier dynamics is present explicitly in H on the same constrained E basis as active motion; integrating it out is not used to build H. A separate clamped-holonomy comparator diagonalizes the actual supplier's three-site hopping: ground band near phi0 is -2tm cos(phi/3), yielding curvature2tm/9=0.311111 for tm1.4. That demonstrates why charged loop dynamics can stiffen a physical flux, but this adiabatic comparator is NOT substituted for the quantum joint H and is not a proof of bulk magnetic stiffness.",
+  "charged_source": "Creates active at site a, adds static -1 anchor0 reference, and raises E along tree0->1->2 up to a. Actual projected source normalization is serialized. Vacuum addition and occupied removal use different actual prepared states and are reported separately. No N2 sector, pair creation or positron claim.",
+  "spin_pulse": "Prepare |Sz+> tensor gup; ideal external sigma_x pulse yields |Sz-> tensor gup; evolve with Hdown. Field/current trajectories are exact finite joint-H evolution, not equilibrium time interpolation. In isolated finite system no relaxation to opposite ground is asserted.",
+  "parameters": {"cutoff":24,"inertia":3,"active_hop":1,"medium_hop":1.4,"neutral_hop":0.7,"alignment":1.1,"transfer":1},
+  "units": "hbar=abscharge=triangle_edge=1, energy units arbitrary; inertia inverse energy, time inverse energy, flux dimensionlesscompact. No supplied mass normalization."
+}

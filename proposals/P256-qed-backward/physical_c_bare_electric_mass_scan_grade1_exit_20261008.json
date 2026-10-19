@@ -1,0 +1,382 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "physical_c_bare_electric_mass.py",
+    "--scan-photon-grade",
+    "1",
+    "--scan-normal-order",
+    "1",
+    "--mass",
+    "-25",
+    "--mass",
+    "-15",
+    "--mass",
+    "-10",
+    "--mass",
+    "-5",
+    "--mass",
+    "-2.0282053185612114",
+    "--mass",
+    "0",
+    "--mass",
+    "5",
+    "--output",
+    "physical_c_bare_electric_mass_scan_grade1_20261008.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "natural_exit_observed": true,
+  "completion_evidence": "bg_1232 completed naturally; terminal capsule_written; no timeout or cancellation",
+  "process_wall_seconds": 994.32,
+  "process_output_artifact": "artifact://8760",
+  "capsule": "physical_c_bare_electric_mass_scan_grade1_20261008.json",
+  "capsule_sha256": "5125ed390f2a162a6e8b1c7dd0499d9ddf11f4e021fecb4df0def0e66264f6f6",
+  "historical_grade0_capsule": {
+    "path": "physical_c_bare_electric_mass_scan_native_20261008.json",
+    "sha256": "704467d48ec294b578f139f98f8965da7d53d4f60e657bf0a90afc20b848818f",
+    "natural_exit_receipt": "physical_c_bare_electric_mass_scan_native_exit_20261008.json"
+  },
+  "execution": {
+    "input_json": "{\"NEW_Coulomb_coefficient\":0.02,\"arguments\":{\"mass\":[-25.0,-15.0,-10.0,-5.0,-2.0282053185612114,0.0,5.0],\"mass_tolerance\":0.002,\"output\":\"physical_c_bare_electric_mass_scan_grade1_20261008.json\",\"scan_normal_order\":1,\"scan_photon_grade\":1,\"spacing\":0.01,\"target_physical\":1.0},\"core_epoch\":\"6a66ca3a45b05e8df46cc1cec90aa775d97cd60341186639fdaf1dfd5fce9e64\",\"electric_coefficient\":0.02,\"exact89_Coulomb_coefficient\":0.01,\"exact_REFERENCE89_epoch\":\"89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2\",\"full_default_parameters\":{\"bare_mass\":-2.0282053185612114,\"centre_penalty\":10.0,\"chart_radius\":0.02,\"colour_order\":1,\"colour_sigma\":0.003,\"electric_coefficient\":0.02,\"normal_order\":3,\"normal_sigma\":0.01,\"outside_couplings\":[0.07,0.02,0.03],\"outside_quartic\":0.02,\"photon_grade\":1,\"prefix_steps\":4,\"quadrature_order\":2,\"spacing\":0.01},\"no_source_fitted_shift\":true,\"original_bare_mass\":-2.0282053185612114,\"pinned_template_revision\":\"89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe\",\"plan_id\":\"issue-222-induced-photon-continuation-20261008\",\"scan_uses_complete_KN_KC_eigenpairs\":true,\"scoped_work_items\":[\"joined-explanatory-campaign\",\"shared-compton-transfer\"],\"target_transfer\":0.01}",
+    "input_sha256": "82cacf2ef17765bb97f7af52fb00c5dfc338ac4c46947a02f472f418b2add2aa",
+    "source_at_IMPORT": {
+      "physical_c_bare_electric_mass.py": "2a2509d2e1913d9d0bf791be14126cd573f0c292c79ded9112c6830ac8b0fae1",
+      "physical_c_bare_electric_kernel.py": "6a66ca3a45b05e8df46cc1cec90aa775d97cd60341186639fdaf1dfd5fce9e64",
+      "captured_reference89.py": "89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2",
+      "captured_ledger.py": "567985093c8e3e512d78b064427996aa92a5a7abab36886d7cf21b4e1d623c87",
+      "captured_Alpha56/physical_alpha_compton.py": "56e1c611bffe17964644b47b6aca7ed496a195c8f4795e76e657ee2c01c3ff04",
+      "captured_Alpha56/sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+      "captured_Alpha56/rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459"
+    },
+    "capsule_hashes_at_IMPORT": {
+      "physical_c_real_cover_kernel_smooth_packet_capsule.json": "e6242d6801be2806624305469f21732c5d25473a672dbc17d0255692c1b2f57b",
+      "physical_c_completed_ledger_same_halfstep_capsule.json": "0aaaf5d58e3073d12337c34b4b2c7915e990d70e22382ccd8e93eb737d353f3a",
+      "physical_alpha_compton_Cartesian_final_native_capsule.json": "569e932d9cee150395fa4a27dd9a4355dace8b7de367db9c271b6c7bcca84d51"
+    },
+    "startup_unchanged": {
+      "physical_c_bare_electric_mass.py": true,
+      "physical_c_bare_electric_kernel.py": true,
+      "physical_c_real_cover_kernel_smooth_packet_capsule.json": true,
+      "physical_c_completed_ledger_same_halfstep_capsule.json": true,
+      "physical_alpha_compton_Cartesian_final_native_capsule.json": true
+    },
+    "runtime": {
+      "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.39",
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    },
+    "runtime_seconds": 989.1323232650757
+  },
+  "selections": [
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "sampled_domain": [
+        -25.0,
+        5.0
+      ],
+      "sampled_brackets": [],
+      "actual_roots": [],
+      "bounded_minimizer_mass": -1.1806176541281859,
+      "bounded_minimizer_gap_TRANSFER": 0.2554653032005803,
+      "bounded_minimizer_gap_PHYSICAL": 25.54653032005803,
+      "optimizer_success": true,
+      "optimizer_message": "Solution found.",
+      "selection": "bounded_minimum_candidate_NOT_root",
+      "selected_mass": -1.1806176541281859
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "sampled_domain": [
+        -25.0,
+        5.0
+      ],
+      "sampled_brackets": [],
+      "actual_roots": [],
+      "bounded_minimizer_mass": -1.1134192897656376,
+      "bounded_minimizer_gap_TRANSFER": 0.2537236530149942,
+      "bounded_minimizer_gap_PHYSICAL": 25.37236530149942,
+      "optimizer_success": true,
+      "optimizer_message": "Solution found.",
+      "selection": "bounded_minimum_candidate_NOT_root",
+      "selected_mass": -1.1134192897656376
+    }
+  ],
+  "all_grade1_normal3_source_and_gap_summaries": [
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "reason": "original_input_control",
+      "mass": -2.0282053185612114,
+      "lambdaN": 101.41194042202225,
+      "gaps_TRANSFER": {
+        "5": [
+          0.25560102031311976,
+          9.462803090699948,
+          19.24385482382704,
+          9.462803090700056
+        ]
+      },
+      "negative": false,
+      "outside_factor_norm": 7.647389847603187,
+      "sources": [
+        {
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "number": 5,
+          "fullsource_mean_PHYSICAL": 26.732865898102837,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999921416574,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.7595683177309581,
+          "E1_PHYSICAL": 20.30543797834927,
+          "gap_weight": 0.33822303849217766,
+          "centre0_gap_raw_weight": 0.4367262530345487
+        },
+        {
+          "preparation": "original_reference_photon_packet",
+          "number": 5,
+          "fullsource_mean_PHYSICAL": 225.7653033283372,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999483763202115,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.10267963199659805,
+          "E1_PHYSICAL": 23.181498263353998,
+          "gap_weight": 5.1537385867644755e-12,
+          "centre0_gap_raw_weight": 6.654700259779243e-12
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "reason": "target_derived_scan_candidate",
+      "mass": -1.1806176541281859,
+      "lambdaN": 104.20570745659053,
+      "gaps_TRANSFER": {
+        "5": [
+          0.25546449617399364,
+          9.466115111869359,
+          19.248741753774972,
+          9.466115111869462
+        ]
+      },
+      "negative": false,
+      "outside_factor_norm": 7.647389847603187,
+      "sources": [
+        {
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "number": 5,
+          "fullsource_mean_PHYSICAL": 26.7892884036786,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999922138766,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.7590174507822166,
+          "E1_PHYSICAL": 20.33353739242973,
+          "gap_weight": 0.34544651923320235,
+          "centre0_gap_raw_weight": 0.4459925889613585
+        },
+        {
+          "preparation": "original_reference_photon_packet",
+          "number": 5,
+          "fullsource_mean_PHYSICAL": 225.55932935332677,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999488881456265,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.10284016328572275,
+          "E1_PHYSICAL": 23.19655826131424,
+          "gap_weight": 4.7871822181485485e-12,
+          "centre0_gap_raw_weight": 6.180545098677147e-12
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "reason": "original_input_control",
+      "mass": -2.0282053185612114,
+      "lambdaN": 94.15401665709936,
+      "gaps_TRANSFER": {
+        "5": [
+          0.25388937892640345,
+          9.461680347219444,
+          19.22446006579312,
+          9.461680347219998
+        ],
+        "3": [
+          0.25388937892640356,
+          9.461680347219994,
+          19.224460065793124,
+          9.461680347219447
+        ]
+      },
+      "negative": false,
+      "outside_factor_norm": 8.577631624098347,
+      "sources": [
+        {
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "number": 5,
+          "fullsource_mean_PHYSICAL": 26.820990396073626,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999998455085,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.7587571141538557,
+          "E1_PHYSICAL": 20.350617271673105,
+          "gap_weight": 0.33687922595946296,
+          "centre0_gap_raw_weight": 0.43424716008636144
+        },
+        {
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "number": 3,
+          "fullsource_mean_PHYSICAL": 26.820990396073583,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999998455085,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.758757114153856,
+          "E1_PHYSICAL": 20.35061727167308,
+          "gap_weight": 0.336879225959463,
+          "centre0_gap_raw_weight": 0.43424716008636144
+        },
+        {
+          "preparation": "original_reference_photon_packet",
+          "number": 5,
+          "fullsource_mean_PHYSICAL": 55.45836647837972,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999947063423,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.5659955331983886,
+          "E1_PHYSICAL": 31.389187705242172,
+          "gap_weight": 2.371296574347758e-10,
+          "centre0_gap_raw_weight": 3.0566705328898487e-10
+        },
+        {
+          "preparation": "original_reference_photon_packet",
+          "number": 3,
+          "fullsource_mean_PHYSICAL": 55.458366478379716,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999947063425,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.5659955331983887,
+          "E1_PHYSICAL": 31.389187705242172,
+          "gap_weight": 2.371296574178363e-10,
+          "centre0_gap_raw_weight": 3.056670532671493e-10
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "reason": "target_derived_scan_candidate",
+      "mass": -1.1134192897656376,
+      "lambdaN": 96.97477252653555,
+      "gaps_TRANSFER": {
+        "5": [
+          0.2537228509328622,
+          9.465473005519927,
+          19.230214550889812,
+          9.465473005520462
+        ],
+        "3": [
+          0.25372285093286245,
+          9.465473005520458,
+          19.230214550889816,
+          9.46547300551993
+        ]
+      },
+      "negative": false,
+      "outside_factor_norm": 8.577631624098347,
+      "sources": [
+        {
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "number": 5,
+          "fullsource_mean_PHYSICAL": 26.897171503862097,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999996242994,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.7580486008529274,
+          "E1_PHYSICAL": 20.38936322540389,
+          "gap_weight": 0.34478043069354103,
+          "centre0_gap_raw_weight": 0.44435803951245995
+        },
+        {
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "number": 3,
+          "fullsource_mean_PHYSICAL": 26.897171503862115,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999996242998,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.758048600852927,
+          "E1_PHYSICAL": 20.389363225403894,
+          "gap_weight": 0.34478043069354103,
+          "centre0_gap_raw_weight": 0.44435803951246
+        },
+        {
+          "preparation": "original_reference_photon_packet",
+          "number": 5,
+          "fullsource_mean_PHYSICAL": 55.25219981917982,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999950422594,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.56685765531243,
+          "E1_PHYSICAL": 31.320132440354143,
+          "gap_weight": 2.0590129302754343e-10,
+          "centre0_gap_raw_weight": 2.653685846344462e-10
+        },
+        {
+          "preparation": "original_reference_photon_packet",
+          "number": 3,
+          "fullsource_mean_PHYSICAL": 55.25219981917983,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999950422594,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "halfstep_Gram": 0.5668576553124302,
+          "E1_PHYSICAL": 31.320132440354154,
+          "gap_weight": 2.059012930081876e-10,
+          "centre0_gap_raw_weight": 2.653685846095001e-10
+        }
+      ]
+    }
+  ],
+  "scoped_numerical_consumer_reconstruction": {
+    "centre_source_rows": 120,
+    "minimum_retained_K_eigenvalue": 2.734574076428937e-11,
+    "max_raw_source_Gram_residual": 1.6653345369377348e-15,
+    "max_fullsource_E1_TRANSFER_residual": 5.551115123125783e-17,
+    "max_literal_physical_Pe4_Gram_residual": 0.0
+  },
+  "language_tooling": {
+    "root": "/home/administrator/substrate-222",
+    "pyright_langserver_version": "1.1.414",
+    "actual_document_symbols_exercised": true,
+    "actual_numpy_definition_resolved": true,
+    "final_mass_file_diagnostics": [],
+    "ast_grep_version": "0.45.3",
+    "positive_AST_patterns": [
+      "BareElectricParameters class in kernel",
+      "complete_case function in mass file"
+    ],
+    "LSP_device_absent_direct_JSON_RPC_used": true
+  },
+  "reviewed_scientific_outcome": {
+    "target_physical": 1.0,
+    "target_TRANSFER": 0.01,
+    "actual_bracket_or_root_found": false,
+    "bounded_grade0_domain": [
+      -100.0,
+      20.0
+    ],
+    "bounded_grade1_domain": [
+      -25.0,
+      5.0
+    ],
+    "material_NEW_bare_electric_construction_tested": true,
+    "negative_charged_energy_observed": false,
+    "both_literal_Pe_windows_measured": true,
+    "all4centres_complete_N4_N5_N3_in_NEW": true,
+    "grade0_mass_candidate_invalidated_by_grade1_refinement": true,
+    "no_global_no_go_claim": true,
+    "no_electronpole_spin_translation_or_kineticmass_admission": true,
+    "dark_photon_prepared_gap_branch_not_absent_pureS_residue": true
+  },
+  "verification_scope": "Two actual scientific CLI natural exits; scoped numerical reconstruction and actual LSP/AST. No project suites/linters/formatters. Historical capsules and frozen controls preserved."
+}

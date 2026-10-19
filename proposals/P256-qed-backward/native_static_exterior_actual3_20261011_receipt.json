@@ -1,0 +1,392 @@
+{
+  "schema": 1,
+  "scope": "NATIVE_STATIC_EXTERIOR_TWO_ATTEMPTED_GATES_WITH_EXPLICIT_UNPAID_GROUND_INEQUALITY",
+  "coefficients": {
+    "all65_loads": [
+      1,
+      1,
+      63
+    ],
+    "B": {
+      "numerator_bits": 8245,
+      "denominator_bits": 45,
+      "sha256": "1b7c9eb9ac198a7bb987e3c704521cc26565c2a07ca9c9efc43863c9debf62c1"
+    },
+    "B_lt_512lambda": true,
+    "alignment_alpha": {
+      "numerator_bits": 10238,
+      "denominator_bits": 3,
+      "sha256": "435d3f4b069fa9ff09564bb8c598215518073b95d5830b2c1888d58d7ddcf97a"
+    },
+    "kinetic_Phi": {
+      "numerator_bits": 1,
+      "denominator_bits": 4095,
+      "sha256": "92f4333521bd4418277ba5b813b2708f32399f7ed405f014b6945ad9a716e13e"
+    },
+    "kinetic_Haar": {
+      "numerator_bits": 2,
+      "denominator_bits": 4101,
+      "sha256": "8e1e8e70f0f110b12a1b1fcc274c2639e76ebf37e0fb016c83e7208d33a8baba"
+    },
+    "kinetic_fullE": 64,
+    "onsite_and_literal_path_loads": [
+      "913738143146967/8796093022208",
+      "26483264839360231/140737488355328",
+      "26736592318399821/140737488355328"
+    ],
+    "bounded_intercell_envelope": "J_M=4alpha M^2+2B M+8beta",
+    "same_original_coefficients": true
+  },
+  "cutoff_gate": {
+    "status": "FAILED_AVAILABLE_ESTIMATE_NOT_ACTUAL_GROUND_NO_GO",
+    "scope": "best-case bounded-interaction field cone; kinetic cutoff and static-core membership not granted",
+    "rows": [
+      {
+        "M": 4,
+        "radius_div_fixed_native_time_constant": 16,
+        "cube_patch_sites": 35937,
+        "union_tail_squared_div_C4": "35937/256",
+        "norm_tail_bound_div_sqrt_C4": 11.848160458484685,
+        "single_site_quadratic_action_tail_squared_div_C4": 1,
+        "linear_hop_tail_squared_div_B2_C4": "1/16",
+        "fullE_kinetic_action_tail_from_second_moment": "unbounded"
+      },
+      {
+        "M": 16,
+        "radius_div_fixed_native_time_constant": 256,
+        "cube_patch_sites": 135005697,
+        "union_tail_squared_div_C4": "135005697/65536",
+        "norm_tail_bound_div_sqrt_C4": 45.38748123391283,
+        "single_site_quadratic_action_tail_squared_div_C4": 1,
+        "linear_hop_tail_squared_div_B2_C4": "1/256",
+        "fullE_kinetic_action_tail_from_second_moment": "unbounded"
+      },
+      {
+        "M": 64,
+        "radius_div_fixed_native_time_constant": 4096,
+        "cube_patch_sites": 549957165057,
+        "union_tail_squared_div_C4": "549957165057/16777216",
+        "norm_tail_bound_div_sqrt_C4": 181.05248262562807,
+        "single_site_quadratic_action_tail_squared_div_C4": 1,
+        "linear_hop_tail_squared_div_B2_C4": "1/4096",
+        "fullE_kinetic_action_tail_from_second_moment": "unbounded"
+      }
+    ],
+    "exact_exponents": [
+      {
+        "a": "1",
+        "norm_union_M_exponent": "-1/2",
+        "cone_requires_a_ge_2": false,
+        "union_requires_a_lt_4over3": true
+      },
+      {
+        "a": "4/3",
+        "norm_union_M_exponent": "0",
+        "cone_requires_a_ge_2": false,
+        "union_requires_a_lt_4over3": false
+      },
+      {
+        "a": "2",
+        "norm_union_M_exponent": "1",
+        "cone_requires_a_ge_2": true,
+        "union_requires_a_lt_4over3": false
+      },
+      {
+        "a": "3",
+        "norm_union_M_exponent": "5/2",
+        "cone_requires_a_ge_2": true,
+        "union_requires_a_lt_4over3": false
+      }
+    ],
+    "higher_moment_norm_action_total_triangle_M_exponent": "8-p/2; p>16 needed for this estimate",
+    "higher_moment_union_M_exponent": "3-p/2; p>6 needed",
+    "time": [
+      0.25,
+      1,
+      2
+    ],
+    "N_requirement": "even N>4(R+r_A+2), no wrap; larger N allowed; small N not used to infer limit",
+    "actual_cutoff_evolved_moment_budget_computed": false
+  },
+  "native_quadratic_action_tails": {
+    "status": "NATIVE_NONSTATIONARY_MOMENT_IMPLICATION_COUNTERCASE",
+    "dimension_per_site": 60,
+    "state": "normalized physical Gaussian/Haar/affine canonical mixture; NOT a minimizing ground",
+    "source_norm": 1,
+    "all65_CAR_and_fullE_remain": true,
+    "complete_alignment": "alpha sum_mu ||Phi_mu,x-U Phi_mu,y U*||HS^2",
+    "SU4_uniform_lower_bound_not_frozen_link": true,
+    "rows": [
+      {
+        "M": 4,
+        "mixture_high_probability": "1/256",
+        "high_variance": "8/15",
+        "high_local_s2_mixture": "31/30",
+        "complete_single_alignment_action_squared_div_alpha2_high_component": "8959/7680",
+        "alignment_tail_squared_div_alpha2_lower": 0.033859944646377226,
+        "gamma_Q32_at_7point5": 0.9999999999727422,
+        "neighbour_event_probability": 0.52428301389368
+      },
+      {
+        "M": 16,
+        "mixture_high_probability": "1/65536",
+        "high_variance": "128/15",
+        "high_local_s2_mixture": "31/30",
+        "complete_single_alignment_action_squared_div_alpha2_high_component": "2047519/1966080",
+        "alignment_tail_squared_div_alpha2_lower": 0.06458333333157294,
+        "gamma_Q32_at_7point5": 0.9999999999727422,
+        "neighbour_event_probability": 1.0
+      },
+      {
+        "M": 64,
+        "mixture_high_probability": "1/16777216",
+        "high_variance": "2048/15",
+        "high_local_s2_mixture": "31/30",
+        "complete_single_alignment_action_squared_div_alpha2_high_component": "520347679/503316480",
+        "alignment_tail_squared_div_alpha2_lower": 0.06458333333157294,
+        "gamma_Q32_at_7point5": 0.9999999999727422,
+        "neighbour_event_probability": 1.0
+      }
+    ],
+    "analytic_limit_lower": "(31/480)*Q(32,7.5)>0",
+    "tail_scope": "single retained native alignment action; not total-H cancellation or actual-ground failure",
+    "kinetic_and_local_form_budgets": "Gaussian Kphi=60chi/variance; mixture uniformly bounded; all other cells variance1/30; fullE/checkerboard and Haar retained",
+    "actual_ground_failure": false
+  },
+  "raw_fullE_Gauss": [
+    {
+      "N": 4,
+      "V": 64,
+      "each_species_canonical": 128,
+      "species": 65,
+      "Ref4_inert": true,
+      "fullrho_collective64": true,
+      "Gauss_max_defect": 0.0,
+      "path_affine_delta_fullE": -8128.0,
+      "separate_transverse_delta": -5418.333333333334,
+      "separate_Coulomb_delta": -2709.666666666668,
+      "nonzero_exterior_longitudinal_norm": 0.4695306000411474,
+      "fullE_exterior_cancel_max": 0.0,
+      "weighted_fullE": 10190257.196599247,
+      "weighted_cross": 799.7937495066071,
+      "closed_integer_circulation_added": true,
+      "pure_checkerboard_cross_zero_is_special_not_generic": true,
+      "wrong_separated_weighted_energy": 10189457.402849741,
+      "geometry_only_not_quantum_evolution": true
+    },
+    {
+      "N": 6,
+      "V": 216,
+      "each_species_canonical": 432,
+      "species": 65,
+      "Ref4_inert": true,
+      "fullrho_collective64": true,
+      "Gauss_max_defect": 0.0,
+      "path_affine_delta_fullE": -8128.0,
+      "separate_transverse_delta": -5418.567901234569,
+      "separate_Coulomb_delta": -2709.432098765432,
+      "nonzero_exterior_longitudinal_norm": 0.47085606870180424,
+      "fullE_exterior_cancel_max": 0.0,
+      "weighted_fullE": 27041311.25196559,
+      "weighted_cross": 799.7937495078659,
+      "closed_integer_circulation_added": true,
+      "pure_checkerboard_cross_zero_is_special_not_generic": true,
+      "wrong_separated_weighted_energy": 27040511.458216086,
+      "geometry_only_not_quantum_evolution": true
+    },
+    {
+      "N": 8,
+      "V": 512,
+      "each_species_canonical": 1024,
+      "species": 65,
+      "Ref4_inert": true,
+      "fullrho_collective64": true,
+      "Gauss_max_defect": 0.0,
+      "path_affine_delta_fullE": -8128.0,
+      "separate_transverse_delta": -5418.625000000008,
+      "separate_Coulomb_delta": -2709.3749999999986,
+      "nonzero_exterior_longitudinal_norm": 0.4711738367928353,
+      "fullE_exterior_cancel_max": 0.0,
+      "weighted_fullE": 50744787.099427395,
+      "weighted_cross": 799.7937495071674,
+      "closed_integer_circulation_added": true,
+      "pure_checkerboard_cross_zero_is_special_not_generic": true,
+      "wrong_separated_weighted_energy": 50743987.305677876,
+      "geometry_only_not_quantum_evolution": true
+    }
+  ],
+  "weighted_exterior_attempt": {
+    "status": "WEIGHTED_FORM_PROPAGATION_VALID_BUT_EXTERIOR_GATE_NOT_CLOSED",
+    "epsilon": 0.17328679513998632,
+    "actual_paid_budget": "qQtheta(U(t)A Omega)<=exp(Cstar|t|)[66a^2 B0+66d_A+16384lambda Sstar a^2]",
+    "no_prior_closed_form_debt_reopened": true,
+    "rows": [
+      {
+        "radius": 4,
+        "weighted_background_tail_mass": 1474.6201508598906,
+        "inverse_weight_boundary_distance_Rplus2": 2.82842712474619,
+        "one_shell_unweighted_action_form_cost_div_E": 2.82842712474619,
+        "background_subtraction_is_not_positive_energy_density": true
+      },
+      {
+        "radius": 16,
+        "weighted_background_tail_mass": 700.7525013212489,
+        "inverse_weight_boundary_distance_Rplus2": 22.62741699796952,
+        "one_shell_unweighted_action_form_cost_div_E": 22.62741699796952,
+        "background_subtraction_is_not_positive_energy_density": true
+      },
+      {
+        "radius": 64,
+        "weighted_background_tail_mass": 1.6044448625127483,
+        "inverse_weight_boundary_distance_Rplus2": 92681.90002368305,
+        "one_shell_unweighted_action_form_cost_div_E": 92681.90002368305,
+        "background_subtraction_is_not_positive_energy_density": true
+      },
+      {
+        "radius": 256,
+        "weighted_background_tail_mass": 7.887933395847419e-14,
+        "inverse_weight_boundary_distance_Rplus2": 2.608763565066555e+19,
+        "one_shell_unweighted_action_form_cost_div_E": 2.608763565066555e+19,
+        "background_subtraction_is_not_positive_energy_density": true
+      }
+    ],
+    "quadratic_alignment_unweighted_boundary_norm_cost": "at least the available extraction pays sqrt(2E/lambda)*exp(epsilon(R+2)/2) per endpoint; sums add boundary incidence",
+    "scalar_multiplication_weighted_tail_is_not_static_patch_projection": true,
+    "missing": "positive excitation-local density/current or conditional physical ground-jet exterior decay; subtracting ground local energy from Qtheta is not a positive form"
+  },
+  "conditional_ground_jet_attempt": {
+    "status": "SECOND_MATERIALLY_ATTEMPTED_NATIVE_STATIC_CONDITIONAL_PROJECTION",
+    "native_fullH_commutator": "[H,exp(-s0)]=-kphi(2s0-60)exp(-s0)-2kphi grad(exp(-s0)).grad",
+    "all65_Gauss_fullE_Haar_alignment_Jordan_plaquette_retained_by_exact_commutation": true,
+    "state_kind": "nonstationary normalized invariant radial two-site superposition times original canonical/Haar/affine section; NOT actual ground",
+    "local_multipliers_full_declared_MW_cannot_change_remote_Phi": true,
+    "gaussian_overlap": 0.17088823462614014,
+    "normalization_squared_before_division": 2.0584055774672776,
+    "residual_squared_div_kphi2": 2.0421648733005027,
+    "quadrature_absolute_error_estimate": 7.892010357771456e-12,
+    "complete_action_squared_div_kphi2": 8.976988942424224,
+    "complete_action_quadrature_error_estimate": 4.8503995261260615e-11,
+    "residual_tail_after_s20_squared_div_kphi2_upper_formula_value": 2.7975417596796287e-102,
+    "complete_action_tail_after_s20_squared_div_kphi2_upper_formula_value": 7.745100664782473e-102,
+    "native_local_s2_exact_formula_value": 2.5621577853149944,
+    "native_local_Phi_kinetic_div_kphi_exact_formula_value": 336.43596812066653,
+    "positive_residual_analytic": "(1-z^2)(va^-1-vb^-1)^2 pa pb/(pa+pb+2z sqrt(pa pb))>0 on s>0",
+    "analytic_tail_after_s20": "Explicit damped Gamma tail bound retained; floating gamma evaluation and quadrature are not interval certificates",
+    "rows": [
+      {
+        "radius": 4,
+        "remote_site_distance": 8,
+        "admissible_even_N_min": 40,
+        "source_norm_squared": 1,
+        "best_static_patch_commutator_residual_squared_div_kphi2": 2.0421648733005027,
+        "complete_fullH_commutator_action_squared_div_kphi2": 8.976988942424224
+      },
+      {
+        "radius": 16,
+        "remote_site_distance": 20,
+        "admissible_even_N_min": 88,
+        "source_norm_squared": 1,
+        "best_static_patch_commutator_residual_squared_div_kphi2": 2.0421648733005027,
+        "complete_fullH_commutator_action_squared_div_kphi2": 8.976988942424224
+      },
+      {
+        "radius": 64,
+        "remote_site_distance": 68,
+        "admissible_even_N_min": 280,
+        "source_norm_squared": 1,
+        "best_static_patch_commutator_residual_squared_div_kphi2": 2.0421648733005027,
+        "complete_fullH_commutator_action_squared_div_kphi2": 8.976988942424224
+      },
+      {
+        "radius": 256,
+        "remote_site_distance": 260,
+        "admissible_even_N_min": 1048,
+        "source_norm_squared": 1,
+        "best_static_patch_commutator_residual_squared_div_kphi2": 2.0421648733005027,
+        "complete_fullH_commutator_action_squared_div_kphi2": 8.976988942424224
+      }
+    ],
+    "native_local_moments_uniform_in_distance_N": "finite fixed va/vb; <s^2> and kinetic <=finite two-Gaussian Cauchy envelope; canonical fullE density262144; Haar0 expectation but operator retained",
+    "inference": "weighted/higher fixed moments alone do not force uniform static conditional-jet approximation on arbitrary physical states",
+    "actual_ground_failure": false,
+    "unpaid_actual_ground_inequality": "sup_admissible_N inf_B_in_THIS_core(K_R) ||[H_N,A]Omega_N-B Omega_N|| ->0 plus iterated local graph/propagation stability; must use exact-ground equation or native ground correlations"
+  },
+  "proof_sha256": "137e0ced3548360f31a71e72b0d67b8dee6c4959108a9428566a98e8edd56687",
+  "profile_member_sha256": "1c79b1a74c4236079645ebf9765a48c1c2263ec7b7209e9f103704c98752da94",
+  "source_input_sha256_before": {
+    "native_static_exterior_consumer_20261011.py": "92d1d65a22c015a05c4e70604f6e8c24b78703aaac1840b5fa8c611015dde440",
+    "native_static_exterior_execute_20261011.py": "947fb874937c86b34773cb0336bfcf033b42fd86aab3c41752e9f88b498cbf4d",
+    "native_static_exterior_proof_20261011.json": "137e0ced3548360f31a71e72b0d67b8dee6c4959108a9428566a98e8edd56687",
+    "native_static_exterior_interface_20261011.json": "8d90a1f19298e5c2e175753f24f1e9bcb8289abf10b02cf63d2f1fc85e9b28e0",
+    "native_static_exterior_language_20261011.json": "bb4e92b0ecfbf3f884b4b8b7110843efd72e918703120308525110e6dd7f6f39",
+    "native_static_exterior_contract_20261011.json": "3b280bf0f6970fa8a51eb0781531f430ed77dc6344194ac0b9ddedda5281110e",
+    "joined_phi_u1_ground_magnetic_weighted_parent_packet_20261011.json": "b9185975b2e0056ebf859eeeca8bc3625bbc1dffb7eb3df7292ebfe09b3105e2",
+    "joined_phi_u1_ground_magnetic_weighted_parent_review_20261011.json": "7b95bd6bd11b440041e35fc421cb080bc9934ce575039232b5264fba5852ca03",
+    "joined_phi_u1_ground_magnetic_weighted_scoped_acceptance_20261011.json": "ad835aeb35bae5d6abb1efc6f069c7e5b10e6214c6003022d7113a9105d53db1",
+    "weighted_evolution_closure_proof_20261011.json": "40a82a3de1ce02ee64b04982b29fb8b78e6ff28aec1c6d954adb3c4b47ae0cbd",
+    "weighted_graph_review_proof_20261011.json": "ed65c624fb737f26f2e148dbe72181d843d802ee4e690536c03315bff506b90e",
+    "weighted_unitary_review_proof_20261011.json": "2a8f63b77e6248f258f9d0c290d2573278aa8e6e4015bb5b7791e8d5ddc7dec6",
+    "weighted_unitary_review_graph_discharge_addendum_20261011.json": "1e8154f5b1f9c53204b424fd7aa73a7c5d31bdbd3c06f5614580f3797570fc8c",
+    "weighted_evolution_parent_ground_family_qualification_20261011.json": "43fc063c6c458c4691fd2c16703d02b808cbec62810e68e56ac623d365473c41",
+    "ground_word_parent_graph_packet_qualification_20261011.json": "67212a6de6e6b21c3a765fe8e260ac65e19967218e75ab3a6d10c87192da28c0",
+    "ground_word_parent_weighted_form_qualification_20261011.json": "5a0495e1646671136f096b7c790d30816824374c84478077eba0f0163a6ce1f1",
+    "ground_weighted_form_review_proof_20261011.json": "a5acd76ef883ee18119a7f315d792fb6541e38d881a329ccc9dd43dc0c1c24e2",
+    "ground_word_transport_proof_20261011.json": "027059f948f5e4ba2c2afa862101a31302920d0b9563c8303a01582005f4f54f",
+    "ground_word_domain_review_proof_20261011.json": "79fe5a38f485543ee49aa3fb98a506005baa05b4e8b5fafe288be070eabfbcfa",
+    "ground_magnetic_parent_integration_actual6_20261011_receipt.json": "b563dcc693550054efcbe44c1c71624ecc3b677c7414eb0d9dc5fa072ae1646e",
+    "ground_magnetic_parent_integration_actual6_20261011_capsule.json": "edb74d94060e9a9ecd841d8f0735b1bcafd80e495747bb345ef28c20510abe24",
+    "joined_phi_u1_uniform_gauss_limit_epoch4_20261010_actual_executed_inputs.zip": "8af45d28d48ae0ab8302dcea11cdb9356af972a5373ae2568008ff0a99587649",
+    "native_static_exterior_actual1_20261011_capsule.json": "20087f688ef7d7ac9aa59a97aab18f7acfcf5760253a0a493132163b34e25f30",
+    "native_static_exterior_actual1_20261011_exit.json": "4271f1fae9237ab01586e459b492486ea00b58ed3f7a19bfc49ddc121f120425",
+    "native_static_exterior_actual1_20261011_stderr.txt": "a0b7f7ebfbf0310cacbfa43400a43c7926d2d20739be6486441e5a5f451da52d",
+    "native_static_exterior_actual1_20261011_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native_static_exterior_actual2_20261011_capsule.json": "594fe03d24e26a13f10a0d46401306b1b8de9995f99770c43c8b3545cae2efa3",
+    "native_static_exterior_actual2_20261011_exit.json": "a77666e31bcf6d5d6799793a67ce4e3cc8f6ef7adc90d3a051efe1b73d202df0",
+    "native_static_exterior_actual2_20261011_receipt.json": "be266daf136297c0df86778c3bf799aab26bc92796ed955059dd41823e83b08b",
+    "native_static_exterior_actual2_20261011_stdout.txt": "556eb96904346fcdbd48b3a3dfd30291ca8ac461dc0a3f494620692095998580",
+    "native_static_exterior_actual2_20261011_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source_input_sha256_after": {
+    "native_static_exterior_consumer_20261011.py": "92d1d65a22c015a05c4e70604f6e8c24b78703aaac1840b5fa8c611015dde440",
+    "native_static_exterior_execute_20261011.py": "947fb874937c86b34773cb0336bfcf033b42fd86aab3c41752e9f88b498cbf4d",
+    "native_static_exterior_proof_20261011.json": "137e0ced3548360f31a71e72b0d67b8dee6c4959108a9428566a98e8edd56687",
+    "native_static_exterior_interface_20261011.json": "8d90a1f19298e5c2e175753f24f1e9bcb8289abf10b02cf63d2f1fc85e9b28e0",
+    "native_static_exterior_language_20261011.json": "bb4e92b0ecfbf3f884b4b8b7110843efd72e918703120308525110e6dd7f6f39",
+    "native_static_exterior_contract_20261011.json": "3b280bf0f6970fa8a51eb0781531f430ed77dc6344194ac0b9ddedda5281110e",
+    "joined_phi_u1_ground_magnetic_weighted_parent_packet_20261011.json": "b9185975b2e0056ebf859eeeca8bc3625bbc1dffb7eb3df7292ebfe09b3105e2",
+    "joined_phi_u1_ground_magnetic_weighted_parent_review_20261011.json": "7b95bd6bd11b440041e35fc421cb080bc9934ce575039232b5264fba5852ca03",
+    "joined_phi_u1_ground_magnetic_weighted_scoped_acceptance_20261011.json": "ad835aeb35bae5d6abb1efc6f069c7e5b10e6214c6003022d7113a9105d53db1",
+    "weighted_evolution_closure_proof_20261011.json": "40a82a3de1ce02ee64b04982b29fb8b78e6ff28aec1c6d954adb3c4b47ae0cbd",
+    "weighted_graph_review_proof_20261011.json": "ed65c624fb737f26f2e148dbe72181d843d802ee4e690536c03315bff506b90e",
+    "weighted_unitary_review_proof_20261011.json": "2a8f63b77e6248f258f9d0c290d2573278aa8e6e4015bb5b7791e8d5ddc7dec6",
+    "weighted_unitary_review_graph_discharge_addendum_20261011.json": "1e8154f5b1f9c53204b424fd7aa73a7c5d31bdbd3c06f5614580f3797570fc8c",
+    "weighted_evolution_parent_ground_family_qualification_20261011.json": "43fc063c6c458c4691fd2c16703d02b808cbec62810e68e56ac623d365473c41",
+    "ground_word_parent_graph_packet_qualification_20261011.json": "67212a6de6e6b21c3a765fe8e260ac65e19967218e75ab3a6d10c87192da28c0",
+    "ground_word_parent_weighted_form_qualification_20261011.json": "5a0495e1646671136f096b7c790d30816824374c84478077eba0f0163a6ce1f1",
+    "ground_weighted_form_review_proof_20261011.json": "a5acd76ef883ee18119a7f315d792fb6541e38d881a329ccc9dd43dc0c1c24e2",
+    "ground_word_transport_proof_20261011.json": "027059f948f5e4ba2c2afa862101a31302920d0b9563c8303a01582005f4f54f",
+    "ground_word_domain_review_proof_20261011.json": "79fe5a38f485543ee49aa3fb98a506005baa05b4e8b5fafe288be070eabfbcfa",
+    "ground_magnetic_parent_integration_actual6_20261011_receipt.json": "b563dcc693550054efcbe44c1c71624ecc3b677c7414eb0d9dc5fa072ae1646e",
+    "ground_magnetic_parent_integration_actual6_20261011_capsule.json": "edb74d94060e9a9ecd841d8f0735b1bcafd80e495747bb345ef28c20510abe24",
+    "joined_phi_u1_uniform_gauss_limit_epoch4_20261010_actual_executed_inputs.zip": "8af45d28d48ae0ab8302dcea11cdb9356af972a5373ae2568008ff0a99587649",
+    "native_static_exterior_actual1_20261011_capsule.json": "20087f688ef7d7ac9aa59a97aab18f7acfcf5760253a0a493132163b34e25f30",
+    "native_static_exterior_actual1_20261011_exit.json": "4271f1fae9237ab01586e459b492486ea00b58ed3f7a19bfc49ddc121f120425",
+    "native_static_exterior_actual1_20261011_stderr.txt": "a0b7f7ebfbf0310cacbfa43400a43c7926d2d20739be6486441e5a5f451da52d",
+    "native_static_exterior_actual1_20261011_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native_static_exterior_actual2_20261011_capsule.json": "594fe03d24e26a13f10a0d46401306b1b8de9995f99770c43c8b3545cae2efa3",
+    "native_static_exterior_actual2_20261011_exit.json": "a77666e31bcf6d5d6799793a67ce4e3cc8f6ef7adc90d3a051efe1b73d202df0",
+    "native_static_exterior_actual2_20261011_receipt.json": "be266daf136297c0df86778c3bf799aab26bc92796ed955059dd41823e83b08b",
+    "native_static_exterior_actual2_20261011_stdout.txt": "556eb96904346fcdbd48b3a3dfd30291ca8ac461dc0a3f494620692095998580",
+    "native_static_exterior_actual2_20261011_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "runtime": {
+    "python": "/home/administrator/substrate-framework/.venv/bin/python",
+    "numpy": "2.5.3",
+    "elapsed_seconds": 0.10127778697642498
+  },
+  "actual_ground_U_numerics": false,
+  "same_static_GNS_exterior_closed": false,
+  "same_static_resolvent_range_proved": false,
+  "global_no_go": false,
+  "phase_stiffness_IR_atom": false
+}

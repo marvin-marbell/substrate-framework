@@ -1,0 +1,97 @@
+{
+  "kind": "INDEPENDENT_REVISION_BOUND_DENSITY_FORMATION_MATHEMATICAL_REVIEW",
+  "owner": "DensityFormationMathReview",
+  "governing_plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "captured_governing_bookkeeping_revision": "8b92f8737eb2fdf150a44a7c190a31be601cb135aead834f9ea67dd29eca984b",
+  "accepted_scoped_science_revision": "6f65d328398ea35d60e7e9b64d8c1631832a3a7746b0d22f797b8cafc6f88693",
+  "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "work_item": "induced-photon",
+  "verdict": "CONDITIONAL",
+  "subverdicts": {
+    "exact_all_n_polynomial_particle_identification": "VALID",
+    "exact_same_role_and_unlike_role_pair_coordinates": "VALID",
+    "conditional_cached_field0_trace_norm_bounds": "VALID_UNDER_THE_STATED_HISTORICAL_OPERATION_AND_CACHE_PROVENANCE_PREMISES",
+    "unconditional_historical_machine_attestation": "NOT_ESTABLISHED_NOT_CLAIMED"
+  },
+  "exact_scope": "Exact harmonic H_n in normalized occupancy Fischer/Fock space; individually labelled symmetric W5-slot annihilation/extraction at every integer n>=1, including n=2,126 and subsequent n=1,125; cached raw binary64 field0 pair Gram.T in dimensions15,15,25 divided by exact represented common N0, relative to selected raw-vector source s=x/sqrt(N).",
+  "pins": {
+    "three_cell_density_formation_proof_20261011.json": "0677b384cb4faa4d47673d2a26d4d35975103501bb074e5db9fb3e1605d91088",
+    "three_cell_density_formation_interface_20261011.json": "c40506cde408eb241602bd2e79696382c7cf0b3f9b55fee8d913930bbecd9318",
+    "three_cell_density_formation_consumer_20261011.py": "30b014a44cf9ed8d744bbad9bffb7190c00c9a752b4d62e02026eff776d7df7b",
+    "three_cell_density_formation_actual2_20261011_executed.zip": "c241b1fe21917a409807df3ac14f0742d26f562715e90194553a57eaf30313cd",
+    "connected_root_exterior_scientist_20261011.py": "c61389c52cd146bf1c4ecc189c7b46b2c964d53c1036a73a975b9859f3651e62",
+    "harmonic_car_bridge_scientist_20261011.py": "f0661dcdc6a49efbe1b635089436f9684a6c97926741ab7aceb2f78e577e28bf"
+  },
+  "independent_proof": [
+    {
+      "step": "Fischer harmonic basis and all-n norm",
+      "derivation": "Put Delta=partial00 partial11-partial01 partial10, Q=x00x11-x01x10 and m=n-l. With the raw monomial Fischer norm factorial(w), Q*=Delta and [Delta,Q]=Euler_x+2. The finite psi sum is Delta-harmonic. Its squared norm is p!q!(l-p)!(l-q)!/l! times sum_t1/(k00!k01!k10!k11!)=1 by Vandermonde. Thus ||Q^r psi||^2=r!(l+2)_r. Different p,q are distinct commuting weight eigenvectors of the two unitary SU(2) actions. Different l in a common x-degree are orthogonal: adjoint movement of Delta kills the lower-trace harmonic component. Distinct z-degrees are orthogonal. Therefore ||P||^2=m!^2 sum_r[1/(4^r r!(m-2r)!(l+2)_r)]. Independently rewriting (-m)_(2r)=4^r(-m/2)_r((1-m)/2)_r gives m! times 2F1(-m/2,(1-m)/2;l+2;1). Terminating Gauss summation gives m! Gamma(l+2)Gamma(l+m+3/2)/[Gamma(l+2+m/2)Gamma(l+3/2+m/2)]; duplication reduces this to exactly the claimed C_nl. Gauss is valid here since c-a-b=l+m+3/2>0. No sampled orthogonality inference is needed.",
+      "entire_space": "For D=partial_z^2-2Delta, Delta Q^r psi=r(l+r+1)Q^(r-1)psi. Adjacent coefficient ratio c_(r+1)/c_r=(m-2r)(m-2r-1)/[2(r+1)(l+r+2)] proves D P=0. D*=z^2-2Q is injective multiplication by a nonzero polynomial, hence D is surjective between finite-dimensional degrees. Its kernel dimension is binom(n+4,4)-binom(n+2,4)=sum_(l=0)^n(l+1)^2. The orthonormal displayed family attains that dimension."
+    },
+    {
+      "step": "Derivative-to-actual-coefficient identification",
+      "derivation": "Differentiating the finite psi monomial sum shifts the appropriate occupancy by one. For k=1+2a+b, sp=(l-p or p), sq=(l-q or q), this gives partial_k psi_lpq=sqrt(sp sq/l) psi_(l-1,p-a,q-b). The partner-variable multiplication identity splits into the l+1 harmonic term and eps Q sqrt(sp sq/l)/(l+1) times the l-1 harmonic term, eps=(-1)^(a+b). Differentiating Q^r supplies eps times the partner; the lower term thus has eps^2=1 while the upper term retains eps. The coefficient equalities c_r(n,l)(1+r/(l+1))=c_r(n-1,l-1) and (r+1)c_(r+1)(n,l)=m(m-1)c_r(n-1,l+1)/(2(l+2)) give the claimed full derivative. Normalization by sqrt(n C_nl) yields exactly r0, down and up radicals in pinned harmonic source lines48..56, including negative up signs at channels01 and10. The z derivative gives m P_(n-1,l,p,q). Terms l=0, sp sq=0, m=0 and m=1 are omitted BEFORE divisions/invalid labels; there is no extension across n=0 extraction.",
+      "load_bearing": "This termwise identity, not column isometry alone, identifies the actual coefficient maps with physical labelled-slot extraction.",
+      "finite_independent_evidence": "New independent consumer checked all520 channel derivatives over every label at n=1,2,3,4, with normalized norms/harmonicity and complete Gram matrices for n<=3. These controls supplement, not replace, the all-n proof."
+    },
+    {
+      "step": "All-n tower, double extraction and pair basis",
+      "derivation": "In occupancy Fock space, partial_k=a_k, so E_k(n)=a_k/sqrt(n) restricted to the entire H_n. Derivatives commute with D. Sum_k E_k*E_k=number/n=I on H_n. For n>=2, E_j(n-1)E_i(n)=a_j a_i/sqrt(n(n-1))=E_i(n-1)E_j(n); ordered double extraction is isometric by composing the two stacked maps. Embedding Sym^n(W5) into labelled W5 tensor powers uses occupancy symmetrization with multinomial normalizations, and its first-slot contraction is precisely a_k/sqrt(n). Hence the stacked output is the true selected-slot marginal, not an arbitrary isometry. Same-role upper coordinates X_ii,sqrt2 X_ij give orthonormal Sym^2(W5) coordinates; U maps offdiagonal coordinates to (|ij>+|ji>)/sqrt2 and U*U=I. Unlike-role extraction commutes on separate tensor factors; AU order is active then auxiliary and UA is exact swap. Floating conversion of U or swap is excluded.",
+      "physical_boundary": "Conditional on the separate exact n1 native/physical W intertwiner, each W5 slot is the stated two-fermion physical slot. Full Fock16 CAR words must retain intermediate particle sectors1,3 before W*wordW compression; compressing each single annihilator into W5 would instead make it zero. This review does not duplicate the metric owner's J,W/S/M decoding or contraction proof."
+    },
+    {
+      "step": "Actual sparse product error",
+      "derivation": "For the vertical stack |E|, each target row has at most two contributing source l-values (l'=l+-1 in a spinor channel; the z channel has one); each source column has at most one z plus two branches in each of four spinor channels, hence at most9 entries. Isometry implies each exact coefficient<=1. Thus ||stack|E|||2<=sqrt(||.||1 ||.||infinity)<=sqrt18<5 uniformly in n. Under the stated binary64 coefficient conversion model alpha=3u suffices, and a <=2-term CSR dot with <=4 rounding sites gives stage operator error t=5[alpha+gamma4(1+alpha)]. Applying a second exact isometry plus its error to the perturbed first output yields e2=2t+t^2. The same-role upper-selection/fold operator has norm sqrt2<=2, so the deliberately conservative error before rounded folding is2e2; rounded sqrt2 and multiply cost <=3u(1+2e2). Actual pinned connected source lines49..67 uses n=[2,126], correct n-1 on same role, upper order i<=j, and multiplies offdiagonals by sqrt2. Memmap storage and axis transposes add no arithmetic error. Field1=rho*state is separate and its multiplication is not smuggled into field0."
+    },
+    {
+      "step": "Actual streamed Gram and nuclear price",
+      "derivation": "Pinned connected source lines73..76 stacks field0 then field1 and performs blocks of32768 environment entries followed by gram+=. For field0 dimensions d=15,15,25, environment L=690880,9224250,3373755 gives B=22,282,103. Under the explicit <=65536 binary64 sites per block-dot dependency path and <=B additions premise, entry error is at most kappa sum_t|yhat_it yhat_jt|, kappa=gamma65536+(1+gamma65536)gammaB. Summing the rank-one matrix-unit nuclear norms gives ||DeltaG||1<=sum_ij|DeltaG_ij|<=kappa sum_t(sum_i|yhat_it|)^2<=d kappa||Yhat||F^2. No positive semidefinite property of rounded Gram is required. Vector perturbation costs ||YY*-YhatYhat*||1<=||Y-Yhat||F(||Y||F+||Yhat||F)<=N e(2+e). Thus unnormalized density error is bounded by N[e(2+e)+d kappa(1+e)^2]. Transposition does not change singular values; the real source Gram convention uses Gram.T."
+    },
+    {
+      "step": "Normalizer and entire-vector exact domain",
+      "derivation": "For exact N=sum_i exact(binary64 x_i)^2 and positive represented N0, Ghat.T/N0-rho_s=(Ghat.T-Gexact.T)/N0+(N/N0-1)rho_s. Since rho_s is a positive unit-trace exact marginal, its nuclear norm is1; the required price is (N/N0)[e(2+e)+d kappa(1+e)^2]+|N/N0-1|. The consumer's exponent-bin integer square sum implements the dyadic norm exactly, including negative signs, signed zero, subnormal exponent0 and minimum-normal exponent1 sharing scale2^-1074. Independently, the new consumer aggregated float.as_integer_ratio numerator-squares by exact denominator over ALL9672320 entries and obtained exactly the published N, not a sample or floating reduction. N0=4503599627370499/4503599627370496 is not replaced by N or by a trace fit. Exact rational arithmetic independently reproduced AA1.0920788472613432e-10, UU1.0964087170574131e-10 and AU1.8220049668136798e-10."
+    }
+  ],
+  "adverse_controls": [
+    {"wrongcase":"Stage-dependent channel1 sign flip in n2 extraction but not n1.","independent_reason":"Both stages remain stacked isometries, and total ordered norm remains1, but for source x00*x11 the (1,4) versus (4,1) ordered double outputs differ by -sqrt2.","consequence":"Mere isometry cannot justify same-role Sym^2 folding or a labelled physical-particle marginal.","smallest_correction":"Require the all-n derivative/tower identity with the pinned relative signs, not only norm/trace agreement."},
+    {"wrongcase":"Flip the actual n2,l0 channel01 up sign.","independent_reason":"P20=(z^2+Q/2)/sqrt(5/2), so partial01 P20/sqrt2=-x10/(2sqrt5). Opposite sign leaves residual -x10/sqrt5.","consequence":"Particle coefficient identification is false.","smallest_correction":"Retain (-1)^(a+b) on the up branch."},
+    {"wrongcase":"Omit sqrt2 on upper offdiagonal coordinates.","independent_reason":"Normalized source x00*x11 has ordered double norm1 and upper-unweighted norm1/2.","consequence":"Same-role Gram no longer represents a normalized selected pair.","smallest_correction":"Use the orthonormal Sym^2 basis with sqrt2 fold before Gram."},
+    {"wrongcase":"Replace the Gram dimension price d*kappa by kappa merely because the density has trace1.","independent_reason":"For normalized Y=(1,1)/sqrt2 with ||Y||F^2=1, the entrywise hypothesis permits symmetric error (kappa/2)*[[1,1],[1,-1]]. Its nuclear norm is sqrt2*kappa>kappa. This is an adverse case for the claimed implication from entrywise bounds, not an assertion that a historical BLAS run attained these errors.","consequence":"An entrywise absolute-product roundoff bound alone cannot justify dimension-free kappa nuclear pricing.","smallest_correction":"Retain the valid d upper bound or prove a stronger spectral error model."},
+    {"wrongcase":"Treat field1 as interchangeable with field0 or as separately normalized.","independent_reason":"Exact published field1 trace divided by common N0 is approximately0.64187 rather than1; the independent consumer rejects its discrepancy against each stated delta. Source code field1 is total rho*state, not state.","consequence":"Wrong-source pair marginal and invalid normalization inference.","smallest_correction":"Use cached first d by d field0 block with common N0; do not trace-normalize field1."}
+  ],
+  "historical_premises_preserved": [
+    "Fraction-to-binary64 and math.sqrt correct-rounding/coefficient relative error model.",
+    "Historical CSR multiplication has at most4 binary64 rounding sites for each <=2-term dot, without hidden lower precision.",
+    "Historical BLAS block dot has at most32768 products and65536 rounding sites on each dependency path; FMA allowed within this model.",
+    "Binary64 gram addition dependency depth at most B.",
+    "No arithmetic underflow/overflow/FTZ/DAZ/nonfinite or unmodelled approximate arithmetic in historical extraction and Gram; finiteness of stored endpoints does not establish intermediate range.",
+    "Pinned cache was actually produced by pinned selected_pair_gram on pinned raw state. Hashes bind artifacts, not independently attest historical execution provenance."
+  ],
+  "actionable_findings": [
+    {"severity":"SCOPE_REQUIREMENT","target":"Every downstream use of formation interface c40506cd","trigger":"Publishing the three small delta values without the operation/provenance antecedent, or applying them to g, physical1 ground, or field1.","consequence":"Conditional selected-source field0 bound is converted into an unproved machine/source claim.","smallest_correction":"Carry the interface status and historical premises as explicit antecedents; keep s, g and physical1 ground distinct and field0 designated. No amendment to the pinned mathematics is required."}
+  ],
+  "independent_controls": {
+    "source": "density_formation_mathreview_control_20261011.py",
+    "source_sha256": "257ee93e3788ff079c361009f420a8e61fc3e6512f932e6cf5a65993c7dc18aa",
+    "receipt": "density_formation_mathreview_control_receipt_20261011.json",
+    "manifest": "density_formation_mathreview_control_manifest_20261011.json",
+    "preexecution": "density_formation_mathreview_control_preexecution_20261011.zip",
+    "preexecution_sha256": "e178c51555262f2dc5652a56a963685232b989a2deef0ac41391c20ddd190bbf",
+    "executed": "density_formation_mathreview_control_executed_20261011.zip",
+    "executed_sha256": "89ec4f7859b9efca69b9cfa7c4822df891b1a30334f80e768af6ca6d014f97ac",
+    "exit": "density_formation_mathreview_control_exit_20261011.json",
+    "natural_exit_code": 0,
+    "elapsed_seconds": 7.475627199019073,
+    "preceding_failed_own_control": "density_formation_mathreview_control_attempt1_failed_20261011.zip preserves initial witness assertion failure; my adverse witness omitted factor2, then was corrected. No target mathematics was implicated.",
+    "language_tooling": "Actual pyright-langserver documentSymbol extraction exercised at science root, natural exit0; AST math.sqrt positive actual-source match and new FunctionDef parse. No selected-Pyright/build/lint/formatter run; diagnostics deferred to parent."
+  },
+  "nonclaims": [
+    "No unconditional historical operation/provenance attestation.",
+    "No downstream native W/S/M/U decoding, contractions, metric transfer or g-replacement review duplicated.",
+    "No assertion that trace agreement is sufficient, or small-n controls prove all-n identities.",
+    "No replacement of accepted eta1/65536 by observed5.679e-8; no unsquared infidelity claim.",
+    "No identification of frozen reference g, selected physical trial s and actual physical1 entire ground projection.",
+    "No fullPhi/lattice ground, N-uniform linked phase/stiffness, IRatom/photon/commoncone, original SOURCE or campaign admission.",
+    "No original extractor, root solver, producer or checker was rerun; only a new independent finite exact/adverse consumer and entire-vector integer norm were executed."
+  ]
+}

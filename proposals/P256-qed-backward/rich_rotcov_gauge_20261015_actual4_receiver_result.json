@@ -1,0 +1,128 @@
+{
+  "kind": "SAME_NEW_QUANTUM_STATE_INVARIANT_SUPPLIER_PHYSICAL_RECEIVER",
+  "states_input": "rich_rotcov_gauge_20261015_actual4_result.npz",
+  "parameters": {
+    "geometry_cut": 2,
+    "supplier_cut": 1,
+    "field_cut": 1,
+    "radial_quadrature": 8,
+    "length": 0.65,
+    "field_scale": 1.5,
+    "field_width": 1.45,
+    "epsilon": 0.3,
+    "charge": 1.2,
+    "mass": 1.4,
+    "reduced_mass": 1.1,
+    "rotating_mass": 1.7,
+    "binding": 2.0,
+    "radii": [
+      0.7,
+      1.0
+    ],
+    "preferred_radius": 0.85,
+    "shape_mass": 5.0,
+    "shape_binding": 2.0,
+    "supplier_lengths": [
+      0.65,
+      1.05
+    ],
+    "supplier_masses": [
+      1.0,
+      1.4
+    ],
+    "supplier_binding": [
+      5.60204474633241,
+      0.587644902029444
+    ],
+    "ion_charge": 2.0,
+    "coulomb_softening": 0.3,
+    "correlation": 1.0,
+    "supplier_coupling": 0.0,
+    "gauge_coupling": 1.0,
+    "displacement": 0.25,
+    "boost": 0.2,
+    "kick": 0.35,
+    "times": [
+      0.0,
+      0.5,
+      1.5,
+      3.0
+    ]
+  },
+  "energy_semantics": {
+    "London_coordinate_bare_Hs": "Inherited zero-field p\u00b2+V operator in London coordinates, NOT the transformed original bare observable and NOT alone physical mechanical energy",
+    "physical_minimal_mechanical": "Hs(AP)=sum (p+e AP(q))\u00b2/(2m)+V_ion+V12; ALL continuum AP\u00b2 products retained. This is Udag Hs_original(A) U. Shared body-supplier Coulomb separately reported, not silently allocated.",
+    "transformed_original_canonical_bare_Hs": "Udag[p\u00b2/(2m)+V]U=sum(p-e q grad chi)\u00b2/(2m)+V, computed with continuum gradient/qq products; canonical bare p\u00b2 is gauge-dependent, not called kinetic-velocity energy",
+    "r2": "Supplier position r\u00b2 commutes with London U exactly; invariant same-state receiver, no energy nomenclature ambiguity"
+  },
+  "source_factor_closure": {
+    "B_commutes_all_dipoles_max": 0.0,
+    "argument": "All core N share identical supplier/field/geometry fibre; U depends only on supplier coordinates and q. U_Nplus1dag B U_N=B before projection; zero intersector basis leakage by tensor factorization."
+  },
+  "samples": [
+    {
+      "time": 0.0,
+      "invariant_supplier_r2": [
+        0.6399065849955142,
+        1.7675506912784853
+      ],
+      "invariant_supplier_r2_excess": [
+        1.1102230246251565e-16,
+        2.220446049250313e-16
+      ],
+      "physical_minimal_mechanical_energy": 3.280160567042894,
+      "physical_minimal_mechanical_energy_excess": 0.025625741988498874,
+      "transformed_original_canonical_bare_Hs_excess": 0.08858531791178548,
+      "London_coordinate_bare_Hs_excess_not_physical": -1.3322676295501878e-15,
+      "longitudinal_cross_energy_excess": 2.7755575615628914e-17
+    },
+    {
+      "time": 0.5,
+      "invariant_supplier_r2": [
+        0.6385346599520076,
+        1.7546457602308836
+      ],
+      "invariant_supplier_r2_excess": [
+        -0.0006641429663780674,
+        -0.003950828567574671
+      ],
+      "physical_minimal_mechanical_energy": 3.281564784443436,
+      "physical_minimal_mechanical_energy_excess": 0.023147638173298457,
+      "transformed_original_canonical_bare_Hs_excess": 0.1083333452853581,
+      "London_coordinate_bare_Hs_excess_not_physical": -0.0075352945975044605,
+      "longitudinal_cross_energy_excess": 0.0006797057882544089
+    },
+    {
+      "time": 1.5,
+      "invariant_supplier_r2": [
+        0.6397547850616111,
+        1.705700794358583
+      ],
+      "invariant_supplier_r2_excess": [
+        0.0005112968844366295,
+        -0.01156896291433962
+      ],
+      "physical_minimal_mechanical_energy": 3.2854349940091874,
+      "physical_minimal_mechanical_energy_excess": 0.022829194072952586,
+      "transformed_original_canonical_bare_Hs_excess": 0.08777237646643377,
+      "London_coordinate_bare_Hs_excess_not_physical": -0.005586131604885747,
+      "longitudinal_cross_energy_excess": -0.0006624933849812553
+    },
+    {
+      "time": 3.0,
+      "invariant_supplier_r2": [
+        0.6390137615303277,
+        1.7386935958854017
+      ],
+      "invariant_supplier_r2_excess": [
+        -0.0006967744868958681,
+        0.006326297809523984
+      ],
+      "physical_minimal_mechanical_energy": 3.2913757046946404,
+      "physical_minimal_mechanical_energy_excess": 0.026505128636079345,
+      "transformed_original_canonical_bare_Hs_excess": 0.1150742938331839,
+      "London_coordinate_bare_Hs_excess_not_physical": -0.0005433865862474185,
+      "longitudinal_cross_energy_excess": -0.00029435437279269616
+    }
+  ]
+}

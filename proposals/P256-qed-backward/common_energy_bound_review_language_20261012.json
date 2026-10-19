@@ -1,0 +1,53 @@
+{
+  "kind": "CONFIGURED_ACTUAL_LSP_AND_POSITIVE_AST_SOURCE_PROBES_NOT_STANDALONE_PYRIGHT_SUITE",
+  "root": "/home/administrator/substrate-222",
+  "configured_python": "/home/administrator/substrate-framework/.venv/bin/python",
+  "server_version": "pyright 1.1.414",
+  "ast_version": "ast-grep 0.45.3",
+  "native_lsp_device_unavailable_reported": true,
+  "source_sha256": {
+    "common_energy_bound_review_controls_20261012.py": "3fbab24503590f6b6f9529dee67cc78e3d4e28ee30b104d38827c569736ceebc",
+    "common_energy_bound_review_execute_20261012.py": "7255c84fdb8efac09bf460af52554d32a92ccaddbaa90bc45c795244db73c18c"
+  },
+  "symbol_counts": {
+    "common_energy_bound_review_controls_20261012.py": 143,
+    "common_energy_bound_review_execute_20261012.py": 36
+  },
+  "definition_probe": [
+    {
+      "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/common_energy_bound_review_controls_20261012.py",
+      "range": {
+        "start": {
+          "line": 20,
+          "character": 4
+        },
+        "end": {
+          "line": 20,
+          "character": 10
+        }
+      }
+    }
+  ],
+  "diagnostics": [
+    {
+      "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/common_energy_bound_review_controls_20261012.py",
+      "version": 1,
+      "diagnostics": []
+    },
+    {
+      "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/common_energy_bound_review_execute_20261012.py",
+      "version": 1,
+      "diagnostics": []
+    }
+  ],
+  "positive_ast_probes": [
+    "Original hashlib.sha256(raw), source line22",
+    "New executor subprocess.run(command,capture_output=True,check=False), line51",
+    "New control standard AST digest call, line30"
+  ],
+  "initial_diagnostics_then_repair": {
+    "unconfigured_original_sympy_import": "Project interpreter configured, resolved in subsequent probes",
+    "new_control_accumulator_int_zero": "Four simplify overload diagnostics prompted sp.Integer(0) accumulator; this probe uses repaired exact source"
+  },
+  "standalone_build_test_lint_formatter_Pyright_suite_run": false
+}

@@ -1,0 +1,2761 @@
+{
+  "kind": "ONCE_NEW_ONLY_AFTER_EXACT_FACTOR_RECOVERY_NOT_RECHECKING_PRIOR19",
+  "selected_files": [
+    "rich_review_wave19_20261015_all_m.py",
+    "rich_review_wave19_20261015_em_anti.py"
+  ],
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--outputjson",
+    "rich_review_wave19_20261015_all_m.py",
+    "rich_review_wave19_20261015_em_anti.py"
+  ],
+  "returncode": 1,
+  "natural_exit": true,
+  "before": {
+    "rich_review_wave19_20261015_all_m.py": "9f11f4a9d6fc9533b5d2b2f111d8083e172b2ff804693d0061499a471d23f289",
+    "rich_review_wave19_20261015_em_anti.py": "a056fbacbd4144a6b80973c51627e5a2e5634edcca828699b81f06122204a4a2"
+  },
+  "sources_unchanged": true,
+  "summary": {
+    "filesAnalyzed": 2,
+    "errorCount": 6,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 20.278
+  },
+  "errors_by_file": {
+    "rich_review_wave19_20261015_all_m.py": 6
+  },
+  "checker": {
+    "version": "1.1.414",
+    "time": "1792046544853",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+        "severity": "error",
+        "message": "Operator \">\" not supported for types \"int | list[Unknown] | float | str\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"list[Unknown]\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"float\"",
+        "range": {
+          "start": {
+            "line": 24,
+            "character": 11
+          },
+          "end": {
+            "line": 24,
+            "character": 62
+          }
+        },
+        "rule": "reportOperatorIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+        "severity": "error",
+        "message": "Argument missing for parameter \"shape\"",
+        "range": {
+          "start": {
+            "line": 38,
+            "character": 20
+          },
+          "end": {
+            "line": 38,
+            "character": 159
+          }
+        },
+        "rule": "reportCallIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+        "severity": "error",
+        "message": "No parameter named \"matvec\"",
+        "range": {
+          "start": {
+            "line": 38,
+            "character": 43
+          },
+          "end": {
+            "line": 38,
+            "character": 49
+          }
+        },
+        "rule": "reportCallIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+        "severity": "error",
+        "message": "No parameter named \"rmatvec\"",
+        "range": {
+          "start": {
+            "line": 38,
+            "character": 76
+          },
+          "end": {
+            "line": 38,
+            "character": 83
+          }
+        },
+        "rule": "reportCallIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+        "severity": "error",
+        "message": "No parameter named \"matmat\"",
+        "range": {
+          "start": {
+            "line": 38,
+            "character": 112
+          },
+          "end": {
+            "line": 38,
+            "character": 118
+          }
+        },
+        "rule": "reportCallIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+        "severity": "error",
+        "message": "Parameter \"dtype\" is already assigned",
+        "range": {
+          "start": {
+            "line": 38,
+            "character": 145
+          },
+          "end": {
+            "line": 38,
+            "character": 150
+          }
+        },
+        "rule": "reportCallIssue"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 2,
+      "errorCount": 6,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 20.278
+    }
+  },
+  "LSP": {
+    "initialization": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "capabilities": {
+          "textDocumentSync": 2,
+          "definitionProvider": {
+            "workDoneProgress": true
+          },
+          "declarationProvider": {
+            "workDoneProgress": true
+          },
+          "typeDefinitionProvider": {
+            "workDoneProgress": true
+          },
+          "referencesProvider": {
+            "workDoneProgress": true
+          },
+          "documentSymbolProvider": {
+            "workDoneProgress": true
+          },
+          "workspaceSymbolProvider": {
+            "workDoneProgress": true
+          },
+          "hoverProvider": {
+            "workDoneProgress": true
+          },
+          "documentHighlightProvider": {
+            "workDoneProgress": true
+          },
+          "renameProvider": {
+            "prepareProvider": true,
+            "workDoneProgress": true
+          },
+          "completionProvider": {
+            "triggerCharacters": [
+              ".",
+              "[",
+              "\"",
+              "'"
+            ],
+            "resolveProvider": true,
+            "workDoneProgress": true,
+            "completionItem": {
+              "labelDetailsSupport": true
+            }
+          },
+          "signatureHelpProvider": {
+            "triggerCharacters": [
+              "(",
+              ",",
+              ")"
+            ],
+            "workDoneProgress": true
+          },
+          "codeActionProvider": {
+            "codeActionKinds": [
+              "quickfix",
+              "source.organizeImports"
+            ],
+            "workDoneProgress": true
+          },
+          "executeCommandProvider": {
+            "commands": [],
+            "workDoneProgress": true
+          },
+          "callHierarchyProvider": true,
+          "workspace": {
+            "workspaceFolders": {
+              "supported": true,
+              "changeNotifications": true
+            }
+          }
+        }
+      }
+    },
+    "selected_files": [
+      "rich_review_wave19_20261015_all_m.py",
+      "rich_review_wave19_20261015_em_anti.py"
+    ],
+    "symbols": {
+      "rich_review_wave19_20261015_all_m.py": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": [
+          {
+            "name": "AllM",
+            "kind": 5,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 10,
+                  "character": 0
+                },
+                "end": {
+                  "line": 40,
+                  "character": 35
+                }
+              }
+            }
+          },
+          {
+            "name": "__init__",
+            "kind": 6,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 11,
+                  "character": 4
+                },
+                "end": {
+                  "line": 24,
+                  "character": 123
+                }
+              }
+            },
+            "containerName": "AllM"
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 11,
+                  "character": 22
+                },
+                "end": {
+                  "line": 11,
+                  "character": 27
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "name",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 11,
+                  "character": 28
+                },
+                "end": {
+                  "line": 11,
+                  "character": 32
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "h",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 11,
+                  "character": 33
+                },
+                "end": {
+                  "line": 11,
+                  "character": 34
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "base",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 12,
+                  "character": 8
+                },
+                "end": {
+                  "line": 12,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "field",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 12,
+                  "character": 27
+                },
+                "end": {
+                  "line": 12,
+                  "character": 32
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "labels",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 13,
+                  "character": 8
+                },
+                "end": {
+                  "line": 13,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "r",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 14,
+                  "character": 8
+                },
+                "end": {
+                  "line": 14,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "ur",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 14,
+                  "character": 10
+                },
+                "end": {
+                  "line": 14,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "f",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 14,
+                  "character": 61
+                },
+                "end": {
+                  "line": 14,
+                  "character": 62
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "uf",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 14,
+                  "character": 63
+                },
+                "end": {
+                  "line": 14,
+                  "character": 65
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "rq",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 8
+                },
+                "end": {
+                  "line": 15,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "transformed",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 16,
+                  "character": 8
+                },
+                "end": {
+                  "line": 16,
+                  "character": 19
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "diagonal",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 17,
+                  "character": 8
+                },
+                "end": {
+                  "line": 17,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "coverage",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 17,
+                  "character": 54
+                },
+                "end": {
+                  "line": 17,
+                  "character": 62
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "total",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 18,
+                  "character": 12
+                },
+                "end": {
+                  "line": 18,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "operator",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 12
+                },
+                "end": {
+                  "line": 19,
+                  "character": 20
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "selected",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 21
+                },
+                "end": {
+                  "line": 19,
+                  "character": 29
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "rng",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 8
+                },
+                "end": {
+                  "line": 21,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "x",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 42
+                },
+                "end": {
+                  "line": 21,
+                  "character": 43
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "y",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 124
+                },
+                "end": {
+                  "line": 21,
+                  "character": 125
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "image",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 143
+                },
+                "end": {
+                  "line": 21,
+                  "character": 148
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "label",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 12
+                },
+                "end": {
+                  "line": 22,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "indices",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 27
+                },
+                "end": {
+                  "line": 22,
+                  "character": 34
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "trace",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 35
+                },
+                "end": {
+                  "line": 22,
+                  "character": 40
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "hx",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 23,
+                  "character": 8
+                },
+                "end": {
+                  "line": 23,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "__init__"
+          },
+          {
+            "name": "to_basis",
+            "kind": 6,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 26,
+                  "character": 4
+                },
+                "end": {
+                  "line": 27,
+                  "character": 123
+                }
+              }
+            },
+            "containerName": "AllM"
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 26,
+                  "character": 22
+                },
+                "end": {
+                  "line": 26,
+                  "character": 27
+                }
+              }
+            },
+            "containerName": "to_basis"
+          },
+          {
+            "name": "from_basis",
+            "kind": 6,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 4
+                },
+                "end": {
+                  "line": 30,
+                  "character": 114
+                }
+              }
+            },
+            "containerName": "AllM"
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 24
+                },
+                "end": {
+                  "line": 29,
+                  "character": 29
+                }
+              }
+            },
+            "containerName": "from_basis"
+          },
+          {
+            "name": "evolve",
+            "kind": 6,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 4
+                },
+                "end": {
+                  "line": 40,
+                  "character": 35
+                }
+              }
+            },
+            "containerName": "AllM"
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 20
+                },
+                "end": {
+                  "line": 32,
+                  "character": 25
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "t",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 26
+                },
+                "end": {
+                  "line": 32,
+                  "character": 27
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "energy",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 28
+                },
+                "end": {
+                  "line": 32,
+                  "character": 34
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "x",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 34,
+                  "character": 8
+                },
+                "end": {
+                  "line": 34,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "out",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 34,
+                  "character": 31
+                },
+                "end": {
+                  "line": 34,
+                  "character": 34
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "label",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 35,
+                  "character": 12
+                },
+                "end": {
+                  "line": 35,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "h",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 35,
+                  "character": 18
+                },
+                "end": {
+                  "line": 35,
+                  "character": 19
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "indices",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 35,
+                  "character": 20
+                },
+                "end": {
+                  "line": 35,
+                  "character": 27
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "trace",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 35,
+                  "character": 28
+                },
+                "end": {
+                  "line": 35,
+                  "character": 33
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "value",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 36,
+                  "character": 12
+                },
+                "end": {
+                  "line": 36,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "shifted",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 12
+                },
+                "end": {
+                  "line": 38,
+                  "character": 19
+                }
+              }
+            },
+            "containerName": "evolve"
+          },
+          {
+            "name": "h",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 12,
+                  "character": 53
+                },
+                "end": {
+                  "line": 12,
+                  "character": 54
+                }
+              }
+            },
+            "containerName": "AllM"
+          },
+          {
+            "name": "u",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 14,
+                  "character": 101
+                },
+                "end": {
+                  "line": 14,
+                  "character": 102
+                }
+              }
+            },
+            "containerName": "AllM"
+          },
+          {
+            "name": "parts",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 17,
+                  "character": 45
+                },
+                "end": {
+                  "line": 17,
+                  "character": 50
+                }
+              }
+            },
+            "containerName": "AllM"
+          },
+          {
+            "name": "evidence",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_all_m.py",
+              "range": {
+                "start": {
+                  "line": 23,
+                  "character": 20
+                },
+                "end": {
+                  "line": 23,
+                  "character": 28
+                }
+              }
+            },
+            "containerName": "AllM"
+          }
+        ]
+      },
+      "rich_review_wave19_20261015_em_anti.py": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "result": [
+          {
+            "name": "main",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 14,
+                  "character": 0
+                },
+                "end": {
+                  "line": 25,
+                  "character": 250
+                }
+              }
+            }
+          },
+          {
+            "name": "inp",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 4
+                },
+                "end": {
+                  "line": 15,
+                  "character": 7
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "out",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 8
+                },
+                "end": {
+                  "line": 15,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "request",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 36
+                },
+                "end": {
+                  "line": 15,
+                  "character": 43
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "corepath",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 72
+                },
+                "end": {
+                  "line": 15,
+                  "character": 80
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "core",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 113
+                },
+                "end": {
+                  "line": 15,
+                  "character": 117
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "positivepath",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 151
+                },
+                "end": {
+                  "line": 15,
+                  "character": 163
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "positive",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 200
+                },
+                "end": {
+                  "line": 15,
+                  "character": 208
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "case",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 246
+                },
+                "end": {
+                  "line": 15,
+                  "character": 250
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "p",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 264
+                },
+                "end": {
+                  "line": 15,
+                  "character": 265
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "start",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 15,
+                  "character": 285
+                },
+                "end": {
+                  "line": 15,
+                  "character": 290
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "path",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 17,
+                  "character": 4
+                },
+                "end": {
+                  "line": 17,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "body",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 4
+                },
+                "end": {
+                  "line": 19,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 25
+                },
+                "end": {
+                  "line": 19,
+                  "character": 30
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "base",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 49
+                },
+                "end": {
+                  "line": 19,
+                  "character": 53
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "field",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 68
+                },
+                "end": {
+                  "line": 19,
+                  "character": 73
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "rotor",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 89
+                },
+                "end": {
+                  "line": 19,
+                  "character": 94
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "nr",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 109
+                },
+                "end": {
+                  "line": 19,
+                  "character": 111
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "corestates",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 131
+                },
+                "end": {
+                  "line": 19,
+                  "character": 141
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "posstates",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 182
+                },
+                "end": {
+                  "line": 19,
+                  "character": 191
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "name",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 236
+                },
+                "end": {
+                  "line": 19,
+                  "character": 240
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "initial",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 254
+                },
+                "end": {
+                  "line": 19,
+                  "character": 261
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "h",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 304
+                },
+                "end": {
+                  "line": 19,
+                  "character": 305
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "off",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 327
+                },
+                "end": {
+                  "line": 19,
+                  "character": 330
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "hopoff",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 366
+                },
+                "end": {
+                  "line": 19,
+                  "character": 372
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "engine",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 398
+                },
+                "end": {
+                  "line": 19,
+                  "character": 404
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "offengine",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 424
+                },
+                "end": {
+                  "line": 19,
+                  "character": 433
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "hopengine",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 455
+                },
+                "end": {
+                  "line": 19,
+                  "character": 464
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "curr",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 489
+                },
+                "end": {
+                  "line": 19,
+                  "character": 493
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "nm",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 553
+                },
+                "end": {
+                  "line": 19,
+                  "character": 555
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "nf",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 594
+                },
+                "end": {
+                  "line": 19,
+                  "character": 596
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "kicked",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 625
+                },
+                "end": {
+                  "line": 19,
+                  "character": 631
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "phase",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 721
+                },
+                "end": {
+                  "line": 19,
+                  "character": 726
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "labels",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 743
+                },
+                "end": {
+                  "line": 19,
+                  "character": 749
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "effects",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 750
+                },
+                "end": {
+                  "line": 19,
+                  "character": 757
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "before",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 793
+                },
+                "end": {
+                  "line": 19,
+                  "character": 799
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "after",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 833
+                },
+                "end": {
+                  "line": 19,
+                  "character": 838
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "records",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 871
+                },
+                "end": {
+                  "line": 19,
+                  "character": 878
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "xs",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 882
+                },
+                "end": {
+                  "line": 19,
+                  "character": 884
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "bs",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 888
+                },
+                "end": {
+                  "line": 19,
+                  "character": 890
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "receivers",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "character": 894
+                },
+                "end": {
+                  "line": 19,
+                  "character": 903
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "t",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 20,
+                  "character": 8
+                },
+                "end": {
+                  "line": 20,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "b",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 8
+                },
+                "end": {
+                  "line": 21,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "x",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 41
+                },
+                "end": {
+                  "line": 21,
+                  "character": 42
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "bm",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 73
+                },
+                "end": {
+                  "line": 21,
+                  "character": 75
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "xm",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 103
+                },
+                "end": {
+                  "line": 21,
+                  "character": 105
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "joint",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 133
+                },
+                "end": {
+                  "line": 21,
+                  "character": 138
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "last",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 4
+                },
+                "end": {
+                  "line": 22,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "fb",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 27
+                },
+                "end": {
+                  "line": 22,
+                  "character": 29
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "fx",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 67
+                },
+                "end": {
+                  "line": 22,
+                  "character": 69
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "fbm",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 106
+                },
+                "end": {
+                  "line": 22,
+                  "character": 109
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "fxm",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 138
+                },
+                "end": {
+                  "line": 22,
+                  "character": 141
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "hb",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 170
+                },
+                "end": {
+                  "line": 22,
+                  "character": 172
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "hx",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 210
+                },
+                "end": {
+                  "line": 22,
+                  "character": 212
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "rho",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 249
+                },
+                "end": {
+                  "line": 22,
+                  "character": 252
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "routes",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 315
+                },
+                "end": {
+                  "line": 22,
+                  "character": 321
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "graph",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 388
+                },
+                "end": {
+                  "line": 22,
+                  "character": 393
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "k",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 487
+                },
+                "end": {
+                  "line": 22,
+                  "character": 488
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "rhok",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 518
+                },
+                "end": {
+                  "line": 22,
+                  "character": 522
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "local",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 545
+                },
+                "end": {
+                  "line": 22,
+                  "character": 550
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "wrong",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 603
+                },
+                "end": {
+                  "line": 22,
+                  "character": 608
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "change",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 686
+                },
+                "end": {
+                  "line": 22,
+                  "character": 692
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "ward",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 732
+                },
+                "end": {
+                  "line": 22,
+                  "character": 736
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "bad",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 815
+                },
+                "end": {
+                  "line": 22,
+                  "character": 818
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "momentum",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 897
+                },
+                "end": {
+                  "line": 22,
+                  "character": 905
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "electric",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 967
+                },
+                "end": {
+                  "line": 22,
+                  "character": 975
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "force",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1035
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1040
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "bare",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1088
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1092
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "q0",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1154
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1156
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "qb",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1232
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1234
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "qx",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1305
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1307
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "c",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1378
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1379
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "pi",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1405
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1407
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "pk",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1436
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1438
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "px",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1466
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1468
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "pb",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1495
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1497
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "alignment",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1527
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1536
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "pos",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1585
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1588
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "pl",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1618
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1620
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "pr",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1642
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1644
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "order",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1692
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1697
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "expected",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 1773
+                },
+                "end": {
+                  "line": 22,
+                  "character": 1781
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "anti",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 23,
+                  "character": 4
+                },
+                "end": {
+                  "line": 23,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "result",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em_anti.py",
+              "range": {
+                "start": {
+                  "line": 24,
+                  "character": 4
+                },
+                "end": {
+                  "line": 24,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "main"
+          }
+        ]
+      }
+    },
+    "diagnostics": {
+      "rich_review_wave19_20261015_all_m.py": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": {
+          "kind": "full",
+          "resultId": "3",
+          "items": [
+            {
+              "range": {
+                "start": {
+                  "line": 24,
+                  "character": 11
+                },
+                "end": {
+                  "line": 24,
+                  "character": 62
+                }
+              },
+              "message": "Operator \">\" not supported for types \"int | list[Unknown] | float | str\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"list[Unknown]\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"float\"",
+              "severity": 1,
+              "code": "reportOperatorIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportOperatorIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 43
+                },
+                "end": {
+                  "line": 38,
+                  "character": 49
+                }
+              },
+              "message": "No parameter named \"matvec\"",
+              "severity": 1,
+              "code": "reportCallIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 76
+                },
+                "end": {
+                  "line": 38,
+                  "character": 83
+                }
+              },
+              "message": "No parameter named \"rmatvec\"",
+              "severity": 1,
+              "code": "reportCallIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 112
+                },
+                "end": {
+                  "line": 38,
+                  "character": 118
+                }
+              },
+              "message": "No parameter named \"matmat\"",
+              "severity": 1,
+              "code": "reportCallIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 145
+                },
+                "end": {
+                  "line": 38,
+                  "character": 150
+                }
+              },
+              "message": "Parameter \"dtype\" is already assigned",
+              "severity": 1,
+              "code": "reportCallIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 20
+                },
+                "end": {
+                  "line": 38,
+                  "character": 159
+                }
+              },
+              "message": "Argument missing for parameter \"shape\"",
+              "severity": 1,
+              "code": "reportCallIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+              }
+            }
+          ]
+        }
+      },
+      "rich_review_wave19_20261015_em_anti.py": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "result": {
+          "kind": "full",
+          "resultId": "3",
+          "items": []
+        }
+      }
+    },
+    "server_exit": 0,
+    "native_device": "unmounted; actual direct protocol"
+  },
+  "positive_AST": {
+    "rich_review_wave19_20261015_all_m.py": [
+      {
+        "name": "AllM",
+        "line": 11
+      },
+      {
+        "name": "__init__",
+        "line": 12
+      },
+      {
+        "name": "to_basis",
+        "line": 27
+      },
+      {
+        "name": "from_basis",
+        "line": 30
+      },
+      {
+        "name": "evolve",
+        "line": 33
+      }
+    ],
+    "rich_review_wave19_20261015_em_anti.py": [
+      {
+        "name": "main",
+        "line": 15
+      }
+    ]
+  },
+  "scope": "Only2 newly introduced all-M/anti recovery files. Earlier19 explicit files were checked once and remain separately reported; no repeated project-wide validation or all-clean claim."
+}

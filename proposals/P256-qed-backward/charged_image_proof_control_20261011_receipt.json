@@ -1,0 +1,129 @@
+{
+  "status": "VALID_SCOPED_IMAGE_CONTAINMENT_AND_AFFINE_GAUSS_PROOF",
+  "scope": "No charged floor, fullPhi/lattice ground, linked stability, phase or pole promotion.",
+  "analytic_all_n": [
+    "Let W:C5->wedge2(C4) be the exact native joint intertwiner used here, including the parent highest free wedge minus sign. Its orthogonal singlet complement is not asserted to vanish under arbitrary CAR; instead CAR maps all five source coordinates into the FULL wedge1 or wedge3 C4.",
+    "The normalized occupancy state |k>, sum k=n, represents the unit symmetrized tensor of n individually labelled spin replicas. Extraction of any fixed physical replica is E_n|k>=sum_j sqrt(k_j/n)|k-e_j> tensor |j>. This follows by counting the k_j permutations with selected slot j in the n!/(prod k_j!) normalized sum; hence E_n^*E_n=I for every integer n>=1, not an extrapolation from the finite controls.",
+    "For arbitrary endpoint coefficients t in C4 and either orientation, A_t maps C5 to wedge1 or wedge3 by the actual signed CAR, and the fixed-copy image is (I tensor A_t)E_n. Thus it lies in Sym^(n-1)(C5) tensor C4 for EVERY n, with no discarded scalar traces or spinor components. Native Dirac endpoint mixtures are arbitrary because t is unrestricted and W is unitary on its vector source; physical source phases are fixed jointly, not chosen separately for D and R.",
+    "For any one-body generator M preserving W(C5), E_n dGamma_n(M)=(dGamma_(n-1)(M) tensor I+I tensor M)E_n. CAR contributes [dGamma(h),a^dagger(t)]=a^dagger(h t) and [dGamma(h),a(t)]=-a(h^T t), checked symbolically for arbitrary coefficients for both native H and density R. Endpoint maps are covariant with transformed endpoint coefficients, not falsely claimed to commute at fixed t.",
+    "The invariant symmetric contraction G has G04=G40=G13=G31=1,G22=-1 in the exact free5 frame. Harmonic_n=ker(sum Gij b_i b_j). In the tensor description each pair contraction of a symmetric harmonic source is zero. After selecting a slot, pair contractions among remaining slots and contractions of selected slot with any remaining slot remain zero. Applying A_t to the selected slot preserves the former; the latter is a source tensor constraint, not a licensed projection of the resulting spinor. Finite controls exercise both before CAR and remaining trace after CAR. The ambient targets retain all traces.",
+    "For active n=2 and auxiliary n=126, selected source Harmonic_2 tensor Harmonic_126 has dimensions14 x690880. Changing any one of the two active replicas gives Sym1(active) tensor Sym126(aux) tensor C4(active). Changing any one of the126 auxiliary replicas gives Sym2(active) tensor Sym125(aux) tensor C4(aux). This follows directly from the all-n extraction identity at n126, not finite-point extrapolation. There are64 physical copies,1 active and63 auxiliary, EACH with2 spin replicas; an individual spin replica, not a collective averaged creation, is the selected slot.",
+    "For wedge3 the exact Hodge CAR J gives -H^T and -R^T. The native Q and the parent free-spinor U, followed by the same fixed S4, give T3=J Q U S4, simultaneously D4,R4. It is the same parent joint phase pair. For the whole cell, Sym(S5) on EVERY vector slot and S4 on the spinor commute with total D and flip total R. Consequently u=+1/2 and u=-1/2 are isospectral as JOINT containing-space pairs.",
+    "Source-specific crosscopy orthogonality DOES hold: every original physical spin replica has canonical N_j=2, even in an entangled symmetric harmonic source. An annihilation or creation at replica j changes only its eigenvalue to1 or3. Distinct j images belong to orthogonal joint eigenspaces of the commuting N_j. Within one replica arbitrary Dirac-mode endpoint contributions need NOT be orthogonal and must be summed with CAR signs. Two-cell branches are similarly labelled by changed replicas and charge orientation. This proves source-restricted norm-square additivity across replicas, not a sqrt(count) operator norm. On full Fock space a normalized annihilation mixture sum alpha_j a_j has norm sqrt(sum |alpha_j|^2), by CAR; original unnormalized hopping coefficients must be kept.",
+    "Background is one fermion per physical site per spin replica:128 replicas per cell,256 background fermions per cell. Copy charge q_j=N_j-2; total q=sum_j q_j, and r=sum_j(n_jL-n_jR)/2. Site excess densities are qL=q/2+r and qR=q/2-r, whereas n_jL,n_jR are raw copy occupations; do not confuse these with background-subtracted site density. In a first-shell branch exactly one replica changes, so q=+/-1. The abbreviation N-2 refers to this changed replica, not total cell N minus2.",
+    "For two cells with zero external boundary flux and qB=-qA, cumulative Gauss flow E=(-rA-qA/2,-qA,-rB-qA/2). Therefore the electric form is64(R_A+qA/2)^2+64(R_B+qA/2)^2+64: the unit bridge costs64 ONCE. Each local charged form is Dtotal+64(Rtotal+u I)^2 on the corresponding full containing space. Both orientations are covered by qA=+/-1. No neutral Lambda gap is used; a separately certified neutral E0 may be used only as a subtraction2E0 in a later charged lower-bound calculation."
+  ],
+  "parameter_binding": [
+    {
+      "role": "active",
+      "count": 1,
+      "spin_replicas": 2,
+      "m_exact": "2961892062647335631959094750571/158456325028528675187087900672",
+      "c0_exact": "-1308822269340134261433747458349/316912650057057350374175801344",
+      "d_exact": "-6551835639726505214210313256407/1267650600228229401496703205376",
+      "e_squared_exact": "604386044059480880401034228055516888229580690473206833635416273/1606938044258990275541962092341162602522202993782792835301376",
+      "c0_float": -4.1299148806603085,
+      "d_float": -5.1684869936139375,
+      "native_binary_Cl2_split_exact": true,
+      "source_phase_binding_exact": true
+    },
+    {
+      "role": "auxiliary",
+      "count": 63,
+      "spin_replicas": 126,
+      "m_exact": "778817418083908094804051015379/39614081257132168796771975168",
+      "c0_exact": "-1308822269340134261433747458349/316912650057057350374175801344",
+      "d_exact": "-6551835639726505214210313256407/1267650600228229401496703205376",
+      "e_squared_exact": "664040478657936556818423057517165130518201779636033432508518033/1606938044258990275541962092341162602522202993782792835301376",
+      "c0_float": -4.1299148806603085,
+      "d_float": -5.1684869936139375,
+      "native_binary_Cl2_split_exact": true,
+      "source_phase_binding_exact": true
+    }
+  ],
+  "finite_controls": [
+    {
+      "n": 1,
+      "symmetric_dimension": 5,
+      "harmonic_dimension": 5,
+      "extraction_isometry": true,
+      "matter_density_intertwining": true,
+      "both_CAR_orientations_arbitrary_complex_mixture": true,
+      "source_trace_constraints_preserved": true
+    },
+    {
+      "n": 2,
+      "symmetric_dimension": 15,
+      "harmonic_dimension": 14,
+      "extraction_isometry": true,
+      "matter_density_intertwining": true,
+      "both_CAR_orientations_arbitrary_complex_mixture": true,
+      "source_trace_constraints_preserved": true
+    },
+    {
+      "n": 3,
+      "symmetric_dimension": 35,
+      "harmonic_dimension": 30,
+      "extraction_isometry": true,
+      "matter_density_intertwining": true,
+      "both_CAR_orientations_arbitrary_complex_mixture": true,
+      "source_trace_constraints_preserved": true
+    }
+  ],
+  "wrong_controls_rejected": [
+    "unsigned full-CAR",
+    "wrong highest wedge phase",
+    "neutral-only destination (canonical number1/3)",
+    "omitted affine half offsets"
+  ],
+  "full_CAR": {
+    "modes": 4,
+    "fock_dimension": 16,
+    "both_orientations": true,
+    "symbolic_arbitrary_endpoint_coefficients": true
+  },
+  "crosscopy_number_label_control": {
+    "physical_replicas": 2,
+    "full_fock_dimension": 256,
+    "full_eight_mode_CAR": true,
+    "both_orientations": true,
+    "arbitrary_complex_endpoint_mixture": true,
+    "disjoint_changed_number_support": true,
+    "actual_source_restricted_Gram_additivity": true
+  },
+  "gauss": [
+    {
+      "qA": -1,
+      "qB": 1,
+      "E": [
+        "1/2 - rA",
+        "1",
+        "1/2 - rB"
+      ],
+      "external_energy_once": 64
+    },
+    {
+      "qA": 1,
+      "qB": -1,
+      "E": [
+        "-rA - 1/2",
+        "-1",
+        "-rB - 1/2"
+      ],
+      "external_energy_once": 64
+    }
+  ],
+  "target_dimensions": {
+    "active": 227177600,
+    "auxiliary": 660562560
+  },
+  "source_hash": "de8173ae6d2a59eb7bab6f7457b04a98c6735941beafacc2e4ef50792430c500",
+  "input_hashes": {
+    "charged_spinor_joint_free_phase_control_20261011.py": "2b3e220e0cd5dab4934b9fd7c0937e08b59d7a59d599deefcede9aedf8c9e206",
+    "charged_spinor_joint_free_phase_control_20261011_receipt.json": "8276441f71408879d494111e5e52ab3f2afe6b1fdee1f905d9484365ceccb2eb",
+    "local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json": "102966f32c49f40d79d55343925a630e30a9cf7e4a8074cf8628142ba9c5b6e8",
+    "local_so5_positive_output_row_inertia_certificate_20261011.py": "f196557eee4b05a54294c2a6d19763ec6c97e36f41eba939afb7ac51a82fb2ab"
+  },
+  "source_and_inputs_unchanged": true,
+  "elapsed_seconds": 48.65974609198747
+}

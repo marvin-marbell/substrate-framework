@@ -1,0 +1,108 @@
+{
+  "kind": "INDEPENDENT_POSITIVE_OUTPUT_ROW_INTERVAL_SCHUR_INERTIA_SCOPE_REVIEW",
+  "reviewer": "PositiveRowInertiaReview",
+  "verdict": "VALID",
+  "scope": "The specified free-energy/rho pair on Sym^2(C5) tensor Sym^126(C5) has lambda_2(Hfree+64rho^2)>=-5123. The same lower bound transfers by min-max to its invariant selected harmonic14 tensor harmonic690880 sector when identified by the separately corrected exact joint intertwiner. No existence of a selected-H eigenvalue below -5123 or ground identification follows from this lower bound alone.",
+  "current_binding": {
+    "source": "local_so5_positive_output_row_inertia_certificate_20261011.py",
+    "source_sha256": "9f00cbd0318dfc2da97b7567a25d1478c9e4069ae888dedfeb92c15145256377",
+    "receipt": "local_so5_positive_output_row_inertia_certificate_20261011_receipt.json",
+    "receipt_sha256": "f6c8823eb6b5005cdb8067088d14fb561cdacbd3bba9c54e0c5042fe160e4e73",
+    "corrected_joint_intertwiner_input": "local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json",
+    "corrected_joint_intertwiner_sha256": "102966f32c49f40d79d55343925a630e30a9cf7e4a8074cf8628142ba9c5b6e8",
+    "Ritz_metadata_input": "local_so5_resum_actual04_20261011_receipt.json",
+    "Ritz_metadata_sha256": "a31c2d5be2a368b7de703d92461e230af59adf7e8ee8f4eaca0944fe4f556fc1"
+  },
+  "frozen_binding": {
+    "source_sha256": "5c8778f37ce08b935b89ab6f1b8c1feadfa801563ac14089e8333120614e9c2c",
+    "receipt_sha256": "b5cd5af3c9580068567a86e3a311d6be0d6dd310532fdc7d04cef235379cc2a2",
+    "input_sha256": "a63812d27615d5f5f7e316ddad13710d5d4100a519d89268b27e9b79cac81451",
+    "executed_archive": "local_so5_positive_output_row_inertia_certificate_attempt1_20261011_executed.zip",
+    "executed_archive_sha256": "f5a09fd03b987a081856f1564d3e86cc0041d425dbf7c006dde632f0f72cfc53",
+    "verdict": "CONDITIONAL",
+    "reason": "Its interval/Schur/inertia mathematics is valid for the stated abstract pair, but the frozen supporting claim that old U identifies the actual source-native free/rho pair is wrong. Frozen bytes are not retrospectively rebound to the corrected proof."
+  },
+  "governing_plan": {
+    "id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "revision": "0c3a3b5e103e08c192ba61ba566c920581a24a72d9ef512fe6c67a025ad2a788",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "requirements": ["outcome", "verification"],
+    "accepted_science_unchanged": "909367f513e90e70209a1bf9dff3635f40b08f1a00add291fecc531a7887c06d",
+    "plan_updates": "Parent only; this reviewer bound/read but did not amend the governing plan."
+  },
+  "reviewed_mathematical_chain": [
+    {
+      "claim": "Output-row positivity",
+      "argument": "For any output projector P, Hlo=Hfree+64rho*P rho<=Hfree+64rho*rho as quadratic forms. This is output selection, not input PHP. R=P rho retains all input columns feeding retained output rows."
+    },
+    {
+      "claim": "Entire input support and exterior",
+      "argument": "Positive excitation gaps and exhaustive lower-endpoint occupation pruning contain every state of free excitation <=322. All 589 retained output states have upper excitation <=240; a single density move changes excitation by at most the largest single-particle spread, and 240+maxspread<322. Explicit row-image membership therefore captures every incoming density transition, including boundary inputs. On the complementary input block R=0 and D=Hfree-z is positive because freefloor_lower+322>-5123. Independent 160-bit rational Cartesian-product enumeration obtains 1768 inputs, 589 outputs, 14 strictly negative free columns and no ambiguous D sign."
+    },
+    {
+      "claim": "Positive-Q Schur reduction",
+      "argument": "Partition negative D_L from positive diagonal D_Q. The Q block D_Q+64 B_Q*B_Q is strictly positive. Woodbury gives the exact Schur matrix S=D_L+64 B_L* K^-1 B_L, with K=I+64 B_Q D_Q^-1 B_Q*>=I. The outside-support block contributes no negative inertia."
+    },
+    {
+      "claim": "Fixed-witness variational Gram",
+      "argument": "Y is treated as its exact finite binary float value, not as an exact inverse computation. G=B_L*Y+Y*B_L-Y*KY satisfies exact identity B_L*K^-1B_L-G=E*K^-1E with E=B_L-KY. Since K>=I, 0<=E*K^-1E<=E*E<=||E||_F^2 I. Thus even an inaccurate numerical Cholesky witness remains sound after the exact residual price."
+    },
+    {
+      "claim": "Outward interval arithmetic and Loewner enclosure",
+      "argument": "Fraction-to-dyadic conversions, products, sign-aware integer scales, reciprocals away from zero, and square roots round outward on the 2^-100 grid. Entrywise intervals enclose the exact expressions at fixed binary Y. The symmetric integer midpoint is enclosed by plus/minus radius I using the maximum absolute interval-deviation row sum; this is a symmetric Gershgorin/operator-norm bound. The sum of separately upward-rounded residual squares bounds the Frobenius Gram. Both enclosures use the same positive dyadic scale, so integer inertia has the correct sign."
+    },
+    {
+      "claim": "Exact inertia and min-max",
+      "argument": "Unpivoted Bareiss is valid for these symmetric matrices because every encountered leading pivot is nonzero and every prescribed division is checked exact. Successive leading-minor ratios determine LDL pivot signs; counting signs of raw leading minors would be wrong. The lower and upper Loewner enclosures each have one negative and thirteen positive eigenvalues. Ordered eigenvalue monotonicity therefore puts exactly one negative eigenvalue in S and in Hlo-z. Consequently lambda_2(Hlo)>=-5123, and Loewner/min-max gives the same lower bound for the specified H and its invariant native harmonic restriction. This is not a numerical-eigenvalue-to-certificate promotion."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "corrected_dependency",
+      "trigger": "Binding old freeframe U to the source-native hopping sign",
+      "owning_frozen_revision": "a63812d27615d5f5f7e316ddad13710d5d4100a519d89268b27e9b79cac81451",
+      "consequence": "Old native intertwiner assertion is invalid even though the abstract free-energy/rho matrix certificate remains mathematically valid.",
+      "correction": "NEW corrected exact pair uses Ucorr=F U with F=diag(1,1,1,1,-1); the separately proved phase preserves rho/G and the harmonic sectors. New source9f00 and corrected input102966 explicitly distinguish epochs.",
+      "review_boundary": "Corrected proof and its algebraic matrix/profile fields were read; parent reports its separate independent exact proof. This slice reviews the lower-bound machinery and does not independently repeat the native representation proof."
+    },
+    {
+      "severity": "scope_limitation",
+      "trigger": "Interpreting lambda2 lower or existing floating Ritz mu as a ground certificate",
+      "consequence": "No certified Ritz upper interval, selected-H ground existence below z, or ground-state identification is supplied here.",
+      "correction": "Retain Ritz_roundoff_interval_certified=false and local_ground_state_certified=false. A separately certified upper witness is required before any such inference."
+    }
+  ],
+  "exact_epoch_change_review": "Byte diff against frozen executed archive shows only corrected INPUT, independent RITZ metadata/pin and two corrected-proof assertions, additional RITZ unchanged binding, and native phase metadata. The interval/enumeration/Schur/residual/Bareiss mathematical body is unchanged. All consumed exact role parameters agree between frozen and corrected inputs.",
+  "independent_controls": {
+    "source": "local_so5_positive_row_review_controls_20261011.py",
+    "source_sha256": "eecf6329d1d7c12387882752ca0ce1ae1289e3cfa042345556a5234fb225cb38",
+    "receipt": "local_so5_positive_row_review_controls_20261011_receipt.json",
+    "receipt_sha256": "5c796be13b5dd9f6ce17743409b5ff06b42d93a136c83963ac6a0f6914c7be01",
+    "natural_exit_capsule": "local_so5_positive_row_review_controls_20261011_exit.json",
+    "exit_code": 0,
+    "elapsed_seconds": 0.3664926989877131,
+    "input_unchanged": true,
+    "discriminating_results": [
+      "Actual corrected input independently enumerates 1768/589/14 with entire density-image closure; restricting inputs to output states produces 1490 missing directed row images.",
+      "Deleting a genuine boundary input outside the output set produces four missing row images; the control therefore detects omitted-input false closure.",
+      "An unpaid exterior budget50 is rejected because its free floor lies below z, whereas actual322 is above z.",
+      "For exact symmetric R=[[1,1],[1,2]], incorrect input-cropped64(PRP)^2 fails Loewner lower ordering: full-minus-wrong quadratic value on (-3,1) equals -256. Correct output-row64R*P R leaves a PSD complement.",
+      "A non-solved exact rational Y verifies both Schur Gram residual inequalities and the Frobenius cap; independent rational LDL gives one negative for full positive-Q block and Schur matrix.",
+      "Diagonal(-3,2,5) has all three leading minors negative but only one negative LDL pivot, rejecting raw-minor-sign counting.",
+      "Exact1/3 on grid1/16 requires outward interval[5/16,3/8]; inward upper5/16 is rejected. Off-diagonal uncertainty rejects a diagonal-only zero-radius Loewner enclosure."
+    ],
+    "no_old_or_new_producer_rerun": true,
+    "not_reconstructed": "The actual14x14 interval centers/Bareiss minors were not separately recomputed; this is source-level mathematical audit plus independent boundary falsifiers, not a second execution of the certificate."
+  },
+  "tooling": {
+    "root": "/home/administrator/substrate-222",
+    "root_marker": "pyproject.toml",
+    "LSP": "Installed pyright-langserver exercised directly by JSON-RPC initialize/documentSymbol/definition/diagnostic; inertia definition located at its declaration.",
+    "AST": "Installed ast-grep positive Python function query on inertia succeeded.",
+    "limitation": "No mounted xd://lsp device; direct LSP diagnostics reported unresolved numpy/scipy in the default interpreter environment. The independent control uses only standard-library imports. No lint/build/test suite or formatter ran."
+  },
+  "not_admitted": ["groundstate", "fullground", "fullPhi", "phase", "IRatom", "photon", "commoncone", "originalSOURCE", "law", "coupling", "vfit"],
+  "parent_integration": "Parent owns corrected native proof acceptance, integrated consumer, final checker and any scientific admission. Worker VALID status is restricted to the stated lower-bound theorem and is not admission."
+}

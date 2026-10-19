@@ -1,0 +1,39 @@
+{
+  "kind": "FROZEN_INTERFACE_PROJECTOR_NOTATION_CORRECTION_NOT_SCIENTIFIC_REEXECUTION",
+  "status": "DERIVED_NOTATION_AND_DOMAIN_CORRECTION_FOR_PARENT_REVIEW",
+  "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+  "captured_revision": "2ec1fe2f4ebfad5032c59dd9ed0d6ef3a57d15e58247f175c670c5034c7d6208",
+  "work_item": "induced-photon",
+  "frozen_target": {
+    "interface": "matching_defect_interface_20261011.json",
+    "sha256": "e3adabe763cfc0c32716780950f2be6f61027cd926db9fd0039db2a924a306e4",
+    "field": "operator_contract.projectors",
+    "capsule": "matching_defect_capsule_20261011.json",
+    "executed_zip_sha256": "67e41f474ba7a7ab7309d44a05a34cd0050ad3d140d6ca7346ac682235181bc4",
+    "historical_bytes_unchanged": true
+  },
+  "correction": {
+    "withdrawn_notation": "The frozen interface names the pure zero-external-flow projection P0. That notation conflicts with the governing whole spectral-ground P0 convention and must not be used by the linked consumer.",
+    "P_flow0": "P_flow0 = product_external_raw_e (I-F_e), F_e=1_(k_e!=0). This is the ENTIRE zero-external-flow superselection block, containing arbitrary neutral local excitations; it is not the ground projector.",
+    "Pi_ground": "Pi_ground = P_ground = P0 = product_v P_v = |Omega_g><Omega_g|, where P_v=S_v G_v, S_v=1_(w_v=0), G_v=|g><g| extended by zero on other local total-number sectors, and Omega_g is the exact reference product g with its Gauss-bound internal electric degrees. This rank-one spectral projector identity is conditional on the same accepted frozen-law ground premises as the additive form.",
+    "Q_ground": "Q_ground = I-Pi_ground. Every neutral zero-external-flow excitation orthogonal to Omega_g remains in Q_ground. Q_ground is never replaced by I-P_flow0, a rho projector, a source-image complement, or a mean-density complement.",
+    "Q_flow": "Q_flow = I-P_flow0 is ONLY the nonzero-external-flow subspace and is a proper subprojection of Q_ground.",
+    "exact_decomposition": "Pi_ground <= P_flow0; Q_ground = (I-P_flow0) + (P_flow0-Pi_ground) = Q_flow + P_flow0 Q_ground. The summands are orthogonal commuting projections. P_flow0-Pi_ground is the neutral zero-flow excited subspace and MUST remain in ground-complement resolvents and time integrals.",
+    "defect_definition_unchanged": "Delta_v=I-P_v and D_defect=sum_v Delta_v are unchanged. All these projectors strongly commute with H0. ker(D_defect)=range(Pi_ground); consequently D_defect>=Q_ground. On P_flow0, D_defect is the sum of exact local g-complement projectors, not zero.",
+    "form_unchanged": "L=H0-(N^3/2)E_g >= gamma D_defect with gamma=46955312929/34359738368, together with the previously derived simultaneous and excess-flow forms. The proof and occupation/affine coverage do not depend on the erroneous name P0 for P_flow0.",
+    "heat_domain": "The defect-pattern projector with zero defects is precisely Pi_ground. The sum of positive-defect pattern projectors is Q_ground, including zero-flow neutral patterns. Thus ||exp(-tL)Q_ground||<=exp(-gamma t), and each pattern with d>=1 defects has bound exp(-gamma t d). A ground-complement inverse is Q_ground L^{-1} Q_ground; restricting instead to Q_flow would wrongly delete paid neutral zero-flow intervals. No allorder linked radius is claimed by these identities."
+  },
+  "exact_domain_witness": {
+    "construction": "Choose one cell v and any normalized canonical256 vector psi_v perpendicular to exact g. Set every external raw flow k_e=0 and take psi=psi_v tensor product_(u!=v) g_u with the native Gauss-bound internal electric embedding.",
+    "identities": [
+      "P_flow0 psi = psi",
+      "Pi_ground psi = 0",
+      "Q_ground psi = psi",
+      "Q_flow psi = 0",
+      "D_defect psi = psi"
+    ],
+    "meaning": "This exact current-reference domain witness distinguishes the two projectors and shows why neutral zero-flow excitations cannot be omitted. It is a derived operator witness, not a new numerical experiment or a full-H negative counterexample."
+  },
+  "execution_scope": "No frozen interface, scientific source, request, capsule or archived member was edited or rebound. No CLI/solver/checker/test/diagnostics rerun was requested or performed for this notation addendum. Parent owns reviewed integration and any successor typed interface.",
+  "nonclaims": ["physical1 gap", "physicalPhi/lattice ground", "normalized linked convergence radius", "massless photon", "campaign admission"]
+}

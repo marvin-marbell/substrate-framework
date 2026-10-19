@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_current_retarded_higher.py", line 301, in <module>
+    with threadpool_limits(limits=1):result=run(args.output,args.term_cap,args.seed_cap)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_current_retarded_higher.py", line 266, in run
+    controls=boundary_control()
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_current_retarded_higher.py", line 158, in boundary_control
+    engine=TraceEngine(dict(native=dict(D=d)),[species,aux],geo,dict(denominator=4,L_integer=np.array([[1,-1],[-1,1]])),200000)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_initial_density_higher_jets.py", line 65, in __init__
+    self.states=[(-.5,species[0].p,False)]+[(c['weight'],c['p'],True) for c in hop.initial_channels(species[0])]
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_electric_hop_transport.py", line 62, in initial_channels
+    body.require(abs(sum(c['weight'] for c in channels)-.5))
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_body_word.py", line 58, in require
+    raise ArithmeticError(f'Authoritative identity defect {error} exceeds {tolerance}')
+ArithmeticError: Authoritative identity defect 0.375 exceeds 3e-09

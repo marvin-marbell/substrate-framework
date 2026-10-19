@@ -1,0 +1,121 @@
+{
+  "kind": "INDEPENDENT_NEUTRAL_ALL64_FROZEN_FINALATTEMPT3_PROOF_AND_CONTRARY_CONTROL_CAPSULE",
+  "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+  "task_governor_revision": "393ec140edc65aa1d875849e8a03841da5102eeccdda0b25e4343e6f85b8bd79",
+  "accepted_scoped_science_unchanged": "741e6bde7d8a4a78fddaf9e40e5ff4ddbfb36bf4ff053979609403ebed056bca",
+  "template_id": "general",
+  "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "work_item_id": "induced-photon",
+  "plan_ownership": "Parent sole plan/integration owner; shared plan bound read-only for reviewer, no admission or plan mutation.",
+  "overall_verdict": "CONDITIONAL as finite binary64 source Gram and commutator contractions; VALID exact all64 coherent CAR reduction and accepted-cap algebra; INVALID any promotion to exact spectral Q, complete source-H variance, interval ground moments or linked phase.",
+  "frozen_target": {
+    "source": "parent_neutral_return_all64_20261011.py",
+    "source_sha256": "25bd1c4824b4c5058ecd95d8bc2ff699b0304f53b015d8a9c20e35e6f75ba8f0",
+    "receipt": "parent_neutral_return_all64_attempt3_20261011_receipt.json",
+    "receipt_sha256": "395b949554d835c2599106b66549411c200e99401a9eca2f874a99a4922d9b2c",
+    "exit": "parent_neutral_return_all64_attempt3_20261011_exit.json",
+    "preexecution_archive_sha256": "4d14a3c7909cb1347fe3906ee85782b59145b832e84ba80354093654f421c3b3",
+    "executed_archive_sha256": "c0ce1c7c65e7e24cc740b25e14167dd753b53a32bc4827c7b9f49bcad2ce44da",
+    "target_natural_returncode": 0,
+    "target_natural_exit": true,
+    "target_stderr_empty": true,
+    "current_source_and_all10_pinned_inputs_equal_archived_execution": true,
+    "source_controls_unchanged": true,
+    "target_imported_or_CLI_rerun_by_reviewer": false,
+    "target_edits": false
+  },
+  "proof_verdicts": [
+    {
+      "verdict": "VALID",
+      "scope": "Complete coherent all64 C=TTdagger+TdaggerT and seven equality-pattern kernels",
+      "source_witness": "parent_neutral_return_all64_20261011.py:85-101,104-136,244-268; neutral_return_image_factorized_20261011.py:13-80; interface law and finite_factorized_Gram",
+      "derivation": "CAR gives C=sum_f S_f+sum_(f!=g) D_fg, where S_f contains BOTH contacts and the f=g exchange, and D_fg is the complete -2 exchange. A physical mode is slot=2f+floor(i/2), Dirac=2side+i%2. i,j,k,l each range0..3: two physical spins per copy retained. The actual4 matrix has two spin blocks but does not turn source spin slots into independent factors; all nonzero entries participate and different hop spins remain inside the exchange sum. All coincident/contact/exchange histories are added before norm.",
+      "orthogonality_reason": "S_f leaves total canonical fermion number of every copy unchanged, though it can transfer between its two physical spins. D_fg changes A-copy f by+1 and g by-1, with opposite B-copy changes. Thus different ordered (f,g) exchange sectors are mutually orthogonal and orthogonal to every S_h. This is actual labelled canonical-number orthogonality, NOT orthogonality of arbitrary history/representation embeddings. Distinct S_f overlap and must be kept.",
+      "weights_order": ["same_active", "same_auxiliary", "self_active_auxiliary_cross", "self_distinct_auxiliary_cross", "different_active_auxiliary", "different_auxiliary_active", "different_auxiliary_auxiliary"],
+      "weights": [1,63,126,3906,63,63,3906],
+      "completeness": "1 active and63 auxiliaries give1 and63 diagonal self kernels,2*63 mixed ordered self cross terms,63*62 ordered auxiliary self cross terms,63 exchanges in each A/U orientation and63*62 auxiliary exchanges. These are all4096 self term-pairs plus4032 non-self exchange norms. No extra spin multiplier is appropriate: the 4x4 term kernel already includes both spins. No same-spin, scalar/full6, directsum-overlap or cross-history branch has been deleted.",
+      "independent_witness": "Exact globally signed48-mode integer control with3 copies and2 spins per copy: direct two-hop C equals the independently written coherent contact/exchange action; seven density kernels equal global CAR kernels exactly. Norm30755840; decohering self histories gives15845484, dropping crosscopy exchanges gives26710760. Direct self cross overlaps2646592 and2161994 are nonzero. All64 weights independently enumerated from labelled classes, not inferred by numerical extrapolation from3 copies."
+    },
+    {
+      "verdict": "VALID exact contract; CONDITIONAL actual density bytes as FLOAT",
+      "scope": "Correlated one/two physical-slot densities, orientation and role counts",
+      "source_witness": "Frozen connected_root_exterior_actual1 archive source:41-81; current connected source:41-81,108-139; parent target:43-80,108-130",
+      "derivation": "Same-role ordered extraction is b_j b_i/sqrt(n(n-1)), n=2 active and126 auxiliary; unlike-role extraction applies b_i/sqrt2 and b_j/sqrt126 to the SAME entangled source, tracing ONE shared spectator. Sym2 coordinates have sqrt2 offdiagonal weights. Preserved NPZ fields are [psi,total physical rho psi], so only the top-left15x15 (AA,UU) and25x25 (AU) source blocks belong to the normalized source Gram. Parent expands Sym2 with U and uses transpose of the extraction Gram R_ij=<E_i,E_j> to produce rho[ket,bra]; AU-to-UA requires swapping BOTH ket and bra slot axes. Partial traces derive one-slot active/aux densities. Spin/copy role is active for slots0,1 and auxiliary for slots2..127.",
+      "CAR_contraction": "Each bilinear Gram has at most four odd CAR factors. Nonzero net change on any physical slot makes it zero. Otherwise at most two slots remain; reorder into ascending physical-slot blocks with (-1)^inversions, preserve within-slot order, project full16 CAR with native W5, then trace O rho. Number balance may not be relaxed to copy-only balance. CellA/B source factorization is legitimate; slot factorization within a cell is not.",
+      "actual_preserved_NPZ_sha256": "4c6c6e0da22e0d9d405c37935332bb9548fbf2df5f429ec66b50aa671f8af67d",
+      "density_producer_scope": "Original executed density source63acee0f differs from corrected currentc61389c; extraction definition lines41-81 is identical. Frozen NPZ/output hash and source-input hashes independently matched original executed archive/natural exit0. Original opposite-right H moments are NOT readopted.",
+      "FLOAT_observations": "AA/UU/AU traces agree with1 within9e-16; mixed partial defects4.53e-16 and6.69e-16; AA/UU swap defects0. Product-density wrongcase defects0.010417371240921871 and0.009398659992934905. AU role-swap defect0.010877522279522591: do not identify AU with UA without axis permutation.",
+      "contrary_orientation_control": "NEW exact native4-mode signed CAR with complex number2 source gives direct moment+i. Producer-Gram transpose gives+i; missing transpose gives-i. Real archived density would hide this orientation bug, so the complex contrary case is deliberately discriminating.",
+      "limitation": "FLOAT extraction/normalization/rotation is not an outward density interval. Exact normalized binary source and numerical reduced-density bytes must not be silently identified."
+    },
+    {
+      "verdict": "VALID algebra and pattern completeness; CONDITIONAL displayed FLOAT moments",
+      "scope": "Complete commutator contractions, UUcross symmetry, both local H0 and initial-only rho shortcut",
+      "source_witness": "parent target:150-164,275-293; native.car:65-90; factorized.matter_commutator:82-91; API symbolic_vs_FLOAT and interface complete_H0_action",
+      "derivation": "For initial endpoint bilinears, every A endpoint has rho=-1/2 and every B endpoint hasrho=+1/2, independent of spin and onsite role. Hence [rho_A,C]=[rho_B,C]=0 and [64rho_A^2+64rho_B^2,C]=0. Full [H0_A+H0_B,C] is the sum of free commutators in BOTH cells, not deletion of local H0, not a rho0 projection, and not a claim that matter commutes. For feature c_i^dagger c_k, the creation coefficient is h_role(i)[r,p] and annihilation coefficient is -h_role(k)[q,r]. Native h=m_role A+c0 B+d C uses unequal exact onsite m values and common exact c0,d, retains all4 Dirac outputs. Generated commutator features generally DO NOT commute rho; the electric simplification is used once on the INITIAL operator only.",
+      "UUcross_symmetry": "Commutator generation changes Dirac labels, not physical slot/copy number patterns, so the same seven sector classes remain complete. Mixed A/U self crosses explicitly include both <S_A,D_U> and<S_U,D_A> with coefficient63 each. For two auxiliaries, the simultaneous permutation exchanging their entire two-spin copies leaves symmetric source, rho and equal auxiliary onsite profile invariant, and takes(S_f,D_g) to(S_g,D_f). Thus BOTH first cross contractions are identical, not merely presumed conjugates; coefficient63*62=3906 is correct. The analogous second Gram is symmetric and Hermitian. Target uses this symmetry once, not an extra factor2 on3906.",
+      "independent_exact_witness": "NEW48-mode integer globally signed CAR retains full mixed-role generic onsite matrices and BOTH complete cell64rho_all^2. HC-CH equals generated full4-Dirac free-feature action exactly. Full first/second contractions78127104/2476878624 agree with all coherent equality classes and correlated-density contractions. Equal-UU reverse second cross is5613984, so retaining only one orientation for the single auxiliary pair would give2471264640 rather than2476878624. Wrong common onsite role and omission of cellB give vector error squares771397824 and1387758240. Generated D has nonzero [rho_A,D] vector error square2177510272, falsifying the recursive electric shortcut.",
+      "control_limit": "The integer onsite witness is generic real symmetric mixed onsite, not a rerun of the native complex numerical target. The free commutator identity is polynomial in arbitrary onsite entries. Native A/B/C phases and actual source use are inspected in the frozen source. The toy UU first cross is0, so its recorded wrong_UU_halfcross_first is NON-DISCRIMINATING and is not evidence against a first-moment factor error; exact permutation proof covers first, and nonzero second cross supplies the adverse finite witness.",
+      "moment_meaning": "Receipt first3.6081258835812755e9 is <Csource,[H0,C]source>; second2.841222488583282e11 is ||[H0,C]source||^2. They are NOT actual complete source H0 variance. Only for exact eigen-ground g does(H0_A+H0_B-2Eg)Cg=[H0,C]g; then spectral-Q removes the ground component without changing these relative-action moments. Approximate source requires the retained source-error term. No outward actual all64 moment interval was computed."
+    },
+    {
+      "verdict": "VALID cap algebra under accepted binary64 model and explicit whole-ground hypothesis; INVALID unconditional exact-Q interpretation",
+      "scope": "SourceP versus spectralP0, squared infidelity and accepted eta/reference shift",
+      "source_witness": "parent target:269,294-320; accepted consumer:58-88 and receipt2f019; interface source_error_and_projection; root_metric_review_proof finding",
+      "accepted_source_caps_sha256": "2f019dd49873a5e13f130c65ef6739b9af78a16f85138dc6c6ab6e32e65c7a12",
+      "projection_meaning": "92226504.01537406 is FLOAT unprojected source Gram. 46119414.096103325 is remaining squared norm AFTER subtracting the approximate product-source rank1 block; it is NOT exact whole spectral-Q return norm. Q=I-Pground must remove the ENTIRE orthogonal spectral ground block. Uniqueness of selected H2 tensor H126 ground alone does not identify the ground of a broader canonical/image/lattice space. Broader-block identification belongs to parent canonical integration; conditional use only here.",
+      "vector_rule": "I=274877906944/2204801412260314559041 bounds SQUARED source infidelity. Phase-align <g,Omega> nonnegative: single vector distance squared=2(1-sqrt(1-I))=2I/(1+sqrt(1-I)); product-source distance squared<=2I; product rank1 projector distance squared<=2I-I^2. Exact comparison2I<1/60000^2 provides common vector/projector cap1/60000. I itself is NOT a vector-distance cap. With the entire ground block identified as selected productPgg, fixed-source Q discrepancy<=L/60000 and true-ground-source Q vector discrepancy<=L/30000. These are vector bounds, not permission to treat approximate Gram as exact.",
+      "operator_bound": "Actual spin/phases preserve ||M||_F=2sqrt(c0^2+d^2); nuclear norm<=4sqrt(c0^2+d^2). SVD-CAR gives ||T||<=64*4sqrt(c0^2+d^2), hence ||C||<=L=131072(c0^2+d^2). Exact rational arithmetic matches target L andL/30000 fields.",
+      "residual_action": "Use accepted normalized exact source residual eta=1/65536, not observed5.679e-8. Coefficient/action formation1/262144 is ALREADY included in eta and must not be double-added. Rayleigh-to-exact-ground upper shift=46955575073/1538631694057472 is retained. Both cells give ||C(H0_A+H0_B-2Eg)OmegaOmega||<=2L(eta+shift). Exact rational cap and reference-shift fields independently match target receipt. Omitting the shift or adding formation again changes the cap; no observed FLOAT price is promoted.",
+      "contrary_projection_witness": "NEW exact source(3/5,4/5), spectral ground(1,0), C=diag(1,2): source-Q return square144/625 versus spectral-Q64/25. Squared infidelity16/25 and phase-aligned vector distance squared4/5 reject treating I as a vector norm. This is an exact finite mathematical contrary control, NOT actual neutral spectral-projector computation.",
+      "limitations": "Actual full spectral projection and moment/extraction intervals remain uncomputed. No normalized-image energy/variance or stationarity follows from a residual-action cap without numerical enclosure and a positive true-Q norm lower bound. Root observed-residual certified-price inference remains INVALID; finalattempt3 uses the accepted cap correctly and does not revive old prices."
+    }
+  ],
+  "independent_execution": {
+    "control": "neutral_all64_review_control_20261011.py",
+    "control_sha256": "e2fc40e7970741d284efb5e4cb9046a2202570f8423f65930be8eb4c5094d440",
+    "receipt": "neutral_all64_review_actual1_20261011_receipt.json",
+    "receipt_sha256": "2cc3f1eb447563a1c24719e29359ce22309a9fae03ee5545d30323e118077334",
+    "exit": "neutral_all64_review_actual1_20261011_exit.json",
+    "exit_sha256": "d2b3e6aa74e9d871f98efcd6a2768f2eca05fb3157ad213f82731a70237531b3",
+    "preexecution_archive_sha256": "3e5ab5492d68284ec552759759fc760424f8b815962ec52f85d9a63024836dfe",
+    "executed_archive_sha256": "cfd7117602cbaeedea8380fb2e6baf0f8d17f4da1ff9082725e89d8295917912",
+    "natural_returncode": 0,
+    "natural_exit": true,
+    "elapsed_seconds": 35.56428901801701,
+    "stderr_empty": true,
+    "all_assertions_reached": true,
+    "all_selected_sources_inputs_unchanged": true,
+    "target_CLI_import_or_rerun": false,
+    "old_solver_or_checker_rerun": false,
+    "independence": "No target/science module imports. New direct globally ordered occupation-mask CAR, independently written coherent terms/density contraction and exact integer arithmetic. Finite controls support specific algebraic classes, not a claimed actual48/64-copy ground calculation."
+  },
+  "supporting_artifacts": [
+    "neutral_all64_review_language_20261011.json",
+    "neutral_all64_review_density_image_binding_20261011.json",
+    "neutral_all64_review_actual1_20261011_request.json",
+    "neutral_all64_review_actual1_20261011_stdout.txt",
+    "neutral_all64_review_actual1_20261011_stderr.txt"
+  ],
+  "language_intelligence": {
+    "before_new_code": "ast-grep positive class Kernel query; direct pyright-langserver JSONRPC documentSymbol220, Kernel definition returned line103, representative publishDiagnostics empty after supplied scientific interpreter settings.",
+    "limitation": "OMP lsp device unavailable; direct server protocol exercised instead. This is pre-edit representative intelligence, NOT final selected-file diagnostics. Parent owns final diagnostics on all landed code.",
+    "build_lint_test_formatter_selected_Pyright_midflight": "Not run. Only explicitly assigned NEW independent contrary mathematical control executed."
+  },
+  "remaining_open": [
+    "Outward numerical density/extraction/moment enclosures",
+    "Actual whole spectralP0 correction applied to all64 numerical Gram",
+    "Broader canonical/image ground identification through parent integrated proof",
+    "Complete actual source-H variance and neutral Schur/resolvent response",
+    "PhysicalPhi/lattice ground",
+    "N-uniform normalized linked stability",
+    "Phase/stiffness/IR atom/sharp photon/commoncone/originalSOURCE"
+  ],
+  "parent_handoff": [
+    "Keep finalattempt3 source hash25bd1c48 and all controls unchanged; consume this proof with canonical-cover/odd-vector reviews without interpreting agreement as proof.",
+    "Use source-Q FLOAT norm only with the conditional entire-ground-block hypothesis and accepted square-root vector/projector cap; do not publish it as exactP0.",
+    "Keep first/second commutator contractions distinct from complete actual source-H variance or outward ground moments.",
+    "Run final selected language diagnostics once after all reviewers land, using supplied scientific interpreter; no target/old solver/checker rerun requested by this review.",
+    "Record reviewer evidence and scope in parent-owned plan; this capsule does not modify accepted science or admit linked phase."
+  ]
+}

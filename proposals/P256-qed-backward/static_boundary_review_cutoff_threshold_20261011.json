@@ -1,0 +1,40 @@
+{
+  "kind": "CUTOFF_THRESHOLD_QUALIFICATION_NOT_NO_GO",
+  "inherited_radius": {
+    "archive": "native_static_exterior_actual3_20261011_preexecution.zip",
+    "archive_sha256": "2cf127348e0522efb168c2a7f9a8e30f586408ce92a3a91cbf26c154a4911f69",
+    "member": "ground_weighted_form_review_proof_20261011.json",
+    "member_sha256": "a5acd76ef883ee18119a7f315d792fb6541e38d881a329ccc9dd43dc0c1c24e2",
+    "field": "hypotheses[1]",
+    "definition": "Phi_mu=sum15 q_muA T_A, Tr(T_AT_B)=delta_AB/2; s_x=|q_x|^2/2 and r_x=sqrt(s_x)."
+  },
+  "target_tail_field": {
+    "file": "native_static_exterior_proof_20261011.json",
+    "sha256": "137e0ced3548360f31a71e72b0d67b8dee6c4959108a9428566a98e8edd56687",
+    "field": "attempt1_field_energy_cutoff.complete_action_tails",
+    "definition": "t_M=||s_x 1_{r_x>M}psi||"
+  },
+  "target_diagnostic_field": {
+    "field": "attempt1_field_energy_cutoff.native_quadratic_countercontrol",
+    "event": "s_x>M^2/4 and s_y<=M^2/16",
+    "conclusion": "event lies beyond r_x>M/2, not beyond r_x>M; original lower bound (31/480)alpha^2 Q(32,7.5)P(30,30M\u00b2/16) must be labelled half-radius"
+  },
+  "corrected_event": {
+    "high": "s_x>M\u00b2, hence r_x>M",
+    "neighbour": "s_y<=M\u00b2/4, hence r_y<=M/2",
+    "variance_high": "M\u00b2/30 in all60 coordinates",
+    "mixture_weight": "M^-4",
+    "physical_source": "full60 radial Gaussians + normalized Haar + all65 canonical SU4 onsite singlets/each2V + original collective64 affine checkerboard + inertRef4",
+    "alignment": "T_e=alpha sum_mu||Phi_mu,x-AdU Phi_mu,y||HS\u00b2, alpha=2^10240/40; every SU4 U retained",
+    "inequality": "T_e\u00b2>=alpha\u00b2 s_x\u00b2/16 on corrected event",
+    "exact_lower": "E[T_e\u00b2 1_{r_x>M}] >=(31/480)alpha\u00b2 Q(32,30)P(30,30M\u00b2/4) in high-mixture contribution",
+    "positive_limit": "(31/480)alpha\u00b2 exp(-30) sum_{j=0}^{31}30^j/j! >0",
+    "numeric_limit_div_alpha2": "0.0399540264251312480551388620799043194344811346207874",
+    "numeric_boundary": "decimal is a 90-digit finite-sum control, not interval bound; exact positive finite expression proves positivity"
+  },
+  "scope": "single native alignment action on nonstationary physical mixture; not full-H no-go, not actual minimizing-ground tail failure. Radius/cone exponent conclusions unchanged. No frozen target edits.",
+  "source_receipt": {
+    "path": "static_boundary_review_actual1_20261011_receipt.json",
+    "sha256": "450cbb322bd330926e81391a3b4dc514973dbad3c20168a5d1fac94557b8ba70"
+  }
+}

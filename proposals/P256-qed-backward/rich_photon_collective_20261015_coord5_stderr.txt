@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_coordinate.py", line 176, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_coordinate.py", line 152, in run
+    matterphi=sparse.kron(matrices[0],sparse.eye(5))+sparse.kron(matrices[1],sparse.diags(c['coupling']*f['phi']))
+                                      ^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_construct.py", line 758, in eye
+    return _eye(m, n, k, dtype, format, False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_construct.py", line 708, in _eye
+    return diags_sparse(data, offsets=[k], shape=(m, n), dtype=dtype).asformat(format)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_construct.py", line 576, in diags
+    A = diags_array(diagonals, offsets=offsets, shape=shape, dtype=dtype)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_construct.py", line 476, in diags_array
+    return dia_array((data_arr, offsets), shape=(m, n)).asformat(format)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_dia.py", line 97, in __init__
+    if len(np.unique(self.offsets)) != len(self.offsets):
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/lib/_arraysetops_impl.py", line 296, in unique
+    ret = _unique1d(ar, return_index, return_inverse, return_counts,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/lib/_arraysetops_impl.py", line 376, in _unique1d
+    hash_unique.sort()
+KeyboardInterrupt

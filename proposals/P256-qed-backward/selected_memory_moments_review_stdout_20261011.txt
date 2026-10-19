@@ -1,0 +1,105 @@
+{
+  "verdict": "VALID",
+  "scope": "VALID under the same explicitly assumed standard binary64 model and established unique selected local ground. NEW exact outward intervals of connected density moments m0,m1,m2 for the frozen one-edge active2 x auxiliary126 harmonic sector; no global current norm, fullPhi, bulk, phase or pole admission. Original curvature verdict and diagnostic epochs remain unchanged.",
+  "analytic_review": {
+    "operator_and_charge_steps": "Within-l transitions change p orq by1, and between-l transitions change p orq by1; rho=p-q therefore all nonzero offdiagonal native elements have absolute charge step1. Diagonal electric/free terms commute with rho. Each role has at most4 d-transitions, each magnitude<=|d|(n+1)/2, and4 c0-transitions, each radial-CG magnitude<|c0|(n+3). For c0, sqrt2*f<=sqrt(n(n+3))<n+3 and CG factors<=1. Both row and column sums for hopping K and skew commutator C=[H,rho] are<=B=sum(2|d|(n+1)+4|c0|(n+3))<4096. ||iC||=||C||<=B ONLY in this specified finite sector. No unbounded-global-current statement follows.",
+    "moment_meanings": "b0=Q0rhoOmega and positive selected excitation measure dnu at energiesomega=H-E0>0. m0=||b0||\u00b2 (charge\u00b2), m1=<b0,(H-E0)b0> (energy*charge\u00b2), m2=||(H-E0)b0||\u00b2=||[H,rho]Omega||\u00b2 (energy\u00b2*charge\u00b2). For an actual ground eigenvector, m1=<Omega,[rho,[H,rho]]Omega>/2=-<Omega,K Omega>/2 because every offdiagonal charge step has square1. For arbitrary v this last expression is just a double-commutator diagnostic, not its spectral first moment. Stationarity alone permits excited-state negative first moments.",
+    "source_distance": "Prior sigma/gap gives sin-angle p. Ground sign can be chosen so ||u-Omega||<=sqrt2*p<2p; normalizing exact binary v to u adds<=e with e=norm_defect for e<.001. Hence ||v-Omega||<=2p+e. No earlier infidelity is mistaken for an unsquared distance, and no mean/density-zero proxy is substituted for spectral ground.",
+    "m0_price": "Earlier independently reviewed insertion bound ||b_binary-b0||<=db and ||b_binary||<=1 gives squared-weight error<=2db+db\u00b2. Add binary64 dot reduction gamma*|m0_float|/(1-gamma) and underflow. This supplemental price, not the original floating receipt alone, certifies m0.",
+    "m1_price": "Exact expectation change<=B*(||v||+1)*source_distance/2<=B*(2+e)*source_distance/2. Computed hopping vector Hv-Dv is not treated as exact diagonal cancellation: two complete native/action caps plus32u*2^22 bound its error per||v||. Diagonal coefficient/multiplication and subtraction are included, even when large electric terms cancel. Dot error<=gamma*(B+off_action_error)*(1+e)\u00b2/2 and action error<=off_action_error*(1+e)\u00b2/2. The standard gamma(2D+8) covers reductions/final operations; explicit underflow retained.",
+    "m2_price": "Main current vector was computed as H(rho*v)-rho*(Hv), not from an exact skew matrix. Direct decomposition prices rho*v formation, two full actions, integer-rho multiplication, and subtraction. A sharper bound (256*action_error+384u*2^22)*(1+e)+underflow is strictly below the supplied512*action_error+1024u*2^22+underflow. Thus j_round_error covers un-cancelled floating electric diagonal terms. Add B*source_distance. Current dot m2 with outward norm/underflow bound gives ||j_binary||<151, so squared norm change<=302*j_error+j_error\u00b2; add gamma*|m2_float|/(1-gamma)+underflow. This bounds exact selected-ground current weight, not a pointwise current or another sector.",
+    "variance_and_inverse": "With positive certified moment intervals, m2/m0-(m1/m0)\u00b2>=m2_lo/m0_hi-(m1_hi/m0_lo)\u00b2>1145.2616896111974. Units are energy\u00b2 for normalized connected-density measure. Positive variance excludes support at exactly one excitation energy (single-energy saturation), NOT existence of an atom, partial sharp pole, photon or continuum structure. Exact finite matrix contrary control has positive variance3/4 and TWO atoms3\u00b1sqrt3. Cauchy-Schwarz gives alpha=m_minus1>=m0\u00b2/m1, outward lower0.00349430686354199, consistent with prior resolvent interval. Neither variance nor moment inequality upgrades local response to thermodynamic spectral data.",
+    "rounding_and_provenance": "Uses same native coefficient/action/source caps as original independently reviewed curvature artifact and the same correct-rounding/no-fastmath binary64 assumption, not a separately certified compiler theorem. Frozen parent moment CLI natural0/.893091140s and hashes are recorded, but it is not rerun. Independent controls are exact Fraction arithmetic, explicit binary64 matrix products/subtractions and moment identities; no source-text/mock echo controls. Scalar reproduction alone is labelled consistency, while operator inequalities are independently analytically reviewed.",
+    "smallest_correction": "No mathematical correction needed at stated local moment scope. Retain explicit selected-sector norm scope, units, same binary64 model, and not_absence_of_spectral_atoms flag. Original moment float diagnostics remain historically unpriced; only this NEW separately reviewed supplemental artifact carries intervals."
+  },
+  "controls": {
+    "weighted_path_moments": [
+      "2/3",
+      "1",
+      "2"
+    ],
+    "positive_variance_with_two_atoms": "3/4",
+    "atom_energies": "3-sqrt3,3+sqrt3",
+    "single_energy_variance_zero": true,
+    "stationary_excited_first_moment": "-2/3",
+    "jump_two_rejects_unit_jump_contact": [
+      "2",
+      "1/2"
+    ],
+    "approximate_normalized_lift_prices": {
+      "norm_defect": "2001/1000000",
+      "distance_upper": "461/1000",
+      "first_moment_difference": "17787/50000"
+    },
+    "actual_Hv_Dv_rounding_error_squared": "3738337856717/730166745731460135262101046296576",
+    "actual_uncancelled_current_rounding_error_squared": "3738337856717/182541686432865033815525261574144",
+    "inverse_moment_bound": [
+      "4/9",
+      "1/2"
+    ]
+  },
+  "scalar_audit": {
+    "B_float": 3557.4409943735495,
+    "source_distance": 3.510713535183782e-07,
+    "off_action_error": 1.1549400757235463e-07,
+    "jround": 2.622860583110091e-05,
+    "direct_jround": 1.3054698298812478e-05,
+    "moment_error_floats": [
+      0.000140590703309259,
+      0.001252793508857469,
+      0.3851432695051533
+    ],
+    "intervals_float": [
+      [
+        0.6417355434114691,
+        0.6420167248180877
+      ],
+      [
+        117.85334501797733,
+        117.85585060499504
+      ],
+      [
+        22389.19313175289,
+        22389.9634182919
+      ]
+    ],
+    "variance_lower": 1145.2616896111974,
+    "inverse_moment_lower": 0.00349430686354199
+  },
+  "source_sha256": "b054ec5b934d9b9a1ebfa49cb5b7137049c85e627782e73a8a9d876ed5bfaef6",
+  "inputs_sha256": "5173dea50d6e22b4d7414157291c3f2ae30fadbf6be536285934930cb9f046d9",
+  "producer_sha256": "4a2bf6c3e7427534fa39a1b680c0c11f9f6c7090909a486bc89a5039c9b06d36",
+  "original_curvature_verdict_unchanged": true,
+  "moments_previously_unpriced": "The earlier curvature artifact retains floating diagnostics. These NEW supplemental prices, not retrospective relabelling, certify the moments.",
+  "not_absence_of_spectral_atoms": true,
+  "bulk_stiffness": false,
+  "fullPhi_ground": false,
+  "phase": false,
+  "pole": false,
+  "current_norm_selected_finite_sector_only": true,
+  "parent_execution": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "local_so5_ground_current_moment_bounds_20261011.py"
+    ],
+    "returncode": 0,
+    "natural_exit": true,
+    "elapsed_seconds": 0.8930911400093464,
+    "source_and_input_sha256": {
+      "local_so5_ground_current_moment_bounds_20261011.py": "4a2bf6c3e7427534fa39a1b680c0c11f9f6c7090909a486bc89a5039c9b06d36",
+      "local_so5_ground_electric_memory_consumer_20261011_receipt.json": "e3cb54a05f67ec29158f8c52c077375c14816a742514e9a210319a2383de7843",
+      "local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json": "102966f32c49f40d79d55343925a630e30a9cf7e4a8074cf8628142ba9c5b6e8",
+      "local_so5_resum_source_20261011.py": "7f73170ca3a33782b5b391a6f6d3b6e0e3b7bf385c2f03cc2b5f7696fde8e009"
+    },
+    "unchanged": {
+      "local_so5_ground_current_moment_bounds_20261011.py": true,
+      "local_so5_ground_electric_memory_consumer_20261011_receipt.json": true,
+      "local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json": true,
+      "local_so5_resum_source_20261011.py": true
+    },
+    "scope": "NEW interval current-moment composition and finite independent ground/excited controls; no original solver rerun",
+    "captured_governor": "7a607bed4ba1af85faf53f82a188a38975d53fe510750013f8722d14bcc3e2f2"
+  },
+  "all_inputs_unchanged": true,
+  "source_unchanged": true
+}

@@ -1,0 +1,155 @@
+{
+  "kind": "NATIVE_MAGNETIC_SLAB_NONCOMPACT_THERMAL_TRACE_BOUNDARY_NOT_PHASE",
+  "source_sha256": "90dbc5201862694d195345b858b1f8a6fa96d07542361ab67404525d2cc00e6b",
+  "native_deck": [
+    {
+      "N": 4,
+      "interior_face_base": [
+        1,
+        1,
+        1
+      ],
+      "integer_divfree_dynamic_deck": [
+        [
+          64,
+          1
+        ],
+        [
+          65,
+          -1
+        ],
+        [
+          67,
+          -1
+        ],
+        [
+          77,
+          1
+        ]
+      ],
+      "norm_squared": 4,
+      "interior_divergence_zero": true,
+      "pinned_boundary_unchanged": true,
+      "native_one_two_paths": 336,
+      "half_period_wrongcase_changed_paths": 12,
+      "Gauss_density_not_changed": true,
+      "all64_charged_periodicity": "Exact integer path phase; arbitrary full Phi/ordered SU4 coefficients unchanged. Neutral has no U1 phase; Ref/number/density operators untouched.",
+      "quantum_field_space_dimension": 80,
+      "dimension_uses_reviewed_fullrowrank_Dirichlet_incidence": true
+    },
+    {
+      "N": 6,
+      "interior_face_base": [
+        1,
+        1,
+        1
+      ],
+      "integer_divfree_dynamic_deck": [
+        [
+          130,
+          1
+        ],
+        [
+          131,
+          -1
+        ],
+        [
+          133,
+          -1
+        ],
+        [
+          149,
+          1
+        ]
+      ],
+      "norm_squared": 4,
+      "interior_divergence_zero": true,
+      "pinned_boundary_unchanged": true,
+      "native_one_two_paths": 1188,
+      "half_period_wrongcase_changed_paths": 12,
+      "Gauss_density_not_changed": true,
+      "all64_charged_periodicity": "Exact integer path phase; arbitrary full Phi/ordered SU4 coefficients unchanged. Neutral has no U1 phase; Ref/number/density operators untouched.",
+      "quantum_field_space_dimension": 324,
+      "dimension_uses_reviewed_fullrowrank_Dirichlet_incidence": true
+    },
+    {
+      "N": 8,
+      "interior_face_base": [
+        1,
+        1,
+        1
+      ],
+      "integer_divfree_dynamic_deck": [
+        [
+          220,
+          1
+        ],
+        [
+          221,
+          -1
+        ],
+        [
+          223,
+          -1
+        ],
+        [
+          245,
+          1
+        ]
+      ],
+      "norm_squared": 4,
+      "interior_divergence_zero": true,
+      "pinned_boundary_unchanged": true,
+      "native_one_two_paths": 2880,
+      "half_period_wrongcase_changed_paths": 12,
+      "Gauss_density_not_changed": true,
+      "all64_charged_periodicity": "Exact integer path phase; arbitrary full Phi/ordered SU4 coefficients unchanged. Neutral has no U1 phase; Ref/number/density operators untouched.",
+      "quantum_field_space_dimension": 832,
+      "dimension_uses_reviewed_fullrowrank_Dirichlet_incidence": true
+    }
+  ],
+  "full_quantum_heat_trace_obstruction": {
+    "hypotheses": "Accepted finite-N lower-semibounded physical quotient Friedrichs H, no bare B2, arbitrary full Phi/SU4/all64 canonical+neutral+Ref; nonzero compact transverse packet in the physical Hilbert.",
+    "native_commutation": "T_j translates by 2pi*j*k on dynamic quotient. D_I k=0, pinned shift0, every charged phase unchanged and kinetic/collective HC unchanged. Hence T_j H=H T_j.",
+    "orthogonal_family": "Choose packet support in a ball of radius less than pi*||k||. Its integer deck translates have disjoint connection support, all canonical/colour/Phi components retained.",
+    "positive_heat_diagonal": "For any inverse_temperature>0, c=<psi,exp(-inverse_temperature*H)psi> is finite and strictly positive by spectral calculus; every normalized orthogonal translate has the same c.",
+    "full_cover_trace": "For every integer M, Tr exp(-inverse_temperature H)>=(2M+1)c, therefore the ordinary full-cover heat trace is INFINITE.",
+    "not_a_phase_no_go": true,
+    "finite_full_cover_partition_assumption_rejected": true,
+    "required_next_boundary": "Trace per native deck cell or equivalent regularization with affine Gauss/CAR deck gluing and integrated electric Bloch characters. This must be constructed, not silently beta0.",
+    "ordinary_real_cover_Gibbs_density_computed": false,
+    "raw_unwrapped_regular_field_admitted": false
+  },
+  "integrated_character_method_control": [
+    {
+      "inverse_temperature": "1/64",
+      "integrated_character_heat_per_cell_exact": "sqrt(pi)",
+      "finite_character_integral_exact": "sqrt(pi)*erf(4)",
+      "whole_tail_exact": "sqrt(pi)*(1 - erf(4))",
+      "zero_Bloch_trace_lower": 1,
+      "zero_Bloch_substitution_rejected": false,
+      "toy_free_Pi_only_NOT_native_pressure": true
+    },
+    {
+      "inverse_temperature": "1",
+      "integrated_character_heat_per_cell_exact": "sqrt(pi)/8",
+      "finite_character_integral_exact": "sqrt(pi)*erf(32)/8",
+      "whole_tail_exact": "sqrt(pi)*(1 - erf(32))/8",
+      "zero_Bloch_trace_lower": 1,
+      "zero_Bloch_substitution_rejected": true,
+      "toy_free_Pi_only_NOT_native_pressure": true
+    },
+    {
+      "inverse_temperature": "2",
+      "integrated_character_heat_per_cell_exact": "sqrt(2)*sqrt(pi)/16",
+      "finite_character_integral_exact": "sqrt(2)*sqrt(pi)*erf(32*sqrt(2))/16",
+      "whole_tail_exact": "sqrt(2)*sqrt(pi)*(1 - erf(32*sqrt(2)))/16",
+      "zero_Bloch_trace_lower": 1,
+      "zero_Bloch_substitution_rejected": true,
+      "toy_free_Pi_only_NOT_native_pressure": true
+    }
+  ],
+  "native_thermal_response_computed": false,
+  "physical1_phase_stiffness_photon": false,
+  "campaign_complete": false
+}

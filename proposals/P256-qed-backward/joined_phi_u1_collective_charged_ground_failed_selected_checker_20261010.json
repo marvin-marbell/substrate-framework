@@ -1,0 +1,61 @@
+{
+  "kind": "FINAL_SELECTED_ACTUAL_SOURCE_PYRIGHT",
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--project",
+    "/tmp/joined_phi_u1_collective_charged_ground_pyright_20261010.json",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--outputjson",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_collective_charged_ground_consumer.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_collective_charged_ground_controls.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_collective_charged_ground_natural_exit.py"
+  ],
+  "config": {
+    "typeCheckingMode": "basic",
+    "pythonVersion": "3.12",
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward"
+    ],
+    "reportMissingTypeStubs": false
+  },
+  "selected_sources": {
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_collective_charged_ground_consumer.py": "99067b657030e12a87b2e2e21c3292bf428d4f1a71b165893778a880440dc30c",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_collective_charged_ground_controls.py": "738692050c103f36923b6e5ea50800d770694d1a175e04c42ac7c1004bd4be25",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_collective_charged_ground_natural_exit.py": "721285a05ad30d2c27c27f49886e57b4eaa4d8f648c98b3c6eccf8941f006a1d"
+  },
+  "returncode": 1,
+  "natural_exit": true,
+  "wall_seconds": 4.989186990991584,
+  "stdout": "{\n    \"version\": \"1.1.414\",\n    \"time\": \"1791657868562\",\n    \"generalDiagnostics\": [\n        {\n            \"file\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_collective_charged_ground_consumer.py\",\n            \"severity\": \"error\",\n            \"message\": \"Argument of type \\\"dict[str, float | str]\\\" cannot be assigned to parameter \\\"value\\\" of type \\\"str | dict[str, str] | dict[str, int | str] | list[list[float]] | list[list[list[float]]] | dict[str, float] | list[dict[str, str | list[tuple[str, int]] | Flow | list[float]]] | float\\\" in function \\\"__setitem__\\\"\\n\u00a0\u00a0Type \\\"dict[str, float | str]\\\" is not assignable to type \\\"str | dict[str, str] | dict[str, int | str] | list[list[float]] | list[list[list[float]]] | dict[str, float] | list[dict[str, str | list[tuple[str, int]] | Flow | list[float]]] | float\\\"\\n\u00a0\u00a0\u00a0\u00a0\\\"dict[str, float | str]\\\" is not assignable to \\\"str\\\"\\n\u00a0\u00a0\u00a0\u00a0\\\"dict[str, float | str]\\\" is not assignable to \\\"dict[str, str]\\\"\\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Type parameter \\\"_VT@dict\\\" is invariant, but \\\"float | str\\\" is not the same as \\\"str\\\"\\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Consider switching from \\\"dict\\\" to \\\"Mapping\\\" which is covariant in the value type\\n\u00a0\u00a0\u00a0\u00a0\\\"dict[str, float | str]\\\" is not assignable to \\\"dict[str, int | str]\\\"\\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Type parameter \\\"_VT@dict\\\" is invariant, but \\\"float | str\\\" is not the same as \\\"int | str\\\"\\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Consider switching from \\\"dict\\\" to \\\"Mapping\\\" which is covariant in the value type\",\n            \"range\": {\n                \"start\": {\n                    \"line\": 237,\n                    \"character\": 4\n                },\n                \"end\": {\n                    \"line\": 237,\n                    \"character\": 56\n                }\n            },\n            \"rule\": \"reportArgumentType\"\n        }\n    ],\n    \"summary\": {\n        \"filesAnalyzed\": 3,\n        \"errorCount\": 1,\n        \"warningCount\": 0,\n        \"informationCount\": 0,\n        \"timeInSec\": 4.311\n    }\n}\n\n",
+  "stderr": "",
+  "result": {
+    "version": "1.1.414",
+    "time": "1791657868562",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_collective_charged_ground_consumer.py",
+        "severity": "error",
+        "message": "Argument of type \"dict[str, float | str]\" cannot be assigned to parameter \"value\" of type \"str | dict[str, str] | dict[str, int | str] | list[list[float]] | list[list[list[float]]] | dict[str, float] | list[dict[str, str | list[tuple[str, int]] | Flow | list[float]]] | float\" in function \"__setitem__\"\n\u00a0\u00a0Type \"dict[str, float | str]\" is not assignable to type \"str | dict[str, str] | dict[str, int | str] | list[list[float]] | list[list[list[float]]] | dict[str, float] | list[dict[str, str | list[tuple[str, int]] | Flow | list[float]]] | float\"\n\u00a0\u00a0\u00a0\u00a0\"dict[str, float | str]\" is not assignable to \"str\"\n\u00a0\u00a0\u00a0\u00a0\"dict[str, float | str]\" is not assignable to \"dict[str, str]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Type parameter \"_VT@dict\" is invariant, but \"float | str\" is not the same as \"str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Consider switching from \"dict\" to \"Mapping\" which is covariant in the value type\n\u00a0\u00a0\u00a0\u00a0\"dict[str, float | str]\" is not assignable to \"dict[str, int | str]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Type parameter \"_VT@dict\" is invariant, but \"float | str\" is not the same as \"int | str\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Consider switching from \"dict\" to \"Mapping\" which is covariant in the value type",
+        "range": {
+          "start": {
+            "line": 237,
+            "character": 4
+          },
+          "end": {
+            "line": 237,
+            "character": 56
+          }
+        },
+        "rule": "reportArgumentType"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 3,
+      "errorCount": 1,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 4.311
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_ground_photon_collective_graph.py",
+    "--output",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_ground_photon_collective_checked_actual_20261010.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "returncode": 1,
+  "natural_exit": true,
+  "elapsed_seconds": 7.224138043995481,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_ground_photon_collective_graph.py\", line 195, in <module>\n    with threadpool_limits(limits=1):receipt=run(args.output)\n                                             ^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_ground_photon_collective_graph.py\", line 189, in run\n    output.write_text(json.dumps(result,indent=2))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/__init__.py\", line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 202, in encode\n    chunks = list(chunks)\n             ^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 432, in _iterencode\n    yield from _iterencode_dict(o, _current_indent_level)\n  File \"/usr/lib/python3.12/json/encoder.py\", line 406, in _iterencode_dict\n    yield from chunks\n  File \"/usr/lib/python3.12/json/encoder.py\", line 406, in _iterencode_dict\n    yield from chunks\n  File \"/usr/lib/python3.12/json/encoder.py\", line 439, in _iterencode\n    o = _default(o)\n        ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type int64 is not JSON serializable\n",
+  "source_sha256": "2d35503cfc60196250e4050d97c745bfb3babd35971e463b24edf2d340bf2743",
+  "preexecution_archive": "joined_phi_u1_ground_photon_collective_corrected_preexecution_epoch_20261010.zip",
+  "preexecution_archive_sha256": "e5f2a5fefdc73b462ca0babc46a4e0b12867e3c03a617c0a8fe154b06f8ee12a"
+}

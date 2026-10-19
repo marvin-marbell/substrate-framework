@@ -1,0 +1,21 @@
+{
+  "candidate": "COMPOSITE_LOCAL_CUBE_NEUTRAL_FIELD_V1",
+  "module": "rich_composite_local3d_20261014_consumer.py",
+  "law_identity": "rich_composite_local3d_20261014_equations.json",
+  "input_identity": "rich_composite_local3d_20261014_request.json",
+  "units": "hbar=e-unit=cube-edge-length=1. Dimensionless energies are in selected input omega units; qvector components have inverse-edge units, not infinite-periodic reciprocal labels.",
+  "functions": {
+    "build(p, flavors=(0,1,2))": "Return full sparse same-law H and metadata. Basis ordered hard-core flavor positions, selected spin index, field mask0..255. Local field bit v is the literal local n=0,1 occupation. Metadata includes positions/spins, primitive charges, actual site loads, pair spin operators/distances, eight b_v and local occupation table.",
+    "sector_embedding(meta, parity=(0,0,0))": "Exact normalized simultaneous XOR graph-automorphism embedding; spatial matter and neutral field labels both permute. parity uses low bit first (Cartesian z,y,x respectively). Graph reflections are not continuum translations.",
+    "density(qvector, meta)": "Return diagonal rho=sum_i qi exp(+i qvector.r_xi) over full state basis. rho(0)=1 for three-flavor sector.",
+    "current_contact(p, qvector, polarization, meta)": "Return full sparse Peierls current and second derivative (+q,-q) contact for selected Cartesian plane-wave polarization. J=-dH/dA(-q). C=d2H/dA(q)dA(-q). For polarization parallel to q, [H,rho]=|q|J. Neutral fields carry no direct electric charge but participate dynamically in states/response.",
+    "spectral_measure(h, energy, source, steps)": "Pure frozen helper returning finite Krylov gaps/weights and physical source norm. Not asserted full exact Lehmann spectrum.",
+    "retarded(measure, frequencies, eta)": "Pure frozen helper for inversion/reflection-equal opposite-q autocorrelation measures. Finite eta>0, response sum w[(omega-gap+i eta)^-1-(omega+gap+i eta)^-1]. Not a mixed tensor API.",
+    "fragmentation(p, energy)": "Return all three disconnected-copy pair+single finite-cube reference energies and margin Epair+Esingle-Etarget. Distinct from infinite-volume or same-small-cube separation thresholds."
+  },
+  "state_scope": "Actual1 prepares lowest even graph sector in Sz=+1/2. NEW selection1 computes ALL8 graph-representation low states for full trimer, all pairs and g0; every selected ground is even000, so actual1 is the selected finite ground within its spin block. Actual S2, position-spin and local-field correlations are measured; all response/recoil receivers use that same-H state. No continuum on-shell proton assertion.",
+  "moving_receiver": "Serialized full ground state and whole odd target blocks in receipt.npz; lowest odd-block elastic vertices in receipt.json. No external electron/photon mass, vertex, state or normalization is adopted.",
+  "cooperation_control": "selection.py capped_shared_load replaces local L_v by min(L_v,.5) and retains the full dynamic field. Actual shared loading gives .9538646709 additional ground lowering, but capped law still binds>=.3725616116; g0 alone removes binding. No claim of exclusively cooperative binding.",
+  "join_status": "Separate new local-composite root. Structural charge/current API is useful for a receiver willing to adopt this same cube law and state; it is not compatible by name alone with the four-site Hubbard/Gauss roots.",
+  "approximations": ["finite eight-vertex cube", "finite saturable eight-cell neutral quantum field", "primitive distinct CAR spin-half flavors/input fractional charges", "Sz block", "finite-Krylov response poles", "finite disconnected-copy breakup references", "nonrelativistic carrier hopping"]
+}

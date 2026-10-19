@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_electric_hop_transport.py",
+    "--output",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_electric_hop_transport_actual_20261010_receipt.json",
+    "--panels",
+    "4"
+  ],
+  "natural_exit_code": 1,
+  "natural_completion": true,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_electric_hop_transport.py\", line 261, in <module>\n    with threadpool_limits(limits=1):receipt=run(args.output,args.panels)\n                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_electric_hop_transport.py\", line 227, in run\n    z.writestr('actual_geometry.json',json.dumps(dict(D=native['D'],Q=native['Q'],L_integer=geom['L_integer'],denominator=geom['denominator'],signed_k=geo['k'],row=geo['x'],col=geo['y'],profiles=data['profiles'],paths=paths),default=body.packed))\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/__init__.py\", line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 200, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\nValueError: Circular reference detected\n",
+  "source_sha256": "77e068e17494ec92c064acbbbd67686acda2593ce5cf3d4d613ad755bdf2c901",
+  "runner_sha256": "ce3aa7a60a7804682ad0f0cbb35d4cbea6f0415e4eb120b90ac3e986fd6e5446",
+  "source_stable": true,
+  "elapsed_seconds": 18.87367133999942
+}

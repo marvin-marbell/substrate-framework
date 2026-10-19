@@ -1,0 +1,468 @@
+{
+  "model": "actual atomic SU4 Gauss boundary-charge intertwiner",
+  "parameters": {
+    "cutoff": "minimal",
+    "lambdas": [
+      1.0,
+      64.0
+    ],
+    "inertia": 2.0,
+    "heavy_sign": -1,
+    "ue4": 0.3,
+    "ue1": 0.4,
+    "stiffness": 2.0,
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.3,
+    "tol": 1e-08,
+    "maxiter": 3000,
+    "seed": 222
+  },
+  "pinned_atomic_gauss_sha256": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+  "primitive_one_cell": {
+    "full_local_occupations": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "full_local_dimension": 16,
+    "actual_word_CAR_residual": 1.7763568394002505e-15,
+    "actual_word_nilpotency_residual": 0.0,
+    "maps": [
+      {
+        "creation": false,
+        "source_N": 2,
+        "target_N": 1,
+        "image_dimension": 6,
+        "complement_dimension": 10,
+        "all15_generator_residual": 4.041272810440265e-16,
+        "dressed_image_Casimir": 2.5,
+        "complement_Casimir": 4.5,
+        "bare_charged_matter_Casimir": 1.875,
+        "dressed_image_residual": 2.3393850751791097e-15,
+        "complement_residual": 5.7902148899581444e-15,
+        "invalid_matter_only_Casimir_defect": 1.5309310892394903
+      },
+      {
+        "creation": true,
+        "source_N": 2,
+        "target_N": 3,
+        "image_dimension": 6,
+        "complement_dimension": 10,
+        "all15_generator_residual": 4.079219866531555e-16,
+        "dressed_image_Casimir": 2.5,
+        "complement_Casimir": 4.5,
+        "bare_charged_matter_Casimir": 1.875,
+        "dressed_image_residual": 2.636633597461006e-15,
+        "complement_residual": 5.756054031998179e-15,
+        "invalid_matter_only_Casimir_defect": 1.5309310892394903
+      }
+    ]
+  },
+  "whole_neutral_domain_CAR_residual": 3.108624468950438e-14,
+  "runs": [
+    {
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "heavy_whole_H_multiplier": -1.0,
+      "neutral_NH": 4,
+      "neutral_NL": 4,
+      "matter_dimensions": {
+        "3": 3920,
+        "4": 4900,
+        "5": 3920
+      },
+      "physical_dimensions": {
+        "3": 130720,
+        "4": 40724,
+        "5": 130720
+      },
+      "intertwiners": [
+        {
+          "charge": -1,
+          "boundary": "4",
+          "residuals": {
+            "norm_identity": 8.705074037078036e-16,
+            "all15_generators": 4.725952219296117e-15,
+            "Casimirs": 1.2598259602276492e-15,
+            "angular": 1.1159026066385432e-15,
+            "angular_expansion": 1.2995881436371529e-15,
+            "wrong_boundary_sign": 1.5751076254650784,
+            "omitted_boundary": 0.5712372249294538,
+            "norm_operator_identity": 3.9160510718702927e-14,
+            "full_heavy": 5.834649546664004e-17,
+            "SU4_and_tree_electric": 1.3470183756769823e-16,
+            "neutral_full_H_reconstruction": 3.278054371939045e-16,
+            "charged_full_H_reconstruction": 4.862331402927157e-16,
+            "loop_identity_electric_and_magnetic": 1.836416193497544e-16
+          },
+          "native_right_Nlight_dimensions": {
+            "0": 514,
+            "1": 9984,
+            "2": 19728,
+            "3": 9984,
+            "4": 514
+          },
+          "zero_weight_sector": 0,
+          "normalization": "A^dagger A=4-N_R (particle) or N_R (hole); no all-state unit norm",
+          "tensor_policy": "matter restriction and appended boundary index only; both colour-link indices unchanged",
+          "loop_scope": "independent ell identity, e0=ell+nlight_left-2, e1=ell; bounded three-ell operator probe plus exact algebra"
+        },
+        {
+          "charge": 1,
+          "boundary": "bar4",
+          "residuals": {
+            "norm_identity": 8.688311776843321e-16,
+            "all15_generators": 4.725952219296117e-15,
+            "Casimirs": 1.258634096076836e-15,
+            "angular": 1.1146573323549677e-15,
+            "angular_expansion": 1.3027143575964771e-15,
+            "wrong_boundary_sign": 1.6205531113668101,
+            "omitted_boundary": 0.6022550603123865,
+            "norm_operator_identity": 3.9160510718702927e-14,
+            "full_heavy": 5.859333502282497e-17,
+            "SU4_and_tree_electric": 1.3380581253093182e-16,
+            "neutral_full_H_reconstruction": 3.278054371939045e-16,
+            "charged_full_H_reconstruction": 4.85635703276963e-16,
+            "loop_identity_electric_and_magnetic": 1.8347738810612194e-16
+          },
+          "native_right_Nlight_dimensions": {
+            "0": 514,
+            "1": 9984,
+            "2": 19728,
+            "3": 9984,
+            "4": 514
+          },
+          "zero_weight_sector": 4,
+          "normalization": "A^dagger A=4-N_R (particle) or N_R (hole); no all-state unit norm",
+          "tensor_policy": "matter restriction and appended boundary index only; both colour-link indices unchanged",
+          "loop_scope": "independent ell identity, e0=ell+nlight_left-2, e1=ell; bounded three-ell operator probe plus exact algebra"
+        }
+      ],
+      "neutral_ground": {
+        "energy": -0.47518472796171524,
+        "lowest_returned_energies": [
+          -0.47518472796171524,
+          -0.10408015114484624
+        ],
+        "full_H_eigen_residuals": [
+          2.800632773896241e-15,
+          5.6016387545488195e-14
+        ],
+        "scaled_full_H_residuals": [
+          2.800632773896241e-15,
+          5.6016387545488195e-14
+        ],
+        "residual_limit": 1e-08,
+        "residual_scale": "max(1, abs(E))",
+        "orthogonality_residual": 1.0235787396574577e-15,
+        "owner": "actual sparse eigsh SA on every native centre-allowed physical state; QR/Hermitian Ritz refinement",
+        "limit": "numerical ground estimate, not a certified exact neutral lower energy or infinite-cutoff gap"
+      },
+      "charged_trials": [
+        {
+          "charge": -1,
+          "charged_trial_energy": -0.1573298620971424,
+          "charged_trial_Rayleigh_difference": 0.31785486586457284,
+          "cost_interpretation": "charged energy is variational UPPER; difference uses residual-enforced numerical neutral ground; never a positive LOWER charge gap",
+          "actual_norm_squared": 1.9999999999999425,
+          "actual_occupation_denominator": 1.9999999999999831,
+          "N_R_mean": 1.9999999999999998,
+          "N_R_probabilities": {
+            "0": 9.553177342730022e-10,
+            "1": 0.0003656941796272758,
+            "2": 0.9992686097301099,
+            "3": 0.00036569417962727666,
+            "4": 9.553177342735207e-10
+          },
+          "p0": 9.553177342730022e-10,
+          "p4": 9.553177342735207e-10,
+          "boundary_electric_added": 0.2,
+          "commutator_numerator_real": 0.2357097317291529,
+          "commutator_numerator_imaginary": 3.469446951953614e-18,
+          "onsite_R_mean": -0.23445420007425385,
+          "light_hopping_mean": -0.0025110633097944882,
+          "independent_numerator": 0.2357097317291511,
+          "independent_numerator_residual": 1.8041251408265745e-15,
+          "commutator_predicted_cost": 0.31785486586457984,
+          "independent_predicted_cost": 0.31785486586457895,
+          "full_energy_formula_residual": 6.994405055138486e-15,
+          "occupancy_stationarity_residual": 5.0959267065117543e-14,
+          "weighted_cost_preservation": {
+            "Gauss_angular": {
+              "charged_normalized": 0.4669245975257883,
+              "neutral_N_weighted": 0.4669245975257783,
+              "neutral_unweighted": 0.466924597525771,
+              "weighted_preservation_residual": 9.992007221626409e-15
+            },
+            "entire_heavy_H": {
+              "charged_normalized": -0.4716953127197297,
+              "neutral_N_weighted": -0.4716953127197275,
+              "neutral_unweighted": -0.4716953127196826,
+              "weighted_preservation_residual": 2.220446049250313e-15
+            }
+          },
+          "warning": "intertwining preserves operators; normalized expectations compare to occupation-weighted neutral expectations, not generally the unweighted neutral means"
+        },
+        {
+          "charge": 1,
+          "charged_trial_energy": -0.15732986209714184,
+          "charged_trial_Rayleigh_difference": 0.3178548658645734,
+          "cost_interpretation": "charged energy is variational UPPER; difference uses residual-enforced numerical neutral ground; never a positive LOWER charge gap",
+          "actual_norm_squared": 1.9999999999999427,
+          "actual_occupation_denominator": 1.9999999999999818,
+          "N_R_mean": 1.9999999999999998,
+          "N_R_probabilities": {
+            "0": 9.553177342730022e-10,
+            "1": 0.0003656941796272758,
+            "2": 0.9992686097301099,
+            "3": 0.00036569417962727666,
+            "4": 9.553177342735207e-10
+          },
+          "p0": 9.553177342730022e-10,
+          "p4": 9.553177342735207e-10,
+          "boundary_electric_added": 0.2,
+          "commutator_numerator_real": 0.23570973172915746,
+          "commutator_numerator_imaginary": 3.469446951953614e-18,
+          "onsite_R_mean": -0.23445420007425385,
+          "light_hopping_mean": -0.0025110633097944882,
+          "independent_numerator": 0.2357097317291511,
+          "independent_numerator_residual": 6.356030428120408e-15,
+          "commutator_predicted_cost": 0.3178548658645821,
+          "independent_predicted_cost": 0.31785486586457895,
+          "full_energy_formula_residual": 8.715250743307479e-15,
+          "occupancy_stationarity_residual": 4.9738022480402295e-14,
+          "weighted_cost_preservation": {
+            "Gauss_angular": {
+              "charged_normalized": 0.4669245975257884,
+              "neutral_N_weighted": 0.4669245975257795,
+              "neutral_unweighted": 0.466924597525771,
+              "weighted_preservation_residual": 8.93729534823251e-15
+            },
+            "entire_heavy_H": {
+              "charged_normalized": -0.4716953127197295,
+              "neutral_N_weighted": -0.47169531271972626,
+              "neutral_unweighted": -0.4716953127196826,
+              "weighted_preservation_residual": 3.219646771412954e-15
+            }
+          },
+          "warning": "intertwining preserves operators; normalized expectations compare to occupation-weighted neutral expectations, not generally the unweighted neutral means"
+        }
+      ]
+    },
+    {
+      "Lambda": 64.0,
+      "inertia": 2.0,
+      "heavy_whole_H_multiplier": -64.0,
+      "neutral_NH": 4,
+      "neutral_NL": 4,
+      "matter_dimensions": {
+        "3": 3920,
+        "4": 4900,
+        "5": 3920
+      },
+      "physical_dimensions": {
+        "3": 130720,
+        "4": 40724,
+        "5": 130720
+      },
+      "intertwiners": [
+        {
+          "charge": -1,
+          "boundary": "4",
+          "residuals": {
+            "norm_identity": 8.705074037078036e-16,
+            "all15_generators": 4.725952219296117e-15,
+            "Casimirs": 1.2598259602276492e-15,
+            "angular": 1.1159026066385432e-15,
+            "angular_expansion": 1.2995881436371529e-15,
+            "wrong_boundary_sign": 1.5751076254650784,
+            "omitted_boundary": 0.5712372249294538,
+            "norm_operator_identity": 3.9160510718702927e-14,
+            "full_heavy": 3.734175709864962e-15,
+            "SU4_and_tree_electric": 1.3470183756769823e-16,
+            "neutral_full_H_reconstruction": 2.6181909257287464e-15,
+            "charged_full_H_reconstruction": 3.6420728979565275e-15,
+            "loop_identity_electric_and_magnetic": 1.836416193497544e-16
+          },
+          "native_right_Nlight_dimensions": {
+            "0": 514,
+            "1": 9984,
+            "2": 19728,
+            "3": 9984,
+            "4": 514
+          },
+          "zero_weight_sector": 0,
+          "normalization": "A^dagger A=4-N_R (particle) or N_R (hole); no all-state unit norm",
+          "tensor_policy": "matter restriction and appended boundary index only; both colour-link indices unchanged",
+          "loop_scope": "independent ell identity, e0=ell+nlight_left-2, e1=ell; bounded three-ell operator probe plus exact algebra"
+        },
+        {
+          "charge": 1,
+          "boundary": "bar4",
+          "residuals": {
+            "norm_identity": 8.688311776843321e-16,
+            "all15_generators": 4.725952219296117e-15,
+            "Casimirs": 1.258634096076836e-15,
+            "angular": 1.1146573323549677e-15,
+            "angular_expansion": 1.3027143575964771e-15,
+            "wrong_boundary_sign": 1.6205531113668101,
+            "omitted_boundary": 0.6022550603123865,
+            "norm_operator_identity": 3.9160510718702927e-14,
+            "full_heavy": 3.749973441460798e-15,
+            "SU4_and_tree_electric": 1.3380581253093182e-16,
+            "neutral_full_H_reconstruction": 2.6181909257287464e-15,
+            "charged_full_H_reconstruction": 3.626335167828602e-15,
+            "loop_identity_electric_and_magnetic": 1.8347738810612194e-16
+          },
+          "native_right_Nlight_dimensions": {
+            "0": 514,
+            "1": 9984,
+            "2": 19728,
+            "3": 9984,
+            "4": 514
+          },
+          "zero_weight_sector": 4,
+          "normalization": "A^dagger A=4-N_R (particle) or N_R (hole); no all-state unit norm",
+          "tensor_policy": "matter restriction and appended boundary index only; both colour-link indices unchanged",
+          "loop_scope": "independent ell identity, e0=ell+nlight_left-2, e1=ell; bounded three-ell operator probe plus exact algebra"
+        }
+      ],
+      "neutral_ground": {
+        "energy": -52.15541756388501,
+        "lowest_returned_energies": [
+          -52.15541756388501,
+          -51.48649154054947
+        ],
+        "full_H_eigen_residuals": [
+          8.156269647279599e-14,
+          4.9006004350084855e-08
+        ],
+        "scaled_full_H_residuals": [
+          1.5638393916200573e-15,
+          9.518225632346486e-10
+        ],
+        "residual_limit": 1e-08,
+        "residual_scale": "max(1, abs(E))",
+        "orthogonality_residual": 1.1322097746185382e-15,
+        "owner": "actual sparse eigsh SA on every native centre-allowed physical state; QR/Hermitian Ritz refinement",
+        "limit": "numerical ground estimate, not a certified exact neutral lower energy or infinite-cutoff gap"
+      },
+      "charged_trials": [
+        {
+          "charge": -1,
+          "charged_trial_energy": -51.74769690931615,
+          "charged_trial_Rayleigh_difference": 0.40772065456886253,
+          "cost_interpretation": "charged energy is variational UPPER; difference uses residual-enforced numerical neutral ground; never a positive LOWER charge gap",
+          "actual_norm_squared": 2.0000000000000018,
+          "actual_occupation_denominator": 1.9999999999998872,
+          "N_R_mean": 2.0000000000000004,
+          "N_R_probabilities": {
+            "0": 4.339628009861752e-14,
+            "1": 0.00019524106901718096,
+            "2": 0.9996095178618791,
+            "3": 0.00019524106901718462,
+            "4": 4.3396280098643305e-14
+          },
+          "p0": 4.339628009861752e-14,
+          "p4": 4.3396280098643305e-14,
+          "boundary_electric_added": 0.2,
+          "commutator_numerator_real": 0.4154413091356774,
+          "commutator_numerator_imaginary": -1.4264034831762418e-17,
+          "onsite_R_mean": -0.4147400343196753,
+          "light_hopping_mean": -0.0014025496319446506,
+          "independent_numerator": 0.41544130913564764,
+          "independent_numerator_residual": 2.975398031039389e-14,
+          "commutator_predicted_cost": 0.4077206545678385,
+          "independent_predicted_cost": 0.40772065456782364,
+          "full_energy_formula_residual": 1.0240142067630131e-12,
+          "occupancy_stationarity_residual": 9.123368769887518e-12,
+          "weighted_cost_preservation": {
+            "Gauss_angular": {
+              "charged_normalized": 1.9650301232481973,
+              "neutral_N_weighted": 1.9650301232481155,
+              "neutral_unweighted": 1.9650301232481189,
+              "weighted_preservation_residual": 8.171241461241152e-14
+            },
+            "entire_heavy_H": {
+              "charged_normalized": -53.29366465042826,
+              "neutral_N_weighted": -53.293664650426976,
+              "neutral_unweighted": -53.29366465042807,
+              "weighted_preservation_residual": 1.2860823517257813e-12
+            }
+          },
+          "warning": "intertwining preserves operators; normalized expectations compare to occupation-weighted neutral expectations, not generally the unweighted neutral means"
+        },
+        {
+          "charge": 1,
+          "charged_trial_energy": -51.74769690931663,
+          "charged_trial_Rayleigh_difference": 0.40772065456837936,
+          "cost_interpretation": "charged energy is variational UPPER; difference uses residual-enforced numerical neutral ground; never a positive LOWER charge gap",
+          "actual_norm_squared": 2.0000000000000013,
+          "actual_occupation_denominator": 1.9999999999998876,
+          "N_R_mean": 2.0000000000000004,
+          "N_R_probabilities": {
+            "0": 4.339628009861752e-14,
+            "1": 0.00019524106901718096,
+            "2": 0.9996095178618791,
+            "3": 0.00019524106901718462,
+            "4": 4.3396280098643305e-14
+          },
+          "p0": 4.339628009861752e-14,
+          "p4": 4.3396280098643305e-14,
+          "boundary_electric_added": 0.2,
+          "commutator_numerator_real": 0.4154413091356809,
+          "commutator_numerator_imaginary": -1.2222685428879554e-17,
+          "onsite_R_mean": -0.4147400343196753,
+          "light_hopping_mean": -0.0014025496319446506,
+          "independent_numerator": 0.41544130913564764,
+          "independent_numerator_residual": 3.325118170493333e-14,
+          "commutator_predicted_cost": 0.40772065456784035,
+          "independent_predicted_cost": 0.4077206545678237,
+          "full_energy_formula_residual": 5.390132784555135e-13,
+          "occupancy_stationarity_residual": 8.92441678679051e-12,
+          "weighted_cost_preservation": {
+            "Gauss_angular": {
+              "charged_normalized": 1.965030123248197,
+              "neutral_N_weighted": 1.9650301232481193,
+              "neutral_unweighted": 1.9650301232481189,
+              "weighted_preservation_residual": 7.771561172376096e-14
+            },
+            "entire_heavy_H": {
+              "charged_normalized": -53.293664650428305,
+              "neutral_N_weighted": -53.293664650427054,
+              "neutral_unweighted": -53.29366465042807,
+              "weighted_preservation_residual": 1.2505552149377763e-12
+            }
+          },
+          "warning": "intertwining preserves operators; normalized expectations compare to occupation-weighted neutral expectations, not generally the unweighted neutral means"
+        }
+      ]
+    }
+  ],
+  "raw_marker_policy": "mode16 is unchanged neutral parity marker; no SU4 or EM charge",
+  "atomic_scope": "fixed simultaneous Phi orbit EFT, J=0, actual minimal33 by default; no quantized 60-field or new photon-module consumer",
+  "full_field_theorem": "separate unrestricted quartic law and constructive neutral Gauss trial proved in gauss_charge_intertwiner.md; quartic_moment_bound accepts proven constants only",
+  "excluded_claims": [
+    "positive lower charge gap",
+    "charged collapse inferred from bare matter Casimir",
+    "full 60-field phase",
+    "continuum QED",
+    "integrated new photon-module execution"
+  ],
+  "source_sha256": {
+    "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+    "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+    "gauss_charge_intertwiner.py": "861008cb7dea64d2b2e0cef513c62de1d55539a1527a5b6fea8b5b879ea956fa",
+    "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "quantum_su4_gauss.py": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286"
+  }
+}

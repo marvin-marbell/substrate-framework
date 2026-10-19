@@ -1,0 +1,75 @@
+{
+  "AST_positive": "scalar_paths via ast_grep; native Python parser also available",
+  "definition": [
+    {
+      "range": {
+        "end": {
+          "character": 9,
+          "line": 26
+        },
+        "start": {
+          "character": 4,
+          "line": 26
+        }
+      },
+      "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/wilson_ground_kernel_consumer_20261012.py"
+    }
+  ],
+  "diagnostics": [
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [
+          {
+            "code": "reportReturnType",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportReturnType"
+            },
+            "message": "Type \"tuple[int, ...]\" is not assignable to return type \"tuple[int, int, int]\"\n\u00a0\u00a0\"tuple[int, ...]\" is not assignable to \"tuple[int, int, int]\"\n\u00a0\u00a0\u00a0\u00a0Tuple size mismatch; expected 3 but received indeterminate",
+            "range": {
+              "end": {
+                "character": 23,
+                "line": 34
+              },
+              "start": {
+                "character": 15,
+                "line": 34
+              }
+            },
+            "severity": 1,
+            "source": "Pyright"
+          },
+          {
+            "code": "reportOperatorIssue",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportOperatorIssue"
+            },
+            "message": "Operator \"-\" not supported for type \"Unknown | MatrixElement | list[Unknown]\"",
+            "range": {
+              "end": {
+                "character": 26,
+                "line": 205
+              },
+              "start": {
+                "character": 20,
+                "line": 205
+              }
+            },
+            "severity": 1,
+            "source": "Pyright"
+          }
+        ],
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/wilson_ground_kernel_consumer_20261012.py",
+        "version": 1
+      }
+    }
+  ],
+  "exit": 0,
+  "marker": "pyproject.toml",
+  "mounted_lsp_unavailable_direct_protocol": true,
+  "project_root": "/home/administrator/substrate-222",
+  "representative": "/home/administrator/substrate-222/proposals/P256-qed-backward/wilson_ground_kernel_consumer_20261012.py",
+  "server": "pyright-langserver 1.1.414",
+  "symbols_count": 130
+}

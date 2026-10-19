@@ -1,0 +1,23 @@
+{
+  "command": ["/home/administrator/.local/bin/pyright", "--pythonpath", "/home/administrator/substrate-framework/.venv/bin/python", "--outputjson", "rich_review_wave2_20261014_join.py", "rich_charged_gauss_20261014_fullq.py"],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "natural_exit": 1,
+  "version": "1.1.414",
+  "filesAnalyzed": 2,
+  "errorCount": 13,
+  "warningCount": 0,
+  "timeInSec": 13.894,
+  "findings": {
+    "rich_charged_gauss_20261014_fullq.py": [
+      {"line":120,"message":"Cannot access attribute indices for inferred dia_matrix"},
+      {"line":149,"message":"Cannot access attribute indices for inferred dia_matrix"},
+      {"line":149,"message":"Cannot access attribute indptr for inferred dia_matrix"},
+      {"line":152,"message":"Heterogeneous inferred dict result does not accept key S2 on every union member"},
+      {"line":154,"message":"Inferred heterogeneous result contains noniterable float"}
+    ],
+    "rich_review_wave2_20261014_join.py": [
+      {"line":16,"count":8,"message":"Propagated heterogeneous interaction return inference: physical_elastic union includes float/arrays, so real/imag string indexing rejected"}
+    ]
+  },
+  "boundary": "Selected explicit real source files; no external include config, no temporary copies. Source execution already natural0. Typing findings not suppressed or mislabelled clean. This is a faithful condensed record; full CLI diagnostic text remains tool transcript."
+}

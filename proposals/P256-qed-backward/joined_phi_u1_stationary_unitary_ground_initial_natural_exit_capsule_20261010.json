@@ -1,0 +1,36 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_unitary_ground.py",
+    "--output",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_unitary_ground_initial_receipt_20261010.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+  "exit_code": 1,
+  "natural_exit": true,
+  "stdout_utf8": "",
+  "stderr_utf8": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_unitary_ground.py\", line 226, in <module>\n    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',type=Path,required=True);args=parser.parse_args();r=run(args.output)\n                                                                                                                                           ^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_unitary_ground.py\", line 195, in run\n    with threadpool_limits(limits=1):controls=[finite_case(data,np.zeros(192)),finite_case(data,theta)]\n                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_unitary_ground.py\", line 167, in finite_case\n    assert row['two_link_operator_omission_defect']>1 and abs(row['nearest_c0_energy'])<1e-8\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "21ab7784078fb4fc5440707b812e5c679135bab66aa65c29cba74bb845738d28",
+  "source_before_sha256": "601735d2997984b0d8ca8b7558ab2f015d05be262d898ceafcb86d4141ef0fb1",
+  "source_after_sha256": "601735d2997984b0d8ca8b7558ab2f015d05be262d898ceafcb86d4141ef0fb1",
+  "runner_before_sha256": "7a0cecffaa1f92413e3cf4bf17439727f0faed58d3f82293c9a981725f72a464",
+  "runner_after_sha256": "7a0cecffaa1f92413e3cf4bf17439727f0faed58d3f82293c9a981725f72a464",
+  "input_before_sha256": {
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_root_actual_receipt.json": "4691ffaa9cd81902942cbc228fc47fafff14518be6b5df2e84d08c29c7da4756",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json": "5b97862fc7fca21b8797d549d7d4dfdde58b101e8c46c7a7cfb6531a669c4354",
+    "induced_phi_nonuniform_fermionic_source_unitary_resumed_actual_receipt.json": "da1998065d6622c4ac780409c29ae10711e01b5c5143edf620557fe15234e9e6"
+  },
+  "input_after_sha256": {
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_root_actual_receipt.json": "4691ffaa9cd81902942cbc228fc47fafff14518be6b5df2e84d08c29c7da4756",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json": "5b97862fc7fca21b8797d549d7d4dfdde58b101e8c46c7a7cfb6531a669c4354",
+    "induced_phi_nonuniform_fermionic_source_unitary_resumed_actual_receipt.json": "da1998065d6622c4ac780409c29ae10711e01b5c5143edf620557fe15234e9e6"
+  },
+  "execution_archive": {
+    "path": "joined_phi_u1_stationary_unitary_ground_initial_execution_bytes_20261010.zip",
+    "sha256": "29d8507a43bb7bfcb96381f5b1c73944472597c30068a0b58765f514c8a73f19"
+  },
+  "elapsed_seconds": 13.858396272000391,
+  "source_inputs_unchanged": true
+}

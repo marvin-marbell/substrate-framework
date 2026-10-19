@@ -1,0 +1,71 @@
+{
+  "kind":"NEW_COMMON_QUANTUM_CHARGE_LINK_RICH_MATTER_NATIVE_INTERFACE",
+  "owner":"CommonColourLeptonRoot",
+  "root":"/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "python":"/home/administrator/substrate-framework/.venv/bin/python",
+  "contract":"local://issue222-common-quantum-charge-link-contract-20261016.json#4883",
+  "parent_plan_revision_at_assignment":"e0f5a38f79826cf819d2135855832f7b30b64a4afc144d973235bfeb5d7e3b7f",
+  "template":"general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "equations":"rich_common_quantum_em_20261016_equations.json",
+  "pre_outcome_law":"rich_common_quantum_em_20261016_law.json",
+  "native_H_constructor":{
+    "module":"rich_common_quantum_em_20261016_operator.py",
+    "class":"Model",
+    "neutral_prefix":"rich_common_quantum_em_20261016_neutral_prepare2",
+    "pair_prefix":"rich_common_quantum_em_20261016_joint_prepare1",
+    "required_files_per_prefix":["_body.json","_geometry.json","_scalar.npz","_static.npz","_vector.npz","_scalar_hop.npz","_chord_vector.npz","_chord_scalar.npz","_inversehalf.npz"],
+    "layout":"C-order flat(body, Phi7, signed_flux85). Body coordinates ACTUAL Gram-orthonormal: x_orth=Ghalf*x_weak. All current/charge/source operators use same basis. No old body-block/operator producer reconstruction needed to act H/evolve native states.",
+    "dimensions":{"neutral_body":258,"pair_body":5318,"Phi":7,"live_transverse_fluxes":85,"neutral_full":153510,"pair_full":3164210},
+    "call":"model=Model(prefix); H=model.hamiltonian(); H@vector or H@matrix. Complex dtype accepted for real estimator probes too; no physics fallback.",
+    "controlled_H":"model.hamiltonian(decoupled=True) replaces transverse quantum U withidentity but retains every scalar/vector matter hop, actual Gauss longitudinal electric and free transverse-generator kinetic. NOT sourceOFF or colourOFF.",
+    "finite_source_and_receiver":"Htheta=model.hamiltonian(theta=.3,pulse_species='white',pulse_edge=2). Jquark0=model.observer('current',theta=.3,species='quark',edge=0,source_species='white',source_edge=2). Contact kind='contact'. Source phase and receiver selector are INDEPENDENT; current is not redefined as i[HP,QP].",
+    "field_observers":"model.observer('force',axis=a)=-partialH/partiala_a=i[H,m_a]. Physical electric generator is m/3. model.loop(psi,index,sine=True/False) is actual two independent geometric Wilson sine/cosine action, not a second probe name for oneflux. model.readout returns physical charge/occupation and integer flux quantities with explicit labels.",
+    "charge_observers":"model.q is physical Q_site=N_int/3; model.quark_q/model.white_q separately conserved sector charges. Material count labels are native occupation/charge PVMs, NOT tagged particle position/capture. Compact-quark-count mask is NOT a bound-particle probability."
+  },
+  "physical_source":{
+    "module":"rich_common_quantum_em_20261016_dynamics.py:prepare_pair",
+    "operator":"Bdag0 Wilson(path2->0->1->2->0) Ldag2, canonical L FIRST. Full CAR source before final projection. Opposite charges of distinct lepton and three-quark operators, NOT a C pair/proton identity.",
+    "orthogonal_source_matrix":"rich_common_quantum_em_20261016_source1_source_orth.npz",
+    "full_before_target_CAR_Gram":"rich_common_quantum_em_20261016_source1_source_full_CAR_gram_orth.npz",
+    "unprojected_source_output_blocks":"rich_common_quantum_em_20261016_source1_full_CAR_source_blocks.zip",
+    "raw_coordinate_dictionary_and_CAR_primitive":"rich_common_quantum_em_20261016_source1_source_primitive.pkl",
+    "matrix_semantics":"Sorth=Gpair^-1/2 * Sweak * Gneutral^-1/2. FullrawGamma=Gneutral^-1/2 GammaCAR Gneutral^-1/2. NOT raw old source coefficients. Actual new reference field-correlated state is supplied before Wilson finite shift(-3,-3).",
+    "reference":"rich_common_quantum_em_20261016_stationary1_states.npz states[:,0] is the fresh OWN selected neutral stationary reference. No old solved state file used.",
+    "closed_Gauss":"Only N32neutral and N36neutralPAIR in ONE finite direct-sum law, exact local Gauss lift. No individual charged rhoB/rhoL subtraction or charged pole without boundary flux. C-conjugate N28 pair sector is NOT included/proven."
+  },
+  "scientific_executables":{
+    "primitive_ingredients":"rich_common_quantum_em_20261016_prepare.py neutral|joint OUT; source NEUTRAL_PREFIX JOINT_PREFIX OUT",
+    "stationary":"rich_common_quantum_em_20261016_stationary.py rich_common_quantum_em_20261016_stationary1_run.json",
+    "physical_feedback":"rich_common_quantum_em_20261016_dynamics.py rich_common_quantum_em_20261016_dynamics2_run.json",
+    "higher_source_support":"rich_common_quantum_em_20261016_fieldprobe.py rich_common_quantum_em_20261016_fieldprobe1_run.json; exact historical source is in that capture because later phase-grid API adds diagnostics",
+    "nonresonant_phase_landscape":"rich_common_quantum_em_20261016_fieldprobe.py rich_common_quantum_em_20261016_fieldprobe2_run.json",
+    "capture":"rich_common_quantum_em_20261016_capture.py STAGE_input.json writes actual input hashes, source/input capsule, natural exit, unchanged epoch, RSS, scientific outputs and final capsule hash. No permission gate.",
+    "history":"neutral_prepare1 natural0 had scalar archive filename collision; immutable preserved. neutral_prepare2 corrected separate scalar_hop/scalar archives. dynamics1 natural1 was real-estimator/complex-action casting failure before propagation, NOT physical failure. dynamics2 repairs only dtype. loopsea_prepare1 natural1 encountered observed legacy full-CSR format; loopsea_prepare2 exactly extracted all7Phi tensor factors with49block residual2.556e-14, not a physical fallback. Every completed capture preserves its actual code version, no epoch mutation."
+  },
+  "loop_rich_variant_SEPARATE_from_first_pair_law":{
+    "matter_prefix":"rich_common_quantum_em_20261016_loopsea_prepare2",
+    "same_primitive_physical_parameters":true,
+    "dimensions":{"body":4407,"Phi":7,"signed_fluxes":85,"full":2622165},
+    "material_mechanism":"Actual occupied-sea two-hop INTERMEDIATES complete nonbacktracking01->12->20 triangle and01->12->23->30 ring. Not a two-edge backtrack (which has zero U1 circulation). Actual directed charged-quark/white loop support and all-finite-matter virtual/holonomy response are independently executed.",
+    "actual_nonbacktracking_discriminator":"rich_common_quantum_em_20261016_loopsea_probe1_result.json",
+    "actual_schema_factorization":"rich_common_quantum_em_20261016_loopsea_prepare2_legacy_factorization.json",
+    "full_live_field_consumer":"rich_common_quantum_em_20261016_loopquantum.py rich_common_quantum_em_20261016_loopquantum1_run.json",
+    "consumer_semantics":"Full SAME quantum link/electric H on loop-rich matter space, fresh own Gauss reference; measured BO potential is NEVER added to H. Low4 and supported24 are disclosed solver windows, not physical state/field cuts. All finite-H virtuals remain in exact moments and underlying full H.",
+    "no_state_join":"First-law N36 B/L field responses use neutral body258/pair5318 and are NOT spliced into loop-rich body4407 quantum reference. No second-law added-pair state/current or completed photon/particle proof claimed. Historical spaces not assumed nested or variational ordering repaired.",
+    "runtime_evidence":"Only natural exit/result/capsule files claim completed execution; this interface specifies actual runnable consumers and typed data, not an inferred successful outcome."
+  },
+  "actual_field_harmonic_support":{
+    "first_law_saved_state_readout":"rich_common_quantum_em_20261016_harmonics.py rich_common_quantum_em_20261016_harmonics1_run.json",
+    "first_law_completed_data":"rich_common_quantum_em_20261016_harmonics1_result.json",
+    "meaning":"Direct P exp(i n t.a) P retained VIRTUAL LEG energy² strength divided by the same final body/Phi/R/PW hop output norm before FIELD projection. Scalar/vector interference retained. NOT particle probability, full CAR closure or flux convergence theorem.",
+    "measured_limitation":"Primitive n2,-1,-3 legs all live, not silently annihilated. Charged-white structural rank50/85. Author neutral-reference fraction .999999999903, initial pair forward .97338333/back .99999684, paired t1 forward .87270247-.88191973/back .98755204-.98978004. Up to12.73% forward virtual-leg loss: tiny neutral boundary/source loss does not prove all virtuals retained.",
+    "direct_white_field_response":"Existing completed same-state t0 selective-white source force change agrees3*t_edge2*deltaJwhite, pair residual2.04e-14. This is direct charged-white quantum coupling, not merely indirect later quark/Phi response.",
+    "loop_rich_saved_state_consumer":"rich_common_quantum_em_20261016_harmonicloops.py rich_common_quantum_em_20261016_harmonicloops1_run.json",
+    "loop_rich_method":"Apply actual ordered body/Phi/R/PW triangle/square products on OWN fresh full-quantum reference, and enforce EVERY cumulative field shift inside actual85fluxes. Net-shift-only and before-field norms disclosed separately. Nonzero CLAMPED Wilson product alone is not quantum-mcut support evidence; only completed owning result/capsule proves execution.",
+    "loop_rich_completed_data":"rich_common_quantum_em_20261016_harmonicloops1_result.json; owning natural0 unchanged-epoch capsule4bea8f3f8b554ff799345d45c9815c77f3e1de0b4daa233f9e8291358e6eef7a",
+    "loop_rich_actual_support":"On OWN full-quantum reference, charged-white primitive retained fraction .99977153; EVERY-intermediate-cut charged-white triangle/square raw strengths .3710796722/.2625660308, retained fractions .9998374225/.9959483342. Down-quark triangle/square strengths6.41613695/1.36677637. No clamped-state substitution.",
+    "loop_rich_actual_field_cut":"Reference boundary .0003547847 but coordinate-commutator defects .07532025/.02637617 against electric norms .26901442/.16781809 are material limitations. Active charged circuits are NOT field-cut convergence, two resolved photons or continuum closure.",
+    "frozen_first_law_independent_review_API":"rich_common_quantum_em_20261016_dynamics2_frozen_interface.json remains immutable. Author saved states/results are secondary comparisons, not independent-review proof."
+  },
+  "severe_limits":"Fundamental selected-matrix matter law, NOT full CAR64/Dirac all-pair closure. Mott/occupied source-selected sea, not exact negative-band sea. Phi7, R10, PW19 single colour loop; only2 of21 spatial charge cycle profiles; finite signed-flux square/parity sector. Couplings/negative scalar quadratic/flavour/3+1 split/spin/charges/gauging/inertias are primitive INPUTS. No scalar-only/ColorSea gap or other-agent state/dispersion borrowed. Material current only, omitted lab rotating-charge-density minimal coupling/full field spatial Noether. Actual two field channels do not alone prove two photons, positive curvature does not prove photon, spectrum/source energies not masses/binding/lifetime; no wholeissue/Nature/QCD closure."
+}

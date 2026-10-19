@@ -1,0 +1,980 @@
+{
+  "parameters": {
+    "consumer": "rich_frame_field_join_20261015_calculate.py",
+    "representation": "native_charge_orbit",
+    "native_body": "rich_spatial_colour_charge_20261015_construct1_body.pkl",
+    "native_body_sha256": "ea2eafd5eb43769673e1a84b78a5a07a5dfe75734bf8e088bd0d382995f06f57",
+    "vertex_separation": 1.0,
+    "path_height": 0.6,
+    "path_quadrature": 4,
+    "orientation_azimuth_points": 8,
+    "orientation_polar_points": 6,
+    "orientation_inertia": 1.0,
+    "matrix_metric": 1.0,
+    "radial_basis": 6,
+    "radial_scale": 0.6,
+    "radial_quadrature": 18,
+    "scalar_quartic": 0.2,
+    "scalar_quadratic": 1.0,
+    "scalar_coupling": 0.65,
+    "electric": 1.8,
+    "plaquette": 0.25,
+    "vector_velocity": 0.6,
+    "em_width": 1.0,
+    "epsilon": 1.0,
+    "charge_sigma": 0.25,
+    "em_cut": 2,
+    "em_basis_scale": 1.0,
+    "eigenstates": 4,
+    "eigen_tolerance": 1e-09,
+    "field_kick": 0.3,
+    "times": [
+      0.0,
+      0.1,
+      0.3
+    ],
+    "evolution_steps": 36,
+    "kick_steps": 14,
+    "scope": "Same physical law. Exact primitive multiplicity x angular-channel x radial factors retain all dimensions; neither collapsed tensor Kronecker nor accumulated giant reduced CSR. M=1 gives Mrad16; conditional J0 reference. Full compatible-J Mhalf event."
+  },
+  "dimensions": {
+    "neutral": 332,
+    "lepton": 580,
+    "baryon": 2108,
+    "antilepton": 580,
+    "antibaryon": 2108
+  },
+  "field_dimension": 28,
+  "rq_unitarity": 2.0476133366766616e-13,
+  "native_payload": {
+    "file": "rich_spatial_colour_charge_20261015_construct1_body.pkl",
+    "sha256": "ea2eafd5eb43769673e1a84b78a5a07a5dfe75734bf8e088bd0d382995f06f57",
+    "source_parameters": {
+      "vertex_separation": 1.0,
+      "path_height": 0.6,
+      "path_quadrature": 4,
+      "orientation_azimuth_points": 8,
+      "orientation_polar_points": 6,
+      "orientation_inertia": 1.0,
+      "scalar_points": 7,
+      "scalar_extent": 4.0,
+      "scalar_metric": 1.0,
+      "scalar_quartic": 0.2,
+      "scalar_quadratic": 1.0,
+      "scalar_coupling": 0.65,
+      "electric": 1.8,
+      "plaquette": 0.25,
+      "vector_velocity": 0.6,
+      "rank_absolute": 1e-12,
+      "rank_relative": 1e-10,
+      "neutral_low_eigenstates": 8,
+      "low_eigenstates": 24,
+      "eigen_tolerance": 1e-10,
+      "bright_threshold": 1e-09,
+      "degeneracy_tolerance": 1e-06,
+      "eta": 0.2,
+      "frequencies": [
+        -1.5,
+        0.0,
+        1.5
+      ],
+      "resolvent_tolerance": 1e-08,
+      "gmres_restart": 64,
+      "gmres_cycles": 80,
+      "times": [
+        0.0,
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "A_pulse": [
+        0.25,
+        -0.15,
+        0.3
+      ],
+      "B_pulse": [
+        0.1,
+        0.2,
+        0.25
+      ],
+      "pulse_duration": 0.4,
+      "field_kick": 0.3
+    },
+    "meaning": "Numeric native BODY, raw source metrics/isometry only. NEW r\u00b3/frame/SU2-gauged H/reference/current/source costs must be recomputed; no old state/H0/spectrum."
+  },
+  "frame": {
+    "neutral": {
+      "Gauss": 2.298516451239421e-14,
+      "left": 2.2597261117852223e-14,
+      "coordinate": {
+        "actual_left_g_derivative": 1.1506338562091927e-11,
+        "centre_field_sewing": 0.0,
+        "primitive_CAR_physical_spin": "ZERO in this variant; S_CAR enters RIGHT Gauss only; physical generator is field LEFT differentiation compressed by the actual isometry"
+      }
+    },
+    "lepton": {
+      "Gauss": 7.630751489870769e-14,
+      "left": 7.658323305162328e-14,
+      "coordinate": {
+        "actual_left_g_derivative": 2.4380987973467674e-11,
+        "centre_field_sewing": 0.0,
+        "primitive_CAR_physical_spin": "ZERO in this variant; S_CAR enters RIGHT Gauss only; physical generator is field LEFT differentiation compressed by the actual isometry"
+      }
+    },
+    "antilepton": {
+      "Gauss": 7.630751489870769e-14,
+      "left": 7.658323305162328e-14,
+      "coordinate": {
+        "actual_left_g_derivative": 2.4380883477666456e-11,
+        "centre_field_sewing": 0.0,
+        "primitive_CAR_physical_spin": "ZERO in this variant; S_CAR enters RIGHT Gauss only; physical generator is field LEFT differentiation compressed by the actual isometry"
+      }
+    }
+  },
+  "radial": [
+    {
+      "j": 0.5,
+      "origin_exponent": 0.5811388300841898,
+      "measure": "r^3 dr dHaar",
+      "radial_Gram_error": 3.0819100383879312e-15,
+      "derivative_quadratic_form_vs_LB": 1.304254121172945e-15,
+      "frame_inertia": "M_rad*r^2/2",
+      "no_origin_epsilon": true,
+      "trial_domain": "j-adapted regular Friedrichs branch r^beta_j times Laguerre polynomial/Gaussian; positive half-line ordered branch only"
+    },
+    {
+      "j": 1.5,
+      "origin_exponent": 1.9154759474226504,
+      "measure": "r^3 dr dHaar",
+      "radial_Gram_error": 3.3377479092393305e-15,
+      "derivative_quadratic_form_vs_LB": 1.0851575301139335e-15,
+      "frame_inertia": "M_rad*r^2/2",
+      "no_origin_epsilon": true,
+      "trial_domain": "j-adapted regular Friedrichs branch r^beta_j times Laguerre polynomial/Gaussian; positive half-line ordered branch only"
+    }
+  ],
+  "reference": {
+    "condition": "J=0 conditional reference, not global vacuum",
+    "energies": [
+      -24.05577362932659,
+      -22.436583234872415,
+      -22.31623402238798,
+      -21.943024974688672
+    ],
+    "residuals": [
+      1.7154258963284648e-13,
+      1.287425023404394e-09,
+      1.8498114838653708e-09,
+      1.4821965479607663e-08
+    ],
+    "dimension": 23340,
+    "factorization": {
+      "factor_groups": 232,
+      "stored_multiplicity_nonzeros": 56522,
+      "angular_elements": 129568,
+      "projection_action_relative_error": 1.6734002623578445e-16,
+      "construction": "Exact primitive multiplicity tensor angular-channel tensor radial factors; no collapsed CSR or state/direction deletion."
+    }
+  },
+  "stationary": {
+    "lepton": {
+      "J": 0.5,
+      "M": 0.5,
+      "dimension": 65904,
+      "energies": [
+        -21.860413996414934,
+        -21.066203396970423,
+        -20.69724071842269,
+        -20.127558606859218
+      ],
+      "gaps": [
+        2.195359632911657,
+        2.9895702323561686,
+        3.3585329109039,
+        3.9282150224673735
+      ],
+      "residuals": [
+        1.6000873730942279e-13,
+        2.4053968071404903e-13,
+        1.4516141172937684e-13,
+        1.4734632238027706e-08
+      ],
+      "full_transverse_off_energies": [
+        -22.46060904429028,
+        -21.460609044290226,
+        -20.96060904429063,
+        -20.460609044290337
+      ],
+      "full_transverse_off_residuals": [
+        2.2021481512007965e-13,
+        5.484106532242635e-11,
+        7.737489080888128e-10,
+        1.2991568847958423e-08
+      ],
+      "factorization": {
+        "factor_groups": 608,
+        "stored_multiplicity_nonzeros": 297540,
+        "angular_elements": 1523488,
+        "projection_action_relative_error": 1.5484139010946511e-16,
+        "construction": "Exact primitive multiplicity tensor angular-channel tensor radial factors; no collapsed CSR or state/direction deletion."
+      },
+      "sources": [
+        {
+          "site": 0,
+          "M": -0.5,
+          "norm_squared": 0.5004627173554572,
+          "angular_fibre_leakage": 1.7008858725840864e-17,
+          "source_Gauss": {
+            "raw_source_Gauss": 5.919836996961532e-14,
+            "reduced_matches_CAR": 3.9634227573073943e-14,
+            "source_frame_projection_leak": 3.892781102124547e-14,
+            "bare_without_Wigner_Gauss": 6.442049363362568
+          },
+          "energy_cost": 2.359005159293371
+        },
+        {
+          "site": 0,
+          "M": 0.5,
+          "norm_squared": 0.5004627173554572,
+          "angular_fibre_leakage": 1.690737907140402e-17,
+          "source_Gauss": {
+            "raw_source_Gauss": 5.919836996961533e-14,
+            "reduced_matches_CAR": 3.807857326795668e-14,
+            "source_frame_projection_leak": 3.892781102124547e-14,
+            "bare_without_Wigner_Gauss": 6.442049363362568
+          },
+          "energy_cost": 2.359005159293371,
+          "pole_weights": [
+            0.4631830338580847,
+            0.0005205435911403332,
+            0.03368326272638692,
+            0.000699368420664314
+          ],
+          "window_fraction": 0.9952513770221707
+        },
+        {
+          "site": 1,
+          "M": -0.5,
+          "norm_squared": 0.49719809535159315,
+          "angular_fibre_leakage": 1.7660218866087647e-17,
+          "source_Gauss": {
+            "raw_source_Gauss": 5.4759455563606484e-14,
+            "reduced_matches_CAR": 3.373617619200744e-14,
+            "source_frame_projection_leak": 3.3582952491974365e-14,
+            "bare_without_Wigner_Gauss": 6.442049363362574
+          },
+          "energy_cost": 2.475550888669922
+        },
+        {
+          "site": 1,
+          "M": 0.5,
+          "norm_squared": 0.49719809535159315,
+          "angular_fibre_leakage": 1.750435993603612e-17,
+          "source_Gauss": {
+            "raw_source_Gauss": 5.475945556360649e-14,
+            "reduced_matches_CAR": 3.325892119415259e-14,
+            "source_frame_projection_leak": 3.3582952491974365e-14,
+            "bare_without_Wigner_Gauss": 6.442049363362573
+          },
+          "energy_cost": 2.475550888669922,
+          "pole_weights": [
+            0.4572633945537027,
+            0.0005070096943650639,
+            0.033696170750886885,
+            0.0006954418065898385
+          ],
+          "window_fraction": 0.9898710823852062
+        }
+      ]
+    },
+    "antilepton": {
+      "J": 0.5,
+      "M": 0.5,
+      "dimension": 65904,
+      "energies": [
+        -21.860945977886782,
+        -21.066142870102418,
+        -20.69736266250931,
+        -20.12815065002666
+      ],
+      "gaps": [
+        2.194827651439809,
+        2.9896307592241733,
+        3.3584109668172815,
+        3.9276229792999295
+      ],
+      "residuals": [
+        1.1224631785448787e-13,
+        2.0952039424889722e-13,
+        1.9883962556241332e-13,
+        6.442930740969753e-10
+      ],
+      "full_transverse_off_energies": [
+        -22.460609044290266,
+        -21.460609044290255,
+        -20.9606090442904,
+        -20.460609044290383
+      ],
+      "full_transverse_off_residuals": [
+        1.0790980341397232e-13,
+        4.2146309718143066e-11,
+        3.7512638328747407e-10,
+        9.271760153202786e-09
+      ],
+      "factorization": {
+        "factor_groups": 608,
+        "stored_multiplicity_nonzeros": 297540,
+        "angular_elements": 1523488,
+        "projection_action_relative_error": 1.5314966322419743e-16,
+        "construction": "Exact primitive multiplicity tensor angular-channel tensor radial factors; no collapsed CSR or state/direction deletion."
+      },
+      "sources": [
+        {
+          "site": 0,
+          "M": -0.5,
+          "norm_squared": 0.4971980953515911,
+          "angular_fibre_leakage": 1.7255412742400815e-17,
+          "source_Gauss": {
+            "raw_source_Gauss": 5.886098626712387e-14,
+            "reduced_matches_CAR": 3.918811428024617e-14,
+            "source_frame_projection_leak": 3.848779692368667e-14,
+            "bare_without_Wigner_Gauss": 6.442049363362569
+          },
+          "energy_cost": 2.4755394448754657
+        },
+        {
+          "site": 0,
+          "M": 0.5,
+          "norm_squared": 0.4971980953515911,
+          "angular_fibre_leakage": 1.7159866970743133e-17,
+          "source_Gauss": {
+            "raw_source_Gauss": 5.886098626712387e-14,
+            "reduced_matches_CAR": 3.760699790544267e-14,
+            "source_frame_projection_leak": 3.8487796923686676e-14,
+            "bare_without_Wigner_Gauss": 6.442049363362569
+          },
+          "energy_cost": 2.4755394448754657,
+          "pole_weights": [
+            0.4570084819975833,
+            0.0006357575233921416,
+            0.03381544639884901,
+            0.0006630473549639789
+          ],
+          "window_fraction": 0.9897920725677486
+        },
+        {
+          "site": 1,
+          "M": -0.5,
+          "norm_squared": 0.5004627173554548,
+          "angular_fibre_leakage": 1.7453779572408808e-17,
+          "source_Gauss": {
+            "raw_source_Gauss": 5.496395644384359e-14,
+            "reduced_matches_CAR": 3.4000043869789034e-14,
+            "source_frame_projection_leak": 3.381797043574328e-14,
+            "bare_without_Wigner_Gauss": 6.442049363362575
+          },
+          "energy_cost": 2.3589916719850628
+        },
+        {
+          "site": 1,
+          "M": 0.5,
+          "norm_squared": 0.5004627173554548,
+          "angular_fibre_leakage": 1.7438876786427716e-17,
+          "source_Gauss": {
+            "raw_source_Gauss": 5.4963956443843584e-14,
+            "reduced_matches_CAR": 3.348113241850746e-14,
+            "source_frame_projection_leak": 3.3817970435743276e-14,
+            "bare_without_Wigner_Gauss": 6.44204936336257
+          },
+          "energy_cost": 2.3589916719850628,
+          "pole_weights": [
+            0.46293702972966627,
+            0.0006408312744031629,
+            0.03380276763994026,
+            0.0006715459041763613
+          ],
+          "window_fraction": 0.9951833718603326
+        }
+      ]
+    }
+  },
+  "C_spectral_max": 0.0005920431674439897,
+  "CAR_source_sum": [
+    {
+      "site": 0,
+      "M": -0.5,
+      "addition": 0.5004627173554572,
+      "removal": 0.4971980953515911
+    },
+    {
+      "site": 0,
+      "M": 0.5,
+      "addition": 0.5004627173554572,
+      "removal": 0.4971980953515911
+    },
+    {
+      "site": 1,
+      "M": -0.5,
+      "addition": 0.49719809535159315,
+      "removal": 0.5004627173554548
+    },
+    {
+      "site": 1,
+      "M": 0.5,
+      "addition": 0.49719809535159315,
+      "removal": 0.5004627173554548
+    }
+  ],
+  "events": {
+    "lepton": {
+      "dimension": 224748,
+      "M": 0.5,
+      "retained_J": "ALL compatible J in full M=1/2 fibre, no response-sector deletion",
+      "factorization": {
+        "factor_groups": 608,
+        "stored_multiplicity_nonzeros": 297540,
+        "angular_elements": 21024755,
+        "projection_action_relative_error": 8.340114960541282e-17,
+        "construction": "Exact primitive multiplicity tensor angular-channel tensor radial factors; no collapsed CSR or state/direction deletion."
+      },
+      "kick": {
+        "dimension": 14,
+        "last_residual": 0.019751067847023202,
+        "last_exponential_coefficient": 3.0537332093683004e-24,
+        "endpoint_Schrodinger_defect": 6.031449180494119e-26,
+        "norm": 0.9999999999999973
+      },
+      "t0_before": {
+        "rho0": -0.5279551898756905,
+        "LEFT_z": 0.49742168966367273,
+        "material_z": 0.0025653770044175577,
+        "field_z": 1.2933331909157972e-05,
+        "HE": 1.138923405141135,
+        "boundary": 0.16088123932745096,
+        "Q0": 0.0,
+        "Pi0": 0.0,
+        "Q1": 0.0,
+        "Pi1": 0.0,
+        "Q2": 2.4019561097266863e-05,
+        "Pi2": 1.0394788328704774e-16,
+        "Q3": 0.0,
+        "Pi3": 0.0,
+        "Q4": 0.0,
+        "Pi4": 0.0,
+        "Q5": -0.0001673699028046699,
+        "Pi5": 2.4882439858542327e-17
+      },
+      "t0_after": {
+        "rho0": -0.5279551898756937,
+        "LEFT_z": 0.49742168966367273,
+        "material_z": 0.002565377004417569,
+        "field_z": 1.2933331909154452e-05,
+        "HE": 1.1957930627807767,
+        "boundary": 0.1448312711708057,
+        "Q0": 0.0,
+        "Pi0": 0.0,
+        "Q1": 0.0,
+        "Pi1": 0.0,
+        "Q2": 2.401956109745161e-05,
+        "Pi2": 0.22575482759884175,
+        "Q3": 0.0,
+        "Pi3": 0.0,
+        "Q4": 0.0,
+        "Pi4": 0.0,
+        "Q5": -0.0001681721595896274,
+        "Pi5": 0.0011959140182145628
+      },
+      "t0_matter_difference": {
+        "rho0": -3.219646771412954e-15,
+        "LEFT_z": 0.0,
+        "material_z": 1.1275702593849246e-17
+      },
+      "trajectories": {
+        "full_kicked": [
+          {
+            "time": 0.0,
+            "observables": {
+              "rho0": -0.5279551898756937,
+              "LEFT_z": 0.49742168966367273,
+              "material_z": 0.002565377004417569,
+              "field_z": 1.2933331909154452e-05,
+              "HE": 1.1957930627807767,
+              "boundary": 0.1448312711708057,
+              "Q0": 0.0,
+              "Pi0": 0.0,
+              "Q1": 0.0,
+              "Pi1": 0.0,
+              "Q2": 2.401956109745161e-05,
+              "Pi2": 0.22575482759884175,
+              "Q3": 0.0,
+              "Pi3": 0.0,
+              "Q4": 0.0,
+              "Pi4": 0.0,
+              "Q5": -0.0001681721595896274,
+              "Pi5": 0.0011959140182145628,
+              "currents": [
+                0.0,
+                0.0,
+                -0.033978767119681695,
+                0.0,
+                0.0,
+                -0.23735719965755686
+              ],
+              "contact": [
+                0.029563030514826064,
+                0.02945209385967649,
+                0.029565342775275498,
+                0.664896218822471,
+                0.6469618285727026,
+                0.6648955779455774
+              ],
+              "energy": -21.642600074647397,
+              "norm": 0.9999999999999973,
+              "Jz_sum": 0.49999999999999944
+            },
+            "propagation": {
+              "norm": 0.9999999999999973
+            }
+          },
+          {
+            "time": 0.1,
+            "observables": {
+              "rho0": -0.5270874481786417,
+              "LEFT_z": 0.4982340312608735,
+              "material_z": 0.001038114304622972,
+              "field_z": 0.0007278544345024566,
+              "HE": 1.2008955693891297,
+              "boundary": 0.14554008802218632,
+              "Q0": 0.0,
+              "Pi0": 0.0,
+              "Q1": 0.0,
+              "Pi1": 0.0,
+              "Q2": 0.03524495524256876,
+              "Pi2": 0.22270161630921576,
+              "Q3": 0.0,
+              "Pi3": 0.0,
+              "Q4": 0.0,
+              "Pi4": 0.0,
+              "Q5": -0.001566131785947407,
+              "Pi5": -0.018665252378979515,
+              "currents": [
+                0.0,
+                0.0,
+                -0.03395457295062381,
+                0.0,
+                0.0,
+                -0.22008453165776515
+              ],
+              "contact": [
+                0.029098085584435728,
+                0.029110902220939802,
+                0.029222161606171422,
+                0.639827174647407,
+                0.6370079036666698,
+                0.7067086534753297
+              ],
+              "energy": -21.64260007464741,
+              "norm": 0.9999999999999991,
+              "Jz_sum": 0.49999999999999895
+            },
+            "propagation": {
+              "dimension": 36,
+              "last_residual": 74.21029423484018,
+              "last_exponential_coefficient": 6.653282045288448e-13,
+              "endpoint_Schrodinger_defect": 4.937420182082337e-11,
+              "norm": 0.9999999999999991
+            }
+          },
+          {
+            "time": 0.3,
+            "observables": {
+              "rho0": -0.5155705741166111,
+              "LEFT_z": 0.4935643618950351,
+              "material_z": 0.0006786540082882801,
+              "field_z": 0.005756984096676597,
+              "HE": 1.2402349456682042,
+              "boundary": 0.15131649342534687,
+              "Q0": 0.0,
+              "Pi0": 0.0,
+              "Q1": 0.0,
+              "Pi1": 0.0,
+              "Q2": 0.10094253865875313,
+              "Pi2": 0.21465711523463737,
+              "Q3": 0.0,
+              "Pi3": 0.0,
+              "Q4": 0.0,
+              "Pi4": 0.0,
+              "Q5": -0.01059676204869189,
+              "Pi5": -0.045080199927750614,
+              "currents": [
+                0.0,
+                0.0,
+                -0.02479010556360317,
+                0.0,
+                0.0,
+                -0.09403885079301945
+              ],
+              "contact": [
+                0.026002128188591905,
+                0.025980182997597988,
+                0.026044999497089612,
+                0.6138576533935834,
+                0.6087200250229876,
+                0.8303330707864697
+              ],
+              "energy": -21.642600074647323,
+              "norm": 0.9999999999999972,
+              "Jz_sum": 0.49999999999999994
+            },
+            "propagation": {
+              "dimension": 36,
+              "last_residual": 74.21029423484018,
+              "last_exponential_coefficient": 0.003460039456311016,
+              "endpoint_Schrodinger_defect": 0.2567705461169963,
+              "norm": 0.9999999999999972
+            }
+          }
+        ],
+        "full_no_kick": [
+          {
+            "time": 0.0,
+            "observables": {
+              "rho0": -0.5279551898756905,
+              "LEFT_z": 0.49742168966367273,
+              "material_z": 0.0025653770044175577,
+              "field_z": 1.2933331909157972e-05,
+              "HE": 1.138923405141135,
+              "boundary": 0.16088123932745096,
+              "Q0": 0.0,
+              "Pi0": 0.0,
+              "Q1": 0.0,
+              "Pi1": 0.0,
+              "Q2": 2.4019561097266863e-05,
+              "Pi2": 1.0394788328704774e-16,
+              "Q3": 0.0,
+              "Pi3": 0.0,
+              "Q4": 0.0,
+              "Pi4": 0.0,
+              "Q5": -0.0001673699028046699,
+              "Pi5": 2.4882439858542327e-17,
+              "currents": [
+                0.0,
+                0.0,
+                -0.03396066763453044,
+                0.0,
+                0.0,
+                -0.23729793797895118
+              ],
+              "contact": [
+                0.029556147682904568,
+                0.029445205852807427,
+                0.029556147682904554,
+                0.6648177501973228,
+                0.6468919959994459,
+                0.6648177501973226
+              ],
+              "energy": -21.6967684700332,
+              "norm": 0.9999999999999996,
+              "Jz_sum": 0.49999999999999944
+            },
+            "propagation": {
+              "norm": 0.9999999999999996
+            }
+          },
+          {
+            "time": 0.1,
+            "observables": {
+              "rho0": -0.5270880261830012,
+              "LEFT_z": 0.49824320273621014,
+              "material_z": 0.0010365107662142171,
+              "field_z": 0.0007202864975744494,
+              "HE": 1.1454147225250058,
+              "boundary": 0.16081481916488635,
+              "Q0": 0.0,
+              "Pi0": 0.0,
+              "Q1": 0.0,
+              "Pi1": 0.0,
+              "Q2": -0.00017851874296787127,
+              "Pi2": -0.002610131211493217,
+              "Q3": 0.0,
+              "Pi3": 0.0,
+              "Q4": 0.0,
+              "Pi4": 0.0,
+              "Q5": -0.0014704939030293208,
+              "Pi5": -0.019476507755741664,
+              "currents": [
+                0.0,
+                0.0,
+                -0.032934093575279065,
+                0.0,
+                0.0,
+                -0.21928082522319117
+              ],
+              "contact": [
+                0.029102475878483424,
+                0.02911519406294731,
+                0.029246182530775502,
+                0.6397813271429236,
+                0.6369807987247555,
+                0.7066108832031283
+              ],
+              "energy": -21.696768470033216,
+              "norm": 0.9999999999999986,
+              "Jz_sum": 0.4999999999999988
+            },
+            "propagation": {
+              "dimension": 36,
+              "last_residual": 74.09131223259587,
+              "last_exponential_coefficient": 6.45452021791524e-13,
+              "endpoint_Schrodinger_defect": 4.782238727771606e-11,
+              "norm": 0.9999999999999986
+            }
+          },
+          {
+            "time": 0.3,
+            "observables": {
+              "rho0": -0.5156066200649515,
+              "LEFT_z": 0.49371671162511244,
+              "material_z": 0.0006748904688856437,
+              "field_z": 0.0056083979060019395,
+              "HE": 1.1875431586863499,
+              "boundary": 0.16300946643415198,
+              "Q0": 0.0,
+              "Pi0": 0.0,
+              "Q1": 0.0,
+              "Pi1": 0.0,
+              "Q2": -0.0015510910408622954,
+              "Pi2": -0.006552345633442594,
+              "Q3": 0.0,
+              "Pi3": 0.0,
+              "Q4": 0.0,
+              "Pi4": 0.0,
+              "Q5": -0.010315742411833506,
+              "Pi5": -0.045168681870503984,
+              "currents": [
+                0.0,
+                0.0,
+                -0.022337833067524494,
+                0.0,
+                0.0,
+                -0.09262153620755297
+              ],
+              "contact": [
+                0.02602306480941114,
+                0.026001208860441476,
+                0.026103976789450752,
+                0.6138185622951221,
+                0.608686836015277,
+                0.830045166764948
+              ],
+              "energy": -21.696768470033142,
+              "norm": 1.0000000000000002,
+              "Jz_sum": 0.5
+            },
+            "propagation": {
+              "dimension": 36,
+              "last_residual": 74.09131223259587,
+              "last_exponential_coefficient": 0.0034120376826621175,
+              "endpoint_Schrodinger_defect": 0.2528023492955017,
+              "norm": 1.0000000000000002
+            }
+          }
+        ],
+        "same_state_full_transverse_off": [
+          {
+            "time": 0.0,
+            "observables": {
+              "rho0": -0.5279551898756937,
+              "LEFT_z": 0.49742168966367273,
+              "material_z": 0.002565377004417569,
+              "field_z": 1.2933331909154452e-05,
+              "HE": 1.1957930627807767,
+              "boundary": 0.1448312711708057,
+              "Q0": 0.0,
+              "Pi0": 0.0,
+              "Q1": 0.0,
+              "Pi1": 0.0,
+              "Q2": 2.401956109745161e-05,
+              "Pi2": 0.22575482759884175,
+              "Q3": 0.0,
+              "Pi3": 0.0,
+              "Q4": 0.0,
+              "Pi4": 0.0,
+              "Q5": -0.0001681721595896274,
+              "Pi5": 0.0011959140182145628,
+              "currents": [
+                0.0,
+                0.0,
+                -0.033978767119681695,
+                0.0,
+                0.0,
+                -0.23735719965755686
+              ],
+              "contact": [
+                0.029563030514826064,
+                0.02945209385967649,
+                0.029565342775275498,
+                0.664896218822471,
+                0.6469618285727026,
+                0.6648955779455774
+              ],
+              "energy": -21.642600074647397,
+              "norm": 0.9999999999999973,
+              "Jz_sum": 0.49999999999999944
+            },
+            "propagation": {
+              "norm": 0.9999999999999973
+            }
+          },
+          {
+            "time": 0.1,
+            "observables": {
+              "rho0": -0.5257025254351654,
+              "LEFT_z": 0.49884088548849814,
+              "material_z": 0.0011461811795927413,
+              "field_z": 1.2933331909163094e-05,
+              "HE": 1.1957930627807751,
+              "boundary": 0.14756742000915368,
+              "Q0": 0.0,
+              "Pi0": 0.0,
+              "Q1": 0.0,
+              "Pi1": 0.0,
+              "Q2": 0.03719631597384155,
+              "Pi2": 0.22451358448237613,
+              "Q3": 0.0,
+              "Pi3": 0.0,
+              "Q4": 0.0,
+              "Pi4": 0.0,
+              "Q5": -0.00034372312281549886,
+              "Pi5": 0.001208788683102216,
+              "currents": [
+                0.0,
+                0.0,
+                -0.033743362686516176,
+                0.0,
+                0.0,
+                -0.2149504335506053
+              ],
+              "contact": [
+                0.028948379344495727,
+                0.028959587824602208,
+                0.029089061308331027,
+                0.6372406935972893,
+                0.6354424060082321,
+                0.7026044106283699
+              ],
+              "energy": -21.514704842306912,
+              "norm": 0.9999999999999989,
+              "Jz_sum": 0.5000000000000001
+            },
+            "propagation": {
+              "dimension": 36,
+              "last_residual": 76.1311421181475,
+              "last_exponential_coefficient": 6.561716739147381e-13,
+              "endpoint_Schrodinger_defect": 4.9955098960705524e-11,
+              "norm": 0.9999999999999989
+            }
+          },
+          {
+            "time": 0.3,
+            "observables": {
+              "rho0": -0.5128042715574626,
+              "LEFT_z": 0.49918689490239043,
+              "material_z": 0.0007999151410158,
+              "field_z": 1.318995659358318e-05,
+              "HE": 1.1958742767458892,
+              "boundary": 0.16884092405263634,
+              "Q0": 0.0,
+              "Pi0": 0.0,
+              "Q1": 0.0,
+              "Pi1": 0.0,
+              "Q2": 0.10931374880373251,
+              "Pi2": 0.2147445180361911,
+              "Q3": 0.0,
+              "Pi3": 0.0,
+              "Q4": 0.0,
+              "Pi4": 0.0,
+              "Q5": -0.000613284048324136,
+              "Pi5": 0.0012836803409126442,
+              "currents": [
+                0.0,
+                0.0,
+                -0.025213563778281337,
+                0.0,
+                0.0,
+                -0.08434609106052306
+              ],
+              "contact": [
+                0.025729611853529684,
+                0.025701193003458293,
+                0.025829784053142624,
+                0.6146274298545987,
+                0.6093961404440703,
+                0.8151970504901763
+              ],
+              "energy": -21.449396749056383,
+              "norm": 0.9999999999999994,
+              "Jz_sum": 0.49999999999999983
+            },
+            "propagation": {
+              "dimension": 36,
+              "last_residual": 76.1311421181475,
+              "last_exponential_coefficient": 0.003479622667880581,
+              "endpoint_Schrodinger_defect": 0.26490764784594334,
+              "norm": 0.9999999999999994
+            }
+          }
+        ]
+      },
+      "response": [
+        {
+          "axis": 0,
+          "current": 0.0,
+          "current_variance": 0.0,
+          "contact": 0.029563030514826064,
+          "dcurrent_dt": 0.0
+        },
+        {
+          "axis": 1,
+          "current": 0.0,
+          "current_variance": 0.0,
+          "contact": 0.02945209385967649,
+          "dcurrent_dt": 0.0
+        },
+        {
+          "axis": 2,
+          "current": -0.033978767119681695,
+          "current_variance": 0.01754357795514235,
+          "contact": 0.029565342775275498,
+          "dcurrent_dt": -0.010307504712269211
+        },
+        {
+          "axis": 3,
+          "current": 0.0,
+          "current_variance": 0.0,
+          "contact": 0.664896218822471,
+          "dcurrent_dt": 0.0
+        },
+        {
+          "axis": 4,
+          "current": 0.0,
+          "current_variance": 0.0,
+          "contact": 0.6469618285727026,
+          "dcurrent_dt": 0.0
+        },
+        {
+          "axis": 5,
+          "current": -0.23735719965755686,
+          "current_variance": 1.9112018498001917,
+          "contact": 0.6648955779455774,
+          "dcurrent_dt": -0.007414124533778654
+        }
+      ],
+      "CCR_state_defect": 0.6551671543430277,
+      "Qdot_minus_Pi": 0.12944163797728575,
+      "Pidot_minus_canonical_current": 0.0062799725085612365
+    }
+  }
+}

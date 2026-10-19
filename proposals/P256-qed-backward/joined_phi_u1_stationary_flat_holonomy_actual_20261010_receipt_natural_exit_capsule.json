@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "-B",
+    "-c",
+    "import importlib.abc, importlib.machinery, pathlib, runpy, sys\nroot=pathlib.Path(sys.argv[1]).parent\nclass Loader(importlib.machinery.SourceFileLoader):\n def get_code(self,fullname):\n  raw=pathlib.Path(self.path).read_bytes()\n  return self.source_to_code(raw,self.path)\nclass Finder(importlib.abc.MetaPathFinder):\n def find_spec(self,fullname,path=None,target=None):\n  spec=importlib.machinery.PathFinder.find_spec(fullname,path,target)\n  if spec and spec.origin and pathlib.Path(spec.origin).parent==root and spec.origin.endswith('.py'):\n   spec.loader=Loader(fullname,spec.origin)\n  return spec\nsys.meta_path.insert(0,Finder())\nsource=sys.argv[1];sys.argv=sys.argv[1:]\nrunpy.run_path(source,run_name='__main__')\n",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_flat_holonomy.py",
+    "--output",
+    "joined_phi_u1_stationary_flat_holonomy_actual_20261010_receipt.json"
+  ],
+  "natural_exit": true,
+  "exit_code": 1,
+  "elapsed_seconds": 7.6697566069924505,
+  "stdout": "joined_phi_u1_stationary_flat_holonomy_actual_20261010_receipt_stdout.txt",
+  "stderr": "joined_phi_u1_stationary_flat_holonomy_actual_20261010_receipt_stderr.txt",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "029337ccab2e4d792b46e12434c6eea37a9a5660463cfaef9b6df87cccde1cdf",
+  "execution_archive": "joined_phi_u1_stationary_flat_holonomy_actual_20261010_receipt_execution_bytes.zip",
+  "execution_archive_sha256": "3fbf3f624eea042d8e4105c84ae5b0a936bcf884e99e37dd773ac28503de87c7",
+  "source_sha256_before": "9fae91bce9a60cf7d9a42e858f5ec884c29dd5d671dfbbd300565bd040ef8af4",
+  "source_sha256_after": "9fae91bce9a60cf7d9a42e858f5ec884c29dd5d671dfbbd300565bd040ef8af4",
+  "runner_sha256_before": "6ace061676686dc601dc63c14dfea9e05310900bbbdc82b7f85a3fd741e9b725",
+  "runner_sha256_after": "6ace061676686dc601dc63c14dfea9e05310900bbbdc82b7f85a3fd741e9b725",
+  "receipt_sha256": null,
+  "input_archive_sha256": null
+}

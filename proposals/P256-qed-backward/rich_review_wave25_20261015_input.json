@@ -1,0 +1,22 @@
+{
+  "plan_id": "issue222-rich-backward-candidates-20261014",
+  "launch_revision": "fbc5d613dcc248118658f2c81e30b3ebb77fe63eb6bb63e942029fb644faed95",
+  "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "work_item": "independent-review",
+  "requirements": ["outcome", "verification"],
+  "target_delivery_capsule_sha256": "f98cf61d31e01dfdba8b49929ec659d9090dc9eb0da2564522f3117e6c05bdfb",
+  "geometry": "cube",
+  "Nup": 1,
+  "Ndown": 1,
+  "hopping": 1.0,
+  "repulsion": 4.0,
+  "electric_inertia": 1.0,
+  "ions": [1,0,0,0,1,0,0,0],
+  "pulse_alpha": 0.7,
+  "duration": 4.0,
+  "intervals": 8,
+  "cutoffs": [1,2],
+  "preparation": "At each cutoff construct fresh full sector, neutral E0 basis spin up(0,0,0), spin down(1,0,0), then exp(-i0.7 Bleft) on that basis. Same full unprojected preparation prescription, never embedding/projecting L1 evolved or pulsed state into L2; only model's explicitly declared retained chord truncation is present.",
+  "independence": "Only pure frozen Parameters/Sector helpers. New source operator, state, regional energies, currents, algebra checks, trajectory, independent Chebyshev resolution. No producer consumer/checker CLI or producer evolved outputs.",
+  "continuation_policy": "L1 finite-case verdict first; exactly one L2 case, unchanged physical coefficients/geometry/ions/pulse and duration. No fitted work normalization, eigenground, L3 or sweep. Two action algorithms are resolution of the same case, not distinct protocols."
+}

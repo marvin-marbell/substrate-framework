@@ -1,0 +1,47 @@
+{
+  "law_id": "rich-photon-fullq-connected-gauge-hubbard-v1-20261014",
+  "root_relation": "Materially richer connected-graph extension of the correlated Hubbard-loop induced mechanism. The frozen a6674ba9 isolated-loop response/Gaussian model is not executed or spliced as its field supplier; only its pure CAR hop-sign helper is reused with source identity.",
+  "geometry": {
+    "name":"double_face",
+    "sites":"0=(0,0,0),1=(1,0,0),2=(1,1,0),3=(0,1,0),4=(1,0,1),5=(0,0,1)",
+    "oriented_edges":"0:0->1,1:1->2,2:3->2,3:0->3,4:1->4,5:5->4,6:0->5",
+    "tree":[0,1,3,4,6],"chords":[2,5],
+    "xy_cycle":[1,1,-1,-1,0,0,0],"xz_cycle":[1,0,0,0,1,-1,-1],
+    "physical_channels":"Two independent compact face fluxes, corresponding to y/z transverse circulation relative to shared x link. Finite open graph is not a translation-invariant photon box; q labels a real external profile, not an established momentum eigenstate. A cube option exists in the pure API but is not claimed executed."
+  },
+  "Hamiltonian":"H=sum_e E_e^2/(2 epsilon_b) + U sum_s n_s,up n_s,down - t sum_(e:a->b),spin [c_b,spin^dagger U_e c_a,spin + h.c.]. U_e raises the actual integer electric field E_e by one. There is NO B squared, cosine magnetic energy, oscillator restoration, Gaussian pair embedding or imported Pi in H.",
+  "parameters":{"t":1,"U":4,"epsilon_b":1,"a":1,"hbar":1,"unit_charge":1,"chord_integer_cutoff":3},
+  "compact_charge_preparation": {
+    "primary":"Two explicit integer static opposite charges at sites0 and1. Neutral N2 reference background b=(1,1,0,0,0,0); rho_s=n_s-b_s. All link electric spectra are ordinary integer rotor spectra.",
+    "charged_reference":"N3 has an additional opposite static charge at anchor0; N1 has the opposite change. b_N=b_ref+(N-2)delta_anchor, so total rho=0 on this closed graph. The physical charged source creates the fermion AND changes this explicitly tagged heavy countercharge reference. It is not a free isolated electron source.",
+    "earlier_uniform_case":"Captured earlier runs used b_s=2/6 and occupation-dependent tree electric fields with fractional fixed offsets. Those require an explicitly twisted/background-electric compact sector, not the ordinary integer-rotor U1 preparation. Retain those results as a distinct preparation; do not silently identify it with the primary integer-ion case."
+  },
+  "exact_Gauss_representation": {
+    "incidence":"B_s,e=+1 at oriented source, -1 at target; G_s=(B E)_s+rho_s",
+    "solve":"Delete redundant anchor row; E_chords=m with each m in {-L,...,L}. E_tree=B_tree^-1[-rho-B_chords m]. State basis is literal spinful occupation state tensor chord integers; tree electric fields are not frozen numbers independent of matter.",
+    "hopping":"A forward c_b^dagger U_e c_a changes rho by -delta_a+delta_b and E by +unit_e, preserving every G_s. For chord hops m_e increments; for tree hops only solved E_tree changes. Both directions retain actual CAR signs.",
+    "cutoff":"Project onto |m|<=L. Hopping/source transitions leaving the chord domain are omitted explicitly; this keeps exact Gauss, but projected Wilson operators are not globally unitary at the cutoff. Ground boundary probability and source norm losses are reported, not dismissed as a theorem.",
+    "dynamical_status":"The Hamiltonian acts on all retained joint matter/electric states. Nonlinear compact quantum motion, Hubbard correlations, longitudinal electric response and matter-field entanglement are solved directly; no frozen neutral susceptibility is used as delivery."
+  },
+  "same_H_sources": {
+    "external_current":"Insert a real test edge phase theta_e in T_e(theta)=exp(i theta_e)T_e. J_e=-dH/dtheta_e=-i(T_e-T_e^dagger); C_e=d^2H/dtheta_e^2=-(T_e+T_e^dagger). All are operators in the SAME joint Gauss Hilbert space.",
+    "continuity":"dot rho_s=i[H,rho_s]=sum_incoming J_e-sum_outgoing J_e. Electric/Hubbard terms commute with rho; projected hopping preserves this identity.",
+    "current_profiles":"j_lambda(q)=sum_e [epsilon_lambda.(x_b-x_a)]cos(q.(x_a+x_b)/2)J_e, q=(.7,0,0), lambda=y,z. Contact C_lambda,lambda'=sum_e d_lambda,e d_lambda',e C_e.",
+    "density":"rho_cos(q),rho_sin(q) from actual site coordinates and static charge preparation; current/density mixed resolvents retained.",
+    "field":"W_face=product U_e^cycle_e acts on chord integers and actual Gauss E. B_face=sin Phi=(W-W^dagger)/(2i); electric face operator=sum_e cycle_e E_e/|cycle|^2. These are gauge-invariant compact observables, NOT globally defined noncompact A.",
+    "charged":"S_site,spin^dagger=c_site,spin^dagger W_path(anchor->site), accompanied by the explicit countercharge-sector transition. E' = E+path. Removal uses inverse path. A bare c^dagger with unchanged E is projected onto the target physical Gauss sector and vanishes for a nonanchor site; keeping the same chord labels without checking all E would incorrectly hide a tree dressing.",
+    "alternate_dressing":"At site4 compare tree path edges0+4 against alternate path edges6+5. Their difference is the xz cycle. Both are charge-admissible, but carry different transverse electromagnetic dressing; they are not a gauge-equivalent identical photon state."
+  },
+  "response": {
+    "retarded":"z=omega+i eta, eta>0, Fourier exp(-i omega t). For Hermitian O_a, define v_a=O_a|Omega>-<O_a>|Omega>, h=H-E0. chi_ab=v_a^dagger(z-h)^-1 v_b - [v_a^dagger(z+h)^-1 v_b]_ba. Both full-H poles remain.",
+    "D_flux":"D_BB=-chi_BB for source coupling -f B. A 2x2 compact field susceptibility, not the old Gaussian A propagator; relation to continuum A requires a spatial propagation construction.",
+    "operator_order":["sin_flux_xy","sin_flux_xz","electric_xy","electric_xz","current_y(qx)","current_z(qx)","rho_cos(qx)","rho_sin(qx)"],
+    "full_resolvent":"Actual sparse linear solves on the entire projected finite H compute the 8x8 retarded response. Reported selected low eigenstate poles/residues are explicitly partial spectral information, not the full sum rule.",
+    "G":"Full spin-up site matrix: G_ab(z)=A_a^dagger[z+E0+mu-H_N3]^-1 A_b + [R_a^dagger[z-E0+mu+H_N1]^-1 R_b]_ba. A/R are physical Wilson+CAR source vectors at all sites, both from the same neutral joint state. This does not borrow a cached peer G or D.",
+    "mu":"An adjacent-sector stability interval exists if E0-E_N1 < mu < E_N3-E0. Choose its midpoint only to place zero frequency in the neutral charge gap; this is a disclosed reference energy, not a fitted photon speed or derivation of free mass. Stability against every other N is not claimed.",
+    "spin":"Exact CAR spin labels and SU2 spin operator are supplied. S squared computed via Sz(Sz+1)+||S+ state||^2; neutral singlet and odd doublet are measured rather than inferred from positive charge."
+  },
+  "physical_discriminators": ["Induced ground Wilson-loop coherence versus t=0 while primitive electric Hamiltonian remains", "Two independent flux-active spectral channels of the full compact quantum H", "Actual full-H sin-flux kick and subsequent electric/matter energy exchange", "Finite-frequency same-current response versus literal frozen A=0 matter-only comparator", "Correct charge-admissible source versus Gauss-inadmissible undressed source", "Two admissible Wilson dressings with different charged spectral weights"],
+  "scope_and_debt": ["Finite connected two-face graph with explicit integer ions and chord cutoff, not a vacuum architecture explained from substrate", "No infinite-volume gapless photon or propagation/Lorentz cone theorem", "q is external finite-graph profile; no dispersion inferred by sorting response poles", "Countercharge-relative odd spinful excitation, not a free electron mass or relativistic positron", "Unexplained CAR, spin, t,U and primitive electric inertia", "No full cube scientific run claimed; no supplied magnetic term", "Final language diagnostics and integrated smoke are execution-reviewer-owned"],
+  "language_prerequisite":"Actual project-root Pyright documentSymbol probe returned Parameters, hop and LoopMatter in frozen pure helper; mounted positive AST query returned LoopMatter hits. Frozen helper source identity preserved. No project tests/build/lint/formatter or old scientific entrypoint reruns."
+}

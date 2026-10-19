@@ -1,0 +1,9 @@
+{
+  "attempt": "open-flux coordinate without large-gauge twisted boundary",
+  "source_revision_sha256": "bf6e7a1f064c56b29c20d0e9be141093937a86e3c32235a2ef39b103b09ca23e",
+  "law": "rich-photon-hubbard-plaquette-links-v1-20261014",
+  "parameters": {"hopping": 1.0, "repulsion": 4.0, "electric_inertia": 1.0, "link_charge": 1.0, "Q_grid": 32, "Q_domain": "[-2pi,2pi], Dirichlet"},
+  "observed": {"coupled_neutral_energy": -3.180551295661557, "frozen_addition_threshold": 0.6663927622968107, "coupled_addition_threshold": 0.0, "coupled_vs_frozen_shift": -0.6663927622968139, "spin_degeneracy_gap_max": 0.0},
+  "verdict": "representation-failed: unbounded/open flux let a uniform gauge coordinate erase the charged threshold; not evidence against the Hubbard candidate or the full campaign.",
+  "repair": "Use compact total flux Q in [0,2pi) with the large-gauge-equivariant matter boundary psi(2pi)=U psi(0), U=exp(i sum_j (pi*j/2)n_j). This corrects the endpoint identification instead of tuning parameters."
+}

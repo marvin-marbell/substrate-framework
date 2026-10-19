@@ -1,0 +1,5710 @@
+{
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--outputjson",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_capture.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_deliver.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_images.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_language.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_tools.py"
+  ],
+  "diagnostic_exit": 1,
+  "diagnostics": {
+    "version": "1.1.414",
+    "time": "1792181522795",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_capture.py",
+        "severity": "error",
+        "message": "No overloads for \"update\" match the provided arguments",
+        "range": {
+          "start": {
+            "line": 45,
+            "character": 34
+          },
+          "end": {
+            "line": 45,
+            "character": 75
+          }
+        },
+        "rule": "reportCallIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_capture.py",
+        "severity": "error",
+        "message": "Argument of type \"list[str] | str | dict[Unknown, str] | float\" cannot be assigned to parameter \"m\" of type \"Iterable[tuple[str, str]]\" in function \"update\"\n\u00a0\u00a0Type \"list[str] | str | dict[Unknown, str] | float\" is not assignable to type \"Iterable[tuple[str, str]]\"\n\u00a0\u00a0\u00a0\u00a0\"float\" is incompatible with protocol \"Iterable[tuple[str, str]]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__iter__\" is not present",
+        "range": {
+          "start": {
+            "line": 45,
+            "character": 53
+          },
+          "end": {
+            "line": 45,
+            "character": 74
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+        "severity": "error",
+        "message": "\"rejected\" is possibly unbound",
+        "range": {
+          "start": {
+            "line": 50,
+            "character": 488
+          },
+          "end": {
+            "line": 50,
+            "character": 496
+          }
+        },
+        "rule": "reportPossiblyUnboundVariable"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+        "severity": "error",
+        "message": "Operator \"-\" not supported for types \"numpy.bool[builtins.bool]\" and \"numpy.bool[builtins.bool]\"",
+        "range": {
+          "start": {
+            "line": 65,
+            "character": 515
+          },
+          "end": {
+            "line": 65,
+            "character": 535
+          }
+        },
+        "rule": "reportOperatorIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+        "severity": "error",
+        "message": "Argument of type \"Unknown | NDArray[Any]\" cannot be assigned to parameter \"allow_pickle\" of type \"bool\" in function \"savez_compressed\"\n\u00a0\u00a0Type \"Unknown | NDArray[Any]\" is not assignable to type \"bool\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"bool\"",
+        "range": {
+          "start": {
+            "line": 69,
+            "character": 56
+          },
+          "end": {
+            "line": 69,
+            "character": 59
+          }
+        },
+        "rule": "reportArgumentType"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 6,
+      "errorCount": 5,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 20.817
+    }
+  },
+  "stderr": "",
+  "rooted_LSP": {
+    "root": "/home/administrator/substrate-222",
+    "python": "/home/administrator/substrate-framework/.venv/bin/python",
+    "initialize": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "capabilities": {
+          "textDocumentSync": 2,
+          "definitionProvider": {
+            "workDoneProgress": true
+          },
+          "declarationProvider": {
+            "workDoneProgress": true
+          },
+          "typeDefinitionProvider": {
+            "workDoneProgress": true
+          },
+          "referencesProvider": {
+            "workDoneProgress": true
+          },
+          "documentSymbolProvider": {
+            "workDoneProgress": true
+          },
+          "workspaceSymbolProvider": {
+            "workDoneProgress": true
+          },
+          "hoverProvider": {
+            "workDoneProgress": true
+          },
+          "documentHighlightProvider": {
+            "workDoneProgress": true
+          },
+          "renameProvider": {
+            "prepareProvider": true,
+            "workDoneProgress": true
+          },
+          "completionProvider": {
+            "triggerCharacters": [
+              ".",
+              "[",
+              "\"",
+              "'"
+            ],
+            "resolveProvider": true,
+            "workDoneProgress": true,
+            "completionItem": {
+              "labelDetailsSupport": true
+            }
+          },
+          "signatureHelpProvider": {
+            "triggerCharacters": [
+              "(",
+              ",",
+              ")"
+            ],
+            "workDoneProgress": true
+          },
+          "codeActionProvider": {
+            "codeActionKinds": [
+              "quickfix",
+              "source.organizeImports"
+            ],
+            "workDoneProgress": true
+          },
+          "executeCommandProvider": {
+            "commands": [],
+            "workDoneProgress": true
+          },
+          "callHierarchyProvider": true,
+          "workspace": {
+            "workspaceFolders": {
+              "supported": true,
+              "changeNotifications": true
+            }
+          }
+        }
+      }
+    },
+    "symbols": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": [
+        {
+          "name": "ROOT",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 13,
+                "character": 0
+              },
+              "end": {
+                "line": 13,
+                "character": 4
+              }
+            }
+          }
+        },
+        {
+          "name": "P",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 14,
+                "character": 0
+              },
+              "end": {
+                "line": 14,
+                "character": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "save",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 17,
+                "character": 0
+              },
+              "end": {
+                "line": 18,
+                "character": 73
+              }
+            }
+          }
+        },
+        {
+          "name": "result",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 17,
+                "character": 9
+              },
+              "end": {
+                "line": 17,
+                "character": 15
+              }
+            }
+          },
+          "containerName": "save"
+        },
+        {
+          "name": "ladder_check",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 21,
+                "character": 0
+              },
+              "end": {
+                "line": 34,
+                "character": 287
+              }
+            }
+          }
+        },
+        {
+          "name": "model",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 21,
+                "character": 17
+              },
+              "end": {
+                "line": 21,
+                "character": 22
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "state",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 21,
+                "character": 23
+              },
+              "end": {
+                "line": 21,
+                "character": 28
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "target",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 22,
+                "character": 4
+              },
+              "end": {
+                "line": 22,
+                "character": 10
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "lookup",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 22,
+                "character": 30
+              },
+              "end": {
+                "line": 22,
+                "character": 36
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "e",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 22,
+                "character": 80
+              },
+              "end": {
+                "line": 22,
+                "character": 81
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "q",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 22,
+                "character": 127
+              },
+              "end": {
+                "line": 22,
+                "character": 128
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "p",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 22,
+                "character": 176
+              },
+              "end": {
+                "line": 22,
+                "character": 177
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "column",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 23,
+                "character": 8
+              },
+              "end": {
+                "line": 23,
+                "character": 14
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "label",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 23,
+                "character": 15
+              },
+              "end": {
+                "line": 23,
+                "character": 20
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "axis",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 25,
+                "character": 12
+              },
+              "end": {
+                "line": 25,
+                "character": 16
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "upper",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 26,
+                "character": 12
+              },
+              "end": {
+                "line": 26,
+                "character": 17
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "row",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 26,
+                "character": 45
+              },
+              "end": {
+                "line": 26,
+                "character": 48
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "value",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 26,
+                "character": 70
+              },
+              "end": {
+                "line": 26,
+                "character": 75
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "lower",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 28,
+                "character": 16
+              },
+              "end": {
+                "line": 28,
+                "character": 21
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "expected",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 29,
+                "character": 4
+              },
+              "end": {
+                "line": 29,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "field",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 29,
+                "character": 84
+              },
+              "end": {
+                "line": 29,
+                "character": 89
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "primitive_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 30,
+                "character": 4
+              },
+              "end": {
+                "line": 30,
+                "character": 19
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 32,
+                "character": 4
+              },
+              "end": {
+                "line": 32,
+                "character": 9
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "timepoint",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 32,
+                "character": 64
+              },
+              "end": {
+                "line": 32,
+                "character": 73
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "tau",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 32,
+                "character": 78
+              },
+              "end": {
+                "line": 32,
+                "character": 81
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "b",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 32,
+                "character": 127
+              },
+              "end": {
+                "line": 32,
+                "character": 128
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "full",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 32,
+                "character": 137
+              },
+              "end": {
+                "line": 32,
+                "character": 141
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "cut",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 32,
+                "character": 161
+              },
+              "end": {
+                "line": 32,
+                "character": 164
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "wrong",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 32,
+                "character": 247
+              },
+              "end": {
+                "line": 32,
+                "character": 252
+              }
+            }
+          },
+          "containerName": "ladder_check"
+        },
+        {
+          "name": "matched_old_rays",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 37,
+                "character": 0
+              },
+              "end": {
+                "line": 50,
+                "character": 830
+              }
+            }
+          }
+        },
+        {
+          "name": "model",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 37,
+                "character": 21
+              },
+              "end": {
+                "line": 37,
+                "character": 26
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "state",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 37,
+                "character": 27
+              },
+              "end": {
+                "line": 37,
+                "character": 32
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "base",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 37,
+                "character": 33
+              },
+              "end": {
+                "line": 37,
+                "character": 37
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "offbase",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 37,
+                "character": 38
+              },
+              "end": {
+                "line": 37,
+                "character": 45
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "initial",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 37,
+                "character": 46
+              },
+              "end": {
+                "line": 37,
+                "character": 53
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "protocol",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 37,
+                "character": 54
+              },
+              "end": {
+                "line": 37,
+                "character": 62
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "eps",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 38,
+                "character": 4
+              },
+              "end": {
+                "line": 38,
+                "character": 7
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "zero",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 38,
+                "character": 25
+              },
+              "end": {
+                "line": 38,
+                "character": 29
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "T",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 38,
+                "character": 42
+              },
+              "end": {
+                "line": 38,
+                "character": 43
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "legacy",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 38,
+                "character": 48
+              },
+              "end": {
+                "line": 38,
+                "character": 54
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "p6",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 38,
+                "character": 128
+              },
+              "end": {
+                "line": 38,
+                "character": 130
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "initial_shift",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 39,
+                "character": 4
+              },
+              "end": {
+                "line": 39,
+                "character": 17
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "exactlegacy",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 40,
+                "character": 4
+              },
+              "end": {
+                "line": 40,
+                "character": 15
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "record",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 40,
+                "character": 16
+              },
+              "end": {
+                "line": 40,
+                "character": 22
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "offlegacy",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 40,
+                "character": 58
+              },
+              "end": {
+                "line": 40,
+                "character": 67
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "offrecord",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 40,
+                "character": 68
+              },
+              "end": {
+                "line": 40,
+                "character": 77
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "exactfull",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 41,
+                "character": 4
+              },
+              "end": {
+                "line": 41,
+                "character": 13
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "exactoff",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 41,
+                "character": 55
+              },
+              "end": {
+                "line": 41,
+                "character": 63
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "fixed",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 4
+              },
+              "end": {
+                "line": 42,
+                "character": 9
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "oldbase",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 22
+              },
+              "end": {
+                "line": 42,
+                "character": 29
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "oldb",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 30
+              },
+              "end": {
+                "line": 42,
+                "character": 34
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "oldpulse",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 67
+              },
+              "end": {
+                "line": 42,
+                "character": 75
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "oldp",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 76
+              },
+              "end": {
+                "line": 42,
+                "character": 80
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "oldoffbase",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 114
+              },
+              "end": {
+                "line": 42,
+                "character": 124
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "oldob",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 125
+              },
+              "end": {
+                "line": 42,
+                "character": 130
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "oldoffpulse",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 187
+              },
+              "end": {
+                "line": 42,
+                "character": 198
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "oldop",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 199
+              },
+              "end": {
+                "line": 42,
+                "character": 204
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "oldfull",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 43,
+                "character": 4
+              },
+              "end": {
+                "line": 43,
+                "character": 11
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "oldoff",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 43,
+                "character": 53
+              },
+              "end": {
+                "line": 43,
+                "character": 59
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "fullW",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 44,
+                "character": 4
+              },
+              "end": {
+                "line": 44,
+                "character": 9
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "overlap",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 45,
+                "character": 4
+              },
+              "end": {
+                "line": 45,
+                "character": 11
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "physical",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 45,
+                "character": 52
+              },
+              "end": {
+                "line": 45,
+                "character": 60
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 48,
+                "character": 29
+              },
+              "end": {
+                "line": 48,
+                "character": 34
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "rejected",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 48,
+                "character": 35
+              },
+              "end": {
+                "line": 48,
+                "character": 43
+              }
+            }
+          },
+          "containerName": "matched_old_rays"
+        },
+        {
+          "name": "case",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 53,
+                "character": 0
+              },
+              "end": {
+                "line": 70,
+                "character": 22
+              }
+            }
+          }
+        },
+        {
+          "name": "model",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 53,
+                "character": 9
+              },
+              "end": {
+                "line": 53,
+                "character": 14
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "state",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 53,
+                "character": 15
+              },
+              "end": {
+                "line": 53,
+                "character": 20
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "name",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 53,
+                "character": 21
+              },
+              "end": {
+                "line": 53,
+                "character": 25
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "zero",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 4
+              },
+              "end": {
+                "line": 54,
+                "character": 8
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "T",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 21
+              },
+              "end": {
+                "line": 54,
+                "character": 22
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "dt",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 27
+              },
+              "end": {
+                "line": 54,
+                "character": 29
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "initial",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 34
+              },
+              "end": {
+                "line": 54,
+                "character": 41
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "base",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 71
+              },
+              "end": {
+                "line": 54,
+                "character": 75
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "record",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 76
+              },
+              "end": {
+                "line": 54,
+                "character": 82
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "baseline",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 116
+              },
+              "end": {
+                "line": 54,
+                "character": 124
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "off",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 55,
+                "character": 4
+              },
+              "end": {
+                "line": 55,
+                "character": 7
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "offrecord",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 55,
+                "character": 8
+              },
+              "end": {
+                "line": 55,
+                "character": 17
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "offbaseline",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 55,
+                "character": 82
+              },
+              "end": {
+                "line": 55,
+                "character": 93
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "protocols",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 55,
+                "character": 138
+              },
+              "end": {
+                "line": 55,
+                "character": 147
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "raw",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 55,
+                "character": 151
+              },
+              "end": {
+                "line": 55,
+                "character": 154
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "checks",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 55,
+                "character": 216
+              },
+              "end": {
+                "line": 55,
+                "character": 222
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "inc",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 56,
+                "character": 8
+              },
+              "end": {
+                "line": 56,
+                "character": 11
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "out",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 56,
+                "character": 12
+              },
+              "end": {
+                "line": 56,
+                "character": 15
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "eps",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 57,
+                "character": 8
+              },
+              "end": {
+                "line": 57,
+                "character": 11
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "end",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 57,
+                "character": 31
+              },
+              "end": {
+                "line": 57,
+                "character": 34
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "evolve_record",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 57,
+                "character": 35
+              },
+              "end": {
+                "line": 57,
+                "character": 48
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "start",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 57,
+                "character": 81
+              },
+              "end": {
+                "line": 57,
+                "character": 86
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "finish",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 57,
+                "character": 115
+              },
+              "end": {
+                "line": 57,
+                "character": 121
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "offstart",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 57,
+                "character": 147
+              },
+              "end": {
+                "line": 57,
+                "character": 155
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "offend",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 57,
+                "character": 202
+              },
+              "end": {
+                "line": 57,
+                "character": 208
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "full",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 58,
+                "character": 8
+              },
+              "end": {
+                "line": 58,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "offdelta",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 58,
+                "character": 53
+              },
+              "end": {
+                "line": 58,
+                "character": 61
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "difference",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 58,
+                "character": 108
+              },
+              "end": {
+                "line": 58,
+                "character": 118
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "work",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 59,
+                "character": 8
+              },
+              "end": {
+                "line": 59,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "work_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 59,
+                "character": 117
+              },
+              "end": {
+                "line": 59,
+                "character": 127
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "cross_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 60,
+                "character": 8
+              },
+              "end": {
+                "line": 60,
+                "character": 19
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "density_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 60,
+                "character": 102
+              },
+              "end": {
+                "line": 60,
+                "character": 115
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "overlap",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 61,
+                "character": 8
+              },
+              "end": {
+                "line": 61,
+                "character": 15
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "frozen_overlap",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 61,
+                "character": 58
+              },
+              "end": {
+                "line": 61,
+                "character": 72
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "quadrature_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 61,
+                "character": 133
+              },
+              "end": {
+                "line": 61,
+                "character": 149
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "physical",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 61,
+                "character": 196
+              },
+              "end": {
+                "line": 61,
+                "character": 204
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "coefficient",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 61,
+                "character": 268
+              },
+              "end": {
+                "line": 61,
+                "character": 279
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "off_source",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 62,
+                "character": 8
+              },
+              "end": {
+                "line": 62,
+                "character": 18
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "off_H_protocol_difference",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 62,
+                "character": 100
+              },
+              "end": {
+                "line": 62,
+                "character": 125
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "result",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 67,
+                "character": 4
+              },
+              "end": {
+                "line": 67,
+                "character": 10
+              }
+            }
+          },
+          "containerName": "case"
+        },
+        {
+          "name": "main",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 73,
+                "character": 0
+              },
+              "end": {
+                "line": 91,
+                "character": 357
+              }
+            }
+          }
+        },
+        {
+          "name": "started",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 74,
+                "character": 4
+              },
+              "end": {
+                "line": 74,
+                "character": 11
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "p",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 74,
+                "character": 24
+              },
+              "end": {
+                "line": 74,
+                "character": 25
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "reference",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 74,
+                "character": 67
+              },
+              "end": {
+                "line": 74,
+                "character": 76
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "neutral",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 74,
+                "character": 96
+              },
+              "end": {
+                "line": 74,
+                "character": 103
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "modes",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 75,
+                "character": 4
+              },
+              "end": {
+                "line": 75,
+                "character": 9
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "transverse",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 75,
+                "character": 32
+              },
+              "end": {
+                "line": 75,
+                "character": 42
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "result",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 77,
+                "character": 4
+              },
+              "end": {
+                "line": 77,
+                "character": 10
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "neutral_end",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 78,
+                "character": 31
+              },
+              "end": {
+                "line": 78,
+                "character": 42
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "model",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 79,
+                "character": 4
+              },
+              "end": {
+                "line": 79,
+                "character": 9
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "raw",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 79,
+                "character": 29
+              },
+              "end": {
+                "line": 79,
+                "character": 32
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "weight",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 79,
+                "character": 65
+              },
+              "end": {
+                "line": 79,
+                "character": 71
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "own_vs_frozen",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 81,
+                "character": 4
+              },
+              "end": {
+                "line": 81,
+                "character": 17
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "state",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 81,
+                "character": 84
+              },
+              "end": {
+                "line": 81,
+                "character": 89
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "b2",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 83,
+                "character": 4
+              },
+              "end": {
+                "line": 83,
+                "character": 6
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "raw2",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 83,
+                "character": 26
+              },
+              "end": {
+                "line": 83,
+                "character": 30
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "weight2",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 83,
+                "character": 79
+              },
+              "end": {
+                "line": 83,
+                "character": 86
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "state2",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 83,
+                "character": 118
+              },
+              "end": {
+                "line": 83,
+                "character": 124
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "ix",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 83,
+                "character": 147
+              },
+              "end": {
+                "line": 83,
+                "character": 149
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "overlap",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 83,
+                "character": 193
+              },
+              "end": {
+                "line": 83,
+                "character": 200
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "charged_end",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 84,
+                "character": 32
+              },
+              "end": {
+                "line": 84,
+                "character": 43
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "late",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 85,
+                "character": 4
+              },
+              "end": {
+                "line": 85,
+                "character": 8
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "late_pure",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 85,
+                "character": 54
+              },
+              "end": {
+                "line": 85,
+                "character": 63
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "wrong",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 85,
+                "character": 111
+              },
+              "end": {
+                "line": 85,
+                "character": 116
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "T",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 4
+              },
+              "end": {
+                "line": 87,
+                "character": 5
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "tau",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 10
+              },
+              "end": {
+                "line": 87,
+                "character": 13
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "step",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 36
+              },
+              "end": {
+                "line": 87,
+                "character": 40
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "plus",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 45
+              },
+              "end": {
+                "line": 87,
+                "character": 49
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "minus",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 72
+              },
+              "end": {
+                "line": 87,
+                "character": 77
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "center",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 84
+              },
+              "end": {
+                "line": 87,
+                "character": 90
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "hp",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 118
+              },
+              "end": {
+                "line": 87,
+                "character": 120
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "hm",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 153
+              },
+              "end": {
+                "line": 87,
+                "character": 155
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "j",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 189
+              },
+              "end": {
+                "line": 87,
+                "character": 190
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "contact",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 221
+              },
+              "end": {
+                "line": 87,
+                "character": 228
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "pi",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 89,
+                "character": 4
+              },
+              "end": {
+                "line": 89,
+                "character": 6
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "hi",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 89,
+                "character": 36
+              },
+              "end": {
+                "line": 89,
+                "character": 38
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "pidot",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+            "range": {
+              "start": {
+                "line": 89,
+                "character": 66
+              },
+              "end": {
+                "line": 89,
+                "character": 71
+              }
+            }
+          },
+          "containerName": "main"
+        }
+      ]
+    },
+    "definition": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": [
+        {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_picture_20261016_model.py",
+          "range": {
+            "start": {
+              "line": 12,
+              "character": 6
+            },
+            "end": {
+              "line": 12,
+              "character": 11
+            }
+          }
+        }
+      ]
+    },
+    "events": [
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "Pyright language server 1.1.414 starting"
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "Server root directory: file:///home/administrator/.local/lib/node_modules/pyright/dist"
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "capabilities": {
+            "textDocumentSync": 2,
+            "definitionProvider": {
+              "workDoneProgress": true
+            },
+            "declarationProvider": {
+              "workDoneProgress": true
+            },
+            "typeDefinitionProvider": {
+              "workDoneProgress": true
+            },
+            "referencesProvider": {
+              "workDoneProgress": true
+            },
+            "documentSymbolProvider": {
+              "workDoneProgress": true
+            },
+            "workspaceSymbolProvider": {
+              "workDoneProgress": true
+            },
+            "hoverProvider": {
+              "workDoneProgress": true
+            },
+            "documentHighlightProvider": {
+              "workDoneProgress": true
+            },
+            "renameProvider": {
+              "prepareProvider": true,
+              "workDoneProgress": true
+            },
+            "completionProvider": {
+              "triggerCharacters": [
+                ".",
+                "[",
+                "\"",
+                "'"
+              ],
+              "resolveProvider": true,
+              "workDoneProgress": true,
+              "completionItem": {
+                "labelDetailsSupport": true
+              }
+            },
+            "signatureHelpProvider": {
+              "triggerCharacters": [
+                "(",
+                ",",
+                ")"
+              ],
+              "workDoneProgress": true
+            },
+            "codeActionProvider": {
+              "codeActionKinds": [
+                "quickfix",
+                "source.organizeImports"
+              ],
+              "workDoneProgress": true
+            },
+            "executeCommandProvider": {
+              "commands": [],
+              "workDoneProgress": true
+            },
+            "callHierarchyProvider": true,
+            "workspace": {
+              "workspaceFolders": {
+                "supported": true,
+                "changeNotifications": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "Starting service instance \"<default>\""
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "Setting pythonPath for service \"<default>\": \"/home/administrator/substrate-framework/.venv/bin/python\""
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "No include entries specified; assuming /<default workspace root>"
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "Auto-excluding **/node_modules"
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "Auto-excluding **/__pycache__"
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "Auto-excluding **/.*"
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "Auto-excluding **/__editable__.*"
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "Assuming Python version 3.12.3.final.0"
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": [
+          {
+            "name": "ROOT",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 13,
+                  "character": 0
+                },
+                "end": {
+                  "line": 13,
+                  "character": 4
+                }
+              }
+            }
+          },
+          {
+            "name": "P",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 14,
+                  "character": 0
+                },
+                "end": {
+                  "line": 14,
+                  "character": 1
+                }
+              }
+            }
+          },
+          {
+            "name": "save",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 17,
+                  "character": 0
+                },
+                "end": {
+                  "line": 18,
+                  "character": 73
+                }
+              }
+            }
+          },
+          {
+            "name": "result",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 17,
+                  "character": 9
+                },
+                "end": {
+                  "line": 17,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "save"
+          },
+          {
+            "name": "ladder_check",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 0
+                },
+                "end": {
+                  "line": 34,
+                  "character": 287
+                }
+              }
+            }
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 17
+                },
+                "end": {
+                  "line": 21,
+                  "character": 22
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 21,
+                  "character": 23
+                },
+                "end": {
+                  "line": 21,
+                  "character": 28
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "target",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 4
+                },
+                "end": {
+                  "line": 22,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "lookup",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 30
+                },
+                "end": {
+                  "line": 22,
+                  "character": 36
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "e",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 80
+                },
+                "end": {
+                  "line": 22,
+                  "character": 81
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "q",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 127
+                },
+                "end": {
+                  "line": 22,
+                  "character": 128
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "p",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 22,
+                  "character": 176
+                },
+                "end": {
+                  "line": 22,
+                  "character": 177
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "column",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 23,
+                  "character": 8
+                },
+                "end": {
+                  "line": 23,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "label",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 23,
+                  "character": 15
+                },
+                "end": {
+                  "line": 23,
+                  "character": 20
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "axis",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 25,
+                  "character": 12
+                },
+                "end": {
+                  "line": 25,
+                  "character": 16
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "upper",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 26,
+                  "character": 12
+                },
+                "end": {
+                  "line": 26,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "row",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 26,
+                  "character": 45
+                },
+                "end": {
+                  "line": 26,
+                  "character": 48
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "value",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 26,
+                  "character": 70
+                },
+                "end": {
+                  "line": 26,
+                  "character": 75
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "lower",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 28,
+                  "character": 16
+                },
+                "end": {
+                  "line": 28,
+                  "character": 21
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "expected",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 4
+                },
+                "end": {
+                  "line": 29,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "field",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 29,
+                  "character": 84
+                },
+                "end": {
+                  "line": 29,
+                  "character": 89
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "primitive_error",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 30,
+                  "character": 4
+                },
+                "end": {
+                  "line": 30,
+                  "character": 19
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "error",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 4
+                },
+                "end": {
+                  "line": 32,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "timepoint",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 64
+                },
+                "end": {
+                  "line": 32,
+                  "character": 73
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "tau",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 78
+                },
+                "end": {
+                  "line": 32,
+                  "character": 81
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "b",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 127
+                },
+                "end": {
+                  "line": 32,
+                  "character": 128
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "full",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 137
+                },
+                "end": {
+                  "line": 32,
+                  "character": 141
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "cut",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 161
+                },
+                "end": {
+                  "line": 32,
+                  "character": 164
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "wrong",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 32,
+                  "character": 247
+                },
+                "end": {
+                  "line": 32,
+                  "character": 252
+                }
+              }
+            },
+            "containerName": "ladder_check"
+          },
+          {
+            "name": "matched_old_rays",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 37,
+                  "character": 0
+                },
+                "end": {
+                  "line": 50,
+                  "character": 830
+                }
+              }
+            }
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 37,
+                  "character": 21
+                },
+                "end": {
+                  "line": 37,
+                  "character": 26
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 37,
+                  "character": 27
+                },
+                "end": {
+                  "line": 37,
+                  "character": 32
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "base",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 37,
+                  "character": 33
+                },
+                "end": {
+                  "line": 37,
+                  "character": 37
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "offbase",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 37,
+                  "character": 38
+                },
+                "end": {
+                  "line": 37,
+                  "character": 45
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "initial",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 37,
+                  "character": 46
+                },
+                "end": {
+                  "line": 37,
+                  "character": 53
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "protocol",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 37,
+                  "character": 54
+                },
+                "end": {
+                  "line": 37,
+                  "character": 62
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "eps",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 4
+                },
+                "end": {
+                  "line": 38,
+                  "character": 7
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "zero",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 25
+                },
+                "end": {
+                  "line": 38,
+                  "character": 29
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "T",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 42
+                },
+                "end": {
+                  "line": 38,
+                  "character": 43
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "legacy",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 48
+                },
+                "end": {
+                  "line": 38,
+                  "character": 54
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "p6",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 38,
+                  "character": 128
+                },
+                "end": {
+                  "line": 38,
+                  "character": 130
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "initial_shift",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 39,
+                  "character": 4
+                },
+                "end": {
+                  "line": 39,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "exactlegacy",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 40,
+                  "character": 4
+                },
+                "end": {
+                  "line": 40,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "record",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 40,
+                  "character": 16
+                },
+                "end": {
+                  "line": 40,
+                  "character": 22
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "offlegacy",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 40,
+                  "character": 58
+                },
+                "end": {
+                  "line": 40,
+                  "character": 67
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "offrecord",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 40,
+                  "character": 68
+                },
+                "end": {
+                  "line": 40,
+                  "character": 77
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "exactfull",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 41,
+                  "character": 4
+                },
+                "end": {
+                  "line": 41,
+                  "character": 13
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "exactoff",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 41,
+                  "character": 55
+                },
+                "end": {
+                  "line": 41,
+                  "character": 63
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "fixed",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 42,
+                  "character": 4
+                },
+                "end": {
+                  "line": 42,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "oldbase",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 42,
+                  "character": 22
+                },
+                "end": {
+                  "line": 42,
+                  "character": 29
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "oldb",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 42,
+                  "character": 30
+                },
+                "end": {
+                  "line": 42,
+                  "character": 34
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "oldpulse",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 42,
+                  "character": 67
+                },
+                "end": {
+                  "line": 42,
+                  "character": 75
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "oldp",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 42,
+                  "character": 76
+                },
+                "end": {
+                  "line": 42,
+                  "character": 80
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "oldoffbase",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 42,
+                  "character": 114
+                },
+                "end": {
+                  "line": 42,
+                  "character": 124
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "oldob",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 42,
+                  "character": 125
+                },
+                "end": {
+                  "line": 42,
+                  "character": 130
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "oldoffpulse",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 42,
+                  "character": 187
+                },
+                "end": {
+                  "line": 42,
+                  "character": 198
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "oldop",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 42,
+                  "character": 199
+                },
+                "end": {
+                  "line": 42,
+                  "character": 204
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "oldfull",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 43,
+                  "character": 4
+                },
+                "end": {
+                  "line": 43,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "oldoff",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 43,
+                  "character": 53
+                },
+                "end": {
+                  "line": 43,
+                  "character": 59
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "fullW",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 44,
+                  "character": 4
+                },
+                "end": {
+                  "line": 44,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "overlap",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 45,
+                  "character": 4
+                },
+                "end": {
+                  "line": 45,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "physical",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 45,
+                  "character": 52
+                },
+                "end": {
+                  "line": 45,
+                  "character": 60
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "error",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 48,
+                  "character": 29
+                },
+                "end": {
+                  "line": 48,
+                  "character": 34
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "rejected",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 48,
+                  "character": 35
+                },
+                "end": {
+                  "line": 48,
+                  "character": 43
+                }
+              }
+            },
+            "containerName": "matched_old_rays"
+          },
+          {
+            "name": "case",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 53,
+                  "character": 0
+                },
+                "end": {
+                  "line": 70,
+                  "character": 22
+                }
+              }
+            }
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 53,
+                  "character": 9
+                },
+                "end": {
+                  "line": 53,
+                  "character": 14
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 53,
+                  "character": 15
+                },
+                "end": {
+                  "line": 53,
+                  "character": 20
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "name",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 53,
+                  "character": 21
+                },
+                "end": {
+                  "line": 53,
+                  "character": 25
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "zero",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 54,
+                  "character": 4
+                },
+                "end": {
+                  "line": 54,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "T",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 54,
+                  "character": 21
+                },
+                "end": {
+                  "line": 54,
+                  "character": 22
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "dt",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 54,
+                  "character": 27
+                },
+                "end": {
+                  "line": 54,
+                  "character": 29
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "initial",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 54,
+                  "character": 34
+                },
+                "end": {
+                  "line": 54,
+                  "character": 41
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "base",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 54,
+                  "character": 71
+                },
+                "end": {
+                  "line": 54,
+                  "character": 75
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "record",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 54,
+                  "character": 76
+                },
+                "end": {
+                  "line": 54,
+                  "character": 82
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "baseline",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 54,
+                  "character": 116
+                },
+                "end": {
+                  "line": 54,
+                  "character": 124
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "off",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 55,
+                  "character": 4
+                },
+                "end": {
+                  "line": 55,
+                  "character": 7
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "offrecord",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 55,
+                  "character": 8
+                },
+                "end": {
+                  "line": 55,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "offbaseline",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 55,
+                  "character": 82
+                },
+                "end": {
+                  "line": 55,
+                  "character": 93
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "protocols",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 55,
+                  "character": 138
+                },
+                "end": {
+                  "line": 55,
+                  "character": 147
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "raw",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 55,
+                  "character": 151
+                },
+                "end": {
+                  "line": 55,
+                  "character": 154
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "checks",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 55,
+                  "character": 216
+                },
+                "end": {
+                  "line": 55,
+                  "character": 222
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "inc",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 56,
+                  "character": 8
+                },
+                "end": {
+                  "line": 56,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "out",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 56,
+                  "character": 12
+                },
+                "end": {
+                  "line": 56,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "eps",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 57,
+                  "character": 8
+                },
+                "end": {
+                  "line": 57,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "end",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 57,
+                  "character": 31
+                },
+                "end": {
+                  "line": 57,
+                  "character": 34
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "evolve_record",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 57,
+                  "character": 35
+                },
+                "end": {
+                  "line": 57,
+                  "character": 48
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "start",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 57,
+                  "character": 81
+                },
+                "end": {
+                  "line": 57,
+                  "character": 86
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "finish",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 57,
+                  "character": 115
+                },
+                "end": {
+                  "line": 57,
+                  "character": 121
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "offstart",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 57,
+                  "character": 147
+                },
+                "end": {
+                  "line": 57,
+                  "character": 155
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "offend",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 57,
+                  "character": 202
+                },
+                "end": {
+                  "line": 57,
+                  "character": 208
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "full",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 58,
+                  "character": 8
+                },
+                "end": {
+                  "line": 58,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "offdelta",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 58,
+                  "character": 53
+                },
+                "end": {
+                  "line": 58,
+                  "character": 61
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "difference",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 58,
+                  "character": 108
+                },
+                "end": {
+                  "line": 58,
+                  "character": 118
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "work",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 59,
+                  "character": 8
+                },
+                "end": {
+                  "line": 59,
+                  "character": 12
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "work_error",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 59,
+                  "character": 117
+                },
+                "end": {
+                  "line": 59,
+                  "character": 127
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "cross_error",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 60,
+                  "character": 8
+                },
+                "end": {
+                  "line": 60,
+                  "character": 19
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "density_error",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 60,
+                  "character": 102
+                },
+                "end": {
+                  "line": 60,
+                  "character": 115
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "overlap",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 61,
+                  "character": 8
+                },
+                "end": {
+                  "line": 61,
+                  "character": 15
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "frozen_overlap",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 61,
+                  "character": 58
+                },
+                "end": {
+                  "line": 61,
+                  "character": 72
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "quadrature_error",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 61,
+                  "character": 133
+                },
+                "end": {
+                  "line": 61,
+                  "character": 149
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "physical",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 61,
+                  "character": 196
+                },
+                "end": {
+                  "line": 61,
+                  "character": 204
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "coefficient",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 61,
+                  "character": 268
+                },
+                "end": {
+                  "line": 61,
+                  "character": 279
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "off_source",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 62,
+                  "character": 8
+                },
+                "end": {
+                  "line": 62,
+                  "character": 18
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "off_H_protocol_difference",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 62,
+                  "character": 100
+                },
+                "end": {
+                  "line": 62,
+                  "character": 125
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "result",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 67,
+                  "character": 4
+                },
+                "end": {
+                  "line": 67,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "case"
+          },
+          {
+            "name": "main",
+            "kind": 12,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 73,
+                  "character": 0
+                },
+                "end": {
+                  "line": 91,
+                  "character": 357
+                }
+              }
+            }
+          },
+          {
+            "name": "started",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 74,
+                  "character": 4
+                },
+                "end": {
+                  "line": 74,
+                  "character": 11
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "p",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 74,
+                  "character": 24
+                },
+                "end": {
+                  "line": 74,
+                  "character": 25
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "reference",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 74,
+                  "character": 67
+                },
+                "end": {
+                  "line": 74,
+                  "character": 76
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "neutral",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 74,
+                  "character": 96
+                },
+                "end": {
+                  "line": 74,
+                  "character": 103
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "modes",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 75,
+                  "character": 4
+                },
+                "end": {
+                  "line": 75,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "transverse",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 75,
+                  "character": 32
+                },
+                "end": {
+                  "line": 75,
+                  "character": 42
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "result",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 77,
+                  "character": 4
+                },
+                "end": {
+                  "line": 77,
+                  "character": 10
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "neutral_end",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 78,
+                  "character": 31
+                },
+                "end": {
+                  "line": 78,
+                  "character": 42
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "model",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 79,
+                  "character": 4
+                },
+                "end": {
+                  "line": 79,
+                  "character": 9
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "raw",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 79,
+                  "character": 29
+                },
+                "end": {
+                  "line": 79,
+                  "character": 32
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "weight",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 79,
+                  "character": 65
+                },
+                "end": {
+                  "line": 79,
+                  "character": 71
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "own_vs_frozen",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 81,
+                  "character": 4
+                },
+                "end": {
+                  "line": 81,
+                  "character": 17
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "state",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 81,
+                  "character": 84
+                },
+                "end": {
+                  "line": 81,
+                  "character": 89
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "b2",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 83,
+                  "character": 4
+                },
+                "end": {
+                  "line": 83,
+                  "character": 6
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "raw2",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 83,
+                  "character": 26
+                },
+                "end": {
+                  "line": 83,
+                  "character": 30
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "weight2",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 83,
+                  "character": 79
+                },
+                "end": {
+                  "line": 83,
+                  "character": 86
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "state2",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 83,
+                  "character": 118
+                },
+                "end": {
+                  "line": 83,
+                  "character": 124
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "ix",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 83,
+                  "character": 147
+                },
+                "end": {
+                  "line": 83,
+                  "character": 149
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "overlap",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 83,
+                  "character": 193
+                },
+                "end": {
+                  "line": 83,
+                  "character": 200
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "charged_end",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 84,
+                  "character": 32
+                },
+                "end": {
+                  "line": 84,
+                  "character": 43
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "late",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 85,
+                  "character": 4
+                },
+                "end": {
+                  "line": 85,
+                  "character": 8
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "late_pure",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 85,
+                  "character": 54
+                },
+                "end": {
+                  "line": 85,
+                  "character": 63
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "wrong",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 85,
+                  "character": 111
+                },
+                "end": {
+                  "line": 85,
+                  "character": 116
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "T",
+            "kind": 14,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 4
+                },
+                "end": {
+                  "line": 87,
+                  "character": 5
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "tau",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 10
+                },
+                "end": {
+                  "line": 87,
+                  "character": 13
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "step",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 36
+                },
+                "end": {
+                  "line": 87,
+                  "character": 40
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "plus",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 45
+                },
+                "end": {
+                  "line": 87,
+                  "character": 49
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "minus",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 72
+                },
+                "end": {
+                  "line": 87,
+                  "character": 77
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "center",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 84
+                },
+                "end": {
+                  "line": 87,
+                  "character": 90
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "hp",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 118
+                },
+                "end": {
+                  "line": 87,
+                  "character": 120
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "hm",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 153
+                },
+                "end": {
+                  "line": 87,
+                  "character": 155
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "j",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 189
+                },
+                "end": {
+                  "line": 87,
+                  "character": 190
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "contact",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 87,
+                  "character": 221
+                },
+                "end": {
+                  "line": 87,
+                  "character": 228
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "pi",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 89,
+                  "character": 4
+                },
+                "end": {
+                  "line": 89,
+                  "character": 6
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "hi",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 89,
+                  "character": 36
+                },
+                "end": {
+                  "line": 89,
+                  "character": 38
+                }
+              }
+            },
+            "containerName": "main"
+          },
+          {
+            "name": "pidot",
+            "kind": 13,
+            "location": {
+              "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+              "range": {
+                "start": {
+                  "line": 89,
+                  "character": 66
+                },
+                "end": {
+                  "line": 89,
+                  "character": 71
+                }
+              }
+            },
+            "containerName": "main"
+          }
+        ]
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 1,
+          "message": "File or directory \"/<default workspace root>\" does not exist."
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "No source files found."
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "[FG] Long operation: checking: file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py (18749ms)"
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "window/logMessage",
+        "params": {
+          "type": 3,
+          "message": "[FG] Long operation: analyzing: file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py (18753ms)"
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "method": "textDocument/publishDiagnostics",
+        "params": {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py",
+          "version": 1,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 50,
+                  "character": 488
+                },
+                "end": {
+                  "line": 50,
+                  "character": 496
+                }
+              },
+              "message": "\"rejected\" is possibly unbound",
+              "severity": 1,
+              "code": "reportPossiblyUnboundVariable",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportPossiblyUnboundVariable"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 65,
+                  "character": 515
+                },
+                "end": {
+                  "line": 65,
+                  "character": 535
+                }
+              },
+              "message": "Operator \"-\" not supported for types \"numpy.bool[builtins.bool]\" and \"numpy.bool[builtins.bool]\"",
+              "severity": 1,
+              "code": "reportOperatorIssue",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportOperatorIssue"
+              }
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 69,
+                  "character": 56
+                },
+                "end": {
+                  "line": 69,
+                  "character": 59
+                }
+              },
+              "message": "Argument of type \"Unknown | NDArray[Any]\" cannot be assigned to parameter \"allow_pickle\" of type \"bool\" in function \"savez_compressed\"\n\u00a0\u00a0Type \"Unknown | NDArray[Any]\" is not assignable to type \"bool\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"bool\"",
+              "severity": 1,
+              "code": "reportArgumentType",
+              "source": "Pyright",
+              "codeDescription": {
+                "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_picture_20261016_model.py",
+            "range": {
+              "start": {
+                "line": 12,
+                "character": 6
+              },
+              "end": {
+                "line": 12,
+                "character": 11
+              }
+            }
+          }
+        ]
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "result": null
+      }
+    ],
+    "natural_exit": 0
+  },
+  "positive_AST": {
+    "rich_exact_electric_review_20261016_capture.py": [
+      {
+        "name": "digest",
+        "line": 17
+      },
+      {
+        "name": "dependencies",
+        "line": 24
+      },
+      {
+        "name": "main",
+        "line": 34
+      }
+    ],
+    "rich_exact_electric_review_20261016_consume.py": [
+      {
+        "name": "save",
+        "line": 18
+      },
+      {
+        "name": "ladder_check",
+        "line": 22
+      },
+      {
+        "name": "matched_old_rays",
+        "line": 38
+      },
+      {
+        "name": "case",
+        "line": 54
+      },
+      {
+        "name": "main",
+        "line": 74
+      }
+    ],
+    "rich_exact_electric_review_20261016_deliver.py": [
+      {
+        "name": "digest",
+        "line": 10
+      },
+      {
+        "name": "main",
+        "line": 17
+      }
+    ],
+    "rich_exact_electric_review_20261016_images.py": [
+      {
+        "name": "main",
+        "line": 14
+      }
+    ],
+    "rich_exact_electric_review_20261016_language.py": [
+      {
+        "name": "editor",
+        "line": 15
+      },
+      {
+        "name": "main",
+        "line": 50
+      },
+      {
+        "name": "receive",
+        "line": 18
+      },
+      {
+        "name": "send",
+        "line": 28
+      },
+      {
+        "name": "response",
+        "line": 32
+      }
+    ],
+    "rich_exact_electric_review_20261016_tools.py": [
+      {
+        "name": "neutral_state",
+        "line": 12
+      },
+      {
+        "name": "canonical_car",
+        "line": 20
+      },
+      {
+        "name": "source",
+        "line": 30
+      },
+      {
+        "name": "arnoldi",
+        "line": 46
+      },
+      {
+        "name": "propagate",
+        "line": 65
+      },
+      {
+        "name": "field_overlap_matrix",
+        "line": 72
+      },
+      {
+        "name": "observe",
+        "line": 84
+      },
+      {
+        "name": "temporal",
+        "line": 96
+      }
+    ]
+  }
+}

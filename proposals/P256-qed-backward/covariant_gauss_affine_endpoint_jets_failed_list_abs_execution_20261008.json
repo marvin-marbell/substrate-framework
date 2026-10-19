@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "covariant_gauss_affine_endpoint_jets.py",
+    "--output",
+    "covariant_gauss_affine_endpoint_jets_capsule_20261008.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "natural_exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/covariant_gauss_affine_endpoint_jets.py\", line 209, in <module>\n    main()\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/covariant_gauss_affine_endpoint_jets.py\", line 201, in main\n    started=time.monotonic();result=run();result['runtime_seconds']=time.monotonic()-started\n                                    ^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/covariant_gauss_affine_endpoint_jets.py\", line 169, in run\n    dressing=native_dressing_control()\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/covariant_gauss_affine_endpoint_jets.py\", line 125, in native_dressing_control\n    physical_Ref_hole_channels=4,largest_retained_transverse_density_connection=float(np.max(abs(connection)))))\n                                                                                             ^^^^^^^^^^^^^^^\nTypeError: bad operand type for abs(): 'list'\n",
+  "scientific_result_admitted": false,
+  "reason": "Final native reporting applied abs to a list; fixed to numpy abs with explicit array. No source or physical kernel changed."
+}

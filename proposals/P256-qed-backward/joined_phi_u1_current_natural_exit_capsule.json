@@ -1,0 +1,67 @@
+{
+  "scope": "NEW joined fullN4/meanPhi/full129 U1/full64chargedHC initial current/contact and retarded first moments for the shared body preparation; originalSOURCE/CURRENT427 unchanged",
+  "governing_plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "assignment_revision": "944a367c79e90d22207696f47a944bbaf062720e24559f0b4b21c823e04f2402",
+  "latest_parent_revision_notified": "8b9b84910e9c501ea14923ad4ce9a2c4de10d456a9843a90006a4cb984082bc0",
+  "natural_exits": [
+    {
+      "command": "/home/administrator/substrate-framework/.venv/bin/python joined_phi_u1_current_moments.py --output joined_phi_u1_current_moments_receipt.json",
+      "exit_code": 0,
+      "wall_seconds": 133.75,
+      "science_elapsed_seconds": 130.79426797400083,
+      "receipt": "joined_phi_u1_current_moments_receipt.json",
+      "receipt_sha256": "d267a425e63be09c39200743ea75a2efec5d339f4387483507d42fe21688ec3a",
+      "source_sha256": "dae823744522b4bd5f540a0e7e906135876bb57ed772f3b6849caa64ed3ed89f",
+      "matrix_capsule": "joined_phi_u1_current_moments_receipt.npz",
+      "matrix_capsule_sha256": "e9e6b945e3d9a211d7aed24c4470bce6b2e9d0cdb34c6006e54c76612538a8c4"
+    },
+    {
+      "command": "/home/administrator/substrate-framework/.venv/bin/python joined_phi_u1_current_controls.py --output joined_phi_u1_current_controls_receipt.json",
+      "exit_code": 0,
+      "science_elapsed_seconds": 17.862200520001352,
+      "receipt": "joined_phi_u1_current_controls_receipt.json",
+      "receipt_sha256": "6ef9082e93bbe35ca7497dd10d40ba107495a00b544f8da1e2698a516a96f6d0",
+      "source_sha256": "d01bf2f8aedc498db48f6a5a720f2a48550cd65d33e4fc48b3433e7cad24e723",
+      "matrix_capsule": "joined_phi_u1_current_controls_receipt.npz",
+      "matrix_capsule_sha256": "e95af42965ff9e334c372b9497fb2eefab47ea7754a2f9da86484c28faceaa67"
+    }
+  ],
+  "language_receipt": {
+    "path": "joined_phi_u1_current_language_receipt.json",
+    "sha256": "f106b9a36901d79e1db9cbcd8a0b1e7fd26cdba760f5bf017503ec1bdc2d5f7d",
+    "selected_files": 2,
+    "natural_exit": 0
+  },
+  "complete_coordinate_deliverable": "Both background and raw fourRef source have complete129 current vector and129x129 contact, second, covariance, commutator, F_Pi, F_HC, F_matter, totalF, initial/first retarded matrices. Complete192 link counterparts retained. Source K first/second derivative columns have129x256x4 and129x129x256x4 shapes. Complete factored operator jets retain all768 signed path q129/k192, endpoints, both active/aux4x4 blocks and onsite, lengths, with explicit full129 derivative ABI. No selected entries substituted.",
+  "observed_values": {
+    "raw_source_norm_squared": 0.5,
+    "Ward_all_ordered_paths_operator_defect": 0.0,
+    "Pi_drop_F_frobenius": 112348239.7814984,
+    "HC_drop_F_frobenius": 22387679.68114196,
+    "contact_drop_frobenius": 2339.0692912840304,
+    "wrong_aux_load_covariance_frobenius": 1249150.0995283125,
+    "wrong_aux_load_HC_frobenius": 22311722.246201,
+    "independent_Theta_second_defect": 1161358.2371131242,
+    "two_link_initial_contact_frobenius_BLIND": 7.871109105830612e-14,
+    "independent_nonzeroTheta_two_link_operator_jet_discriminator": 5.162150992608969,
+    "wrong_generator_charge4_contact_discriminator": 34.30683904729081,
+    "actual_collapsed_single_Slater_projector_defect": 0.35834528254587805,
+    "finite_CAR_source_HC_oracle_defect": 1.1448561260998396e-12,
+    "finite_CAR_omitted_Ref_density_defect": 11.313708498984761
+  },
+  "retained_blind_probes": [
+    "Actual all129 initial two-link contact contribution is numerically blind; positive discrimination is separate nonzeroTheta microscopic jet, NOT that contact projection.",
+    "Parent wrong two-link first source moment projection remains blind; primitive character and microscopic jet provide separate controls.",
+    "Background/raw source equal-time mean current and commutator are floating nearzero (current norms8.45e-13/4.24e-13, commutator norms2.12e-10/1.06e-10); NOT exact zero certificates, NOT evidence of zero dynamical Pi/HC response."
+  ],
+  "corrections": [
+    "First implementation used opposite native D orientation; actual path identity defect2 corrected to Dk=delta_x-delta_y, then final Ward path defect0.",
+    "Second attempted full run computed all four source channels then an invalid assertion treated blind initial two-link contact as required positive. Final consumer retains blindness explicitly, independent microscopic control naturally exits positively."
+  ],
+  "evidence_levels": {
+    "exact_derived": "Initial CAR source four-channel mixture, active/63aux contractions, sharedTheta finite Fourier characteristic, Pi integration-by-parts and fullHC doublecommutator identities, Ward/contact path identity with explicit units/signs",
+    "floating_observed": "All matrices and controls, finite8-orbital CAR oracle and Gaussian80-node oracle; no interval enclosure",
+    "conditional": "Pinned root/Clifford/meanPhi supplier hypotheses inherited from body inputs; no automatic compactPhi source or ground admission"
+  },
+  "remaining_debts": ["Finite-time nonstationary current kernel and higher-moment remainder", "Photon pole/dispersion and integrability", "Body/compactPhi joined ground and current-transfer admission", "Commoncone/electron photon explanatory closure; originalSOURCE/CURRENT427 unchanged"]
+}

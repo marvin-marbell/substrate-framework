@@ -1,0 +1,68 @@
+{
+  "status": "natural_exit_actual_midpoint_directional_shadow_contact",
+  "rows": [
+    {
+      "load": 1,
+      "delta": 0.0001,
+      "contact_prediction_Frobenius_norm": 128.89886872164803,
+      "measured_scaled_defect_Frobenius_norm": 128.68499533376192,
+      "relative_contact_prediction_error": 0.003938861741642654,
+      "wrong_omitted_contact_scaled_defect": 128.68499533376192,
+      "quadrature24_32_scaled_defect_difference": 6.70280147545133e-07
+    },
+    {
+      "load": 1,
+      "delta": 5e-05,
+      "contact_prediction_Frobenius_norm": 128.89886872164803,
+      "measured_scaled_defect_Frobenius_norm": 128.79151429421597,
+      "relative_contact_prediction_error": 0.0019715714848970553,
+      "wrong_omitted_contact_scaled_defect": 128.79151429421597,
+      "quadrature24_32_scaled_defect_difference": 2.4787569736630726e-06
+    },
+    {
+      "load": 1,
+      "delta": 2.5e-05,
+      "contact_prediction_Frobenius_norm": 128.89886872164803,
+      "measured_scaled_defect_Frobenius_norm": 128.84508497146328,
+      "relative_contact_prediction_error": 0.0009863361868854604,
+      "wrong_omitted_contact_scaled_defect": 128.84508497146328,
+      "quadrature24_32_scaled_defect_difference": 9.884414258254094e-06
+    },
+    {
+      "load": 63,
+      "delta": 0.0001,
+      "contact_prediction_Frobenius_norm": 128.89886872164803,
+      "measured_scaled_defect_Frobenius_norm": 128.68507313652643,
+      "relative_contact_prediction_error": 0.004017390136885404,
+      "wrong_omitted_contact_scaled_defect": 128.68507313652643,
+      "quadrature24_32_scaled_defect_difference": 6.608734633533557e-07
+    },
+    {
+      "load": 63,
+      "delta": 5e-05,
+      "contact_prediction_Frobenius_norm": 128.89886872164803,
+      "measured_scaled_defect_Frobenius_norm": 128.7915338193464,
+      "relative_contact_prediction_error": 0.0020108911864776097,
+      "wrong_omitted_contact_scaled_defect": 128.7915338193464,
+      "quadrature24_32_scaled_defect_difference": 2.4588832311993125e-06
+    },
+    {
+      "load": 63,
+      "delta": 2.5e-05,
+      "contact_prediction_Frobenius_norm": 128.89886872164803,
+      "measured_scaled_defect_Frobenius_norm": 128.84509061683804,
+      "relative_contact_prediction_error": 0.001005996745773036,
+      "wrong_omitted_contact_scaled_defect": 128.84509061683804,
+      "quadrature24_32_scaled_defect_difference": 1.0363691321401411e-05
+    }
+  ],
+  "operator_derivation": "T=-uDeltaXi and Xi-independent C. Midpointkernel exp(-delta h((x+y)/2)/2) exp(-deltaC) exp(-delta h((x+y)/2)/2) timesheat gives Tmid=I-deltaH+delta\u00b2H\u00b2/2+u delta\u00b2(DeltaXi h)/4+O(delta\u00b3) onthecommon smoothcore; trueendpointStrang hasnoO(delta\u00b2)contactdefect. Thus formalnumericalshadowHmid=H-u delta DeltaXi h/4+O(delta\u00b2), NOT a newphysicalHamiltonian/counterterm. No missingcontact subtractedfromphotonresponse.",
+  "actual_discriminator": "ONEunitcoexactdirection f_y atactualnativeN2 sourcehistory0 midpoint, actualPhi/Peierls matter_hamiltonian and actualfullone/two-link path_derivative. 24/32GaussHermite evaluatesT-h primitivekernel onconstantlocalonebodytestsection toverifyu/4 directionalcontact coefficient. Thisseparatesnumericalmidpointartifact fromphysicalcoupledCoulombfeedback; fullC isnotreplacedbyC0 inanycampaignsupplier.",
+  "scope": "Primitive directional numericalerrorcontrol ONLY, notthefullinteractingphotonpropagator, chargedenergy, macro/continuumlimit, stationarity orpole. SAMElaw/source/clock; sourceallflatCAR/Coul calculationsretainedinactual8/16/32andendpointconsumers.",
+  "core_sha256": "61872b21fa809dc51fe5b230ec768a7643fbaa7007f1f5dec7ea41e7439dcd26",
+  "chain_sha256": "4e169dd910f457426287d8cc50b3876688bf9abe6391e071a5400795f3c5c2cd",
+  "script_snapshot": "#!/usr/bin/env python3\n\"\"\"Directional short-step contact defect of arithmetic-midpoint FK.\n\nA primitive one-body T-h kernel discriminator, NOT a replacement of full\nCoulomb/CAR/field dynamics. The general operator derivation retains C:\nC is Xi-independent and commutes T in this frozen canonical basis.\n\"\"\"\nfrom __future__ import annotations\nimport os\nfor key in ('OPENBLAS_NUM_THREADS', 'OMP_NUM_THREADS', 'MKL_NUM_THREADS'):\n    os.environ[key] = '1'\nimport importlib.util\nimport hashlib\nimport json\nfrom pathlib import Path\nimport time\nfrom typing import Any\nimport numpy as np\n\nP = Path('/home/administrator/substrate-222/proposals/P256-qed-backward')\nCORE_PATH = Path('/tmp/induced-endpoint-native-transfer.py')\n\n\ndef exponential(h: np.ndarray, coefficient: float) -> np.ndarray:\n    values, vectors = np.linalg.eigh(h)\n    return (vectors*np.exp(-coefficient*values))@vectors.conj().T\n\n\ndef primitive_kernel(core: Any, profile: dict[str, Any], theta: np.ndarray, f: np.ndarray, delta: float, quadrature: int) -> tuple[np.ndarray, np.ndarray]:\n    nodes, weights = np.polynomial.hermite.hermgauss(quadrature)\n    h = core.basis.fine_module.matter_hamiltonian\n    A0 = exponential(h(core.native, profile, theta), delta/2)\n    midpoint, endpoint = np.zeros_like(A0), np.zeros_like(A0)\n    for node, weight in zip(nodes, weights/np.sqrt(np.pi)):\n        displacement = np.sqrt(4*core.fine.u*delta)*node*f\n        midpoint += weight*exponential(h(core.native, profile, theta+displacement/2), delta)\n        endpoint += weight*(A0@exponential(h(core.native, profile, theta+displacement), delta/2))\n    return midpoint, endpoint\n\n\ndef main() -> None:\n    started = time.monotonic()\n    source = CORE_PATH.read_bytes()\n    spec = importlib.util.spec_from_file_location('actual_endpoint_shadow_core', CORE_PATH)\n    if spec is None or spec.loader is None:\n        raise RuntimeError('Actual endpoint core unavailable')\n    module = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(module)\n    core = module.EndpointTransfer()\n    chain_path = P/'induced_neutral_hmc_chain_20261021_receipt.json'\n    chain_raw = chain_path.read_bytes()\n    chain = json.loads(chain_raw)\n    noise = core.fine.unpack(np.asarray(chain['latent_samples'][0]))\n    coordinates, _ = core.fine.coordinates(.016, 8, noise)\n    theta = core.native['Q']@coordinates[4]\n    f = core.fine.probes[0]\n    rows = []\n    for profile in core.native['Pprofiles']:\n        C = core.basis.fine_module.path_derivative(core.native, profile, theta, f, 2)\n        prediction = core.fine.u*C/4\n        scale = float(np.linalg.norm(prediction, 'fro'))\n        relative = []\n        for delta in (.0001, .00005, .000025):\n            mid, end = primitive_kernel(core, profile, theta, f, delta, 32)\n            mid24, end24 = primitive_kernel(core, profile, theta, f, delta, 24)\n            measured = (mid-end)/delta**2\n            error = float(np.linalg.norm(measured-prediction, 'fro')/scale)\n            wrong_missing = float(np.linalg.norm(measured, 'fro'))\n            relative.append(error)\n            rows.append({'load': profile['load'], 'delta': delta, 'contact_prediction_Frobenius_norm': scale,\n                         'measured_scaled_defect_Frobenius_norm': wrong_missing, 'relative_contact_prediction_error': error,\n                         'wrong_omitted_contact_scaled_defect': wrong_missing,\n                         'quadrature24_32_scaled_defect_difference': float(np.linalg.norm(((mid24-end24)-(mid-end))/delta**2, 'fro'))})\n        if not relative[2] < relative[1] < relative[0] or relative[2] > .03 or scale < 1:\n            raise ArithmeticError('Actual Brownian contact shadow prediction/adverse failed')\n    core.assert_frozen()\n    if CORE_PATH.read_bytes() != source or chain_path.read_bytes() != chain_raw:\n        raise RuntimeError('Frozen scientific source changed')\n    report = {'status': 'natural_exit_actual_midpoint_directional_shadow_contact', 'rows': rows,\n              'operator_derivation': 'T=-uDeltaXi and Xi-independent C. Midpointkernel exp(-delta h((x+y)/2)/2) exp(-deltaC) exp(-delta h((x+y)/2)/2) timesheat gives Tmid=I-deltaH+delta\u00b2H\u00b2/2+u delta\u00b2(DeltaXi h)/4+O(delta\u00b3) onthecommon smoothcore; trueendpointStrang hasnoO(delta\u00b2)contactdefect. Thus formalnumericalshadowHmid=H-u delta DeltaXi h/4+O(delta\u00b2), NOT a newphysicalHamiltonian/counterterm. No missingcontact subtractedfromphotonresponse.',\n              'actual_discriminator': 'ONEunitcoexactdirection f_y atactualnativeN2 sourcehistory0 midpoint, actualPhi/Peierls matter_hamiltonian and actualfullone/two-link path_derivative. 24/32GaussHermite evaluatesT-h primitivekernel onconstantlocalonebodytestsection toverifyu/4 directionalcontact coefficient. Thisseparatesnumericalmidpointartifact fromphysicalcoupledCoulombfeedback; fullC isnotreplacedbyC0 inanycampaignsupplier.',\n              'scope': 'Primitive directional numericalerrorcontrol ONLY, notthefullinteractingphotonpropagator, chargedenergy, macro/continuumlimit, stationarity orpole. SAMElaw/source/clock; sourceallflatCAR/Coul calculationsretainedinactual8/16/32andendpointconsumers.',\n              'core_sha256': hashlib.sha256(source).hexdigest(), 'chain_sha256': hashlib.sha256(chain_raw).hexdigest(),\n              'script_snapshot': Path(__file__).read_text(), 'scientific_execution_epoch': '03b34911221ba1898315373edaa7c4c3bcac718462e7fe51a842560eb6933f87',\n              'formal_contract_read_revision': '6ebc34a912158254456c535bd10259fca04201b14f446a778bba68d5ef63ecf2', 'elapsed_seconds': time.monotonic()-started}\n    out = P/'induced_midpoint_shadow_contact_receipt.json'\n    out.write_text(json.dumps(report, indent=2, allow_nan=False)+'\\n')\n    print(json.dumps(rows, indent=2), flush=True)\n    print('Natural exit:', out, 'SHA', hashlib.sha256(out.read_bytes()).hexdigest(), 'elapsed', report['elapsed_seconds'], flush=True)\n\n\nif __name__ == '__main__':\n    main()\n",
+  "scientific_execution_epoch": "03b34911221ba1898315373edaa7c4c3bcac718462e7fe51a842560eb6933f87",
+  "formal_contract_read_revision": "6ebc34a912158254456c535bd10259fca04201b14f446a778bba68d5ef63ecf2",
+  "elapsed_seconds": 2.4330866439267993
+}

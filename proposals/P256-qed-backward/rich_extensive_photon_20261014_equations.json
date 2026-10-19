@@ -1,0 +1,35 @@
+{
+  "model": "Correlated tetrahedral molecular medium with a primitive electric-only transverse field",
+  "physical_mechanism": "Three noncoplanar independent Hubbard loops in each tetrahedron respond to magnetic flux of the spatial Peierls connection. Their fully correlated virtual current transitions and diamagnetic contact generate transverse restoring forces; density, rather than a few-molecule global profile, sets their extensive coefficient. Quantum transverse variance feeds back into molecular hopping, correlated state, current/contact and subsequent mixed field spectrum.",
+  "whole_law": [
+    "H = integral d^3x Pi_T(x)^2/(2 epsilon) + H_L[rho] + sum_R [U sum_i n_Ri_up n_Ri_down + sum_i v_i n_Ri - t sum_<ij>,s (exp(i e integral_rRi^rRj A_T.dl) c_Rj,s^dagger c_Ri,s + h.c.)].",
+    "H_L = (1/(2 epsilon V_total)) sum_k!=0 exp(-r_c^2 k^2) rho_k^dagger rho_k/k^2. rho_k=e sum_Ri (n_Ri-1/2) exp(i k.r_Ri). Four +1/2 ionic charges and two electrons make every molecular cell exactly neutral. The k cutoff is part of the explicitly regulated longitudinal law, not a transverse Maxwell kernel.",
+    "N_sources=M, V_total=M v_cell, n_source=1/v_cell, n_independent_cycles=3/v_cell. Matter per molecule is the complete Nup=Ndown=1 sector of four spinful sites (16 states), with no single-particle/free-Dirac polarization substitution.",
+    "A_T(x) = sum_q,lambda e_lambda(q) f_q(x) Q_q,lambda/sqrt(epsilon V_total), f=sqrt(2) sin(q.x) or sqrt(2) cos(q.x), integral f_q f_q'=V_total delta_qq'. e_lambda.q=0, e_1.e_2=0. E_T=-sum f e P/sqrt(epsilon V_total). Then actual electric energy is sum P^2/2. There is NO bare B^2, A^2, oscillator frequency or fitted q-dependent coupling.",
+    "b_ij,lambda(q,phase)=sqrt(2) e_lambda.(r_j-r_i) sinc(q.(r_j-r_i)/2) cos(q.(r_i+r_j)/2+phase). beta=e b/sqrt(epsilon V_total). Every q dependence comes from this exact line integral, not chosen coupling.",
+    "Finite actual consumer: retain one common reciprocal q=(0,0,2 pi m/Lz), BOTH transverse polarizations and sine quadrature, H=P1^2/2+P2^2/2+H_m(beta.Q). Q has Dirichlet walls and finite-difference P^2, all states diagonalized. The two fields couple to the SAME full correlated molecule and one actual joint state."
+  ],
+  "current_contact_Ward": [
+    "J_a=-partial H/partial Q_a = i t sum_b beta_ba (exp(i beta_b.Q) T_b - h.c.). C_ab=partial^2 H/partial Q_a partial Q_b=t sum_b beta_ba beta_bb (exp(i beta_b.Q) T_b+h.c.).",
+    "Full retarded X_ab(z)=sum_n!=0 [<0|O_a|n><n|O_b|0>/(z-Delta_n)-<0|O_b|n><n|O_a|0>/(z+Delta_n)]. Every retained eigenstate and BOTH frequency signs are included. Static induction K=C-2 sum Re(J_0n J_n0)/Delta. O=Q yields own D and field residues; O=J yields actual matter response in the joint ground.",
+    "Uniform A on finite molecular edges is a pure gauge: C(0)-2 sum Re(J_0n J_n0)/Delta=0. Exact bond-density continuity is checked at a nonzero field point. These are charge-current Ward identities, not Noether-spin tests."
+  ],
+  "named_bulk_approximation": [
+    "Self-consistent Gaussian Debye-Waller / correlated-cluster RPA, not an exact thermodynamic solution. Full global H_L is approximated by neutral-cell periodic impurity boundary data; connected intercell longitudinal correlations are omitted. The same complete correlated 16-state impurity owns all currents/contact and every update.",
+    "For each physical 3D q and phase sample theta in {0,pi/2,pi,3pi/2}, diagonalize H_m[d_b] with hopping t d_b. Use its ALL 15 virtual states with beta=e b sqrt(n_source/epsilon). Phase weights1/4 represent the extensive phase average; these are not extra charges, duplicate physical oscillators or an external bath.",
+    "For the existing correlated transitions Delta_n, the mixed dynamical matrix has K_AA=<C>, K_An=sqrt(2 Delta_n) Im<J_n0> (with phase sqrt weights), K_nm=Delta_n^2 delta_nm. Its two low field-bearing branches and residues are the correlated signed-Lehmann RPA D. These transition auxiliaries encode both signs, not supplied bare field oscillators.",
+    "D covariance C_Q(q)=sum_j u_Aj u_Aj^T/(2 Omega_j). sigma_b^2=(e^2/epsilon) integral d^3q/(2pi)^3 average_theta[b_b(q,theta)^T C_Q(q) b_b(q,theta)]. d_b=exp(-sigma_b^2/2). Return d_b into ALL molecular hoppings; recompute correlated state, energies, full current/contact and own D until convergence. Mode energies AND residues, not an external chi or bath, determine the reaction-field variance.",
+    "This closure counts each molecule's transitions once with phase weights. Contact and paramagnetic terms come from the same returned hopping/state. It does not add an independently borrowed induced field term to H. It misses non-Gaussian field cumulants, exchange/vertex corrections and connected intercell charge fluctuations; it is not claimed conserving beyond the tested finite-cluster static Ward relation.",
+    "The 26-point physical 3D midpoint fluctuation integral explicitly excludes its central IR voxel and fixes a UV cube. It is a stated finite quadrature, not a thermodynamic convergence result. Dispersion at smaller q is an evaluation of the converged closure, conditional on that fluctuation quadrature.",
+    "Finite-volume version uses the same one sine-mode normalization 1/(epsilon v_cell) and is compared with the actual coupled whole-H spectrum, residues, covariance and matter reaction. Bulk phase-averaged spectra are not mislabeled finite exact poles."
+  ],
+  "adverse_consumers": [
+    "Actual frozen-matter field Hamiltonian P^2/2+<g_m(0)|H_m(Q)|g_m(0)> differs from the full coupled spectrum and cannot produce molecular reaction.",
+    "Bare electric-only finite box is diagonalized separately; a nonzero box gap is never called a photon.",
+    "Omit contact in the actual response matrix; report negative squared frequencies if present, rather than silently dropping unstable modes.",
+    "Omit 1/sqrt(V) in both current and contact: physical density-dependent mode energies change; no N sweep is needed to expose the normalization error.",
+    "Double current while leaving contact unchanged: the static Ward cancellation/positive induction may fail. This is a genuinely different current normalization, not a plotting label.",
+    "Change only the field-coordinate wall in a new whole-H consumer and retain exact source/input/output capsules; distinguish stable induction from regulator box poles."
+  ],
+  "failure_fork": "If the nonlinear exact mixed poles are box-sensitive or the Gaussian continuation disagrees with them, retain finite correlated current/field reaction and a conditional local-well collective mechanism ONLY; do not claim bulk photons, masslessness, group velocity, exact all-N stability or a joined electron/photon law. The material next fork is a compact spatial gauge-link/flux phase or a controlled non-Gaussian many-cell reaction-field solver, not borrowing the old free-Dirac induced kernel or fitting c."
+}

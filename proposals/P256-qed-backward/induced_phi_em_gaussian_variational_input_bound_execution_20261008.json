@@ -1,0 +1,49 @@
+{
+  "source": "induced_phi_em_gaussian_variational.py",
+  "source_sha256": "986c34d93435be153d1b23600f4ffe01c600655a06da0bf8ab0943d6b10d7ef8",
+  "predecessor_source_sha256": "36f144282959941ee65b65fac2e4622a43d301b052f3ad17460d3897032e30ac",
+  "change": "One-line authoritative microscopic_config binding: cfg=PhiConfig(Lambda=1.,**mean['microscopic_config']). Original actual-branch N6/N2 energies and selected variances unchanged. Predecessor receipts preserved with embedded source snapshots.",
+  "input_sha256": {"induced_phi_ir_mean_certificate_normal_transfer_final_receipt.json":"30a4182e252463319caea5235176a0e5e87018a740ca0a95d76f1487796b4d78"},
+  "actual_CLIs": [
+    {
+      "command":"/home/administrator/substrate-framework/.venv/bin/python induced_phi_em_gaussian_variational.py --output induced_phi_em_gaussian_variational_input_bound_final_receipt_20261008.json",
+      "natural_exit":0,
+      "size":6,
+      "receipt":"induced_phi_em_gaussian_variational_input_bound_final_receipt_20261008.json",
+      "receipt_sha256":"32f1c5ba92a18194ce4341c37ffdc28c67588b4d78322027313b696747ba3cd6",
+      "elapsed_seconds":8.45583739806898,
+      "density_variance":0.2951163928926157,
+      "native_energy":-554961.6828494874,
+      "same_native_old_packet_energy":4717661.553212938
+    },
+    {
+      "command":"/home/administrator/substrate-framework/.venv/bin/python induced_phi_em_gaussian_variational.py --size 2 --output induced_phi_em_gaussian_variational_input_bound_N2_receipt_20261008.json",
+      "natural_exit":0,
+      "size":2,
+      "receipt":"induced_phi_em_gaussian_variational_input_bound_N2_receipt_20261008.json",
+      "receipt_sha256":"8db1d5dcf4d8da42f394a2a89b6583633b8d35f30b4e5cc679043181a34e92b9",
+      "elapsed_seconds":5.497240593889728,
+      "density_variance":0.3827721886611537,
+      "native_energy":-18462.529318518602,
+      "same_native_old_packet_energy":189111.48516688411
+    }
+  ],
+  "actual_final_pushdiag": {
+    "server":"pyright-langserver --stdio",
+    "root":"/home/administrator/substrate-222",
+    "pythonPath":"/home/administrator/substrate-framework/.venv/bin/python",
+    "uri":"file:///home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_em_gaussian_variational.py",
+    "version":6,
+    "diagnostics":[]
+  },
+  "input_contract_physical_probe": {
+    "natural_exit":0,
+    "size":2,
+    "original_active_mass":0.2,
+    "changed_active_mass":0.4,
+    "predicted_Hamiltonian_difference":"0.2*kron(I8,frame0)",
+    "observed_Hamiltonian_difference_max_error":1.609823385706477e-15,
+    "auxiliary_Hamiltonian_unchanged_error":0.0
+  },
+  "scope":"FiniteN same-original-Href quantumEM lambda0 variational seed, no macrocentre replacement, no globalground/photonvacuum/pole/speed admission."
+}

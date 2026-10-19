@@ -1,0 +1,371 @@
+{
+  "label": "R2",
+  "parameters": {
+    "k": [
+      0.19,
+      0.31,
+      0.43
+    ],
+    "radial_nodes": [
+      0.3,
+      0.6,
+      0.9,
+      1.2,
+      1.5
+    ],
+    "radial_mass": 2.0,
+    "radial_stiffness": 3.0,
+    "radial_centre": 0.9,
+    "material_inertia": 3.0,
+    "electric_inertia": 4.0,
+    "root_coupling": 0.7,
+    "angular_level": 1,
+    "field_total_cut": 1,
+    "cavity_inertia": 2.0,
+    "material_scale": 1.0,
+    "material_level": 2
+  },
+  "t": 0.04,
+  "physical": "same exact path law, independent fresh states; no interpolated or imported background",
+  "branches": {
+    "addition": {
+      "dimension": 1764000,
+      "source_weight": 0.9075200211612555,
+      "source_connections": {
+        "E": 0.3150555543305211,
+        "g": 0.6374394303293405,
+        "r": 6.190471141106576e-16,
+        "root": 0.6372571077029473,
+        "R": 0.09947647786163295,
+        "hop": 1.2268623847072129,
+        "field": 0.13562934768085547
+      },
+      "protocols": {
+        "in0_out6": {
+          "kick_info": {
+            "type": "unitary exp(i eps P a P), finite field regulator",
+            "continuum_compression_difference": 0.009744784057420979,
+            "continuum_discarded_probability": 0.010555929162710198
+          },
+          "baseline_electric": 8.501788941230771e-12,
+          "kicked_electric": 0.01750263852177429,
+          "qout_feedback": 0.017502638513272502,
+          "qout_current_feedback": 0.01904304553103213,
+          "bare_control_feedback": 0.017003464667516188,
+          "hopping_off_feedback": 0.0170082429334655,
+          "hopping_off_own_current": 0.0003761045354661164
+        },
+        "in2_out4": {
+          "kick_info": {
+            "type": "unitary exp(i eps P a P), finite field regulator",
+            "continuum_compression_difference": 0.010022388919090795,
+            "continuum_discarded_probability": 0.010826969436292577
+          },
+          "baseline_electric": -1.590727874943576e-18,
+          "kicked_electric": -0.005474044870900651,
+          "qout_feedback": -0.005474044870900649,
+          "qout_current_feedback": -0.006483882495832022,
+          "bare_control_feedback": -0.005316183961688734,
+          "hopping_off_feedback": -0.005317650606646602,
+          "hopping_off_own_current": -0.0001169048990094985
+        }
+      },
+      "evolution": [
+        {
+          "krylov": 12,
+          "terminal_residual": 3.7834533864265776e-13,
+          "norm_defect": -3.019806626980426e-14
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 7.376585520198517e-18,
+          "norm_defect": 2.3314683517128287e-15
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 5.60584791431342e-18,
+          "norm_defect": 2.6645352591003757e-15
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 3.7820496307097195e-13,
+          "norm_defect": -2.708944180085382e-14
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 7.471672954460834e-18,
+          "norm_defect": 1.1102230246251565e-16
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 6.2183135191994614e-18,
+          "norm_defect": 8.881784197001252e-16
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 3.785345994011501e-13,
+          "norm_defect": -3.164135620181696e-14
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 7.472476447320742e-18,
+          "norm_defect": 4.440892098500626e-16
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 6.300576859022777e-18,
+          "norm_defect": 1.5543122344752192e-15
+        }
+      ],
+      "baseline": {
+        "norm": 0.9999999999999334,
+        "energy": 1.3056259550662364,
+        "r": 0.9016352049878837,
+        "density": [
+          0.2599507307026098,
+          0.9900461462631912,
+          0.9900465069397633,
+          0.2599483502206486,
+          0.9900472316534524,
+          0.2599477613674752,
+          0.2599477944582061,
+          0.9900654783946466
+        ],
+        "physical_charge": -0.9999999999999988,
+        "spin": [
+          3.0138491054492074e-19,
+          6.1855871786957986e-09,
+          -3.2439329000766293e-16
+        ],
+        "spin2": 0.8008745715563879,
+        "electric": [
+          1.0366487029878261e-11,
+          9.317362419797304e-21,
+          1.9138974141006933e-18,
+          0.0027471792829354487,
+          -1.590727874943576e-18,
+          -0.0024904973097695585,
+          8.501788941230771e-12,
+          5.099138342470888e-19
+        ],
+        "field_coordinate": [
+          1.7473029168546996e-11,
+          -3.4728350837426314e-20,
+          -2.738034001999526e-19,
+          9.910877849888841e-06,
+          2.464865876510014e-19,
+          -8.634274221625664e-06,
+          -3.00086808238114e-12,
+          8.639736061993863e-20
+        ],
+        "receiver_electric": [
+          [
+            -1.5308568965309677e-18,
+            1.8646980886474906e-12,
+            -1.653770200038799e-18
+          ],
+          [
+            -0.0014050453890121874,
+            9.396844734816771e-13,
+            -0.0015220887499986402
+          ]
+        ],
+        "physical_current": [
+          1.0795637318266826e-09,
+          -2.157392916656703e-18,
+          1.0733601507606494e-16,
+          9.317846463525865e-10
+        ],
+        "field_top_weight": 0.3312683760802859,
+        "g_top_weight": 0.01695819051880541,
+        "R_top_weight": 0.017331101840338363
+      },
+      "canonical_debt": {
+        "0": {
+          "source_current_norm": 2.485812642695044,
+          "Pi_dot_minus_source_norm": 1.4986986771105588,
+          "a_dot_minus_Pi_over_I_norm": 1.0682667091253477
+        },
+        "6": {
+          "source_current_norm": 2.5103097511273376,
+          "Pi_dot_minus_source_norm": 1.5064157833486393,
+          "a_dot_minus_Pi_over_I_norm": 1.0726941717796548
+        }
+      }
+    },
+    "removal": {
+      "dimension": 1764000,
+      "source_weight": 0.9075200211612557,
+      "source_connections": {
+        "E": 0.3150555543305218,
+        "g": 0.6374394303293405,
+        "r": 6.164834038928152e-16,
+        "root": 0.6372571077029473,
+        "R": 0.09947647786163294,
+        "hop": 1.2268623847072058,
+        "field": 0.1356293476808555
+      },
+      "protocols": {
+        "in0_out6": {
+          "kick_info": {
+            "type": "unitary exp(i eps P a P), finite field regulator",
+            "continuum_compression_difference": 0.009744784057420977,
+            "continuum_discarded_probability": 0.01055592916271042
+          },
+          "baseline_electric": -9.370697420514348e-12,
+          "kicked_electric": 0.017502639277557658,
+          "qout_feedback": 0.017502639286928356,
+          "qout_current_feedback": 0.019042986124412867,
+          "bare_control_feedback": 0.017003464667516177,
+          "hopping_off_feedback": 0.017008242933465492,
+          "hopping_off_own_current": 0.00037610453546611377
+        },
+        "in2_out4": {
+          "kick_info": {
+            "type": "unitary exp(i eps P a P), finite field regulator",
+            "continuum_compression_difference": 0.01002238891909079,
+            "continuum_discarded_probability": 0.0108269694362928
+          },
+          "baseline_electric": -2.757939276260002e-18,
+          "kicked_electric": -0.005474045170278361,
+          "qout_feedback": -0.0054740451702783586,
+          "qout_current_feedback": -0.006483865854407496,
+          "bare_control_feedback": -0.005316183961688733,
+          "hopping_off_feedback": -0.0053176506066465986,
+          "hopping_off_own_current": -0.00011690489900949828
+        }
+      },
+      "evolution": [
+        {
+          "krylov": 12,
+          "terminal_residual": 3.587653351334675e-13,
+          "norm_defect": -2.120525977034049e-14
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 6.82687848494033e-18,
+          "norm_defect": 2.9976021664879227e-15
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 5.030444090174218e-18,
+          "norm_defect": 2.3314683517128287e-15
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 3.61607452408958e-13,
+          "norm_defect": -2.631228568361621e-14
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 6.873745901163694e-18,
+          "norm_defect": 6.661338147750939e-16
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 5.305930132769169e-18,
+          "norm_defect": 6.661338147750939e-16
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 3.612336365016355e-13,
+          "norm_defect": -2.5979218776228663e-14
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 6.873333218381958e-18,
+          "norm_defect": 7.771561172376096e-16
+        },
+        {
+          "krylov": 12,
+          "terminal_residual": 5.393475434913579e-18,
+          "norm_defect": 1.5543122344752192e-15
+        }
+      ],
+      "baseline": {
+        "norm": 0.9999999999999512,
+        "energy": 1.305625955066227,
+        "r": 0.9016352049878782,
+        "density": [
+          0.009935338667458304,
+          0.7400510827262013,
+          0.7400511138470613,
+          0.009954368967387486,
+          0.7400517223161025,
+          0.009953114798659067,
+          0.00995181521772768,
+          0.7400514434593987
+        ],
+        "physical_charge": 0.9999999999999988,
+        "spin": [
+          3.2097254745017643e-19,
+          6.191000380544063e-09,
+          -1.6479873021779667e-17
+        ],
+        "spin2": 0.8008745717601767,
+        "electric": [
+          -9.422707945537334e-12,
+          1.7279472123987727e-19,
+          8.09091165173228e-18,
+          -0.0027471795786484614,
+          -2.757939276260002e-18,
+          0.002490497572410103,
+          -9.370697420514348e-12,
+          6.708500942254059e-19
+        ],
+        "field_coordinate": [
+          -1.055932301850353e-11,
+          -4.605741650695258e-20,
+          -2.635331257144942e-19,
+          -9.911747034913672e-06,
+          4.2605757246891307e-19,
+          8.635020028808894e-06,
+          9.8306765237229e-12,
+          -8.724439356719293e-20
+        ],
+        "receiver_electric": [
+          [
+            -7.098782857904497e-18,
+            -5.201052502298556e-14,
+            -2.4717376798321292e-18
+          ],
+          [
+            0.001405045541363424,
+            4.024418288732425e-13,
+            0.0015220889105136543
+          ]
+        ],
+        "physical_current": [
+          -1.0031197815726072e-09,
+          -2.002385887309166e-18,
+          -4.8030156241107846e-17,
+          -9.923235632488191e-10
+        ],
+        "field_top_weight": 0.3312683792124844,
+        "g_top_weight": 0.01695819058673744,
+        "R_top_weight": 0.017331161774021966
+      },
+      "canonical_debt": {
+        "0": {
+          "source_current_norm": 2.485814585400423,
+          "Pi_dot_minus_source_norm": 1.4987077787501009,
+          "a_dot_minus_Pi_over_I_norm": 1.0682680066802672
+        },
+        "6": {
+          "source_current_norm": 2.510311711548036,
+          "Pi_dot_minus_source_norm": 1.5064250034188909,
+          "a_dot_minus_Pi_over_I_norm": 1.07269546142387
+        }
+      }
+    }
+  },
+  "neutral": {
+    "norm": 1.000000000000003,
+    "evolution": {
+      "krylov": 12,
+      "terminal_residual": 1.006222307656747e-13,
+      "norm_defect": 1.6653345369377348e-15
+    },
+    "dimension": 1102500
+  }
+}

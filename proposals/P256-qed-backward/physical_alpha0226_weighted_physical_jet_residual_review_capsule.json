@@ -1,0 +1,132 @@
+{
+  "derivation": "Independent a-posteriori bound avoiding floating Galerkin orthogonality claims.\n\nFor approximate z,zx,zy,zxy with coupled-equation residuals r_j, errors satisfy\n B e=r, B ex=rx-Ax e, B ey=ry-Ay e,\n B exy=rxy-Axy e-Ax ey-Ay ex.\nAt t>0 these give ||e||<=||r||/t and the recursively propagated bounds below.\nThey remain valid without EXACT numerical Qdag r=0, unlike the quadratic\nGalerkin energy identity. Float residual evaluation is not interval-certified.\nThis review NEVER promotes a tiny quadratic estimate into machine accuracy.\n",
+  "inputs_sha256": {
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_alpha0226_weighted_physical_jet_bounds_capsule.json": "f28c8c1ec0b53c08004bb6e936d41551b1850ca506e8069ae067c031ce18cec6",
+    "physical_alpha0226_weighted_physical_jet_bounds_capsule.npz": "4bc400a00a44102b576db5d1b2301a4ce09131eb669aa94c01d4e932797e4cac",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_alpha0226_inverse_adapted_source_point_capsule.npz": "b0aac041f34f1f743a7f2b8c3f8b83118717afbca6fcf902a262d937900180c8"
+  },
+  "source_jet_norms": {
+    "": 0.0965204604007683,
+    "x": 0.0018721470671155328,
+    "y": 0.006863542490758486,
+    "xy": 0.0003547422346630546
+  },
+  "cases": [
+    {
+      "shift": 0.01,
+      "whole_residual_norms": {
+        "": 7.625543629879408e-06,
+        "x": 2.0026570167702035e-06,
+        "y": 5.139674943239445e-06,
+        "xy": 2.3672547469764029e-07
+      },
+      "observed_Qdag_residual_jet_norms": {
+        "": 7.854798835967137e-17,
+        "x": 1.0803276861178373e-18,
+        "y": 3.140484096637282e-18,
+        "xy": 7.035199698409343e-20
+      },
+      "original_source_jet_complement_norms": {
+        "": 1.0326330360098388e-16,
+        "x": 1.984498939315958e-18,
+        "y": 6.702433462595466e-18,
+        "xy": 3.980147334757898e-19
+      },
+      "log_reference_source_complement_debt": "Finite resolvent energy identity requires no source-capture assumption. A compressed log reference term additionally needs these original source jet complements priced; it is not certified here.",
+      "solution_error_norm_upper": {
+        "": 0.0007625543629879408,
+        "x": 0.004276744511560601,
+        "y": 0.005158584970919468,
+        "xy": 0.054547649020903
+      },
+      "source_response_absolute_error_upper_without_exact_orthogonality": {
+        "": 7.360209819621063e-05,
+        "x": 0.0004142209631864721,
+        "y": 0.0005031428206815119,
+        "xy": 0.005304245954916841
+      },
+      "Galerkin_identity_correction_upper": {
+        "": 7.581488000029669e-16,
+        "x": 4.078060171763852e-15,
+        "y": 4.702007619482032e-15,
+        "xy": 5.0872642595125956e-14
+      },
+      "guarded_source_energy_jet_error_upper": {
+        "": 5.81489232326824e-09,
+        "x": 3.4139640790519343e-08,
+        "y": 4.325630101850123e-08,
+        "xy": 4.4844799742577007e-07
+      },
+      "recommended_reported_error_upper": {
+        "": 5.81489232326824e-09,
+        "x": 3.4139640790519343e-08,
+        "y": 4.325630101850123e-08,
+        "xy": 4.4844799742577007e-07
+      },
+      "scope": "Conditional exact-arithmetic residual/norm estimates at the named finite shift; no directed-rounding, t=0/infinity or fullphysical transport certificate."
+    },
+    {
+      "shift": 0.001,
+      "whole_residual_norms": {
+        "": 8.063680849648042e-05,
+        "x": 1.1712053165788189e-05,
+        "y": 1.571372128471233e-05,
+        "xy": 1.4751622317076592e-06
+      },
+      "observed_Qdag_residual_jet_norms": {
+        "": 1.666621180240698e-16,
+        "x": 1.8400223818972542e-18,
+        "y": 3.1328628650214992e-18,
+        "xy": 2.176636148607859e-19
+      },
+      "original_source_jet_complement_norms": {
+        "": 9.795593388512893e-17,
+        "x": 2.028353331782251e-18,
+        "y": 6.337808642642885e-18,
+        "xy": 3.416855348150762e-19
+      },
+      "log_reference_source_complement_debt": "Finite resolvent energy identity requires no source-capture assumption. A compressed log reference term additionally needs these original source jet complements priced; it is not certified here.",
+      "solution_error_norm_upper": {
+        "": 0.08063680849648042,
+        "x": 4.322411159843655,
+        "y": 4.927194766808047,
+        "xy": 527.6224180378903
+      },
+      "source_response_absolute_error_upper_without_exact_orthogonality": {
+        "": 0.007783101881328874,
+        "x": 0.41735207915405675,
+        "y": 0.4761285615380037,
+        "xy": 50.96527879795535
+      },
+      "Galerkin_identity_correction_upper": {
+        "": 1.6086304363050402e-14,
+        "x": 8.604345856063218e-13,
+        "y": 9.812417391088535e-13,
+        "xy": 1.0505289137373386e-10
+      },
+      "guarded_source_energy_jet_error_upper": {
+        "": 6.502294900584361e-06,
+        "x": 0.00034948986438802755,
+        "y": 0.00039858036615120527,
+        "xy": 0.04267153567050933
+      },
+      "recommended_reported_error_upper": {
+        "": 6.502294900584361e-06,
+        "x": 0.00034948986438802755,
+        "y": 0.00039858036615120527,
+        "xy": 0.04267153567050933
+      },
+      "scope": "Conditional exact-arithmetic residual/norm estimates at the named finite shift; no directed-rounding, t=0/infinity or fullphysical transport certificate."
+    }
+  ],
+  "execution": {
+    "source_sha256": "727915c9b2507c61e9557586dd180059d79b72e3918e4dda1e299ff2b1b3db91",
+    "source_bytes": "#!/usr/bin/env python3\n\"\"\"Independent a-posteriori bound avoiding floating Galerkin orthogonality claims.\n\nFor approximate z,zx,zy,zxy with coupled-equation residuals r_j, errors satisfy\n B e=r, B ex=rx-Ax e, B ey=ry-Ay e,\n B exy=rxy-Axy e-Ax ey-Ay ex.\nAt t>0 these give ||e||<=||r||/t and the recursively propagated bounds below.\nThey remain valid without EXACT numerical Qdag r=0, unlike the quadratic\nGalerkin energy identity. Float residual evaluation is not interval-certified.\nThis review NEVER promotes a tiny quadratic estimate into machine accuracy.\n\"\"\"\nfrom __future__ import annotations\nimport argparse\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport platform\nimport sys\nfor name in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[name]='1'\nimport numpy as np\n\n\ndef main() -> None:\n    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);args=parser.parse_args()\n    root=Path(__file__).parent;own=Path(__file__).read_bytes()\n    receipt=root/'physical_alpha0226_weighted_physical_jet_bounds_capsule.json'\n    data=json.loads(receipt.read_text());vectors=np.load(data['vectors']['path'])\n    point=root/'physical_alpha0226_inverse_adapted_source_point_capsule.npz';source=np.load(point)\n    mn={k:float(np.linalg.norm(source['source'+k])) for k in ('','x','y','xy')}\n    upper=data['actual_complete_operator_jet_norm_upper'];bx,by,bxy=(upper[k] for k in ('x','y','xy'))\n    cases=[]\n    for case in data['actual_weighted_jet_cases']:\n        t=case['shift'];prefix='shift_'+str(t).replace('.','p')+'_'\n        q=vectors[prefix+'Q'];r={k:vectors[prefix+'residual'+k] for k in ('','x','y','xy')}\n        norms={k:float(np.linalg.norm(v)) for k,v in r.items()}\n        errors={'':norms['']/t}\n        errors['x']=(norms['x']+bx*errors[''])/t;errors['y']=(norms['y']+by*errors[''])/t\n        errors['xy']=(norms['xy']+bxy*errors['']+bx*errors['y']+by*errors['x'])/t\n        response={'':mn['']*errors[''],\n                  'x':mn['x']*errors['']+mn['']*errors['x'],\n                  'y':mn['y']*errors['']+mn['']*errors['y'],\n                  'xy':mn['xy']*errors['']+mn['x']*errors['y']+mn['y']*errors['x']+mn['']*errors['xy']}\n        orth={k:float(np.linalg.norm(q.conj().T@v)) for k,v in r.items()}\n        # Bound projected solution jets using actual same-family source norms.\n        zb={'':mn['']/t};zb['x']=(mn['x']+bx*zb[''])/t;zb['y']=(mn['y']+by*zb[''])/t\n        zb['xy']=(mn['xy']+bxy*zb['']+bx*zb['y']+by*zb['x'])/t\n        guards={'':zb['']*orth[''],\n                'x':zb['x']*orth['']+zb['']*orth['x'],\n                'y':zb['y']*orth['']+zb['']*orth['y'],\n                'xy':zb['xy']*orth['']+zb['x']*orth['y']+zb['y']*orth['x']+zb['']*orth['xy']}\n        energy=case['repaired_fullcallback_energy_jet_bound']\n        guarded={'':energy['energy_upper']+guards[''],\n                 'x':energy['first_x_upper']+guards['x'],\n                 'y':energy['first_y_upper']+guards['y'],\n                 'xy':energy['mixed_absolute_upper']+guards['xy']}\n        cases.append({'shift':t,'whole_residual_norms':norms,'observed_Qdag_residual_jet_norms':orth,\n          'original_source_jet_complement_norms':{k:float(np.linalg.norm(source['source'+k]-q@(q.conj().T@source['source'+k]))) for k in ('','x','y','xy')},\n          'log_reference_source_complement_debt':'Finite resolvent energy identity requires no source-capture assumption. A compressed log reference term additionally needs these original source jet complements priced; it is not certified here.',\n          'solution_error_norm_upper':errors,'source_response_absolute_error_upper_without_exact_orthogonality':response,\n          'Galerkin_identity_correction_upper':guards,'guarded_source_energy_jet_error_upper':guarded,\n          'recommended_reported_error_upper':{k:min(response[k],guarded[k]) for k in errors},\n          'scope':'Conditional exact-arithmetic residual/norm estimates at the named finite shift; no directed-rounding, t=0/infinity or fullphysical transport certificate.'})\n    files=[receipt,Path(data['vectors']['path']),point]\n    report={'derivation':__doc__,'inputs_sha256':{str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in files},\n            'source_jet_norms':mn,'cases':cases,\n            'execution':{'source_sha256':hashlib.sha256(own).hexdigest(),'source_bytes':own.decode(),'executable':sys.executable,\n                         'python':sys.version,'numpy':np.__version__,'runtime':platform.platform(),'startup_unchanged':Path(__file__).read_bytes()==own,\n                         'natural_exit':'External receipt must bind observed returncode.'}}\n    output=Path(args.output);output.write_text(json.dumps(report,indent=2)+'\\n')\n    print(json.dumps({'capsule':str(output),'sha256':hashlib.sha256(output.read_bytes()).hexdigest(),'recommended_error_uppers':[c['recommended_reported_error_upper'] for c in cases]}))\n\nif __name__=='__main__':main()\n",
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3",
+    "runtime": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+    "startup_unchanged": true,
+    "natural_exit": "External receipt must bind observed returncode."
+  }
+}

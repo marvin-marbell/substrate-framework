@@ -1,0 +1,168 @@
+{
+  "kind": "NEW_SAME_FULL_SPAN_FIELD_ONLY_UNITARY_INTERNAL_FEEDBACK_WITH_MATCHED_NO_SIGNALLING_CONTROL",
+  "request": {
+    "consumer": "rich_review_wave20_20261015_reaction.py",
+    "law_input": "rich_spatial_translation_20261015_actual3_input.json",
+    "primary_result": "rich_spatial_connected_20261015_actual1_result.json",
+    "primary_states": "rich_spatial_connected_20261015_actual1_states.npz",
+    "reconstruction": "rich_spatial_orthogonal_20261015_actual1_reconstruction.npz",
+    "times": [
+      0.13,
+      0.3
+    ],
+    "memory_limit_MiB": 3800,
+    "required_input_sha256": {
+      "rich_spatial_translation_20261015_actual3_input.json": "e09542296e5b19bfbbc0b7cdd5a8d28fb8db02343775b4b19baa6cef8bd65791",
+      "rich_spatial_connected_20261015_actual1_result.json": "c4cf29df0a7fd9b23d2a1dd411c740603d6d7b21ab63952a07fdb3cd664e0dbe",
+      "rich_spatial_connected_20261015_actual1_states.npz": "b827a479765f2659de9efbf4cbeba9fd9eb29f6ab7d522e1ecf1a72810159fa0",
+      "rich_spatial_orthogonal_20261015_actual1_reconstruction.npz": "5b289ffb931accf978a515b387e88b8033195b6892358f17567b01be76979fb7",
+      "rich_review_wave20_20261015_actual1_result.json": "cc5b5a38cd5f423866635cdf6b493aa0ac8ee841455183e8146136abeb2f7927",
+      "rich_review_wave20_20261015_actual1_exit.json": "376bfbcafad11026bc7cf444ba2b94646d8e74fa43c3aa78f60d2d807a61d95e",
+      "rich_review_wave20_20261015_contract.json": "49de837c9f205937788ecb5d319afc3058d8e180768a8c70250820d7fff88ff8"
+    },
+    "bindings": [
+      "rich_spatial_translation_20261015_actual3_input.json",
+      "rich_spatial_connected_20261015_actual1_result.json",
+      "rich_spatial_connected_20261015_actual1_states.npz",
+      "rich_spatial_orthogonal_20261015_actual1_reconstruction.npz",
+      "rich_review_wave20_20261015_actual1_result.json",
+      "rich_review_wave20_20261015_actual1_exit.json",
+      "rich_review_wave20_20261015_contract.json"
+    ],
+    "meaning": "NEW bounded same-full-span local-field-unitary internal-feedback discrimination, prescribed original kick (not fitted), raw source weights preserved. SAME entangled source has matched coupled versus complete EM-off evolution; explicitly not factorized-reference four-point control. Separates t0 operator/cut current change from later actual body density reaction; no extra source enrichment, cut, closure theorem or scope."
+  },
+  "field_kick": {
+    "operator": "exp(i kappa Q_xcos_PROJECTED)",
+    "kappa": 0.8,
+    "meaning": "Existing prescribed law kick, NOT fitted. Unit operator on matter/Phi. Finite-cut Q phase may change original current immediately because projected coordinate/Peierls operators fail continuum commutation; that is NOT instantaneous matter reaction."
+  },
+  "reports": {
+    "positive": {
+      "raw_source_norm2": 0.5000000000000406,
+      "raw_kicked_source_norm2": 0.5000000000000429,
+      "field_unitary_defect": 7.701859664206228e-16,
+      "field_only_t0_raw_reduced_density_difference_Frobenius": {
+        "body": 1.1636746856684104e-16,
+        "body_phi": 5.3707674262972077e-17,
+        "EM": 0.2978748322233088
+      },
+      "instantaneous_coupled_original_current_difference": 4.112448592766978e-05,
+      "instantaneous_cut_current_commutator_action_norm": 0.026076076494887964,
+      "arms": {
+        "coupled": [
+          {
+            "time": 0.13,
+            "raw_reduced_density_difference_Frobenius": {
+              "body": 0.002156361839705514,
+              "body_phi": 0.002160532175649024,
+              "EM": 0.2992882547625358
+            },
+            "norm2_baseline": 0.5000000000000331,
+            "norm2_driven": 0.5000000000000355,
+            "raw_EM_kinetic_difference": 0.008836763203919927
+          },
+          {
+            "time": 0.3,
+            "raw_reduced_density_difference_Frobenius": {
+              "body": 0.008963117813921258,
+              "body_phi": 0.008978602310257062,
+              "EM": 0.30345106127371285
+            },
+            "norm2_baseline": 0.5000000000000445,
+            "norm2_driven": 0.5000000000000389,
+            "raw_EM_kinetic_difference": 0.00843073615590871
+          }
+        ],
+        "EM_off_same_entangled_source": [
+          {
+            "time": 0.13,
+            "raw_reduced_density_difference_Frobenius": {
+              "body": 9.426761134269984e-15,
+              "body_phi": 1.6206262843657268e-14,
+              "EM": 0.2978748322233094
+            },
+            "norm2_baseline": 0.5000000000000381,
+            "norm2_driven": 0.5000000000000429,
+            "raw_EM_kinetic_difference": 0.00893444610308173
+          },
+          {
+            "time": 0.3,
+            "raw_reduced_density_difference_Frobenius": {
+              "body": 1.2266822029889233e-14,
+              "body_phi": 4.5554610625084965e-14,
+              "EM": 0.2978748322233068
+            },
+            "norm2_baseline": 0.5000000000000463,
+            "norm2_driven": 0.5000000000000354,
+            "raw_EM_kinetic_difference": 0.00893444610308005
+          }
+        ]
+      }
+    },
+    "negative": {
+      "raw_source_norm2": 0.5000000000000395,
+      "raw_kicked_source_norm2": 0.500000000000041,
+      "field_unitary_defect": 7.701859664206228e-16,
+      "field_only_t0_raw_reduced_density_difference_Frobenius": {
+        "body": 7.895330623669202e-17,
+        "body_phi": 9.80511711809381e-17,
+        "EM": 0.29787483222330735
+      },
+      "instantaneous_coupled_original_current_difference": 4.112448592773232e-05,
+      "instantaneous_cut_current_commutator_action_norm": 0.0260760764948879,
+      "arms": {
+        "coupled": [
+          {
+            "time": 0.13,
+            "raw_reduced_density_difference_Frobenius": {
+              "body": 0.0021563618396997983,
+              "body_phi": 0.002160532175643832,
+              "EM": 0.29928825476253984
+            },
+            "norm2_baseline": 0.5000000000000464,
+            "norm2_driven": 0.5000000000000467,
+            "raw_EM_kinetic_difference": 0.008836763203918713
+          },
+          {
+            "time": 0.3,
+            "raw_reduced_density_difference_Frobenius": {
+              "body": 0.008963117813919539,
+              "body_phi": 0.008978602310255789,
+              "EM": 0.30345106127371185
+            },
+            "norm2_baseline": 0.5000000000000421,
+            "norm2_driven": 0.5000000000000364,
+            "raw_EM_kinetic_difference": 0.008430736155908135
+          }
+        ],
+        "EM_off_same_entangled_source": [
+          {
+            "time": 0.13,
+            "raw_reduced_density_difference_Frobenius": {
+              "body": 2.083242175117749e-14,
+              "body_phi": 2.8659923969832295e-14,
+              "EM": 0.29787483222329986
+            },
+            "norm2_baseline": 0.5000000000000207,
+            "norm2_driven": 0.5000000000000384,
+            "raw_EM_kinetic_difference": 0.008934446103081986
+          },
+          {
+            "time": 0.3,
+            "raw_reduced_density_difference_Frobenius": {
+              "body": 2.99983905035071e-14,
+              "body_phi": 4.3702709769645356e-14,
+              "EM": 0.29787483222330197
+            },
+            "norm2_baseline": 0.5000000000000414,
+            "norm2_driven": 0.5000000000000203,
+            "raw_EM_kinetic_difference": 0.008934446103078655
+          }
+        ]
+      }
+    }
+  },
+  "meaning": "All raw source states keep norm2~.5. Reduced body/body-Phi and EM matrices have that raw trace; Frobenius differences are NOT probabilities/TV or isolated-particle receivers. Same entangled source used for coupled and complete EM-off matched local-unitary diagnostic; the latter is NOT mislabeled as factorized-reference four-point control. Product EM-off evolution cannot transmit a field-only unitary to body-Phi despite initial entanglement. Nonzero later coupled matter response establishes actual finite-H internal feedback, not continuum causality/photon/scattering/NoEther or a cure for field/charged-H cuts.",
+  "elapsed_seconds": 32.66418376204092,
+  "peak_RSS_KiB": 547760
+}

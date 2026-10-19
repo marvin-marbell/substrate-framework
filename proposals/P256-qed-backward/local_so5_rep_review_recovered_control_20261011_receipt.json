@@ -1,0 +1,142 @@
+{
+  "source_sha256": "7f73170ca3a33782b5b391a6f6d3b6e0e3b7bf385c2f03cc2b5f7696fde8e009",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "sympy": "1.14.0"
+  },
+  "extracted_bounded_functions": [
+    "density_moments",
+    "full_action",
+    "representation"
+  ],
+  "no_producer_checker_or_solver_entrypoint": true,
+  "exact_native": {
+    "full16_CAR": true,
+    "wedge2_vector5_and_inert1": true,
+    "invariant_G_and_isotropic_ac": true,
+    "generated_so5_dimension": 10
+  },
+  "small_harmonics": [
+    {
+      "n": 1,
+      "dimension": 5,
+      "trace_kernel_invariance_error": 0.0,
+      "mixed_density_square_spectrum_error": 1.3322676295501878e-15,
+      "source_moments_through_power4_error": 0.0,
+      "wrong_CG_factor_spectral_error": 0.42073991806514677
+    },
+    {
+      "n": 2,
+      "dimension": 14,
+      "trace_kernel_invariance_error": 1.571309458182719e-15,
+      "mixed_density_square_spectrum_error": 8.881784197001252e-15,
+      "source_moments_through_power4_error": 1.4210854715202004e-14,
+      "wrong_CG_factor_spectral_error": 0.8414798361303024
+    },
+    {
+      "n": 3,
+      "dimension": 30,
+      "trace_kernel_invariance_error": 4.298250035723777e-15,
+      "mixed_density_square_spectrum_error": 1.4210854715202004e-14,
+      "source_moments_through_power4_error": 2.842170943040401e-14,
+      "wrong_CG_factor_spectral_error": 1.262219754195442
+    }
+  ],
+  "exact_CG_recurrence": {
+    "n": [
+      1,
+      2,
+      3,
+      126
+    ],
+    "CG_trace_computed_from_all_weights": true,
+    "terminal_zero": true,
+    "dimensions": [
+      14,
+      690880,
+      9672320
+    ]
+  },
+  "complete_action_semantics": {
+    "small_dimension": 70,
+    "explicit_Kronecker_error": 1.5334485045357318e-14,
+    "rho_zero_projector_not_spectral_commutator_norm": 12.696456198483105,
+    "bare64u2_once": true,
+    "connected_mean_not_ground_block_counterexample": {
+      "mean_subtracted_weight": 1,
+      "excited_spectral_weight": 0
+    },
+    "PHP_square_counterexample": {
+      "H": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "P_dimension": 1,
+      "full_residual_squared": 1,
+      "projected_square": 0
+    }
+  },
+  "exact_free5": {
+    "frozen_native_H_U_identity": false,
+    "frozen_U_diagonal_for_actual_native_B": [
+      "-2e",
+      "-2c",
+      "0",
+      "2c",
+      "2e"
+    ],
+    "literal_Bplus_actual_B_action": [
+      "0",
+      "-1",
+      "1",
+      "0",
+      "-sqrt(2)"
+    ],
+    "literal_Bplus_claimed_B_action": [
+      "0",
+      "1",
+      "-1",
+      "0",
+      "sqrt(2)"
+    ],
+    "flip_fifth_native_row_restores_H_and_preserves_rho": true,
+    "exact_profile_e2_equals_m2_plus_d2": true,
+    "wrong_e_rejected": true,
+    "roles_distinct": true
+  },
+  "reciprocal_allocation": [
+    {
+      "N": 4,
+      "touching_counts": {
+        "1": 11,
+        "2": 16
+      },
+      "allocated_exact": {
+        "1": "5",
+        "2": "6"
+      },
+      "endpoint_only_wrong_control_missed": 4
+    },
+    {
+      "N": 6,
+      "touching_counts": {
+        "1": 11,
+        "2": 16
+      },
+      "allocated_exact": {
+        "1": "5",
+        "2": "6"
+      },
+      "endpoint_only_wrong_control_missed": 4
+    }
+  ],
+  "frozen_source_unchanged": true,
+  "own_source_sha256": "cabd0d7a543bf881219c2963695b02f155890ab09ed0e2bd1575885411b1ccd9"
+}

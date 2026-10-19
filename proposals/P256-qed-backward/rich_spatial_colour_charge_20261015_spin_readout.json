@@ -1,0 +1,226 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "-c",
+    "import json,sys,resource\ncap=3800*1024**2;resource.setrlimit(resource.RLIMIT_AS,(cap,cap))\nimport numpy as np\nfrom rich_spatial_colour_charge_20261015_snapshot import load\nb=load(sys.argv[1]);z=np.load(sys.argv[2]);out={}\nfor name in ['lepton','baryon']:\n    e=z[name+'_low_energies'];v=z[name+'_low_vectors'];op=b['operators'][name];nf=len(b['scalar']['grid']);values=[]\n    for j,x in enumerate(v.T):\n        xx=x.reshape(-1,nf);j2=float(np.vdot(xx,op['J2']@xx).real)\n        values.append(dict(energy=float(e[j]),J2=j2))\n    out[name]=dict(computed_low=values,ground_energy=float(e[0]),ground_J2=values[0]['J2'])\nprint(json.dumps(dict(kind='OWN_SAME_H_SAVED_LOW_EIGENSPACE_PHYSICAL_SPIN_READOUT_NOT_NEW_SPECTRUM',states=sys.argv[2],body=sys.argv[1],sectors=out,scope='Own science2 completed and saved these actual H0 eigenspaces BEFORE its later collapsed-mu resource failure. AllM body remains available; stationary totalM+.5 contains every halfintegerJ irrep. NOT full-law spin ordering or a current/resolvent cutoff.',peak_RSS_KiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)))\n",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_construct1_body.pkl",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_science2_states.npz"
+  ],
+  "returncode": 0,
+  "natural_exit": true,
+  "stderr": "",
+  "result": {
+    "kind": "OWN_SAME_H_SAVED_LOW_EIGENSPACE_PHYSICAL_SPIN_READOUT_NOT_NEW_SPECTRUM",
+    "states": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_science2_states.npz",
+    "body": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_construct1_body.pkl",
+    "sectors": {
+      "lepton": {
+        "computed_low": [
+          {
+            "energy": -24.230440914755473,
+            "J2": 0.7499999999999953
+          },
+          {
+            "energy": -23.022663978200605,
+            "J2": 0.7499999999999926
+          },
+          {
+            "energy": -23.02196637219877,
+            "J2": 0.7499999999999907
+          },
+          {
+            "energy": -22.979157335379586,
+            "J2": 0.7499999999999967
+          },
+          {
+            "energy": -22.97383506465609,
+            "J2": 3.749999999999965
+          },
+          {
+            "energy": -22.972574730559472,
+            "J2": 3.749999999999975
+          },
+          {
+            "energy": -22.897101664682367,
+            "J2": 3.7499999999999623
+          },
+          {
+            "energy": -20.599854497899603,
+            "J2": 0.7499999999999949
+          },
+          {
+            "energy": -19.413245420426158,
+            "J2": 0.7499999999999932
+          },
+          {
+            "energy": -19.411721614581054,
+            "J2": 0.7499999999999926
+          },
+          {
+            "energy": -19.38703460711091,
+            "J2": 0.7499999999999889
+          },
+          {
+            "energy": -19.36718478655168,
+            "J2": 3.7499999999999742
+          },
+          {
+            "energy": -19.364771612572582,
+            "J2": 3.7499999999999845
+          },
+          {
+            "energy": -19.296782518572222,
+            "J2": 3.7499999999999885
+          },
+          {
+            "energy": -18.422172760273494,
+            "J2": 0.7499999999999966
+          },
+          {
+            "energy": -18.203026760674028,
+            "J2": 3.7499999999999614
+          },
+          {
+            "energy": -18.13367669013198,
+            "J2": 0.7499999999999988
+          },
+          {
+            "energy": -17.57809312822634,
+            "J2": 0.7499999999999943
+          },
+          {
+            "energy": -17.569656619172388,
+            "J2": 0.7499999999999984
+          },
+          {
+            "energy": -17.56739061304398,
+            "J2": 3.74999999999997
+          },
+          {
+            "energy": -17.55464062019994,
+            "J2": 3.74999999999996
+          },
+          {
+            "energy": -17.098741464615816,
+            "J2": 3.74999999999997
+          },
+          {
+            "energy": -17.084873510910725,
+            "J2": 8.749999999999972
+          },
+          {
+            "energy": -17.082086651551926,
+            "J2": 0.7499999999999952
+          }
+        ],
+        "ground_energy": -24.230440914755473,
+        "ground_J2": 0.7499999999999953
+      },
+      "baryon": {
+        "computed_low": [
+          {
+            "energy": -21.6711568958123,
+            "J2": 0.7499999999999798
+          },
+          {
+            "energy": -21.656110442804735,
+            "J2": 3.7499999999999254
+          },
+          {
+            "energy": -20.502936489228027,
+            "J2": 0.7499999999999821
+          },
+          {
+            "energy": -20.480303219448018,
+            "J2": 0.7499999999999845
+          },
+          {
+            "energy": -20.463237163092383,
+            "J2": 0.7499999999999777
+          },
+          {
+            "energy": -20.449782875288264,
+            "J2": 0.749999999999979
+          },
+          {
+            "energy": -20.44861907580559,
+            "J2": 0.7499999999999787
+          },
+          {
+            "energy": -20.445285328420038,
+            "J2": 3.7499999999999463
+          },
+          {
+            "energy": -20.431241637906115,
+            "J2": 3.7499999999998828
+          },
+          {
+            "energy": -20.403703770148052,
+            "J2": 3.7499999999999005
+          },
+          {
+            "energy": -20.402345019022974,
+            "J2": 0.7499999999999714
+          },
+          {
+            "energy": -20.402041307427297,
+            "J2": 3.7499999999999165
+          },
+          {
+            "energy": -20.399950708797316,
+            "J2": 3.7499999999999143
+          },
+          {
+            "energy": -20.362022740934165,
+            "J2": 8.749999999999773
+          },
+          {
+            "energy": -20.359832894676877,
+            "J2": 8.749999999999794
+          },
+          {
+            "energy": -20.329972284687962,
+            "J2": 3.7499999999999165
+          },
+          {
+            "energy": -20.26971240654467,
+            "J2": 8.749999999999762
+          },
+          {
+            "energy": -17.703900219747403,
+            "J2": 0.7499999999999818
+          },
+          {
+            "energy": -17.699981347542007,
+            "J2": 3.7499999999998996
+          },
+          {
+            "energy": -17.244010937540725,
+            "J2": 0.7499999999999911
+          },
+          {
+            "energy": -17.159903740675805,
+            "J2": 3.7499999999999236
+          },
+          {
+            "energy": -17.05785758345012,
+            "J2": 0.7499999999999849
+          },
+          {
+            "energy": -16.615872933373716,
+            "J2": 0.7499999999999792
+          },
+          {
+            "energy": -16.592719188392632,
+            "J2": 0.7499999999999822
+          }
+        ],
+        "ground_energy": -21.6711568958123,
+        "ground_J2": 0.7499999999999798
+      }
+    },
+    "scope": "Own science2 completed and saved these actual H0 eigenspaces BEFORE its later collapsed-mu resource failure. AllM body remains available; stationary totalM+.5 contains every halfintegerJ irrep. NOT full-law spin ordering or a current/resolvent cutoff.",
+    "peak_RSS_KiB": 562812
+  },
+  "stdout_if_failure": null
+}

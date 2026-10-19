@@ -1,0 +1,198 @@
+{
+  "kind": "SAME_PRIMITIVE_OCCUPIED_COMMON_NATIVE_SPECIES_CONDITIONAL_MODEL",
+  "mode": "joint",
+  "parameters": {
+    "geometry": "tetrahedron",
+    "scalar_points": 7,
+    "scalar_extent": 4.0,
+    "scalar_metric": 1.0,
+    "scalar_quartic": 0.2,
+    "scalar_quadratic": 1.0,
+    "scalar_coupling": 0.65,
+    "electric": 1.8,
+    "plaquette": 0.25,
+    "vector_velocity": 0.6,
+    "orientation_azimuth_points": 8,
+    "orientation_polar_points": 6,
+    "neutral_family": "correlated_local_singlet_ONEHOP_full_colour_loop_images_SEVERE_paircut",
+    "charged_family": "all_Wilson_tree_uud_sources_full_spinhalf_both_copies_and_threehalf",
+    "scalar_volume_ratio": 2.0,
+    "vertex_mass_density": 3.0,
+    "eigen_tolerance": 1e-10,
+    "low_eigenstates": 12,
+    "times": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "density_kick": 0.35,
+    "field_kick": 0.3
+  },
+  "configuration": {
+    "mode": "joint",
+    "neutral_basis_snapshot": "rich_composite_geometry_20261015_correlated_onehop_neutral1_neutral.pkl",
+    "neutral_coupling_snapshot": "rich_composite_geometry_20261015_correlated_onehop_reference1_J0_coupling.pkl",
+    "neutral_states_snapshot": "rich_composite_geometry_20261015_correlated_onehop_reference1_J0_states.npz",
+    "neutral_result_snapshot": "rich_composite_geometry_20261015_correlated_onehop_reference1_result.json",
+    "ancestor_result_snapshot": "rich_composite_geometry_20261015_correlated_dressing3_result.json",
+    "joint_pairs": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "joint_initial_pair": [
+      0,
+      2
+    ],
+    "white_probe_edge": 2,
+    "quark_probe_edge": 0,
+    "theta": 0.3,
+    "pulse_duration": 0.4,
+    "during_pulse_times": [
+      0,
+      0.025,
+      0.05,
+      0.1,
+      0.2,
+      0.4
+    ],
+    "after_pulse_times": [
+      0.25,
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "contract": "issue222-common-native-species-contract-20261016/F524; plan60dfc8bac1c47a36062cc91de4ab0e32d4538b9bcef8f981ed3de14ca73cf2e9/general89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "physics": "FROZEN BEFOREcarrier/joint outcomes. SingleCAR64 N36neutral jointstate Bdag0(half_triplet,m+.5) Ldag2(downwhiteup) Omega; operatorORDER BdagLdag,soLactsFIRST,canonicalB epsilon/sqrt6 andL coefficient1. No compactmask,no tensorofevolvedparticles; totalNoetherJ1,M1. FourDECLARED sourcepairanchors letB0\u21941 andL2\u21943coexist,notcompleteallpairpositions. bare/proper2R.[S,O]/COMPLEXTrU/actualbare[H,O],all7Phi input\u00d7independent7output,commonPhi/R/PW/sea. WhiteONLYcurrent pulseedge2\u2192measurequarkcurrents/Q/fields,thenquarkONLYpulseedge0\u2192measurewhitecurrents/Q/fields. SAME initialjointstate and independentlyevolvedSAME-AGE no-pulse baseline; t0crossstate response mustnotbeinstantaneous transfer. Actualfinite-theta derivatives/contact; ALLscalarANDvectorfermionhopOFFcontrol fielddynamicsremain. Sharedfield/finiteGalerkin retardedcrossresponseNOTMaxwell/Coulomb/relativisticlightcone. No source/receiver/constant tuning or borrowed47/48/body408/CURRENT427 states."
+  },
+  "basis": {
+    "dimension": 5318,
+    "nnz": 33059324,
+    "numeric_bytes": 680202468,
+    "raw_rows": 4753389,
+    "max_rank": 28,
+    "tiny_discarded_norm2": 6.182504417555767e-23,
+    "null_residual_norm2": 1.1857324649014925e-21,
+    "nulls": 1766,
+    "minimum_accepted": 1.005378953162093e-20,
+    "body_dimension": 5318,
+    "full_independent_Phi": 7,
+    "full_coordinate_dimension": 37226,
+    "count_blocks": 608,
+    "source_generators": 16,
+    "source_Noether": {
+      "{'sector': 36, 'B_site': 0, 'L_site': 2, 'twice_J': 2, 'family': 'bare'}": {
+        "spin_INPUT": true,
+        "source_M": 1.0,
+        "source_j": 1.0,
+        "exact_CAR_operator_Sz_residual2": 0.0,
+        "exact_CAR_operator_S2_residual2": 0.0,
+        "Noether": "Bare source field independent on actual properJ0Omega: source spin=j implies physical J=Lleft+SCAR=j. ScalarTrU and H commutator preserve rank; vector is 2 sum_i(Rd)_i[S_i,O], correct creation/annihilation indices. Count projectors/Phi slices commute J. NOT field-only spin origin or full continuum Noether."
+      },
+      "{'sector': 36, 'B_site': 1, 'L_site': 2, 'twice_J': 2, 'family': 'bare'}": {
+        "spin_INPUT": true,
+        "source_M": 1.0,
+        "source_j": 1.0,
+        "exact_CAR_operator_Sz_residual2": 0.0,
+        "exact_CAR_operator_S2_residual2": 0.0,
+        "Noether": "Bare source field independent on actual properJ0Omega: source spin=j implies physical J=Lleft+SCAR=j. ScalarTrU and H commutator preserve rank; vector is 2 sum_i(Rd)_i[S_i,O], correct creation/annihilation indices. Count projectors/Phi slices commute J. NOT field-only spin origin or full continuum Noether."
+      },
+      "{'sector': 36, 'B_site': 0, 'L_site': 3, 'twice_J': 2, 'family': 'bare'}": {
+        "spin_INPUT": true,
+        "source_M": 1.0,
+        "source_j": 1.0,
+        "exact_CAR_operator_Sz_residual2": 0.0,
+        "exact_CAR_operator_S2_residual2": 0.0,
+        "Noether": "Bare source field independent on actual properJ0Omega: source spin=j implies physical J=Lleft+SCAR=j. ScalarTrU and H commutator preserve rank; vector is 2 sum_i(Rd)_i[S_i,O], correct creation/annihilation indices. Count projectors/Phi slices commute J. NOT field-only spin origin or full continuum Noether."
+      },
+      "{'sector': 36, 'B_site': 1, 'L_site': 3, 'twice_J': 2, 'family': 'bare'}": {
+        "spin_INPUT": true,
+        "source_M": 1.0,
+        "source_j": 1.0,
+        "exact_CAR_operator_Sz_residual2": 0.0,
+        "exact_CAR_operator_S2_residual2": 0.0,
+        "Noether": "Bare source field independent on actual properJ0Omega: source spin=j implies physical J=Lleft+SCAR=j. ScalarTrU and H commutator preserve rank; vector is 2 sum_i(Rd)_i[S_i,O], correct creation/annihilation indices. Count projectors/Phi slices commute J. NOT field-only spin origin or full continuum Noether."
+      }
+    },
+    "space": "All7Phi input slices of literal B/L/hole/proper2R.[S,O]/complexTrU/[H,O] acting on SAME occupiedN32Omega; tensor ALL7 independentPhi outputs. QuantumR10/PW19 embedded in body. Entire available quark/white/sea source profiles retained, no mandatory rigid field/core return or compact mask.",
+    "cuts": "NEW source/sector-specific finite Galerkin family,not physically identical to ancestor nativeN35 by fiat. Declared source anchors/bodyrank,neutralonehop order,Rj0+j1/PW19/Phi7 cuts severe; no full all-pair/globalvacuum/range closure. Null thresholds1e-26input/1e-20relative/1e-25absolute and2e-14coefficient trim inherited exactly; all discarded norms in statistics.",
+    "lift": "OperatorBlock.lifts preserve actual MGS source/Phi-input coefficients; offOmega extension includes |phiout><phiin|P_counts. No sourceEOM from a state-only extension."
+  },
+  "assembly": {
+    "dimension": 5318,
+    "nnz": {
+      "Gram": 57430,
+      "rotation": 48348,
+      "electric": 51816,
+      "plaquette": 50842,
+      "quark_vector": 249000,
+      "white_vector": 195724,
+      "quark_scalar": 244974,
+      "white_scalar": 178054,
+      "loopB": 51898,
+      "loopC": 51022
+    },
+    "raw_Hermiticity_Frobenius": {
+      "Gram": 1.8321981896586725e-15,
+      "rotation": 1.2322303484243859e-15,
+      "electric": 8.332822453366348e-14,
+      "plaquette": 4.1916840093133026e-14,
+      "quark_vector": 4.142347493983355e-13,
+      "white_vector": 1.2979758281142147e-13,
+      "quark_scalar": 3.052658396044218e-13,
+      "white_scalar": 1.1713198019956636e-13,
+      "loopB": 1.6767491472633644e-13,
+      "loopC": 1.5956154515724442e-15
+    },
+    "entry_roundoff_discarded_norm2": {
+      "Gram": 0.0,
+      "rotation": 1.4295926791864825e-25,
+      "electric": 1.3581405063698879e-25,
+      "plaquette": 1.3634388983892793e-25,
+      "quark_vector": 2.5204385748881266e-25,
+      "white_vector": 2.473906490544621e-25,
+      "quark_scalar": 3.299580295517764e-25,
+      "white_scalar": 3.418799669236679e-25,
+      "loopB": 1.773349614986707e-25,
+      "loopC": 1.1071718664588742e-25
+    },
+    "metric": "ALL actual Gram entries retained, including tiny offdiagonal values; generalized metric kept through analysis. No assumedI or source EOM Hermitization.",
+    "roundoff": "Raw operators retained; charged weakH analysis uses tiny Hermitian average. Non-Gram entry2e-14 sparse roundoff only, discarded Frobenius squared explicit. No physical source/field/mass/spin/coupling cut or current replacement.",
+    "storage": "One pinned source body block and one target block at a time, target-pair traversal prevents disk-cache thrashing. All source packets for ONLY current count cached; no global body CSC+CSR/dense lookup residency.",
+    "projection": "Full primitive action and local colour Q appliedTWICE before target selection. Source-count support skips are Galerkin weak-matrix selection, NOT full-H closure or particle leakage test. Actual allPhi7 independent factor, allR10/PW19 inside body profiles; severe operator/sea/body-R rank remains.",
+    "elapsed_seconds": 7045.9853982925415,
+    "primitive_hop_calls": 25750852,
+    "output_count_channels_outside_model_skipped": 20361199,
+    "raw_transitions_projected": 39792433,
+    "raw_source_keys": 837466
+  },
+  "local_receipt": {
+    "dimension": 8309,
+    "max_local_block": 174,
+    "raw_local_nonzeros": 46547,
+    "cached_local_operations": 34847,
+    "local_roundoff_discarded_norm2_sum": 0.0,
+    "meaning": "Adaptive ORTHONORMAL local16-mode Fock coordinates, no local physical-state/energy cut. Every exact c/cdag image is resolved including its new orthogonal remainder BEFORE global packet projection. Global2^64 sea never expanded."
+  },
+  "reference_energy": -7.528937240789958,
+  "omega_norm": 0.9999999999999697,
+  "law": "SAME geometry primitiveH,p and actualN32Omega as completed geometry:dressing3,not its solvedchargedstate. One shared quantumPhi7/R10/PW19 and originalCAR64; original allquark/white scalarANDvector hops,fullcolour-square/rotation/plaquette beforetargetprojection. N33/N31/N36 are source-sector-specific Galerkin approximations,not identicaloldfiniteH by fiat. No independently evolved particles tensored.",
+  "limits": "Primitive CAR spin/charge/flavour/3+1/gauging,negative scalar quadratic/volume and pointmass density INPUTS. Severe selectedonehop neutral order known fullH RMS5.90502139924; no stationaryground/mass/gap/lifetime theorem. R/PW/body/source cuts severe. MaterialPeierls external probe NOT photon/Coulomb/Maxwell/labrotationalEM; other47/48laws remain separate. CountPVM not tagged-three-particle position. No oldbody408/CURRENT427/N17 or otherlawstate splice."
+}

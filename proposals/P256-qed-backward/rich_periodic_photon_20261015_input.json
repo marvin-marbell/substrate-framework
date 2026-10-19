@@ -1,0 +1,15 @@
+{
+  "law": "periodic-L2xL2xL2-qlink-S1-full-spinful-CAR-ions1-t1-U4-I16-Ecap1",
+  "governor": {"plan_id":"issue222-rich-backward-candidates-20261014","captured_revision":"bd23d6006c2771cb845301f4a9e0f86db236342bb4b4ac8b66e8c37006c2c324","template":"general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe","work_item":"photon-candidate"},
+  "states": ["multi_pair4"],
+  "q_bits": [[1,0,0], [1,1,0]],
+  "ground_tolerance": 1e-9,
+  "response_depth": 12,
+  "H": "sum24 E_e^2/32 + 2sum8(n_v-1)^2 - sum24,spin(c_b^dagger U_e c_a + h.c.)",
+  "Gauss": "G_v=sum_e B_ve E_e+n_v-1=0; B_source=+1, B_target=-1",
+  "local_spaces": {"matter":4,"link":3,"E":[-1,0,1],"spin_orbital_order":"up_v,down_v, then next vertex"},
+  "ansatz": {"hop1":"all70 singly occupied Sz0 configurations plus all one primitive hop targets", "loop_dressed":"all70 matter seeds tensor all zero/one independent two-link winding or four-link plaquette flux strings, both orientations; then all one primitive hop targets.", "multi_pair4":"Complete four-primitive-hop closure of all70 Sz0 matter seeds union entire loop_dressed span. Allows simultaneous0..4 holon/doublon pairs with actual CAR interference. Material construction prompted by full-H variance and one-pair restriction, not a tolerance refinement.", "global_restriction":"selected correlated configuration span, NOT the complete 4^8*3^24 Hilbert space; omitted full-H neighbors are reported"},
+  "tensor_library_decision":"Comparable gauge-adapted correlated selected-configuration state using existing scipy sparse linear algebra, not a generic new tensor engine. No dependency installation or active-runtime changes. Exact Gauss basis selection instead of encoded-charge fermion grading; actual CAR/Jordan-Wigner signs.",
+  "numerical_caps":{"ground_maxiter":1500,"block_response_depth":12,"response_broadening":0.25,"time_endpoint":4.0},
+  "interpretation":"Two transverse axes are tested by actual source Gram/spectral matrices. Variational baseline is stationary only under PHP; spectra are finite block-Krylov quadratures with residuals. No bare magnetic term, old/evolved state replay, continuum Maxwell/Dirac assumptions, spin/particle/Nature claim."
+}

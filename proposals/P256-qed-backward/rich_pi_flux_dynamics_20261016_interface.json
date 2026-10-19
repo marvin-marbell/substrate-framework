@@ -1,0 +1,14 @@
+{
+  "pure_module":"rich_pi_flux_dynamics_20261016_state.py",
+  "imports":"Only NumPy/Numba, pure frozen bulk_state and flux_state; no producer CLI or evolved-output replay.",
+  "geometry":"geometry()->loops[8,192],Kloops,loop_quadratic,coeff[4,192],density[2,64],currents[12,192]. Loops xy,xz at (x,0,0), x=0..3. Current receivers first8 are mean y,z arcs at each x layer; last4 two transverse modes for q=(pi/2,0,0),(pi/2,pi/2,0).",
+  "features":"features(n,E,codes,loops,Kloops,loop_quadratic,coeff,density,epsilon)->complex38; indices0 Omega,1 doublon/8,2 sumE2/64,3 nearest-density/32,4:20 real/imag transverse E and rho/doublon at two q,20:36 actual Wilson cosine/sine images/Omega,36:38 exp(i epsilon loop.E/2) unitary pulse states. Wilson images use actual truncated qutrit shifts and exact zeros at boundaries, never log(U)/angle.",
+  "evaluate":"evaluate(up,down,E,F,G,codes,*geometry(),epsilon)->absolute B[38],HB[38],JB[12,38],localenergy[8,38],positiveguide,features,stable. Full legal nearest-hop Fock/link virtuals; labelled fermion parity cancels on edges as frozen physical amplitude convention.",
+  "measure":"measure(up_samples,down_samples,E_samples,F,G,codes,*geometry(),epsilon)->B/sqrtguide,HB/sqrtguide,JB/sqrtguide,localenergy/sqrtguide,features,guide,stable.",
+  "wilson_images":"wilson_images(same_args)->[samples,16,38] normalized actual Hermitian Wcos/Wsin acting on EVERY basis coefficient, products before projection.",
+  "fit_projection":"fit_projection(V,HV,relative_cut)->G,Hraw,W,h,initial,...; Wdag G W=1, h=(Wdag Hraw W+h.c.)/2. This is sampled WHOLE Hamiltonian variational evolution; Hraw asymmetry saved, not exact full-H dynamics.",
+  "evolve":"evolve(projection,times)->orthonormal coefficients [time,rank,3], columns unpulsed background,xy pulse,xz pulse; same h for all.",
+  "observables":"Ephysical=E/16; d<Ephysical>/dt=-<J>/16 under full H. Compare projected commutator derivative with this independently evaluated full current; no forced closure. Raw layer energy includes onsite, electric, hopping, half shared arc endpoints. Matter includes doublon,Eenergy,rho_q,D_q. Wilson time traces separate NPZ. q-minus is adjoint, both temporal frequency signs saved.",
+  "science_consumer":"rich_pi_flux_dynamics_20261016_run.py; fresh samples and full coefficient evaluation, not setup-only. Outputs chain0,chain1,joined dynamics/raw/residual/moving-metric and uncertainty.",
+  "not_claimed":"Exact full-H trajectories, directed photon packet, massless pole, Lorentz symmetry, Poynting law, converged vacuum, continuum or Nature identification."
+}

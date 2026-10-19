@@ -1,0 +1,77 @@
+{
+  "kind": "Parent literal Root primitive temporal/spatial Maxwell coefficient discriminator",
+  "program_utf8": "import json,hashlib,time,numpy as np\nfrom scipy.linalg import eigh,block_diag\nfrom pathlib import Path\nimport covariant_canonical_gauss_boundary_kernel as s\nstart=time.monotonic();R=Path.cwd();assert hashlib.sha256((R/'covariant_root_transfer.py').read_bytes()).hexdigest()==s.ROOT_SOURCE\nN=6;V=N**3;ids=np.arange(V).reshape((N,)*3);neighbors=[np.roll(ids,-1,axis=j).ravel() for j in range(3)];gamma,_=s.phi_frame(s.Parameters());component=s.physical_root.wilson_component_basis(gamma)\nplus=np.kron(np.eye(V),component[:,:2]);minus=np.kron(np.eye(V),component[:,2:]);theta=np.column_stack((plus,minus));gs=[np.kron(np.eye(V),g) for g in gamma[1:]];eye=np.eye(4*V,dtype=complex);zero=np.zeros_like(eye)\nD=np.zeros((V,3*V));\nfor j in range(3):\n for x,y in enumerate(neighbors[j]):D[x,j*V+x]=-1;D[y,j*V+x]=1\nraw=np.zeros(3*V);raw[V]=1.;lap=D@D.T;chi=np.linalg.solve(lap+np.ones((V,V))/V,D@raw);field=raw-D.T@chi\nfor j in range(3):field[j*V:(j+1)*V]-=field[j*V:(j+1)*V].mean()\nfield/=np.linalg.norm(field);A=.2*field.reshape((3,V));divergence=float(np.linalg.norm(D@A.ravel()));\ndef links(A):\n out=[]\n for j in range(3):\n  shift=np.zeros((V,V),complex);shift[np.arange(V),neighbors[j]]=np.exp(1j*A[j]);out.append(np.kron(shift,np.eye(4)))\n return out\nU0=links(np.zeros_like(A));U1=links(A)\ndef primitive(k,U):\n b=eye/(2*k)-sum((u+u.conj().T for u in U),np.zeros_like(eye))/2\n bp=plus.conj().T@b@plus;bm=minus.conj().T@b@minus\n c=sum((g@u-u.conj().T@g for g,u in zip(gs,U)),np.zeros_like(eye))/2;f=plus.conj().T@c@minus\n triangular=np.block([[np.eye(2*V),-f],[np.zeros((2*V,2*V)),np.eye(2*V)]])\n T=theta@triangular.conj().T@block_diag(np.linalg.inv(bp),bm)@triangular@theta.conj().T\n sign,logpref=np.linalg.slogdet(bp)\n if abs(sign-1)>1e-10:raise ArithmeticError('Bpref notpositive')\n ev,Q=eigh(T);occupied=Q[:,2*V:];logweight=float(logpref+np.log(ev[2*V:]).sum())\n return T,occupied,logweight\nactualhalf,actualpref,actualT=s.physical_spatial_onebody(gamma,.12,U1,[zero]*4,eye)\nmanualT,_,_=primitive(.12,U1);positive_control=float(np.linalg.norm(actualT-manualT,ord='fro'))\nif positive_control>1e-11:raise ArithmeticError('Positive actualsupplier primitivecontrol failed')\nface_action=0.\nfor j in range(3):\n for k in range(j+1,3):\n  curl=A[j]+A[k,neighbors[j]]-A[j,neighbors[k]]-A[k]\n  face_action+=float(np.sum(2*np.sin(curl/2)**2))\nchord=float(np.sum(4*np.sin(A/2)**2));rows=[]\nfor k in [.06,.04,.03,.02]:\n _,Q0,L0=primitive(k,U0);_,Q1,L1=primitive(k,U1)\n sign,logoverlap=np.linalg.slogdet(Q0.conj().T@Q1)\n betaE=-2*float(logoverlap)/chord;betaB=(L0-L1)/face_action\n rows.append(dict(kappa=k,leading16kappa4=16*k**4,temporal_occupied_Gram_beta=betaE,spatial_full_pref_plus_occupied_beta=betaB,temporal_over_leading=betaE/(16*k**4),spatial_over_leading=betaB/(16*k**4),temporal_over_spatial=betaE/betaB,neutral_logweight_difference=L0-L1,occupied_Gram_logmodulus=float(logoverlap)))\nprint(json.dumps(dict(scope='STATIC MEANRoot6911 primitive all4V/allNc2V occupied reference; preGauss/preCoul/Phi-radial. NOT macroscopicsource/photon/comptonadmission',spatial_shape=[N]*3,full_onebody_components=4*V,occupied_count=2*V,delta_field_norm=float(np.linalg.norm(A)),coexact_divergence=divergence,harmonic_means=A.mean(axis=1).tolist(),face_action=face_action,temporal_chord_squared=chord,positive_actualsupplier_control_fro=positive_control,supplier_source_sha256=hashlib.sha256(s.OWN_BYTES).hexdigest(),root_source_sha256=s.ROOT_SOURCE,rows=rows,runtime_seconds=time.monotonic()-start)))\n",
+  "program_sha256": "31e70ceee7b3457fd7fb9977c285823adedac48fd6209638b03c27d5a1a17468",
+  "natural_exit": 0,
+  "stderr": "",
+  "observed": {
+    "scope": "STATIC MEANRoot6911 primitive all4V/allNc2V occupied reference; preGauss/preCoul/Phi-radial. NOT macroscopicsource/photon/comptonadmission",
+    "spatial_shape": [
+      6,
+      6,
+      6
+    ],
+    "full_onebody_components": 864,
+    "occupied_count": 432,
+    "delta_field_norm": 0.20000000000000004,
+    "coexact_divergence": 2.644481434962307e-16,
+    "harmonic_means": [
+      1.6062254407192657e-20,
+      0.0,
+      3.2124508814385315e-20
+    ],
+    "face_action": 0.11995376067280733,
+    "temporal_chord_squared": 0.03994036500153139,
+    "positive_actualsupplier_control_fro": 0.0,
+    "supplier_source_sha256": "741fbc1f196061cb7f0e2c479770e992304ac2de90492f002ef4cbd931315d50",
+    "root_source_sha256": "6911f0283dc0f84f4cc05202deb67dcd3266d5c64ca1a05e149f1567451e0f9c",
+    "rows": [
+      {
+        "kappa": 0.06,
+        "leading16kappa4": 0.00020735999999999997,
+        "temporal_occupied_Gram_beta": 0.00022645251097417362,
+        "spatial_full_pref_plus_occupied_beta": 0.0002485334286120152,
+        "temporal_over_leading": 1.0920742234479826,
+        "spatial_over_leading": 1.1985601302662772,
+        "temporal_over_spatial": 0.9111551401308191,
+        "neutral_logweight_difference": 2.9812519414917915e-05,
+        "occupied_Gram_logmodulus": -4.5222979719108936e-06
+      },
+      {
+        "kappa": 0.04,
+        "leading16kappa4": 4.096e-05,
+        "temporal_occupied_Gram_beta": 4.257398648692587e-05,
+        "spatial_full_pref_plus_occupied_beta": 4.4305659455873084e-05,
+        "temporal_over_leading": 1.0394039669659636,
+        "spatial_over_leading": 1.0816811390594014,
+        "temporal_over_spatial": 0.9609153099126784,
+        "neutral_logweight_difference": 5.314630470820703e-06,
+        "occupied_Gram_logmodulus": -8.502102799290423e-07
+      },
+      {
+        "kappa": 0.03,
+        "leading16kappa4": 1.2959999999999998e-05,
+        "temporal_occupied_Gram_beta": 1.324355969934266e-05,
+        "spatial_full_pref_plus_occupied_beta": 1.3540029493912218e-05,
+        "temporal_over_leading": 1.021879606430761,
+        "spatial_over_leading": 1.0447553621845849,
+        "temporal_over_spatial": 0.9781041987609514,
+        "neutral_logweight_difference": 1.6241774574154988e-06,
+        "occupied_Gram_logmodulus": -2.644763041556586e-07
+      },
+      {
+        "kappa": 0.02,
+        "leading16kappa4": 2.56e-06,
+        "temporal_occupied_Gram_beta": 2.5846667528539385e-06,
+        "spatial_full_pref_plus_occupied_beta": 2.6100011551236508e-06,
+        "temporal_over_leading": 1.0096354503335696,
+        "spatial_over_leading": 1.0195317012201761,
+        "temporal_over_spatial": 0.990293336759649,
+        "neutral_logweight_difference": 3.1307945391745307e-07,
+        "occupied_Gram_logmodulus": -5.1616266758154616e-08
+      }
+    ],
+    "runtime_seconds": 56.28952199802734
+  },
+  "numerics": "Independent literal sourceformula in logdet domain because direct dense detB prefactor overflows at216sites/smallkappa. Positivecontrol against actual physical_spatial_onebody at SAME6cube/.12/A passes. All4V modes and all2V occupied canonical eigenvalues retained at each static field. Not globalcoupledK eigenvalue or canonicalinteractingSlater approximation. Temporal quantity is gaugeindependent GramMODULUS after endpointstaticweights removed, not an arbitraryeigenframe phase/pointwisepositivity assertion. N6 admits length6 winding corrections; measured finitek ratios are not analytic macroremainder certification."
+}

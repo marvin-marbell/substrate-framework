@@ -1,0 +1,46 @@
+{
+  "candidate": "rich_frame_transport_20261014_cubic_frame_gauss_peierls_v1",
+  "status": "finite constructive candidate; not a claim of an electron or bulk QED",
+  "source_law": {
+    "gauss": "G_a = R_a + T_a = 0",
+    "physical_spin": "S_a is the left SU(2)-frame coordinate derivative projected to the exact right-colour-Gauss subspace; the primitive scalar colour creation operators commute with S_a.",
+    "dressed_source": "d_m^dagger = sum_(alpha,beta) D^(1/2)_(m alpha)(U) epsilon_(alpha beta) c_beta^dagger",
+    "source_hop_reduction": "After raw source construction and exact physical projection, sum_m d_m d_m^dagger on the odd N=1 doublet is I_2 (measured residual 0). This is the actual dressed-source intertwiner used by the cubic hopping; bare c^dagger has zero physical source Gram.",
+    "centre_sewing": "psi(-U,c)=(-1)^N psi(U,c), an explicit spin-structure input that lets odd source states transform with physical left Noether j=1/2."
+  },
+  "same_law_internal_hamiltonian": {
+    "frame_metric": "H_kin = (L+S-C_N B Q)^2/(2 I_c) + (L-C_N B Q)^2/(2 I_r) + S^2/(2 I_f)",
+    "parameters": "I_c=2, I_r=4, I_f=1.5, q=-1, r=1.1, sigma=.35, epsilon=.04, omega=.8, B=.45; hbar=1.",
+    "longitudinal_gauss": "E_C(N)=N^2 q^2/(8 pi epsilon 36) sum_(a,b) K_sigma(|r_a-r_b|), K_sigma(0)=1/(sqrt(pi)sigma), K_sigma(d>0)=erf(d/(2sigma))/d.",
+    "field": "Three local vector oscillator coordinates Q_a=(b_a+b_a^dagger)/sqrt(2), with total occupation cutoff one for this NEW run. They are finite local modes, not propagating photons."
+  },
+  "mobile_extension": {
+    "positions": "Open 2x2x2 cubic site set r in {0,1}^3; 12 nearest-neighbour links; one mobile charged source, pinned cubic scaffold.",
+    "hamiltonian": "H = sum_x H_internal(x) - t sum_(x,a; x+e_a) [X_frame tensor exp(i alpha Q_a) + h.c.], t=.16, alpha=.35, X_frame=sum_m d_m d_m^dagger=I_2.",
+    "current": "j_(x,a) = -d H/d A_(x,a) for exp(-i q A Q_a); the reported bond-current operator is the analytic first derivative of this same link exponential. The Peierls second derivative is retained in H by the full exponential, not linearized.",
+    "event": "Prepare the lowest local charged eigenvector at site (0,0,0); apply U=exp(-i eta Q_z), eta=.8, at that site; evolve the full 192-dimensional fixed-number state under H. Compare with the identical unpulsed seed under the same H.",
+    "measurements": "At times 0,.75,1.5,2.25,3,4,5,6 measure all site probabilities, strict opposite-corner projector, three Cartesian link-current expectations, field oscillator energy, norm, and the physical projected field-coordinate S_z."
+  },
+  "adjacent_charge": {
+    "source_correlator": "G_mn(z)=V_m^dagger [z-(H_N=1-E_N=0)]^(-1) V_n, V_m=d_m^dagger|Omega_N=0>, z=.9+.07i.",
+    "second_insertion": "The same d_m^dagger connects exact N=1 and N=2 colour-Gauss sectors. Sum_m d_m^dagger d_m on the N=1 source domain equals identity to 6.3e-16; each individual channel is Pauli-blocked/rank-one.",
+    "limits": "This is the same-law adjacent-charge source/resolvent and finite Gaussian Coulomb addition, not a two-mobile-charge inclusive scattering calculation."
+  },
+  "measured_scope": {
+    "final_far_corner_probability_change": 0.007068461389540648,
+    "final_field_coordinate_spin_z_change": 0.01316878133492455,
+    "all_link_cut_far_corner_response": 0.0,
+    "current_coupling_off_far_corner_response_max": 7.771561172376096e-16,
+    "norm_error_max": 4.44e-15,
+    "preparation_field_energy_change_at_t0": 0.27853811608513346,
+    "interpretation": "A real finite cubic packet moves; a local field-coordinate unitary changes later remote charge probability, field-coordinate physical spin and current response. The response vanishes when all links are cut or field dependence of the links is removed. The field pulse deposits energy locally at preparation time; this is not an asymptotic photon-scattering event."
+  },
+  "unpaid": [
+    "Only one mobile charged species; no second supplier species and no all-species cut/current-off control.",
+    "No mobile two-charge packet interaction, inclusive scattering, or recoil-conditioned cross section.",
+    "Primitive colour fundamental, CAR, centre sewing, Gaussian charge profile, inertias and longitudinal quadratic law remain inputs.",
+    "Pinned cubic lattice has only cubic spatial symmetry; no exact spatial SO(3) Noether vector, free centre of mass, or continuum limit.",
+    "Three local oscillator coordinates are not spatial photons; finite field cutoff is untested for convergence.",
+    "No self-binding, inertial mass, positron/pair sector, Lorentz invariance or parameter closure."
+  ]
+}

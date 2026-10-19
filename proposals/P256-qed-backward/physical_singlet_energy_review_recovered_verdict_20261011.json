@@ -1,0 +1,127 @@
+{
+  "kind": "INDEPENDENT_LITERAL_WHOLE_SOURCE_ENERGY_REVIEW_NO_ADMISSION",
+  "verdict": "VALID_SCOPED_VARIATIONAL_ENERGY_BOUND",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "bookkeeping_revision": "0c3a3b5e103e08c192ba61ba566c920581a24a72d9ef512fe6c67a025ad2a788",
+    "accepted_science_retained": "909367f513e90e70209a1bf9dff3635f40b08f1a00add291fecc531a7887c06d",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "parent_only_admission": true
+  },
+  "literal_input_sha256": {
+    "physical_singlet_circuit_source_20261011.py": "dea3025ae8509cd6669ac26df9fcb1a5d7b416aee0642778d86f2be7cb8aca03",
+    "physical_singlet_circuit_epoch4_proof_20261011.json": "56d7a2fbd1bac380ff714db20e66f68a5fb2e07788dcf2701a13741e1898c038",
+    "physical_singlet_circuit_epoch4_receipt_20261011.json": "4d2f71d193393b5230aac39ad2bb8ab69a8f10a2fea91f2bb71b722886c8fca6",
+    "physical_singlet_circuit_delivery_20261011.json": "bb739465e317cec16ceb6b3cccb7458629ad2c62e890fa8c8bab98a8b2da9c12",
+    "joined_phi_u1_uniform_sharp_gauss_proof_20261010.json": "fb99f8b2accadee1f868922a972d0dbbb46dacc06b88fef61dfe4bc8e3d44dfb",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "joined_phi_u1_bulk_flux_ring_consumer.py": "49526302cea3ccf70465332621f4d2dc502f9de9db9415296933152e2f37e997",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json": "5b97862fc7fca21b8797d549d7d4dfdde58b101e8c46c7a7cfb6531a669c4354",
+    "physical_singlet_energy_review_recovered_control_20261011.py": "a0346e2c64b4ddc7983afb1f7f7c2f216d746b2f0940f62c615be74cc535d3f5"
+  },
+  "claim": {
+    "energy": "<Psi,H Psi>/V < -2^6070",
+    "units": "Original joined Hamiltonian energy units; a=1/64, V=N^3 sites. This is energy PER SITE, not per volume a^3 V, particle, Lambda, or rescaled diagnostic unit. Total energy < -V 2^6070.",
+    "range": "every finite even N>=4 on periodic cubic lattice",
+    "parameters": "Lambda=2^8192, chi=2^-4096, F=2^10240; eta=2^-4200, alpha=2^-20, t=2^7168, delta=2^-100",
+    "state": "Literal full60 Cart/site Gaussian and exact Haar Gibbs wave; neutral canonical2V, all64 charged canonical2V each; exact full-Fock matching circuits; no rank2 frozen-frame replacement."
+  },
+  "proof": {
+    "matching_and_neutral_sign": "Parity-even x matched to x+axis0 partitions every even-N lattice. Pparity is projector diag(I4,0), not signed diag(I4,-I4). On each edge take SVD T=sqrteta L diag(sigma)R*: physical h=-Lambda[[0,T],[T*,0]]. exp(-epsilon_n[h,P]) rotates each filled-left/empty-right orbital by alpha sigma. Its expectation per edge is -2 Lambda sqrteta sum sigma sin(2alpha sigma). V/2 edges yields per-site -Lambda sqrteta E sum sigma sin(2alpha sigma). Charged circuit acts on different fermion factors and commutes with neutral observables; it cannot change this result.",
+    "nonmatching_and_onsite": "Neutral one-body density has diagonal and matched offdiagonal blocks only. All other nearest-edge expectations vanish, including periodic ones for N>=4. Literal heavy profile improved=False has exactly three length1 paths and no length2 paths. Under q->-q the generator changes sign while diagonal occupation blocks are even (cos/sin squared); onsite Phi0 is odd. Thus actual fullPhi onsite integral vanishes, not merely its frozen-frame trace.",
+    "M2": "Tr(Tz*Tz) conditional on U: each independent endpoint field has ETr Phi_mu^2=15/2, cross-endpoint and cross-mu terms vanish, and each factor1/2 yields M2=(15/4)sum_mu |c_mu|^2. Unitary U and Peierls absence neutral make this independent of U. Exact binary-rational coefficient value is 508196055029096216528358240424035/1267650600228229401496703205376. No factorization of interacting tilted colour links is needed.",
+    "M4_sine": "Conditional on U, vec(Tz) is a centred real Gaussian, including correlated real/imag components. E||Tz||HS^4=(TrSigma)^2+2TrSigma^2 <=3M2^2; Tr((Tz*Tz)^2)<=||Tz||HS^4. Hence M4<2^24. For x>=0, sin x>=x-x^3/6 globally: derivative of sin x-x+x^3/6 is cos x-1+x^2/2>=0. Therefore neutral/site <=Lambda sqrteta[-2alpha M2+(4/3)alpha^3 2^24] < -2^6072. The inequality does not require alpha sigma pointwise small on unbounded Gaussian support.",
+    "Jordan_independent": "Fierz covariance sum_A(T_A)ij(T_A)kl=(delta_il delta_jk-delta_ij delta_kl/4)/2. Wick gives ETr A^4=435eta^2/16, ETr A^2B^2=225eta^2/16, ETr ABAB=-15eta^2/16 for independent A,B. Four diagonal ordered mu=nu anticommutators contribute435eta^2; twelve ordered unequal pairs contribute315eta^2. Total750eta^2. Literal Lambda/(16a)=4Lambda gives3000Lambda eta^2/site. Exact rational index-contraction control independently derives all three traces; false commuting shortcut gives4440 and is rejected.",
+    "alignment": "There are3V edges and4 fields. E||Phi_r-U Phi_c U*||HS^2=15eta per field for arbitrary U. Total180etaV, times F/40 gives(9/2)FetaV.",
+    "Gibbs_normalizer": "C=sum3Vfaces(4-ReTrUface)>=0. Normalized baseHaar and SU4 small-ball mass >2^-150 r^32: complexGinibre ball, polar U4, determinant correction yields SU4 Frobenius radiusr with delta=r/8. Probability>=exp(-5)r^32/(8^32 16!)>2^-150r^32. Event all3V links radiusr=t^-1/2 gives C<=24V/t; hence Z>2^-450V t^-48V exp(-24V)>0, and Z<=1. Convex logZ gives <C>/V <=(2/t)(450 log2+48 log t+24). Exact integral-defined normalization is legitimate; no evaluated partition function is asserted.",
+    "Haar_base_and_shared_cross": "Integration by parts gives E sum|XC|^2=(1/t)E Delta C. SU4 Casimir15/8 and four links/face yield Delta C=(15/2)sum ReTr Uface<=90V, not pointwise nonnegative. Base energy <=27chi t V/8. For shared gU source, norm-square inequality doubles this once to27chi t V/4 and prices all circuit derivatives; no independently paid matter seas.",
+    "charged_full_matter": "Actual onsite slopes are distinct active2446017547615601/70368744177664 and auxiliary643170321783849/17592186044416, each<64; active1+aux63. Per species onsite cap4||onsite Phi0|| and each directed path plus adjoint cap8||T|| hold in fullCAR, all0..4 occupancies. Literal six paths (three length1 and three length2) have coefficient-vector norm<64. Both endpoint fields enter, with ordered Wilson product, not midpoint. E endpoint radius<=sqrt120<11. Conservative all64 coefficient 64(4*64*11+6*8*64*11)=2342912<2^24. Thus absolute charged matter <=2^24 sqrteta/site; no post-circuit cancellation of different onsite slopes is assumed.",
+    "allsector_jets": "rho endpoint range[-128,128], rho_r^2+rho_c^2<=32768, commutator factor<=65536. Full512 orbital edge CAR count, coefficients<64, give charged exponent cap2^35 delta R and neutral2^10 alpha R, safely above literal sums. ajet=2^10alpha+2^35delta<2^-9. Cart derivative cap ajet/sqrteta, colour/Peierls derivative cap ajet R. Unitary Duhamel bounds preserve these caps irrespective of exponent size or local occupancy. Matching means each Cart coordinate or selected colour/Peierls edge belongs to at most one gate pair; neutral+charged mixed product first derivatives are included by sum before squaring. ER^2=120. Explicit per-site bounds: Phi circuit/(chi/eta)<=240ajet^2; Haar circuit/chi<=(9/4)120ajet^2; full rawE including doubled packet bound<=7680ajet^2+2. Each is far below2^30. Second jets are relevant for D(H), not needed to claim energy variance. No numeric eigenvalue is used as a certificate.",
+    "Phi_base": "With60 Cart/site and Gaussian varianceeta, 4chi sum||df||^2=60chi/eta/site. Radial cross with U vanishes exactly because f is real and <v,U*dU v> purely imaginary for fixed normalized initial matter vector. Conservative2^30chi/eta absorbs any alternative doubled base accounting.",
+    "rawE_once": "The Hamiltonian raw physical electric form64 sum E_edge^2 is paid ONCE, including both longitudinal/Gauss and cycle effects, not HE and HC twice. Initial native paired source rho0, integerk0 has E0; first-derivative circuit electric cap is included above. Original real-cover smooth packet with B, d=2V+1, w=1/(64dTrG) adds64|Bbeta|^2<=1/(64dTrG); norm-square cross doubles packet and circuit terms, still covered. This is not beta0 minimization or a real-cover delta vacuum.",
+    "exact_pricing": "New control performs exact Fraction arithmetic independent of old uniform_prices function. Positive prices are60chi/eta,3000Lambda eta^2,(9/2)Feta,(27/4)chi t,(7/5)(F/t)(450+48*7168+24),2^30chi/eta,2^30chi,2^30,2^24sqrteta. Natural logs bounded by log2<1 and logt=7168 log2<7168. Their sum plus independently recomputed neutral upper is strictly <-2^6070. Largest alignment price is(9/2)2^6040, well below neutral gain.",
+    "baseline": "Same paired neutral-parity source BEFORE both circuits: onsite fullPhi integrals0, hopping changes local occupation and expectations0, compact integerk0 electric0; bosonic kinetic and squared potentials nonnegative. Sharp baseline similarly exact matter0 with nonnegative electric and bosonic energy. Comparison uses exact nonnegative lower0, never a variational upper as a lower."
+  },
+  "literal_assumptions": [
+    "Joined ordered-matrix continuation Hamiltonian as hash-bound sharp law: Phi su4 Hermitian traceless generators Tr(TA TB)=delta/2; real Cart Gaussian covarianceeta; compact normalized Haar and literal physical -Lambda neutral scale.",
+    "Literal gauge-covariant extension T=sum c_mu(Phi_r W+W Phi_c)/2, with W ordered complete endpoint Wilson product, and onsite scalarPhi0. Frozen archived-frame onsite energies are not fullPhi slopes.",
+    "Independent domain review supplies physical Gauss section and D(H); this verdict establishes energy algebra, not independent physical-domain admission. Finite even N, periodic matching as specified. Original-cover statement uses the literal B packet and once-paid raw electric convention.",
+    "No source shape parameter is a coupling: epsilon_c=2^2000 only accompanies delta=epsilon_c sqrteta=2^-100. No charged-only finite-step descent, monotonicity or stationarity is established."
+  ],
+  "controls": {
+    "artifact": "physical_singlet_energy_review_recovered_stdout_20261011.txt",
+    "natural_exit_artifact": "physical_singlet_energy_review_recovered_exit_20261011.json",
+    "returncode": 0,
+    "input_capsule": "physical_singlet_energy_review_recovered_input_capsule_20261011.zip",
+    "input_capsule_sha256": "87599cf71966a92e18d2dcc9d4b76212341b3289d7b2c6cb91ed12bf63ed2d9e",
+    "adverse": [
+      "wrong commuting Jordan contraction rejected",
+      "wrong neutral physical sign rejected",
+      "zero neutral circuit rejected"
+    ],
+    "observed": {
+      "Jordan_exact": {
+        "Hamiltonian_coefficient": 3000,
+        "Tr_A2B2": "225/16",
+        "Tr_A4": "435/16",
+        "Tr_ABAB": "-15/16",
+        "sum_ordered_anticommutator_squared": "750",
+        "wrong_commuting_coefficient_rejected": "4440"
+      },
+      "Wick_M4_bound_strictly_below_2_24": true,
+      "adverse_wrong_sign_rejected": true,
+      "adverse_zero_alpha_rejected": true,
+      "allsector_jet_prices": {
+        "Haar_over_chi": "175240018975550442190679446231449735/680564733841876926926749214863536422912",
+        "Phi_over_chi_eta": "19471113219505604687853271803494415/85070591730234615865843651857942052864",
+        "rawE_once_with_packet": "5336383096359169096303081512924872719/2658455991569831745807614120560689152"
+      },
+      "charged_absolute_coefficient": 2342912,
+      "distinct_onsite_slopes": true,
+      "input_sha256": {
+        "induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json": "5b97862fc7fca21b8797d549d7d4dfdde58b101e8c46c7a7cfb6531a669c4354",
+        "joined_phi_u1_bulk_flux_ring_consumer.py": "49526302cea3ccf70465332621f4d2dc502f9de9db9415296933152e2f37e997",
+        "joined_phi_u1_uniform_sharp_gauss_proof_20261010.json": "fb99f8b2accadee1f868922a972d0dbbb46dacc06b88fef61dfe4bc8e3d44dfb",
+        "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+        "physical_singlet_circuit_delivery_20261011.json": "bb739465e317cec16ceb6b3cccb7458629ad2c62e890fa8c8bab98a8b2da9c12",
+        "physical_singlet_circuit_epoch4_proof_20261011.json": "56d7a2fbd1bac380ff714db20e66f68a5fb2e07788dcf2701a13741e1898c038",
+        "physical_singlet_circuit_epoch4_receipt_20261011.json": "4d2f71d193393b5230aac39ad2bb8ab69a8f10a2fea91f2bb71b722886c8fca6",
+        "physical_singlet_circuit_source_20261011.py": "dea3025ae8509cd6669ac26df9fcb1a5d7b416aee0642778d86f2be7cb8aca03",
+        "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459"
+      },
+      "kind": "INDEPENDENT_EXACT_ENERGY_CONTROLS_NOT_SCIENTIFIC_ADMISSION",
+      "neutral_M2_exact": "508196055029096216528358240424035/1267650600228229401496703205376",
+      "physical_floating_evaluation": false,
+      "strict_per_site_below_minus_2_6070": true
+    }
+  },
+  "findings": [
+    {
+      "severity": "clarification",
+      "finding": "Delivery is a scoped variational milestone; domain recovery VALID is not by itself an energy proof. This independent energy review fills the algebra/budget slice without scientific admission."
+    },
+    {
+      "severity": "provenance",
+      "finding": "Frozen delivery bookkeeping_revision50a7 is historical, not current governor0c3a. Frozen artifacts preserved; verdict binds current contract and exact bytes instead of retagging."
+    }
+  ],
+  "not_established": [
+    "full stationary ground",
+    "phase",
+    "IR atom/pole",
+    "common cone",
+    "original SOURCE admission",
+    "law/coupling/vfit adoption",
+    "numerical full-H norm/variance",
+    "charged-only finite-step descent"
+  ],
+  "production_untouched": true,
+  "old_producers_or_checkers_executed": false,
+  "tooling": {
+    "AST": "positive scalar_paths structural query and Python AST parse",
+    "LSP": "Pyright stdio actual documentSymbol241 and definition uniform_prices exercised; xd://lsp unavailable; no retained publishDiagnostics observation or new-code lint/test claim"
+  },
+  "parent_consumer_required": "Parent integrates literal scope verdict with independent domain and native representation recoveries; worker status is not scientific admission."
+}

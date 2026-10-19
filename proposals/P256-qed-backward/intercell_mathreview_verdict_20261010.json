@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "reviewer": "IntercellBoundMathReview",
+  "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+  "plan_binding": "Existing shared plan explicitly bound; no plan edits",
+  "contract_sha256_supplied": "8d84558877373686d935b95b24007c232e98b04aea83d9f182c4715db9912f36",
+  "verdict": "CONDITIONAL",
+  "mathematical_verdict_within_stated_hypotheses": "VALID",
+  "findings": [],
+  "hypotheses": [
+    "Frozen source and receipt hashes below; saved exact rational g0,gs and microscopic coefficients, not a newly solved quantum mean",
+    "Clifford Phi frame, identity SU4, compact native beta0, actual AP seams and complete one/two-link charged hopping",
+    "A=1 seed; disjoint 2x2 xy cells; all even N>=4; active1+aux63 with equal hopping but different onsite masses",
+    "One common normalized Haar edge field; normalized complete Slater wedges, not independent copy fields",
+    "Compatible frozen-body Gauss/background-centred lift for HE+HC=64 sum over all3V full-edge E squared; fixed Ref4 and unchanged neutral exact eigenstate subtracted"
+  ],
+  "reviewed_results": {
+    "uniform_Haar_sameH_descent": {
+      "verdict": "VALID under hypotheses",
+      "tau_exact": "1/262144",
+      "delta_upper_per_V_exact": "-2779126375873508669976816519707134697075001751775185462604405637007722058024381/289480223093290488558927462521719769633174961664101410098643960019782824099840000",
+      "delta_upper_per_V_display": -0.009600401527180951,
+      "basis": "Uniform pointwise derivative/curvature estimates integrate against the same normalized Haar measure; no finite-field quadrature substituted for this proof"
+    },
+    "complete_body_action": {
+      "verdict": "VALID norm upper bound only",
+      "norm_upper_per_V_exact": "24912655434068856209087498347852179498109703/1701411834604692317316873037158841057280",
+      "norm_upper_per_V_display": 14642.342863365051,
+      "not": ["actual complete variance", "stationarity", "full physical Phi/SU4 action"]
+    },
+    "parent_firstH": {
+      "verdict": "VALID Gaussian first-action identity; CONDITIONAL finite-float native evaluation",
+      "Gaussian_012PH_formula": "Independently matched against direct70-dimensional fixed-number Fock action with nonzero Berry means, multiple electric directions and distinct onsite-role matrices: max squared-sector defect3.637978807091713e-12",
+      "source_not_PH_cropped": "012PH labels first H action relative to a complete Gaussian source; a separate full Gaussian control has nonzero3PH amplitude0.0590539852396813",
+      "native_translation_reduction": "Independently constructed AP signed translation matrices agree exactly with parent move;16 translations times12 representatives cover all192 edges exactly once. Unsigned translation fails by10.336973987227875",
+      "parent_point_Theta0_twoPH_squared": 127.46369082672382,
+      "parent_point_value_evidence": "Read from pinned receipt; not reexecuted old producer and not independently reproduced numerically. Formula, coefficients, translation and jets independently controlled",
+      "is_Haar_variance": false,
+      "roundoff_interval_enclosed": false
+    }
+  },
+  "derivation": [
+    "On an ordered adjacent z-cell pair, onsite empty-hop-occupied block has HS norm sqrt(8 ci_z^2 gs); the4 vertical phases/AP signs drop out. The full block HS norm is4 sqrt(c0_z^2 g0+ci_z^2 gs). Four unitary gates give ||Pseed-Ponsite||<=8t, hence perturbation<=64t sqrt(c0_z^2 g0+ci_z^2 gs).",
+    "All even N>=4 have V/4 cells and exactly V/2 directed adjacent z-cell sectors; forward/reverse are distinct and length2 z hops do not join those endpoints. Thus ||Q hIC P||HS^2>=V b^2/2;64-copy first derivative is-128||Q hIC P||HS^2<=-64V b^2. N2 is excluded for genuine forward/reverse collision.",
+    "t=1/128, sqrt(gs)>=3/10, sqrt(gs)<=1/3, sqrt(g0)<=11/20, sqrt8>=14/5 give b>=(21/25)|ci_z|-(11/40)|c0_z|-|ci_z|/6. Every saved bound fraction was independently reconstructed from primitive profiles and matched exactly.",
+    "Directed hops are nonnormal: operator norm bounded by SUM |c0|sqrt(g0)+|ci|sqrt(gs), not Euclidean sqrt. Row/column Schur gives B. P/Q offdiagonal S=[hIC,P] has ||S||<=B; double commutator trace norm<=4B^2 rankP=8VB^2, giving matter Taylor remainder4V Hrole B^2 tau^2 per role. A rank1 toy exactly saturates coefficient4 and rejects coefficient2.",
+    "Each literal edge enters one length1 and two length2 paths, including reverse. ||hIC,e'||1<=8edge, ||P_e'||1<=16s, so ||S_e'||1<=16edge+32Bs=D. Integral unitary Duhamel bounds ||delta R||1<=|tau|D and ||delta R-tau r1||1<=tau^2BD. No exponential-derivative rank bound is used; a rank1 insertion has numerical derivative rank4 in the adverse control.",
+    "Seed U,P and all seed edge derivatives are cell diagonal; hIC,S and S_e' are offcell. Therefore trace P0 r1 and trace P0 r0 Q0 r1 vanish. Seed Berry mean is separately zero: each gate/connection is Clifford-even, trace R=0 and trace Gamma0 R=0. Offcell orthogonality alone kills linear mean change; seed mean zero is needed for the quartic Berry price.",
+    "Variance delta per edge<=tau^2(2sBD+D^2); |mu_tau|<=tau^2BD. Shared64-copy Wick gives64 Var+4096 mu^2, then electric coefficient64 and3V edges give192[64(2sBD+D^2)tau^2+4096B^2D^2tau^4] perV. No transverse-only omission or independent-copy law.",
+    "S_e''=[h_e'',P]+2[h_e',P_e']+[h,P_e'']. Bounds ||h_e''||1<=8edge, ||P_e'||op<=2s and ||P_e''||1<=16s+32s^2 yield D2=16edge+64sedge+32Bs+64Bs^2. Ordered seed first/second jets were independently obtained through block exponential derivatives at nonzero phases, matching target jets below1e-18 and rejecting sign/cross-term omissions.",
+    "Whole onebody B_tau jets have trace bounds b1=8s+|tau|D, b2=8s+16s|tau|D+|tau|D2+tau^2D^2. Exterior/tensor product differentiation gives64b2+4096b1^2, not a finite-rank exponential derivative assumption. Triangle over all3V edges and complete charged matter yields2 sumload Hrole+192(64b2+4096b1^2) perV after neutral eigenenergy subtraction.",
+    "With R=-i Bdag B', T=R', K=Y0dag R W0, mu=64 trace Roo, Efull^2 action is dGamma(R)^2-i dGamma(T). Its scalar is mu^2+64||K||HS^2-i64trace Too;1PH is2mu K+Ree K-K Roo-iTeo; summed2PH norm is2G^2 sum_e,f[64^2(trace Ke_dag Kf)^2-64trace((Ke_dag Kf)^2)]. Distinct-role1PH terms must remain separate. These coefficients reject independent-copy, missing-exchange and role-average controls.",
+    "Derivative power-series recurrence differentiates ordered products, not exp(A)(F+E^2). For order8, tails are exp(a)a^9/9!, exp(a)e a^8/8!, and exp(a)[f a^8/8!+e^2 a^7/7!]. Independent block-exponential controls lie within these tails and reject commuting derivatives and omitted two-insertion tail. Analytic truncation bounds do not enclose floating roundoff."
+  ],
+  "independent_execution": {
+    "python": "/home/administrator/substrate-framework/.venv/bin/python",
+    "commands": ["python -B intercell_mathreview_controls_20261010.py", "python -B intercell_mathreview_secondjet_20261010.py"],
+    "natural_process_exit_codes": [0, 0],
+    "old_producers_root_mean_precision_checkers_run": false,
+    "build_lint_tests_formatters_diagnostics_run": false,
+    "language_navigation": "Installed Pyright stdio server at project root:14 real document symbols,3 construction references, natural exit0. Positive Python AST expm_frechet query. Mounted xd://lsp unavailable; direct existing transport used. Diagnostics explicitly forbidden."
+  },
+  "nonclaims": ["Full physicalPhi/Gauss ground", "same-ground photon", "stationarity/minimizing ground", "Haar-integrated fullH variance", "physical-hopping phase", "IR atom", "commoncone", "originalSOURCE", "campaign closure", "agent approval as physical authority"],
+  "artifacts": [
+    {"path":"intercell_mathreview_controls_20261010.py","sha256":"5f09a543164d672ef388353772f25583b9dd37b8456e654d487cac7f5a4693be"},
+    {"path":"intercell_mathreview_controls_20261010.json","sha256":"4bada152149991fbec0895593f04c40303f1be363adf904f0979585a65fda4ac"},
+    {"path":"intercell_mathreview_secondjet_20261010.json","sha256":"1becf16464a211831a2220563858a8e8d88aeb33bfd7f7954a99692825be3140"},
+    {"path":"intercell_mathreview_language_20261010.json","sha256":"0e32f56766949607c711133fe1c4d84daf3c4d803415db9eb88268b901390cfd"}
+  ],
+  "frozen": {
+    "spatial_intercell_source.py":"2c323b844cfafb27692b3e7e5f107272477c4448c92481b65b932768b7886713",
+    "spatial_intercell_actual_attempt2_20261010_receipt.json":"a2f6dab92f2974292bb2c25c3b0968c80d35936b3d7fcc17391763c00526da17",
+    "spatial_intercell_complete_action_parent.py":"fc822f2d15b27f4fe78c34e7c6bda643db864ce5d2e15b4de4ad712f8ddbbf6a",
+    "spatial_intercell_complete_action_parent_attempt1_20261010_receipt.json":"951da598084f935725a63ef29b179ec54d3c8a87db1f17925462e0b85d2226df"
+  },
+  "shared_files_edited": false,
+  "handoff": "Parent integrates and performs sole final checker; no mathematical source fix identified. Preserve all hypotheses/nonclaims and distinguish saved pointTheta0 values from independently executed controls."
+}

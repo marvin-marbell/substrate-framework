@@ -1,0 +1,15 @@
+/home/administrator/substrate-222/proposals/P256-qed-backward/rich_quantum_common_field_20261015_model.py:46: FutureWarning: Input has data type int64, but the output has been cast to float64.  In the future, the output data type will match the input. To avoid this warning, set the `dtype` parameter to `None` to have the output dtype match the input, or set it to the desired output data type.
+  n = sparse.diags(electric, format='csr')
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_quantum_common_field_20261015_calculate.py", line 162, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_quantum_common_field_20261015_calculate.py", line 95, in main
+    e,v=spectrum(h,p['low_poles']);spectra[name]=(e,v)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_quantum_common_field_20261015_calculate.py", line 20, in spectrum
+    e,v=eigsh(h,k=min(k,len(h)-2),which='SA',tol=2e-10,maxiter=20000)
+                        ^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_base.py", line 468, in __len__
+    raise TypeError("sparse array length is ambiguous; use getnnz()"
+TypeError: sparse array length is ambiguous; use getnnz() or shape[0]

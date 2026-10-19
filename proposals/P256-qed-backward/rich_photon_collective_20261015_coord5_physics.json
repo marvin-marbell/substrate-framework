@@ -1,0 +1,13 @@
+{
+  "transverse":5,"velocity":0.7,"wilson":0.18,"coupling":0.65,"charge":-0.45,
+  "phi_center":1.0,"phi_width":0.8,"scalar_inertia":0.03,"scalar_stiffness":4.0,
+  "Q_radius":2,"Q_step":0.7,"field_bands":[1,2],"quantum_scalar_points":5,
+  "spectral_steps":24,"trajectory_krylov":28,"dt":1.0,"time_points":25,"pulse_momentum":1.0,
+  "law_change":"LITERAL field-coordinate finite-difference regularization of SAME physical electric/Peierls law.145 Q nodes:8-dimensional integer L1 ball radius2,step.7,Dirichlet outside; all8 real coordinates/two bands/both signs/both pol retained. QuantumPhi5 and same4526 determinant CI. Fresh vacuum/modes/dynamics,NO old energy/state/law splice.",
+  "electric":"K=sum_a(2I-T_a-T_a^dag)/(2 I_field h^2),I_field=V/2,with missing neighbors Dirichlet. Central Hermitian P_a=i(T_a-T_a^dag)/(2h). All Peierls factors are literal pointwise cos/sin(e profile.Q), so commute with Q EXACTLY. No bare oscillator,Maxwell restoration,fitstiffness or physical coupling change.",
+  "profile":"Common rectangular forward gradient D_a on extended radius3 coordinates yields K=sum D_a^dag D_a/(2 I_field). e_z=(area/2)sum_pol (sum_a f_a(z)(-i D_a)/I_field)^dag(same). Exact sum_z e_z=K. Mean E uses Hermitian centralP; forward-gradient vs centralP energy difference is an explicit finiteh regularization caveat.",
+  "physical_kick":"U=exp(i sum_a pdrive_a Q_a),both bands/pol present,phase centeredz2. EXACT field-only unconditioned coordinate-phase kick; unchangedmatter/Phi and Peierls at t0,preparation work purelyelectric. No sourcefilter/postselection.",
+  "selection_reason":"Actual shell3 larger-ring candidate had dominant nearlyflat .9565/.9713 coordinate branch and total-energy profile splitting/localoscillation; literal-coordinate fork directly removes finite oscillator [Q,Peierls] cause while preserving nonlinear quantum sea/Phi feedback. This is a MATERIAL computed alternative,not a newpermission gate.",
+  "limits":"FiniteQdomain/step not continuum equivalence; C5 rotation of Fourierquadratures doesnot preserve coordinatepointset. MatterC5PVM and fieldangularmean only,no conservedtotalC5 or fieldC5PVM claim. HigherPH beyond full(0,0)doublePH stillomitted.",
+  "governor":"issue222-rich-backward-candidates-20261014@7b55612f4a129ce64c3f0ea19ef7364e9791a5a12557b5ea596d48b22f410451","work_item":"photon-candidate"
+}

@@ -1,0 +1,19 @@
+{
+  "law": "3D-common-Gauss-CAR-electric-full-SdotL-quantum-event-v1-20261014",
+  "module": "rich_quantum_collision_20261014_model.py",
+  "constructor": "Sector(Parameters(...), vector=True)",
+  "basis_identity": "Ordered concatenation of newly constructed 3D Nactive_up1/down0 and up0/down1 common-Gauss bases, both torque0 before adding full-vector SdotL. Dimension7626 at bound1. The underlying constrained electric space is NOT an independent G/D tensor product.",
+  "state_semantics": "Complex normalized 7626-column vector in the literal basis array stored in actual1_states.npz. Fixed Nactive1 with both spin states; Nsupplier1; all r/flux states retained.",
+  "operators": {"H": "CSR complex energy generator", "spin": "three actual fixed-axis CAR spin operators", "frame_L": "three l1 vector generators", "F": "four literal Wilson sine operators in xy_left,xz_left,xy_right,xz_right order", "loop_electric": "four actual conjugate circulation observables", "currents": "active/supplier arrays of 12 first-source derivatives", "contacts": "active/supplier arrays of 12 second-source derivatives", "body_spin": "9x3 density-resolved primitive spin operators", "spin_currents": "12x3 symmetrized actual active-current spin receiver", "electric": "7626x12 integer electric fields", "active_density": "7626x9 actual charge density"},
+  "pure_methods": {"polarized_ground": "returns energy,g,lowest6,ground-subspace Sz eigenvalues", "evolve": "evolve(vectors,times,shift=0), full sparse exponential action", "constraints": "exact Gauss, electric-current and density-current operator residuals"},
+  "event_entrypoint": "rich_quantum_collision_20261014_calculate.py, NEW request from rich_quantum_collision_20261014_input.json",
+  "preparations": ["NEW chosen-ground baseline", "centered (Fxy+iFxz)g normalized postselection", "centered (Fxy-iFxz)g normalized postselection", "exp[-i eta(Fxy+k E_xz)]g normalized local coherent pulse", "exp[-i eta(Fxy-k E_xz)]g normalized local coherent pulse"],
+  "result_dimensions": {"times": "65", "joint_far_field_spin_PVM": "time65 x preparation5 x outcome4", "out_source_then_fixed_Sz_POVM": "time65 x preparation5 x outcome3", "primitive_spin_vector": "time65 x preparation5 x axis3", "active_density": "time65 x preparation5 x site9", "actual_spin_current_z": "time65 x preparation5 x edge12"},
+  "strict_detector_outcomes": ["remote electric occupied AND primitive Sz up", "remote electric occupied AND primitive Sz down", "remote electric empty AND primitive Sz up", "remote electric empty AND primitive Sz down"],
+  "source_POVM_outcomes": ["right-field-source filter THEN actual Sz up", "right-field-source filter THEN actual Sz down", "complement of right-field-source filter"],
+  "controls": "Identical basis and identical seeds/source projectors across full, complete cut, current-off, orientor-off and axial-dark law variants. Each has its own evolved same-state no-pulse baseline.",
+  "interpretation_correction": "The legacy result key max_helicity_* in local_unitary changes means signed-quadrature PREPARATION separation, not measured helicity. Only postselected Fxy +/- iFxz use exact circular coefficients; neither is an asymptotic helicity-eigenphoton claim.",
+  "capsule": "rich_quantum_collision_20261014_actual1_capsule.zip",
+  "units": "hbar=charge=lattice length=1; H in hopping energy, time inverse hopping energy",
+  "compatible_join": "Only this exact full-vector LAW/basis/source identity can join event observables. Axial precursor current helper algebra is reused but its state/spectrum is not. Primitive S origin, continuum photon phase and real pair sector remain unpaid."
+}

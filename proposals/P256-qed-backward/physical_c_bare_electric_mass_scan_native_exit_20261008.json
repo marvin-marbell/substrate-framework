@@ -1,0 +1,95 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "physical_c_bare_electric_mass.py",
+    "--output",
+    "physical_c_bare_electric_mass_scan_native_20261008.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "natural_exit_observed": true,
+  "completion_evidence": "proc://bg_1221 completed, terminal capsule_written, no timeout/cancellation",
+  "process_wall_seconds": 735.87,
+  "capsule": "physical_c_bare_electric_mass_scan_native_20261008.json",
+  "capsule_sha256": "704467d48ec294b578f139f98f8965da7d53d4f60e657bf0a90afc20b848818f",
+  "execution": {
+    "input_json": "{\"NEW_Coulomb_coefficient\":0.02,\"arguments\":{\"mass\":null,\"mass_tolerance\":0.002,\"output\":\"physical_c_bare_electric_mass_scan_native_20261008.json\",\"spacing\":0.01,\"target_physical\":1.0},\"core_epoch\":\"6a66ca3a45b05e8df46cc1cec90aa775d97cd60341186639fdaf1dfd5fce9e64\",\"electric_coefficient\":0.02,\"exact89_Coulomb_coefficient\":0.01,\"exact_REFERENCE89_epoch\":\"89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2\",\"full_default_parameters\":{\"bare_mass\":-2.0282053185612114,\"centre_penalty\":10.0,\"chart_radius\":0.02,\"colour_order\":1,\"colour_sigma\":0.003,\"electric_coefficient\":0.02,\"normal_order\":3,\"normal_sigma\":0.01,\"outside_couplings\":[0.07,0.02,0.03],\"outside_quartic\":0.02,\"photon_grade\":1,\"prefix_steps\":4,\"quadrature_order\":2,\"spacing\":0.01},\"no_source_fitted_shift\":true,\"original_bare_mass\":-2.0282053185612114,\"pinned_template_revision\":\"89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe\",\"plan_id\":\"issue-222-induced-photon-continuation-20261008\",\"scan_uses_complete_KN_KC_eigenpairs\":true,\"scoped_work_items\":[\"joined-explanatory-campaign\",\"shared-compton-transfer\"],\"target_transfer\":0.01}",
+    "input_sha256": "a457be77a41bbc19591e78bf0ef1e9d7078e4a02e40ab2862116f58a02186139",
+    "source_at_IMPORT": {
+      "physical_c_bare_electric_mass.py": "10ff01072de74f1bf32a9b5c9da96516cd65b410ff064d5ed439341918b3e92e",
+      "physical_c_bare_electric_kernel.py": "6a66ca3a45b05e8df46cc1cec90aa775d97cd60341186639fdaf1dfd5fce9e64",
+      "captured_reference89.py": "89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2",
+      "captured_ledger.py": "567985093c8e3e512d78b064427996aa92a5a7abab36886d7cf21b4e1d623c87",
+      "captured_Alpha56/physical_alpha_compton.py": "56e1c611bffe17964644b47b6aca7ed496a195c8f4795e76e657ee2c01c3ff04",
+      "captured_Alpha56/sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+      "captured_Alpha56/rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459"
+    },
+    "capsule_hashes_at_IMPORT": {
+      "physical_c_real_cover_kernel_smooth_packet_capsule.json": "e6242d6801be2806624305469f21732c5d25473a672dbc17d0255692c1b2f57b",
+      "physical_c_completed_ledger_same_halfstep_capsule.json": "0aaaf5d58e3073d12337c34b4b2c7915e990d70e22382ccd8e93eb737d353f3a",
+      "physical_alpha_compton_Cartesian_final_native_capsule.json": "569e932d9cee150395fa4a27dd9a4355dace8b7de367db9c271b6c7bcca84d51"
+    },
+    "startup_unchanged": {
+      "physical_c_bare_electric_mass.py": true,
+      "physical_c_bare_electric_kernel.py": true,
+      "physical_c_real_cover_kernel_smooth_packet_capsule.json": true,
+      "physical_c_completed_ledger_same_halfstep_capsule.json": true,
+      "physical_alpha_compton_Cartesian_final_native_capsule.json": true
+    },
+    "runtime": {
+      "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.39",
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    },
+    "runtime_seconds": 731.6385715007782
+  },
+  "selections": [
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "sampled_domain": [
+        -100.0,
+        20.0
+      ],
+      "sampled_brackets": [],
+      "actual_roots": [],
+      "bounded_minimizer_mass": -9.462422117248027,
+      "bounded_minimizer_gap_TRANSFER": 0.048664294906525796,
+      "bounded_minimizer_gap_PHYSICAL": 4.866429490652579,
+      "optimizer_success": true,
+      "optimizer_message": "Solution found.",
+      "selection": "bounded_minimum_candidate_NOT_root",
+      "selected_mass": -9.462422117248027
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "sampled_domain": [
+        -100.0,
+        20.0
+      ],
+      "sampled_brackets": [],
+      "actual_roots": [],
+      "bounded_minimizer_mass": -9.475604958056199,
+      "bounded_minimizer_gap_TRANSFER": 0.048790932045729776,
+      "bounded_minimizer_gap_PHYSICAL": 4.879093204572977,
+      "optimizer_success": true,
+      "optimizer_message": "Solution found.",
+      "selection": "bounded_minimum_candidate_NOT_root",
+      "selected_mass": -9.475604958056199
+    }
+  ],
+  "verification_scope": "Actual scientific CLI, complete spectra and literal source/Pe windows; no suites",
+  "lsp": {
+    "server": "pyright-langserver 1.1.414",
+    "root": "/home/administrator/substrate-222",
+    "symbols_and_definition_exercised": true,
+    "scoped_diagnostics_initial": 8,
+    "diagnostic_status": "SciPy return annotations and heterogeneous execution dict will be corrected in successor; scientific process exited naturally."
+  },
+  "not_physical_pole": true
+}

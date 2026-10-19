@@ -1,0 +1,27 @@
+{
+  "candidate": "shared_two_cell_quantum_scalar_Gauss_transport",
+  "scientific_law_revision": "actual2_channel_even_geometric_bipartite_C",
+  "module": "rich_scalar_transport_20261014_model",
+  "model_sha256": "fab37505852cf7b62a3798812c82c84bb88bce73242a569f4289fd1fa6fec4b1",
+  "API": {
+    "physical()": "Cached raw_frame Gauss physical full16 local algebra, graded two-site8 physical creation sources, siteLEFTspins, localN and canonical bipartiteC. This pure frame encoder is the only antecedent scientific helper reuse.",
+    "build(p,coupling=None,hop=None,angles=None)": "Common sparse full256*nfield H,8 sources,2 real spatial fieldQ,2 localN,3 globalS,canonicalC,2 full currents/contacts, positive scalarHfield, frameCasimir/scalarTransfer energy owners. nfield=scalar_points². Coupling0/hop0 keep full Hilbert and fieldgradient. Angles are the two independent oriented link charge twists.",
+    "sector(model,number)": "Indices/full sparse H block with literal totalN0..8. Fock ordering: local0 modes0..3 then local1 modes0..3; scalar0 grid index slower than scalar1. All fieldlevels kept. Adjacent source reference is N4 with N3/N5, not fixed Bloch N2 or old immobile G.",
+    "ground(model,number,count=8)": "Indices,H,lowest energies,raw low eigenvectors,orthonormal numerical groundprojector basis. At least24 lowstates/ncv100; real law uses real symmetric solver, complex law uses complex solver; ground doublet tolerance2e-8 explicitly declared. Source consumer uses returned final orthonormal projector, never raw degenerate columns.",
+    "block(operator,rows,cols)": "Exact sparse operator restriction between physical sector indices; addition uses source, removal source adjoint and fieldidentity. Reviewer may use splu on complete sector H for allvirtual G."
+  },
+  "reference": "Actual filled two-cell N4 groundprojector; N5 charge-1, N3 charge+1 relative fixed +2 ionic reference per cell. No chemical-potential fit or sector energy shifts. Global sectors other than N3/4/5 were not diagonalized, so no allsector-global-vacuum claim.",
+  "current_convention": "J=-partialH/partialA for H=e^{iA}F+h.c.; contact=d²H/dA². Edge0incoming1→0,edge1outgoing0→1, dN0/dt=J0-J1. Electric current includes declared q=-1; these external charge twists are not dynamic EM degrees. No Noether/coupling-derivative substitution.",
+  "spin_convention": "S is projected physical LEFT-frame derivative from raw Gauss coordinate; geometric symmetric-conjugate paths are rotation scalars. Fullodd Fock includes higher spin; halfspin is source-from-singlet and actual chargedground property, not assigned to every odd state.",
+  "quantum_field": "Two FIXED spatial scalar coordinates phi0,phi1, independent of particle position and shared by all Fock sectors. Positive canonical fieldkinetic, onsite quadratic/quartic and gradient. g phi_x T_x is the supplied material coupling, never prescribed mass/rms. Groundprojector retains unresolved symmetric doublet; mean0 does not remove observed chargegap.",
+  "profile_receiver": "Results provide full joint fielddistributions for N3,N4,N5; actual N5 local positive projector1[Nx>2] conditional phi² atsame/othercell; connected Nx-phi²; true unfiltered physicalsource packet N/current/field distributions and current-field covariance. Field-only pulse exp(-i .7 phi0) at fixedcell, no number/positionconditioner, with actual g0/hop0 controls.",
+  "peer_join": "CommonMobileFrame/HolonomyEM may introduce this local NEUTRAL scalar law only by rebuilding their whole actual H,occupied/adjacent source sectors,correct current/contact and quantum field degrees. This branch itself has no Maxwell field or photons; do not multiply its G by peer D, import scalar result as a massparameter, or credit another EM candidate as jointly measured here.",
+  "finite_scope": "Two-cell periodic material lattice with exact finite scalar DVR and free discrete translation: useful mobile mass-dressed quasiparticle/relative cloud, not selfbound continuum electron/free3D COM. n11 is coarse regulator, not convergence; momentum twist curvature is finite-ring response not derived inertial mass.",
+  "receiver_artifacts": {
+    "equations": "rich_scalar_transport_20261014_equations.json",
+    "scientific_data": "rich_scalar_transport_20261014_actual2_result.npz",
+    "result": "rich_scalar_transport_20261014_actual2_result.json",
+    "natural_exit": "rich_scalar_transport_20261014_actual2_exit.json",
+    "exact_scientific_capsule": "rich_scalar_transport_20261014_actual2_capsule.zip"
+  }
+}

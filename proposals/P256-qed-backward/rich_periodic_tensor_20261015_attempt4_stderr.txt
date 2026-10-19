@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_run.py", line 106, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_run.py", line 98, in run
+    responses=[source_response(model,psi,records[-1]['energy'],q,64) for q in ([1,0,0],[1,1,0])]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_run.py", line 25, in source_response
+    geo, ops, contacts=model.sources(q)
+                       ^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_model.py", line 105, in sources
+    contact_mpos = [[self.mpo([(-x*geo['coefficients'][p,e]*geo['coefficients'][r,e],t) for x,t,e,_ in self.hop_terms]) for r in range(2)] for p in range(2)]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_model.py", line 86, in mpo
+    return model.calc_H_MPO()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/models/model.py", line 1854, in calc_H_MPO
+    H_MPO = H_MPO_graph.build_MPO()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/networks/mpo.py", line 2546, in build_MPO
+    legs, Ws_qtotal = self._calc_legcharges(Ws_qtotal)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/networks/mpo.py", line 2714, in _calc_legcharges
+    raise ValueError("can't determine all charges on the very right leg of the MPO!")
+ValueError: can't determine all charges on the very right leg of the MPO!

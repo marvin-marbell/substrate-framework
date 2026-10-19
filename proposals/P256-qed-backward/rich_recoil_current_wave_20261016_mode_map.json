@@ -1,0 +1,10 @@
+{
+  "kind":"PHYSICAL_CAR_MODE_TO_COMPUTATIONAL_MPS_MAP",
+  "field_site":0,
+  "fermion_mode_formula":"i=12*(3*kx+ky)+4*kz+band, kx,ky,kz in{0,1,2}, band in{0,1,2,3}",
+  "mode_to_MPS_formula":"MPS_site(i)=i+1 for all108 fermion modes; site0 is the shared75-dimensional scalar/EM field",
+  "band_definition":"Columns of the complete per-(kx,ky,kz) reference four-spinor eigenbasis in single_particle; bands0/1 initially filled, bands2/3 initially empty. Complete physical108x108 orbital unitary is retained in the model artifact.",
+  "shared_consumers":["Literal one-body MPO future endpoint indices use i and access self.sites[i+1]","Canonical wavepacket MPO coefficients are [0, packet_0,...,packet_107], with field JW=Id","Coherent one-body contraction inserts fermion operators at i+1 and JW on intermediate fermion sites","Physical inclusive density/spin use the SAME ordered full orbital unitary, retaining all cross-block coherences","Physical T_m is exp(-i2pi sum_i kz_i n_i/3) on these SAME sites"],
+  "layout_scope":"Heterogeneous open MPS lattice ordering is computational metadata only. Physical3^3 lattice remains PERIODIC in the literal selected geometry/hopping coefficients. No physical boundary, translation, source or current operator is replaced by the computational chain geometry.",
+  "CAR":"The shared field contributes no fermion parity. Canonical global c_i=product_(j<i)JW_j times localC_i. Literal H/J/QJ/JQ action discriminators contract the actual new-layout MPO against full108-mode Fock transfers, including determinant signs."
+}

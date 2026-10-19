@@ -1,0 +1,89 @@
+{
+  "owner": "ExtensiveInducedPhoton",
+  "scope": "NEW photon/interaction material-mechanism fork; NEXT Wave11 audit after explicit parent transition, not pinned Wave10",
+  "verdict": "Constructed and exercised an explicitly density-normalized spatial correlated-matter/electric-field law, a fully coupled finite quantum consumer, and a self-consistent HOMOGENIZED Gaussian correlated-cluster response continuation. Real independent two-polarization current/field reaction is present. Conditional low-q linear modes appear in the continuation, but finite field-domain dependence and 7.5%-39% reaction discrepancies defeat an exact/converged bulk-photon claim.",
+  "plain_physical_mechanism": [
+    "Use an actual spinful Hubbard tetrahedron: four sites, six spatial Peierls edges and THREE independent noncoplanar current loops. Two electrons explore the complete correlated Nup=Ndown=1 sector; this is not a planar molecule with a dark magnetic direction, an independent-particle Dirac polarization or a chosen scalar stiffness.",
+    "Place one identical neutral molecular source per volume25: source density0.04 and independent-cycle density0.12. The extensive law keeps N_sources/V_total fixed. Its transverse field uses a common three-dimensional q and two orthogonal polarizations. The finite quantum consumer has BOTH fields coupled to the SAME full molecule and one actual joint ground, not pasted G and D roots.",
+    "Actual electric energy fixes A=Q/sqrt(epsilon V). Primitive field energy is P1^2/2+P2^2/2, with no magnetic/oscillator restoration. q-dependence comes from exact straight-edge Peierls integrals. A separate ionic-neutral longitudinal Gauss term supplies charge energy, not transverse stiffness.",
+    "Current and contact are derivatives of those SAME Peierls hoppings. Complete signed molecular virtual transitions induce restoring forces. In the extensive approximation, the resulting D mode energies AND residues determine field covariance; covariance renormalizes all six molecular hoppings, changing its correlated eigenstate, gaps, double occupancy, full current/contact and the next D. It is a converged reaction-field loop, not frozen molecular chi inserted once.",
+    "The finite actual consumer diagonalizes every retained joint state, obtains full signed Q/current spectra, and evolves a physical field-only unitary kick without conditioning. It produces actual molecular current and double-occupancy reaction while electric excess changes. The three natural captures contain exact inputs, code, owned states and output hashes."
+  ],
+  "whole_H_and_interfaces": {
+    "equations": "rich_extensive_photon_20261014_equations.json",
+    "interface": "rich_extensive_photon_20261014_interface.json",
+    "whole_H": "H=integral Pi_T^2/(2epsilon)+H_Gauss[rho]+sum_R(U sum_i n_up n_down+v.n-t sum_b,s(exp(i e integral_b A.dl)c_dst,s^dagger c_src,s+h.c.)); there is NO bare B^2 or Maxwell oscillator kernel.",
+    "canonical_field": "A_T=sum_q,lambda e_lambda sqrt(2) sin/cos(q.x) Q_q,lambda/sqrt(epsilon V_total). integral f_q^2=V_total gives actual electric energy sum P_q,lambda^2/2. All q dependence resides in the geometric line integral d.e sinc(q.d/2) cos(q.midpoint+phase).",
+    "D_feedback": "D^{-1}(z)=z^2 I-C-chi_JJ(z), with BOTH signed Lehmann denominators. C_Q=sum_j u_Aj u_Aj^T/(2Omega_j). sigma_b^2=(e^2/epsilon) integral d^3q/(2pi)^3 average_phase b^T C_Q b; hopping_b=t exp(-sigma_b^2/2); recompute full correlated molecular current/contact and D.",
+    "state_owner": "exact: complete 16-state molecule times both finite field-coordinate grids; continuation: the same complete correlated impurity updated by its own D covariance. No other model's charged probe, G, sea, current or source is borrowed."
+  },
+  "observed_finite_quantum_results": {
+    "baseline_joint_dimension": 1296,
+    "all_retained_virtual_states": 1295,
+    "finite_q_meaning": "q=(0,0,2 pi m/Lz), fixed physical volume25, Lz=8pi; m1,2,4 give q0.25,0.5,1.0. No density or source-count sweep.",
+    "two_low_current_bearing_field_poles": [
+      {"q": 0.25, "mixed": [0.026856554139251365, 0.02686530235895468], "frozen_matter_first": 0.03449791623876042, "bare_electric_box_first": 0.018117285959209854, "low_window_current_Gram_eigenvalues": [0.000006424637890799273, 0.000006433183988945671]},
+      {"q": 0.5, "mixed": [0.04664809061918351, 0.046667523661934496], "frozen_matter_first": 0.06389278047877589, "bare_electric_box_first": 0.018117285959209854, "low_window_current_Gram_eigenvalues": [0.00005547582769423995, 0.00005554595796870667]},
+      {"q": 1.0, "mixed": [0.08584758286310734, 0.08588420416943077], "frozen_matter_first": 0.11812499770866047, "bare_electric_box_first": 0.018117285959209854, "low_window_current_Gram_eigenvalues": [0.0003909229720992068, 0.00039142690362891025]}
+    ],
+    "independent_polarizations": "Exact full complex off-diagonal Q/current spectral matrices are in actual3. Low-field windows contain two states and current Gram rank2 at EACH q; positive eigenvalues are shown above. This is stronger than two diagonal labels, but not independent asymptotic/local photons.",
+    "matter_entanglement_purity": [0.9956067092386649, 0.9905291640152636, 0.9829307194627257],
+    "field_only_kick": "exp(i0.12 Q1), no matter preparation/filter. Exact unitary evolution sampled t0..45.",
+    "largest_absolute_double_occupancy_reaction": [0.000051016147324486893, 0.00008243162286283856, 0.00006924256224834224],
+    "q0p5_electric_excess": {"t0": 0.006436531805581319, "t35": 0.000627691133061492},
+    "q0p5_peak_physical_mode_current": 0.005480341157062936,
+    "charge_Ward_constant_A_defect": 1.1748104673539181e-15,
+    "maximum_exact_bond_continuity_defect": 1.3877787807814457e-17,
+    "maximum_joint_eigen_residual_observed": 3.69941072212543e-14,
+    "source_of_evidence": ["actual1_result.json", "actual2_result.json", "actual3_result.json"]
+  },
+  "observed_extensive_approximation": {
+    "name": "self-consistent HOMOGENIZED Gaussian Debye-Waller / full signed correlated-cluster RPA",
+    "density": 0.04,
+    "not_exact_all_N": true,
+    "feedback_iterations": 33,
+    "final_fixed_point_error": 7.719122008253976e-10,
+    "returned_six_hoppings": [0.9356596065720306, 0.9357986130887279, 0.9357133476233734, 0.9356996965667566, 0.9356249796006432, 0.9357639301678222],
+    "correlated_double_occupancy": {"one_pass_undressed": 0.08870951164297365, "returned": 0.08344193910786903, "relative_change": -0.05938001954406935},
+    "z_direction_two_low_poles": [
+      {"q": 0.0625, "omega": [0.004202602445026645, 0.004204426325010019]},
+      {"q": 0.125, "omega": [0.008403568956892751, 0.00840721603068441]},
+      {"q": 0.25, "omega": [0.016794055303515423, 0.01680134396307068]},
+      {"q": 0.5, "omega": [0.03348360371129194, 0.03349813717844277]},
+      {"q": 1.0, "omega": [0.06613607456920677, 0.06616479231350533]}
+    ],
+    "conditional_low_q_linearity": "At q0.0625/0.125, omega1/q=0.06724164/0.06722855 and omega2/q=0.06727082/0.06725773. This is observed low-q linearity WITHIN the regulated homogenized closure, not a fitted speed, a bare box gap, an observed exact gapless bulk phase or a convergence result.",
+    "three_dimensional_tensor": "Also calculated q along x and (1,1,1), each with actual orthonormal transverse basis and two field/current-bearing modes. Full projectors, separate paramagnetic/contact amplitudes and physical current weights are in actual2; anisotropy is retained rather than silently imposing a light cone.",
+    "physical_current_example": "At z-q0.25, mode1 physical weights [1.178022801735704e-6,1.175542181631912e-6], mode2 [1.1770606672243863e-6,1.1795472840127081e-6]. They are small differences of nonzero paramagnetic/contact amplitudes, not absent currents.",
+    "quadrature": "26 nonzero three-dimensional midpoint cells, spacing0.45; each weight0.45^3/(2pi)^3. UV cube halfwidth0.675 and omitted central IR voxel halfwidth0.225. No UV/IR quadrature convergence claimed.",
+    "extra_homogenization_limit": "The uniform four-phase average is an ADDITIONAL homogenization assumption. It is not the exact periodic-cell susceptibility at commensurate q and omits Bragg q<->q+G mixing. In particular the finite single-sine consumer and this extensive phase average are not identical laws/states or interchangeable pole tables.",
+    "longitudinal_limit": "Full extensive H has global longitudinal Gauss energy; the impurity closure uses its finite neutral periodic-cell boundary approximation and omits connected intercell longitudinal fluctuations. It is not claimed to have solved those correlations."
+  },
+  "decision_changing_adverse_results": [
+    "Actual frozen-matter Hamiltonian gives first poles 28.5%,37.0%,37.6% above the actual mixed poles and cannot produce molecular reaction. Thus correlated virtual current relaxation is physically consequential, not a renamed stiffness curve.",
+    "At bulk z-q0.25, returning D covariance into matter changes omega1 from one-pass0.01741556689350654 to0.016794055303515423 (-3.5687%), and correlated double occupancy drops5.938%; current/contact feedback is not frozen once.",
+    "Removing contact gives NEGATIVE squared mode eigenvalue -0.11923413981429612 at z-q0.25, not a photon. Doubling current while holding contact gives -0.3510138577859709. Actual2 reports unstable modes with NO stable frequency/residue rather than calling clamped zeros massless.",
+    "Omitting inverse sqrt(V) in the actual coupling/current/contact changes z-q0.25 omega1 to0.07832403113300136, a factor4.66379. This is the wrong density/volume law, not a plotting normalization.",
+    "Finite same-sine Gaussian current reaction versus actual exact current over ALL t0..45 has relative L2 errors12.06%,7.48%,38.95% at q0.25,0.5,1.0. Therefore the approximation is checked but NOT quantitatively controlled over the whole range.",
+    "At q0.25, expanding the Q domain wall14->19.6 while keeping finite-difference step2.8 FIXED changes the first mixed pole0.0268565541->0.0241306464 (-10.15%). The literal domain dependence survives separation from discretization. Boundary probability falls0.02625->0.0007217; this does not establish final wall convergence.",
+    "The earlier wall14->20 contrast kept9 points, so it changed both domain and spacing and shifted the pole -12.77%; it is not used as a pure-wall measurement.",
+    "Finite exact coordinate spectral first moments are0.47116,0.45121,0.40387 per polarization, not the unregulated continuum canonical0.5. The finite-difference regulator visibly matters, particularly at q1. No continuum photon dispersion is inferred from these poles."
+  ],
+  "failure_fork_and_retained_outcome": {
+    "retain": "Actual correlated matter/current/contact, density normalization, 3D tensor geometry, two rank2 current-bearing quantum field legs, one-H unconditioned field-to-molecule reaction, and an explicit self-consistent spatial collective mechanism.",
+    "withdraw": "No exact/converged bulk photon, true massless phase, universal group velocity, asymptotic S matrix, controlled all-N stability, physical Noether-spin derivation, charged-source join or electron identification follows.",
+    "material_fork": "The evidence points to a spatial compact-gauge/non-Gaussian phase treatment or a controlled intercell reaction-field calculation retaining Bragg/longitudinal correlations, not fitting c or relabelling an old free-Dirac polarization. This is a failure fork description, not an unexecuted promise required to interpret the completed finite consumers."
+  },
+  "natural_capsules": [
+    {"name": "rich_extensive_photon_20261014_actual1_capsule.zip", "returncode": 0, "natural_exit": true, "seconds": 26.98502254486084, "source_unchanged": true, "sha256": "3636cff2662208e58a468f4376dc3ca1dde4d6f46998f23d3293768e2c896e8b", "contents": "NEW whole-H source/input, three q exact coupled consumers, actual frozen and bare comparisons, finite/bulk feedback, exact owned states"},
+    {"name": "rich_extensive_photon_20261014_actual2_capsule.zip", "returncode": 0, "natural_exit": true, "seconds": 56.80044913291931, "source_unchanged": true, "sha256": "534fdf1f4f8d60d6f74e6fce4884fa822a73c280dd36a84d67f9b8b8a5147206", "contents": "NEW explicit physical current/contact mixed-mode and reaction consumer, unstable adverse laws, NEW2704-state fixed-step larger-domain whole-H consumer"},
+    {"name": "rich_extensive_photon_20261014_actual3_capsule.zip", "returncode": 0, "natural_exit": true, "seconds": 3.4889228343963623, "source_unchanged": true, "sha256": "ecf88a4619368a0028414f4f27e0df389717656d8c172da358e5e22cc6a02109", "contents": "NEW exact physical two-pol tensor/Gram consumer plus exact owned input states, full current/contact/signed response and polarization-rank evidence"}
+  ],
+  "corrections_and_tooling_limits": [
+    "Actual1 collective mode current_weight=0 was a generic absent-current-argument display, NOT a computed physical zero. Actual1 EXACT current weights are real calculations. Actual2 physical_current_weight and separate contact/paramagnetic amplitudes supersede that collective display; do not audit/promote the old zeros as a physical result.",
+    "Actual1/actual2 stderr retain a SciPy FutureWarning on int-to-float sparse double-occupancy operator construction. Both exited naturally0; no warning suppression or scientific fallback was added. Actual3 stderr is empty.",
+    "Mounted LSP device unavailable, reported to tool QA. Actual direct pyright LSP documentSymbol and definition succeeded at the project root on the known capture helper before edits, with positive structural AST search. Captured in language.json. No midflight build/lint/tests/formatters or final selected-file diagnostics were run; next-wave execution reviewer owns diagnostics/audit.",
+    "Original producer files/capsules remain immutable after their natural capture. Later consumers import only pure NEW model helpers and owned hash-bound data; they do not replay an old top-level producer or splice an external state/law.",
+    "Parent alone writes the governing durable plan; worker bound the pinned plan and records decisions/results here for parent integration. No merge/push/graph admission/issue closure or external process/model changes."
+  ]
+}

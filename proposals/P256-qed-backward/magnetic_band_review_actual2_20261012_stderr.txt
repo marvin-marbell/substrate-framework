@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/magnetic_band_review_actual2_20261012_isolated_pqu1t5c9/magnetic_band_review_consumer_corrected_20261012.py", line 408, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/magnetic_band_review_actual2_20261012_isolated_pqu1t5c9/magnetic_band_review_consumer_corrected_20261012.py", line 401, in main
+    json.dump(result, stream, indent=2)
+  File "/usr/lib/python3.12/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Fraction is not JSON serializable

@@ -1,0 +1,1379 @@
+{
+  "server": "Pyright 1.1.414",
+  "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "interpreter": "/home/administrator/substrate-framework/.venv/bin/python",
+  "positive_AST": "Mounted AST def query in local3d consumer positive",
+  "symbols_count": 191,
+  "definition_result": [
+    {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "result": [
+        {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_local3d_20261014_consumer.py",
+          "range": {
+            "start": {
+              "line": 159,
+              "character": 23
+            },
+            "end": {
+              "line": 159,
+              "character": 25
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_local3d_20261014_consumer.py": [
+      {
+        "range": {
+          "start": {
+            "line": 105,
+            "character": 57
+          },
+          "end": {
+            "line": 105,
+            "character": 62
+          }
+        },
+        "message": "Argument of type \"float\" cannot be assigned to parameter \"tol\" of type \"int\" in function \"eigsh\"\n\u00a0\u00a0\"float\" is not assignable to \"int\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 161,
+            "character": 10
+          },
+          "end": {
+            "line": 161,
+            "character": 56
+          }
+        },
+        "message": "No overloads for \"reshape\" match the provided arguments",
+        "severity": 1,
+        "code": "reportCallIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+        },
+        "relatedInformation": [
+          {
+            "location": {
+              "uri": "file:///home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/__init__.pyi",
+              "range": {
+                "start": {
+                  "line": 3905,
+                  "character": 8
+                },
+                "end": {
+                  "line": 3905,
+                  "character": 15
+                }
+              }
+            },
+            "message": "Overload 8 is the closest match"
+          }
+        ]
+      },
+      {
+        "range": {
+          "start": {
+            "line": 161,
+            "character": 43
+          },
+          "end": {
+            "line": 161,
+            "character": 50
+          }
+        },
+        "message": "Argument of type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" cannot be assigned to parameter \"shape\" of type \"SupportsIndex\" in function \"reshape\"\n\u00a0\u00a0Type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is not assignable to type \"SupportsIndex\"\n\u00a0\u00a0\u00a0\u00a0\"dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is incompatible with protocol \"SupportsIndex\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__index__\" is not present",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 161,
+            "character": 26
+          },
+          "end": {
+            "line": 161,
+            "character": 40
+          }
+        },
+        "message": "Argument of type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" cannot be assigned to parameter \"obj\" of type \"Sized\" in function \"len\"\n\u00a0\u00a0Type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is not assignable to type \"Sized\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is incompatible with protocol \"Sized\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__len__\" is not present",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 164,
+            "character": 9
+          },
+          "end": {
+            "line": 164,
+            "character": 24
+          }
+        },
+        "message": "No overloads for \"eye\" match the provided arguments",
+        "severity": 1,
+        "code": "reportCallIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+        },
+        "relatedInformation": [
+          {
+            "location": {
+              "uri": "file:///home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/lib/_twodim_base_impl.pyi",
+              "range": {
+                "start": {
+                  "line": 123,
+                  "character": 4
+                },
+                "end": {
+                  "line": 123,
+                  "character": 7
+                }
+              }
+            },
+            "message": "Overload 4 is the closest match"
+          }
+        ]
+      },
+      {
+        "range": {
+          "start": {
+            "line": 164,
+            "character": 16
+          },
+          "end": {
+            "line": 164,
+            "character": 23
+          }
+        },
+        "message": "Argument of type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" cannot be assigned to parameter \"N\" of type \"int\" in function \"eye\"\n\u00a0\u00a0Type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is not assignable to type \"int\"\n\u00a0\u00a0\u00a0\u00a0\"dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is not assignable to \"int\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 165,
+            "character": 36
+          },
+          "end": {
+            "line": 165,
+            "character": 41
+          }
+        },
+        "message": "Cannot access attribute \"items\" for class \"NDArray[Any]\"\n\u00a0\u00a0Attribute \"items\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 165,
+            "character": 36
+          },
+          "end": {
+            "line": 165,
+            "character": 41
+          }
+        },
+        "message": "Cannot access attribute \"items\" for class \"list[tuple[int, int, int]]\"\n\u00a0\u00a0Attribute \"items\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 165,
+            "character": 36
+          },
+          "end": {
+            "line": 165,
+            "character": 41
+          }
+        },
+        "message": "Cannot access attribute \"items\" for class \"list[tuple[int, int]]\"\n\u00a0\u00a0Attribute \"items\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 165,
+            "character": 36
+          },
+          "end": {
+            "line": 165,
+            "character": 41
+          }
+        },
+        "message": "Cannot access attribute \"items\" for class \"list[tuple[int]]\"\n\u00a0\u00a0Attribute \"items\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 165,
+            "character": 36
+          },
+          "end": {
+            "line": 165,
+            "character": 41
+          }
+        },
+        "message": "Cannot access attribute \"items\" for class \"int\"\n\u00a0\u00a0Attribute \"items\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 167,
+            "character": 73
+          },
+          "end": {
+            "line": 167,
+            "character": 93
+          }
+        },
+        "message": "No overloads for \"__getitem__\" match the provided arguments",
+        "severity": 1,
+        "code": "reportCallIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+        },
+        "relatedInformation": [
+          {
+            "location": {
+              "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+              "range": {
+                "start": {
+                  "line": 1252,
+                  "character": 8
+                },
+                "end": {
+                  "line": 1252,
+                  "character": 19
+                }
+              }
+            },
+            "message": "Overload 2 is the closest match"
+          }
+        ]
+      },
+      {
+        "range": {
+          "start": {
+            "line": 167,
+            "character": 73
+          },
+          "end": {
+            "line": 167,
+            "character": 93
+          }
+        },
+        "message": "Argument of type \"tuple[int | Any | Unknown, int | Any | Unknown]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[int | Any | Unknown, int | Any | Unknown]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 167,
+            "character": 73
+          },
+          "end": {
+            "line": 167,
+            "character": 87
+          }
+        },
+        "message": "\"__getitem__\" method not defined on type \"int\"",
+        "severity": 1,
+        "code": "reportIndexIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 168,
+            "character": 104
+          },
+          "end": {
+            "line": 168,
+            "character": 124
+          }
+        },
+        "message": "No overloads for \"__getitem__\" match the provided arguments",
+        "severity": 1,
+        "code": "reportCallIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+        },
+        "relatedInformation": [
+          {
+            "location": {
+              "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+              "range": {
+                "start": {
+                  "line": 1252,
+                  "character": 8
+                },
+                "end": {
+                  "line": 1252,
+                  "character": 19
+                }
+              }
+            },
+            "message": "Overload 2 is the closest match"
+          }
+        ]
+      },
+      {
+        "range": {
+          "start": {
+            "line": 168,
+            "character": 104
+          },
+          "end": {
+            "line": 168,
+            "character": 124
+          }
+        },
+        "message": "Argument of type \"tuple[int | Any | Unknown, int | Any | Unknown]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[int | Any | Unknown, int | Any | Unknown]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 168,
+            "character": 104
+          },
+          "end": {
+            "line": 168,
+            "character": 118
+          }
+        },
+        "message": "\"__getitem__\" method not defined on type \"int\"",
+        "severity": 1,
+        "code": "reportIndexIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 174,
+            "character": 26
+          },
+          "end": {
+            "line": 174,
+            "character": 32
+          }
+        },
+        "message": "Argument of type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" cannot be assigned to parameter \"iterable\" of type \"Iterable[_T@enumerate]\" in function \"__new__\"\n\u00a0\u00a0Type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is not assignable to type \"Iterable[_T@enumerate]\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is incompatible with protocol \"Iterable[_T@enumerate]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__iter__\" is not present",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 177,
+            "character": 44
+          },
+          "end": {
+            "line": 177,
+            "character": 48
+          }
+        },
+        "message": "Cannot access attribute \"real\" for class \"NDArray[Unknown | Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown | Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown | Any]]\" is not assignable to \"None\"",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 177,
+            "character": 51
+          },
+          "end": {
+            "line": 177,
+            "character": 73
+          }
+        },
+        "message": "No overloads for \"__getitem__\" match the provided arguments",
+        "severity": 1,
+        "code": "reportCallIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+        },
+        "relatedInformation": [
+          {
+            "location": {
+              "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+              "range": {
+                "start": {
+                  "line": 1252,
+                  "character": 8
+                },
+                "end": {
+                  "line": 1252,
+                  "character": 19
+                }
+              }
+            },
+            "message": "Overload 2 is the closest match"
+          }
+        ]
+      },
+      {
+        "range": {
+          "start": {
+            "line": 177,
+            "character": 51
+          },
+          "end": {
+            "line": 177,
+            "character": 73
+          }
+        },
+        "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 177,
+            "character": 51
+          },
+          "end": {
+            "line": 177,
+            "character": 67
+          }
+        },
+        "message": "\"__getitem__\" method not defined on type \"int\"",
+        "severity": 1,
+        "code": "reportIndexIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 177,
+            "character": 51
+          },
+          "end": {
+            "line": 177,
+            "character": 73
+          }
+        },
+        "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"key\" of type \"tuple[int, int]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"tuple[int, int]\"\n\u00a0\u00a0\u00a0\u00a0Tuple entry 1 is incorrect type\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"slice[None, None, None]\" is not assignable to \"int\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 178,
+            "character": 90
+          },
+          "end": {
+            "line": 178,
+            "character": 105
+          }
+        },
+        "message": "No overloads for \"__getitem__\" match the provided arguments",
+        "severity": 1,
+        "code": "reportCallIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+        },
+        "relatedInformation": [
+          {
+            "location": {
+              "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+              "range": {
+                "start": {
+                  "line": 1252,
+                  "character": 8
+                },
+                "end": {
+                  "line": 1252,
+                  "character": 19
+                }
+              }
+            },
+            "message": "Overload 2 is the closest match"
+          }
+        ]
+      },
+      {
+        "range": {
+          "start": {
+            "line": 178,
+            "character": 90
+          },
+          "end": {
+            "line": 178,
+            "character": 105
+          }
+        },
+        "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 178,
+            "character": 90
+          },
+          "end": {
+            "line": 178,
+            "character": 99
+          }
+        },
+        "message": "\"__getitem__\" method not defined on type \"int\"",
+        "severity": 1,
+        "code": "reportIndexIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 178,
+            "character": 90
+          },
+          "end": {
+            "line": 178,
+            "character": 105
+          }
+        },
+        "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"key\" of type \"tuple[int, int]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"tuple[int, int]\"\n\u00a0\u00a0\u00a0\u00a0Tuple entry 1 is incorrect type\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"slice[None, None, None]\" is not assignable to \"int\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 179,
+            "character": 61
+          },
+          "end": {
+            "line": 179,
+            "character": 76
+          }
+        },
+        "message": "No overloads for \"__getitem__\" match the provided arguments",
+        "severity": 1,
+        "code": "reportCallIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+        },
+        "relatedInformation": [
+          {
+            "location": {
+              "uri": "file:///home/administrator/.local/lib/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+              "range": {
+                "start": {
+                  "line": 1252,
+                  "character": 8
+                },
+                "end": {
+                  "line": 1252,
+                  "character": 19
+                }
+              }
+            },
+            "message": "Overload 2 is the closest match"
+          }
+        ]
+      },
+      {
+        "range": {
+          "start": {
+            "line": 179,
+            "character": 61
+          },
+          "end": {
+            "line": 179,
+            "character": 76
+          }
+        },
+        "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"s\" of type \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 179,
+            "character": 61
+          },
+          "end": {
+            "line": 179,
+            "character": 70
+          }
+        },
+        "message": "\"__getitem__\" method not defined on type \"int\"",
+        "severity": 1,
+        "code": "reportIndexIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportIndexIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 179,
+            "character": 61
+          },
+          "end": {
+            "line": 179,
+            "character": 76
+          }
+        },
+        "message": "Argument of type \"tuple[slice[None, None, None], int]\" cannot be assigned to parameter \"key\" of type \"tuple[int, int]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[slice[None, None, None], int]\" is not assignable to \"tuple[int, int]\"\n\u00a0\u00a0\u00a0\u00a0Tuple entry 1 is incorrect type\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"slice[None, None, None]\" is not assignable to \"int\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 180,
+            "character": 18
+          },
+          "end": {
+            "line": 180,
+            "character": 40
+          }
+        },
+        "message": "No overloads for \"__getitem__\" match the provided arguments",
+        "severity": 1,
+        "code": "reportCallIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+        },
+        "relatedInformation": [
+          {
+            "location": {
+              "uri": "file:///home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/__init__.pyi",
+              "range": {
+                "start": {
+                  "line": 2155,
+                  "character": 8
+                },
+                "end": {
+                  "line": 2155,
+                  "character": 19
+                }
+              }
+            },
+            "message": "Overload 5 is the closest match"
+          }
+        ]
+      },
+      {
+        "range": {
+          "start": {
+            "line": 180,
+            "character": 18
+          },
+          "end": {
+            "line": 180,
+            "character": 40
+          }
+        },
+        "message": "Argument of type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" cannot be assigned to parameter \"key\" of type \"list[str]\" in function \"__getitem__\"\n\u00a0\u00a0Type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is not assignable to type \"list[str]\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"list[str]\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 231,
+            "character": 97
+          },
+          "end": {
+            "line": 231,
+            "character": 100
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"dict[tuple[Any, ...], int]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 231,
+            "character": 97
+          },
+          "end": {
+            "line": 231,
+            "character": 100
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"list[tuple[int, int, int]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 231,
+            "character": 97
+          },
+          "end": {
+            "line": 231,
+            "character": 100
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"list[tuple[int, int]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 231,
+            "character": 97
+          },
+          "end": {
+            "line": 231,
+            "character": 100
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"list[tuple[int]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 231,
+            "character": 97
+          },
+          "end": {
+            "line": 231,
+            "character": 100
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"int\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 231,
+            "character": 97
+          },
+          "end": {
+            "line": 231,
+            "character": 100
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"dict[tuple[int, int], _Array[tuple[int, int], float64]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 235,
+            "character": 68
+          },
+          "end": {
+            "line": 235,
+            "character": 72
+          }
+        },
+        "message": "Cannot access attribute \"real\" for class \"NDArray[Unknown | Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown | Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown | Any]]\" is not assignable to \"None\"",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 235,
+            "character": 92
+          },
+          "end": {
+            "line": 235,
+            "character": 95
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"dict[tuple[Any, ...], int]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 235,
+            "character": 92
+          },
+          "end": {
+            "line": 235,
+            "character": 95
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"list[tuple[int, int, int]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 235,
+            "character": 92
+          },
+          "end": {
+            "line": 235,
+            "character": 95
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"list[tuple[int, int]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 235,
+            "character": 92
+          },
+          "end": {
+            "line": 235,
+            "character": 95
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"list[tuple[int]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 235,
+            "character": 92
+          },
+          "end": {
+            "line": 235,
+            "character": 95
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"int\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 235,
+            "character": 92
+          },
+          "end": {
+            "line": 235,
+            "character": 95
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"dict[tuple[int, int], _Array[tuple[int, int], float64]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 240,
+            "character": 41
+          },
+          "end": {
+            "line": 240,
+            "character": 46
+          }
+        },
+        "message": "Argument of type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" cannot be assigned to parameter \"kwds\" of type \"ArrayLike\" in function \"savez_compressed\"\n\u00a0\u00a0Type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is not assignable to type \"ArrayLike\"\n\u00a0\u00a0\u00a0\u00a0Type \"dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is not assignable to type \"ArrayLike\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is incompatible with protocol \"Buffer\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__buffer__\" is not present\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is incompatible with protocol \"_SupportsArray[dtype[Any]]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"__array__\" is not present\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is incompatible with protocol \"_NestedSequence[_SupportsArray[dtype[Any]]]\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"count\" is not present",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 240,
+            "character": 41
+          },
+          "end": {
+            "line": 240,
+            "character": 46
+          }
+        },
+        "message": "Argument of type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" cannot be assigned to parameter \"allow_pickle\" of type \"bool\" in function \"savez_compressed\"\n\u00a0\u00a0Type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is not assignable to type \"bool\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"bool\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 242,
+            "character": 72
+          },
+          "end": {
+            "line": 242,
+            "character": 90
+          }
+        },
+        "message": "\"float\" is not iterable\n\u00a0\u00a0\"__iter__\" method not defined",
+        "severity": 1,
+        "code": "reportGeneralTypeIssues",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportGeneralTypeIssues"
+        }
+      }
+    ],
+    "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave2_20261014_consumer.py": [
+      {
+        "range": {
+          "start": {
+            "line": 37,
+            "character": 33
+          },
+          "end": {
+            "line": 37,
+            "character": 61
+          }
+        },
+        "message": "No overloads for \"__getitem__\" match the provided arguments",
+        "severity": 1,
+        "code": "reportCallIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+        },
+        "relatedInformation": [
+          {
+            "location": {
+              "uri": "file:///home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/__init__.pyi",
+              "range": {
+                "start": {
+                  "line": 2155,
+                  "character": 8
+                },
+                "end": {
+                  "line": 2155,
+                  "character": 19
+                }
+              }
+            },
+            "message": "Overload 5 is the closest match"
+          }
+        ]
+      },
+      {
+        "range": {
+          "start": {
+            "line": 37,
+            "character": 33
+          },
+          "end": {
+            "line": 37,
+            "character": 61
+          }
+        },
+        "message": "Argument of type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" cannot be assigned to parameter \"key\" of type \"list[str]\" in function \"__getitem__\"\n\u00a0\u00a0Type \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" is not assignable to type \"list[str]\"\n\u00a0\u00a0\u00a0\u00a0\"int\" is not assignable to \"list[str]\"",
+        "severity": 1,
+        "code": "reportArgumentType",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 37,
+            "character": 79
+          },
+          "end": {
+            "line": 37,
+            "character": 90
+          }
+        },
+        "message": "Operator \"*\" not supported for types \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" and \"Literal[256]\"\n\u00a0\u00a0Operator \"*\" not supported for types \"dict[tuple[Any, ...], int]\" and \"Literal[256]\" when expected type is \"_ArrayLikeInt_co\"\n\u00a0\u00a0Operator \"*\" not supported for types \"dict[tuple[int, int], _Array[tuple[int, int], float64]]\" and \"Literal[256]\" when expected type is \"_ArrayLikeInt_co\"",
+        "severity": 1,
+        "code": "reportOperatorIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportOperatorIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 48,
+            "character": 32
+          },
+          "end": {
+            "line": 48,
+            "character": 35
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"dict[tuple[Any, ...], int]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 48,
+            "character": 32
+          },
+          "end": {
+            "line": 48,
+            "character": 35
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"list[tuple[int, int, int]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 48,
+            "character": 32
+          },
+          "end": {
+            "line": 48,
+            "character": 35
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"list[tuple[int, int]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 48,
+            "character": 32
+          },
+          "end": {
+            "line": 48,
+            "character": 35
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"list[tuple[int]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 48,
+            "character": 32
+          },
+          "end": {
+            "line": 48,
+            "character": 35
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"int\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 48,
+            "character": 32
+          },
+          "end": {
+            "line": 48,
+            "character": 35
+          }
+        },
+        "message": "Cannot access attribute \"sum\" for class \"dict[tuple[int, int], _Array[tuple[int, int], float64]]\"\n\u00a0\u00a0Attribute \"sum\" is unknown",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 48,
+            "character": 45
+          },
+          "end": {
+            "line": 48,
+            "character": 56
+          }
+        },
+        "message": "Operator \"*\" not supported for types \"NDArray[Any] | dict[tuple[Any, ...], int] | list[tuple[int, int, int]] | list[tuple[int, int]] | list[tuple[int]] | int | dict[tuple[int, int], _Array[tuple[int, int], float64]]\" and \"Literal[256]\"\n\u00a0\u00a0Operator \"*\" not supported for types \"dict[tuple[Any, ...], int]\" and \"Literal[256]\" when expected type is \"_ArrayLikeInt_co\"\n\u00a0\u00a0Operator \"*\" not supported for types \"dict[tuple[int, int], _Array[tuple[int, int], float64]]\" and \"Literal[256]\" when expected type is \"_ArrayLikeInt_co\"",
+        "severity": 1,
+        "code": "reportOperatorIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportOperatorIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 74,
+            "character": 32
+          },
+          "end": {
+            "line": 74,
+            "character": 36
+          }
+        },
+        "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 74,
+            "character": 67
+          },
+          "end": {
+            "line": 74,
+            "character": 71
+          }
+        },
+        "message": "Cannot access attribute \"imag\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      },
+      {
+        "range": {
+          "start": {
+            "line": 88,
+            "character": 14
+          },
+          "end": {
+            "line": 88,
+            "character": 18
+          }
+        },
+        "message": "Cannot access attribute \"real\" for class \"NDArray[Any]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Any]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+        "severity": 1,
+        "code": "reportAttributeAccessIssue",
+        "source": "Pyright",
+        "codeDescription": {
+          "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+        }
+      }
+    ],
+    "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave2_20261014_spinor.py": [],
+    "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_fullq_20261014_model.py": [],
+    "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_charged_gauss_20261014_model.py": [],
+    "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_spinor_20261014_model.py": []
+  },
+  "missing_selected": []
+}

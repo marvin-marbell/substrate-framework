@@ -1,0 +1,170 @@
+{
+  "kind": "INDEPENDENT_STATIC_BOUNDARY_REVIEW_NOT_ADMISSION",
+  "matrix": {
+    "basis_count": 15,
+    "Cart_metric": "delta/2",
+    "dimension": 60,
+    "s": "839/578",
+    "Jordan_div_lambda": "538361/83521",
+    "Jordan_over_s2": "2153444/703921",
+    "alignment_div_alpha": "252743/130050",
+    "doubling_alignment_factor": 4,
+    "arithmetic": "exact SymPy rational/radical; selected arbitrary full60 point, not ground",
+    "analytic_Jordan_bound": "lambda*s^2 <= J <= 16*lambda*s^2 from PSD4 Gram and HS anticommutator",
+    "radius_units": "r=sqrt(s)=|q|/sqrt(2); not |q|"
+  },
+  "tail": {
+    "rows": [
+      {
+        "M": 5,
+        "mixture_weight": "1/625",
+        "high_variance": "5/6",
+        "high_s2_contribution": "31/30",
+        "target_event_r_greater_Mover2_lower_div_alpha2": "0.0643587929898528108846534312886599772314119416941643490217074",
+        "corrected_event_r_greater_M_lower_div_alpha2": "0.0399540264251312480551388620799043194344811346191494107044525",
+        "complete_high_alignment_action_squared_div_alpha2": "10478/9375"
+      },
+      {
+        "M": 20,
+        "mixture_weight": "1/160000",
+        "high_variance": "40/3",
+        "high_s2_contribution": "31/30",
+        "target_event_r_greater_Mover2_lower_div_alpha2": "0.0645833333315729365581186089530974079694614833629239830204967",
+        "corrected_event_r_greater_M_lower_div_alpha2": "0.0399540264251312480551388620799043194344811346207874394774152",
+        "complete_high_alignment_action_squared_div_alpha2": "4984831/4800000"
+      },
+      {
+        "M": 80,
+        "mixture_weight": "1/40960000",
+        "high_variance": "640/3",
+        "high_s2_contribution": "31/30",
+        "target_event_r_greater_Mover2_lower_div_alpha2": "0.0645833333315729365581186089530974079694614833629239830204967",
+        "corrected_event_r_greater_M_lower_div_alpha2": "0.0399540264251312480551388620799043194344811346207874394774152",
+        "complete_high_alignment_action_squared_div_alpha2": "1270156831/1228800000"
+      }
+    ],
+    "moment_power_controls": [
+      {
+        "p": 4,
+        "union_exponent_at_R_M2": "1",
+        "quadratic_action_triangle_exponent": "6"
+      },
+      {
+        "p": 6,
+        "union_exponent_at_R_M2": "0",
+        "quadratic_action_triangle_exponent": "5"
+      },
+      {
+        "p": 16,
+        "union_exponent_at_R_M2": "-5",
+        "quadratic_action_triangle_exponent": "0"
+      },
+      {
+        "p": 18,
+        "union_exponent_at_R_M2": "-6",
+        "quadratic_action_triangle_exponent": "-1"
+      }
+    ],
+    "cone_vs_union": {
+      "cone_min_a": "2",
+      "union_requires_a_lt": "4/3",
+      "at_a2_norm_union_exponent": "1"
+    },
+    "nonstationary": true,
+    "actual_ground_failure": false,
+    "exact_scope": "bounded fourth radial moments do not imply uniform single-alignment action tails; no full-H lower bound",
+    "source": "full60 invariant Gaussians, normalized Haar, all65 exterior4-even/empty-odd singlets each2V, Ref4 inert; k_axis0=64parity, Dk=128parity",
+    "kinetic_budget": "Kphi=60chi/v; high mixture contribution=1800chi/M^6; baseline finite",
+    "fullE_moment_control": "closed plaquette shifts mb: weight m^-2 bounds second moment but fourth action diverges; m^-4 yields nonvanishing fourth action tail"
+  },
+  "projection": {
+    "digits": 90,
+    "overlap": "0.1708882346261401850025792156492241725982476082930490766482900193307791",
+    "source_norm2_before_division": "2.058405577467277474590199252979732581556756679958976803004992823751461",
+    "source_norm_after_division": "1 exactly",
+    "full_action_squared_div_kphi2": "8.976988942424167006645319934671539250218978692308199201139765934010126",
+    "optimal_local_multiplier_fitted_squared_div_kphi2": "6.934824069123677780841302642708793315973716140067411944651763546453747",
+    "residual_squared_div_kphi2": "2.042164873300489225804017291962745934245262552240787256488002387556379",
+    "action_tail_s20_analytic_upper_numeric_value": "7.74510066478233986354625031410596446109228778221459431427557e-102",
+    "residual_tail_s20_analytic_upper_numeric_value": "2.79754175967958141841239705231510848106578554008283130077563e-102",
+    "s2": "2.56215778531499411748674339449599957764289013998406769045893",
+    "kinetic_div_kphi": "336.435968120666577863787974537330003591237035569919034073929",
+    "wrong_crop_s2_omitted_action_squared": "0.389438564544811045463180857661645845693248587763842237973456",
+    "drop_kinetic_derivative_wrong_residual": "0: remaining scalar action is exactly a local multiplier",
+    "wrong_core_enlargement": "arbitrary bounded local B(H) can map f_a to c_a f_a and f_b to c_b f_b using bounded rank2 dual-basis operator; it annihilates this residual but is not THIS MW core",
+    "exact_positivity": "(1-z^2)>0, (va^-1-vb^-1)^2>0, pa*pb>0 on s>0; determinant residual strictly positive",
+    "numeric_limitation": "90-digit mpmath quadrature is not interval-certified; analytic positivity and Gamma-tail formulas are separate exact statements",
+    "distance_controls": [
+      {
+        "R": 7,
+        "Y": 12,
+        "even_N": 60
+      },
+      {
+        "R": 31,
+        "Y": 36,
+        "even_N": 156
+      },
+      {
+        "R": 127,
+        "Y": 132,
+        "even_N": 540
+      }
+    ],
+    "nonstationary": true,
+    "actual_ground_failure": false
+  },
+  "fullE": [
+    {
+      "N": 10,
+      "each65_number": 2000,
+      "exact_checkerboard_divergence": "128parity",
+      "closed_circulation_preserves_Gauss": true,
+      "cross0": 4.18367562815547e-09,
+      "weighted_cross": 799.7937495107908,
+      "analytic_cross": "(8192/3)*(1-1/sqrt(2))>0",
+      "path_fullE_delta": -8128.0,
+      "split_delta": -8128.000000000001,
+      "exterior_longitudinal_norm": 0.47128653704513984,
+      "complete_exterior_cancellation": 0,
+      "scope": "native fullE geometry and weighted cross, not physical ground/dynamics or phase"
+    }
+  ],
+  "input_hashes_before": {
+    "history_ground_parent_review_postexecution_snapshot_20261011.zip": "b89f76d8ffd33ca111c4c622b2c67f610ce2b2d97b5e59f95736d922d2781090",
+    "static_boundary_review_consumer_20261011.py": "093e18c527c4659c255f17f2905f97fb9b7841046fe349aea31df35f9241b5a7",
+    "static_boundary_review_consumer_parenttyped_20261011.py": "9705fd5bfc0de887c654dc9af362edcd729b9ab85f12800d69c91e3f502bf154",
+    "static_boundary_review_execute_20261011.py": "07f8283c8f065fd59b65c2d9c20c8b2d68e669a354a6a12d8955acd9a0e36141",
+    "static_boundary_review_interface_20261011.json": "aba22ca17ecba6d9e2d4a2debd9d33528df8f9224c21e41bb3ca49ed6a10fe76",
+    "static_boundary_review_language_20261011.json": "f7839620dc821cc5c26c8fb6672dfac74b4eca80fbb7cba80d8148eddb8691f9",
+    "static_boundary_review_proof_20261011.json": "8159a42d899c4cc1b12a55824570fe239bbab56240bc0325a353fd1e22348442"
+  },
+  "target_pins": {
+    "native_static_exterior_actual3_20261011_capsule.json": "a712bef464476bf554d2255989e14bc7a92055c2ed11791ce75c8a43ba4eb5de",
+    "native_static_exterior_actual3_20261011_executed.zip": "ecf1da36c73a26323a84699c2761c920d0d155bb764c1b9a8be8cedb41cda753",
+    "native_static_exterior_actual3_20261011_preexecution.zip": "2cf127348e0522efb168c2a7f9a8e30f586408ce92a3a91cbf26c154a4911f69",
+    "native_static_exterior_actual3_20261011_receipt.json": "790bcd25cbd3e8bd44a04a22f80c9d3aeee902a227944f581100420a5188b6de",
+    "native_static_exterior_consumer_20261011.py": "92d1d65a22c015a05c4e70604f6e8c24b78703aaac1840b5fa8c611015dde440",
+    "native_static_exterior_delivery_20261011.json": "a4bae3d082be01aa9757053c4db92a7bd55ce60d51f5dd09ef3da305de326ec9",
+    "native_static_exterior_interface_20261011.json": "8d90a1f19298e5c2e175753f24f1e9bcb8289abf10b02cf63d2f1fc85e9b28e0",
+    "native_static_exterior_proof_20261011.json": "137e0ced3548360f31a71e72b0d67b8dee6c4959108a9428566a98e8edd56687"
+  },
+  "same_static_GNS_exterior_closed": false,
+  "same_static_range": false,
+  "history_splice_admitted": false,
+  "ground_or_native_U_computed": false,
+  "runtime": {
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3"
+  },
+  "input_hashes_after": {
+    "history_ground_parent_review_postexecution_snapshot_20261011.zip": "b89f76d8ffd33ca111c4c622b2c67f610ce2b2d97b5e59f95736d922d2781090",
+    "static_boundary_review_consumer_20261011.py": "093e18c527c4659c255f17f2905f97fb9b7841046fe349aea31df35f9241b5a7",
+    "static_boundary_review_consumer_parenttyped_20261011.py": "9705fd5bfc0de887c654dc9af362edcd729b9ab85f12800d69c91e3f502bf154",
+    "static_boundary_review_execute_20261011.py": "07f8283c8f065fd59b65c2d9c20c8b2d68e669a354a6a12d8955acd9a0e36141",
+    "static_boundary_review_interface_20261011.json": "aba22ca17ecba6d9e2d4a2debd9d33528df8f9224c21e41bb3ca49ed6a10fe76",
+    "static_boundary_review_language_20261011.json": "f7839620dc821cc5c26c8fb6672dfac74b4eca80fbb7cba80d8148eddb8691f9",
+    "static_boundary_review_proof_20261011.json": "8159a42d899c4cc1b12a55824570fe239bbab56240bc0325a353fd1e22348442"
+  }
+}

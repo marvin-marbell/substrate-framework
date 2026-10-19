@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/carrier_support_review_consumer_20261012.py", line 417, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/carrier_support_review_consumer_20261012.py", line 401, in main
+    'analytic_multiplier': analytic_control(profiles), 'input_pins': request['pins'],
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/carrier_support_review_consumer_20261012.py", line 310, in analytic_control
+    expected = sp.Rational(1, 2) * ((a == b) * (k == l) - sp.Rational(1, 4) * (a == k) * (l == b))
+                                                          ~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'Rational' and 'bool'

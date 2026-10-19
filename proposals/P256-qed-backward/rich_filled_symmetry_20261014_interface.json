@@ -1,0 +1,22 @@
+{
+  "candidate": "bipartite-molecular-rung-odd-extended-bridge-filled-CAR-v1",
+  "module": "rich_filled_symmetry_20261014_model.py",
+  "units": "hbar=1; cell spacing parameter a=1; qcharge=-1; energy units microscopic coherent rung transfer",
+  "representation": "mode order endpoint(A,B), charged(l,m), spin(up,down), neutral(l,m), vector oscillator(n_x,n_y,n_z), complete sum(n)<=1; 576 species/cell",
+  "reference": "all288 negative single-particle modes per k occupied; Q=-1*(N-288*cells); actual64cell Esea in actual1_result. No empty-band poles labeled holes.",
+  "reference_momentum_scope": "For literal finite4^3 sea, all k and transferred q must be multiples pi/2 modulo2pi; actual3 supplies this nonforward consumer. Arbitrary real k API formulas define thermodynamic filled-band Bloch occupied-projector integrands, not the same finite64-cell Fock state. actual1/2 generic responses belong to this latter integrand scope; actual1 finite-grid total Esea/N is a separate finite reference example.",
+  "functions": {
+    "build": "Parameters -> dict including H0[576,576], T[3][576,576], directions[3,3], M[288,288], source B[576,36], spin/J[3,576,576], grade/TR/C[576,576]",
+    "hamiltonian": "(model,k[3])->h[576,576]",
+    "spectrum": "(model,k)->(E[576],V[576,576]); columns resolved primitive Sz within actual degenerate subspaces; no energy splitting",
+    "charged_green": "(model,k,z complex Im>0)->addition/removal/time_ordered/retarded source matrices[36,36]. Removal is actual Sea c source with negative pole and opposite i eta; retarded is causal all-sector CAR. Residues addition+removal=Bdag B.",
+    "vertex": "(model,kout,kin,epsilon[3])->J[576,576]; q=kout-kin, exact straight-link sinc(q.d/2). Physical H[A]=H-J.A+1/2 A.C.A using Peierls exp(-i qcharge integral A). Macrocell density=qcharge I; both endpoints at same center, rung has zero external-link length.",
+    "contact": "(model,kout,kin,qin,epsin,qout,epsout)->second H derivative[576,576]; outgoing epsilon is conjugated internally, vertex outgoing caller supplies conjugate; momentum kout=kin+qin-qout",
+    "pair_response": "(model,k,q,z)->tensor[3,3], energies[288,288], amplitudes[3,288,288], summed_weight[3,3]. One-k contribution, not BZ-integrated bulk value. Includes resonant k->k+q and antiresonant k-q->k all occupied/empty states. Caller supplies d^3k/(2pi)^3 or declared finite-cell1/N sum. K_response=sea_contact+chi_JJ; under H[A] convention physical deltaJ=-K_response A. Saved actual1 one-k trace_occ contact accompanies chi.",
+    "pair_creation": "(model,kh,qin,epsin,qout,epsout,omega,particle offset within positive,hole offset within negative,eta)->connected sea-to-one-real-pair two-source amplitude. Full occupied/unoccupied internal intermediate states, both time orders, minus hole scattering and contact. Physical outgoing energy=omega-Epair; report only nonnegative outgoing energy for real external consumer. No photon normalization.",
+    "spin_current": "Use (S_i J_j+J_j S_i)/2 on this same model. Hole expectation is negative removed-mode bilinear; C-related particle/hole preserve physical spin and reverse charge/current. No unexplained borrowed gyromagnetic coefficient."
+  },
+  "source_completeness": "B prepares36 endpoint charged angular/spin creation/annihilation operators with neutral l0/vector oscillator vacuum; full high internal spectrum enters their actual G and current/pair response. Full Fock state external algebra retained implicitly by exact quadratic Wick contraction, not explicit 2^576 enumeration.",
+  "shared_field_join_boundary": "No independent dynamical EM or photon D present. Oscillator is an INTERNAL reference species; do NOT treat it as field propagation or multiply its response by SpinFlux D. A compatible common H replaces actual carrier bilinears on shared Gauss links, retains all endpoint species/neutral memory and physical C action, recomputes common interacting filled sea, reference background/Gauss neutrality, G, contact and pair polarization. Existing SpinFlux few-particle empty reference is not this state. This carrier can be prepared as an input, not a joined result.",
+  "conclusion_boundary": "Stable charged additions/removals relative actual quadratic filled gapped reference; exact microscopic C from graph+TR; physical halfspin remains primitive. No Dirac/Lorentz/photon/free-rotation/global QED conclusion. Eight low-gap lattice species and lowest-rest vector-current selection failure retained."
+}

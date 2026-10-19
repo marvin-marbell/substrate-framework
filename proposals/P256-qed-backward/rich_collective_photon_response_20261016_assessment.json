@@ -1,0 +1,43 @@
+{
+  "verdict": "WORKING_EXACT_FINITE_TRANSFER_FIELD_ESTIMATOR_AND_ACTUAL_NEW_V64_CANDIDATE_RESPONSE_NOT_RESOLVED_EQUILIBRIUM_PHOTON",
+  "actual_new_cases": 10,
+  "actual_saved_physical_paths": 450,
+  "achieved": [
+    "Actual same-H finite-M source-to-electric susceptibility with first/second Frechet interval vertices/contact and full determinant feedback, independently tested against an actual physical transfer trace before V64.",
+    "Independent compact kinetic electric zero-Matsubara sector retained rather than inferred from current or deleted.",
+    "New original same-charge PH/Gauss V64 ensembles at beta.5/1/4/8, two transverse polarizations and qpi/2/pi paired with qminus; imaginary-time and Matsubara field/current/contact arrays.",
+    "Actual colder pivoted-QDT/cyclic-HS stabilized method fork, not only a promised fit; separate cold Trotter and seed cases.",
+    "Same-path gauge-invariant compact curl sin-plaquette D_B separates a field-coordinate leg from fast material-current decay, without adding a magnetic energy term."
+  ],
+  "adverse_findings": {
+    "largest_static_source_Ward_discrepancy": {
+      "case": "b1_M8_s46103",
+      "q": "pi",
+      "polarization": "Ty",
+      "mean": 0.0026333637896029578,
+      "exploratory_block_SEM": 0.0003582897367600685,
+      "mean_over_block_SEM": 7.349816417896475,
+      "meaning": "Exact ensemble static-source Ward value is zero; this failure is evidence against interpreting the reported short-chain SEM as total equilibrium uncertainty. It is not repaired by independent electric n0=16 or agreement of some JJ seeds."
+    },
+    "maximum_D_E_n1_seed_difference_in_combined_block_SEM": {
+      "beta0.5_M4": 1.1431709843280389,
+      "beta1_M8": 3.681612356779532,
+      "beta4_M16": 1.621950082751973,
+      "beta8_M32": 4.829874197131197
+    },
+    "beta8_qpi_Ty_D_E_n1_seeds": [
+      {"seed":46203,"mean":0.3565729923013772,"block_SEM":0.023026353110957354},
+      {"seed":46205,"mean":0.19323520835663036,"block_SEM":0.024768115942609383}
+    ],
+    "beta8_qpi2_Ty_D_E_n1_seeds": [
+      {"seed":46203,"mean":0.3122629805754705,"block_SEM":0.027559311701389002},
+      {"seed":46205,"mean":0.18188605604728064,"block_SEM":0.02126461011992418}
+    ],
+    "largest_selected_cold_source_Hessian_step_halving_change":8.527414752101947e-8,
+    "interpretation": "Numerical stabilized derivative error is much smaller than the observed MC/seed discrepancy. More precision in that derivative would not establish equilibrium or a photon pole.",
+    "Trotter": "Beta1 dt.25 vs.125 changes D_E(n1) materially (~.0131-.0136 versus.0107-.0113). Beta4 also has actual dt.25/.125 comparisons; no extrapolation. Beta8 only dt.25."
+  },
+  "physical_interpretation": "Matter-current/contact feedback produces a measurable nonzero electric finite-frequency field response in the actual full rotor transfer law. At beta8 current tauhalf/tau0 is O(.01-.07) while compact coordinate-field retention is much larger. This separates observed material-UV and field-coordinate legs, but heavy free rotors can also be slow; it does not isolate a universal collective photon pole or q-dispersion. Large static Ward/seed defects prohibit a certified equilibrium field-dispersion claim.",
+  "not_claimed": ["irreducible polarization from full chi", "curvature=photon mass", "resolved real-time pole", "converged thermal/vacuum state", "continuum Trotter limit", "joined Band40 law", "Nature electron/photon or Maxwell speed"],
+  "diagnostics": "Selected9-file Pyright exit1/30 errors retained, actual rooted LSP symbols/definition natural0 and positive AST. No clean-typing claim."
+}

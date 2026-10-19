@@ -1,0 +1,89 @@
+{
+  "kind": "SCIENTIFIC_PROOF_REVIEW_VALID_STATIC_NEUTRAL_JORDAN22_TIGHTENING_NOT_ADMISSION",
+  "verdict": "VALID for the stated independent NEW Jordan law, neutral128 static flat2+2 sector. No incorrect load-bearing inequality found. Central dominance, fullPhi ground and same-ground photon remain OPEN.",
+  "governing_plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "governing_revision": "55352a0aabbcc1da539641239f48f2807ec1e2a609b5d533ca0f186d8df27b6e",
+  "template": "general",
+  "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "parent_work_item": "induced-photon",
+  "shared_plan_writes": "NONE; bound and template reviewed only; parent owns recording reviewed outcomes",
+  "target": {
+    "source": "joined_phi_u1_jordan_22_consumer.py",
+    "source_sha256": "3bbe20dc7dd9203683eef16aa80cbb0735be91e398486c9b5fe7e0832911877e",
+    "receipt": "joined_phi_u1_jordan_22_typed_actual_20261010.json",
+    "receipt_sha256": "c6d62aeadd356a4b5d04be0d34ea7129bdf60b774704695827be7bbae8d36edb",
+    "capsule": "joined_phi_u1_jordan_22_typed_actual_20261010.capsule.json",
+    "capsule_sha256": "4c841f3d192dacf2063064cec71e0564dea9aad045c1202d1604a53141fe4caa",
+    "execution_archive_sha256": "6d23c1d952646b05b70a745b652225774cc4ceb630bdd7daf8df08eed96b55df",
+    "input_archive_sha256": "5ace73aa77450490a2c1d649344a7a9d5ea44f6633105e009397e0efba81ec9a",
+    "frozen_input_sha256": "d3d0360739b6d1d12ac013bac65aafcb085004fa76f7d379445cbe8548d18e24"
+  },
+  "reviewed_math": {
+    "full_traceful_polynomial": "Pauli multiplication gives {Phi_mu,Phi_nu}=2[(t_mu t_nu+v_mu.v_nu)I+(t_mu v_nu+t_nu v_mu).sigma]. Trace square is8[(t_mu t_nu+H_mu,nu)^2+|t_mu v_nu+t_nu v_mu|^2]. Summing yields8[||H||F^2+s^2+4tHt+2s TrH]. All traceful terms retained; global tracezero imposes t2=-t1 only. H1,H2 independent PSD rank<=3, not necessarily equal or invertible.",
+    "units_and_occupation": "64 sites/(16a)=256 at a=1/64. Multiplying the block trace result gives2048Q in E/Lambda. Neutral physical -Lambda h minimizes energy by GLOBAL largest128 of256 h eigenvalues. Since total Trh=128A(t1,0+t2,0)=0 even at independent angles, largest128 sum<=sum positive eigenvalues=Tr|h|/2. Each2x2 block contributes max(|w|,R)<=sqrt(w^2+R^2). No independently enforced block64 or fixed2-per-momentum occupation.",
+    "rank_moment_control_completed": "Let x=TrCH and z=tCt. Rank<=3 implies x^2<=D3||H||F^2. Also z<=Cmax s, x<=Cmax TrH, Cmax^2<=D3; hence z^2<=D3s^2 and2xz<=2D3sTrH. Therefore (x+z)^2<=D3[||H||F^2+s^2+2sTrH]<=D3Q. This supplies the cross-term step omitted from the terse producer prose, without rank4 exclusion or tHt=0. Separately ||K||F^2=||H||F^2+s^2+2tHt<=Q. Thus u=K00/r in[0,1], and diagonal Frobenius Cauchy gives m/r<=C00u+sqrt(sum Csp^2)sqrt(1-u^2).",
+    "continuous_N4_harmonics": "For p=delta+pi k/2, mean exp(i d p)=exp(i d delta) times the root-of-unity sum, zero unless d is divisible4. Differences between degree2 frequencies and degree1 axes have magnitude<=3. Constant and every degree2 term therefore have zero projection onto each single-axis cos p_j/sin p_j; mixed-axis terms also vanish after another-axis mean. The six frequency1 axes are mutually orthogonal with norm squared1/2. Their coefficients are4A c0_j K00 and-4A ci_j K0j. Bessel implies Var(y)>=8A^2sum c0_j^2 K00^2 (and a further nonnegative omitted K0j term). Frequency2 cos/sin may alias each other, but this affects only the orthogonal remainder. ALL continuous shifts, including AP offset, covered algebraically.",
+    "support": "After absorbing c0 signs into z_j, ||x||^2=A^2+3b+2Aa1.z-z^T Bz, B=bI-a^2 11^T. Native exact coefficients give b>3a^2, so B positive. With z*=B^-1 Aa1, this equals L-(z-z*)^T B(z-z*), L=A^2+3b+3(Aa)^2/(b-3a^2). The unconstrained bound includes the cube[-1,1]^3; no grid, equality or physical optimizer claimed. PSD K implies y<=||K||op||x||^2<=rL.",
+    "sqrt_defect": "For m>0 and y>=0, writing a=sqrt(y),b=sqrt(m), the claimed exact remainder is (a^2-b^2)^2/[2b(a+b)^2]=(a-b)^2/(2b). Averaging cancels the tangent term. Its denominator<=2 D3^(1/4)(sqrt(L)+D3^(1/4))^2 r^(3/2), while Var(y)>=V u^2 r^2. Thus mean sqrt(y)<=sqrt(r)[sqrt(m/r)-d u^2] with the displayed d. The direction of denominator relaxation and defect subtraction is correct.",
+    "zero_rank_and_s0": "Q=0 forces H=0,t=0 and all pressure zero, handled before division. C positive implies m=0 only at K=0. s=0 permits any PSD H of rank0..3, including Jordan-saturating rank3; the same bounds apply without an inverse. Scalar-only H=0 gives Q=s^2, r=s, K=tt^T; u=1 reached by t along0. u=0 reached by spatial-only fields. Closed first/last cells include both endpoints.",
+    "closed_cover_and_outward_arithmetic": "All3 routes'16384 CLOSED rational cells were checked exactly: index i has[i/16384,(i+1)/16384]. No gaps, including endpoints. For stored upper p, d_lower and lo, q=(p+d_lower lo^2)^2 satisfies either q^2>=D3 or q>=C00hi and(q-C00hi)^2>=sum Csp^2(1-lo^2). These rational squared inequalities certify the stored upper bounds without rerunning envelope generation or an angle sweep. Independent160bit integer sqrt bounds certify d_lower outwardness. Cubing radial endpoints verifies -3(256alpha^4)^(1/3) enclosure. Producer110bit addition/multiplication/square/positive division/isqrt/integer cube-root directions were inspected; only positive divisor branches are used here.",
+    "determinant_components": "For each axis, detU=exp[2i(theta1+theta2)]=1 gives theta2=pi n-theta1. Modulo2pi there are two n parities. Across3 axes all8 Z2^3 components, including101, remain; the archived native finite controls list all8. Analytic bounds hold even with independent characters, so relaxing coupling includes rather than removes every determinant component. Degenerate characters and rank-deficient fields are covered.",
+    "radial_minimum": "For z=sqrt(r)>=0, each block2048z^4-64alpha z has stationary z^3=alpha/128 and exact global minimum-48alpha(alpha/128)^(1/3). Two independent blocks give-3(256alpha^4)^(1/3). It is a lower relaxation, not an attained physical trial."
+  },
+  "observed_results": {
+    "new_lower_E_over_Lambda": -1444.7815933158308,
+    "old_rank_moment_lower_E_over_Lambda": -1473.7043865717615,
+    "improvement": 28.92279325593074,
+    "remaining_gap_to_central_trial_upper": 12.72740852383296,
+    "sector_own_trial_upper_E_over_Lambda": -1385.072945050518,
+    "sector_own_bracket_width": 59.708648265312796,
+    "excluded": false,
+    "eligibility_not_counterexample": true
+  },
+  "meaningful_independent_controls": {
+    "source": "joined_phi_u1_jordan_22_mathreview_control.py",
+    "source_sha256": "9f183c831867c1fe604715fed7122ce08448731997d8c5318a17d4202ed10a21",
+    "runtime": "joined_phi_u1_jordan_22_mathreview_control_execution_20261010.json",
+    "result": "joined_phi_u1_jordan_22_mathreview_control_actual_20261010.json",
+    "epoch_archive": "joined_phi_u1_jordan_22_mathreview_20261010.epoch.zip",
+    "natural_exit_code": 0,
+    "execution_seconds": 4.2592737800005125,
+    "scope": "Independent standard-library Fraction checker, no shared science imports. Exact rational traceful diagonal Pauli fields and independent continuous-character orbits using native neutral coefficients. These relaxed-character controls are NOT claimed to satisfy all8 determinant equations or reconstruct the native lattice. Determinant coverage belongs to analytic proof; original native controls are archived finite evidence only.",
+    "scalar_contrary": "Direct trace-antiquartic245/32 equals full formula; stripping scalar terms instead gives125/32.",
+    "occupation_contrary": "Exact global128 exceeds independently forced block64 sums by16146057686069195847/1244119397061099520. Wrong blockhalf filling is actually discriminated, not assumed.",
+    "alias_contrary": "At cos p=3/5,sin p=4/5 on4 shifted samples, mean cos^2 p sin^2 p=144/625>1/8. Also mean cos2p sin2p=-168/625, not0. Thus a continuum fourth-moment upper bound or a frequency2 orthogonality assertion is false. Reviewed proof uses neither, retaining that remainder. Frequency1 projection and protected variance were checked rationally.",
+    "adverse_certificate": "joined_phi_u1_jordan_22_mathreview_adverse_20261010.json: reducing the maximal cell12158 stored pressure bound by exact1/1000 violates both independent rational certificate branches. Correct stored bound passes. Rank3 s0 moment and scalar-only u1 cases also checked exactly.",
+    "prohibited_reruns": "NONE: no original consumer, root, original science producer, precision rerun or known failed control executed."
+  },
+  "binding_audit": {
+    "execution_archive_members_and_live_hashes_checked": 128,
+    "input_archive_members_and_live_hashes_checked": 127,
+    "capsule_before_after_match": true,
+    "receipt_and_archive_sha256_checked": true,
+    "producer_natural_exit": "Archived exit0 and8.674235437007155seconds inspected, not newly exercised.",
+    "prior_epochs": "Existing failed serialization/checker artifacts were left unchanged; the corrected final checker names its prior failed epoch. No history/callback source rebind."
+  },
+  "language_evidence": {
+    "receipt": "joined_phi_u1_jordan_22_mathreview_language_20261010.json",
+    "lsp": "Actual pyright-langserver stdio at project root exercised producer symbols/definition before editing; review source symbols/definition and empty diagnostics after editing. xd://lsp device absent. Initial producer diagnostics had missing external imports under default interpreter; configured scientific interpreter for own source and did not claim producer diagnostics clean.",
+    "ast": "Positive ast-grep Python annotated function queries for producer envelope and independent audit_cells.",
+    "final_checker": "joined_phi_u1_jordan_22_mathreview_final_checker_20261010.json",
+    "final_selected_files": ["joined_phi_u1_jordan_22_mathreview_control.py"],
+    "pyright_version": "1.1.414",
+    "natural_exit_code": 0,
+    "errors": 0,
+    "warnings": 0,
+    "information": 0,
+    "external_config_removed": true
+  },
+  "findings": [],
+  "unpaid_obligations": [
+    "Remaining12.7274085238 lower-to-central-trial gap; no22 exclusion or lower counterexample",
+    "Other proper sectors and general off-flat/fullPhi stationary quantum ground",
+    "Charged all64 canonical CAR/fullrhoHC and Pi/electric dynamics in the same ground",
+    "Same-ground physical spatial photon pole, dispersion and cone",
+    "New-law/source/root/covariance/normalizer adoption, common-cone/Compton/campaign closure"
+  ],
+  "next_scientific_decision": "To exclude22, tighten the certified pressure/quartic relaxation by more than12.7274085238 relative to the central trial upper; alternatively supply an outward-certified lower-energy trial. The present bound alone cannot choose central dominance. No optimizer-absence argument is licensed.",
+  "authority": "Scientific mathematical review only; not provider approval, parent acceptance or fullground admission. All shared files read-only; only assigned mathreview prefix written."
+}

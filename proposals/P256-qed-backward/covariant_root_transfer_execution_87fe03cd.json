@@ -1,0 +1,80 @@
+{
+  "natural_exit": 0,
+  "bash_wall_seconds": 25.4,
+  "scientific_elapsed_seconds": 23.308956490131095,
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "covariant_root_transfer.py",
+    "--normal-width-power",
+    "1500",
+    "--tube-radius-power",
+    "1600",
+    "--output",
+    "covariant_root_transfer_capsule.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "source_sha256": "87fe03cd300dba9a27656441f85b3ff421caf1322ff51d170d8f054f8f7a78ba",
+  "input_sha256": "3c9068b468db03b9ef481a9ee7cbd9d75622391c31dc82b5b7d130b372866266",
+  "diagnostics": {
+    "consumer_sha256": "87fe03cd300dba9a27656441f85b3ff421caf1322ff51d170d8f054f8f7a78ba",
+    "root": "/home/administrator/substrate-222",
+    "settings": {
+      "python": {
+        "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+        "analysis": {
+          "extraPaths": [
+            "/home/administrator/substrate-222/proposals/P256-qed-backward"
+          ],
+          "typeCheckingMode": "basic",
+          "diagnosticMode": "openFilesOnly"
+        }
+      }
+    },
+    "server": "pyright 1.1.414",
+    "symbols_count": 556,
+    "definitions": [
+      [
+        {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_root_transfer.py",
+          "range": {
+            "start": {
+              "line": 73,
+              "character": 6
+            },
+            "end": {
+              "line": 73,
+              "character": 20
+            }
+          }
+        }
+      ],
+      [
+        {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_root_transfer.py",
+          "range": {
+            "start": {
+              "line": 169,
+              "character": 4
+            },
+            "end": {
+              "line": 169,
+              "character": 15
+            }
+          }
+        }
+      ]
+    ],
+    "publishedDiagnostics": {
+      "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_root_transfer.py",
+      "version": 1,
+      "diagnostics": []
+    },
+    "positive_AST": [
+      "def family_bounds($$$ARGS) -> $RETURN: $$$BODY"
+    ]
+  },
+  "preceding_repaired_failure": {
+    "source": "6B88 snapshot",
+    "error": "primitive native_lift expects star paths; fresh native probes mistakenly used chain. Both new native graphs cut over to existing star convention; no frozen modules changed."
+  }
+}

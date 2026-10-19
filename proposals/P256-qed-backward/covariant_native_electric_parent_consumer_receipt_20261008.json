@@ -1,0 +1,285 @@
+{
+  "kind": "Parent integrated finite electric heat/source/receiver CLI smoke; scoped new compact-cycle Galerkin law",
+  "command": [
+    "env",
+    "OPENBLAS_NUM_THREADS=1",
+    "OMP_NUM_THREADS=1",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "covariant_native_electric_heat_comparison.py",
+    "--electric-cutoff",
+    "1",
+    "--haar-grid",
+    "32",
+    "--primitive-electric-input",
+    "1",
+    "--output",
+    "/tmp/issue222-parent-electric-UE1-smoke.json"
+  ],
+  "tool_completion": "bg_1148 completed successfully and naturally; numerical exit code not separately included in returned output",
+  "tool_output_reference": "artifact://8505",
+  "wall_seconds": 70.63,
+  "scientific_runtime_seconds": 67.85156062990427,
+  "runtime_packages": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.39"
+  },
+  "input_descriptor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "plan_sha256_at_IMPORT": "7650a3636f3d39a74243a986afb1683be8fae895c3f5afb77720b05330363a51",
+    "primitive": "NEW declared physical electric heat comparison, SAME c6e5 local two-path SF; not induced-electric explanation",
+    "primitive_electric_input": 1.0,
+    "primitive_electric_H": "UE sum_ALL4edges Pi_e\u00b2 with SAME total charged+aux+Ref Gauss; longitudinal/Coulomb load retained",
+    "positive_transfer_factor": "F_U=normalheat_half SF_half exp(-UE sum Pi_e\u00b2/2) in ONE physical globalGauss space; K_U=F_U F_Udag",
+    "Haar_endpoint": "UE\u2192infinity gives P_E0, totalrho0 middle and exactly original Haar construction AT THIS declared regulator; no oldE12 retag",
+    "full_active_canonical_numbers": [
+      4,
+      5
+    ],
+    "full_active_CAR_states": [
+      70,
+      56
+    ],
+    "all_auxiliary_canonical_number": 2,
+    "all_auxiliary_CAR_states": 6,
+    "original_Ref": 4,
+    "prepared_Ref": 3,
+    "static_Ref_site": 0,
+    "integer_active_aux_charges": [
+      1,
+      1
+    ],
+    "integer_Ref_hole_charge": -1,
+    "active_kappa": 0.09,
+    "auxiliary_kappa": 0.04,
+    "light_homotopy": 0.0,
+    "two_auxiliary_integer_path_weights": [
+      0.5,
+      0.5
+    ],
+    "source_packet": [
+      0.11043152607484655,
+      0.8834522085987724,
+      0.4417261042993862,
+      0.11043152607484655
+    ],
+    "receiver_packet": [
+      0.5661385170722979,
+      0.4529108136578383,
+      0.11322770341445958,
+      0.6793662204867574
+    ],
+    "source_paths": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "source_absolute_energy_thresholds": [
+      0.25,
+      2.0,
+      4.0
+    ],
+    "source_operator_and_Pe_not_retrofitted": true,
+    "Phi_nodes": [
+      -0.09,
+      0.0,
+      0.09
+    ],
+    "Phi_sigma": 0.03,
+    "Phi_radius": 0.12,
+    "Haar_quadrature_grid": 32,
+    "NEW_declared_electric_Galerkin_cutoff": 1,
+    "electric_regulator_is_NOT_historical12": true,
+    "transfer_duration": 1.0,
+    "spatial_spacing": 1.0,
+    "common_neutral_normalization": true,
+    "operator_contract": "Xi_ph=sqrt(KN/lambdaN) sin(theta) Omega/sqrtZph; Xi_ch=sqrt(KC/lambdaN) S_literal Xi_ph. M0=norm\u00b2Xi_ch; E1=<Xi,-log(KC/lambdaN)Xi>; R1=<Xi,KC/lambdaN Xi>; ONE whole charged halfstep pervector.",
+    "fullrank_scope": "ALL declared finite electric/Pauli/Phi columns; electric_heat and fullprojected pointSF andnormalheat strictlypositive. No untruncated EM/fullCartesianPhi/SU4/macro or massless admission",
+    "no_bare_magnetic_action": true,
+    "no_imported_Maxwell_kernel": true,
+    "no_speed_mass_quarter_fit": true
+  },
+  "input_descriptor_sha256": "b73a43cef87979ef9e2643627a5adfb7b076bf8e344452febdda01ed9a07d3f0",
+  "source_at_import": {
+    "covariant_native_electric_heat_comparison.py": "3a53c515002dda7c9ed7fb3667574dac94976ad717d0a5f14b681d107416187b",
+    "covariant_native_closed_auxiliary_loop.py": "c6e5eda6241ba7929da2f1e203930c9b5af59807883bffa0f6b9b7cac867a0d2",
+    "covariant_native_source_gram_moments.py": "17f4595c82b27e8f4d93098d393952a29b1b4c05458f5e7ccfe7df55c22c5194",
+    "covariant_native_haar_range_jets.py": "353874cf87ab8f46d2dfee015383187ef5de564dc2aa9f964ae7128212ff026c",
+    "covariant_source_band_halfstep_control.py": "6aeec85361f3839ce29d163c07e8229a4459cd53e1f141c02910d5d4bf7fd89b",
+    "covariant_induced_photon.py": "f022ff8823013e4a47974899efec187af17588b49a94d3af52eba3d731d8c6be",
+    "covariant_photon_energy_control.py": "b21d956242d16b68632bf52835b0db5847b0dbc3aa96a8aa5838a431d0673e06",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459"
+  },
+  "complete_output_sha256": "20f3da2632f60882a71f922883d14d23cfde7f57d31d6e17dcbe0be92d5d9c55",
+  "observed": {
+    "actual_same_regulator_Haar_endpoint": {
+      "actual_common_neutral_lambdaN": 22166150279.425083,
+      "actual_positive_ranks": [
+        216,
+        120
+      ],
+      "actual_normalized_min_positive_singular_values": [
+        2.096776455076164e-06,
+        4.942204024280523e-06
+      ],
+      "actual_photon_Zph": 3.454865543041824e-10,
+      "actual_photon_energy_mean": 8.472532924037393,
+      "actual_M0": 6.661747485759358e-07,
+      "actual_E1": 6.299853470247034e-06,
+      "actual_R1": 3.177250564211487e-10,
+      "actual_energy_mean": 9.456758130976992,
+      "actual_transfer_Rayleigh_mean": 0.00047693950738952683,
+      "actual_raw_photon_Knull_norm_squared": 0.4995981979124473,
+      "actual_raw_source_Knull_norm_squared": 0.9591568937544184,
+      "actual_charged_source_absolute_band_rows": [
+        {
+          "absolute_threshold": 0.25,
+          "source_fraction": 0.0
+        },
+        {
+          "absolute_threshold": 2.0,
+          "source_fraction": 0.0002765344892377686
+        },
+        {
+          "absolute_threshold": 4.0,
+          "source_fraction": 0.00027696774321997594
+        }
+      ],
+      "actual_same_literal_source_consumer_rows": [
+        {
+          "time": 0.0,
+          "coherent_Ref4_receiver_real": 0.0031751675584758133,
+          "coherent_Ref4_receiver_imag": 0.0006555730635120729,
+          "coherent_Ref4_receiver_probability": 1.0511465065999862e-05,
+          "evolved_source_norm_squared": 1.0
+        },
+        {
+          "time": 0.5,
+          "coherent_Ref4_receiver_real": -0.00272365851417213,
+          "coherent_Ref4_receiver_imag": 0.00038233250947323263,
+          "coherent_Ref4_receiver_probability": 7.564493849622435e-06,
+          "evolved_source_norm_squared": 1.0
+        },
+        {
+          "time": 1.0,
+          "coherent_Ref4_receiver_real": 0.0025091688384672713,
+          "coherent_Ref4_receiver_imag": -0.00044698071092425944,
+          "coherent_Ref4_receiver_probability": 6.4957200158735525e-06,
+          "evolved_source_norm_squared": 1.0
+        },
+        {
+          "time": 2.0,
+          "coherent_Ref4_receiver_real": 0.002144450804434629,
+          "coherent_Ref4_receiver_imag": -0.0023047964231337243,
+          "coherent_Ref4_receiver_probability": 9.910755804730337e-06,
+          "evolved_source_norm_squared": 1.0
+        }
+      ],
+      "actual_neutral_phi_node_probabilities": [
+        0.00924676129576136,
+        0.9814282931103125,
+        0.009324945593926022
+      ]
+    },
+    "actual_primitive_electric_heat_transfer": {
+      "actual_common_neutral_lambdaN": 22180422504.74537,
+      "actual_positive_ranks": [
+        2514,
+        1836
+      ],
+      "actual_normalized_min_positive_singular_values": [
+        2.7541165079136595e-07,
+        6.490072778520078e-07
+      ],
+      "actual_photon_Zph": 0.009209746237622045,
+      "actual_photon_energy_mean": 3.9912245242098017,
+      "actual_M0": 0.0066162769001219,
+      "actual_E1": 0.027852579913085096,
+      "actual_R1": 0.00011117836719799155,
+      "actual_energy_mean": 4.2097059016033525,
+      "actual_transfer_Rayleigh_mean": 0.0168037657547167,
+      "actual_raw_photon_Knull_norm_squared": 1.5877956975620294e-30,
+      "actual_raw_source_Knull_norm_squared": 1.6906407440784e-30,
+      "actual_charged_source_absolute_band_rows": [
+        {
+          "absolute_threshold": 0.25,
+          "source_fraction": 0.0
+        },
+        {
+          "absolute_threshold": 2.0,
+          "source_fraction": 1.7594915127994215e-13
+        },
+        {
+          "absolute_threshold": 4.0,
+          "source_fraction": 0.510225859170699
+        }
+      ],
+      "actual_same_literal_source_consumer_rows": [
+        {
+          "time": 0.0,
+          "coherent_Ref4_receiver_real": 0.2795925381930983,
+          "coherent_Ref4_receiver_imag": 0.0004892013338100298,
+          "coherent_Ref4_receiver_probability": 0.07817222673120415,
+          "evolved_source_norm_squared": 0.9999999999999998
+        },
+        {
+          "time": 0.5,
+          "coherent_Ref4_receiver_real": -0.17679864793895422,
+          "coherent_Ref4_receiver_imag": -0.2052543335005277,
+          "coherent_Ref4_receiver_probability": 0.07338710333378813,
+          "evolved_source_norm_squared": 0.9999999999999998
+        },
+        {
+          "time": 1.0,
+          "coherent_Ref4_receiver_real": -0.0348235086354048,
+          "coherent_Ref4_receiver_imag": 0.2449597694831985,
+          "coherent_Ref4_receiver_probability": 0.06121796541894186,
+          "evolved_source_norm_squared": 0.9999999999999998
+        },
+        {
+          "time": 2.0,
+          "coherent_Ref4_receiver_real": -0.17445229455165728,
+          "coherent_Ref4_receiver_imag": -0.03621462861482624,
+          "coherent_Ref4_receiver_probability": 0.03174510240004798,
+          "evolved_source_norm_squared": 1.0
+        }
+      ],
+      "actual_neutral_phi_node_probabilities": [
+        0.009246507696239819,
+        0.9814282723550402,
+        0.009325219948719656
+      ]
+    }
+  },
+  "review": "agent://PrimitiveElectricSpectralReview: compact untruncated operator theorem accepted in scope; numerical cut1/cut2 remain Galerkin",
+  "limitations": [
+    "Primitive UE=1 is a declared electric input, not induced electric explanation.",
+    "Phi3 is one three-node coordinate, not full Phi/SU4.",
+    "Compact cycles and cut1 are not original untruncated real EM.",
+    "No massless common-cone, pole, macro source, Pe/receiver or full explanatory admission."
+  ]
+}

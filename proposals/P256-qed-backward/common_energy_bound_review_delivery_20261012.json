@@ -1,0 +1,177 @@
+{
+  "kind": "INDEPENDENT_COMMON_ENERGY_BOUND_COMPLETE_REVIEW_DELIVERY_NOT_ADMISSION",
+  "scope_verdict": "CONDITIONAL_VALID_WITH_EXPLICIT_SUPPORTING_RATIONALE_CORRECTION",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "4cd97c98f17ddd5b4754dfb596cf70b495647643c81c57f1dfdbd327c8f77074",
+    "original_scientist_capture": "51e772609928a110ae2b4968f393261315f231982a70dfbfd3626ad82995bec3",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "requirement_ids": [
+      "outcome",
+      "verification"
+    ],
+    "parent_only_plan_writer": true
+  },
+  "target": {
+    "delivery_sha256": "884f99862689abc15712167312dfa93d8698f071a72e9a08be8beea0c5b5bb2d",
+    "proof_sha256": "8b68a33d28934df4415f40ae5842ebf00c658b02429ed4b813b0aa232806e4c7",
+    "interface_sha256": "09902811a3e1cc74a75a4234df5756d1f56b10a42edcc31e77556a97fba883ae",
+    "selected_original_epoch": "common_singlet_energy_actual5_20261012",
+    "selected_original_capsule_sha256": "799b0b4c9881926aedfe7dbe775cff133b71e3b1976bee5ce40d0a8e600fe502",
+    "original_natural_exit_report": "0 / 1.8513045010040514s; read, never reexecuted",
+    "historical_original_failed1_2_4_unchanged": true
+  },
+  "proof": {
+    "path": "common_energy_bound_review_proof_20261012.json",
+    "sha256": "439d5c2c264b2e38db59f632dfde83992587691dd0dd895da7291db8c6d9bd9e",
+    "scope": "Independent conditional analytic derivation, not numeric native ground"
+  },
+  "finding": {
+    "classification": "SUPPORTING_RATIONALE_GAP_NOT_THEOREM_COUNTEREXAMPLE",
+    "target": "frozen proof actual_ground_complement.epsilon line38",
+    "invalid_implication": "|delta|<2 alone => block coefficient>1/16",
+    "counterexample_delta": "1999/1000",
+    "correct_loose_bound": "coefficient>255/4096>1/32; sufficient for original epsilon2^-49195",
+    "exact_pinned_delta_repair": "|delta|<9/5 and delta\u00b2<255/64 => stronger coefficient>1/16",
+    "parent_addendum": {
+      "path": "common_singlet_energy_parent_delta_rationale_correction_20261012.json",
+      "sha256": "d3adb5da956c6ed46349f31f183ea7a35e137537361d3e1c7503cef943a4379f"
+    },
+    "communicated_immediately": true,
+    "theorem_counterexample": false
+  },
+  "selected_new_independent_review_epoch": {
+    "name": "common_energy_bound_review_actual2_20261012",
+    "capsule": {
+      "path": "common_energy_bound_review_actual2_20261012_capsule.json",
+      "sha256": "980d3e2e5bf6f6ff2cdb0e62b23387cefbb1eba51966b13a62f7e9ded548032e"
+    },
+    "receipt": {
+      "path": "common_energy_bound_review_actual2_20261012_receipt.json",
+      "sha256": "1941ef3f96adc473d0f7f19fd5828cb1cd6b37d69f03706445cfd605d9c57072"
+    },
+    "preexecution": {
+      "path": "common_energy_bound_review_actual2_20261012_preexecution.zip",
+      "sha256": "50c41f84c2f930f8d73b2cf5af90f4d3504d5923c0ef4b2bb888b55fd2a2b96d",
+      "created_before_child_launch": true
+    },
+    "executed": {
+      "path": "common_energy_bound_review_actual2_20261012_executed.zip",
+      "sha256": "bcfd7544a11b4a01e8981d85d0ef8caba705b4299a60b4cee93f9fb423014b82"
+    },
+    "runtime": {
+      "command": [
+        "/home/administrator/substrate-framework/.venv/bin/python",
+        "/home/administrator/substrate-222/proposals/P256-qed-backward/common_energy_bound_review_controls_20261012.py",
+        "--request",
+        "common_energy_bound_review_actual2_20261012_request.json",
+        "--output",
+        "/home/administrator/substrate-222/proposals/P256-qed-backward/common_energy_bound_review_actual2_20261012_receipt.json"
+      ],
+      "returncode": 0,
+      "natural_exit": true,
+      "started_at": "2026-10-12T07:58:17.669229+00:00",
+      "completed_at": "2026-10-12T07:58:19.090207+00:00",
+      "elapsed_seconds": 1.420929142012028,
+      "timeout_or_signal_exit_used": false
+    },
+    "inputs_unchanged": true,
+    "not_original_failed_actual2": true
+  },
+  "preserved_failed_review_epoch": {
+    "returncode": 1,
+    "natural_exit": true,
+    "elapsed_seconds": 1.1210309310117736,
+    "preexecution": {
+      "path": "common_energy_bound_review_actual1_20261012_preexecution.zip",
+      "sha256": "391da7f5d45e27f44e8bb084fc4badbd98f564c8b816c566ffc19947f45fa6a1",
+      "created_before_child_launch": true
+    },
+    "executed": {
+      "path": "common_energy_bound_review_actual1_20261012_executed.zip",
+      "sha256": "170d501c161fb5f83353bf685048a1dc0987cce1cffb7f825d3aa8c4177701e6"
+    }
+  },
+  "failed_review_correction": {
+    "path": "common_energy_bound_review_epoch1_correction_20261012.json",
+    "sha256": "45fa4631675630e3550e2400d436a661d3d33171ab4888841070351a3c9b9392",
+    "cause": "Own Gaussian alignment assertion doubled endpoint variance; original target9/2 was correct. Fixed before new review epoch2, failed archives preserved."
+  },
+  "postexecution_metadata_erratum": {
+    "field": "review proof execution_metadata_location",
+    "correction": "The review proof retains the initial planned actual1 pointer. The CURRENT corrected proof SHA in this delivery is prearchived in selected NEW review actual2, not in prior failed review actual1. This delivery supplies the authoritative selected-review capsule; no archive backfill or source/epoch rewrite occurred.",
+    "mathematical_claim_changed": false
+  },
+  "observed_controls": {
+    "independent_ordered_Wick": {
+      "independent_ordered_cross_mu_nu_Wick": "105/4",
+      "independent_same_mu_Wick": "435/4",
+      "ordered16_Jordan_per_Lambda": "3000",
+      "Gaussian_KPhi_per_chi": 60,
+      "alignment_per_F": "9/2",
+      "Haar_colour_per_F": "42/5",
+      "fullE_rho_zero_trial": "Every mode total32; each site128 minus128 background; fullRef cancels4",
+      "charged_unconstrained_checkerboard_is_P_S": false
+    },
+    "canonical": "M16/k8;12 complete good modes/4 bad; ALL16 bad occupation branches, good particles4..8 and complementary holes8..4; ALL12870 full occupations independently enumerated; exact pair-total orientation variance restoration",
+    "selected_loss_over_a": "4/75",
+    "boundary_controls": {
+      "smallest_accepted_dyadic_R_exponent": 8195,
+      "largest_accepted_dyadic_tau_exponent": -10249,
+      "largest_dyadic_conservative_gain_exponent": -24594,
+      "largest_dyadic_block_complement_exponent": -49194,
+      "each_next_boundary_rejected": true,
+      "C_actual_smallest_dyadic_upper": 256,
+      "weaker_delta_bound_stronger_dyadic_implication_rejected": true,
+      "exact_pinned_delta_stronger_dyadic_bound_paid": true
+    },
+    "particle_hole_full_trace_sign": true,
+    "all_components_density_Cauchy_and_V_scaling": true,
+    "closed_mode_method": {
+      "method_not_original_law": true,
+      "all_real_character_lower_square_difference": "65536*k**4 + 262144*k**2",
+      "third_channel_energy_difference": "256*k^2",
+      "minimum_energy": -768,
+      "P0_Ec_P0": 0,
+      "Ec_excited_inverse": "1/128",
+      "face_upper": "1/64",
+      "source_mean": 0,
+      "total_source_Gram": "1/2",
+      "whole_P0_excited_source_Gram": 0,
+      "other_ground_channel_excitation_nonzero": true,
+      "mean_subtraction_not_whole_P0": true,
+      "complement_or_total_Gram_to_IR_lower_rejected": true
+    }
+  },
+  "analytic_conclusions": {
+    "own_B_S": "2^10244",
+    "own_C4_S": "2^2053",
+    "native_uncertainty_a": "225*2^-14341",
+    "integrated_R": "2^8196",
+    "tau": "2^-10252",
+    "gap_every_even_N_ge4": "E_S-E_global>=2^-24595*V",
+    "actual_moment_used_only_after_constrained_comparison": "C_actual=256 from separately accepted sharp ACTUAL-family bound",
+    "actual_complement_every_ground_density_and_minimizing_fibre_direct_sum": ">=2^-49195",
+    "physical_P_S_D_H": "Full form preservation + delta[A,P] finite-N form-to-Hilbert bound and operator-domain identity; no D(H\u00b2)",
+    "global_not_quasilocal_projector": true
+  },
+  "language_evidence": {
+    "path": "common_energy_bound_review_language_20261012.json",
+    "sha256": "c4e3eb01c0756e56eaf5fac49e4ca906ad030876e97db11cee200371cd0f9498",
+    "LSP": "Actual JSON-RPC symbols/definition and diagnostics, Pyright1.1.414 with project Python; AST-grep0.45.3 positive original/new source matches.",
+    "residual_scope": "Clean diagnostics were recorded before the final single numeric alignment edit; exact old source hashes remain in language evidence. Selected new consumer executed successfully afterward; parent owns final integrated diagnostics."
+  },
+  "writes_owned_prefix_only": true,
+  "shared_plan_README_source_repair_or_original_proof_written": false,
+  "old_producer_checker_root_or_method_source_executed": false,
+  "finite_controls_do_not_establish_analytic_realization": true,
+  "native_ground_phase_stiffness_IR_atom": false,
+  "loop_lower_or_whole_P0_Gram_promoted": false,
+  "campaign_or_scientific_admission": false,
+  "parent_integrated_checks": [
+    "Verify selected NEW review actual2 receipt/capsule/prearchive/executed hashes against exact proof/source pins; retain failed review actual1 separately.",
+    "Use final integrated diagnostics on new review sources if required; no standalone build/lint/test/formatter/Pyright suite was run.",
+    "Integrate supporting rationale correction separately without retagging original proof8b68 or selected original actual5."
+  ]
+}

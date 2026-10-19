@@ -1,0 +1,66 @@
+{
+  "declared_conditional_majorant": {
+    "Copen": 30720.0,
+    "C1": 12713646.1765907,
+    "active_exterior_particles_upper": "18889465931478580854784",
+    "B_energy": 64.0,
+    "grade1_field_degree": 1
+  },
+  "actual_parameters": {
+    "spatial_size": 16777216,
+    "time_slices": 1048576,
+    "beta_power": 150,
+    "kappa_power": 400,
+    "gram": [
+      0.4187253908699568,
+      0.0632221974274214,
+      0.0632221974274214,
+      0.0632221974274214
+    ],
+    "masses": [
+      0.7,
+      1.0,
+      1.4
+    ],
+    "spacings": [
+      0.02,
+      0.01,
+      0.005
+    ],
+    "energy_ratios": [
+      0.15,
+      0.5,
+      1.0
+    ],
+    "angles": [
+      0.4,
+      1.2,
+      2.2
+    ]
+  },
+  "grade8_energy_form": {
+    "photon_maximum_energy": 2.633915793849633,
+    "dispersion_lower_coefficient": 0.4840512950857103,
+    "finite_box_inverse_energy_square_sum_upper": 1.405402891564435,
+    "initial_reference_energy": 0.25,
+    "maximum_grade": 8,
+    "maximum_photon_field_degree": 16,
+    "maximum_intermediate_energy": 75.66371736847151,
+    "link_A_operator_norm_upper": 14.664481175455498,
+    "link_Pi_operator_norm_upper": 20.295449805867417,
+    "plaquette_curl_operator_norm_upper": 58.65792470182199,
+    "common_word_factor": 64,
+    "proof": [
+      "For each nonzero finite-box Fourier mode E=2asinh(|qhat|/2)>=c|p|, c=2asinh(sqrt3)/(pi sqrt3). An infinity-norm shell r contains at most 26r^2 modes. Summing r=1,...,L/2 proves V^-1 sum E^-2<=13/(4 pi^2 c^2), with no fitted speed or missing soft modes.",
+      "With the actual Gaussian covariance <A A>=1/(2sinh E) and <Pi Pi>=sinh E/2, annihilation energy estimates and creation CCR give ||A_link P_[Hph<=e]||^2<=2 C2 e+2sqrt(C2), and ||Pi_link P||^2<=2(sinh Omega/Omega)e+2sinh Omega. Coexact projectors have diagonal at most one.",
+      "Each linear photon field changes free energy by at most Omega. Each active bilinear changes fermion energy by at most 2log8. A product through grade n with at most 2n photon fields is therefore controlled by e_initial+2n log8+2n Omega. Curl is bounded by the triangle inequality over its four translated link fields.",
+      "These are operator energy-form bounds, not pointwise coordinate confinement. They do not assert that a Euclidean chart-tail probability is a real-time leakage bound."
+    ],
+    "scope": "Exact Gaussian positive photon transfer and free canonical fermion reference. The joint normalized microscopic K-log jet estimates and actual prepared Gauss state admission must be supplied independently."
+  },
+  "conditional_fifth_pure_H1_timeword_log10": -168.605726753474,
+  "ordered_weight5_composition_count": 16,
+  "conditional_after_16_word_count_log10": -167.40160677081806,
+  "source_boundaries": "Unit-normalized actual/reference prepared source. Do not multiply source creation cap again into a Duhamel remainder acting on its already-normalized ket. Boundary derivative and state-comparison errors are separate.",
+  "status": "NOT a proved normalized joint K-log majorant. This is an actual scalar consumer of the stated conditional C1/Copen values; grade3/4 linked hard words, mixed H2..H5 and microscopic common-range normalization still require proof."
+}

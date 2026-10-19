@@ -1,0 +1,100 @@
+{
+  "status": "NEW_EXECUTED_PHYSICAL_SO3_ROTATION_AND_MAGNETIC_CURRENT_REPAIR_IN_RIGID_MATERIAL_SCAFFOLD_NOT_SELF_BOUND_PARTICLE_OR_PROTON",
+  "governor": {
+    "plan_id": "issue222-rich-backward-candidates-20261014",
+    "captured_revision": "87bedd8343641b2540426b62d725c656fa893e956a9ec2b56ba08082c518ab3e",
+    "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "composite-candidate / outcome + verification",
+    "parent_sole_plan_writer": true,
+    "session_bound": true
+  },
+  "plain_mechanism": "The missing continuous rotation was actual motion of the charged material, not another internal-spin label. Give the square and its axial pre-twist a quantum SO3 material orientation R, so all charged sites live at physical lab positions R r_i and all primitive spins/neutral triplets rotate with that same material. Transform to a body gauge: the kinetic energy becomes (N_body-T_internal)^2/(2I), with T including every constituent spin and neutral carrier angular momentum. This connection exchanges real mechanical rotation with the moving spin-difference dressing. The same charged body has a continuum mechanical current from its moving physical positions plus the intracell Peierls current. The axial pre-twist retains a magnetic vector after orientation quantization while true physical Jhalf is selected among the compared representations; no fitted J2, g, Zeeman spin moment, or explicit spin-orbit hopping was installed.",
+  "backward_target_and_design_move": [
+    "Target: one charged bound composite with actual physical angular momentum and electromagnetic current, not an internally labeled low-spin square.",
+    "The predecessor actually bound dressed finite graph fragments and produced Peierls magnetism, but frozen axial pre-twist had internal T2=.7631693 and conserved only internal Tz. Its current was an internal SU2 scalar, not a demonstrated lab vector.",
+    "Invent the missing material degree: free SO3 orientation of the literal geometry and all dressing. Start with lab L_material^2/(2I)+U(R)HbodyU(R)^dagger rather than wrapping an unrelated spin unitary around an old state. Recompute the complete joint orientation/internal ground state.",
+    "Use the charged-material Lagrangian with minimal coupling before angular projection. A_rot=sum_i q_i r_i x R^-1 A(Rr_i), so continuum kinetic and its current/contact include mechanical charge motion. Keep literal Peierls hops on rotated edges as a separate source part.",
+    "Conserved Mhalf contains every half-integer j for the odd primitive-spin body. Compare jhalf/threehalf/fivehalf with allK and all49152 internal states, restore completeM multiplets, and retain all rank1 magnetic/current virtual sectors rather than assume jhalf.",
+    "Execute isotropic, reversed pre-twist and removed spin-loading controls. Keep the former binding as ANTECEDENT ONLY, because old fixed-square fragments do not obey the new mechanical orientation law."
+  ],
+  "law_and_state_identity": {
+    "candidate": "FREE_SO3_MATERIAL_SPIN_DIFFERENCE_ROTOR_V1",
+    "inputs": "rich_composite_free_rot_20261014_request.json",
+    "parameters": "omega3,g2.2,t.25,alpha.04,u.35,spin_orbit0,I=(1,1,1),assigned charges(2/3,2/3,-1/3),hbar1,square side1",
+    "body": "All three-flavor mobile hard-core positions x all constituent spin states x four independent neutral singlet/triplet cells, dimension49152. Neutral loading -g sum_occupied P_b.(S_v-S_w), time-even axial loading -u sum_occupied Q_bz. No imposed Heisenberg or Pauli magnetic term.",
+    "new_joint_state": "Fresh allK/fullbody state; no precursor state, energy/current splice or archived CLI replay. The precursor pure build/current/spectrum helpers are exact-source captured and only used as body-law helpers.",
+    "source_basis": "sqrt(2j+1) D^{j*}_{MK}, N_a=J_a^T. Odd primitive spins make the body-gauge wavefunction antiperiodic, cancelling the spin-frame sign so the physical lab wavefunction is single-valued on SO3. Primitive spinhalf and statistics remain inputs.",
+    "actual_physical_generator": "J_lab=L_material_lab+S_constituents_lab+sum_all L_neutral_lab. In body gauge it is the LEFT orientation generator, not T_internal. R*N=J checked; R*T and J-R*T separately provide actual internal and mechanical angular shares.",
+    "source_and_contact": "Uniform labA current includes continuum mechanical charge motion and Peierls hopping; magnetic moment is -dH/dB with A=B x x/2. Contact is d2H/dB2 from the same continuum kinetic before projection plus the literal hopping contact; no Maxwell magnetic field energy is credited as derived."
+  },
+  "executed_actual_angular_selection": {
+    "jhalf": {"dimension_per_M":98304,"all_M_copies":2,"energy":-4.541631768133362,"eigen_residual":2.020333390573488e-14},
+    "jthreehalf": {"dimension_per_M":196608,"all_M_copies":4,"energy":-3.5436469104059087,"gap_above_jhalf":0.9979848577274533,"eigen_residual":7.108679067801987e-13},
+    "jfivehalf": {"dimension_per_M":294912,"all_M_copies":6,"energy":-1.83950011536117,"eigen_residual":1.3386790683370223e-11},
+    "physical_J2_of_selected_source":0.75,
+    "physical_Jz":0.5,
+    "bare_spin_lab_z":0.38049665280864253,
+    "carrier_lab_z":0.11961204556812734,
+    "mechanical_lab_z":-0.00010869837677129901,
+    "mechanical_angular_square":0.008972686859362044,
+    "orientation_R_N_identity_max_error":9.550499576785472e-16,
+    "orientation_Cartesian_vector_commutator_max":4.449557262054371e-16,
+    "unscanned_higher_j_comparison": "Exact angular/norm inequality gives E_j>=min(Ebody_iso_low+1,Ebody_iso_T>=1.5)-.7 for allj>=1.5. Numerical isotropic minima -4.51168452608 and -2.80264052201 yield floor -4.21168452608, above the selected -4.54163176813. This is conditional on numerically obtained spectral minima, NOT an interval-certified global eigenvalue proof; explicit three sectors are direct calculations. Controls computed only jhalf and do not independently establish global selection.",
+    "meaning": "A low actual Noether angular doublet with mechanical/carrier shares survives a covariant material-orientation repair. jhalf was compared, not imposed as the sole physical sector. This repairs the missing free material rotation, not self-binding or primitive spin derivation."
+  },
+  "executed_literal_current_moment_and_feedback": {
+    "mu_lab_z_positive_M":0.00019217534469075914,
+    "mu_mechanical_lab_z":-0.0000135872970962574,
+    "mu_Peierls_lab_z":0.00020576264178701634,
+    "magnetic_contact_z":0.04360486651454393,
+    "full_actual_charge_dipole_current_Ward_max":3.9189903440652904e-16,
+    "deliberately_wrong_hopping_only_current_Ward_max":0.3310127009487523,
+    "mechanical_uniform_current_source_norm_max":0.3310127009487524,
+    "neutral_excitation_number":0.5396285867165392,
+    "fresh_spin_loading_energy":-5.882513934815069,
+    "meaning": "The neutral material dressing remains active in the new joint state. Genuine physical charge motion matters decisively: keeping only the predecessor hopping current fails the actual i[H,lab charge dipole] identity by .331, whereas complete current satisfies it at4e-16. Magnetic response is a lab vector with mechanical plus hopping contributions, not neutral angular momentum renamed as a magnetic source."
+  },
+  "full_virtual_source_and_actual_receiver": {
+    "virtual_jhalf": {"dimension":98304,"source_weight":0.0003386372618576572,"GROUND_BLOCK_only_weight":3.6931363107012086e-08,"resolvent_at_z_point":[-0.00012701057978937506,-0.000011583552839384086]},
+    "virtual_jthreehalf": {"dimension":196608,"source_weight":0.0006257741083141573,"GROUND_BLOCK_only_weight":2.7916753466046822e-33,"resolvent_at_z_point":[-0.000249319182721839,-0.000023177186377599096]},
+    "z_point":[0.4,0.15],
+    "method": "28-step full-state reorthogonalized Lanczos, not low-state virtual projection. Every angular sector allowed by rank1 moment acting on initialjhalf is retained, including fullK/internal high virtuals. Spectral pole/resolvent approximation is bounded-Krylov and not certified frequency convergence.",
+    "captured_field_correction": "Immutable actual1 response mistakenly names the projection lowest_four_source_weight; producer actually uses only its GROUND BLOCK. Current producer cleanly corrects this to ground_block_source_weight. Do not read it as four-state projection. Immutable source/output capsule preserved; successor metadata manifest supplies exact correction.",
+    "external_uniform_B_receiver": [
+      {"B":-0.002,"new_energy":-4.541631297810767,"new_moment":0.00027814713530340896,"eigen_residual":3.2812596160216444e-13},
+      {"B":0.002,"new_energy":-4.541632066511992,"new_moment":0.00010620342708348805,"eigen_residual":3.5385257134461256e-13}
+    ],
+    "receiver_boundary": "The external B is supplied, not an induced or propagating EM field. NEW same-source receiver diagonalizes H0-B.mu+B2 contact/2 in full jhalf/jthreehalf Mhalf spaces. Diagonal continuum-projected contact retained; cross-j contact omitted, so ground energy is correct through quadratic small-B response only. No exact arbitrary-B law, exterior field, photon masslessness, MaxwellB2 derivation or peer-field join claimed."
+  },
+  "retained_controls_and_failed_forks": [
+    {"fork":"free material but no axial pre-twist u0","energy":-4.511684526076936,"mu":2.0628627518034186e-20,"mechanical_angular_square":8.149000937222987e-19,"neutral_excitation":0.5377965568543627,"result":"Actual physical rotation exists, but polarization-linked magnetic moment disappears. Isotropic scalar internal dressing alone remains a failed magnetic fork."},
+    {"fork":"reverse material axial pre-twist u-.35","energy":-4.541631768133364,"mu_total":-0.00021934993888327332,"mu_mechanical":-0.000013587297096256986,"mu_Peierls":-0.00020576264178701601,"result":"Peierls contribution reverses exactly within numerical error; the mechanical contribution is even under this u reversal. TOTAL magnitude is NOT exactly reversed. Preserve the actual two-channel result rather than transplant the old frozen-square reversal claim."},
+    {"fork":"remove spin-difference loading g0 with pre-twist retained","jhalf_energy":-0.5574876053481758,"mu":2.327794080202767e-18,"neutral_excitation":0.013445623285892959,"result":"Chosen scalar pre-twist dressing alone does not generate the magnetic moment. This new jhalf control is not a new breakup-threshold calculation or global angular selection proof."},
+    {"fork":"predecessor frozen axial material","reference":"rich_composite_rot_20261014_magnetic1_receipt.json","result":"Useful binding and hopping current, but T2=.763 and internal transverse symmetry broken. Retained as antecedent, not falsely identified with the new exact physical J2=.75 law."}
+  ],
+  "independent_review_evidence": {
+    "owner":"ScientificReviewWave4",
+    "artifact":"rich_review_wave4_20261014_rotor_result.json",
+    "observation":"Reviewer NEW all98304 jhalf source at unequal inertia(.9,1.25,1.6), natural0/38s: E-4.54183254545, eigenresidual5.69e-13, mu+.00019333049387=mechanical-.00001335661233+Peierls+.00020668710620; full Cartesian magnetic vector commutator3.02e-18. All18 jhalf/threehalf physical dipole/current source identities max4.11e-16; mechanical currentsource.26315 and Peierls.09655. Contact .0348496355 for every labaxis, charge-reversal source errors0.",
+    "scope":"Independent actual material-current/vector/contact check, not a global j selection or fragment-binding proof. Different inertia is an explicitly separate new probe, not spliced into the author's I1 energies. Final selected diagnostics were reviewer-owned and run once."
+  },
+  "binding_reference_and_primitive_inputs": {
+    "binding_kind":"ANTECEDENT_ONLY_NOT_NEW_FREE_BODY_BREAKUP",
+    "reason":"The predecessor authoritative finite dressed pair+single reference did not include the new physical orientation degree. No old binding margin is relabeled as the new free-rotor breakup energy. Fresh neutral loading energy/excitation supports continued material feedback but is not a self-binding proof.",
+    "inputs":["primitive spinhalf/CAR, separately conserved flavors and assigned charges", "hard-core mobile body-site graph", "local finite neutral0+1 axial cell law", "omega,g,t,alpha and u parameters", "fixed square geometry, labelled material triad, global rigidity and chosen inertia", "supplied external uniform magnetic receiver"],
+    "not_derived":"Inertia/rigidity are NOT a derived particle mass; quantizing a fixed square does not make a self-bound free proton. No QCD/confinement, fitted g, primitive spin/statistics derivation, continuum massless photon, parameter closure or same-new-law fragment threshold is claimed."
+  },
+  "next_actual_material_fork": "Release the rigid square into dynamical 3D vertex positions with a translation/rotation-invariant local neutral-carrier energy and covariant charged continuum kinetic. Let the same spin-difference load favor a finite geometry and generate/choose an axial material deformation rather than impose u. Quantize shape and orientation together; compare every dressed pair+single fragment with the same shape/inertia/neutral law. The present result supplies a real orientationally dressed current-carrying scaffold and missing Noether/current repair, not that self-organized particle.",
+  "artifacts": {
+    "equations":"rich_composite_free_rot_20261014_equations.json",
+    "interface":"rich_composite_free_rot_20261014_interface.json",
+    "actual_source":"rich_composite_free_rot_20261014_model.py + rich_composite_free_rot_20261014_current.py",
+    "calculation":"rich_composite_free_rot_20261014_calculate.py",
+    "natural_exit":"rich_composite_free_rot_20261014_actual1_exit.json",
+    "immutable_source_input_output_capsule":"rich_composite_free_rot_20261014_actual1_capsule.zip",
+    "state_and_result":"rich_composite_free_rot_20261014_actual1_result.npz + .json",
+    "exact_current_successor_boundary":"rich_composite_free_rot_20261014_successor.json",
+    "language_preflight":"rich_composite_free_rot_20261014_language.json"
+  },
+  "evidence_boundary": "Author NEW actual1 naturally exited0 in590.9319767s, stderr empty, every source/input unchanged at exit and output hashes bound. Immutable capsule stores all exact pre-successor physics bytes and the pure precursor helper. After execution no-copy typing and truthful output-key metadata corrections were applied, not reexecuted/rechecked; exact old/new hashes in successor. Reviewer selected19-file Pyright once found seven original issues in model/calculation; six inference issues addressed with casts, tol1e-11 preserved despite installed stub's int declaration, no clean-current-diagnostics claim. No build/lint/tests/formatter or archived science CLI replay. Ownership exception: accidental predecessor tooling helper execution regenerated only rich_induced_spin_20261014_language.json, explicitly disclosed; all predecessor scientific sources/states/capsules and sharedREADME untouched. Parent remains sole governing-plan writer."
+}

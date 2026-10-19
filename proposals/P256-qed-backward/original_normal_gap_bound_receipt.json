@@ -1,0 +1,3738 @@
+{
+  "source_sha256": {
+    "original_charged_principal.py": "95242f66759648031475b4a47be0cb3f316fc9dafd283d560cb2726d9c4ddc7c",
+    "original_charged_principal.md": "ba21640d3a6ea4183bfd5af9ab95662f7422acd97ffa06a7b9c6b7b0b8f1d333",
+    "bulk_flat_holonomy_bound.py": "b9a6f096ac5cede629e18aa15fa615e19165998fa398119e19123683144d30f5",
+    "bulk_flat_holonomy_bound.md": "1e394f12117af814893ef840cfbd8993c1c9f1fd4dcec0fe128158e69a01585b",
+    "bulk_quantum_selection.py": "0dcdb45b755cc805186e72d1db70cc32bf392fa1a35c2e42d8dd99ff43b8f24f",
+    "full_spatial_gauge_stability.py": "2c1eb9ba04eef7dc851f0af2e6c70d8ae470396bc15e324fcd58d6fe3c89e0bf",
+    "periodic_bulk_frame.py": "b784c7734bc7f35b3b0db5d3e4e4b888d64328647bf9e63e8b70b40b5128c1a8",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "unrestricted_field_minimum.py": "443840b860a0adfb4fd5455ecf9188ddb63b31fae252619568a60ed4a9915301",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "original_normal_gap_bound.py": "9d9f1ec26995b8be6fa5960a184ab11ebca5b782e82e07624a52fdb4724f9bf8",
+    "original_normal_gap_bound.md": "00c000ff17d8528edb07f497e81a6951fca133346adbf12febf75bc693c5fa88"
+  },
+  "source_bindings_unchanged": true,
+  "governing_plan": "issue-222-continuing-backward-20260930",
+  "assignment_plan_revision": "11e9251a60596401163092e5b39958a6ea55866301fed44e3b9fcd0a0370e31b",
+  "inputs": {
+    "size": 5,
+    "spacing": 1.0,
+    "stiffness": 2.0,
+    "centre_classes": 64,
+    "exhaustive_centres": true
+  },
+  "kinetic_law": "field Lambda^(-1/2)/2, colour .3 Lambda^(-1/2); original heavy Lambda, J/K4 Lambda^(5/4)",
+  "rows": [
+    {
+      "centre": [
+        0,
+        0,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.4187888885799244,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.06302538068680906,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.06302538068680906,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.06302538068680906
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619021870904801,
+      "full10_gradient": 7.771561172376096e-16,
+      "aH_full_field_link_gradient": 4.1762407801105173e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10041942496294953,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.01101428169978521,
+      "b_all_momenta_estimate": 0.0037815228412085454,
+      "stiff_norm_upper_estimate": 2.315833314750857,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10041942496294953,
+        "elastic_norm_upper": 5.025466662959093,
+        "sea_norm_upper": 677.530826413969,
+        "contact_norm_upper": 24.074028324055803,
+        "total": 706.6303214009838,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 5.2881044562815405e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07421011285460093,
+      "stiff_frequency_lower_prefactor_estimate": 0.043482886525669756,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0
+    },
+    {
+      "centre": [
+        0,
+        0,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4187669131535448,
+          -4.333192650581939e-18,
+          2.994672529329182e-18,
+          5.276766807067637e-05
+        ],
+        [
+          -4.333192650581939e-18,
+          0.06300717504335011,
+          1.5727822853808579e-18,
+          2.685710821581659e-19
+        ],
+        [
+          2.994672529329182e-18,
+          1.5727822853808579e-18,
+          0.0630071750433501,
+          2.667042108438354e-19
+        ],
+        [
+          5.276766807067637e-05,
+          2.685710821581659e-19,
+          2.667042108438354e-19,
+          0.06326507319695555
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619240324645146,
+      "full10_gradient": 2.220446049250313e-16,
+      "aH_full_field_link_gradient": 1.4245513254219313e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10040492023270578,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.01035749118331435,
+      "b_all_momenta_estimate": 0.0037804305026009934,
+      "stiff_norm_upper_estimate": 2.3158441930986697,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10040492023270578,
+        "elastic_norm_upper": 5.02520305183114,
+        "sea_norm_upper": 677.6338869113539,
+        "contact_norm_upper": 24.074190441937876,
+        "total": 706.7332804051229,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 6.778189628040984e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07196350180235238,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347660579323663,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022340507009160156
+    },
+    {
+      "centre": [
+        0,
+        0,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.41874494470425316,
+          -4.276912438199635e-18,
+          -2.332527774662631e-18,
+          9.230190639595189e-18
+        ],
+        [
+          -4.276912438199635e-18,
+          0.06298890278675401,
+          4.81299996809058e-19,
+          -9.41511998522968e-19
+        ],
+        [
+          -2.332527774662631e-18,
+          4.81299996809058e-19,
+          0.06298890278675401,
+          -9.56277403699803e-19
+        ],
+        [
+          9.230190639595189e-18,
+          -9.41511998522968e-19,
+          -9.56277403699803e-19,
+          0.06350410046620117
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619459097198432,
+      "full10_gradient": 1.1102230246251565e-16,
+      "aH_full_field_link_gradient": 4.750951570755653e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039036032349243,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009625651342897574,
+      "b_all_momenta_estimate": 0.003779334167205232,
+      "stiff_norm_upper_estimate": 2.315855023957074,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039036032349243,
+        "elastic_norm_upper": 5.0249393364510375,
+        "sea_norm_upper": 677.7373283191835,
+        "contact_norm_upper": 24.074351889919257,
+        "total": 706.8366195455537,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.107987819680119e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.0693745318647181,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347030116760886,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0004206571437705049
+    },
+    {
+      "centre": [
+        0,
+        0,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.41876691315354475,
+          -2.8438218605736632e-18,
+          -7.180455387895792e-18,
+          -5.276766807067845e-05
+        ],
+        [
+          -2.8438218605736632e-18,
+          0.06300717504335011,
+          -5.820531841584044e-19,
+          -1.3259116140579873e-18
+        ],
+        [
+          -7.180455387895792e-18,
+          -5.820531841584044e-19,
+          0.0630071750433501,
+          -1.6294199965184246e-18
+        ],
+        [
+          -5.276766807067845e-05,
+          -1.3259116140579873e-18,
+          -1.6294199965184246e-18,
+          0.06326507319695555
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619240324645147,
+      "full10_gradient": 8.326672684688674e-17,
+      "aH_full_field_link_gradient": 1.0352857335285597e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10040492023270581,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.010357491183313815,
+      "b_all_momenta_estimate": 0.0037804305026009955,
+      "stiff_norm_upper_estimate": 2.3158441930986684,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10040492023270581,
+        "elastic_norm_upper": 5.025203051831138,
+        "sea_norm_upper": 677.6338869113537,
+        "contact_norm_upper": 24.074190441937876,
+        "total": 706.7332804051226,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 6.778189628042351e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07196350180235053,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347660579323664,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022340507009160256
+    },
+    {
+      "centre": [
+        0,
+        1,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.41876691315354464,
+          -2.635887424459772e-17,
+          5.276766807069116e-05,
+          2.828270312787746e-18
+        ],
+        [
+          -2.635887424459772e-17,
+          0.06300717504335011,
+          -1.3585440216372182e-18,
+          1.558734421851755e-18
+        ],
+        [
+          5.276766807069116e-05,
+          -1.3585440216372182e-18,
+          0.06326507319695557,
+          1.3468429412966764e-18
+        ],
+        [
+          2.828270312787746e-18,
+          1.558734421851755e-18,
+          1.3468429412966764e-18,
+          0.06300717504335011
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619240324645145,
+      "full10_gradient": 4.440892098500626e-16,
+      "aH_full_field_link_gradient": 2.2090939547325118e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10040492023270582,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.01035749118331426,
+      "b_all_momenta_estimate": 0.0037804305026010003,
+      "stiff_norm_upper_estimate": 2.3158441930986684,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10040492023270582,
+        "elastic_norm_upper": 5.025203051831136,
+        "sea_norm_upper": 677.6338869113536,
+        "contact_norm_upper": 24.074190441937876,
+        "total": 706.7332804051225,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 6.778189628041146e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07196350180235207,
+      "stiff_frequency_lower_prefactor_estimate": 0.043476605793236665,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002234050700916139
+    },
+    {
+      "centre": [
+        0,
+        1,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4187457458188826,
+          -2.7075467657522732e-17,
+          5.137403987375443e-05,
+          5.1374039873762244e-05
+        ],
+        [
+          -2.7075467657522732e-17,
+          0.06298942400282175,
+          -8.935803774609748e-19,
+          -6.192699440853354e-19
+        ],
+        [
+          5.137403987375443e-05,
+          -8.935803774609748e-19,
+          0.06324339477531857,
+          4.028868336084795e-06
+        ],
+        [
+          5.1374039873762244e-05,
+          -6.192699440853354e-19,
+          4.028868336084795e-06,
+          0.06324339477531857
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979938,
+      "full10_gradient": 2.220446049250313e-16,
+      "aH_full_field_link_gradient": 5.742899909552378e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411998,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432472143,
+      "b_all_momenta_estimate": 0.0037793654401693036,
+      "stiff_norm_upper_estimate": 2.3158547304747774,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411998,
+        "elastic_norm_upper": 5.0249491280074725,
+        "sea_norm_upper": 677.7343815335754,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867497,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711807707e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07007339877753949,
+      "stiff_frequency_lower_prefactor_estimate": 0.043470481019706374,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002314960049483136
+    },
+    {
+      "centre": [
+        0,
+        1,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.4187245578547215,
+          -1.2016737420858048e-17,
+          5.001302337447513e-05,
+          1.1241607180639142e-17
+        ],
+        [
+          -1.2016737420858048e-17,
+          0.06297160392873215,
+          -1.832957391127489e-18,
+          -3.2856184750275213e-19
+        ],
+        [
+          5.001302337447513e-05,
+          -1.832957391127489e-18,
+          0.06322168899034915,
+          4.96744800337332e-19
+        ],
+        [
+          1.1241607180639142e-17,
+          -3.2856184750275213e-19,
+          4.96744800337332e-19,
+          0.06347914014833986
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420769,
+      "full10_gradient": 3.3306690738754696e-16,
+      "aH_full_field_link_gradient": 2.233299080265526e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10037657410271156,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009173649811795328,
+      "b_all_momenta_estimate": 0.0037782962357239135,
+      "stiff_norm_upper_estimate": 2.3158652323677633,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10037657410271156,
+        "elastic_norm_upper": 5.0246947786881275,
+        "sea_norm_upper": 677.8352738622085,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.9344725598547,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.1064501769122589e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175736,
+      "stiff_frequency_lower_prefactor_estimate": 0.04346433155889961,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00036579797067541554
+    },
+    {
+      "centre": [
+        0,
+        1,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.4187457458188825,
+          -1.6987941148603394e-17,
+          5.137403987376815e-05,
+          -5.137403987376646e-05
+        ],
+        [
+          -1.6987941148603394e-17,
+          0.06298942400282176,
+          -1.9746923194153804e-18,
+          -3.929147092273152e-19
+        ],
+        [
+          5.137403987376815e-05,
+          -1.9746923194153804e-18,
+          0.06324339477531857,
+          -4.0288683360860696e-06
+        ],
+        [
+          -5.137403987376646e-05,
+          -3.929147092273152e-19,
+          -4.0288683360860696e-06,
+          0.06324339477531857
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979938,
+      "full10_gradient": 3.3306690738754696e-16,
+      "aH_full_field_link_gradient": 2.1761734574024297e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411997,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432472415,
+      "b_all_momenta_estimate": 0.0037793654401692923,
+      "stiff_norm_upper_estimate": 2.3158547304747765,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411997,
+        "elastic_norm_upper": 5.0249491280074725,
+        "sea_norm_upper": 677.7343815335754,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867497,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711806874e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07007339877754046,
+      "stiff_frequency_lower_prefactor_estimate": 0.043470481019706304,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00023149600494831144
+    },
+    {
+      "centre": [
+        0,
+        2,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.4187449447042531,
+          -9.557830535905847e-18,
+          2.4712698535107105e-18,
+          -3.614249876268245e-18
+        ],
+        [
+          -9.557830535905847e-18,
+          0.06298890278675401,
+          4.522903224494523e-19,
+          -7.636054629596521e-19
+        ],
+        [
+          2.4712698535107105e-18,
+          4.522903224494523e-19,
+          0.06350410046620118,
+          5.907576159917088e-19
+        ],
+        [
+          -3.614249876268245e-18,
+          -7.636054629596521e-19,
+          5.907576159917088e-19,
+          0.06298890278675401
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619459097198432,
+      "full10_gradient": 2.220446049250313e-16,
+      "aH_full_field_link_gradient": 1.0353827280604716e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039036032349243,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009625651342897883,
+      "b_all_momenta_estimate": 0.003779334167205224,
+      "stiff_norm_upper_estimate": 2.315855023957073,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039036032349243,
+        "elastic_norm_upper": 5.0249393364510375,
+        "sea_norm_upper": 677.7373283191835,
+        "contact_norm_upper": 24.074351889919257,
+        "total": 706.8366195455537,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.107987819679021e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06937453186471922,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347030116760881,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0004206571437705162
+    },
+    {
+      "centre": [
+        0,
+        2,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4187245578547215,
+          -2.0360771768568827e-17,
+          1.42324482156564e-18,
+          5.001302337448298e-05
+        ],
+        [
+          -2.0360771768568827e-17,
+          0.06297160392873213,
+          -2.4996547408154265e-18,
+          -1.5593077172902588e-18
+        ],
+        [
+          1.42324482156564e-18,
+          -2.4996547408154265e-18,
+          0.06347914014833986,
+          7.79283570998501e-19
+        ],
+        [
+          5.001302337448298e-05,
+          -1.5593077172902588e-18,
+          7.79283570998501e-19,
+          0.06322168899034912
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420773,
+      "full10_gradient": 4.440892098500626e-16,
+      "aH_full_field_link_gradient": 2.9472968904643654e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.1003765741027116,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009173649811795168,
+      "b_all_momenta_estimate": 0.0037782962357239347,
+      "stiff_norm_upper_estimate": 2.3158652323677664,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.1003765741027116,
+        "elastic_norm_upper": 5.024694778688127,
+        "sea_norm_upper": 677.8352738622082,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.9344725598544,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.1064501769123058e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175678,
+      "stiff_frequency_lower_prefactor_estimate": 0.043464331558899734,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0003657979706754274
+    },
+    {
+      "centre": [
+        0,
+        2,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.4187041255985467,
+          1.0003620209243076e-17,
+          6.428220355570358e-19,
+          8.31569950831096e-18
+        ],
+        [
+          1.0003620209243076e-17,
+          0.06295423353169817,
+          -1.7004239078996568e-18,
+          6.203351695855976e-19
+        ],
+        [
+          6.428220355570358e-19,
+          -1.7004239078996568e-18,
+          0.06345418062383279,
+          -5.413401170106344e-19
+        ],
+        [
+          8.31569950831096e-18,
+          6.203351695855976e-19,
+          -5.413401170106344e-19,
+          0.0634541806238328
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619877391702731,
+      "full10_gradient": 1.1102230246251565e-16,
+      "aH_full_field_link_gradient": 5.631869311871246e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10036272896385245,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.00860936406439328,
+      "b_all_momenta_estimate": 0.00377725401190188,
+      "stiff_norm_upper_estimate": 2.315875416135111,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10036272896385245,
+        "elastic_norm_upper": 5.024449507182561,
+        "sea_norm_upper": 677.933633881016,
+        "contact_norm_upper": 24.07465562142478,
+        "total": 707.0327390096234,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.42947866484153e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06561007569113635,
+      "stiff_frequency_lower_prefactor_estimate": 0.043458336437914184,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0004082050913726817
+    },
+    {
+      "centre": [
+        0,
+        2,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.4187245578547215,
+          -7.030223784210576e-18,
+          3.5278562676394634e-18,
+          -5.0013023374480395e-05
+        ],
+        [
+          -7.030223784210576e-18,
+          0.06297160392873215,
+          -1.5912754362721242e-18,
+          6.799395264337451e-19
+        ],
+        [
+          3.5278562676394634e-18,
+          -1.5912754362721242e-18,
+          0.06347914014833987,
+          8.483960270545318e-19
+        ],
+        [
+          -5.0013023374480395e-05,
+          6.799395264337451e-19,
+          8.483960270545318e-19,
+          0.0632216889903491
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420773,
+      "full10_gradient": 3.3306690738754696e-16,
+      "aH_full_field_link_gradient": 1.6659305394634321e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10037657410271153,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.00917364981179494,
+      "b_all_momenta_estimate": 0.0037782962357239135,
+      "stiff_norm_upper_estimate": 2.3158652323677646,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10037657410271153,
+        "elastic_norm_upper": 5.024694778688127,
+        "sea_norm_upper": 677.8352738622087,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.934472559855,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.1064501769124487e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175593,
+      "stiff_frequency_lower_prefactor_estimate": 0.04346433155889961,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00036579797067542687
+    },
+    {
+      "centre": [
+        0,
+        3,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.4187669131535447,
+          6.141314084073397e-18,
+          -5.276766807066948e-05,
+          -2.4300709626575035e-19
+        ],
+        [
+          6.141314084073397e-18,
+          0.06300717504335013,
+          -2.9051503575272755e-18,
+          1.5622461971783085e-18
+        ],
+        [
+          -5.276766807066948e-05,
+          -2.9051503575272755e-18,
+          0.06326507319695557,
+          -1.8976081858857063e-18
+        ],
+        [
+          -2.4300709626575035e-19,
+          1.5622461971783085e-18,
+          -1.8976081858857063e-18,
+          0.06300717504335011
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619240324645148,
+      "full10_gradient": 1.1102230246251565e-16,
+      "aH_full_field_link_gradient": 6.704188240505111e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10040492023270582,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.01035749118331469,
+      "b_all_momenta_estimate": 0.003780430502600993,
+      "stiff_norm_upper_estimate": 2.315844193098668,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10040492023270582,
+        "elastic_norm_upper": 5.025203051831138,
+        "sea_norm_upper": 677.6338869113536,
+        "contact_norm_upper": 24.074190441937876,
+        "total": 706.7332804051225,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 6.778189628040073e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07196350180235357,
+      "stiff_frequency_lower_prefactor_estimate": 0.043476605793236624,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002234050700915983
+    },
+    {
+      "centre": [
+        0,
+        3,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4187457458188826,
+          1.1139649648930135e-17,
+          -5.1374039873760225e-05,
+          5.137403987376435e-05
+        ],
+        [
+          1.1139649648930135e-17,
+          0.06298942400282175,
+          -3.1371454328437837e-19,
+          -7.793630177008003e-19
+        ],
+        [
+          -5.1374039873760225e-05,
+          -3.1371454328437837e-19,
+          0.06324339477531857,
+          -4.02886833608679e-06
+        ],
+        [
+          5.137403987376435e-05,
+          -7.793630177008003e-19,
+          -4.02886833608679e-06,
+          0.06324339477531857
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979938,
+      "full10_gradient": 1.1102230246251565e-16,
+      "aH_full_field_link_gradient": 8.794385826875429e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411997,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432472117,
+      "b_all_momenta_estimate": 0.0037793654401693036,
+      "stiff_norm_upper_estimate": 2.3158547304747787,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411997,
+        "elastic_norm_upper": 5.024949128007473,
+        "sea_norm_upper": 677.7343815335754,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867497,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711807797e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07007339877753939,
+      "stiff_frequency_lower_prefactor_estimate": 0.043470481019706374,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00023149600494831715
+    },
+    {
+      "centre": [
+        0,
+        3,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.41872455785472146,
+          -1.7563395173232756e-17,
+          -5.0013023374467574e-05,
+          1.0155074602701382e-17
+        ],
+        [
+          -1.7563395173232756e-17,
+          0.06297160392873216,
+          6.934664326082669e-19,
+          1.3482773316305532e-19
+        ],
+        [
+          -5.0013023374467574e-05,
+          6.934664326082669e-19,
+          0.0632216889903491,
+          1.102809246039542e-19
+        ],
+        [
+          1.0155074602701382e-17,
+          1.3482773316305532e-19,
+          1.102809246039542e-19,
+          0.06347914014833986
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420772,
+      "full10_gradient": 1.1102230246251565e-16,
+      "aH_full_field_link_gradient": 1.8229583399753787e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10037657410271156,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009173649811795234,
+      "b_all_momenta_estimate": 0.003778296235723923,
+      "stiff_norm_upper_estimate": 2.315865232367767,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10037657410271156,
+        "elastic_norm_upper": 5.0246947786881275,
+        "sea_norm_upper": 677.8352738622085,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.9344725598547,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.1064501769122923e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175703,
+      "stiff_frequency_lower_prefactor_estimate": 0.043464331558899665,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0003657979706754041
+    },
+    {
+      "centre": [
+        0,
+        3,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.4187457458188826,
+          1.496249833494528e-17,
+          -5.137403987376755e-05,
+          -5.137403987376918e-05
+        ],
+        [
+          1.496249833494528e-17,
+          0.06298942400282175,
+          1.4569786592263627e-18,
+          -4.171047835514171e-19
+        ],
+        [
+          -5.137403987376755e-05,
+          1.4569786592263627e-18,
+          0.06324339477531857,
+          4.02886833608581e-06
+        ],
+        [
+          -5.137403987376918e-05,
+          -4.171047835514171e-19,
+          4.02886833608581e-06,
+          0.06324339477531857
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979936,
+      "full10_gradient": 1.1102230246251565e-16,
+      "aH_full_field_link_gradient": 9.018910073006684e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411991,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432472374,
+      "b_all_momenta_estimate": 0.0037793654401692906,
+      "stiff_norm_upper_estimate": 2.3158547304747756,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411991,
+        "elastic_norm_upper": 5.0249491280074725,
+        "sea_norm_upper": 677.7343815335759,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867502,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711807078e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.0700733987775403,
+      "stiff_frequency_lower_prefactor_estimate": 0.0434704810197063,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00023149600494832252
+    },
+    {
+      "centre": [
+        1,
+        0,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.4187669131535446,
+          5.276766807061998e-05,
+          -1.7015228359973255e-18,
+          8.947249261777812e-19
+        ],
+        [
+          5.276766807061998e-05,
+          0.06326507319695558,
+          -1.9932405899846474e-19,
+          8.94573241115516e-19
+        ],
+        [
+          -1.7015228359973255e-18,
+          -1.9932405899846474e-19,
+          0.06300717504335016,
+          4.707810114007641e-19
+        ],
+        [
+          8.947249261777812e-19,
+          8.94573241115516e-19,
+          4.707810114007641e-19,
+          0.06300717504335016
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619240324645146,
+      "full10_gradient": 5.551115123125783e-16,
+      "aH_full_field_link_gradient": 5.272439984340676e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10040492023270585,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.010357491183314246,
+      "b_all_momenta_estimate": 0.003780430502601005,
+      "stiff_norm_upper_estimate": 2.3158441930986684,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10040492023270585,
+        "elastic_norm_upper": 5.025203051831136,
+        "sea_norm_upper": 677.6338869113534,
+        "contact_norm_upper": 24.074190441937876,
+        "total": 706.7332804051224,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 6.778189628041139e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07196350180235202,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347660579323669,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002234050700915589
+    },
+    {
+      "centre": [
+        1,
+        0,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.41874574581888263,
+          5.137403987374101e-05,
+          2.1877946527045255e-18,
+          5.137403987376255e-05
+        ],
+        [
+          5.137403987374101e-05,
+          0.06324339477531855,
+          -1.0815505871358725e-18,
+          4.028868336084659e-06
+        ],
+        [
+          2.1877946527045255e-18,
+          -1.0815505871358725e-18,
+          0.06298942400282173,
+          -1.3918116472431688e-18
+        ],
+        [
+          5.137403987376255e-05,
+          4.028868336084659e-06,
+          -1.3918116472431688e-18,
+          0.0632433947753186
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979938,
+      "full10_gradient": 1.1102230246251565e-16,
+      "aH_full_field_link_gradient": 1.3700930699312425e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411991,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.00982056243247216,
+      "b_all_momenta_estimate": 0.003779365440169296,
+      "stiff_norm_upper_estimate": 2.3158547304747787,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411991,
+        "elastic_norm_upper": 5.024949128007474,
+        "sea_norm_upper": 677.7343815335759,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867502,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711807759e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07007339877753954,
+      "stiff_frequency_lower_prefactor_estimate": 0.043470481019706325,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00023149600494832298
+    },
+    {
+      "centre": [
+        1,
+        0,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.4187245578547215,
+          5.00130233745351e-05,
+          2.8964442690821203e-18,
+          1.0488122809401962e-17
+        ],
+        [
+          5.00130233745351e-05,
+          0.06322168899034918,
+          -4.92510061480083e-18,
+          1.8668157007441656e-18
+        ],
+        [
+          2.8964442690821203e-18,
+          -4.92510061480083e-18,
+          0.06297160392873218,
+          -4.817980201877701e-19
+        ],
+        [
+          1.0488122809401962e-17,
+          1.8668157007441656e-18,
+          -4.817980201877701e-19,
+          0.06347914014833986
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420768,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 2.61103376479281e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10037657410271156,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009173649811794861,
+      "b_all_momenta_estimate": 0.0037782962357239243,
+      "stiff_norm_upper_estimate": 2.315865232367765,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10037657410271156,
+        "elastic_norm_upper": 5.024694778688127,
+        "sea_norm_upper": 677.8352738622085,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.9344725598547,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.1064501769124715e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175564,
+      "stiff_frequency_lower_prefactor_estimate": 0.04346433155889967,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0003657979706754126
+    },
+    {
+      "centre": [
+        1,
+        0,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.4187457458188826,
+          5.137403987375998e-05,
+          -4.90636249841986e-18,
+          -5.137403987377094e-05
+        ],
+        [
+          5.137403987375998e-05,
+          0.06324339477531855,
+          -1.8925713188003768e-18,
+          -4.028868336086921e-06
+        ],
+        [
+          -4.90636249841986e-18,
+          -1.8925713188003768e-18,
+          0.06298942400282173,
+          2.9638345364587886e-19
+        ],
+        [
+          -5.137403987377094e-05,
+          -4.028868336086921e-06,
+          2.9638345364587886e-19,
+          0.0632433947753186
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979938,
+      "full10_gradient": 2.220446049250313e-16,
+      "aH_full_field_link_gradient": 5.165423267877289e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411997,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432472328,
+      "b_all_momenta_estimate": 0.0037793654401693014,
+      "stiff_norm_upper_estimate": 2.31585473047478,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411997,
+        "elastic_norm_upper": 5.024949128007473,
+        "sea_norm_upper": 677.7343815335754,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867497,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711807093e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07007339877754014,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347048101970636,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002314960049483352
+    },
+    {
+      "centre": [
+        1,
+        1,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.41874574581888263,
+          5.137403987374043e-05,
+          5.1374039873763985e-05,
+          7.291457038878143e-19
+        ],
+        [
+          5.137403987374043e-05,
+          0.06324339477531855,
+          4.028868336080391e-06,
+          -7.921681573266857e-19
+        ],
+        [
+          5.1374039873763985e-05,
+          4.028868336080391e-06,
+          0.06324339477531858,
+          -1.4054820541421833e-18
+        ],
+        [
+          7.291457038878143e-19,
+          -7.921681573266857e-19,
+          -1.4054820541421833e-18,
+          0.06298942400282172
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979937,
+      "full10_gradient": 3.3306690738754696e-16,
+      "aH_full_field_link_gradient": 2.6813548597338403e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411997,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432472374,
+      "b_all_momenta_estimate": 0.003779365440169307,
+      "stiff_norm_upper_estimate": 2.315854730474778,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411997,
+        "elastic_norm_upper": 5.024949128007474,
+        "sea_norm_upper": 677.7343815335754,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867497,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711806883e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.0700733987775403,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347048101970639,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002314960049483283
+    },
+    {
+      "centre": [
+        1,
+        1,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.418725263251084,
+          5.015221971226343e-05,
+          5.015221971223783e-05,
+          5.015221971224771e-05
+        ],
+        [
+          5.015221971226343e-05,
+          0.06322248902831429,
+          3.6505245511766087e-06,
+          3.650524551177981e-06
+        ],
+        [
+          5.015221971223783e-05,
+          3.6505245511766087e-06,
+          0.0632224890283143,
+          3.650524551178295e-06
+        ],
+        [
+          5.015221971224771e-05,
+          3.650524551177981e-06,
+          3.650524551178295e-06,
+          0.0632224890283143
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619663318387731,
+      "full10_gradient": 5.551115123125783e-16,
+      "aH_full_field_link_gradient": 6.57278354809929e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10057342671204011,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009948867384505341,
+      "b_all_momenta_estimate": 0.003793130310225782,
+      "stiff_norm_upper_estimate": 2.3158649767325974,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10057342671204011,
+        "elastic_norm_upper": 5.0247034137246045,
+        "sea_norm_upper": 676.5084210276541,
+        "contact_norm_upper": 24.07450002667846,
+        "total": 705.6076244680572,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 7.756623519085597e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.0705296653348977,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354957123913956,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00012317235416028663
+    },
+    {
+      "centre": [
+        1,
+        1,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.4187047413770667,
+          4.895376006445184e-05,
+          4.8953760064425356e-05,
+          5.8406756644486126e-18
+        ],
+        [
+          4.895376006445184e-05,
+          0.06320154217459098,
+          3.2858574959406875e-06,
+          9.339289507919185e-19
+        ],
+        [
+          4.8953760064425356e-05,
+          3.2858574959406875e-06,
+          0.06320154217459092,
+          7.596618563034921e-21
+        ],
+        [
+          5.8406756644486126e-18,
+          9.339289507919185e-19,
+          7.596618563034921e-21,
+          0.06345522516217651
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779643,
+      "full10_gradient": 1.1102230246251565e-15,
+      "aH_full_field_link_gradient": 1.5009149122806267e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.1005570535106076,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028102456,
+      "b_all_momenta_estimate": 0.0037918953790256997,
+      "stiff_norm_upper_estimate": 2.315875195965742,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.1005570535106076,
+        "elastic_norm_upper": 5.024457058311881,
+        "sea_norm_upper": 676.6234332167259,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405967,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.994132688353153e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816717,
+      "stiff_frequency_lower_prefactor_estimate": 0.043542481434948675,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022915245655162424
+    },
+    {
+      "centre": [
+        1,
+        1,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.41872526325108395,
+          5.0152219712267e-05,
+          5.015221971223757e-05,
+          -5.015221971224483e-05
+        ],
+        [
+          5.0152219712267e-05,
+          0.06322248902831427,
+          3.650524551176479e-06,
+          -3.6505245511780157e-06
+        ],
+        [
+          5.015221971223757e-05,
+          3.650524551176479e-06,
+          0.0632224890283143,
+          -3.650524551178623e-06
+        ],
+        [
+          -5.015221971224483e-05,
+          -3.6505245511780157e-06,
+          -3.650524551178623e-06,
+          0.06322248902831429
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619663318387731,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 8.231860264293781e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10057342671204009,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009948867384504609,
+      "b_all_momenta_estimate": 0.003793130310225781,
+      "stiff_norm_upper_estimate": 2.3158649767325983,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10057342671204009,
+        "elastic_norm_upper": 5.024703413724604,
+        "sea_norm_upper": 676.5084210276543,
+        "contact_norm_upper": 24.07450002667846,
+        "total": 705.6076244680575,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 7.756623519087912e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.0705296653348951,
+      "stiff_frequency_lower_prefactor_estimate": 0.043549571239139544,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.000123172354160287
+    },
+    {
+      "centre": [
+        1,
+        2,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.4187245578547215,
+          5.00130233745287e-05,
+          1.5281996056857573e-18,
+          3.864961859551129e-19
+        ],
+        [
+          5.00130233745287e-05,
+          0.06322168899034915,
+          -1.046728158205614e-18,
+          -1.0916881262369146e-18
+        ],
+        [
+          1.5281996056857573e-18,
+          -1.046728158205614e-18,
+          0.06347914014833987,
+          -9.451933211093763e-19
+        ],
+        [
+          3.864961859551129e-19,
+          -1.0916881262369146e-18,
+          -9.451933211093763e-19,
+          0.06297160392873218
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420772,
+      "full10_gradient": 5.551115123125783e-16,
+      "aH_full_field_link_gradient": 4.890040055368954e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.1003765741027116,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009173649811795272,
+      "b_all_momenta_estimate": 0.003778296235723926,
+      "stiff_norm_upper_estimate": 2.315865232367765,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.1003765741027116,
+        "elastic_norm_upper": 5.0246947786881275,
+        "sea_norm_upper": 677.8352738622082,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.9344725598544,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.106450176912266e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175717,
+      "stiff_frequency_lower_prefactor_estimate": 0.043464331558899685,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0003657979706754207
+    },
+    {
+      "centre": [
+        1,
+        2,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4187047413770667,
+          4.895376006446068e-05,
+          1.792967964243731e-18,
+          4.895376006442156e-05
+        ],
+        [
+          4.895376006446068e-05,
+          0.06320154217459097,
+          -1.385484102646828e-19,
+          3.2858574959405054e-06
+        ],
+        [
+          1.792967964243731e-18,
+          -1.385484102646828e-19,
+          0.06345522516217651,
+          3.01901730981576e-19
+        ],
+        [
+          4.895376006442156e-05,
+          3.2858574959405054e-06,
+          3.01901730981576e-19,
+          0.06320154217459095
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779643,
+      "full10_gradient": 1.3322676295501878e-15,
+      "aH_full_field_link_gradient": 5.766190937042606e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.1005570535106076,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028101746,
+      "b_all_momenta_estimate": 0.0037918953790256923,
+      "stiff_norm_upper_estimate": 2.315875195965743,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.1005570535106076,
+        "elastic_norm_upper": 5.02445705831188,
+        "sea_norm_upper": 676.6234332167259,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405967,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.994132688356268e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816457,
+      "stiff_frequency_lower_prefactor_estimate": 0.043542481434948634,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002291524565516213
+    },
+    {
+      "centre": [
+        1,
+        2,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.4186848685317499,
+          4.790960520135917e-05,
+          3.9880041566261744e-18,
+          1.000833103530346e-17
+        ],
+        [
+          4.790960520135917e-05,
+          0.06318134138181122,
+          9.034926694631269e-19,
+          4.585748445561823e-19
+        ],
+        [
+          3.9880041566261744e-18,
+          9.034926694631269e-19,
+          0.06343128997964928,
+          -3.0211539652765075e-19
+        ],
+        [
+          1.000833103530346e-17,
+          4.585748445561823e-19,
+          -3.0211539652765075e-19,
+          0.06343128997964927
+        ]
+      ],
+      "physical_energy_per_cell": -0.5620078881716364,
+      "full10_gradient": 8.881784197001252e-16,
+      "aH_full_field_link_gradient": 3.148996151101437e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10054359048711176,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.008814550067300178,
+      "b_all_momenta_estimate": 0.003790880095515009,
+      "stiff_norm_upper_estimate": 2.3158851403048066,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10054359048711176,
+        "elastic_norm_upper": 5.024218499859732,
+        "sea_norm_upper": 676.7187629524715,
+        "contact_norm_upper": 24.074800365913156,
+        "total": 705.8177818182444,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.2648260109277496e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06638731078790652,
+      "stiff_frequency_lower_prefactor_estimate": 0.04353665177476909,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00021503533410869547
+    },
+    {
+      "centre": [
+        1,
+        2,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.41870474137706676,
+          4.895376006444349e-05,
+          -4.1643450814382276e-19,
+          -4.895376006442232e-05
+        ],
+        [
+          4.895376006444349e-05,
+          0.06320154217459097,
+          -2.434297610803437e-18,
+          -3.2858574959422037e-06
+        ],
+        [
+          -4.1643450814382276e-19,
+          -2.434297610803437e-18,
+          0.0634552251621765,
+          2.3313225742367014e-18
+        ],
+        [
+          -4.895376006442232e-05,
+          -3.2858574959422037e-06,
+          2.3313225742367014e-18,
+          0.06320154217459095
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779643,
+      "full10_gradient": 1.3322676295501878e-15,
+      "aH_full_field_link_gradient": 1.5038139638993838e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10055705351060762,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028102057,
+      "b_all_momenta_estimate": 0.0037918953790257014,
+      "stiff_norm_upper_estimate": 2.3158751959657446,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10055705351060762,
+        "elastic_norm_upper": 5.02445705831188,
+        "sea_norm_upper": 676.6234332167257,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405966,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.99413268835483e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816571,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354248143494868,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022915245655160405
+    },
+    {
+      "centre": [
+        1,
+        3,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.41874574581888263,
+          5.1374039873745405e-05,
+          -5.137403987376759e-05,
+          1.127817881481871e-18
+        ],
+        [
+          5.1374039873745405e-05,
+          0.06324339477531855,
+          -4.028868336089189e-06,
+          -6.345655312426824e-19
+        ],
+        [
+          -5.137403987376759e-05,
+          -4.028868336089189e-06,
+          0.06324339477531858,
+          5.237546848177188e-19
+        ],
+        [
+          1.127817881481871e-18,
+          -6.345655312426824e-19,
+          5.237546848177188e-19,
+          0.06298942400282176
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979939,
+      "full10_gradient": 1.1102230246251565e-16,
+      "aH_full_field_link_gradient": 3.6503949816687225e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411998,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432472094,
+      "b_all_momenta_estimate": 0.003779365440169302,
+      "stiff_norm_upper_estimate": 2.315854730474777,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411998,
+        "elastic_norm_upper": 5.024949128007473,
+        "sea_norm_upper": 677.7343815335754,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867497,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711807888e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.0700733987775393,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347048101970636,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00023149600494830195
+    },
+    {
+      "centre": [
+        1,
+        3,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.41872526325108395,
+          5.015221971225733e-05,
+          -5.015221971223896e-05,
+          5.015221971224586e-05
+        ],
+        [
+          5.015221971225733e-05,
+          0.06322248902831427,
+          -3.650524551178418e-06,
+          3.65052455117725e-06
+        ],
+        [
+          -5.015221971223896e-05,
+          -3.650524551178418e-06,
+          0.06322248902831427,
+          -3.650524551178013e-06
+        ],
+        [
+          5.015221971224586e-05,
+          3.65052455117725e-06,
+          -3.650524551178013e-06,
+          0.0632224890283143
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619663318387732,
+      "full10_gradient": 3.3306690738754696e-16,
+      "aH_full_field_link_gradient": 8.03552439745769e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10057342671204006,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009948867384504869,
+      "b_all_momenta_estimate": 0.003793130310225762,
+      "stiff_norm_upper_estimate": 2.315864976732598,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10057342671204006,
+        "elastic_norm_upper": 5.0247034137246045,
+        "sea_norm_upper": 676.5084210276544,
+        "contact_norm_upper": 24.07450002667846,
+        "total": 705.6076244680576,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 7.756623519087262e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07052966533489603,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354957123913944,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00012317235416028113
+    },
+    {
+      "centre": [
+        1,
+        3,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.41870474137706676,
+          4.895376006444906e-05,
+          -4.895376006442487e-05,
+          5.7534954059628375e-18
+        ],
+        [
+          4.895376006444906e-05,
+          0.06320154217459098,
+          -3.2858574959460696e-06,
+          7.786117721787098e-21
+        ],
+        [
+          -4.895376006442487e-05,
+          -3.2858574959460696e-06,
+          0.06320154217459097,
+          1.311771817018784e-18
+        ],
+        [
+          5.7534954059628375e-18,
+          7.786117721787098e-21,
+          1.311771817018784e-18,
+          0.0634552251621765
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779643,
+      "full10_gradient": 1.3322676295501878e-15,
+      "aH_full_field_link_gradient": 1.7429612396314807e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.1005570535106076,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028101847,
+      "b_all_momenta_estimate": 0.0037918953790256798,
+      "stiff_norm_upper_estimate": 2.315875195965741,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.1005570535106076,
+        "elastic_norm_upper": 5.02445705831188,
+        "sea_norm_upper": 676.6234332167259,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405967,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.99413268835597e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816495,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354248143494856,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022915245655159738
+    },
+    {
+      "centre": [
+        1,
+        3,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.41872526325108395,
+          5.015221971226331e-05,
+          -5.015221971224118e-05,
+          -5.015221971224689e-05
+        ],
+        [
+          5.015221971226331e-05,
+          0.06322248902831427,
+          -3.650524551179211e-06,
+          -3.650524551178564e-06
+        ],
+        [
+          -5.015221971224118e-05,
+          -3.650524551179211e-06,
+          0.06322248902831429,
+          3.6505245511769747e-06
+        ],
+        [
+          -5.015221971224689e-05,
+          -3.650524551178564e-06,
+          3.6505245511769747e-06,
+          0.06322248902831429
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619663318387732,
+      "full10_gradient": 5.551115123125783e-16,
+      "aH_full_field_link_gradient": 6.666384110215532e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10057342671204009,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009948867384505271,
+      "b_all_momenta_estimate": 0.003793130310225781,
+      "stiff_norm_upper_estimate": 2.3158649767325983,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10057342671204009,
+        "elastic_norm_upper": 5.0247034137246045,
+        "sea_norm_upper": 676.5084210276543,
+        "contact_norm_upper": 24.07450002667846,
+        "total": 705.6076244680575,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 7.75662351908584e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07052966533489745,
+      "stiff_frequency_lower_prefactor_estimate": 0.043549571239139544,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00012317235416028872
+    },
+    {
+      "centre": [
+        2,
+        0,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.41874494470425316,
+          2.265375724119309e-17,
+          -3.0284635072620334e-18,
+          -1.4040981882064324e-18
+        ],
+        [
+          2.265375724119309e-17,
+          0.06350410046620117,
+          -3.0276228576502834e-18,
+          -1.1168842556800891e-18
+        ],
+        [
+          -3.0284635072620334e-18,
+          -3.0276228576502834e-18,
+          0.062988902786754,
+          -3.0333665360766246e-19
+        ],
+        [
+          -1.4040981882064324e-18,
+          -1.1168842556800891e-18,
+          -3.0333665360766246e-19,
+          0.06298890278675401
+        ]
+      ],
+      "physical_energy_per_cell": -0.561945909719843,
+      "full10_gradient": 3.3306690738754696e-16,
+      "aH_full_field_link_gradient": 1.3530339445076969e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039036032349243,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009625651342897503,
+      "b_all_momenta_estimate": 0.003779334167205242,
+      "stiff_norm_upper_estimate": 2.315855023957073,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039036032349243,
+        "elastic_norm_upper": 5.0249393364510375,
+        "sea_norm_upper": 677.7373283191835,
+        "contact_norm_upper": 24.074351889919257,
+        "total": 706.8366195455537,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.107987819680291e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06937453186471784,
+      "stiff_frequency_lower_prefactor_estimate": 0.043470301167608916,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0004206571437705106
+    },
+    {
+      "centre": [
+        2,
+        0,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.41872455785472157,
+          5.863717914899018e-18,
+          1.1560062631508735e-17,
+          5.001302337447888e-05
+        ],
+        [
+          5.863717914899018e-18,
+          0.06347914014833986,
+          1.1927715926875342e-18,
+          7.053974767511095e-19
+        ],
+        [
+          1.1560062631508735e-17,
+          1.1927715926875342e-18,
+          0.06297160392873215,
+          -1.4145297953793075e-18
+        ],
+        [
+          5.001302337447888e-05,
+          7.053974767511095e-19,
+          -1.4145297953793075e-18,
+          0.0632216889903491
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420772,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 1.3450603800887243e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10037657410271156,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009173649811794873,
+      "b_all_momenta_estimate": 0.0037782962357239243,
+      "stiff_norm_upper_estimate": 2.3158652323677664,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10037657410271156,
+        "elastic_norm_upper": 5.024694778688128,
+        "sea_norm_upper": 677.8352738622085,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.9344725598547,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.106450176912465e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.0677261021017557,
+      "stiff_frequency_lower_prefactor_estimate": 0.04346433155889967,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0003657979706754168
+    },
+    {
+      "centre": [
+        2,
+        0,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.41870412559854675,
+          -5.954719923263663e-18,
+          1.514109788477584e-18,
+          9.21029632012473e-18
+        ],
+        [
+          -5.954719923263663e-18,
+          0.06345418062383276,
+          4.1571233922392204e-19,
+          -1.012058971769949e-18
+        ],
+        [
+          1.514109788477584e-18,
+          4.1571233922392204e-19,
+          0.06295423353169817,
+          -6.056622230294162e-19
+        ],
+        [
+          9.21029632012473e-18,
+          -1.012058971769949e-18,
+          -6.056622230294162e-19,
+          0.06345418062383276
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619877391702732,
+      "full10_gradient": 1.1102230246251565e-16,
+      "aH_full_field_link_gradient": 1.7364980317797996e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10036272896385245,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.008609364064393842,
+      "b_all_momenta_estimate": 0.003777254011901886,
+      "stiff_norm_upper_estimate": 2.315875416135111,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10036272896385245,
+        "elastic_norm_upper": 5.0244495071825614,
+        "sea_norm_upper": 677.933633881016,
+        "contact_norm_upper": 24.07465562142478,
+        "total": 707.0327390096234,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.4294786648411482e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06561007569113848,
+      "stiff_frequency_lower_prefactor_estimate": 0.04345833643791422,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0004082050913726534
+    },
+    {
+      "centre": [
+        2,
+        0,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.4187245578547215,
+          1.6054612679920947e-17,
+          3.637810810995682e-18,
+          -5.001302337448096e-05
+        ],
+        [
+          1.6054612679920947e-17,
+          0.06347914014833984,
+          -8.103633357958279e-19,
+          -8.375603454371027e-19
+        ],
+        [
+          3.637810810995682e-18,
+          -8.103633357958279e-19,
+          0.06297160392873216,
+          8.235830441384946e-19
+        ],
+        [
+          -5.001302337448096e-05,
+          -8.375603454371027e-19,
+          8.235830441384946e-19,
+          0.06322168899034912
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420772,
+      "full10_gradient": 5.551115123125783e-16,
+      "aH_full_field_link_gradient": 1.9685549925337898e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10037657410271157,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009173649811795047,
+      "b_all_momenta_estimate": 0.003778296235723928,
+      "stiff_norm_upper_estimate": 2.315865232367764,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10037657410271157,
+        "elastic_norm_upper": 5.0246947786881275,
+        "sea_norm_upper": 677.8352738622084,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.9344725598546,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.106450176912376e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175634,
+      "stiff_frequency_lower_prefactor_estimate": 0.04346433155889969,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00036579797067539803
+    },
+    {
+      "centre": [
+        2,
+        1,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.4187245578547216,
+          -1.0343349190606039e-17,
+          5.00130233744633e-05,
+          4.530231229353857e-19
+        ],
+        [
+          -1.0343349190606039e-17,
+          0.06347914014833986,
+          -1.034595408515448e-18,
+          -1.2590305634437084e-18
+        ],
+        [
+          5.00130233744633e-05,
+          -1.034595408515448e-18,
+          0.06322168899034913,
+          -1.3910758860317495e-18
+        ],
+        [
+          4.530231229353857e-19,
+          -1.2590305634437084e-18,
+          -1.3910758860317495e-18,
+          0.06297160392873213
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420772,
+      "full10_gradient": 9.992007221626409e-16,
+      "aH_full_field_link_gradient": 2.773051278926228e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10037657410271156,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.00917364981179532,
+      "b_all_momenta_estimate": 0.003778296235723925,
+      "stiff_norm_upper_estimate": 2.3158652323677655,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10037657410271156,
+        "elastic_norm_upper": 5.024694778688128,
+        "sea_norm_upper": 677.8352738622085,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.9344725598547,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.1064501769122496e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175734,
+      "stiff_frequency_lower_prefactor_estimate": 0.04346433155889968,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00036579797067542194
+    },
+    {
+      "centre": [
+        2,
+        1,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4187047413770666,
+          1.7865790708028758e-17,
+          4.8953760064424516e-05,
+          4.895376006442281e-05
+        ],
+        [
+          1.7865790708028758e-17,
+          0.06345522516217653,
+          -7.3516349190579865e-19,
+          -3.616575830892163e-21
+        ],
+        [
+          4.8953760064424516e-05,
+          -7.3516349190579865e-19,
+          0.06320154217459098,
+          3.2858574959408133e-06
+        ],
+        [
+          4.895376006442281e-05,
+          -3.616575830892163e-21,
+          3.2858574959408133e-06,
+          0.06320154217459098
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779644,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 7.93313354183732e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10055705351060765,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028101881,
+      "b_all_momenta_estimate": 0.003791895379025699,
+      "stiff_norm_upper_estimate": 2.3158751959657446,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10055705351060765,
+        "elastic_norm_upper": 5.024457058311878,
+        "sea_norm_upper": 676.6234332167256,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405965,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.994132688355595e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816507,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354248143494867,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022915245655160126
+    },
+    {
+      "centre": [
+        2,
+        1,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.4186848685317495,
+          -1.9204181535847267e-17,
+          4.790960520131973e-05,
+          9.001584622646572e-18
+        ],
+        [
+          -1.9204181535847267e-17,
+          0.06343128997964931,
+          5.2903786310145325e-21,
+          1.0768761705117426e-19
+        ],
+        [
+          4.790960520131973e-05,
+          5.2903786310145325e-21,
+          0.06318134138181122,
+          3.063178611083655e-19
+        ],
+        [
+          9.001584622646572e-18,
+          1.0768761705117426e-19,
+          3.063178611083655e-19,
+          0.06343128997964931
+        ]
+      ],
+      "physical_energy_per_cell": -0.5620078881716362,
+      "full10_gradient": 7.771561172376096e-16,
+      "aH_full_field_link_gradient": 1.1984701790402226e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10054359048711173,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.008814550067299805,
+      "b_all_momenta_estimate": 0.0037908800955149965,
+      "stiff_norm_upper_estimate": 2.3158851403048057,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10054359048711173,
+        "elastic_norm_upper": 5.024218499859726,
+        "sea_norm_upper": 676.7187629524717,
+        "contact_norm_upper": 24.074800365913156,
+        "total": 705.8177818182445,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.2648260109279818e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06638731078790511,
+      "stiff_frequency_lower_prefactor_estimate": 0.043536651774769015,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00021503533410870476
+    },
+    {
+      "centre": [
+        2,
+        1,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.4187047413770666,
+          4.130985121536157e-19,
+          4.895376006442398e-05,
+          -4.895376006442519e-05
+        ],
+        [
+          4.130985121536157e-19,
+          0.06345522516217653,
+          4.592045818118381e-19,
+          6.783986648383492e-19
+        ],
+        [
+          4.895376006442398e-05,
+          4.592045818118381e-19,
+          0.06320154217459098,
+          -3.2858574959442705e-06
+        ],
+        [
+          -4.895376006442519e-05,
+          6.783986648383492e-19,
+          -3.2858574959442705e-06,
+          0.06320154217459097
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779644,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 2.2071616683668677e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10055705351060762,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028101873,
+      "b_all_momenta_estimate": 0.0037918953790257006,
+      "stiff_norm_upper_estimate": 2.315875195965743,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10055705351060762,
+        "elastic_norm_upper": 5.024457058311879,
+        "sea_norm_upper": 676.6234332167257,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405966,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.994132688355628e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816503,
+      "stiff_frequency_lower_prefactor_estimate": 0.043542481434948675,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022915245655160725
+    },
+    {
+      "centre": [
+        2,
+        2,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.4187041255985467,
+          9.795871348800897e-18,
+          1.0210885061939763e-18,
+          2.586174487605151e-18
+        ],
+        [
+          9.795871348800897e-18,
+          0.06345418062383276,
+          -1.3004129989305855e-18,
+          -1.5691954591451712e-19
+        ],
+        [
+          1.0210885061939763e-18,
+          -1.3004129989305855e-18,
+          0.06345418062383278,
+          -4.560823219055664e-19
+        ],
+        [
+          2.586174487605151e-18,
+          -1.5691954591451712e-19,
+          -4.560823219055664e-19,
+          0.06295423353169817
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619877391702732,
+      "full10_gradient": 6.412222344117765e-17,
+      "aH_full_field_link_gradient": 8.059231047300953e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10036272896385245,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.008609364064393598,
+      "b_all_momenta_estimate": 0.003777254011901889,
+      "stiff_norm_upper_estimate": 2.315875416135111,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10036272896385245,
+        "elastic_norm_upper": 5.024449507182561,
+        "sea_norm_upper": 677.933633881016,
+        "contact_norm_upper": 24.07465562142478,
+        "total": 707.0327390096234,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.4294786648413057e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06561007569113755,
+      "stiff_frequency_lower_prefactor_estimate": 0.04345833643791424,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00040820509137265903
+    },
+    {
+      "centre": [
+        2,
+        2,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4186848685317496,
+          -6.961390010277965e-18,
+          -2.727749036386814e-18,
+          4.790960520132005e-05
+        ],
+        [
+          -6.961390010277965e-18,
+          0.06343128997964931,
+          6.393269472018617e-19,
+          4.785771427294802e-19
+        ],
+        [
+          -2.727749036386814e-18,
+          6.393269472018617e-19,
+          0.06343128997964932,
+          7.796318604530902e-19
+        ],
+        [
+          4.790960520132005e-05,
+          4.785771427294802e-19,
+          7.796318604530902e-19,
+          0.06318134138181121
+        ]
+      ],
+      "physical_energy_per_cell": -0.5620078881716362,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 5.874244347141393e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.1005435904871117,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.008814550067301105,
+      "b_all_momenta_estimate": 0.0037908800955149943,
+      "stiff_norm_upper_estimate": 2.315885140304809,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.1005435904871117,
+        "elastic_norm_upper": 5.024218499859728,
+        "sea_norm_upper": 676.7187629524718,
+        "contact_norm_upper": 24.074800365913156,
+        "total": 705.8177818182447,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.2648260109272428e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06638731078791,
+      "stiff_frequency_lower_prefactor_estimate": 0.043536651774769,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00021503533410872105
+    },
+    {
+      "centre": [
+        2,
+        2,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.41866554478199075,
+          3.390065190253817e-17,
+          -1.011076451496457e-18,
+          9.080693988749247e-18
+        ],
+        [
+          3.390065190253817e-17,
+          0.06340835937251404,
+          -1.3375859430734667e-18,
+          -8.377585068705028e-19
+        ],
+        [
+          -1.011076451496457e-18,
+          -1.3375859430734667e-18,
+          0.06340835937251404,
+          -8.494022529180793e-19
+        ],
+        [
+          9.080693988749247e-18,
+          -8.377585068705028e-19,
+          -8.494022529180793e-19,
+          0.06340835937251403
+        ]
+      ],
+      "physical_energy_per_cell": -0.5620280955076282,
+      "full10_gradient": 1.3877787807814457e-16,
+      "aH_full_field_link_gradient": 1.2148618088031442e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10072406613914196,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009019863685761239,
+      "b_all_momenta_estimate": 0.003804501562350837,
+      "stiff_norm_upper_estimate": 2.315894850286407,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10072406613914196,
+        "elastic_norm_upper": 5.023986537383889,
+        "sea_norm_upper": 675.5108373302058,
+        "contact_norm_upper": 24.074944939798353,
+        "total": 704.609768807388,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.121629440752509e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06715602610995249,
+      "stiff_frequency_lower_prefactor_estimate": 0.043614800024480434,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 5.1618687220864265e-17
+    },
+    {
+      "centre": [
+        2,
+        2,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.4186848685317495,
+          -1.5674844092502036e-18,
+          -1.2997374247126566e-18,
+          -4.7909605201323245e-05
+        ],
+        [
+          -1.5674844092502036e-18,
+          0.06343128997964931,
+          -1.188490162454191e-18,
+          1.6736560839722784e-18
+        ],
+        [
+          -1.2997374247126566e-18,
+          -1.188490162454191e-18,
+          0.06343128997964931,
+          1.3668038069637246e-18
+        ],
+        [
+          -4.7909605201323245e-05,
+          1.6736560839722784e-18,
+          1.3668038069637246e-18,
+          0.06318134138181121
+        ]
+      ],
+      "physical_energy_per_cell": -0.562007888171636,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 1.3417366150352976e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10054359048711173,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.008814550067300421,
+      "b_all_momenta_estimate": 0.0037908800955150173,
+      "stiff_norm_upper_estimate": 2.315885140304809,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10054359048711173,
+        "elastic_norm_upper": 5.024218499859726,
+        "sea_norm_upper": 676.7187629524717,
+        "contact_norm_upper": 24.074800365913156,
+        "total": 705.8177818182445,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.2648260109276005e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06638731078790744,
+      "stiff_frequency_lower_prefactor_estimate": 0.04353665177476914,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002150353341087171
+    },
+    {
+      "centre": [
+        2,
+        3,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.41872455785472157,
+          9.97687507597557e-18,
+          -5.001302337447332e-05,
+          -1.0941691051924484e-18
+        ],
+        [
+          9.97687507597557e-18,
+          0.06347914014833984,
+          8.03187731348217e-20,
+          -4.891615245737852e-19
+        ],
+        [
+          -5.001302337447332e-05,
+          8.03187731348217e-20,
+          0.0632216889903491,
+          1.3623353524381684e-18
+        ],
+        [
+          -1.0941691051924484e-18,
+          -4.891615245737852e-19,
+          1.3623353524381684e-18,
+          0.06297160392873215
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420772,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 4.341995862970378e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10037657410271156,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009173649811794993,
+      "b_all_momenta_estimate": 0.003778296235723929,
+      "stiff_norm_upper_estimate": 2.3158652323677664,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10037657410271156,
+        "elastic_norm_upper": 5.024694778688128,
+        "sea_norm_upper": 677.8352738622085,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.9344725598547,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.1064501769124024e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175613,
+      "stiff_frequency_lower_prefactor_estimate": 0.0434643315588997,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0003657979706754056
+    },
+    {
+      "centre": [
+        2,
+        3,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4187047413770666,
+          9.090526923340893e-18,
+          -4.895376006442593e-05,
+          4.895376006442287e-05
+        ],
+        [
+          9.090526923340893e-18,
+          0.06345522516217653,
+          2.8219082313736535e-19,
+          4.423310311190127e-19
+        ],
+        [
+          -4.895376006442593e-05,
+          2.8219082313736535e-19,
+          0.06320154217459098,
+          -3.2858574959426687e-06
+        ],
+        [
+          4.895376006442287e-05,
+          4.423310311190127e-19,
+          -3.2858574959426687e-06,
+          0.06320154217459098
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779642,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 2.2870559811021263e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10055705351060762,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028102225,
+      "b_all_momenta_estimate": 0.0037918953790256984,
+      "stiff_norm_upper_estimate": 2.3158751959657407,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10055705351060762,
+        "elastic_norm_upper": 5.024457058311879,
+        "sea_norm_upper": 676.6234332167257,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405966,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.994132688354141e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816632,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354248143494867,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022915245655160193
+    },
+    {
+      "centre": [
+        2,
+        3,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.4186848685317495,
+          7.73152235506601e-18,
+          -4.790960520132658e-05,
+          1.0050844870423661e-17
+        ],
+        [
+          7.73152235506601e-18,
+          0.06343128997964931,
+          -6.54506228809824e-19,
+          6.481313963579819e-20
+        ],
+        [
+          -4.790960520132658e-05,
+          -6.54506228809824e-19,
+          0.0631813413818112,
+          1.3583705545634916e-18
+        ],
+        [
+          1.0050844870423661e-17,
+          6.481313963579819e-20,
+          1.3583705545634916e-18,
+          0.06343128997964931
+        ]
+      ],
+      "physical_energy_per_cell": -0.5620078881716359,
+      "full10_gradient": 7.771561172376096e-16,
+      "aH_full_field_link_gradient": 2.8097079067409615e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10054359048711173,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.008814550067300286,
+      "b_all_momenta_estimate": 0.003790880095515006,
+      "stiff_norm_upper_estimate": 2.3158851403048066,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10054359048711173,
+        "elastic_norm_upper": 5.024218499859726,
+        "sea_norm_upper": 676.7187629524717,
+        "contact_norm_upper": 24.074800365913156,
+        "total": 705.8177818182445,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.2648260109276939e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06638731078790693,
+      "stiff_frequency_lower_prefactor_estimate": 0.04353665177476907,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00021503533410872932
+    },
+    {
+      "centre": [
+        2,
+        3,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.41870474137706665,
+          1.2265565482644735e-17,
+          -4.895376006442627e-05,
+          -4.8953760064425654e-05
+        ],
+        [
+          1.2265565482644735e-17,
+          0.06345522516217651,
+          9.910707097719785e-19,
+          1.3238195146753136e-18
+        ],
+        [
+          -4.895376006442627e-05,
+          9.910707097719785e-19,
+          0.06320154217459098,
+          3.2858574959439816e-06
+        ],
+        [
+          -4.8953760064425654e-05,
+          1.3238195146753136e-18,
+          3.2858574959439816e-06,
+          0.06320154217459097
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779641,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 1.7417762087058847e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.1005570535106076,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028102012,
+      "b_all_momenta_estimate": 0.0037918953790256984,
+      "stiff_norm_upper_estimate": 2.315875195965741,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.1005570535106076,
+        "elastic_norm_upper": 5.024457058311879,
+        "sea_norm_upper": 676.6234332167259,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405967,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.994132688355068e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816554,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354248143494867,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002291524565515982
+    },
+    {
+      "centre": [
+        3,
+        0,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.41876691315354464,
+          -5.276766807063217e-05,
+          7.504232771130482e-19,
+          3.3077437029292284e-20
+        ],
+        [
+          -5.276766807063217e-05,
+          0.06326507319695558,
+          -4.394106186769031e-18,
+          -2.2718181926917937e-18
+        ],
+        [
+          7.504232771130482e-19,
+          -4.394106186769031e-18,
+          0.0630071750433501,
+          1.2483922449428611e-18
+        ],
+        [
+          3.3077437029292284e-20,
+          -2.2718181926917937e-18,
+          1.2483922449428611e-18,
+          0.0630071750433501
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619240324645147,
+      "full10_gradient": 1.6311821685044414e-16,
+      "aH_full_field_link_gradient": 4.926950990778244e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10040492023270581,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.010357491183314006,
+      "b_all_momenta_estimate": 0.0037804305026009864,
+      "stiff_norm_upper_estimate": 2.3158441930986697,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10040492023270581,
+        "elastic_norm_upper": 5.025203051831137,
+        "sea_norm_upper": 677.6338869113537,
+        "contact_norm_upper": 24.074190441937876,
+        "total": 706.7332804051226,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 6.778189628041913e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07196350180235118,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347660579323659,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022340507009160738
+    },
+    {
+      "centre": [
+        3,
+        0,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4187457458188826,
+          -5.1374039873734204e-05,
+          8.265268686601706e-18,
+          5.137403987376349e-05
+        ],
+        [
+          -5.1374039873734204e-05,
+          0.06324339477531855,
+          8.033154737913443e-19,
+          -4.028868336086511e-06
+        ],
+        [
+          8.265268686601706e-18,
+          8.033154737913443e-19,
+          0.06298942400282177,
+          -1.7143040556509413e-18
+        ],
+        [
+          5.137403987376349e-05,
+          -4.028868336086511e-06,
+          -1.7143040556509413e-18,
+          0.06324339477531851
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979938,
+      "full10_gradient": 4.440892098500626e-16,
+      "aH_full_field_link_gradient": 2.6325447480303117e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411998,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432472226,
+      "b_all_momenta_estimate": 0.0037793654401693105,
+      "stiff_norm_upper_estimate": 2.3158547304747783,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411998,
+        "elastic_norm_upper": 5.024949128007473,
+        "sea_norm_upper": 677.7343815335754,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867497,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711807359e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07007339877753978,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347048101970641,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00023149600494825953
+    },
+    {
+      "centre": [
+        3,
+        0,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.41872455785472135,
+          -5.001302337455275e-05,
+          8.5071706647171405e-19,
+          9.122627369808195e-18
+        ],
+        [
+          -5.001302337455275e-05,
+          0.06322168899034915,
+          -8.880904412368109e-19,
+          7.415661438492806e-19
+        ],
+        [
+          8.5071706647171405e-19,
+          -8.880904412368109e-19,
+          0.06297160392873216,
+          -9.52558397461749e-19
+        ],
+        [
+          9.122627369808195e-18,
+          7.415661438492806e-19,
+          -9.52558397461749e-19,
+          0.06347914014833986
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619667993420772,
+      "full10_gradient": 4.440892098500626e-16,
+      "aH_full_field_link_gradient": 6.702062627432685e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10037657410271153,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009173649811794825,
+      "b_all_momenta_estimate": 0.003778296235723908,
+      "stiff_norm_upper_estimate": 2.315865232367764,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10037657410271153,
+        "elastic_norm_upper": 5.024694778688126,
+        "sea_norm_upper": 677.8352738622087,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.934472559855,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.1064501769125107e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175552,
+      "stiff_frequency_lower_prefactor_estimate": 0.04346433155889958,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00036579797067542714
+    },
+    {
+      "centre": [
+        3,
+        0,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.41874574581888263,
+          -5.1374039873744666e-05,
+          -3.270791550040531e-18,
+          -5.13740398737657e-05
+        ],
+        [
+          -5.1374039873744666e-05,
+          0.06324339477531855,
+          2.945220207495574e-18,
+          4.028868336085821e-06
+        ],
+        [
+          -3.270791550040531e-18,
+          2.945220207495574e-18,
+          0.06298942400282177,
+          7.35722912112531e-19
+        ],
+        [
+          -5.13740398737657e-05,
+          4.028868336085821e-06,
+          7.35722912112531e-19,
+          0.06324339477531853
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979937,
+      "full10_gradient": 4.440892098500626e-16,
+      "aH_full_field_link_gradient": 4.2890011709549393e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411998,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432472394,
+      "b_all_momenta_estimate": 0.003779365440169295,
+      "stiff_norm_upper_estimate": 2.315854730474778,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411998,
+        "elastic_norm_upper": 5.0249491280074725,
+        "sea_norm_upper": 677.7343815335754,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867497,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711806926e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07007339877754037,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347048101970632,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002314960049482702
+    },
+    {
+      "centre": [
+        3,
+        1,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.4187457458188826,
+          -5.137403987375234e-05,
+          5.137403987376396e-05,
+          1.6472084723405006e-18
+        ],
+        [
+          -5.137403987375234e-05,
+          0.06324339477531855,
+          -4.028868336085308e-06,
+          4.526660414843086e-19
+        ],
+        [
+          5.137403987376396e-05,
+          -4.028868336085308e-06,
+          0.06324339477531853,
+          -1.2480601038796218e-18
+        ],
+        [
+          1.6472084723405006e-18,
+          4.526660414843086e-19,
+          -1.2480601038796218e-18,
+          0.06298942400282176
+        ]
+      ],
+      "physical_energy_per_cell": -0.561945395197994,
+      "full10_gradient": 3.3306690738754696e-16,
+      "aH_full_field_link_gradient": 4.859134818552174e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567411998,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432472103,
+      "b_all_momenta_estimate": 0.0037793654401693023,
+      "stiff_norm_upper_estimate": 2.3158547304747783,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567411998,
+        "elastic_norm_upper": 5.024949128007473,
+        "sea_norm_upper": 677.7343815335754,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867497,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711807854e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07007339877753933,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347048101970636,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00023149600494828297
+    },
+    {
+      "centre": [
+        3,
+        1,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4187252632510839,
+          -5.0152219712268056e-05,
+          5.015221971225111e-05,
+          5.0152219712246406e-05
+        ],
+        [
+          -5.0152219712268056e-05,
+          0.06322248902831427,
+          -3.6505245511778424e-06,
+          -3.650524551178159e-06
+        ],
+        [
+          5.015221971225111e-05,
+          -3.6505245511778424e-06,
+          0.06322248902831427,
+          3.6505245511784396e-06
+        ],
+        [
+          5.0152219712246406e-05,
+          -3.650524551178159e-06,
+          3.6505245511784396e-06,
+          0.06322248902831427
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619663318387732,
+      "full10_gradient": 7.771561172376096e-16,
+      "aH_full_field_link_gradient": 1.1903514999517734e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10057342671204005,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009948867384505079,
+      "b_all_momenta_estimate": 0.0037931303102257743,
+      "stiff_norm_upper_estimate": 2.3158649767325974,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10057342671204005,
+        "elastic_norm_upper": 5.024703413724604,
+        "sea_norm_upper": 676.5084210276545,
+        "contact_norm_upper": 24.07450002667846,
+        "total": 705.6076244680577,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 7.756623519086517e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07052966533489677,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354957123913951,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00012317235416030024
+    },
+    {
+      "centre": [
+        3,
+        1,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.41870474137706665,
+          -4.895376006443475e-05,
+          4.895376006442369e-05,
+          7.027942269076301e-18
+        ],
+        [
+          -4.895376006443475e-05,
+          0.06320154217459098,
+          -3.285857495945088e-06,
+          9.08064881462188e-19
+        ],
+        [
+          4.895376006442369e-05,
+          -3.285857495945088e-06,
+          0.063201542174591,
+          7.431990026666349e-21
+        ],
+        [
+          7.027942269076301e-18,
+          9.08064881462188e-19,
+          7.431990026666349e-21,
+          0.06345522516217655
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779643,
+      "full10_gradient": 3.3306690738754696e-16,
+      "aH_full_field_link_gradient": 2.294802782128305e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10055705351060762,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028102256,
+      "b_all_momenta_estimate": 0.0037918953790256936,
+      "stiff_norm_upper_estimate": 2.3158751959657433,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10055705351060762,
+        "elastic_norm_upper": 5.02445705831188,
+        "sea_norm_upper": 676.6234332167257,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405966,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.994132688354055e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816643,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354248143494864,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022915245655162148
+    },
+    {
+      "centre": [
+        3,
+        1,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.41872526325108383,
+          -5.015221971225605e-05,
+          5.015221971224523e-05,
+          -5.0152219712245187e-05
+        ],
+        [
+          -5.015221971225605e-05,
+          0.06322248902831427,
+          -3.650524551176042e-06,
+          3.6505245511768997e-06
+        ],
+        [
+          5.015221971224523e-05,
+          -3.650524551176042e-06,
+          0.06322248902831427,
+          -3.6505245511782456e-06
+        ],
+        [
+          -5.0152219712245187e-05,
+          3.6505245511768997e-06,
+          -3.6505245511782456e-06,
+          0.06322248902831429
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619663318387733,
+      "full10_gradient": 7.771561172376096e-16,
+      "aH_full_field_link_gradient": 2.1316745639309414e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10057342671204005,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009948867384505086,
+      "b_all_momenta_estimate": 0.003793130310225766,
+      "stiff_norm_upper_estimate": 2.3158649767325974,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10057342671204005,
+        "elastic_norm_upper": 5.024703413724603,
+        "sea_norm_upper": 676.5084210276545,
+        "contact_norm_upper": 24.07450002667846,
+        "total": 705.6076244680577,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 7.756623519086566e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.0705296653348968,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354957123913946,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0001231723541602845
+    },
+    {
+      "centre": [
+        3,
+        2,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.41872455785472135,
+          -5.0013023374558694e-05,
+          1.7221110807512486e-18,
+          -1.0278481360432496e-18
+        ],
+        [
+          -5.0013023374558694e-05,
+          0.06322168899034915,
+          8.683954589992672e-19,
+          8.18374656032686e-19
+        ],
+        [
+          1.7221110807512486e-18,
+          8.683954589992672e-19,
+          0.06347914014833987,
+          -6.423991288078622e-19
+        ],
+        [
+          -1.0278481360432496e-18,
+          8.18374656032686e-19,
+          -6.423991288078622e-19,
+          0.06297160392873215
+        ]
+      ],
+      "physical_energy_per_cell": -0.561966799342077,
+      "full10_gradient": 6.661338147750939e-16,
+      "aH_full_field_link_gradient": 7.747520991148199e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10037657410271156,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009173649811795572,
+      "b_all_momenta_estimate": 0.003778296235723928,
+      "stiff_norm_upper_estimate": 2.315865232367765,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10037657410271156,
+        "elastic_norm_upper": 5.024694778688126,
+        "sea_norm_upper": 677.8352738622085,
+        "contact_norm_upper": 24.074503918958047,
+        "total": 706.9344725598547,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.1064501769121243e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.06772610210175828,
+      "stiff_frequency_lower_prefactor_estimate": 0.04346433155889969,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00036579797067544807
+    },
+    {
+      "centre": [
+        3,
+        2,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.4187047413770667,
+          -4.895376006445018e-05,
+          3.5040757692076224e-19,
+          4.895376006442133e-05
+        ],
+        [
+          -4.895376006445018e-05,
+          0.063201542174591,
+          1.1689532873598616e-18,
+          -3.2858574959425573e-06
+        ],
+        [
+          3.5040757692076224e-19,
+          1.1689532873598616e-18,
+          0.06345522516217654,
+          -8.188878453961892e-21
+        ],
+        [
+          4.895376006442133e-05,
+          -3.2858574959425573e-06,
+          -8.188878453961892e-21,
+          0.063201542174591
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779641,
+      "full10_gradient": 3.3306690738754696e-16,
+      "aH_full_field_link_gradient": 1.5033019933459327e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10055705351060765,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028101744,
+      "b_all_momenta_estimate": 0.003791895379025703,
+      "stiff_norm_upper_estimate": 2.3158751959657455,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10055705351060765,
+        "elastic_norm_upper": 5.02445705831188,
+        "sea_norm_upper": 676.6234332167256,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405965,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.994132688356137e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816457,
+      "stiff_frequency_lower_prefactor_estimate": 0.043542481434948696,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002291524565516116
+    },
+    {
+      "centre": [
+        3,
+        2,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.41868486853174947,
+          -4.790960520137974e-05,
+          4.591037222684806e-18,
+          1.0054521293685699e-17
+        ],
+        [
+          -4.790960520137974e-05,
+          0.0631813413818112,
+          8.608869042646379e-19,
+          1.3775829503892097e-18
+        ],
+        [
+          4.591037222684806e-18,
+          8.608869042646379e-19,
+          0.06343128997964932,
+          -2.943132228358498e-19
+        ],
+        [
+          1.0054521293685699e-17,
+          1.3775829503892097e-18,
+          -2.943132228358498e-19,
+          0.06343128997964931
+        ]
+      ],
+      "physical_energy_per_cell": -0.5620078881716359,
+      "full10_gradient": 4.440892098500626e-16,
+      "aH_full_field_link_gradient": 3.772557289207882e-16,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10054359048711173,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.008814550067300468,
+      "b_all_momenta_estimate": 0.00379088009551501,
+      "stiff_norm_upper_estimate": 2.315885140304808,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10054359048711173,
+        "elastic_norm_upper": 5.024218499859726,
+        "sea_norm_upper": 676.7187629524717,
+        "contact_norm_upper": 24.074800365913156,
+        "total": 705.8177818182445,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 1.2648260109275837e+43,
+      "soft_frequency_lower_prefactor_estimate": 0.0663873107879076,
+      "stiff_frequency_lower_prefactor_estimate": 0.04353665177476909,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002150353341087584
+    },
+    {
+      "centre": [
+        3,
+        2,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.4187047413770666,
+          -4.895376006444823e-05,
+          -1.8443606735173743e-19,
+          -4.895376006442414e-05
+        ],
+        [
+          -4.895376006444823e-05,
+          0.06320154217459098,
+          1.4721434834894267e-18,
+          3.2858574959431494e-06
+        ],
+        [
+          -1.8443606735173743e-19,
+          1.4721434834894267e-18,
+          0.06345522516217654,
+          5.647473193470858e-19
+        ],
+        [
+          -4.895376006442414e-05,
+          3.2858574959431494e-06,
+          5.647473193470858e-19,
+          0.063201542174591
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779642,
+      "full10_gradient": 1.1102230246251565e-16,
+      "aH_full_field_link_gradient": 1.032330855234293e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10055705351060765,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028102374,
+      "b_all_momenta_estimate": 0.0037918953790256785,
+      "stiff_norm_upper_estimate": 2.315875195965743,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10055705351060765,
+        "elastic_norm_upper": 5.024457058311879,
+        "sea_norm_upper": 676.6234332167256,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405965,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.994132688353697e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816688,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354248143494855,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022915245655161714
+    },
+    {
+      "centre": [
+        3,
+        3,
+        0
+      ],
+      "native_Gram": [
+        [
+          0.4187457458188826,
+          -5.137403987375112e-05,
+          -5.137403987376895e-05,
+          9.287085906376116e-19
+        ],
+        [
+          -5.137403987375112e-05,
+          0.06324339477531855,
+          4.028868336084672e-06,
+          -5.761788581987093e-19
+        ],
+        [
+          -5.137403987376895e-05,
+          4.028868336084672e-06,
+          0.06324339477531853,
+          -4.228509259641796e-19
+        ],
+        [
+          9.287085906376116e-19,
+          -5.761788581987093e-19,
+          -4.228509259641796e-19,
+          0.06298942400282177
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619453951979938,
+      "full10_gradient": 2.220446049250313e-16,
+      "aH_full_field_link_gradient": 1.2794540957519225e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10039077567412001,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009820562432471827,
+      "b_all_momenta_estimate": 0.0037793654401692945,
+      "stiff_norm_upper_estimate": 2.3158547304747765,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10039077567412001,
+        "elastic_norm_upper": 5.0249491280074725,
+        "sea_norm_upper": 677.7343815335752,
+        "contact_norm_upper": 24.074347425166774,
+        "total": 706.8336780867495,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 8.405603711808851e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.07007339877753835,
+      "stiff_frequency_lower_prefactor_estimate": 0.04347048101970632,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0002314960049482745
+    },
+    {
+      "centre": [
+        3,
+        3,
+        1
+      ],
+      "native_Gram": [
+        [
+          0.41872526325108395,
+          -5.0152219712275e-05,
+          -5.0152219712239745e-05,
+          5.0152219712243554e-05
+        ],
+        [
+          -5.0152219712275e-05,
+          0.06322248902831426,
+          3.6505245511759582e-06,
+          -3.650524551177929e-06
+        ],
+        [
+          -5.0152219712239745e-05,
+          3.6505245511759582e-06,
+          0.06322248902831427,
+          -3.6505245511774837e-06
+        ],
+        [
+          5.0152219712243554e-05,
+          -3.650524551177929e-06,
+          -3.6505245511774837e-06,
+          0.06322248902831427
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619663318387731,
+      "full10_gradient": 4.440892098500626e-16,
+      "aH_full_field_link_gradient": 1.3144980006698805e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10057342671204009,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009948867384505004,
+      "b_all_momenta_estimate": 0.0037931303102257756,
+      "stiff_norm_upper_estimate": 2.315864976732598,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10057342671204009,
+        "elastic_norm_upper": 5.0247034137246045,
+        "sea_norm_upper": 676.5084210276543,
+        "contact_norm_upper": 24.07450002667846,
+        "total": 705.6076244680575,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 7.756623519086718e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.0705296653348965,
+      "stiff_frequency_lower_prefactor_estimate": 0.043549571239139516,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00012317235416029414
+    },
+    {
+      "centre": [
+        3,
+        3,
+        2
+      ],
+      "native_Gram": [
+        [
+          0.4187047413770666,
+          -4.895376006445445e-05,
+          -4.895376006442616e-05,
+          6.1875025872762795e-18
+        ],
+        [
+          -4.895376006445445e-05,
+          0.06320154217459098,
+          3.285857495944629e-06,
+          1.0239771632833131e-18
+        ],
+        [
+          -4.895376006442616e-05,
+          3.285857495944629e-06,
+          0.06320154217459101,
+          1.4909330973506083e-18
+        ],
+        [
+          6.1875025872762795e-18,
+          1.0239771632833131e-18,
+          1.4909330973506083e-18,
+          0.06345522516217654
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619873165779644,
+      "full10_gradient": 8.326672684688674e-17,
+      "aH_full_field_link_gradient": 1.8236139371101845e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10055705351060762,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009344116028102294,
+      "b_all_momenta_estimate": 0.0037918953790256884,
+      "stiff_norm_upper_estimate": 2.315875195965745,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10055705351060762,
+        "elastic_norm_upper": 5.024457058311879,
+        "sea_norm_upper": 676.6234332167257,
+        "contact_norm_upper": 24.0746522655589,
+        "total": 705.7225425405966,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 9.994132688353952e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.06835245433816659,
+      "stiff_frequency_lower_prefactor_estimate": 0.043542481434948606,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.00022915245655161557
+    },
+    {
+      "centre": [
+        3,
+        3,
+        3
+      ],
+      "native_Gram": [
+        [
+          0.4187252632510839,
+          -5.015221971226125e-05,
+          -5.015221971224566e-05,
+          -5.015221971224546e-05
+        ],
+        [
+          -5.015221971226125e-05,
+          0.06322248902831426,
+          3.6505245511788026e-06,
+          3.6505245511773783e-06
+        ],
+        [
+          -5.015221971224566e-05,
+          3.6505245511788026e-06,
+          0.06322248902831426,
+          3.650524551176621e-06
+        ],
+        [
+          -5.015221971224546e-05,
+          3.6505245511773783e-06,
+          3.650524551176621e-06,
+          0.06322248902831429
+        ]
+      ],
+      "physical_energy_per_cell": -0.5619663318387731,
+      "full10_gradient": 7.771561172376096e-16,
+      "aH_full_field_link_gradient": 1.3483686475387941e-15,
+      "source_quadratic_rank": 10,
+      "whole_heavy_gap_lower": 0.10057342671204006,
+      "physical_uniform_normal_count": 45,
+      "total_physical_normal_dimension": 11250,
+      "all_nonzero_momenta_checked": 124,
+      "alpha_estimate": 0.009948867384505225,
+      "b_all_momenta_estimate": 0.0037931303102257783,
+      "stiff_norm_upper_estimate": 2.3158649767325983,
+      "leading_norm_upper_formula": {
+        "heavy_gap_lower": 0.10057342671204006,
+        "elastic_norm_upper": 5.024703413724604,
+        "sea_norm_upper": 676.5084210276544,
+        "contact_norm_upper": 24.07450002667846,
+        "total": 705.6076244680576,
+        "scope": "analytic upper formula evaluated in floating arithmetic; no interval onset certificate"
+      },
+      "sufficient_Lambda_estimate": 7.756623519086019e+42,
+      "soft_frequency_lower_prefactor_estimate": 0.0705296653348973,
+      "stiff_frequency_lower_prefactor_estimate": 0.04354957123913953,
+      "zero_point_upper_formula": "45V sqrt(L Lambda^(1/2)+Bmax Lambda^(3/4))",
+      "Gram_isotropic_debt": 0.0001231723541602894
+    }
+  ],
+  "native_current_controls": [
+    {
+      "centre": [
+        0,
+        0,
+        0
+      ],
+      "dimension": 500,
+      "current_Ward": 6.479318792303478e-17,
+      "contact_Ward": 3.367039235211226e-17,
+      "compact_U1_covariance": 9.7164772335267e-16,
+      "omitted_contact_aH_defect": 0.26595685446751943,
+      "native_full_Gram_retained": true,
+      "arbitrary_compact_phases": true,
+      "scope": "actual native multiplication current/contact; not a quantum scattering or photon pole"
+    },
+    {
+      "centre": [
+        1,
+        0,
+        0
+      ],
+      "dimension": 500,
+      "current_Ward": 6.231703082244e-17,
+      "contact_Ward": 3.6447197843543247e-17,
+      "compact_U1_covariance": 9.364632511456002e-16,
+      "omitted_contact_aH_defect": 0.2660170146393467,
+      "native_full_Gram_retained": true,
+      "arbitrary_compact_phases": true,
+      "scope": "actual native multiplication current/contact; not a quantum scattering or photon pole"
+    },
+    {
+      "centre": [
+        2,
+        2,
+        2
+      ],
+      "dimension": 500,
+      "current_Ward": 6.617041351865623e-17,
+      "contact_Ward": 3.333920468381865e-17,
+      "compact_U1_covariance": 9.087151955865555e-16,
+      "omitted_contact_aH_defect": 0.2663280710405502,
+      "native_full_Gram_retained": true,
+      "arbitrary_compact_phases": true,
+      "scope": "actual native multiplication current/contact; not a quantum scattering or photon pole"
+    }
+  ],
+  "analytic_theorem": "Positive q0 uniform alpha, positive stiff b and ||H0||<=L imply a full finite-graph normal gap at the displayed Schur threshold; proof constants exact, receipt estimates floating.",
+  "all_checks_pass": true,
+  "quantum_ground_computed": false,
+  "full_low_energy_embedding_proved": false,
+  "campaign_complete": false,
+  "limits": [
+    "Numerical alpha/b and onset are not interval certificates or measured quantum gaps.",
+    "Centre-class normal positivity is not finite-N globality against noncentral/nonuniform competitors.",
+    "Complete scalar well/physical Gauss operator embedding remains in the separate BO derivation.",
+    "Native finite fullmetric current is not silently replaced by isotropic RotationBand.",
+    "No thermodynamic Coulomb/Z4 phase, charged lower mass, mechanical half-spin or radiative/UV closure."
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "kind": "Parent conditional fixed-physical-band whole-half phase intertwining control; not an instantiated microscopic source proof",
+  "program_utf8": "import numpy as np,json,math\nfrom scipy.linalg import eigh\na=.01;lo=math.exp(-4*a);A0=np.diag([.98,lo,1.01,.9]);source=np.eye(4)[:,0];unsafe=np.eye(4)[:,1]\nM=np.array([[.3,.5,.2,.1],[.5,-.7,0,0],[.2,0,0,0],[.1,0,0,0.]])\ndef filtered(A,t):\n v,U=eigh(A);mask=(v>=lo)&(v<=1)\n weights=np.zeros(len(v),complex);weights[mask]=np.sqrt(v[mask])*np.exp(1j*t/a*np.log(v[mask]))\n return (U*weights)@U.conj().T,(U*mask)@U.conj().T\nrows=[]\nfor eps in [1e-8,1e-10,1e-12]:\n A1=A0+eps*M;delta=float(np.linalg.norm(A1-A0,2));sep_lower=.98-lo;sep_upper=1-.98\n leakage=delta*math.sqrt(sep_lower**-2+sep_upper**-2)\n for t in [0.,.013,1.,1e6]:\n  F0,P0=filtered(A0,t);F1,P1=filtered(A1,t)\n  actual=float(np.linalg.norm((F1-F0)@source));bad=float(np.linalg.norm((F1-F0)@unsafe))\n  bound=(abs(t/a)*delta/lo+delta/(math.sqrt(lo)+math.sqrt(.98))+leakage)\n  if actual>bound+1e-12: raise ArithmeticError('Buffered physicalphase bound failed')\n  if np.linalg.norm(P1-P0,2)<.99 or bad<.97: raise ArithmeticError('Globalthreshold/unsafe source adverse not reached')\n  rows.append(dict(epsilon=eps,physical_time=t,normalized_operator_delta=delta,reference_band_lower=lo,reference_source_energy=-math.log(.98)/a,source_intertwining_phase_error=actual,conditional_buffered_upper=bound,global_projector_delta=float(np.linalg.norm(P1-P0,2)),unsafe_threshold_source_phase_error=bad))\nprint(json.dumps(dict(spacing=a,physical_Pe_window=[0,4],global_charged_normalized_K_max=1.01,source_reference_eigenvalue=.98,rows=rows)))\n",
+  "program_sha256": "c575dd2f6e0d2bb9d226a2e10794ed020c3315f6299fda63e5e153a39ce506b4",
+  "natural_exit": 0,
+  "stderr": "",
+  "observed": {
+    "spacing": 0.01,
+    "physical_Pe_window": [
+      0,
+      4
+    ],
+    "global_charged_normalized_K_max": 1.01,
+    "source_reference_eigenvalue": 0.98,
+    "rows": [
+      {
+        "epsilon": 1e-08,
+        "physical_time": 0.0,
+        "normalized_operator_delta": 9.153770992733308e-09,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 2.662674586722229e-07,
+        "conditional_buffered_upper": 6.653489061538859e-07,
+        "global_projector_delta": 1.0000000000000002,
+        "unsafe_threshold_source_phase_error": 0.9801986733067221
+      },
+      {
+        "epsilon": 1e-08,
+        "physical_time": 0.013,
+        "normalized_operator_delta": 9.153770992733308e-09,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 2.6629660149672675e-07,
+        "conditional_buffered_upper": 6.777344526697304e-07,
+        "global_projector_delta": 1.0000000000000002,
+        "unsafe_threshold_source_phase_error": 0.9801986733067222
+      },
+      {
+        "epsilon": 1e-08,
+        "physical_time": 1.0,
+        "normalized_operator_delta": 9.153770992733308e-09,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 4.034044749707345e-07,
+        "conditional_buffered_upper": 1.618083253526544e-06,
+        "global_projector_delta": 1.0000000000000002,
+        "unsafe_threshold_source_phase_error": 0.9801986733068159
+      },
+      {
+        "epsilon": 1e-08,
+        "physical_time": 1000000.0,
+        "normalized_operator_delta": 9.153770992733308e-09,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 0.3018639935846745,
+        "conditional_buffered_upper": 0.9527350127215642,
+        "global_projector_delta": 1.0000000000000002,
+        "unsafe_threshold_source_phase_error": 0.98019867330679
+      },
+      {
+        "epsilon": 1e-10,
+        "physical_time": 0.0,
+        "normalized_operator_delta": 9.153771422201972e-11,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 2.6626758552074093e-09,
+        "conditional_buffered_upper": 6.6534893737014705e-09,
+        "global_projector_delta": 1.0,
+        "unsafe_threshold_source_phase_error": 0.9801986733067553
+      },
+      {
+        "epsilon": 1e-10,
+        "physical_time": 0.013,
+        "normalized_operator_delta": 9.153771422201972e-11,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 2.662967283477727e-09,
+        "conditional_buffered_upper": 6.777344844670859e-09,
+        "global_projector_delta": 1.0,
+        "unsafe_threshold_source_phase_error": 0.9801986733067554
+      },
+      {
+        "epsilon": 1e-10,
+        "physical_time": 1.0,
+        "normalized_operator_delta": 9.153771422201972e-11,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 4.034044765859916e-09,
+        "conditional_buffered_upper": 1.6180833294423664e-08,
+        "global_projector_delta": 1.0,
+        "unsafe_threshold_source_phase_error": 0.9801986733067553
+      },
+      {
+        "epsilon": 1e-10,
+        "physical_time": 1000000.0,
+        "normalized_operator_delta": 9.153771422201972e-11,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 0.0030304564344083946,
+        "conditional_buffered_upper": 0.009527350574211566,
+        "global_projector_delta": 1.0,
+        "unsafe_threshold_source_phase_error": 0.9801986733067553
+      },
+      {
+        "epsilon": 1e-12,
+        "physical_time": 0.0,
+        "normalized_operator_delta": 9.153761855092369e-13,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 2.6626758179596067e-11,
+        "conditional_buffered_upper": 6.653482419774052e-11,
+        "global_projector_delta": 0.9999999999999999,
+        "unsafe_threshold_source_phase_error": 0.9801986733067553
+      },
+      {
+        "epsilon": 1e-12,
+        "physical_time": 0.013,
+        "normalized_operator_delta": 9.153761855092369e-13,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 2.662967225918344e-11,
+        "conditional_buffered_upper": 6.77733776129528e-11,
+        "global_projector_delta": 0.9999999999999999,
+        "unsafe_threshold_source_phase_error": 0.9801986733067554
+      },
+      {
+        "epsilon": 1e-12,
+        "physical_time": 1.0,
+        "normalized_operator_delta": 9.153761855092369e-13,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 4.0338894479389436e-11,
+        "conditional_buffered_upper": 1.6180816382945493e-10,
+        "global_projector_delta": 0.9999999999999999,
+        "unsafe_threshold_source_phase_error": 0.9801986733067553
+      },
+      {
+        "epsilon": 1e-12,
+        "physical_time": 1000000.0,
+        "normalized_operator_delta": 9.153761855092369e-13,
+        "reference_band_lower": 0.9607894391523232,
+        "reference_source_energy": 2.0202707317519466,
+        "source_intertwining_phase_error": 3.0302596261369234e-05,
+        "conditional_buffered_upper": 9.52734061665386e-05,
+        "global_projector_delta": 0.9999999999999999,
+        "unsafe_threshold_source_phase_error": 0.9801986733067553
+      }
+    ]
+  },
+  "proof": "Let A0,A1 be bounded positive normalized charged transfers with norm difference delta; no charged contraction assumed globally. Existing physical Pe band [L,U]=[exp(-a Emax),1]. Reference proof witness PI0 has strict interior spectral support and source tail paid separately. X=PE1 PI0, B=A1 on PE1, B0=A0 on PI0. BX-XB0=PE1(A1-A0)PI0. Resolvent intertwining integral gives norm(logB X-XlogB0)<=delta/L. sqrtB X-XsqrtB0 solves sqrtB Y+Y sqrtB0=BX-XB0, norm<=delta/(sqrtL+sqrtL0). Duhamel for unitary complex powers then norm(f_t(B)X-X f_t(B0))<=sqrtU |t/a|delta/L+delta/(sqrtL+sqrtL0), f_t(x)=sqrtx exp(i t/a logx). Add sqrtU0 times source-buffer projector leakage delta sqrt(dlow^-2+dup^-2) plus actual reference outlier tail. Same existing Pe/source/preparation; PI0 is proof only. Hilbert norm/bounded-effect estimate, not weighted Theta/L graph-domain control. Actual microscopic operatordelta, normalizer and source interior/tail remain uninstantiated."
+}

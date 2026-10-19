@@ -1,0 +1,99 @@
+{
+  "parameters": {
+    "inverse_alpha": "137.035999084",
+    "beta_power": 150,
+    "kappa_power": 250,
+    "mass": 1.0,
+    "spacing": 0.01,
+    "orders": [
+      3,
+      3,
+      4
+    ],
+    "toron_cutoffs": [
+      1,
+      3,
+      5
+    ],
+    "observation_times": [
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "toron_packet_width": 0.4,
+    "dense_limit": 2000,
+    "flux_fraction": "0"
+  },
+  "charge": "302822120871752642766244268870792234538330042246939666741325127946637218186",
+  "records": [
+    {
+      "order": 6,
+      "actual_triangle_temporal_current_correction": -0.0073395676258573355,
+      "actual_two_photon_contact_current_correction": -0.00047062677713529256,
+      "actual_three_photon_tadpole_current_correction": -0.007175195691399514,
+      "actual_total_temporal_current_correction": -0.014985390094392141,
+      "independent_selfenergy_finite_difference_temporal_correction": -0.015475683601555566,
+      "three_point_Ward_defect": 0.0004902935071634251,
+      "same_dressed_inverse_pole_residue_temporal": 0.9950647769897758,
+      "same_dressed_residue_normalized_current": 1.0,
+      "bare_residue_wrong_normalized_current": 0.9851637170283806
+    },
+    {
+      "order": 8,
+      "actual_triangle_temporal_current_correction": -0.00857085401251351,
+      "actual_two_photon_contact_current_correction": -0.0004706028538931858,
+      "actual_three_photon_tadpole_current_correction": -0.007175185918556575,
+      "actual_total_temporal_current_correction": -0.01621664278496327,
+      "independent_selfenergy_finite_difference_temporal_correction": -0.016745326682990856,
+      "three_point_Ward_defect": 0.0005286838980275849,
+      "same_dressed_inverse_pole_residue_temporal": 0.9938335242992047,
+      "same_dressed_residue_normalized_current": 1.0,
+      "bare_residue_wrong_normalized_current": 0.9839447155067774
+    },
+    {
+      "order": 10,
+      "actual_triangle_temporal_current_correction": -0.009555870874398789,
+      "actual_two_photon_contact_current_correction": -0.0004706072265855523,
+      "actual_three_photon_tadpole_current_correction": -0.007175186056718052,
+      "actual_total_temporal_current_correction": -0.01720166415770239,
+      "independent_selfenergy_finite_difference_temporal_correction": -0.01780801676908801,
+      "three_point_Ward_defect": 0.0006063526113856202,
+      "same_dressed_inverse_pole_residue_temporal": 0.9928485029264655,
+      "same_dressed_residue_normalized_current": 1.0,
+      "bare_residue_wrong_normalized_current": 0.9829694952604577
+    },
+    {
+      "order": 12,
+      "actual_triangle_temporal_current_correction": -0.010370472682486765,
+      "actual_two_photon_contact_current_correction": -0.00047060795141881743,
+      "actual_three_photon_tadpole_current_correction": -0.007175186053874926,
+      "actual_total_temporal_current_correction": -0.01801626668778051,
+      "independent_selfenergy_finite_difference_temporal_correction": -0.018759421929915032,
+      "three_point_Ward_defect": 0.000743155242134523,
+      "same_dressed_inverse_pole_residue_temporal": 0.9920339003963874,
+      "same_dressed_residue_normalized_current": 1.0,
+      "bare_residue_wrong_normalized_current": 0.9821629981609822
+    }
+  ],
+  "diagram": "Wilson \u03930 at zero external photon momentum: rainbow triangle \u03a3_mu V_mu G Dprime0 G V_mu; two-photon contact \u2212(Dsecond0 G V0+V0 G Dsecond0)/2; three-photon tadpole \u2212Dprime0/2, all divided by FULLcomplex qhat\u00b2 on q0=u+iomega(qsp)/2. These are independent3point diagrams, not forwarding a derivative result.",
+  "scope": "Executed one-loop Ward/current control at positive Mtarget reference for the explicit mass-counterterm reorganization. NOT an all-orders dressed vertex, actual negative-bare phase certificate, source Gram or full physical Thomson measurement.",
+  "execution": {
+    "source_hashes_at_import": {
+      "physical_alpha_compton.py": "8857fd81ad6579a8fed00370499ae5f588ce5bd3132b995ccf7b4baa70f77702",
+      "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+      "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459"
+    },
+    "probe_source_sha256": "1e8f1d1ce19600a319c023c97b891ced20a00dedc5447d2c44ce4366250bb5ce",
+    "probe_source_snapshot": "import os\nos.environ['OPENBLAS_NUM_THREADS']='1'\nimport json,time,hashlib,sys\nfrom pathlib import Path\nsys.path.insert(0,'/home/administrator/substrate-222/proposals/P256-qed-backward')\nimport physical_alpha_compton as m\nimport numpy as np\nfrom numpy.polynomial.legendre import leggauss\nstart=time.time();p=m.Parameters();contract=m.charge_contract(p)\ngamma=m.gamma_frame();identity=np.eye(4);projector=(identity+gamma[0])/2\nm0=np.expm1(p.spacing*p.mass);E=p.spacing*p.mass;epsilon=1e-6\nrecords=[]\ndef projected(matrix):return np.einsum('ij,nji->n',projector,matrix)/2\nfor order in (6,8,10,12):\n node,weights=leggauss(order);outer=np.pi;boxes=[]\n while outer>abs(m0)/16:\n  inner=outer/2\n  for axis in range(4):\n   low=np.zeros(4);high=np.full(4,outer);high[:axis]=inner;low[axis]=inner;boxes.append((low,high))\n  outer=inner\n boxes.append((np.zeros(4),np.full(4,outer)))\n self_values=np.zeros(2,complex);triangle=0j;contact=0j;tadpole=0j\n for low,high in boxes:\n  points=[low[j]+(node+1)*(high[j]-low[j])/2 for j in range(4)]\n  wp=[weights*(high[j]-low[j])/2/np.pi for j in range(4)]\n  k=np.array(np.meshgrid(*points,indexing='ij'),complex).reshape(4,-1).T\n  weight=np.prod(np.array(np.meshgrid(*wp,indexing='ij')),axis=0).reshape(-1)\n  omega=2*np.arcsinh(np.sqrt(np.sum((2*np.sin(k[:,1:].real/2))**2,axis=1))/2)\n  k[:,0]+=1j*omega/2\n  photon_den=np.sum((2*np.sin(k/2))**2,axis=1)\n  def data(p0):\n   external=np.array([p0,0.,0.,0.]);internal=external-k;sine=np.sin(internal)\n   b=m0+np.sum(1-np.cos(internal),axis=1);den=b*b+np.sum(sine*sine,axis=1)\n   G=(b[:,None,None]*identity-1j*np.einsum('nj,jab->nab',sine,gamma))/den[:,None,None]\n   half=external-k/2;V=[np.sin(half[:,j])[:,None,None]*identity+1j*np.cos(half[:,j])[:,None,None]*gamma[j] for j in range(4)]\n   return external,internal,G,V\n  for index,shift in enumerate((-epsilon,epsilon)):\n   external,internal,G,V=data(1j*E+shift)\n   second=sum((np.cos(external[j])*identity-1j*np.sin(external[j])*gamma[j] for j in range(4)),np.zeros((4,4),complex))/2\n   numerator=np.repeat(second[None],len(k),axis=0)\n   for j in range(4):numerator-=V[j]@G@V[j]\n   self_values[index]+=weight@(projected(numerator)/photon_den)\n  external,internal,G,V=data(1j*E)\n  internal_current=np.sin(internal[:,0])[:,None,None]*identity+1j*np.cos(internal[:,0])[:,None,None]*gamma[0]\n  propagated=G@internal_current@G\n  tri=np.zeros_like(G)\n  for j in range(4):tri+=V[j]@propagated@V[j]\n  second=np.cos((external-k/2)[:,0])[:,None,None]*identity-1j*np.sin((external-k/2)[:,0])[:,None,None]*gamma[0]\n  con=-(second@G@V[0]+V[0]@G@second)/2\n  external_current=np.sin(external[0])*identity+1j*np.cos(external[0])*gamma[0]\n  tad=-external_current/2\n  triangle+=weight@(projected(tri)/photon_den)\n  contact+=weight@(projected(con)/photon_den)\n  tadpole+=np.trace(projector@tad)/2*(weight@(1/photon_den))\n e2=contract['bare_e']**2\n finite=e2*(self_values[1]-self_values[0])/(2*epsilon)\n total=e2*(triangle+contact+tadpole)\n residue_inverse=float(np.exp(E)+total.imag)\n records.append(dict(order=order,actual_triangle_temporal_current_correction=e2*triangle.imag,\n   actual_two_photon_contact_current_correction=e2*contact.imag,\n   actual_three_photon_tadpole_current_correction=e2*tadpole.imag,\n   actual_total_temporal_current_correction=total.imag,\n   independent_selfenergy_finite_difference_temporal_correction=finite.imag,\n   three_point_Ward_defect=abs(total.imag-finite.imag),\n   same_dressed_inverse_pole_residue_temporal=residue_inverse,\n   same_dressed_residue_normalized_current=1/residue_inverse*(np.exp(E)+total.imag),\n   bare_residue_wrong_normalized_current=(np.exp(E)+total.imag)/np.exp(E)))\nr=dict(parameters=m.asdict(p),charge=contract['Q'],records=records,\n diagram='Wilson \u03930 at zero external photon momentum: rainbow triangle \u03a3_mu V_mu G Dprime0 G V_mu; two-photon contact \u2212(Dsecond0 G V0+V0 G Dsecond0)/2; three-photon tadpole \u2212Dprime0/2, all divided by FULLcomplex qhat\u00b2 on q0=u+iomega(qsp)/2. These are independent3point diagrams, not forwarding a derivative result.',\n scope='Executed one-loop Ward/current control at positive Mtarget reference for the explicit mass-counterterm reorganization. NOT an all-orders dressed vertex, actual negative-bare phase certificate, source Gram or full physical Thomson measurement.',\n execution=dict(source_hashes_at_import=m.SOURCE_HASHES,probe_source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),probe_source_snapshot=Path(__file__).read_text(),runtime_seconds=time.time()-start,startup_bytes_unchanged={k:(m.ROOT/k).read_bytes()==v for k,v in m.SOURCE_BYTES.items()},natural_exit=0))\ninputs=json.dumps(dict(parameters=m.asdict(p),branch='actual_independent_one_loop_Wilson_Ward_diagrams',epsilon=epsilon),sort_keys=True,separators=(',',':'));r['execution'].update(input_json=inputs,input_sha256=hashlib.sha256(inputs.encode()).hexdigest())\n(m.ROOT/'physical_alpha_compton_Ward_diagram_capsule.json').write_text(json.dumps(r,indent=2)+'\\n')\nprint(json.dumps(dict(records=records,execution={k:v for k,v in r['execution'].items() if 'snapshot' not in k})))\n",
+    "runtime_seconds": 33.1513786315918,
+    "startup_bytes_unchanged": {
+      "physical_alpha_compton.py": true,
+      "sea_selection.py": true,
+      "rotation_band.py": true
+    },
+    "natural_exit": 0,
+    "input_json": "{\"branch\":\"actual_independent_one_loop_Wilson_Ward_diagrams\",\"epsilon\":1e-06,\"parameters\":{\"beta_power\":150,\"dense_limit\":2000,\"flux_fraction\":\"0\",\"inverse_alpha\":\"137.035999084\",\"kappa_power\":250,\"mass\":1.0,\"observation_times\":[0.25,0.5,1.0,2.0],\"orders\":[3,3,4],\"spacing\":0.01,\"toron_cutoffs\":[1,3,5],\"toron_packet_width\":0.4}}",
+    "input_sha256": "1bc5c20063b9229dcb902a0dab39d1d8bac18a91141383f92da78aaba3a58adb"
+  }
+}

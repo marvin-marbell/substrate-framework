@@ -1,0 +1,1165 @@
+{
+  "governing_plan": {
+    "id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "decision_revision": "7a607bed4ba1af85faf53f82a188a38975d53fe510750013f8722d14bcc3e2f2",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "evidence_id": "selected-ground-density-current-moment-price-extension-20261011",
+    "shared_writes": "None; parent owns authoritative packets/plan."
+  },
+  "file_sha256": {
+    "local_so5_ground_current_moment_bounds_20261011.py": "4a2bf6c3e7427534fa39a1b680c0c11f9f6c7090909a486bc89a5039c9b06d36",
+    "local_so5_ground_current_moment_bounds_20261011_receipt.json": "7f94201c1422f7aea65dc6102d19a2f86ded07b0aed866b59a06291d768813f5",
+    "local_so5_ground_current_moment_bounds_attempt1_20261011_exit.json": "8c5e073acce105aa0c87c6aeb3b49e46cadd40cda9b5dc04a78d74278a3c40fc",
+    "local_so5_ground_current_moment_bounds_attempt1_20261011_executed.zip": "942ff47d62110b809e75fa99c36a91cc279b28f5451f09e56cdf7940f4f6e5d6",
+    "local_so5_ground_electric_memory_consumer_20261011_receipt.json": "e3cb54a05f67ec29158f8c52c077375c14816a742514e9a210319a2383de7843",
+    "local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json": "102966f32c49f40d79d55343925a630e30a9cf7e4a8074cf8628142ba9c5b6e8",
+    "selected_memory_review_epoch2_proof_20261011.json": "a1ad89da2d537615faa71b6f03595eb13652ebfaf25e31ea11ca962af2112cd8"
+  },
+  "producer_sha256": "4a2bf6c3e7427534fa39a1b680c0c11f9f6c7090909a486bc89a5039c9b06d36",
+  "frozen_executed_archive": "local_so5_ground_current_moment_bounds_attempt1_20261011_executed.zip",
+  "scope": "VALID under the same explicitly assumed standard binary64 model and established unique selected local ground. NEW exact outward intervals of connected density moments m0,m1,m2 for the frozen one-edge active2 x auxiliary126 harmonic sector; no global current norm, fullPhi, bulk, phase or pole admission. Original curvature verdict and diagnostic epochs remain unchanged.",
+  "analytic_review": {
+    "operator_and_charge_steps": "Within-l transitions change p orq by1, and between-l transitions change p orq by1; rho=p-q therefore all nonzero offdiagonal native elements have absolute charge step1. Diagonal electric/free terms commute with rho. Each role has at most4 d-transitions, each magnitude<=|d|(n+1)/2, and4 c0-transitions, each radial-CG magnitude<|c0|(n+3). For c0, sqrt2*f<=sqrt(n(n+3))<n+3 and CG factors<=1. Both row and column sums for hopping K and skew commutator C=[H,rho] are<=B=sum(2|d|(n+1)+4|c0|(n+3))<4096. ||iC||=||C||<=B ONLY in this specified finite sector. No unbounded-global-current statement follows.",
+    "moment_meanings": "b0=Q0rhoOmega and positive selected excitation measure dnu at energiesomega=H-E0>0. m0=||b0||\u00b2 (charge\u00b2), m1=<b0,(H-E0)b0> (energy*charge\u00b2), m2=||(H-E0)b0||\u00b2=||[H,rho]Omega||\u00b2 (energy\u00b2*charge\u00b2). For an actual ground eigenvector, m1=<Omega,[rho,[H,rho]]Omega>/2=-<Omega,K Omega>/2 because every offdiagonal charge step has square1. For arbitrary v this last expression is just a double-commutator diagnostic, not its spectral first moment. Stationarity alone permits excited-state negative first moments.",
+    "source_distance": "Prior sigma/gap gives sin-angle p. Ground sign can be chosen so ||u-Omega||<=sqrt2*p<2p; normalizing exact binary v to u adds<=e with e=norm_defect for e<.001. Hence ||v-Omega||<=2p+e. No earlier infidelity is mistaken for an unsquared distance, and no mean/density-zero proxy is substituted for spectral ground.",
+    "m0_price": "Earlier independently reviewed insertion bound ||b_binary-b0||<=db and ||b_binary||<=1 gives squared-weight error<=2db+db\u00b2. Add binary64 dot reduction gamma*|m0_float|/(1-gamma) and underflow. This supplemental price, not the original floating receipt alone, certifies m0.",
+    "m1_price": "Exact expectation change<=B*(||v||+1)*source_distance/2<=B*(2+e)*source_distance/2. Computed hopping vector Hv-Dv is not treated as exact diagonal cancellation: two complete native/action caps plus32u*2^22 bound its error per||v||. Diagonal coefficient/multiplication and subtraction are included, even when large electric terms cancel. Dot error<=gamma*(B+off_action_error)*(1+e)\u00b2/2 and action error<=off_action_error*(1+e)\u00b2/2. The standard gamma(2D+8) covers reductions/final operations; explicit underflow retained.",
+    "m2_price": "Main current vector was computed as H(rho*v)-rho*(Hv), not from an exact skew matrix. Direct decomposition prices rho*v formation, two full actions, integer-rho multiplication, and subtraction. A sharper bound (256*action_error+384u*2^22)*(1+e)+underflow is strictly below the supplied512*action_error+1024u*2^22+underflow. Thus j_round_error covers un-cancelled floating electric diagonal terms. Add B*source_distance. Current dot m2 with outward norm/underflow bound gives ||j_binary||<151, so squared norm change<=302*j_error+j_error\u00b2; add gamma*|m2_float|/(1-gamma)+underflow. This bounds exact selected-ground current weight, not a pointwise current or another sector.",
+    "variance_and_inverse": "With positive certified moment intervals, m2/m0-(m1/m0)\u00b2>=m2_lo/m0_hi-(m1_hi/m0_lo)\u00b2>1145.2616896111974. Units are energy\u00b2 for normalized connected-density measure. Positive variance excludes support at exactly one excitation energy (single-energy saturation), NOT existence of an atom, partial sharp pole, photon or continuum structure. Exact finite matrix contrary control has positive variance3/4 and TWO atoms3\u00b1sqrt3. Cauchy-Schwarz gives alpha=m_minus1>=m0\u00b2/m1, outward lower0.00349430686354199, consistent with prior resolvent interval. Neither variance nor moment inequality upgrades local response to thermodynamic spectral data.",
+    "rounding_and_provenance": "Uses same native coefficient/action/source caps as original independently reviewed curvature artifact and the same correct-rounding/no-fastmath binary64 assumption, not a separately certified compiler theorem. Frozen parent moment CLI natural0/.893091140s and hashes are recorded, but it is not rerun. Independent controls are exact Fraction arithmetic, explicit binary64 matrix products/subtractions and moment identities; no source-text/mock echo controls. Scalar reproduction alone is labelled consistency, while operator inequalities are independently analytically reviewed.",
+    "smallest_correction": "No mathematical correction needed at stated local moment scope. Retain explicit selected-sector norm scope, units, same binary64 model, and not_absence_of_spectral_atoms flag. Original moment float diagnostics remain historically unpriced; only this NEW separately reviewed supplemental artifact carries intervals."
+  },
+  "language_tooling": {
+    "initialize": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "capabilities": {
+          "textDocumentSync": 2,
+          "definitionProvider": {
+            "workDoneProgress": true
+          },
+          "declarationProvider": {
+            "workDoneProgress": true
+          },
+          "typeDefinitionProvider": {
+            "workDoneProgress": true
+          },
+          "referencesProvider": {
+            "workDoneProgress": true
+          },
+          "documentSymbolProvider": {
+            "workDoneProgress": true
+          },
+          "workspaceSymbolProvider": {
+            "workDoneProgress": true
+          },
+          "hoverProvider": {
+            "workDoneProgress": true
+          },
+          "documentHighlightProvider": {
+            "workDoneProgress": true
+          },
+          "renameProvider": {
+            "prepareProvider": true,
+            "workDoneProgress": true
+          },
+          "completionProvider": {
+            "triggerCharacters": [
+              ".",
+              "[",
+              "\"",
+              "'"
+            ],
+            "resolveProvider": true,
+            "workDoneProgress": true,
+            "completionItem": {
+              "labelDetailsSupport": true
+            }
+          },
+          "signatureHelpProvider": {
+            "triggerCharacters": [
+              "(",
+              ",",
+              ")"
+            ],
+            "workDoneProgress": true
+          },
+          "codeActionProvider": {
+            "codeActionKinds": [
+              "quickfix",
+              "source.organizeImports"
+            ],
+            "workDoneProgress": true
+          },
+          "executeCommandProvider": {
+            "commands": [],
+            "workDoneProgress": true
+          },
+          "callHierarchyProvider": true,
+          "workspace": {
+            "workspaceFolders": {
+              "supported": true,
+              "changeNotifications": true
+            }
+          }
+        }
+      }
+    },
+    "symbols": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": [
+        {
+          "name": "ROOT",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 8,
+                "character": 0
+              },
+              "end": {
+                "line": 8,
+                "character": 4
+              }
+            }
+          }
+        },
+        {
+          "name": "NAMES",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 9,
+                "character": 0
+              },
+              "end": {
+                "line": 9,
+                "character": 5
+              }
+            }
+          }
+        },
+        {
+          "name": "PINS",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 10,
+                "character": 0
+              },
+              "end": {
+                "line": 10,
+                "character": 4
+              }
+            }
+          }
+        },
+        {
+          "name": "OWN",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 11,
+                "character": 0
+              },
+              "end": {
+                "line": 11,
+                "character": 3
+              }
+            }
+          }
+        },
+        {
+          "name": "START",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 11,
+                "character": 60
+              },
+              "end": {
+                "line": 11,
+                "character": 65
+              }
+            }
+          }
+        },
+        {
+          "name": "r",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 12,
+                "character": 0
+              },
+              "end": {
+                "line": 12,
+                "character": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "frame",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 12,
+                "character": 43
+              },
+              "end": {
+                "line": 12,
+                "character": 48
+              }
+            }
+          }
+        },
+        {
+          "name": "B",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 18,
+                "character": 0
+              },
+              "end": {
+                "line": 18,
+                "character": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "D",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 20,
+                "character": 0
+              },
+              "end": {
+                "line": 20,
+                "character": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "unit",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 20,
+                "character": 31
+              },
+              "end": {
+                "line": 20,
+                "character": 35
+              }
+            }
+          }
+        },
+        {
+          "name": "gamma",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 20,
+                "character": 47
+              },
+              "end": {
+                "line": 20,
+                "character": 52
+              }
+            }
+          }
+        },
+        {
+          "name": "underflow",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 21,
+                "character": 0
+              },
+              "end": {
+                "line": 21,
+                "character": 9
+              }
+            }
+          }
+        },
+        {
+          "name": "sigma",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 22,
+                "character": 0
+              },
+              "end": {
+                "line": 22,
+                "character": 5
+              }
+            }
+          }
+        },
+        {
+          "name": "gap",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 22,
+                "character": 42
+              },
+              "end": {
+                "line": 22,
+                "character": 45
+              }
+            }
+          }
+        },
+        {
+          "name": "guards",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 23,
+                "character": 0
+              },
+              "end": {
+                "line": 23,
+                "character": 6
+              }
+            }
+          }
+        },
+        {
+          "name": "e",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 24,
+                "character": 0
+              },
+              "end": {
+                "line": 24,
+                "character": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "source_distance",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 24,
+                "character": 24
+              },
+              "end": {
+                "line": 24,
+                "character": 39
+              }
+            }
+          }
+        },
+        {
+          "name": "formation",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 25,
+                "character": 0
+              },
+              "end": {
+                "line": 25,
+                "character": 9
+              }
+            }
+          }
+        },
+        {
+          "name": "accumulation",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 26,
+                "character": 0
+              },
+              "end": {
+                "line": 26,
+                "character": 12
+              }
+            }
+          }
+        },
+        {
+          "name": "subtraction",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 27,
+                "character": 0
+              },
+              "end": {
+                "line": 27,
+                "character": 11
+              }
+            }
+          }
+        },
+        {
+          "name": "action_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 28,
+                "character": 0
+              },
+              "end": {
+                "line": 28,
+                "character": 12
+              }
+            }
+          }
+        },
+        {
+          "name": "m0",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 31,
+                "character": 0
+              },
+              "end": {
+                "line": 31,
+                "character": 2
+              }
+            }
+          }
+        },
+        {
+          "name": "m1",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 31,
+                "character": 38
+              },
+              "end": {
+                "line": 31,
+                "character": 40
+              }
+            }
+          }
+        },
+        {
+          "name": "m2",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 31,
+                "character": 86
+              },
+              "end": {
+                "line": 31,
+                "character": 88
+              }
+            }
+          }
+        },
+        {
+          "name": "db",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 32,
+                "character": 0
+              },
+              "end": {
+                "line": 32,
+                "character": 2
+              }
+            }
+          }
+        },
+        {
+          "name": "m0_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 33,
+                "character": 0
+              },
+              "end": {
+                "line": 33,
+                "character": 8
+              }
+            }
+          }
+        },
+        {
+          "name": "off_action_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 35,
+                "character": 0
+              },
+              "end": {
+                "line": 35,
+                "character": 16
+              }
+            }
+          }
+        },
+        {
+          "name": "m1_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 36,
+                "character": 0
+              },
+              "end": {
+                "line": 36,
+                "character": 8
+              }
+            }
+          }
+        },
+        {
+          "name": "j_round_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 38,
+                "character": 0
+              },
+              "end": {
+                "line": 38,
+                "character": 13
+              }
+            }
+          }
+        },
+        {
+          "name": "j_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 39,
+                "character": 0
+              },
+              "end": {
+                "line": 39,
+                "character": 7
+              }
+            }
+          }
+        },
+        {
+          "name": "m2_error",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 41,
+                "character": 0
+              },
+              "end": {
+                "line": 41,
+                "character": 8
+              }
+            }
+          }
+        },
+        {
+          "name": "intervals",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 0
+              },
+              "end": {
+                "line": 42,
+                "character": 9
+              }
+            }
+          }
+        },
+        {
+          "name": "variance_lower",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 45,
+                "character": 0
+              },
+              "end": {
+                "line": 45,
+                "character": 14
+              }
+            }
+          }
+        },
+        {
+          "name": "alpha_moment_lower",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 47,
+                "character": 0
+              },
+              "end": {
+                "line": 47,
+                "character": 18
+              }
+            }
+          }
+        },
+        {
+          "name": "alpha_lo",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 48,
+                "character": 0
+              },
+              "end": {
+                "line": 48,
+                "character": 8
+              }
+            }
+          }
+        },
+        {
+          "name": "alpha_hi",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 48,
+                "character": 9
+              },
+              "end": {
+                "line": 48,
+                "character": 17
+              }
+            }
+          }
+        },
+        {
+          "name": "controls",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 51,
+                "character": 0
+              },
+              "end": {
+                "line": 51,
+                "character": 8
+              }
+            }
+          }
+        },
+        {
+          "name": "p",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 52,
+                "character": 4
+              },
+              "end": {
+                "line": 52,
+                "character": 5
+              }
+            }
+          }
+        },
+        {
+          "name": "m",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 53,
+                "character": 4
+              },
+              "end": {
+                "line": 53,
+                "character": 5
+              }
+            }
+          }
+        },
+        {
+          "name": "c",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 53,
+                "character": 6
+              },
+              "end": {
+                "line": 53,
+                "character": 7
+              }
+            }
+          }
+        },
+        {
+          "name": "d",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 53,
+                "character": 8
+              },
+              "end": {
+                "line": 53,
+                "character": 9
+              }
+            }
+          }
+        },
+        {
+          "name": "h",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 4
+              },
+              "end": {
+                "line": 54,
+                "character": 5
+              }
+            }
+          }
+        },
+        {
+          "name": "rho",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 6
+              },
+              "end": {
+                "line": 54,
+                "character": 9
+              }
+            }
+          }
+        },
+        {
+          "name": "labels",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 10
+              },
+              "end": {
+                "line": 54,
+                "character": 16
+              }
+            }
+          }
+        },
+        {
+          "name": "dense",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 48
+              },
+              "end": {
+                "line": 54,
+                "character": 53
+              }
+            }
+          }
+        },
+        {
+          "name": "R",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 54,
+                "character": 66
+              },
+              "end": {
+                "line": 54,
+                "character": 67
+              }
+            }
+          }
+        },
+        {
+          "name": "hop",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 55,
+                "character": 4
+              },
+              "end": {
+                "line": 55,
+                "character": 7
+              }
+            }
+          }
+        },
+        {
+          "name": "current",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 55,
+                "character": 40
+              },
+              "end": {
+                "line": 55,
+                "character": 47
+              }
+            }
+          }
+        },
+        {
+          "name": "halfcomm",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 56,
+                "character": 4
+              },
+              "end": {
+                "line": 56,
+                "character": 12
+              }
+            }
+          }
+        },
+        {
+          "name": "shift_defect",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 57,
+                "character": 4
+              },
+              "end": {
+                "line": 57,
+                "character": 16
+              }
+            }
+          }
+        },
+        {
+          "name": "H",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 59,
+                "character": 4
+              },
+              "end": {
+                "line": 59,
+                "character": 5
+              }
+            }
+          }
+        },
+        {
+          "name": "energies",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 59,
+                "character": 19
+              },
+              "end": {
+                "line": 59,
+                "character": 27
+              }
+            }
+          }
+        },
+        {
+          "name": "vectors",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 59,
+                "character": 28
+              },
+              "end": {
+                "line": 59,
+                "character": 35
+              }
+            }
+          }
+        },
+        {
+          "name": "g",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 60,
+                "character": 4
+              },
+              "end": {
+                "line": 60,
+                "character": 5
+              }
+            }
+          }
+        },
+        {
+          "name": "highest",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 60,
+                "character": 19
+              },
+              "end": {
+                "line": 60,
+                "character": 26
+              }
+            }
+          }
+        },
+        {
+          "name": "ground_m1",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 61,
+                "character": 4
+              },
+              "end": {
+                "line": 61,
+                "character": 13
+              }
+            }
+          }
+        },
+        {
+          "name": "excited_m1",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 61,
+                "character": 34
+              },
+              "end": {
+                "line": 61,
+                "character": 44
+              }
+            }
+          }
+        },
+        {
+          "name": "omitted",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 65,
+                "character": 4
+              },
+              "end": {
+                "line": 65,
+                "character": 11
+              }
+            }
+          }
+        },
+        {
+          "name": "wrong_comm",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 66,
+                "character": 4
+              },
+              "end": {
+                "line": 66,
+                "character": 14
+              }
+            }
+          }
+        },
+        {
+          "name": "missing_contact_defect",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 67,
+                "character": 4
+              },
+              "end": {
+                "line": 67,
+                "character": 26
+              }
+            }
+          }
+        },
+        {
+          "name": "result",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/local_so5_ground_current_moment_bounds_20261011.py",
+            "range": {
+              "start": {
+                "line": 70,
+                "character": 0
+              },
+              "end": {
+                "line": 70,
+                "character": 6
+              }
+            }
+          }
+        }
+      ]
+    },
+    "diagnostics": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "kind": "full",
+        "resultId": "3",
+        "items": []
+      }
+    },
+    "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+    "AST": "Positive Python assignment B=sum(...) matched native row bound before control creation."
+  }
+}

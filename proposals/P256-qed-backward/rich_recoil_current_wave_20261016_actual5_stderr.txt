@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_recoil_current_wave_20261016_run.py", line 155, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_recoil_current_wave_20261016_run.py", line 88, in main
+    wave = law.prepared(number, pol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_recoil_current_wave_20261016_model.py", line 350, in prepared
+    mpo = MPO.from_wavepacket(self.sites, np.r_[0., coefficient], 'Cd' if number == 55 else 'C',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/networks/mpo.py", line 674, in from_wavepacket
+    return cls.from_grids(sites, grids, 'finite', IdL, IdR, mps_unit_cell_width=unit_cell_width)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/networks/mpo.py", line 576, in from_grids
+    legs = _calc_grid_legs_finite(chinfo, grids, Ws_qtotal, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/networks/mpo.py", line 4083, in _calc_grid_legs_finite
+    gr_legs = npc.detect_grid_outer_legcharge(gr, gr_legs, qtotal=Ws_qtotal[i], qconj=-1, bunch=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/linalg/np_conserved.py", line 3341, in detect_grid_outer_legcharge
+    raise ValueError("can't derive flat charge for all indices:" + str(qflat))
+ValueError: can't derive flat charge for all indices:[array([0, 0]), None]

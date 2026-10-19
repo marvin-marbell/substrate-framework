@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_run.py", line 103, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_run.py", line 78, in run
+    info=dmrg.run(psi,model,{'mixer':True,'max_N_sites_per_ring':32,'max_sweeps':3,'min_sweeps':2,'max_E_err':1e-7,'trunc_params':{'chi_max':chi,'svd_min':1e-11},'lanczos_params':{'N_max':12},'combine':True})
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/algorithms/dmrg.py", line 103, in run
+    E, _ = engine.run()
+           ^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/algorithms/dmrg.py", line 453, in run
+    return super().run()
+           ^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/algorithms/mps_common.py", line 810, in run
+    consistency_check(
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_periodic_tensor_20261015_env/lib/python3.12/site-packages/tenpy/tools/misc.py", line 1045, in consistency_check
+    raise TenpyInconsistencyError(msg)
+tenpy.tools.misc.TenpyInconsistencyError: Maximum truncation error (``max_trunc_err``) exceeded.

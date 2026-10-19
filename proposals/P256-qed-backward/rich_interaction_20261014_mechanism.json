@@ -1,0 +1,45 @@
+{
+  "purpose": "Backward candidate mechanism and scientific equations; not a continuum-QED or campaign-closure claim",
+  "candidate": "SPINFUL_SQUARE_TWO_QUANTIZED_LINK_MODES_V1",
+  "idea": "A filled negative hopping band and one extra physical-spin CAR excitation move through links whose phase is a quantum coordinate. Interband virtual electron-hole excitations and the same hopping current reshape the quantum field spectrum and nonforward response. Propagation and interaction are consumers of one exact joint Hamiltonian rather than unrelated formula fits.",
+  "geometry": {"positions": [[0,0,0],[1,0,0],[1,1,0],[0,1,0]], "oriented_edges": [[0,1],[1,2],[2,3],[3,0]], "t": [1,0.65,1,0.65]},
+  "equations": {
+    "H": "H(phi)=sum_m omega_m(a_m^dagger a_m+1/2)-sum_edge,spin t_edge[exp(i(phi_edge+g sum_m b_edge,m Q_m)) c^dagger_target,spin c_source,spin + h.c.]",
+    "Q": "Q_m=(a_m+a_m^dagger)/sqrt(2), represented in an explicitly finite oscillator basis; exp(i g b.Q) is evaluated exactly in that basis",
+    "mode_embedding": "b_edge,m=Re integral_edge epsilon_m dot dx exp(i q_m dot x); both mode polarizations are transverse to their named q_m",
+    "T": "T_edge,spin=-t_edge exp(i phi_edge) kron(c^dagger_target,spin c_source,spin, exp(i g b_edge.Q))",
+    "J": "J_edge,spin=-dH/dphi_edge=-i(T_edge,spin-T_edge,spin^dagger)",
+    "C": "C_edge,spin=d2H/dphi_edge2=-(T_edge,spin+T_edge,spin^dagger); bare mixed-edge contact is zero",
+    "Gamma": "Gamma_direction(z;0)=-d G_phi(z)^(-1)/ds at phi=s direction; executable central finite derivative includes exact reference-state relaxation and all addition/removal/photon sectors; reported O(step^2), static-source only",
+    "retarded": "R_ab(z)=sum_n <0|Oa|n><n|Ob|0>/(z-Delta_n)-<0|Ob|n><n|Oa|0>/(z+Delta_n); z=omega+i eta, eta>0. This fixes current and coordinate tensors including negative-frequency branches.",
+    "G": "Gij(z)=sum_N6 <0|ci|n><n|cj^dagger|0>/(z-(En-E0)) + sum_N4 <0|cj^dagger|n><n|ci|0>/(z+(En-E0)); all sectors include the identical dynamic photons and Peierls law",
+    "feedback": "Sigma(z)=G0(z)^(-1)-G(z)^(-1), Pi(z)=D0(z)^(-1)-D(z)^(-1); hence G=(G0^-1-Sigma)^-1 and D=(D0^-1-Pi)^-1. G0,D0 refer to g=0 ground-state family on the same finite module. These are exact implicit self-energy definitions, NOT an independently derived RPA closure or continuum self-consistency theorem. Full diagonalization of the common H supplies both tensors.",
+    "nonforward_scattering": "T_fi= <f| C(out*,in)+J(out*)[Ei+omega_in-H+i eta]^-1 J(in)+J(in)[Ei-omega_out-H+i eta]^-1 J(out*) |i>; omega_out=omega_in-(Ef-Ei). Comes from source expansion of this H; not a reused QED cross-section formula.",
+    "normalization": "Ground and each receiver eigenvector norm1; finite CAR sources canonical. Unit incident polarization amplitudes; reported |T|^2 is a finite-source response weight, not a continuum area/cross-section with missing photon flux factors. Up/down current matrix labels which physical spin species carries each vertex; it is NOT a spin-flip electron S-matrix.",
+    "pairs": "Bare 8-orbital one-body h has spin-double bands +/-1.65,+/-0.35. Reference sea fills 4 negative-energy orbitals. In N=5, Nplus-1 counts real interband particle-hole excitations relative to that reference. Full 24-dimensional Nup3,Ndown2 CAR sector retains every allowed pair channel, not a one-pair or frozen-valence truncation. These holes are NOT a derivation of relativistic positrons."
+  },
+  "units": {"hbar": 1, "link_length": 1, "absolute_electron_charge": 1, "time": "inverse strong hopping", "energy": "strong hopping", "source_phi": "dimensionless oriented number phase", "electric_charge": "-(N-4)", "J_convention": "number-phase conjugate current; physical negative-electron charge current is -J", "momentum": "inverse link length", "frequency": "energy/hbar"},
+  "state": "Lowest exact coupled H eigenstate in Nup=3,Ndown=2, total charge -1 relative to N4 sea; physical Sz=+1/2. Spin-independent hopping conserves spin; no invented magnetic moment or spin-orbit term.",
+  "receiver": "Selected exact coupled same-sector eigenvectors with positive outgoing frequency; energy transfer includes actual matter/pair/field excitation. Anchored square means no claim of exact continuum momentum-conserving recoil or free asymptotic photons.",
+  "pure_api": {
+    "module": "rich_interaction_20261014_model.py",
+    "build_sector(params,up=3,down=2)": "H,J[2,4,d,d],C[2,4,d,d],Q[2,d,d],pair[d,d],masks; boson-fast ordering; default d=24*16=384",
+    "current(model,direction4,spin=None)": "exact matrix J(direction); optional physical spin channel; complex positive-frequency source allowed",
+    "contact(model,left4,right4,spin=None)": "exact mixed derivative matrix C(left,right), no conjugation added implicitly",
+    "plane_wave_edges(q3,epsilon3)": "complex length4 exact link integrals; caller conjugates outgoing profile",
+    "static_amputated_vertex(params,omega,direction4,eta=.035,step=.0001)": "spin-up site-space 4x4 Gamma for zero source-transfer frequency",
+    "charged_G(solution,omega,eta=.035)": "full spin-up site-space 4x4 retarded G plus source spectral pole data and equal-time CAR tensor",
+    "retarded(solution,operators,z)": "full matrix causal response retaining both frequency signs",
+    "scattering(solution,kin,epsin,kout,epsout,omega,eta=.035)": "nonforward elastic and selected exact inelastic same-H responses with spin-current channel matrix"
+  },
+  "literal_join": {
+    "module": "rich_interaction_20261014_joined.py",
+    "electron_peer": "Actually imports RichElectron build_sector/current/contact/solve/spectral_data/retarded_green. Peer single-mode N5 spin-up state feeds its own cavity D, full edge tensor and nonforward receivers; its N4-reference G is separately labeled. Never splices peer G into own two-mode D.",
+    "photon_peer": "RichPhoton induced uniform Hubbard-ring electric-only action differs: no literal join made and no imported tensor promoted as our H response.",
+    "composite_peer": "RichComposite dynamical three-flavor breather law differs: no mass, form factor, state or current borrowed.",
+    "CLI": "/home/administrator/substrate-framework/.venv/bin/python rich_interaction_20261014_joined.py --input rich_interaction_20261014_input.json --output rich_interaction_20261014_reviewer.json --receipt rich_interaction_20261014_reviewer_exit.json"
+  },
+  "new_calculation": {"output": "rich_interaction_20261014_actual2.json", "receipt": "rich_interaction_20261014_actual2_exit.json", "historical_first": "actual1 predates added amputated Gamma and charged Sigma; actual2 is authoritative final-source scientific run"},
+  "open_inputs": ["Primitive oscillator frequencies/restoring energy and hopping coefficients are supplied, not derived substrate constants", "Finite oscillator truncation and anchored four-site geometry are not continuum/scattering-limit convergence evidence", "Relativistic mass shell, true positrons, spatial SO3 dynamics and g=2 remain unexplained", "Static Gamma is not a frequency-transferring full three-point vertex", "Exact implicit Sigma/Pi definitions do not independently explain parameter closure", "Full induced-photon law and a moving charged packet have not been installed in this same law"],
+  "change_record": "New construction, full scattering and G/D feedback; added external-phase source and relaxed static amputated vertex to deliver executable vertex semantics. No legacy scientific epochs changed."
+}

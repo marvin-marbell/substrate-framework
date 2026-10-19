@@ -1,0 +1,26 @@
+/home/administrator/substrate-222/proposals/P256-qed-backward/normalized_vacuum_scientist_20261011.py:142: DeprecationWarning: `block_diag` is switching to the sparse array interface.
+
+        For the case where input arrays are numpy arrays, this function is
+        switching to returning a sparse array instead of sparse matrix.
+        Recover the sparse matrix return value by making one input a sparse matrix.
+        For example, block_diag([coo_matrix(A), B]).
+        Avoid this message for sparse array output using block_diag([coo_array(A), B]).
+        For more information, see the spmatrix to sparray migration guide
+        https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html
+
+        This function will be changed no earlier than v1.20.
+        
+  hc=sparse.block_diag([profile_h(r) for r in profiles]).toarray()
+/home/administrator/substrate-222/proposals/P256-qed-backward/normalized_vacuum_scientist_20261011.py:151: DeprecationWarning: `block_diag` is switching to the sparse array interface.
+
+        For the case where input arrays are numpy arrays, this function is
+        switching to returning a sparse array instead of sparse matrix.
+        Recover the sparse matrix return value by making one input a sparse matrix.
+        For example, block_diag([coo_matrix(A), B]).
+        Avoid this message for sparse array output using block_diag([coo_array(A), B]).
+        For more information, see the spmatrix to sparray migration guide
+        https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html
+
+        This function will be changed no earlier than v1.20.
+        
+  Hm=lift_onebody(sparse.block_diag([hc,hc]).toarray(),masks)

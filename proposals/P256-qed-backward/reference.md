@@ -321,3 +321,143 @@ The shared integration owner runs the numerical smoke after the slices settle. T
 4. [H. T. Li et al., *Compton Scattering Total Cross Section at Next-to-Next-to-Leading Order and Resummation of Leading Logarithms*, arXiv:2511.09330v1, introduction and NNLO calculation](https://arxiv.org/html/2511.09330v1): full-mass perturbative scope, combining real/virtual infrared contributions, on-shell renormalization and high-energy logarithmic qualifications. No numerical result from that work is represented as a result of this CLI.
 
 Literature establishes the stated reference and motivates tests. It neither proves transfer to a deeper supplier nor closes the quantum interacting-sector explanation.
+
+## 8. Same-current transfer from an induced photon supplier
+
+`induced_compton_transfer.py` is a **new conditional microscopic/large-N branch**, not a replacement for the frozen source, receiver, probability or CURRENT427 achievement. It retains physical electric link inertia \(U_E=1\), removes the bare magnetic curl term and uses the filled charged-band response to supply magnetic stiffness and the photon pole normalization. The 64 charged flavors include the active flavor exactly once; the original heavy flavor remains neutral. The quantum algebra, unit charge, selected uniform mean \(\Phi\), flavor content and microscopic parameters remain declared inputs. In particular, the inherited \(v=0.4990360130634525\) is frozen here, not refitted to the new photon speed.
+
+### Primitive band, current and contact
+
+Every actual charged amplitude uses the `ImprovedPhiLaw` onsite and one/two-link path matrices, not `compton.py`'s endpoint gamma matrices. At spacing \(a\),
+
+\[
+h(p)=\Phi_0\!\left[m+\frac r a\sum_j(1-\cos ap_j)^2\right]
+       +\frac v a\sum_j\Phi_j\sin ap_j,\qquad
+M=m\sqrt{G_{00}},\quad c_m=v\sqrt{G_{jj}}.
+\]
+
+Here \(m=0.2,r=0.12,G_{00}=0.4187253908699568,G_{jj}=0.0632221974274214\), so \(M=0.12941798806502242\) and \(c_m=0.12547773800550577\). The exact band energy is \(\sqrt{\operatorname{Tr}h^2/4}\); unit-normalized positive-band spin states are checked on that shell.
+
+For a length-\(\ell\) path, \(S_\ell(\theta)=\sum_{z=0}^{\ell-1}\cos[(z-(\ell-1)/2)\theta]\) retains every link insertion. With \(h=h_{\rm onsite}+\sum_d(e^{iap\cdot d}T_d+\mathrm{h.c.})\), its current is \(iaS_\ell(aq_i)(e^{ia(p'+p)\cdot d/2}T_d-\mathrm{h.c.})\). The contact is the corresponding \(-a^2S_\ell(ak_i)S_\ell(ak'_i)(e^{ia(p_f+p)\cdot d/2}T_d+\mathrm{h.c.})\), contracted with both photon polarizations. Thus
+
+\[
+\widehat q_i=\frac{2}{a}\sin(aq_i/2),\qquad
+h(p+q)-h(p)=\widehat q\cdot J(p+q,p).
+\]
+
+The vertex is \(V=\epsilon^0 I-\boldsymbol\epsilon\cdot J\). The propagator retains **both** signs,
+\[
+\mathcal G(E,p)=\frac{(I+h/E_p)/2}{E-E_p}
+               +\frac{(I-h/E_p)/2}{E+E_p}.
+\]
+The reduced kernel is the absorption-first term \(V_{\rm out}\mathcal G(E_i+\omega,p+k)V_{\rm in}\), the emission-first term \(V_{\rm in}\mathcal G(E_i-\omega',p-k')V_{\rm out}\), plus the actual contact. Polarization conjugation, all four spin amplitudes for each polarization pair and both momentum-replacement Ward directions are retained.
+
+### Paired photon states and physical phase space
+
+`induced_photon_mode_frame.compute_mode` supplies the uncompressed retarded kernel, density/current \(A_0\) constraint, pole frequency and field-plus-particle-hole (PH) canonical normalization. Independent root eigenvectors are **not** a valid complete preparation at an unresolved doublet. Exact C4-axis/S3-body-diagonal symmetry gives one common root and a common transverse frame. Generic near-degenerate modes use a common \(F/F'\) generalized eigencluster, with the residual in the original nonlinear kernel priced separately; no arbitrary Gram–Schmidt of independent legs is used.
+
+For quantum-normalized field amplitudes \(A_i=\sqrt{Z_i}\,e_i\), the checked canonical Gram is
+\[
+A_i^\dagger\frac{F(x_i)-F(x_j)}{x_i-x_j}A_j=\delta_{ij},
+\qquad x_i=\omega_i^2,
+\]
+with the coincident-root limit \(F'\). This is not a claim that generic physical field projections are Euclidean-orthogonal. At a doublet, full energy-current velocities are computed at fixed frequency and fixed prepared physical state:
+\[
+v_{\gamma,i}^{\,b}=-\frac{A_i^\dagger(\partial_{q_b}F)A_i}{2\omega_i}.
+\]
+The adapter reports the velocity operators and h/half-h resolution evidence; it does not claim a unique Cartesian gradient of sorted bands at a degeneracy.
+
+Each incoming/outgoing polarization branch solves **actual band recoil**
+\[
+E_p+\omega_i(k)=E_{p+k-k'}+\omega_j(k').
+\]
+The spin/polarization-averaged rate per outgoing wave-vector solid angle is
+\[
+\frac{d\sigma}{d\Omega_{k'}}=
+\sum_{ij}\frac{Z_iZ_j\,|k'|^2}
+ {16\pi^2\omega_i\omega_j\,\Phi_{\rm in}\,
+  |\widehat n_{\rm out}\cdot(v_{\gamma,j}-v_{\psi,f})|}
+\;\frac14\sum_{s,t}|u_t^\dagger K_{ji}u_s|^2.
+\]
+The incident number flux is **linear** in the unchanged unpolarized density matrix, through one fixed physical surface normal to the original incident beam direction:
+\[
+\Phi_{\rm in}=\operatorname{Tr}\!\left[\frac{I_2}{2}
+ \widehat n_{\rm in}\cdot\mathbf V_\gamma\right]
+=\widehat n_{\rm in}\cdot\frac{\mathbf v_{\gamma,0}+\mathbf v_{\gamma,1}}{2}.
+\]
+This is one common denominator for the ensemble rate, not an average of per-state velocity norms or per-state cross sections. The current operators need not commute; their diagonals are prepared-state expectations, not sorted eigenvelocities. Only the outgoing radial derivative is needed for the energy Jacobian; the consumer evaluates actual poles at two radial resolutions and independently compares with a full native energy-current projection. There are no imported relativistic fermion normalization factors.
+
+The predicted soft limit is
+\[
+\frac{d\sigma_T}{d\Omega}=
+\frac{Z_{\rm IR}^2c_m^4}{32\pi^2M^2c_{\rm ph}^4}(1+\cos^2\theta),
+\qquad c_{\rm ph}^2=\kappa/\epsilon,\quad Z_{\rm IR}=1/\epsilon.
+\]
+Its coefficient is not fitted. The \(x=10^{-4}\) soft check explicitly uses the derived **local infrared quadratic truncation**, not an extrapolated tiny-q finite-quadrature pole. All hard cases below use the actual retarded paired modes.
+
+### Executed calculation and material repairs
+
+The unchanged hard grid is \(x=\omega/M\in\{0.1,0.4\}\), \(\theta\in\{0.7,1.3\}\), incident directions \((0,0,1)\) and \((1,1,1)/\sqrt3\): **eight cases for each of three actual supplier profiles**, each resolving both incoming and outgoing polarizations and both spins.
+
+The following table retains the original `937` receipt values. It is not a retagged run of the subsequent fixed-surface flux repair; the same-case reweighting and live corrected-path proof below distinguish those epochs.
+
+| \(a\) | Filled charged species | \(\epsilon\) | \(\kappa\) | \(c_{\rm ph}/c_m-1\) | Maximum hard shape error versus KN |
+|---|---|---:|---:|---:|---:|
+| 1 | 64 at \(m=0.2\) | 7.2156043043 | 0.158375039584 | 0.180702092 | 0.115944822 |
+| 0.25 | 64 at \(m=0.2\) | 24.6340798500 | 0.464687613891 | 0.094575429 | 0.048326320 |
+| 0.015625 | 1 at \(m=0.2\), 63 at \(m=2\) | 30.9118694515 | 0.567774227454 | 0.080086458 | 0.041672650 |
+
+First repair changes only the lattice spacing. The second explicitly changes the auxiliary inducing-species masses as well as spacing; it is a new material choice, not a Thomson normalization or velocity refit. Active mass/hopping, charge, mean Gram, total flavor count and physical inertia stay fixed. The last profile has \(c_{\rm ph}=0.13552680566074873\), \(Z_{\rm IR}=0.032350033102024875\), maximum recoil difference 0.034620195, polarization-comparator absolute error 0.035531511 and orientation rate spread \(4.2283\times10^{-5}\). The polarization comparator projects each actual spatial mode onto a q-transverse QED state and normalizes it; this declared per-state comparison does not assert a jointly complete finite-lattice QED polarization map.
+
+Across the three profiles the maximum hard normalized Ward residual is \(1.005\times10^{-10}\), the maximum canonical photon Gram error is \(7.483\times10^{-14}\), and the largest outgoing ray/full-current projection discrepancy is \(2.266\times10^{-9}\). Missing contact gives Ward defects \(0.150145,\ 0.00743116,\ 3.00960\times10^{-5}\); removing negative-band poles gives \(5.84299,\ 6.37182,\ 6.45267\). Setting both residues to one changes the rate by factors-minus-one \(51.4056,\ 608.237,\ 954.600\). All reach and fail the physical assertions. Soft rate/prediction ratios are \(0.999894923,\ 0.999877736,\ 0.999874434\).
+
+**The repaired calculation does not match QED at one percent.** The final 8.01% cone mismatch and 4.17% finite-energy shape discrepancy are real debts, not permission to set \(c_{\rm ph}=c_m\). Local-quadratic decomposition independently gave final hard shape error 0.0417243; the earlier 0.661805 unpolarized error was instead an invalid incident mode-frame artifact and is withdrawn as physics.
+
+### Reproduction, source epochs and limitations
+
+The archived **pre-flux-semantic-correction** command, naturally exiting zero in **3636.37 s**, was:
+
+```sh
+/home/administrator/substrate-framework/.venv/bin/python proposals/P256-qed-backward/induced_compton_transfer.py \
+  --supplier proposals/P256-qed-backward/induced_photon_response_matrix_checked_receipt_a1p0.json \
+  --family proposals/P256-qed-backward/induced_photon_response_matrix_checked_receipt_a0p25.json proposals/P256-qed-backward/induced_photon_response_matrix_checked_mass_receipt.json \
+  --dynamic --output /tmp/issue222-induced-compton-paired-final.json
+```
+
+Final receipt SHA256: `f6499570e7f636f3af77df3a276dab1b258deb17c59e595247482bf8b911ed8f`. Executed consumer: `937c57afa884e2af16a91e31c09498f286e26a435ea6a9286df8cac018a6a29e`; immutable scalar/current provider: `4906bf0bb8c3a80fd20d2b93388878e9975af54bffd7f114ee027d5c3c00e64f`; paired-mode provider: `7385772fced5cc6bcc98ff76b81f46f168608783a2932c402fe40d1af4ab075e`. The receipt captures all input/source hashes at execution and asserts unchanged files before emitting `natural_exit=0`. Runtime: Python 3.12.3, NumPy 2.5.3, project virtual environment; executable SHA256 `e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f`.
+
+The older `6e8/490` run exited zero in 4747.60 s but did not establish an unpolarized observable: unresolved, separately solved incident roots picked incomplete frames. Its raw receipt remains `/tmp/issue222-induced-compton-490-6e8-degenerate-polarization-receipt.json`. The 62.24 s discriminator `/tmp/issue222-induced-frame-probe.json` showed a same-q overlap \(-4.2354\times10^{-5}\) and separate-root overlap \(-0.2310581\); cache velocity upgrade preserved the frame, so that suspected cause was withdrawn. The new adapter's `induced_photon_mode_frame_verified_receipt.json` rejects those **previously observed** legs with full PH Gram error 0.2310581 and literal-current operator error 0.2310565, without rerunning the old failure. Complete current contraction is rotation-invariant to \(3.63\times10^{-16}\), while a duplicate-state control fails by approximately one. Earlier timed-out/source-changing executions are not successful proofs and were not retagged.
+
+Actual scoped Pyright 1.1.414 JSON-RPC diagnostics were empty for the archived `937` consumer, with AST-located definitions resolving to `ImprovedPhiLaw` and the new `compute_mode`; evidence is `/tmp/issue222-compton-lsp.json`. This is affected-file tooling, not project-wide validation.
+
+This supplies a conditional mean-field/RPA photon and leading \(1/N\) same-current amplitude, with rate order \(1/N^2\). It does **not** establish a full interacting sharp photon/charged-particle pole, dressed/inclusive infrared observable, active-fermion self-energy/vertex correction, matched physical photon preparation/period, coupled quantum \(\Phi\)/normal/Root transport, or parameter origin. CAR remains restricted to the admitted all-eight flat encoded-P sectors, with Q priced separately. New flavor/number/Gauss bookkeeping cannot borrow the frozen Root bounds. These new-branch mode checks are not a new state, preparation, normalization, clock, output mode, receiver or ground/pole gate for the unchanged finiteSCREEN/delta13 source join. No old probability or historical achievement is promoted; the joined explanatory campaign remains open.
+
+### Fixed-surface flux semantic repair
+
+The archived `937` calculation divided each incident-polarization contribution by the norm of its own energy-current vector. That nonlinear prescription does not describe the same unpolarized density \(I_2/2\) through a fixed physical surface: complex unitary changes of a degenerate incoming mode frame can change the result without changing the density. A physically different ensemble of state-dependent ray surfaces is not substituted here.
+
+The cheap discriminator used **all 24 completed cases** from the unchanged `f6499570…` receipt. It recomputed actual literal s/u propagators, both signs of charged poles, path contacts, CAR-normalized spin states and canonical field residues. It transformed the full supplied \(h/2\) Noether current operators as \(U^\dagger V_bU\), including real rotations and linear-to-circular complex unitary frames. Scalar and spatial field amplitudes were rotated together; the density stayed \(I_2/2\).
+
+At that recorded operator resolution, the norm-per-leg rate changed by up to \(3.65445143\times10^{-8}\), whereas the fixed-surface trace-flux rate was invariant to \(1.77635684\times10^{-15}\). Native amplitude covariance error was \(4.3043\times10^{-17}\); the maximum absolute amplitude replay difference from the archived case was \(1.9258\times10^{-10}\), reported separately rather than asserted to vanish. The original h/half-h resolution errors remain in the proof. The basis artifact is an algebraic defect of the normalization functional at the computed operators, **not** an assertion that its exact-theory magnitude is resolved beyond their derivative uncertainty.
+
+`induced_compton_transfer.py` now computes one common flux from the equal-number-density current trace, with the original incident beam direction as the fixed surface normal. It reports that normal, density matrix, mean number current, individual current expectations and common flux. No state, preparation, receiver, normalization fit, clock, outgoing branch or velocity-label sorting is changed.
+
+The unchanged completed cases also permit an exact algebraic flux reweighting using their reported Richardson current diagonals. Maximum hard shape errors become \(0.1159448221930,\ 0.0483263195796,\ 0.0416726499788\), respectively. This is a same-case archived-data reweighting, **not** a newly executed full 24-case pole calculation. The 8.0086% cone mismatch and 4.1673% shape debt remain real.
+
+A separate **live** corrected `observe` calculation recomputed nonlinear paired photon roots, residues, full Noether currents, charged recoil and the entire interacting transfer path for the final mass-separated profile at \(x=0.4,\theta=1.3\), body-diagonal incidence. It naturally exited zero in **386.068 s**: flux \(0.13552603226768345\), rate/Thomson \(0.6616558025264773\), shape error \(0.041647177970076665\), and normalized Ward residual \(1.11579\times10^{-11}\). This proof is one live changed-path scenario plus the all-24-case native semantic discriminator, not a claim of a second full-family CLI run.
+
+The repaired executed consumer SHA256 is `22aee2e714373acad4f7148e436d99b3573bf0532fb845e02ca19b00a0247f3b`; the scalar/current and paired-mode providers remain frozen `4906bf0…` and `7385772…`. Evidence:
+
+| Artifact | SHA256 |
+|---|---|
+| `/tmp/issue222-fixed-flux-before.json` | `57ae6d681ca33acc51b015f302861348b1152802da1345c045c167f8d734249d` |
+| `/tmp/issue222-fixed-flux-after.json` | `9b21e2c1349a8d6ee16bd4d85b530ba198d398372cc03895623f1400e180db32` |
+| `/tmp/issue222-fixed-flux-live.json` | `96c974287f506e9591580d40a7e45f50e84f58d56a30f9494ca7a92a48de721d` |
+| `/tmp/issue222-fixed-flux-lsp.json` | `77e1ceaf96672d7cc04efa6607e5ae7a5ba326f7ec15396d1dbdebdcf3b8284b` |
+
+The last artifact records actual scoped Pyright JSON-RPC empty diagnostics and the AST-located call resolving to the new flux method. The original `937` source is preserved at `/tmp/induced_compton_transfer_937c57afa884e2af16a91e31c09498f286e26a435ea6a9286df8cac018a6a29e.py`; neither that source nor the `f6499570…` receipt is retagged.
+
+Capsule loading now distinguishes executed microscopic response provenance from historical annotations of the law being replaced. It verifies the actual response, primitive band, rotation, orbital and sea suppliers, plus a paired-mode supplier when the capsule records one. Historical original-bosonic/reference-law hashes remain untouched in the archived capsule; an unrelated legacy finiteSCREEN source change is not a new induced-response physics failure. The old loader's stale-reference rejection occurred before any flux calculation and is not counted as a physical discriminator.
+
+Radiative recoil or a nonfitted common-cone transfer additionally requires native finite-q gauged self-energy, vertex and four-point Ward suppliers, including the appropriate higher Peierls contacts and filled-sea photon vertices. A self-energy-only or soft-derivative vertex calculation is not that interacting completion. The unchanged finiteSCREEN/delta13 state and gates remain separate.
+

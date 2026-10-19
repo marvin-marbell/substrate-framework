@@ -1,0 +1,29 @@
+{
+  "producer": "projectPython exact Gaussian-integer inline control",
+  "source_program": "import itertools,json\nassign=list(itertools.product(range(4),repeat=3)); edges=((0,1),(1,2),(0,2)); charge=(1,2,1); moved=(0,2,2)\ndef div(q):\n r=[0,0,0]\n for a,(x,y) in zip(q,edges):r[x]+=a;r[y]-=a\n return tuple(a%4 for a in r)\nsi=[div(q)==charge for q in assign]; sf=[div(q)==moved for q in assign]\nassert sum(si)==sum(sf)==4\n# Amplitudes are integer numerators over2; use true orthogonal tree projection.\nti=[int(ok and q[2]==0) for ok,q in zip(si,assign)]; ci=[int(ok)-t for ok,t in zip(si,ti)]\ntf=[int(ok and q[2]==0) for ok,q in zip(sf,assign)]; cf=[int(ok)-t for ok,t in zip(sf,tf)]\ndef shift(v):\n out=[0]*64\n for q,a in zip(assign,v):out[assign.index((q[0],q[1],(q[2]-1)%4))]=a\n return out\ndef dot(a,b):return sum(x*y for x,y in zip(a,b))\nparts={'TT':dot(tf,shift(ti)),'TC':dot(tf,shift(ci)),'CT':dot(cf,shift(ti)),'CC':dot(cf,shift(ci))}\nassert parts==dict(TT=0,TC=1,CT=1,CC=2)\n# Fourier numerator: full amplitude has denominator16, phases exact Gaussian integers.\nnonflat_num2=0\nfor z in assign:\n val=sum((1j**(sum(qj*zj for qj,zj in zip(q,z))%4) for q,ok in zip(assign,si) if ok),0j)\n if (z[0]+z[1]-z[2])%4:nonflat_num2+=int(val.real)**2+int(val.imag)**2\nassert nonflat_num2==0\nprint(json.dumps({'exact_overlap_numerators_denominator4':parts,'coherent_overlap':1,'normalized_tree_overlap':0,'nonflat_fourier_norm_squared':0,'rejected_overlap_difference':1,'cross_terms_vanish':False,'scope':'exact existing Z4 triangle coefficient algebra only; not current U1 transport/physics certificate'}))\n",
+  "source_sha256": "cc41e4bce36b085a0a63ca6132083c3233523dd89177f2daa907bd2ee20c241c",
+  "antecedent_source": "covariant_root_transfer.py",
+  "antecedent_sha256": "6911f0283dc0f84f4cc05202deb67dcd3266d5c64ca1a05e149f1567451e0f9c",
+  "world_model_lead": "evt466.smallest_new_probe steps2/3",
+  "governing_plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "captured_revision": "9a2fd8299a741b12cbc9effe2c6a264ce87e2deef1bf73787109d7604849ce49",
+  "returncode": 0,
+  "natural_exit": true,
+  "elapsed_seconds": 0.06298651599354343,
+  "stderr": "",
+  "result": {
+    "exact_overlap_numerators_denominator4": {
+      "TT": 0,
+      "TC": 1,
+      "CT": 1,
+      "CC": 2
+    },
+    "coherent_overlap": 1,
+    "normalized_tree_overlap": 0,
+    "nonflat_fourier_norm_squared": 0,
+    "rejected_overlap_difference": 1,
+    "cross_terms_vanish": false,
+    "scope": "exact existing Z4 triangle coefficient algebra only; not current U1 transport/physics certificate"
+  },
+  "correction": "Shift of chord q02 by-1 mixes tree and cycle projections. Cross terms are each1/4, not0; full nonflat Fourier mass0 differs coherent overlap\u00b2-tree overlap\u00b2=1. Exact Gauss cross identity remains separately sound, and no current scientific supplier is falsified."
+}

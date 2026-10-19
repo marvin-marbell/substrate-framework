@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/common_singlet_energy_consumer_20261012.py", line 329, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/common_singlet_energy_consumer_20261012.py", line 319, in main
+    'supported_loop_failed_transfer_and_signed_attempt': supported_signed_response(profiles),
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/common_singlet_energy_consumer_20261012.py", line 242, in supported_signed_response
+    c0 = F(next(t['c0'] for t in profiles[1]['paths'] if t['length'] == 1)['c0'])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+TypeError: string indices must be integers, not 'str'

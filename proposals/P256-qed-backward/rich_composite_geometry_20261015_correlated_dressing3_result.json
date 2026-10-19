@@ -1,0 +1,4891 @@
+{
+  "kind": "NEW_RICH_OPERATOR_DRESSED_OCCUPIED_CAR64_FIELD_COMPOSITE_CONDITIONAL_MODEL",
+  "parameters": {
+    "geometry": "tetrahedron",
+    "scalar_points": 7,
+    "scalar_extent": 4.0,
+    "scalar_metric": 1.0,
+    "scalar_quartic": 0.2,
+    "scalar_quadratic": 1.0,
+    "scalar_coupling": 0.65,
+    "electric": 1.8,
+    "plaquette": 0.25,
+    "vector_velocity": 0.6,
+    "orientation_azimuth_points": 8,
+    "orientation_polar_points": 6,
+    "neutral_family": "correlated_local_singlet_ONEHOP_full_colour_loop_images_SEVERE_paircut",
+    "charged_family": "all_Wilson_tree_uud_sources_full_spinhalf_both_copies_and_threehalf",
+    "scalar_volume_ratio": 2.0,
+    "vertex_mass_density": 3.0,
+    "eigen_tolerance": 1e-10,
+    "low_eigenstates": 12,
+    "times": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "density_kick": 0.35,
+    "field_kick": 0.3
+  },
+  "basis": {
+    "body_dimension": 13115,
+    "full_independent_Phi": 7,
+    "full_coordinate_dimension": 91805,
+    "count_J_blocks": 1328,
+    "source_generators": 68,
+    "body_numeric_bytes": 1836070436,
+    "body_nonzeros": 90067598,
+    "max_body_count_block": 45,
+    "tiny_body_coefficient_discarded_norm2_sum": 2.226955326507131e-22,
+    "null_input_residual_norm2_sum": 3.077767305926899e-21,
+    "numerical_nulls": 7409,
+    "minimum_accepted_relative_norm2": 1.1113761110115953e-19,
+    "storage": "Flat disk-backed count/J blocks, one mutable CSC block during construction; blockwise CSR conversion, never global CSC+CSR residency. ALL blocks included in natural capture. Same68 source lists/Phi/null tolerances/couplings as failed in-memory variant.",
+    "definition": "span of ALL7 Phi slices of B,(2J.Rd)B,complexTrU B on20 declared anchors plus LOCAL bare D=[H0,B] on4 compact anchors/both spins; tensor FULL independent7 Phi output coordinates. PhiB/PphiB included by full matrix-unit factor, not a twolevel scalar replacement. Entire actual occupied Omega enters every source before count-orbit completion. Additional severe source/sea/R/PW body-rank and anchor cuts remain; no full all-pair/native range claim.",
+    "operator_lift": "Each q_body tensor|phi_out> has literal sum lift[(source_generator,phi_in)] |phi_out><phi_in| P_counts G_source operator extension. Sparse2e-14 trim/null discarded norms disclosed; no arbitrary state-only extension or fitted energy term."
+  },
+  "assembly": {
+    "dimension": 13115,
+    "nnz": {
+      "Gram": 170899,
+      "rotation": 114469,
+      "electric": 131673,
+      "plaquette": 122929,
+      "quark_vector": 766930,
+      "white_vector": 233332,
+      "quark_scalar": 737658,
+      "white_scalar": 175980,
+      "loopB": 128285,
+      "loopC": 124015
+    },
+    "raw_Hermiticity_Frobenius": {
+      "Gram": 3.1452893227576025e-15,
+      "rotation": 2.2561159016130174e-15,
+      "electric": 2.803943654304721e-13,
+      "plaquette": 6.711937830268937e-14,
+      "quark_vector": 7.650234536209082e-13,
+      "white_vector": 8.234443526123342e-14,
+      "quark_scalar": 5.277466557450294e-13,
+      "white_scalar": 5.39496799797705e-14,
+      "loopB": 2.700047626715263e-13,
+      "loopC": 2.240754022729582e-15
+    },
+    "entry_roundoff_discarded_norm2": {
+      "Gram": 0.0,
+      "rotation": 7.107711761855309e-25,
+      "electric": 8.444800243237775e-25,
+      "plaquette": 7.073939677566221e-25,
+      "quark_vector": 5.901593891902915e-25,
+      "white_vector": 1.3093780158612098e-24,
+      "quark_scalar": 1.0665094138151344e-24,
+      "white_scalar": 1.4939895054105642e-24,
+      "loopB": 9.733641994130416e-25,
+      "loopC": 5.352963030438694e-25
+    },
+    "metric": "ALL actual Gram entries retained, including tiny offdiagonal values; generalized metric kept through analysis. No assumedI or source EOM Hermitization.",
+    "roundoff": "Raw operators retained; charged weakH analysis uses tiny Hermitian average. Non-Gram entry2e-14 sparse roundoff only, discarded Frobenius squared explicit. No physical source/field/mass/spin/coupling cut or current replacement.",
+    "storage": "One pinned source body block and one target block at a time, target-pair traversal prevents disk-cache thrashing. All source packets for ONLY current count cached; no global body CSC+CSR/dense lookup residency.",
+    "projection": "Full primitive action and local colour Q appliedTWICE before target selection. Source-count support skips are Galerkin weak-matrix selection, NOT full-H closure or particle leakage test. Actual allPhi7 independent factor, allR10/PW19 inside body profiles; severe operator/sea/body-R rank remains.",
+    "elapsed_seconds": 19182.12187218666,
+    "primitive_hop_calls": 57265676,
+    "output_count_channels_outside_model_skipped": 35320317,
+    "raw_transitions_projected": 83802345,
+    "raw_source_keys": 1551148
+  },
+  "metric": {
+    "body_Gram_minus_I_Frobenius": 3.745674321528211e-12,
+    "count_metric_commutator": "Exactly within fixed physical16-count blocks by construction, with ALL actual Gram entries retained. Current/Ward measured after actual generalized metric operations; no assumedI.",
+    "meaning": "Numerical body isometry plus FULL independentPhi7; not full-H range closure or all-pair/globalvacuum proof."
+  },
+  "local_receipt": {
+    "dimension": 6418,
+    "max_local_block": 140,
+    "raw_local_nonzeros": 37078,
+    "cached_local_operations": 26595,
+    "local_roundoff_discarded_norm2_sum": 0.0,
+    "meaning": "Adaptive ORTHONORMAL local16-mode Fock coordinates, no local physical-state/energy cut. Every exact c/cdag image is resolved including its new orthogonal remainder BEFORE global packet projection. Global2^64 sea never expanded."
+  },
+  "Noether": "Proper source tensors rankj on actual J0Omega, including vector sum_mu,i B_mu(2J_i)_(mu,m)R_i.d with creation index(mu,m), scalarcomplexTrU, and D=[H0,B] rankj. Spin-summed physical-count closure commutes J=Lleft+SCAR. HighestM representatives, both half copies and threehalf, no fitted S2/spin/baryon-hop penalty. Not full continuum translation/COM/Maxwell angular Noether.",
+  "source_extension": "Each body column stores its actual operator lift to |phi_out><phi_in| P_counts G_source. D is literal UNMASKED [H0,B] cubic replacement/field operator at zero externalEM, not a state-only H-E0 extension. Count pieces complete the state gauge orbit, not a particle definition or an EOM leakage gate. Later [H,Oeff] MUST include [H,Pcounts]/field derivatives, never infer a unique operator from the state alone.",
+  "quantum_field_scope": "ALL7 independentPhi output modes and ALL7 input slices of rich source/sea/R/PW profiles. PhiB/PphiB states included via full matrix-unit factor, NOT twolevel/lowband scalar. Full Hphi and mechanical/electric/plaquette/hop actions on actual R/U fields precede target projection; shared field coefficient/rest-of-sea dynamics retained. Additional severe source/sea/body-R/PW rank and anchor cuts explicit; primitiveR10/PW19 coordinate cuts remain.",
+  "EOM_metric_distinction": "This is a fixed finite charged Hilbert/Galerkin weak-H/G model with actual Hermitian primitive-H matrix elements, NOT silently Hermitized source-EOM K. Independent evolving-sea operator EOM has Gdot=i(K-Kdag) and requires its connection; bare/Phi operator evidence and reviewer endpoints remain separate. No claimed generic dressed-R/U EOM/lifetime closure from this model.",
+  "common_reference": "OWN selected correlated onehop quantum reference only, known full-H RMS5.905. This new charged representation does not repair/prove a global stationary vacuum. Same full primitive H and microscopic physicalQ source/contact/C; no inherited ColorSea/other owner spectrum or additive mass/recenter. Negative scalar quadratic/potential, charges/gauging/3+1 split, field volume and pointmass density are INPUTS.",
+  "limits": "Conditional finite geometry/source family. C/F occupation channels not free/asymptotic breakup thresholds, tagged-added-particle positions, EMcharge or colourCasimir. Changed quark-core/sea/field channels allowed, rigidOmega return is NOT particle definition. Actual source strengths/residues distinct from probabilities. No proton/measured mass/Lorentz/freeCOM/photon/globalspin/whole-issue claim; no native catalogue restart.",
+  "reference_selected_energy": -7.528937240789958,
+  "sectors": {
+    "1": {
+      "body_dimension": 7211,
+      "full_independent_Phi_dimension": 50477,
+      "metric": {
+        "minimum_count_metric_eigenvalue": 0.9999999999991697,
+        "maximum_count_inverse_residual": 1.1322097734007351e-15,
+        "count_blocks": 664
+      },
+      "minimum_energy": -9.064634508191348,
+      "gap_from_OWN_selected_reference": -1.5356972674013907,
+      "low_poles": [
+        -9.064634508191348,
+        -9.063449680321717,
+        -8.672131788521947,
+        -8.670795061019417,
+        -8.65056640428614,
+        -8.64986586654632,
+        -8.142057344281259,
+        -8.141085625643198
+      ],
+      "generalized_residuals": [
+        3.3622088768744475e-14,
+        3.20402444025899e-14,
+        2.8110886664102043e-11,
+        1.2689780826467568e-11,
+        4.9147282118905204e-11,
+        3.172762956606978e-11,
+        1.0627249919166129e-10,
+        7.92079148700459e-11
+      ],
+      "observed_ground_cluster_members": 1,
+      "observed_ground_cluster_closed_at_lowpole_boundary": true,
+      "ground": {
+        "norm": 0.9999999999999997,
+        "compact": 0.3403604780372685,
+        "fragmented": 0.028919834537786057,
+        "compact_site": [
+          0.07149608350095843,
+          0.10492050063668788,
+          0.09779371496662341,
+          0.06615017893299847
+        ],
+        "Q_em_site_mean": [
+          0.21728549748787926,
+          0.3080231808957917,
+          0.28085304484772156,
+          0.193838276768608
+        ],
+        "baryon_site_mean": [
+          0.21477498004442516,
+          0.3013300699673441,
+          0.2838339193804886,
+          0.20006103060774097
+        ],
+        "ncolour_site_mean": [
+          6.644324940133291,
+          6.903990209902019,
+          6.851501758141466,
+          6.600183091823227
+        ],
+        "nwhite_site_mean": [
+          1.9999999999999953,
+          1.9999999999999931,
+          1.9999999999999931,
+          1.9999999999999944
+        ],
+        "nwhite_site_variance": [
+          0.09033753756764273,
+          0.09028920421019215,
+          0.09030785431748445,
+          0.09035618767495279
+        ],
+        "Phi": -1.3391318219387947,
+        "Phi2": 1.8022224603073302,
+        "Phi_boundary": 2.590612579602903e-08,
+        "Phi_energy": -1.9943440643605195,
+        "loopB": 0.039704314472324045,
+        "loopC": 0.21807658471944824,
+        "electric": 0.9690091170872743,
+        "rotation": 0.06495772852680849
+      },
+      "channels": {
+        "C": {
+          "body_dimension": 780,
+          "full_Phi_dimension": 5460,
+          "minimum_energy": -4.958395226745145,
+          "generalized_residual": 1.8020057401584828e-10
+        },
+        "F": {
+          "body_dimension": 1768,
+          "full_Phi_dimension": 12376,
+          "minimum_energy": -3.3062228515861642,
+          "generalized_residual": 8.868733473452083e-11
+        },
+        "F_minus_C": 1.6521723751589805,
+        "meaning": "NONNESTED whole-sea occupation-channel discriminator, NOT a free/asymptotic breakup threshold or tagged-three-particle position PVM."
+      },
+      "sources": {
+        "{'twice_J': 1, 'spec': ([0, 0, 0], 'half_triplet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.8559520132147802,
+          "retained_strength": 0.8559520132147906,
+          "omitted_strength_signed": -1.0436096431476471e-14,
+          "raw_observed_ground_cluster_residue": 0.04141063584429105,
+          "conditional_ground_fraction": 0.0483796231622386,
+          "preparation_energy": -7.243990992351197
+        },
+        "{'twice_J': 1, 'spec': ([0, 0, 0], 'half_triplet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.7962909778200599,
+          "retained_strength": 0.7962909778200524,
+          "omitted_strength_signed": 7.438494264988549e-15,
+          "raw_observed_ground_cluster_residue": 0.0001439903949524906,
+          "conditional_ground_fraction": 0.00018082635489187956,
+          "preparation_energy": -6.395602141192508
+        },
+        "{'twice_J': 1, 'spec': ([0, 0, 0], 'half_triplet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.8133652589450271,
+          "retained_strength": 0.8133652589450457,
+          "omitted_strength_signed": -1.865174681370263e-14,
+          "raw_observed_ground_cluster_residue": 8.247060177499197e-05,
+          "conditional_ground_fraction": 0.00010139430086054858,
+          "preparation_energy": -2.1115090038169777
+        },
+        "{'twice_J': 1, 'spec': ([0, 0, 0], 'half_triplet', 1), 'family': 'eom'}": {
+          "raw_canonical_strength": 2.9805954591224104,
+          "retained_strength": 2.9805954591227666,
+          "omitted_strength_signed": -3.561595462997502e-13,
+          "raw_observed_ground_cluster_residue": 0.09679598832564876,
+          "conditional_ground_fraction": 0.0324753860942059,
+          "preparation_energy": -4.818337622447164
+        },
+        "{'twice_J': 1, 'spec': ([1, 1, 1], 'half_triplet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.8559145601271964,
+          "retained_strength": 0.8559145601272122,
+          "omitted_strength_signed": -1.587618925213974e-14,
+          "raw_observed_ground_cluster_residue": 0.06087916307361314,
+          "conditional_ground_fraction": 0.07112761706561557,
+          "preparation_energy": -7.243751853377795
+        },
+        "{'twice_J': 1, 'spec': ([1, 1, 1], 'half_triplet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.7962636924099845,
+          "retained_strength": 0.7962636924099392,
+          "omitted_strength_signed": 4.529709940470639e-14,
+          "raw_observed_ground_cluster_residue": 0.00015792999383750108,
+          "conditional_ground_fraction": 0.0001983388108021309,
+          "preparation_energy": -6.395372189569471
+        },
+        "{'twice_J': 1, 'spec': ([1, 1, 1], 'half_triplet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.8025211820525299,
+          "retained_strength": 0.8025211820525343,
+          "omitted_strength_signed": -4.440892098500626e-15,
+          "raw_observed_ground_cluster_residue": 0.00012728591185554874,
+          "conditional_ground_fraction": 0.00015860754170999116,
+          "preparation_energy": -2.0085034412966585
+        },
+        "{'twice_J': 1, 'spec': ([1, 1, 1], 'half_triplet', 1), 'family': 'eom'}": {
+          "raw_canonical_strength": 3.0097871292250047,
+          "retained_strength": 3.00978712922534,
+          "omitted_strength_signed": -3.352873534367973e-13,
+          "raw_observed_ground_cluster_residue": 0.14456047475037,
+          "conditional_ground_fraction": 0.04803013254547907,
+          "preparation_energy": -4.892106308188354
+        },
+        "{'twice_J': 1, 'spec': ([2, 2, 2], 'half_triplet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.855914560127206,
+          "retained_strength": 0.8559145601272101,
+          "omitted_strength_signed": -4.107825191113079e-15,
+          "raw_observed_ground_cluster_residue": 0.056579640339871805,
+          "conditional_ground_fraction": 0.06610430874252526,
+          "preparation_energy": -7.243751853377801
+        },
+        "{'twice_J': 1, 'spec': ([2, 2, 2], 'half_triplet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.794860001572214,
+          "retained_strength": 0.7948600015721937,
+          "omitted_strength_signed": 2.0317081350640365e-14,
+          "raw_observed_ground_cluster_residue": 1.874978738475795e-05,
+          "conditional_ground_fraction": 2.358879217430969e-05,
+          "preparation_energy": -6.384983060550993
+        },
+        "{'twice_J': 1, 'spec': ([2, 2, 2], 'half_triplet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.8025211820525285,
+          "retained_strength": 0.8025211820525324,
+          "omitted_strength_signed": -3.885780586188048e-15,
+          "raw_observed_ground_cluster_residue": 0.00011848820899638989,
+          "conditional_ground_fraction": 0.00014764496146175708,
+          "preparation_energy": -2.0085034412967486
+        },
+        "{'twice_J': 1, 'spec': ([2, 2, 2], 'half_triplet', 1), 'family': 'eom'}": {
+          "raw_canonical_strength": 3.009787129225651,
+          "retained_strength": 3.009787129225336,
+          "omitted_strength_signed": 3.148592497836944e-13,
+          "raw_observed_ground_cluster_residue": 0.13506278835510624,
+          "conditional_ground_fraction": 0.044874531837694756,
+          "preparation_energy": -4.892106308188339
+        },
+        "{'twice_J': 1, 'spec': ([3, 3, 3], 'half_triplet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.8559520132147879,
+          "retained_strength": 0.8559520132147873,
+          "omitted_strength_signed": 5.551115123125783e-16,
+          "raw_observed_ground_cluster_residue": 0.03866066840582653,
+          "conditional_ground_fraction": 0.04516686427387987,
+          "preparation_energy": -7.243990992351201
+        },
+        "{'twice_J': 1, 'spec': ([3, 3, 3], 'half_triplet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.7948872869822893,
+          "retained_strength": 0.7948872869823058,
+          "omitted_strength_signed": -1.6542323066914832e-14,
+          "raw_observed_ground_cluster_residue": 1.0334997084062792e-05,
+          "conditional_ground_fraction": 1.3001839698931869e-05,
+          "preparation_energy": -6.385213774863827
+        },
+        "{'twice_J': 1, 'spec': ([3, 3, 3], 'half_triplet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.8173363383292752,
+          "retained_strength": 0.8173363383292933,
+          "omitted_strength_signed": -1.8096635301390052e-14,
+          "raw_observed_ground_cluster_residue": 7.908506282779581e-05,
+          "conditional_ground_fraction": 9.675950905284914e-05,
+          "preparation_energy": -2.1478484744423825
+        },
+        "{'twice_J': 1, 'spec': ([3, 3, 3], 'half_triplet', 1), 'family': 'eom'}": {
+          "raw_canonical_strength": 2.980595459122549,
+          "retained_strength": 2.9805954591227692,
+          "omitted_strength_signed": -2.2026824808563106e-13,
+          "raw_observed_ground_cluster_residue": 0.09129690653158638,
+          "conditional_ground_fraction": 0.030630425290407017,
+          "preparation_energy": -4.818337622447144
+        },
+        "{'twice_J': 1, 'spec': ([0, 1, 2], 'half_triplet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.12430312989341857,
+          "retained_strength": 0.12430312989341179,
+          "omitted_strength_signed": 6.786238238021269e-15,
+          "raw_observed_ground_cluster_residue": 5.437361083006339e-05,
+          "conditional_ground_fraction": 0.0004374275279849189,
+          "preparation_energy": -4.322276811374531
+        },
+        "{'twice_J': 1, 'spec': ([0, 1, 2], 'half_triplet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.11454398152555767,
+          "retained_strength": 0.11454398152555491,
+          "omitted_strength_signed": 2.761679773755077e-15,
+          "raw_observed_ground_cluster_residue": 1.966007954569742e-06,
+          "conditional_ground_fraction": 1.7163782229196593e-05,
+          "preparation_energy": -3.437228636434686
+        },
+        "{'twice_J': 1, 'spec': ([0, 1, 2], 'half_triplet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.11661598752936642,
+          "retained_strength": 0.11661598752936966,
+          "omitted_strength_signed": -3.247402347028583e-15,
+          "raw_observed_ground_cluster_residue": 3.6973476424192432e-09,
+          "conditional_ground_fraction": 3.170532377893784e-08,
+          "preparation_energy": 0.8543267949283273
+        },
+        "{'twice_J': 1, 'spec': ([0, 1, 2], 'half_singlet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.12927796502596137,
+          "retained_strength": 0.1292779650259647,
+          "omitted_strength_signed": -3.3306690738754696e-15,
+          "raw_observed_ground_cluster_residue": 7.736947646131436e-06,
+          "conditional_ground_fraction": 5.9847381141693535e-05,
+          "preparation_energy": -4.977200235822821
+        },
+        "{'twice_J': 1, 'spec': ([0, 1, 2], 'half_singlet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.11994475529898853,
+          "retained_strength": 0.1199447552989906,
+          "omitted_strength_signed": -2.067790383364354e-15,
+          "raw_observed_ground_cluster_residue": 2.211273509628467e-06,
+          "conditional_ground_fraction": 1.8435766567002836e-05,
+          "preparation_energy": -4.248914434734529
+        },
+        "{'twice_J': 1, 'spec': ([0, 1, 2], 'half_singlet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.12159082266192207,
+          "retained_strength": 0.12159082266192013,
+          "omitted_strength_signed": 1.942890293094024e-15,
+          "raw_observed_ground_cluster_residue": 3.5655736504238323e-08,
+          "conditional_ground_fraction": 2.9324364885150994e-07,
+          "preparation_energy": 0.14221710781937474
+        },
+        "{'twice_J': 1, 'spec': ([1, 2, 3], 'half_triplet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.12430312989341882,
+          "retained_strength": 0.12430312989341138,
+          "omitted_strength_signed": 7.438494264988549e-15,
+          "raw_observed_ground_cluster_residue": 4.966077261456483e-05,
+          "conditional_ground_fraction": 0.00039951345277587473,
+          "preparation_energy": -4.322276811374682
+        },
+        "{'twice_J': 1, 'spec': ([1, 2, 3], 'half_triplet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.11458037132915493,
+          "retained_strength": 0.11458037132915917,
+          "omitted_strength_signed": -4.246603069191224e-15,
+          "raw_observed_ground_cluster_residue": 3.3726420643796945e-07,
+          "conditional_ground_fraction": 2.943472800145658e-06,
+          "preparation_energy": -3.4379194210665265
+        },
+        "{'twice_J': 1, 'spec': ([1, 2, 3], 'half_triplet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.11697338467394951,
+          "retained_strength": 0.11697338467395121,
+          "omitted_strength_signed": -1.7069679003611782e-15,
+          "raw_observed_ground_cluster_residue": 1.6859633348317165e-08,
+          "conditional_ground_fraction": 1.441322177289415e-07,
+          "preparation_energy": 0.8488938253786678
+        },
+        "{'twice_J': 1, 'spec': ([1, 2, 3], 'half_singlet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.1292779650259605,
+          "retained_strength": 0.12927796502596212,
+          "omitted_strength_signed": -1.609823385706477e-15,
+          "raw_observed_ground_cluster_residue": 8.737076652925692e-06,
+          "conditional_ground_fraction": 6.758364931851362e-05,
+          "preparation_energy": -4.977200235823144
+        },
+        "{'twice_J': 1, 'spec': ([1, 2, 3], 'half_singlet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.11994870143899772,
+          "retained_strength": 0.11994870143900219,
+          "omitted_strength_signed": -4.468647674116255e-15,
+          "raw_observed_ground_cluster_residue": 3.4078865371253503e-07,
+          "conditional_ground_fraction": 2.8411199923313647e-06,
+          "preparation_energy": -4.236453259574741
+        },
+        "{'twice_J': 1, 'spec': ([1, 2, 3], 'half_singlet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.12194821980650515,
+          "retained_strength": 0.12194821980650287,
+          "omitted_strength_signed": 2.275957200481571e-15,
+          "raw_observed_ground_cluster_residue": 4.106329424091629e-08,
+          "conditional_ground_fraction": 3.3672729545434986e-07,
+          "preparation_energy": 0.1390927746483771
+        },
+        "{'twice_J': 1, 'spec': ([2, 3, 0], 'half_triplet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.12430640027978618,
+          "retained_strength": 0.1243064002797797,
+          "omitted_strength_signed": 6.480926906249351e-15,
+          "raw_observed_ground_cluster_residue": 1.5846259826536444e-06,
+          "conditional_ground_fraction": 1.2747742506315723e-05,
+          "preparation_energy": -3.1227654729911403
+        },
+        "{'twice_J': 1, 'spec': ([2, 3, 0], 'half_triplet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.1145184977453306,
+          "retained_strength": 0.1145184977453246,
+          "omitted_strength_signed": 5.995204332975845e-15,
+          "raw_observed_ground_cluster_residue": 1.7783682892008038e-08,
+          "conditional_ground_fraction": 1.552909201756804e-07,
+          "preparation_energy": -2.2326706807208483
+        },
+        "{'twice_J': 1, 'spec': ([2, 3, 0], 'half_triplet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.11790075365328238,
+          "retained_strength": 0.11790075365328205,
+          "omitted_strength_signed": 3.3306690738754696e-16,
+          "raw_observed_ground_cluster_residue": 5.091141722684467e-08,
+          "conditional_ground_fraction": 4.318158760593082e-07,
+          "preparation_energy": 1.8022261188846265
+        },
+        "{'twice_J': 1, 'spec': ([2, 3, 0], 'half_singlet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.12927796502596012,
+          "retained_strength": 0.12927796502596406,
+          "omitted_strength_signed": -3.941291737419306e-15,
+          "raw_observed_ground_cluster_residue": 9.162126758653594e-09,
+          "conditional_ground_fraction": 7.087152676647936e-08,
+          "preparation_energy": -3.777355879509056
+        },
+        "{'twice_J': 1, 'spec': ([2, 3, 0], 'half_singlet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.12003189432270432,
+          "retained_strength": 0.12003189432270449,
+          "omitted_strength_signed": -1.6653345369377348e-16,
+          "raw_observed_ground_cluster_residue": 2.1346057121897305e-08,
+          "conditional_ground_fraction": 1.7783654288174988e-07,
+          "preparation_energy": -3.031317403555838
+        },
+        "{'twice_J': 1, 'spec': ([2, 3, 0], 'half_singlet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.12176952123421378,
+          "retained_strength": 0.12176952123421173,
+          "omitted_strength_signed": 2.0539125955565396e-15,
+          "raw_observed_ground_cluster_residue": 2.5659251949618155e-07,
+          "conditional_ground_fraction": 2.107198229043301e-06,
+          "preparation_energy": 1.2572498704323813
+        },
+        "{'twice_J': 1, 'spec': ([0, 3, 1], 'half_triplet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.12201445213414547,
+          "retained_strength": 0.12201445213414146,
+          "omitted_strength_signed": 4.010680676458378e-15,
+          "raw_observed_ground_cluster_residue": 7.015319133810607e-07,
+          "conditional_ground_fraction": 5.749580489119465e-06,
+          "preparation_energy": -3.2408591696311495
+        },
+        "{'twice_J': 1, 'spec': ([0, 3, 1], 'half_triplet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.1125639438267738,
+          "retained_strength": 0.11256394382677373,
+          "omitted_strength_signed": 6.938893903907228e-17,
+          "raw_observed_ground_cluster_residue": 2.05133413089317e-07,
+          "conditional_ground_fraction": 1.822372298939701e-06,
+          "preparation_energy": -2.3590503674251377
+        },
+        "{'twice_J': 1, 'spec': ([0, 3, 1], 'half_triplet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.11594502490107852,
+          "retained_strength": 0.11594502490107773,
+          "omitted_strength_signed": 7.91033905045424e-16,
+          "raw_observed_ground_cluster_residue": 5.3285101560492355e-08,
+          "conditional_ground_fraction": 4.595721257203944e-07,
+          "preparation_energy": 1.8026397622392816
+        },
+        "{'twice_J': 1, 'spec': ([0, 3, 1], 'half_singlet', 1), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.1275482641286236,
+          "retained_strength": 0.12754826412862053,
+          "omitted_strength_signed": 3.0808688933348094e-15,
+          "raw_observed_ground_cluster_residue": 5.701378011463185e-08,
+          "conditional_ground_fraction": 4.4699769537544446e-07,
+          "preparation_energy": -3.7601415709680825
+        },
+        "{'twice_J': 1, 'spec': ([0, 3, 1], 'half_singlet', 1), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.11869365260237169,
+          "retained_strength": 0.11869365260237871,
+          "omitted_strength_signed": -7.022160630754115e-15,
+          "raw_observed_ground_cluster_residue": 1.3636603537010368e-08,
+          "conditional_ground_fraction": 1.1488907147118227e-07,
+          "preparation_energy": -2.988653316422756
+        },
+        "{'twice_J': 1, 'spec': ([0, 3, 1], 'half_singlet', 1), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.11822558525805638,
+          "retained_strength": 0.11822558525805546,
+          "omitted_strength_signed": 9.159339953157541e-16,
+          "raw_observed_ground_cluster_residue": 5.575228139533853e-09,
+          "conditional_ground_fraction": 4.715754316093755e-08,
+          "preparation_energy": 1.4867587981085855
+        }
+      },
+      "compact0_conditioning_strength": 0.6137812529832108,
+      "finite_prepared_events": {
+        "full": [
+          {
+            "t": 0.0,
+            "norm": 1.0000000000000002,
+            "compact": 1.0000000000000002,
+            "fragmented": 0.0,
+            "compact_site": [
+              1.0000000000000002,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              1.0,
+              1.734723475976807e-17,
+              -1.3301011310293482e-17,
+              7.031194025378345e-17
+            ],
+            "baryon_site_mean": [
+              1.0000000000000002,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              8.999999999999998,
+              6.000000000000003,
+              6.000000000000003,
+              6.000000000000003
+            ],
+            "nwhite_site_mean": [
+              2.0,
+              2.0000000000000004,
+              2.0000000000000004,
+              2.0
+            ],
+            "nwhite_site_variance": [
+              0.11018462336102264,
+              0.11018462336102264,
+              0.11018462336102264,
+              0.11018462336102353
+            ],
+            "Phi": 5.3344412220823756e-12,
+            "Phi2": 1.7822403370500155,
+            "Phi_boundary": 5.9756144893478456e-09,
+            "Phi_energy": -2.019522738202084,
+            "loopB": 0.049219781026007416,
+            "loopC": 0.0015789577380950325,
+            "electric": 0.005684247857142124,
+            "rotation": 0.022017761455989413,
+            "material_count_PVM_TV_from_preparation": 0.0
+          },
+          {
+            "t": 0.25,
+            "norm": 1.0000000000000016,
+            "compact": 0.36307140284602324,
+            "fragmented": 0.015272981479892369,
+            "compact_site": [
+              0.36284405488416416,
+              0.00014171229597264938,
+              7.63511745547064e-09,
+              8.562803076855848e-05
+            ],
+            "Q_em_site_mean": [
+              0.9222225062285816,
+              0.03930578118459323,
+              4.7777998608629206e-05,
+              0.03842393458821833
+            ],
+            "baryon_site_mean": [
+              0.9114118376803618,
+              0.04449335592715656,
+              0.00017995906584989549,
+              0.043914847326633276
+            ],
+            "ncolour_site_mean": [
+              8.734235513041064,
+              6.1334800677814485,
+              6.000539877197556,
+              6.131744541979901
+            ],
+            "nwhite_site_mean": [
+              2.000000000000008,
+              2.000000000000008,
+              2.0000000000000098,
+              2.0000000000000093
+            ],
+            "nwhite_site_variance": [
+              0.16378867624077387,
+              0.16380968248968486,
+              0.16383116776540696,
+              0.16381016151650218
+            ],
+            "Phi": -2.1783710499496955e-09,
+            "Phi2": 1.779957789107344,
+            "Phi_boundary": 4.635442284950621e-09,
+            "Phi_energy": -2.0134310853795596,
+            "loopB": 0.04675976300354041,
+            "loopC": 0.26702796263771855,
+            "electric": 0.8833445559367665,
+            "rotation": 0.10737989560069358,
+            "material_count_PVM_TV_from_preparation": 0.6850008494012653
+          },
+          {
+            "t": 0.5,
+            "norm": 1.0000000000000027,
+            "compact": 0.42413240289674187,
+            "fragmented": 0.01635488866549442,
+            "compact_site": [
+              0.41897070096442646,
+              0.002911065843399824,
+              5.173404836830901e-06,
+              0.002245462684078519
+            ],
+            "Q_em_site_mean": [
+              0.8407082759655842,
+              0.08155053333544056,
+              0.0006778736349429405,
+              0.0770633170640353
+            ],
+            "baryon_site_mean": [
+              0.7868537017320119,
+              0.10722045534090414,
+              0.0016872930703116804,
+              0.10423854985677425
+            ],
+            "ncolour_site_mean": [
+              8.360561105196085,
+              6.321661366022729,
+              6.005061879210968,
+              6.312715649570335
+            ],
+            "nwhite_site_mean": [
+              2.000000000000004,
+              1.999999999999998,
+              2.000000000000006,
+              2.000000000000014
+            ],
+            "nwhite_site_variance": [
+              0.020788557860937473,
+              0.020762271706487923,
+              0.020741286811729154,
+              0.020767572966176928
+            ],
+            "Phi": -3.687201128319342e-08,
+            "Phi2": 1.7814266224095572,
+            "Phi_boundary": 6.473773644533412e-09,
+            "Phi_energy": -2.0106275614751326,
+            "loopB": 0.04175436154455903,
+            "loopC": 0.3717414198957856,
+            "electric": 0.8679812847577649,
+            "rotation": 0.07173014575988543,
+            "material_count_PVM_TV_from_preparation": 0.5904492263793996
+          },
+          {
+            "t": 1.0,
+            "norm": 1.000000000000004,
+            "compact": 0.24825299075169582,
+            "fragmented": 0.03354460015495553,
+            "compact_site": [
+              0.1760232005413128,
+              0.03474278122992254,
+              0.0002457060586431338,
+              0.037241302921817286
+            ],
+            "Q_em_site_mean": [
+              0.6505117875866719,
+              0.17645475817322084,
+              -0.0019375589154112087,
+              0.17497101315552052
+            ],
+            "baryon_site_mean": [
+              0.5450022264462813,
+              0.22259967598770966,
+              0.00818040232201404,
+              0.22421769524400095
+            ],
+            "ncolour_site_mean": [
+              7.635006679338844,
+              6.667799027963148,
+              6.024541206966061,
+              6.6726530857320325
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999984,
+              2.0000000000000155,
+              2.000000000000022,
+              1.999999999999997
+            ],
+            "nwhite_site_variance": [
+              0.12538662414230473,
+              0.12578686984868348,
+              0.12612389939502844,
+              0.125723653688655
+            ],
+            "Phi": -8.866250248893391e-07,
+            "Phi2": 1.7846502576360217,
+            "Phi_boundary": 1.4733196347009023e-08,
+            "Phi_energy": -1.9950377854398424,
+            "loopB": 0.029665376969310295,
+            "loopC": 0.496118986663016,
+            "electric": 1.1613304743495065,
+            "rotation": 0.0913698032460819,
+            "material_count_PVM_TV_from_preparation": 0.831083595342221
+          },
+          {
+            "t": 2.0,
+            "norm": 1.0000000000000044,
+            "compact": 0.32066623099599856,
+            "fragmented": 0.05943564444910242,
+            "compact_site": [
+              0.16523934784845082,
+              0.07554982961295806,
+              0.014786469588450481,
+              0.06509058394613923
+            ],
+            "Q_em_site_mean": [
+              0.45941089358132176,
+              0.26249252383853994,
+              0.06859906440219837,
+              0.2094975181779439
+            ],
+            "baryon_site_mean": [
+              0.40521841093996985,
+              0.25522948942131113,
+              0.11531410375555463,
+              0.2242379958831688
+            ],
+            "ncolour_site_mean": [
+              7.215655232819923,
+              6.765688468263955,
+              6.345942311266699,
+              6.6727139876495185
+            ],
+            "nwhite_site_mean": [
+              2.0000000000000315,
+              1.9999999999999858,
+              2.0000000000000315,
+              1.9999999999999831
+            ],
+            "nwhite_site_variance": [
+              0.09714090498932482,
+              0.09720407840952294,
+              0.09741195753840426,
+              0.0973487841181857
+            ],
+            "Phi": -7.638085251018356e-05,
+            "Phi2": 1.7746829388508714,
+            "Phi_boundary": 1.5494704171013125e-08,
+            "Phi_energy": -1.976895403934865,
+            "loopB": 0.03020849679613853,
+            "loopC": 0.37904933942281976,
+            "electric": 1.233619145271108,
+            "rotation": 0.11443379261623321,
+            "material_count_PVM_TV_from_preparation": 0.842295146841037
+          },
+          {
+            "t": 4.0,
+            "norm": 1.0000000000000044,
+            "compact": 0.2487175245865208,
+            "fragmented": 0.05873248991050761,
+            "compact_site": [
+              0.028998997822931628,
+              0.08639018126321164,
+              0.06069770292563659,
+              0.07263064257474076
+            ],
+            "Q_em_site_mean": [
+              0.24256827405736395,
+              0.2981858779814921,
+              0.22521992451451636,
+              0.23402592344663237
+            ],
+            "baryon_site_mean": [
+              0.2087415794597529,
+              0.29132507785282136,
+              0.23394890612206945,
+              0.26598443656536136
+            ],
+            "ncolour_site_mean": [
+              6.626224738379297,
+              6.87397523355849,
+              6.7018467183662365,
+              6.7979533096961156
+            ],
+            "nwhite_site_mean": [
+              1.9999999999998819,
+              2.000000000000082,
+              1.999999999999881,
+              2.00000000000019
+            ],
+            "nwhite_site_variance": [
+              0.05318947550108177,
+              0.05302369723285949,
+              0.052752881024017206,
+              0.052918659292221726
+            ],
+            "Phi": -0.00010762821976625231,
+            "Phi2": 1.7585304597584759,
+            "Phi_boundary": 1.7259865528513702e-08,
+            "Phi_energy": -1.9520429917297755,
+            "loopB": 0.05437660376574191,
+            "loopC": 0.3544185583542712,
+            "electric": 1.3623685406985335,
+            "rotation": 0.10091696214872684,
+            "material_count_PVM_TV_from_preparation": 0.9786928101165304
+          }
+        ],
+        "colour_electric_off": [
+          {
+            "t": 0.0,
+            "norm": 1.0000000000000002,
+            "compact": 1.0000000000000002,
+            "fragmented": 0.0,
+            "compact_site": [
+              1.0000000000000002,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              1.0,
+              1.734723475976807e-17,
+              -1.3301011310293482e-17,
+              7.031194025378345e-17
+            ],
+            "baryon_site_mean": [
+              1.0000000000000002,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              8.999999999999998,
+              6.000000000000003,
+              6.000000000000003,
+              6.000000000000003
+            ],
+            "nwhite_site_mean": [
+              2.0,
+              2.0000000000000004,
+              2.0000000000000004,
+              2.0
+            ],
+            "nwhite_site_variance": [
+              0.11018462336102264,
+              0.11018462336102264,
+              0.11018462336102264,
+              0.11018462336102353
+            ],
+            "Phi": 5.3344412220823756e-12,
+            "Phi2": 1.7822403370500155,
+            "Phi_boundary": 5.9756144893478456e-09,
+            "Phi_energy": -2.019522738202084,
+            "loopB": 0.049219781026007416,
+            "loopC": 0.0015789577380950325,
+            "electric": 0.005684247857142124,
+            "rotation": 0.022017761455989413,
+            "material_count_PVM_TV_from_preparation": 0.0
+          },
+          {
+            "t": 0.25,
+            "norm": 0.9999999999999997,
+            "compact": 0.3449158985460253,
+            "fragmented": 0.015998434269991722,
+            "compact_site": [
+              0.34468773084126797,
+              0.00014319116301906752,
+              7.83712308129803e-09,
+              8.496870461529812e-05
+            ],
+            "Q_em_site_mean": [
+              0.9205635351354213,
+              0.040144586501882455,
+              4.8567614472063405e-05,
+              0.03924331074822387
+            ],
+            "baryon_site_mean": [
+              0.9099057473621843,
+              0.0452616265436688,
+              0.00017821366059676266,
+              0.044654412433549645
+            ],
+            "ncolour_site_mean": [
+              8.729717242086538,
+              6.135784879630995,
+              6.000534640981773,
+              6.133963237300659
+            ],
+            "nwhite_site_mean": [
+              2.0000000000000004,
+              1.9999999999999896,
+              1.9999999999999822,
+              2.0000000000000004
+            ],
+            "nwhite_site_variance": [
+              0.1675587907019418,
+              0.1675782577420195,
+              0.16759818699030937,
+              0.16757871995024676
+            ],
+            "Phi": -1.2089895131024708e-09,
+            "Phi2": 1.7797681725855379,
+            "Phi_boundary": 4.516764408155384e-09,
+            "Phi_energy": -2.0129514284033077,
+            "loopB": 0.04541557329662911,
+            "loopC": 0.2758944403518456,
+            "electric": 0.9187884240439955,
+            "rotation": 0.11073693562840689,
+            "material_count_PVM_TV_from_preparation": 0.7091318496346396
+          },
+          {
+            "t": 0.5,
+            "norm": 1.0,
+            "compact": 0.3792054729832182,
+            "fragmented": 0.025544859114346584,
+            "compact_site": [
+              0.3744028106728317,
+              0.002834255898587132,
+              5.705287904783038e-06,
+              0.0019627011238947723
+            ],
+            "Q_em_site_mean": [
+              0.8303876414623438,
+              0.08702642443653123,
+              0.0005456470082664551,
+              0.08204028709285732
+            ],
+            "baryon_site_mean": [
+              0.7763173249273482,
+              0.11295855182009987,
+              0.001519520450917714,
+              0.10920460280163485
+            ],
+            "ncolour_site_mean": [
+              8.328951974782017,
+              6.338875655460287,
+              6.004558561352751,
+              6.327613808404901
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999918,
+              2.0000000000000053,
+              1.999999999999999,
+              2.0000000000000027
+            ],
+            "nwhite_site_variance": [
+              0.038213490858893806,
+              0.038183265676514644,
+              0.03815799461768865,
+              0.03818821980007048
+            ],
+            "Phi": -7.87700040912314e-08,
+            "Phi2": 1.7802766475567546,
+            "Phi_boundary": 5.798999992754129e-09,
+            "Phi_energy": -2.009971732223054,
+            "loopB": 0.04647124506834338,
+            "loopC": 0.41081599954857295,
+            "electric": 1.0293110112942108,
+            "rotation": 0.08597296222939443,
+            "material_count_PVM_TV_from_preparation": 0.6357014333132103
+          },
+          {
+            "t": 1.0,
+            "norm": 1.0000000000000018,
+            "compact": 0.1416424085504832,
+            "fragmented": 0.049591249319579936,
+            "compact_site": [
+              0.07115740881732421,
+              0.034643512895172146,
+              0.0003079717390908654,
+              0.03553351509889589
+            ],
+            "Q_em_site_mean": [
+              0.5996068979066725,
+              0.20149478849461835,
+              -0.0007794261894337012,
+              0.19967773978814374
+            ],
+            "baryon_site_mean": [
+              0.48224637824339656,
+              0.2541551570608726,
+              0.010684821920298043,
+              0.2529136427754341
+            ],
+            "ncolour_site_mean": [
+              7.446739134730213,
+              6.762465471182619,
+              6.032054465760909,
+              6.7587409283263185
+            ],
+            "nwhite_site_mean": [
+              1.999999999999815,
+              2.0000000000000457,
+              2.0000000000001528,
+              1.9999999999999907
+            ],
+            "nwhite_site_variance": [
+              0.11894107001278975,
+              0.11944834021802553,
+              0.11987023318448564,
+              0.11936296297922766
+            ],
+            "Phi": -6.987470003863919e-07,
+            "Phi2": 1.7796622071148611,
+            "Phi_boundary": 1.0857405294660226e-08,
+            "Phi_energy": -1.9957585969648366,
+            "loopB": 0.0595822577727014,
+            "loopC": 0.6033703650329739,
+            "electric": 1.5135800877506274,
+            "rotation": 0.10421636472130469,
+            "material_count_PVM_TV_from_preparation": 0.9367649187535297
+          },
+          {
+            "t": 2.0,
+            "norm": 1.0000000000000016,
+            "compact": 0.20630822013947747,
+            "fragmented": 0.09191542611369335,
+            "compact_site": [
+              0.05458293539494223,
+              0.06947355055143682,
+              0.01940646105348651,
+              0.062845273139612
+            ],
+            "Q_em_site_mean": [
+              0.32212093092644195,
+              0.33298053967724195,
+              0.08484361801260855,
+              0.2600549113837086
+            ],
+            "baryon_site_mean": [
+              0.25454958092080465,
+              0.29102814963584905,
+              0.1775154931411315,
+              0.2769067763022168
+            ],
+            "ncolour_site_mean": [
+              6.76364874276242,
+              6.873084448907559,
+              6.532546479423406,
+              6.830720328906679
+            ],
+            "nwhite_site_mean": [
+              1.999999999999339,
+              2.000000000000018,
+              2.000000000000138,
+              2.000000000000526
+            ],
+            "nwhite_site_variance": [
+              0.10077448914247622,
+              0.10091471854858192,
+              0.10122938826911021,
+              0.10108915886301872
+            ],
+            "Phi": -3.1438629730123034e-05,
+            "Phi2": 1.7654750785065894,
+            "Phi_boundary": 9.132046587219256e-09,
+            "Phi_energy": -1.9810461498923562,
+            "loopB": 0.10135981690850371,
+            "loopC": 0.5201522582495051,
+            "electric": 1.8689947166511058,
+            "rotation": 0.12254083596051932,
+            "material_count_PVM_TV_from_preparation": 0.9523433352639648
+          },
+          {
+            "t": 4.0,
+            "norm": 1.0000000000000013,
+            "compact": 0.13269322956388085,
+            "fragmented": 0.08596044830240873,
+            "compact_site": [
+              0.026401556635200794,
+              0.02714249571383255,
+              0.04558750163391195,
+              0.03356167558093561
+            ],
+            "Q_em_site_mean": [
+              0.2154658685138563,
+              0.29757863135680435,
+              0.3054185808567714,
+              0.1815369192725695
+            ],
+            "baryon_site_mean": [
+              0.21268715167425756,
+              0.2799216432594602,
+              0.2691734460154177,
+              0.23821775905086573
+            ],
+            "ncolour_site_mean": [
+              6.638061455022767,
+              6.839764929778384,
+              6.8075203380462685,
+              6.714653277152604
+            ],
+            "nwhite_site_mean": [
+              2.000000000005159,
+              1.9999999999970213,
+              2.000000000000693,
+              1.9999999999971458
+            ],
+            "nwhite_site_variance": [
+              0.07444531209289185,
+              0.07392073229681273,
+              0.07345529910530502,
+              0.07397987890138324
+            ],
+            "Phi": -7.741037200776528e-05,
+            "Phi2": 1.7478915119772924,
+            "Phi_boundary": 8.60318095941029e-09,
+            "Phi_energy": -1.9582961722223582,
+            "loopB": 0.20577527040317384,
+            "loopC": 0.5363863842048147,
+            "electric": 2.439003660288236,
+            "rotation": 0.1284359004551515,
+            "material_count_PVM_TV_from_preparation": 0.9782781528231755
+          }
+        ],
+        "ALL_hops_off": [
+          {
+            "t": 0.0,
+            "norm": 1.0,
+            "compact": 1.0,
+            "fragmented": 0.0,
+            "compact_site": [
+              1.0000000000000002,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              0.9999999999999998,
+              1.734723475976807e-17,
+              -1.5038964099381696e-17,
+              7.72511517950459e-17
+            ],
+            "baryon_site_mean": [
+              1.0000000000000002,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              9.0,
+              5.999999999999999,
+              5.999999999999999,
+              5.999999999999999
+            ],
+            "nwhite_site_mean": [
+              2.0,
+              1.9999999999999998,
+              2.0000000000000004,
+              2.0
+            ],
+            "nwhite_site_variance": [
+              0.11018462336102175,
+              0.11018462336102441,
+              0.11018462336102175,
+              0.11018462336102264
+            ],
+            "Phi": 5.33444143892281e-12,
+            "Phi2": 1.782240337050015,
+            "Phi_boundary": 5.975614489347845e-09,
+            "Phi_energy": -2.0195227382020837,
+            "loopB": 0.04921978102600741,
+            "loopC": 0.0015789577380950323,
+            "electric": 0.005684247857142124,
+            "rotation": 0.022017761455989413,
+            "material_count_PVM_TV_from_preparation": 1.7433970933566911e-16
+          },
+          {
+            "t": 0.25,
+            "norm": 0.9999999999999997,
+            "compact": 0.9999999999999998,
+            "fragmented": 0.0,
+            "compact_site": [
+              0.9999999999999997,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              0.9999999999999997,
+              2.2551405187698495e-17,
+              -9.271993217559995e-18,
+              6.511195205103009e-17
+            ],
+            "baryon_site_mean": [
+              0.9999999999999997,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              8.999999999999998,
+              5.999999999999999,
+              5.999999999999999,
+              5.999999999999999
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999996,
+              1.9999999999999993,
+              1.9999999999999998,
+              1.9999999999999996
+            ],
+            "nwhite_site_variance": [
+              0.11018462336102353,
+              0.11018462336102441,
+              0.11018462336102353,
+              0.11018462336102353
+            ],
+            "Phi": 5.331154029515617e-12,
+            "Phi2": 1.775351048318932,
+            "Phi_boundary": 1.3287024089806833e-09,
+            "Phi_energy": -2.019522738202084,
+            "loopB": 0.05216869380534094,
+            "loopC": 0.0017837433477709721,
+            "electric": 0.006421476051975505,
+            "rotation": 0.022017761455989396,
+            "material_count_PVM_TV_from_preparation": 2.1510571102112408e-16
+          },
+          {
+            "t": 0.5,
+            "norm": 0.9999999999999992,
+            "compact": 0.9999999999999996,
+            "fragmented": 0.0,
+            "compact_site": [
+              0.9999999999999992,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              0.999999999999999,
+              1.5612511283791267e-17,
+              -7.834631245628651e-18,
+              8.044144845132e-17
+            ],
+            "baryon_site_mean": [
+              0.9999999999999992,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              8.999999999999993,
+              5.9999999999999964,
+              5.9999999999999964,
+              5.9999999999999964
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999982,
+              1.9999999999999984,
+              1.999999999999999,
+              1.9999999999999982
+            ],
+            "nwhite_site_variance": [
+              0.11018462336102708,
+              0.11018462336102708,
+              0.11018462336102619,
+              0.11018462336102797
+            ],
+            "Phi": 5.327346745166717e-12,
+            "Phi2": 1.7697351682705902,
+            "Phi_boundary": 1.6632519000319964e-09,
+            "Phi_energy": -2.019522738202084,
+            "loopB": 0.05740731224436632,
+            "loopC": 0.0021475362949255144,
+            "electric": 0.007731130661731854,
+            "rotation": 0.0220177614559894,
+            "material_count_PVM_TV_from_preparation": 4.380176776841438e-16
+          },
+          {
+            "t": 1.0,
+            "norm": 0.9999999999999991,
+            "compact": 0.9999999999999989,
+            "fragmented": 0.0,
+            "compact_site": [
+              0.9999999999999987,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              0.9999999999999987,
+              2.42861286636753e-17,
+              -1.2561075091307647e-17,
+              7.376936992579789e-17
+            ],
+            "baryon_site_mean": [
+              0.9999999999999987,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              8.999999999999991,
+              5.999999999999996,
+              5.999999999999996,
+              5.999999999999996
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999982,
+              1.9999999999999978,
+              1.9999999999999978,
+              1.9999999999999976
+            ],
+            "nwhite_site_variance": [
+              0.11018462336102619,
+              0.11018462336102708,
+              0.11018462336102797,
+              0.11018462336102797
+            ],
+            "Phi": 5.3256785917041305e-12,
+            "Phi2": 1.7565781796367728,
+            "Phi_boundary": 1.2786276292138556e-09,
+            "Phi_energy": -2.0195227382020824,
+            "loopB": 0.054155931941749655,
+            "loopC": 0.0019217459961326908,
+            "electric": 0.006918285586077688,
+            "rotation": 0.02201776145598939,
+            "material_count_PVM_TV_from_preparation": 5.837344496661956e-16
+          },
+          {
+            "t": 2.0,
+            "norm": 0.9999999999999978,
+            "compact": 0.9999999999999979,
+            "fragmented": 0.0,
+            "compact_site": [
+              0.9999999999999977,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              0.9999999999999976,
+              1.0408340855860844e-17,
+              -8.069471130254906e-18,
+              7.139746591524902e-17
+            ],
+            "baryon_site_mean": [
+              0.9999999999999977,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              8.999999999999982,
+              5.999999999999987,
+              5.999999999999987,
+              5.999999999999987
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999956,
+              1.9999999999999956,
+              1.9999999999999953,
+              1.9999999999999951
+            ],
+            "nwhite_site_variance": [
+              0.11018462336103152,
+              0.11018462336103152,
+              0.11018462336103241,
+              0.11018462336103418
+            ],
+            "Phi": 5.396741430477303e-12,
+            "Phi2": 1.7638935552298238,
+            "Phi_boundary": 9.444572539444455e-10,
+            "Phi_energy": -2.0195227382020815,
+            "loopB": 0.058854784883078375,
+            "loopC": 0.0022480552281694097,
+            "electric": 0.008092998821409878,
+            "rotation": 0.022017761455989365,
+            "material_count_PVM_TV_from_preparation": 1.19522447494802e-15
+          },
+          {
+            "t": 4.0,
+            "norm": 0.9999999999999959,
+            "compact": 0.9999999999999959,
+            "fragmented": 0.0,
+            "compact_site": [
+              0.9999999999999959,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              0.9999999999999957,
+              5.2041704279304236e-18,
+              -6.566305286233743e-18,
+              7.551071084667513e-17
+            ],
+            "baryon_site_mean": [
+              0.9999999999999959,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              8.999999999999964,
+              5.999999999999975,
+              5.999999999999975,
+              5.999999999999975
+            ],
+            "nwhite_site_mean": [
+              1.999999999999992,
+              1.9999999999999918,
+              1.9999999999999922,
+              1.999999999999992
+            ],
+            "nwhite_site_variance": [
+              0.11018462336103774,
+              0.11018462336103862,
+              0.11018462336103862,
+              0.11018462336103862
+            ],
+            "Phi": 5.44153806215919e-12,
+            "Phi2": 1.7533260711899559,
+            "Phi_boundary": 2.3047955153430745e-09,
+            "Phi_energy": -2.0195227382020766,
+            "loopB": 0.04924204809714967,
+            "loopC": 0.0015805040624799213,
+            "electric": 0.005689814624927715,
+            "rotation": 0.02201776145598932,
+            "material_count_PVM_TV_from_preparation": 2.095545958979983e-15
+          }
+        ]
+      },
+      "electric_off": {
+        "minimum_energy": -10.208020080851783,
+        "generalized_residuals": [
+          7.05297908080706e-14,
+          4.030753739758619e-14,
+          4.847941829752654e-12,
+          4.229769953026224e-12,
+          2.436427784262279e-10,
+          1.6659831076030592e-10,
+          1.6500651608077208e-09,
+          8.029411758314654e-10
+        ],
+        "ground": {
+          "norm": 0.9999999999999891,
+          "compact": 0.20489229045776247,
+          "fragmented": 0.05574940821266024,
+          "compact_site": [
+            0.03809839778291809,
+            0.07026454647325696,
+            0.06310184426534021,
+            0.033427501936247245
+          ],
+          "Q_em_site_mean": [
+            0.20532853681657937,
+            0.34374970927786247,
+            0.2904804350411977,
+            0.1604413188643489
+          ],
+          "baryon_site_mean": [
+            0.19761970355252859,
+            0.3264159685112114,
+            0.30022501648605654,
+            0.17573931145019336
+          ],
+          "ncolour_site_mean": [
+            6.592859110657521,
+            6.97924790553357,
+            6.900675049458117,
+            6.527217934350509
+          ],
+          "nwhite_site_mean": [
+            1.999999999995509,
+            2.000000000004374,
+            1.9999999999988531,
+            2.0000000000011857
+          ],
+          "nwhite_site_variance": [
+            0.07724764723694388,
+            0.07717978241322054,
+            0.07720484402504102,
+            0.07727270884877324
+          ],
+          "Phi": -1.3396837860718285,
+          "Phi2": 1.8043180372152752,
+          "Phi_boundary": 2.8133528443966073e-08,
+          "Phi_energy": -1.9918539171724543,
+          "loopB": 0.31542718059314717,
+          "loopC": 0.30656603559639445,
+          "electric": 1.5120829346426325,
+          "rotation": 0.06947847283276544
+        },
+        "channels": {
+          "C": {
+            "body_dimension": 780,
+            "full_Phi_dimension": 5460,
+            "minimum_energy": -5.201720265271471,
+            "generalized_residual": 6.434527302516242e-10
+          },
+          "F": {
+            "body_dimension": 1768,
+            "full_Phi_dimension": 12376,
+            "minimum_energy": -6.160152169646491,
+            "generalized_residual": 6.280511951258716e-10
+          },
+          "F_minus_C": -0.9584319043750194,
+          "meaning": "NONNESTED whole-sea occupation-channel discriminator, NOT a free/asymptotic breakup threshold or tagged-three-particle position PVM."
+        },
+        "meaning": "Same source/body/reference/Phi space, only electric term removed; not guaranteed nonbinding."
+      },
+      "material_EM_pulse_events": [
+        {
+          "t": 0.0,
+          "norm": 1.000000000000001,
+          "compact": 0.4003909296324287,
+          "fragmented": 0.02654874548814002,
+          "compact_site": [
+            0.39852978793657967,
+            0.0011183315464242342,
+            7.459975787483445e-07,
+            0.0007420641518465144
+          ],
+          "Q_em_site_mean": [
+            0.8859065518054688,
+            0.06458205399393713,
+            0.00019251913701631522,
+            0.04931887506358018
+          ],
+          "baryon_site_mean": [
+            0.8383815537182271,
+            0.08149405191712844,
+            0.000643688473714628,
+            0.07948070589093187
+          ],
+          "ncolour_site_mean": [
+            8.515144661154666,
+            6.244482155751404,
+            6.0019310654211315,
+            6.2384421176727916
+          ],
+          "nwhite_site_mean": [
+            1.9874079112356415,
+            1.9999999999999973,
+            2.0000000000000044,
+            2.0125920887643645
+          ],
+          "nwhite_site_variance": [
+            0.08724370101526624,
+            0.08597632671629452,
+            0.08598899789113901,
+            0.08725637219012494
+          ],
+          "Phi": -9.412675135416632e-09,
+          "Phi2": 1.7806463629863263,
+          "Phi_boundary": 5.362739385609651e-09,
+          "Phi_energy": -2.0113250387385744,
+          "loopB": 0.04433934204610569,
+          "loopC": 0.3416174127291176,
+          "electric": 0.9473602417773692,
+          "rotation": 0.09219988746041206
+        },
+        {
+          "t": 0.25,
+          "norm": 1.0000000000000018,
+          "compact": 0.23984103470356677,
+          "fragmented": 0.025174085761923128,
+          "compact_site": [
+            0.22243583125053457,
+            0.00895543104992844,
+            2.6639676397503376e-05,
+            0.008423132726706278
+          ],
+          "Q_em_site_mean": [
+            0.7578387287943918,
+            0.1116857481053511,
+            0.0014489491572129644,
+            0.1290265739430466
+          ],
+          "baryon_site_mean": [
+            0.6952684344302545,
+            0.14912558754622549,
+            0.004710177194277697,
+            0.1508958008292451
+          ],
+          "ncolour_site_mean": [
+            8.085805303290808,
+            6.447376762638683,
+            6.014130531582837,
+            6.452687402487755
+          ],
+          "nwhite_site_mean": [
+            2.003187143396673,
+            1.9999999999999971,
+            2.0000000000000036,
+            1.9968128566033299
+          ],
+          "nwhite_site_variance": [
+            0.02786269291735355,
+            0.024758394980601395,
+            0.024819042804017144,
+            0.027923340740783953
+          ],
+          "Phi": -1.2214160795710055e-07,
+          "Phi2": 1.7820210334467779,
+          "Phi_boundary": 8.627058063929458e-09,
+          "Phi_energy": -2.0057693221929864,
+          "loopB": 0.03509712172778913,
+          "loopC": 0.5046295502030796,
+          "electric": 1.1241216498864146,
+          "rotation": 0.09246305467546129
+        },
+        {
+          "t": 0.5,
+          "norm": 1.0000000000000022,
+          "compact": 0.2097511955198556,
+          "fragmented": 0.057904762969363074,
+          "compact_site": [
+            0.162662439105233,
+            0.02248531045438436,
+            0.00011681929444356668,
+            0.024486626665794566
+          ],
+          "Q_em_site_mean": [
+            0.6558990247153769,
+            0.15789967280237988,
+            -0.002310256214777614,
+            0.1885115586970209
+          ],
+          "baryon_site_mean": [
+            0.5760258422767616,
+            0.20491408803105773,
+            0.006212235806679967,
+            0.21284783388550266
+          ],
+          "ncolour_site_mean": [
+            7.728077526830292,
+            6.614742264093194,
+            6.018636707420044,
+            6.638543501656528
+          ],
+          "nwhite_site_mean": [
+            2.005307178941299,
+            2.000000000000013,
+            2.000000000000005,
+            1.9946928210587034
+          ],
+          "nwhite_site_variance": [
+            0.130746906654303,
+            0.1265537023858787,
+            0.12691399186656493,
+            0.1311071961349919
+          ],
+          "Phi": -7.801485770696226e-07,
+          "Phi2": 1.784145244999905,
+          "Phi_boundary": 1.2798741945291659e-08,
+          "Phi_energy": -1.996256404689904,
+          "loopB": 0.02800315812122909,
+          "loopC": 0.5687288779047219,
+          "electric": 1.3684956827521328,
+          "rotation": 0.11581700562776928
+        },
+        {
+          "t": 1.0,
+          "norm": 1.000000000000004,
+          "compact": 0.21134287479850394,
+          "fragmented": 0.04831382728566053,
+          "compact_site": [
+            0.10651031399707607,
+            0.04968725658043697,
+            0.0021469410873423945,
+            0.05299836313364855
+          ],
+          "Q_em_site_mean": [
+            0.5128020901300382,
+            0.2502369583233327,
+            0.005639268237768159,
+            0.23132168330886332
+          ],
+          "baryon_site_mean": [
+            0.4224007969034284,
+            0.2679985657839819,
+            0.034287372812766476,
+            0.2753132644998261
+          ],
+          "ncolour_site_mean": [
+            7.26720239071031,
+            6.803995697351974,
+            6.102862118438327,
+            6.825939793499494
+          ],
+          "nwhite_site_mean": [
+            1.9830703989770497,
+            2.0000000000000067,
+            2.000000000000068,
+            2.016929601022893
+          ],
+          "nwhite_site_variance": [
+            0.14940635439369965,
+            0.14708766002462603,
+            0.14722097695944303,
+            0.14953967132852952
+          ],
+          "Phi": -2.0168565479460228e-05,
+          "Phi2": 1.7821292058016642,
+          "Phi_boundary": 1.6930221857927542e-08,
+          "Phi_energy": -1.9867941549538375,
+          "loopB": 0.04343908029393617,
+          "loopC": 0.4706437122843231,
+          "electric": 1.3499384958741105,
+          "rotation": 0.10319126989947874
+        },
+        {
+          "t": 2.0,
+          "norm": 1.0000000000000058,
+          "compact": 0.5019570815266401,
+          "fragmented": 0.04918653541453197,
+          "compact_site": [
+            0.2946238384723116,
+            0.08091105453838583,
+            0.05872803998910936,
+            0.06769414852683327
+          ],
+          "Q_em_site_mean": [
+            0.4611139979237785,
+            0.2369191808658363,
+            0.12189087966947128,
+            0.1800759415409182
+          ],
+          "baryon_site_mean": [
+            0.44247875646284335,
+            0.2214451978321867,
+            0.16103974095768764,
+            0.17503630474728785
+          ],
+          "ncolour_site_mean": [
+            7.327436269388565,
+            6.664335593496597,
+            6.4831192228731025,
+            6.525108914241889
+          ],
+          "nwhite_site_mean": [
+            1.991990579952329,
+            2.000000000000021,
+            2.0000000000000138,
+            2.0080094200476872
+          ],
+          "nwhite_site_variance": [
+            0.143887587082272,
+            0.13992138703519696,
+            0.14032317449577647,
+            0.14428937454285595
+          ],
+          "Phi": -0.00011061156321188256,
+          "Phi2": 1.764264812521392,
+          "Phi_boundary": 1.1230178656809836e-08,
+          "Phi_energy": -1.9814968130926645,
+          "loopB": 0.05029517681646499,
+          "loopC": 0.19384898015846716,
+          "electric": 0.8926692015654069,
+          "rotation": 0.10867687027088202
+        },
+        {
+          "t": 4.0,
+          "norm": 1.0000000000000062,
+          "compact": 0.31758777018990514,
+          "fragmented": 0.06528056954743872,
+          "compact_site": [
+            0.03818298450556065,
+            0.0904505244355637,
+            0.08175455170304148,
+            0.10719970954573955
+          ],
+          "Q_em_site_mean": [
+            0.2034482106206405,
+            0.2561717839867744,
+            0.28276251407313524,
+            0.25761749131945694
+          ],
+          "baryon_site_mean": [
+            0.18805556856433864,
+            0.2748135794422086,
+            0.2738327515173784,
+            0.26329810047608093
+          ],
+          "ncolour_site_mean": [
+            6.564166705693054,
+            6.824440738326662,
+            6.821498254552173,
+            6.7898943014282915
+          ],
+          "nwhite_site_mean": [
+            2.007818487659165,
+            1.9999999999999474,
+            1.9999999999999496,
+            1.992181512340996
+          ],
+          "nwhite_site_variance": [
+            0.10838678121103218,
+            0.10514038214156418,
+            0.10513736134601093,
+            0.10838376041548425
+          ],
+          "Phi": -0.00013242388614726017,
+          "Phi2": 1.7590327478347685,
+          "Phi_boundary": 2.337243365391563e-08,
+          "Phi_energy": -1.9423038721025576,
+          "loopB": 0.024727651050956395,
+          "loopC": 0.28673820629999847,
+          "electric": 1.2593277486238847,
+          "rotation": 0.1314065773195122
+        }
+      ],
+      "same_age_no_EM_events": [
+        {
+          "t": 0.0,
+          "norm": 1.0,
+          "compact": 0.39971414353428286,
+          "fragmented": 0.026589869772216314,
+          "compact_site": [
+            0.39785104536206467,
+            0.0011228669543347633,
+            7.568875237581614e-07,
+            0.000739474330359429
+          ],
+          "Q_em_site_mean": [
+            0.8731732016006499,
+            0.06491045244932313,
+            0.00018069491224006535,
+            0.0617356510377859
+          ],
+          "baryon_site_mean": [
+            0.8382876234528749,
+            0.08160874056889811,
+            0.0006463232019099818,
+            0.07945731277631705
+          ],
+          "ncolour_site_mean": [
+            8.514862870358616,
+            6.244826221706684,
+            6.001938969605726,
+            6.2383719383289415
+          ],
+          "nwhite_site_mean": [
+            2.0000000000000004,
+            2.0000000000000004,
+            2.000000000000001,
+            2.0000000000000036
+          ],
+          "nwhite_site_variance": [
+            0.08570199165898096,
+            0.08571053255542171,
+            0.0857228075615124,
+            0.08571426666505921
+          ],
+          "Phi": -1.732428795797429e-08,
+          "Phi2": 1.7806601036415508,
+          "Phi_boundary": 5.370664492631361e-09,
+          "Phi_energy": -2.011337932855719,
+          "loopB": 0.04434146399552048,
+          "loopC": 0.3414467442275131,
+          "electric": 0.9486887735383494,
+          "rotation": 0.09212039121962493
+        },
+        {
+          "t": 0.25,
+          "norm": 1.0000000000000009,
+          "compact": 0.24310127257669167,
+          "fragmented": 0.023914111418717805,
+          "compact_site": [
+            0.22577305897090663,
+            0.00901925602897458,
+            2.6957141159257717e-05,
+            0.008282000435650918
+          ],
+          "Q_em_site_mean": [
+            0.776671008010093,
+            0.11300702194345219,
+            0.0014830055473059219,
+            0.10883896449914932
+          ],
+          "baryon_site_mean": [
+            0.6979847808799798,
+            0.1496517126625982,
+            0.004723006909650831,
+            0.14764049954777128
+          ],
+          "ncolour_site_mean": [
+            8.093954342639943,
+            6.4489551379878,
+            6.014169020728952,
+            6.44292149864332
+          ],
+          "nwhite_site_mean": [
+            1.9999999999999964,
+            2.000000000000004,
+            2.0000000000000027,
+            1.9999999999999991
+          ],
+          "nwhite_site_variance": [
+            0.02497329828899897,
+            0.025044920738490184,
+            0.025106977607172176,
+            0.025035355157664085
+          ],
+          "Phi": -1.5445546516388783e-07,
+          "Phi2": 1.7821272648917845,
+          "Phi_boundary": 8.720385927718224e-09,
+          "Phi_energy": -2.0057162118488048,
+          "loopB": 0.03533734548967638,
+          "loopC": 0.4949549280775986,
+          "electric": 1.1182723707377145,
+          "rotation": 0.0913381126546476
+        },
+        {
+          "t": 0.5,
+          "norm": 1.0000000000000013,
+          "compact": 0.21232193503689828,
+          "fragmented": 0.0577330979863787,
+          "compact_site": [
+            0.16588509535371312,
+            0.022639500004298964,
+            0.00011743330383149397,
+            0.023679906375054773
+          ],
+          "Q_em_site_mean": [
+            0.6827981208185568,
+            0.16012073477602518,
+            -0.0023512791494177255,
+            0.15943242355483597
+          ],
+          "baryon_site_mean": [
+            0.5794420351635337,
+            0.20631537493692373,
+            0.006157901167839322,
+            0.2080846887317048
+          ],
+          "ncolour_site_mean": [
+            7.738326105490608,
+            6.618946124810783,
+            6.018473703503524,
+            6.624254066195107
+          ],
+          "nwhite_site_mean": [
+            2.000000000000003,
+            2.000000000000015,
+            2.0000000000000093,
+            1.9999999999999956
+          ],
+          "nwhite_site_variance": [
+            0.12782227694759563,
+            0.12825508647404504,
+            0.12862325857504953,
+            0.1281904490485717
+          ],
+          "Phi": -7.75819083531637e-07,
+          "Phi2": 1.784419738766807,
+          "Phi_boundary": 1.3043466681540755e-08,
+          "Phi_energy": -1.9960539886884656,
+          "loopB": 0.02843294777760396,
+          "loopC": 0.5590007677569895,
+          "electric": 1.3648825096987016,
+          "rotation": 0.11437844900423164
+        },
+        {
+          "t": 1.0,
+          "norm": 1.0000000000000029,
+          "compact": 0.21074586905395176,
+          "fragmented": 0.04815987939391183,
+          "compact_site": [
+            0.10861643797345262,
+            0.050143837460309745,
+            0.002201566740898153,
+            0.04978402687929122
+          ],
+          "Q_em_site_mean": [
+            0.5176876904751159,
+            0.24978040988968914,
+            0.005439401472712451,
+            0.22709249816248606
+          ],
+          "baryon_site_mean": [
+            0.42687410630940703,
+            0.2701606137268755,
+            0.034651307043645586,
+            0.26831397292007686
+          ],
+          "ncolour_site_mean": [
+            7.280622318928207,
+            6.810481841180624,
+            6.103953921130942,
+            6.804941918760249
+          ],
+          "nwhite_site_mean": [
+            1.9999999999999498,
+            2.0000000000000053,
+            2.0000000000000666,
+            1.9999999999999987
+          ],
+          "nwhite_site_variance": [
+            0.14900466793666656,
+            0.14915033545914635,
+            0.14929636080538966,
+            0.1491506932829081
+          ],
+          "Phi": -2.054574532326693e-05,
+          "Phi2": 1.7826392316451993,
+          "Phi_boundary": 1.7404893661821565e-08,
+          "Phi_energy": -1.9863347592660119,
+          "loopB": 0.043377149271429064,
+          "loopC": 0.4648571734018052,
+          "electric": 1.3508353950246597,
+          "rotation": 0.10166815897177833
+        },
+        {
+          "t": 2.0,
+          "norm": 1.0000000000000033,
+          "compact": 0.5004186381106862,
+          "fragmented": 0.04878623478527701,
+          "compact_site": [
+            0.29271133827521567,
+            0.08199954999655941,
+            0.05975578294286603,
+            0.06595196689604503
+          ],
+          "Q_em_site_mean": [
+            0.4573298705395217,
+            0.23941311976730462,
+            0.12126810859931632,
+            0.18198890109386062
+          ],
+          "baryon_site_mean": [
+            0.4420282840640711,
+            0.22391297784248373,
+            0.16168458091012958,
+            0.1723741571833181
+          ],
+          "ncolour_site_mean": [
+            7.326084852192245,
+            6.6717389335274815,
+            6.48505374273042,
+            6.517122471549985
+          ],
+          "nwhite_site_mean": [
+            1.9999999999999376,
+            2.000000000000028,
+            2.000000000000004,
+            2.000000000000059
+          ],
+          "nwhite_site_variance": [
+            0.14251649035423686,
+            0.14282761330639904,
+            0.14325952322387803,
+            0.14294840027170252
+          ],
+          "Phi": -0.00010799484338321584,
+          "Phi2": 1.7645614305883721,
+          "Phi_boundary": 1.137390878352407e-08,
+          "Phi_energy": -1.9817308975951349,
+          "loopB": 0.05055977298363768,
+          "loopC": 0.1933780246113569,
+          "electric": 0.8917546760844801,
+          "rotation": 0.10869642332579332
+        },
+        {
+          "t": 4.0,
+          "norm": 1.000000000000002,
+          "compact": 0.3228656623397552,
+          "fragmented": 0.06401377769575656,
+          "compact_site": [
+            0.03701178861600014,
+            0.09033837648343604,
+            0.08708622019860046,
+            0.10842927704171856
+          ],
+          "Q_em_site_mean": [
+            0.21549722154946793,
+            0.2570914107924063,
+            0.2865369053274689,
+            0.24087446233065876
+          ],
+          "baryon_site_mean": [
+            0.18221054636444164,
+            0.27372475344906005,
+            0.27948545086806753,
+            0.26457924931843335
+          ],
+          "ncolour_site_mean": [
+            6.546631639093339,
+            6.821174260347187,
+            6.838456352604206,
+            6.793737747955315
+          ],
+          "nwhite_site_mean": [
+            1.9999999999999534,
+            1.9999999999999143,
+            1.9999999999999765,
+            2.000000000000161
+          ],
+          "nwhite_site_variance": [
+            0.10744555708563652,
+            0.1070480307744992,
+            0.1070743532708418,
+            0.1074718795819738
+          ],
+          "Phi": -0.00013800665678975754,
+          "Phi2": 1.759991420447555,
+          "Phi_boundary": 2.3885372468054596e-08,
+          "Phi_energy": -1.9427254875772006,
+          "loopB": 0.024410364234729573,
+          "loopC": 0.27964208665055307,
+          "electric": 1.2491413375163631,
+          "rotation": 0.1298038854112103
+        }
+      ],
+      "field_only_kick_events": [
+        {
+          "t": 0.0,
+          "norm": 1.0000000000000002,
+          "compact": 1.0000000000000004,
+          "fragmented": 0.0,
+          "compact_site": [
+            1.0000000000000002,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Q_em_site_mean": [
+            1.0000000000000002,
+            1.9081958235744878e-17,
+            -1.5035681846711085e-17,
+            7.378133426617786e-17
+          ],
+          "baryon_site_mean": [
+            1.0000000000000002,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "ncolour_site_mean": [
+            8.999999999999998,
+            6.000000000000003,
+            6.000000000000003,
+            6.000000000000003
+          ],
+          "nwhite_site_mean": [
+            2.0000000000000004,
+            2.0000000000000004,
+            2.000000000000001,
+            2.0000000000000004
+          ],
+          "nwhite_site_variance": [
+            0.11018462336102086,
+            0.11018462336102264,
+            0.11018462336102175,
+            0.11018462336102264
+          ],
+          "Phi": 0.023891476860923945,
+          "Phi2": 1.8428227868551343,
+          "Phi_boundary": 5.630302990621457e-05,
+          "Phi_energy": -1.903016058845102,
+          "loopB": 0.0492197810260074,
+          "loopC": 0.0015789577380950328,
+          "electric": 0.0056842478571421245,
+          "rotation": 0.022017761455989413
+        },
+        {
+          "t": 0.25,
+          "norm": 1.0000000000000009,
+          "compact": 0.36435030314244,
+          "fragmented": 0.015400931668066012,
+          "compact_site": [
+            0.36408496275924096,
+            0.00016368930955318423,
+            3.822066030104132e-08,
+            0.00010161285298541607
+          ],
+          "Q_em_site_mean": [
+            0.9215021459654597,
+            0.03968585791679919,
+            4.928759168849104e-05,
+            0.03876270852605446
+          ],
+          "baryon_site_mean": [
+            0.9103308399272048,
+            0.045045127199672075,
+            0.00018906181216086707,
+            0.04443497106096239
+          ],
+          "ncolour_site_mean": [
+            8.730992519781603,
+            6.135135381599033,
+            6.000567185436512,
+            6.133304913182913
+          ],
+          "nwhite_site_mean": [
+            1.9999999999999976,
+            2.0000000000000067,
+            2.000000000000007,
+            2.0000000000000044
+          ],
+          "nwhite_site_variance": [
+            0.1634575977849808,
+            0.1634782957884484,
+            0.16349947292420364,
+            0.16347877492070673
+          ],
+          "Phi": 0.01612265607107309,
+          "Phi2": 1.840446280056993,
+          "Phi_boundary": 5.180576479894068e-05,
+          "Phi_energy": -1.8970226810435895,
+          "loopB": 0.046715447154849245,
+          "loopC": 0.26778414961725916,
+          "electric": 0.8832628489635486,
+          "rotation": 0.10658484274039742
+        },
+        {
+          "t": 0.5,
+          "norm": 1.0000000000000016,
+          "compact": 0.42293826874244983,
+          "fragmented": 0.01686431116367941,
+          "compact_site": [
+            0.4172252969143848,
+            0.0031628014498967716,
+            6.97804392346459e-06,
+            0.002543192334244438
+          ],
+          "Q_em_site_mean": [
+            0.8387629275490407,
+            0.08253711537742177,
+            0.0006444568462637913,
+            0.07805550022727546
+          ],
+          "baryon_site_mean": [
+            0.7843554490062675,
+            0.10842504359499427,
+            0.0017699042588441608,
+            0.1054496031398968
+          ],
+          "ncolour_site_mean": [
+            8.353066347018762,
+            6.325275130784974,
+            6.005309712776524,
+            6.316348809419701
+          ],
+          "nwhite_site_mean": [
+            2.0000000000000004,
+            2.0000000000000058,
+            2.0000000000000084,
+            2.000000000000007
+          ],
+          "nwhite_site_variance": [
+            0.023915942687809277,
+            0.023890356324429263,
+            0.023869895362978788,
+            0.023895481726341927
+          ],
+          "Phi": 0.009020085559587727,
+          "Phi2": 1.8418081026659785,
+          "Phi_boundary": 5.376476690328909e-05,
+          "Phi_energy": -1.8943520490534849,
+          "loopB": 0.04163944594302361,
+          "loopC": 0.37357953466183424,
+          "electric": 0.8724927283663273,
+          "rotation": 0.0715615734065037
+        },
+        {
+          "t": 1.0,
+          "norm": 1.0000000000000027,
+          "compact": 0.2484271473901925,
+          "fragmented": 0.03394933593556093,
+          "compact_site": [
+            0.174650364910004,
+            0.03531937183363527,
+            0.0004452342228086538,
+            0.03801217642374455
+          ],
+          "Q_em_site_mean": [
+            0.6467469552740931,
+            0.17835635472755676,
+            -0.0012397012459840259,
+            0.176136391244337
+          ],
+          "baryon_site_mean": [
+            0.5421180097530319,
+            0.22333617946705175,
+            0.009676193486980542,
+            0.2248696172929386
+          ],
+          "ncolour_site_mean": [
+            7.62635402925912,
+            6.670008538401174,
+            6.0290285804609525,
+            6.674608851878839
+          ],
+          "nwhite_site_mean": [
+            1.999999999999995,
+            2.000000000000012,
+            2.000000000000026,
+            1.9999999999999967
+          ],
+          "nwhite_site_variance": [
+            0.12476680433090959,
+            0.12515931976017658,
+            0.12548970978196916,
+            0.12509719435272526
+          ],
+          "Phi": 0.0028975926848383224,
+          "Phi2": 1.8448753968145692,
+          "Phi_boundary": 5.3349645356864425e-05,
+          "Phi_energy": -1.8792392637472308,
+          "loopB": 0.029899090983871807,
+          "loopC": 0.49472662126685785,
+          "electric": 1.161597528469715,
+          "rotation": 0.09115495768977913
+        },
+        {
+          "t": 2.0,
+          "norm": 1.0000000000000047,
+          "compact": 0.3198911213810971,
+          "fragmented": 0.05968336489966018,
+          "compact_site": [
+            0.16441188366734447,
+            0.0748710729468626,
+            0.016026160666629985,
+            0.06458200410026006
+          ],
+          "Q_em_site_mean": [
+            0.45755017342775994,
+            0.26203531380883677,
+            0.0716719642347802,
+            0.20874254852862825
+          ],
+          "baryon_site_mean": [
+            0.4036033361828216,
+            0.2548013158427253,
+            0.11763042573202885,
+            0.22396492224242961
+          ],
+          "ncolour_site_mean": [
+            7.21081000854848,
+            6.764403947528204,
+            6.352891277196094,
+            6.671894766727315
+          ],
+          "nwhite_site_mean": [
+            2.000000000000034,
+            1.999999999999989,
+            2.000000000000029,
+            1.9999999999999847
+          ],
+          "nwhite_site_variance": [
+            0.09898223430104736,
+            0.09904089353207368,
+            0.09924287703350476,
+            0.0991842178024891
+          ],
+          "Phi": 0.010140932077325766,
+          "Phi2": 1.835115627721465,
+          "Phi_boundary": 5.36770920612867e-05,
+          "Phi_energy": -1.8612877287617597,
+          "loopB": 0.030407093504653163,
+          "loopC": 0.37841130079915347,
+          "electric": 1.2338262023529745,
+          "rotation": 0.11367299911798225
+        },
+        {
+          "t": 4.0,
+          "norm": 1.0000000000000038,
+          "compact": 0.2502973242033112,
+          "fragmented": 0.05885204664614234,
+          "compact_site": [
+            0.03218516899762074,
+            0.08595829611180186,
+            0.060108892766269975,
+            0.07204496632761874
+          ],
+          "Q_em_site_mean": [
+            0.24526992330470182,
+            0.29685100812428417,
+            0.22525259935409167,
+            0.2326264692169255
+          ],
+          "baryon_site_mean": [
+            0.21163117275208737,
+            0.290221474511939,
+            0.2335739602784837,
+            0.2645733924574928
+          ],
+          "ncolour_site_mean": [
+            6.634893518256278,
+            6.870664423535822,
+            6.700721880835457,
+            6.793720177372497
+          ],
+          "nwhite_site_mean": [
+            1.999999999999874,
+            2.0000000000000786,
+            1.9999999999998792,
+            2.0000000000001887
+          ],
+          "nwhite_site_variance": [
+            0.05548637852112215,
+            0.055321780580955604,
+            0.055061414184613966,
+            0.05522601212476008
+          ],
+          "Phi": 0.007023182611487912,
+          "Phi2": 1.819204089014565,
+          "Phi_boundary": 5.315405201643869e-05,
+          "Phi_energy": -1.837399740354269,
+          "loopB": 0.05406906634485971,
+          "loopC": 0.35201335384650834,
+          "electric": 1.3604900285189596,
+          "rotation": 0.10069597356754173
+        }
+      ],
+      "original_Peierls_current": {
+        "EM": {
+          "0": [
+            3.027233995134224e-17,
+            0.20105095259229283,
+            0.18761846527028214,
+            0.17065916362061279,
+            -0.03006997452491318,
+            0.029036169884450812
+          ],
+          "1": [
+            -3.8215863865262255e-18,
+            -3.1786686729179175e-05,
+            0.00270108692742556,
+            0.002771131342983654,
+            0.0676476630901803,
+            0.09058597048908824
+          ],
+          "2": [
+            -7.999149910077713e-17,
+            -0.0003511587592067957,
+            -0.0045275503167487696,
+            -0.015142038078052679,
+            -0.04648219378032033,
+            -0.03304854222367179
+          ],
+          "3": [
+            6.292309886972885e-17,
+            0.1902060564477977,
+            0.1811810835070457,
+            0.1649044676633037,
+            -0.03428037613780112,
+            0.07525427770302628
+          ]
+        },
+        "baryon": {
+          "0": [
+            0.0,
+            0.25798847009494996,
+            0.27973918874603537,
+            0.17747239940409815,
+            -0.05141596022969477,
+            0.04822241592215179
+          ],
+          "1": [
+            0.0,
+            0.0011693681354064337,
+            0.00905678683617384,
+            0.025290171801351125,
+            0.05391520803615605,
+            0.04061306060901236
+          ],
+          "2": [
+            0.0,
+            -0.0006881612275386553,
+            -0.006540079988941018,
+            -0.011206660973348546,
+            -0.06058168243691492,
+            -0.027713675347233
+          ],
+          "3": [
+            0.0,
+            0.2500380442040908,
+            0.2735262708841181,
+            0.15835479390489626,
+            -0.09047621318376596,
+            0.06211191394255423
+          ]
+        }
+      },
+      "original_Peierls_contact": {
+        "EM": {
+          "0": 0.3089713027325116,
+          "1": 0.3089713027325146,
+          "2": 0.30897130273251455,
+          "3": 0.3089713027325144
+        },
+        "baryon": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "Ward_after_ALL_MGS_and_actual_metric": {
+        "EM": [
+          9.101928330564116e-14,
+          7.171612248735335e-14,
+          6.897147062381392e-14,
+          1.4778842756968223e-14
+        ],
+        "baryon": [
+          1.2727174046923139e-14,
+          1.0830824977650644e-14,
+          1.0342771017713557e-14,
+          6.014921758775764e-15
+        ]
+      },
+      "source_law": "Original microscopic physicalQ chord phases BEFORE projection, fixed zero-A source/body isometry. Actual count gauge-orbit closure and independentPhi factor preserve source continuity; J/contact direct derivatives, Ward measured separately. No lab3D/mechanicalEM/photon/COM claim."
+    },
+    "3": {
+      "body_dimension": 5904,
+      "full_independent_Phi_dimension": 41328,
+      "metric": {
+        "minimum_count_metric_eigenvalue": 0.9999999999995421,
+        "maximum_count_inverse_residual": 9.678699938266253e-16,
+        "count_blocks": 664
+      },
+      "minimum_energy": -7.798985831918049,
+      "gap_from_OWN_selected_reference": -0.27004859112809143,
+      "low_poles": [
+        -7.798985831918049,
+        -7.798726757114809,
+        -7.7685695789347085,
+        -7.767490939186725,
+        -7.765359597800518,
+        -7.763921472450341,
+        -7.7407724325534355,
+        -7.740596694403878
+      ],
+      "generalized_residuals": [
+        9.729968539013586e-13,
+        5.5925396895814455e-12,
+        4.835266660223584e-10,
+        9.721656758487558e-10,
+        6.677663514003688e-10,
+        4.0723025142350507e-10,
+        1.0146300638548234e-10,
+        9.705478675056019e-11
+      ],
+      "observed_ground_cluster_members": 1,
+      "observed_ground_cluster_closed_at_lowpole_boundary": true,
+      "ground": {
+        "norm": 1.0000000000000013,
+        "compact": 0.5866859822629404,
+        "fragmented": 0.00547220382605308,
+        "compact_site": [
+          0.08199567558175802,
+          0.2565815890761243,
+          0.17382045014227634,
+          0.07428826746278178
+        ],
+        "Q_em_site_mean": [
+          0.1540184584452288,
+          0.4199146857204629,
+          0.29358497241957954,
+          0.13248188341473
+        ],
+        "baryon_site_mean": [
+          0.14980555821066657,
+          0.42139958792639476,
+          0.2962045790686177,
+          0.13259027479432373
+        ],
+        "ncolour_site_mean": [
+          6.449416674632009,
+          7.264198763779193,
+          6.8886137372058505,
+          6.397770824382993
+        ],
+        "nwhite_site_mean": [
+          2.0000000000000004,
+          2.000000000000003,
+          2.0000000000000013,
+          2.0
+        ],
+        "nwhite_site_variance": [
+          0.08075662369303949,
+          0.08074459183022675,
+          0.0807524676047846,
+          0.08076449946759379
+        ],
+        "Phi": -0.7835868421300267,
+        "Phi2": 1.7856221869901456,
+        "Phi_boundary": 8.352000329664087e-09,
+        "Phi_energy": -2.0129368601221476,
+        "loopB": 0.045150566028334484,
+        "loopC": 0.128678539350596,
+        "electric": 0.5534530954632444,
+        "rotation": 0.04911994320364026
+      },
+      "channels": {
+        "C": {
+          "body_dimension": 796,
+          "full_Phi_dimension": 5572,
+          "minimum_energy": -4.958395226745129,
+          "generalized_residual": 7.443010039360843e-11
+        },
+        "F": {
+          "body_dimension": 940,
+          "full_Phi_dimension": 6580,
+          "minimum_energy": -3.2629739416479016,
+          "generalized_residual": 4.288988123333218e-10
+        },
+        "F_minus_C": 1.6954212850972272,
+        "meaning": "NONNESTED whole-sea occupation-channel discriminator, NOT a free/asymptotic breakup threshold or tagged-three-particle position PVM."
+      },
+      "sources": {
+        "{'twice_J': 3, 'spec': ([0, 0, 0], 'threehalf', 3), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.06557982206505437,
+          "retained_strength": 0.06557982206505579,
+          "omitted_strength_signed": -1.4155343563970746e-15,
+          "raw_observed_ground_cluster_residue": 0.000521467708388601,
+          "conditional_ground_fraction": 0.007951648723159087,
+          "preparation_energy": -6.041282609660707
+        },
+        "{'twice_J': 3, 'spec': ([0, 0, 0], 'threehalf', 3), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.3012576107361817,
+          "retained_strength": 0.30125761073617846,
+          "omitted_strength_signed": 3.219646771412954e-15,
+          "raw_observed_ground_cluster_residue": 5.695926673057073e-06,
+          "conditional_ground_fraction": 1.890716274067907e-05,
+          "preparation_energy": -5.373320181772488
+        },
+        "{'twice_J': 3, 'spec': ([0, 0, 0], 'threehalf', 3), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.05755525290725803,
+          "retained_strength": 0.057555252907259755,
+          "omitted_strength_signed": -1.7277845820728999e-15,
+          "raw_observed_ground_cluster_residue": 1.2066797940843037e-06,
+          "conditional_ground_fraction": 2.0965589292582166e-05,
+          "preparation_energy": -1.4174519868906463
+        },
+        "{'twice_J': 3, 'spec': ([0, 0, 0], 'threehalf', 3), 'family': 'eom'}": {
+          "raw_canonical_strength": 1.2575175076442842,
+          "retained_strength": 1.2575175076440477,
+          "omitted_strength_signed": 2.3647750424515834e-13,
+          "raw_observed_ground_cluster_residue": 0.0012112490160359984,
+          "conditional_ground_fraction": 0.0009632064831489042,
+          "preparation_energy": -5.2505441185437345
+        },
+        "{'twice_J': 3, 'spec': ([1, 1, 1], 'threehalf', 3), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.06559122083083907,
+          "retained_strength": 0.06559122083084012,
+          "omitted_strength_signed": -1.0547118733938987e-15,
+          "raw_observed_ground_cluster_residue": 0.014432831042129399,
+          "conditional_ground_fraction": 0.22004211629711384,
+          "preparation_energy": -6.040357992959119
+        },
+        "{'twice_J': 3, 'spec': ([1, 1, 1], 'threehalf', 3), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.3013097836835537,
+          "retained_strength": 0.3013097836835438,
+          "omitted_strength_signed": 9.936496070395151e-15,
+          "raw_observed_ground_cluster_residue": 8.015858804784868e-08,
+          "conditional_ground_fraction": 2.6603380437203703e-07,
+          "preparation_energy": -5.372529966180161
+        },
+        "{'twice_J': 3, 'spec': ([1, 1, 1], 'threehalf', 3), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.06225413470117057,
+          "retained_strength": 0.06225413470117279,
+          "omitted_strength_signed": -2.220446049250313e-15,
+          "raw_observed_ground_cluster_residue": 3.113632108897611e-05,
+          "conditional_ground_fraction": 0.0005001486445588575,
+          "preparation_energy": -0.8269426830958994
+        },
+        "{'twice_J': 3, 'spec': ([1, 1, 1], 'threehalf', 3), 'family': 'eom'}": {
+          "raw_canonical_strength": 1.2774720396805372,
+          "retained_strength": 1.2774720396803994,
+          "omitted_strength_signed": 1.3788969965844444e-13,
+          "raw_observed_ground_cluster_residue": 0.03463782642867889,
+          "conditional_ground_fraction": 0.027114351901858184,
+          "preparation_energy": -5.364334521197396
+        },
+        "{'twice_J': 3, 'spec': ([2, 2, 2], 'threehalf', 3), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.06559122083083986,
+          "retained_strength": 0.0655912208308401,
+          "omitted_strength_signed": -2.3592239273284576e-16,
+          "raw_observed_ground_cluster_residue": 0.001162431588160281,
+          "conditional_ground_fraction": 0.017722365484829052,
+          "preparation_energy": -6.0403579929591125
+        },
+        "{'twice_J': 3, 'spec': ([2, 2, 2], 'threehalf', 3), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.3019753267531652,
+          "retained_strength": 0.30197532675316374,
+          "omitted_strength_signed": 1.4432899320127035e-15,
+          "raw_observed_ground_cluster_residue": 5.507030020307151e-10,
+          "conditional_ground_fraction": 1.8236688670954321e-09,
+          "preparation_energy": -5.339410601505183
+        },
+        "{'twice_J': 3, 'spec': ([2, 2, 2], 'threehalf', 3), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.06225413470117103,
+          "retained_strength": 0.06225413470117278,
+          "omitted_strength_signed": -1.7555401576885288e-15,
+          "raw_observed_ground_cluster_residue": 2.5019818583368396e-06,
+          "conditional_ground_fraction": 4.018981020853713e-05,
+          "preparation_energy": -0.8269426830955233
+        },
+        "{'twice_J': 3, 'spec': ([2, 2, 2], 'threehalf', 3), 'family': 'eom'}": {
+          "raw_canonical_strength": 1.2774720396804446,
+          "retained_strength": 1.2774720396803987,
+          "omitted_strength_signed": 4.596323321948148e-14,
+          "raw_observed_ground_cluster_residue": 0.0027733306044298695,
+          "conditional_ground_fraction": 0.002170952097803807,
+          "preparation_energy": -5.3643345211973985
+        },
+        "{'twice_J': 3, 'spec': ([3, 3, 3], 'threehalf', 3), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.06557982206505368,
+          "retained_strength": 0.06557982206505499,
+          "omitted_strength_signed": -1.304512053934559e-15,
+          "raw_observed_ground_cluster_residue": 0.0041620248200952,
+          "conditional_ground_fraction": 0.06346502154224334,
+          "preparation_energy": -6.041282609660749
+        },
+        "{'twice_J': 3, 'spec': ([3, 3, 3], 'threehalf', 3), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.3019231538057883,
+          "retained_strength": 0.3019231538057953,
+          "omitted_strength_signed": -6.994405055138486e-15,
+          "raw_observed_ground_cluster_residue": 2.0734074670615975e-09,
+          "conditional_ground_fraction": 6.867335084858268e-09,
+          "preparation_energy": -5.3401933520945635
+        },
+        "{'twice_J': 3, 'spec': ([3, 3, 3], 'threehalf', 3), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.05914368466095781,
+          "retained_strength": 0.05914368466095924,
+          "omitted_strength_signed": -1.429412144204889e-15,
+          "raw_observed_ground_cluster_residue": 9.851253184869172e-06,
+          "conditional_ground_fraction": 0.00016656475228659515,
+          "preparation_energy": -1.3405845749215244
+        },
+        "{'twice_J': 3, 'spec': ([3, 3, 3], 'threehalf', 3), 'family': 'eom'}": {
+          "raw_canonical_strength": 1.2575175076443166,
+          "retained_strength": 1.2575175076440457,
+          "omitted_strength_signed": 2.708944180085382e-13,
+          "raw_observed_ground_cluster_residue": 0.009457889126822048,
+          "conditional_ground_fraction": 0.007521079483450984,
+          "preparation_energy": -5.250544118543744
+        },
+        "{'twice_J': 3, 'spec': ([0, 1, 2], 'threehalf', 3), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.12643520209307613,
+          "retained_strength": 0.1264352020930767,
+          "omitted_strength_signed": -5.828670879282072e-16,
+          "raw_observed_ground_cluster_residue": 5.1579803120432397e-05,
+          "conditional_ground_fraction": 0.00040795444833837763,
+          "preparation_energy": -4.616684624010448
+        },
+        "{'twice_J': 3, 'spec': ([0, 1, 2], 'threehalf', 3), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.5815711792458653,
+          "retained_strength": 0.581571179245862,
+          "omitted_strength_signed": 3.3306690738754696e-15,
+          "raw_observed_ground_cluster_residue": 4.636632852021138e-06,
+          "conditional_ground_fraction": 7.972597366385274e-06,
+          "preparation_energy": -3.7177100260298754
+        },
+        "{'twice_J': 3, 'spec': ([0, 1, 2], 'threehalf', 3), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.11874805972903354,
+          "retained_strength": 0.11874805972903335,
+          "omitted_strength_signed": 1.942890293094024e-16,
+          "raw_observed_ground_cluster_residue": 2.5455292852063803e-08,
+          "conditional_ground_fraction": 2.1436386337721443e-07,
+          "preparation_energy": 0.5339352930878807
+        },
+        "{'twice_J': 3, 'spec': ([1, 2, 3], 'threehalf', 3), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.12643520209307552,
+          "retained_strength": 0.1264352020930767,
+          "omitted_strength_signed": -1.1934897514720433e-15,
+          "raw_observed_ground_cluster_residue": 3.0793561516134937e-06,
+          "conditional_ground_fraction": 2.4355212002956192e-05,
+          "preparation_energy": -4.616684624010318
+        },
+        "{'twice_J': 3, 'spec': ([1, 2, 3], 'threehalf', 3), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.5837518411974599,
+          "retained_strength": 0.5837518411974597,
+          "omitted_strength_signed": 2.220446049250313e-16,
+          "raw_observed_ground_cluster_residue": 7.080705481004934e-06,
+          "conditional_ground_fraction": 1.2129649932204354e-05,
+          "preparation_energy": -3.77663298943964
+        },
+        "{'twice_J': 3, 'spec': ([1, 2, 3], 'threehalf', 3), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.11910545687361608,
+          "retained_strength": 0.11910545687361647,
+          "omitted_strength_signed": -3.885780586188048e-16,
+          "raw_observed_ground_cluster_residue": 3.71591873199406e-09,
+          "conditional_ground_fraction": 3.11985599109623e-08,
+          "preparation_energy": 0.5295609693347658
+        },
+        "{'twice_J': 3, 'spec': ([2, 3, 0], 'threehalf', 3), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.12643356689989108,
+          "retained_strength": 0.12643356689989294,
+          "omitted_strength_signed": -1.8596235662471372e-15,
+          "raw_observed_ground_cluster_residue": 6.02530703785628e-07,
+          "conditional_ground_fraction": 4.765591278957568e-06,
+          "preparation_energy": -3.4166869294021174
+        },
+        "{'twice_J': 3, 'spec': ([2, 3, 0], 'threehalf', 3), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.5854901230118664,
+          "retained_strength": 0.5854901230118984,
+          "omitted_strength_signed": -3.197442310920451e-14,
+          "raw_observed_ground_cluster_residue": 1.5916715892330514e-08,
+          "conditional_ground_fraction": 2.7185285057331448e-08,
+          "preparation_energy": -2.625694307148398
+        },
+        "{'twice_J': 3, 'spec': ([2, 3, 0], 'threehalf', 3), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.11837372452551519,
+          "retained_strength": 0.11837372452551384,
+          "omitted_strength_signed": 1.3461454173580023e-15,
+          "raw_observed_ground_cluster_residue": 1.4017275220465753e-07,
+          "conditional_ground_fraction": 1.184154277197261e-06,
+          "preparation_energy": 1.7257492435800683
+        },
+        "{'twice_J': 3, 'spec': ([0, 3, 1], 'threehalf', 3), 'family': 'bare'}": {
+          "raw_canonical_strength": 0.12414652433380674,
+          "retained_strength": 0.12414652433380606,
+          "omitted_strength_signed": 6.800116025829084e-16,
+          "raw_observed_ground_cluster_residue": 5.186191514997322e-08,
+          "conditional_ground_fraction": 4.17747620630333e-07,
+          "preparation_energy": -3.5386579629310373
+        },
+        "{'twice_J': 3, 'spec': ([0, 3, 1], 'threehalf', 3), 'family': 'vector'}": {
+          "raw_canonical_strength": 0.5771711456568401,
+          "retained_strength": 0.577171145656845,
+          "omitted_strength_signed": -4.884981308350689e-15,
+          "raw_observed_ground_cluster_residue": 1.5204437288078955e-06,
+          "conditional_ground_fraction": 2.6343030836677857e-06,
+          "preparation_energy": -2.7897777817206824
+        },
+        "{'twice_J': 3, 'spec': ([0, 3, 1], 'threehalf', 3), 'family': 'wilson'}": {
+          "raw_canonical_strength": 0.11807709710074435,
+          "retained_strength": 0.11807709710074266,
+          "omitted_strength_signed": 1.6930901125533637e-15,
+          "raw_observed_ground_cluster_residue": 1.5971167279284803e-09,
+          "conditional_ground_fraction": 1.3526050073587345e-08,
+          "preparation_energy": 1.4849722789355544
+        }
+      },
+      "compact0_conditioning_strength": 0.03836132831145067,
+      "finite_prepared_events": {
+        "full": [
+          {
+            "t": 0.0,
+            "norm": 1.0000000000000004,
+            "compact": 1.0000000000000004,
+            "fragmented": 0.0,
+            "compact_site": [
+              1.0000000000000004,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              1.0000000000000004,
+              -4.683753385137379e-17,
+              3.5257799369019455e-17,
+              1.1310272126009062e-17
+            ],
+            "baryon_site_mean": [
+              1.0000000000000004,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              9.000000000000004,
+              6.0000000000000036,
+              6.0000000000000036,
+              6.0000000000000036
+            ],
+            "nwhite_site_mean": [
+              2.0000000000000004,
+              2.000000000000001,
+              2.0000000000000004,
+              2.000000000000001
+            ],
+            "nwhite_site_variance": [
+              0.11018462336102086,
+              0.11018462336102175,
+              0.11018462336102441,
+              0.11018462336102175
+            ],
+            "Phi": 5.3344407884015066e-12,
+            "Phi2": 1.782240337050016,
+            "Phi_boundary": 5.9756144893478505e-09,
+            "Phi_energy": -2.019522738202084,
+            "loopB": 0.0492197810260074,
+            "loopC": 0.0015789577380950343,
+            "electric": 0.005684247857142127,
+            "rotation": 0.022017761455989424,
+            "material_count_PVM_TV_from_preparation": 0.0
+          },
+          {
+            "t": 0.25,
+            "norm": 1.0000000000000004,
+            "compact": 0.40583727656924284,
+            "fragmented": 0.002638503586464825,
+            "compact_site": [
+              0.40582048525076403,
+              1.016981828819241e-05,
+              6.550943478865345e-12,
+              6.6214936393411e-06
+            ],
+            "Q_em_site_mean": [
+              0.9381081856816107,
+              0.031522899376174744,
+              4.918891334166528e-05,
+              0.030319726028873284
+            ],
+            "baryon_site_mean": [
+              0.9430061374874131,
+              0.02852597148773436,
+              3.482445361360247e-05,
+              0.02843306657124148
+            ],
+            "ncolour_site_mean": [
+              8.829018412462247,
+              6.085577914463203,
+              6.000104473360844,
+              6.08529919971375
+            ],
+            "nwhite_site_mean": [
+              2.0000000000000044,
+              1.9999999999999991,
+              2.0000000000000036,
+              2.0000000000000044
+            ],
+            "nwhite_site_variance": [
+              0.15712626361198456,
+              0.15713094614975898,
+              0.15713620302216658,
+              0.15713152048440193
+            ],
+            "Phi": -2.5206778374656236e-10,
+            "Phi2": 1.7799615732232965,
+            "Phi_boundary": 4.498049528050532e-09,
+            "Phi_energy": -2.0137128443114785,
+            "loopB": 0.047781379242629124,
+            "loopC": 0.20950859920868303,
+            "electric": 0.751361801155111,
+            "rotation": 0.09725032041056095,
+            "material_count_PVM_TV_from_preparation": 0.6824719422000003
+          },
+          {
+            "t": 0.5,
+            "norm": 1.0,
+            "compact": 0.7708577777929778,
+            "fragmented": 0.007359208681825298,
+            "compact_site": [
+              0.7705529161314563,
+              0.00019206195421011106,
+              5.7193374575459335e-09,
+              0.00011279398797343696
+            ],
+            "Q_em_site_mean": [
+              0.9151896784078085,
+              0.04746371340734499,
+              0.0005655451676847385,
+              0.036781063017160984
+            ],
+            "baryon_site_mean": [
+              0.9474537367724974,
+              0.02671594234543582,
+              0.0003850803865240895,
+              0.02544524049554276
+            ],
+            "ncolour_site_mean": [
+              8.842361210317483,
+              6.0801478270363205,
+              6.001155241159581,
+              6.0763357214866325
+            ],
+            "nwhite_site_mean": [
+              2.0000000000000036,
+              2.0000000000000036,
+              2.0000000000000004,
+              1.999999999999999
+            ],
+            "nwhite_site_variance": [
+              0.013088236618218119,
+              0.013088129222734501,
+              0.013095631151058384,
+              0.01309573854652335
+            ],
+            "Phi": -3.9113190659391395e-09,
+            "Phi2": 1.7806931333963003,
+            "Phi_boundary": 5.5657474244422786e-09,
+            "Phi_energy": -2.0135692157331384,
+            "loopB": 0.04806399954589295,
+            "loopC": 0.1264410907236469,
+            "electric": 0.37015455994298935,
+            "rotation": 0.030669213696223368,
+            "material_count_PVM_TV_from_preparation": 0.26188806774739876
+          },
+          {
+            "t": 1.0,
+            "norm": 1.0000000000000007,
+            "compact": 0.7303589304699186,
+            "fragmented": 0.004914842958700566,
+            "compact_site": [
+              0.7278808645516384,
+              0.0010818120484915933,
+              7.61180449924167e-07,
+              0.0013954926893385434
+            ],
+            "Q_em_site_mean": [
+              0.8596699815662013,
+              0.0699954788689817,
+              0.0006137021839560254,
+              0.06972083738086114
+            ],
+            "baryon_site_mean": [
+              0.9176156819152227,
+              0.03695721568712789,
+              0.00042056114048441323,
+              0.04500654125716654
+            ],
+            "ncolour_site_mean": [
+              8.752847045745666,
+              6.110871647061383,
+              6.001261683421446,
+              6.135019623771492
+            ],
+            "nwhite_site_mean": [
+              2.0000000000000036,
+              1.9999999999999991,
+              1.9999999999999971,
+              2.000000000000008
+            ],
+            "nwhite_site_variance": [
+              0.10598765592437775,
+              0.10615074795125246,
+              0.10624888950202482,
+              0.10608579747516877
+            ],
+            "Phi": -5.177699468231038e-07,
+            "Phi2": 1.7767320776224103,
+            "Phi_boundary": 8.237659112435466e-09,
+            "Phi_energy": -2.0023218917754755,
+            "loopB": 0.040613488440041146,
+            "loopC": 0.19564013774008154,
+            "electric": 0.40725010145657947,
+            "rotation": 0.0509221084132668,
+            "material_count_PVM_TV_from_preparation": 0.2930819256745675
+          },
+          {
+            "t": 2.0,
+            "norm": 1.0000000000000004,
+            "compact": 0.5224727453651816,
+            "fragmented": 0.008652751300000476,
+            "compact_site": [
+              0.5098564737036659,
+              0.005396145132069406,
+              1.2663390601520121e-05,
+              0.007207463138845278
+            ],
+            "Q_em_site_mean": [
+              0.7603878211791503,
+              0.11546236207996566,
+              0.003968290958458602,
+              0.1201815257824254
+            ],
+            "baryon_site_mean": [
+              0.8342699970888512,
+              0.07739673301734933,
+              0.0016999312701359475,
+              0.08663333862366304
+            ],
+            "ncolour_site_mean": [
+              8.50280999126657,
+              6.232190199052059,
+              6.005099793810397,
+              6.259900015871008
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999851,
+              1.9999999999999776,
+              2.0000000000000133,
+              2.000000000000029
+            ],
+            "nwhite_site_variance": [
+              0.0951562923294178,
+              0.09539249158921415,
+              0.09562211886866212,
+              0.09538591960887377
+            ],
+            "Phi": -1.0876010344904995e-06,
+            "Phi2": 1.7599822175276514,
+            "Phi_boundary": 5.961716924530461e-09,
+            "Phi_energy": -1.9794745081703071,
+            "loopB": 0.03455243926337248,
+            "loopC": 0.3081925107953528,
+            "electric": 0.7753332052639544,
+            "rotation": 0.08054794303083626,
+            "material_count_PVM_TV_from_preparation": 0.5226433875902142
+          },
+          {
+            "t": 4.0,
+            "norm": 1.000000000000004,
+            "compact": 0.37130673974093303,
+            "fragmented": 0.010416733836764934,
+            "compact_site": [
+              0.3514996475213631,
+              0.011354101969466089,
+              0.0005251221231705551,
+              0.007927868126933286
+            ],
+            "Q_em_site_mean": [
+              0.7272831968080424,
+              0.14182433637114444,
+              0.013962397846229237,
+              0.11693006897458702
+            ],
+            "baryon_site_mean": [
+              0.8024393993229956,
+              0.09369963731687717,
+              0.01627969244856298,
+              0.08758127091156903
+            ],
+            "ncolour_site_mean": [
+              8.407318197969008,
+              6.281098911950663,
+              6.048839077345727,
+              6.262743812734738
+            ],
+            "nwhite_site_mean": [
+              1.9999999999998692,
+              1.9999999999999614,
+              2.000000000000041,
+              2.0000000000001616
+            ],
+            "nwhite_site_variance": [
+              0.07943062373294207,
+              0.0795066730713101,
+              0.07954321515018581,
+              0.0794671658118018
+            ],
+            "Phi": 2.293219042720897e-05,
+            "Phi2": 1.7291515635830064,
+            "Phi_boundary": 6.242945837701146e-09,
+            "Phi_energy": -1.9376840359771528,
+            "loopB": 0.054900626699691424,
+            "loopC": 0.28251805412396713,
+            "electric": 1.010503922472771,
+            "rotation": 0.11753090386045505,
+            "material_count_PVM_TV_from_preparation": 0.679563537114214
+          }
+        ],
+        "colour_electric_off": [
+          {
+            "t": 0.0,
+            "norm": 1.0000000000000004,
+            "compact": 1.0000000000000004,
+            "fragmented": 0.0,
+            "compact_site": [
+              1.0000000000000004,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              1.0000000000000004,
+              -4.683753385137379e-17,
+              3.5257799369019455e-17,
+              1.1310272126009062e-17
+            ],
+            "baryon_site_mean": [
+              1.0000000000000004,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              9.000000000000004,
+              6.0000000000000036,
+              6.0000000000000036,
+              6.0000000000000036
+            ],
+            "nwhite_site_mean": [
+              2.0000000000000004,
+              2.000000000000001,
+              2.0000000000000004,
+              2.000000000000001
+            ],
+            "nwhite_site_variance": [
+              0.11018462336102086,
+              0.11018462336102175,
+              0.11018462336102441,
+              0.11018462336102175
+            ],
+            "Phi": 5.3344407884015066e-12,
+            "Phi2": 1.782240337050016,
+            "Phi_boundary": 5.9756144893478505e-09,
+            "Phi_energy": -2.019522738202084,
+            "loopB": 0.0492197810260074,
+            "loopC": 0.0015789577380950343,
+            "electric": 0.005684247857142127,
+            "rotation": 0.022017761455989424,
+            "material_count_PVM_TV_from_preparation": 0.0
+          },
+          {
+            "t": 0.25,
+            "norm": 0.9999999999999999,
+            "compact": 0.38424118399418006,
+            "fragmented": 0.002765692275513383,
+            "compact_site": [
+              0.3842241754870876,
+              1.0370314822492073e-05,
+              6.714558872837888e-12,
+              6.638185555911444e-06
+            ],
+            "Q_em_site_mean": [
+              0.9363315633100538,
+              0.03241891408535435,
+              4.7142510192545e-05,
+              0.031202380094398095
+            ],
+            "baryon_site_mean": [
+              0.9411802317385889,
+              0.029448352795004684,
+              3.360078934117949e-05,
+              0.029337814677065675
+            ],
+            "ncolour_site_mean": [
+              8.82354069521577,
+              6.088345058385004,
+              6.000100802368019,
+              6.088013444031188
+            ],
+            "nwhite_site_mean": [
+              2.000000000000002,
+              2.0000000000000004,
+              1.9999999999999964,
+              2.0000000000000004
+            ],
+            "nwhite_site_variance": [
+              0.16129128058168263,
+              0.16129561365534606,
+              0.16130049057704543,
+              0.16129615750338644
+            ],
+            "Phi": -1.1489815739465503e-10,
+            "Phi2": 1.7797910375651376,
+            "Phi_boundary": 4.424853826738671e-09,
+            "Phi_energy": -2.0132250817993795,
+            "loopB": 0.04644015205742716,
+            "loopC": 0.21904233273113746,
+            "electric": 0.7870233859469067,
+            "rotation": 0.1007713724993153,
+            "material_count_PVM_TV_from_preparation": 0.7122674397710661
+          },
+          {
+            "t": 0.5,
+            "norm": 0.9999999999999991,
+            "compact": 0.7162496832126007,
+            "fragmented": 0.01005184812780826,
+            "compact_site": [
+              0.715935335660532,
+              0.00021018316427154425,
+              6.195514538912735e-09,
+              0.00010415819228282356
+            ],
+            "Q_em_site_mean": [
+              0.9069210495977654,
+              0.05198945123408077,
+              0.0005147174839374338,
+              0.0405747816842143
+            ],
+            "baryon_site_mean": [
+              0.9401495096517111,
+              0.03063139788538107,
+              0.00035517692566826856,
+              0.028863915537237002
+            ],
+            "ncolour_site_mean": [
+              8.820448528955154,
+              6.091894193656131,
+              6.001065530777005,
+              6.086591746611714
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999925,
+              2.0000000000000027,
+              1.9999999999999933,
+              1.9999999999999996
+            ],
+            "nwhite_site_variance": [
+              0.032889477881975715,
+              0.03288744641322072,
+              0.032892267697091526,
+              0.03289429916580655
+            ],
+            "Phi": 4.153303477180681e-09,
+            "Phi2": 1.7799516415729195,
+            "Phi_boundary": 5.222000138112651e-09,
+            "Phi_energy": -2.012623434396776,
+            "loopB": 0.05194599470092909,
+            "loopC": 0.15886761896369433,
+            "electric": 0.4962783193526028,
+            "rotation": 0.04279746362379622,
+            "material_count_PVM_TV_from_preparation": 0.32064255801484787
+          },
+          {
+            "t": 1.0,
+            "norm": 1.0000000000000002,
+            "compact": 0.6455448801881234,
+            "fragmented": 0.007834086994560088,
+            "compact_site": [
+              0.6435254357431179,
+              0.0012002818754230276,
+              1.078902845004227e-06,
+              0.0008180836667372828
+            ],
+            "Q_em_site_mean": [
+              0.8111055741164949,
+              0.0984458918841266,
+              0.0008764877594578412,
+              0.08957204623992286
+            ],
+            "baryon_site_mean": [
+              0.890870586445984,
+              0.05121462889595124,
+              0.000660946483910558,
+              0.05725383817415662
+            ],
+            "ncolour_site_mean": [
+              8.672611759337933,
+              6.1536438866878616,
+              6.001982839451734,
+              6.171761514522474
+            ],
+            "nwhite_site_mean": [
+              1.999999999999963,
+              2.000000000000052,
+              2.000000000000006,
+              2.0000000000000013
+            ],
+            "nwhite_site_variance": [
+              0.09436226364142453,
+              0.09454970086791015,
+              0.09466033428035558,
+              0.09447289705386108
+            ],
+            "Phi": -6.620664453626818e-07,
+            "Phi2": 1.7743368882141843,
+            "Phi_boundary": 6.9662898948634614e-09,
+            "Phi_energy": -2.0011740724799,
+            "loopB": 0.06802917041263981,
+            "loopC": 0.2865856093810309,
+            "electric": 0.676329858554946,
+            "rotation": 0.05723266523573766,
+            "material_count_PVM_TV_from_preparation": 0.37846250661376435
+          },
+          {
+            "t": 2.0,
+            "norm": 1.0000000000000029,
+            "compact": 0.2846004072275277,
+            "fragmented": 0.027464319388097846,
+            "compact_site": [
+              0.27345302364460417,
+              0.005222762165931519,
+              3.1067173597221836e-05,
+              0.0058935542433946764
+            ],
+            "Q_em_site_mean": [
+              0.5970270008892364,
+              0.19679997680957373,
+              0.005214370996622953,
+              0.20095865130457088
+            ],
+            "baryon_site_mean": [
+              0.719317463077671,
+              0.14094378367783894,
+              0.003220031673770899,
+              0.13651872157072076
+            ],
+            "ncolour_site_mean": [
+              8.157952389233039,
+              6.422831351033551,
+              6.009660095021326,
+              6.409556164712179
+            ],
+            "nwhite_site_mean": [
+              1.9999999999988858,
+              1.9999999999996736,
+              2.0000000000011062,
+              2.000000000000356
+            ],
+            "nwhite_site_variance": [
+              0.10789865007270372,
+              0.10849379085302324,
+              0.10912441594868927,
+              0.10852927516836619
+            ],
+            "Phi": -8.929922631914847e-06,
+            "Phi2": 1.7545434927213148,
+            "Phi_boundary": 5.0478970082776404e-09,
+            "Phi_energy": -1.9727241278221066,
+            "loopB": 0.11375326463681482,
+            "loopC": 0.5929580093076221,
+            "electric": 1.6779239850730945,
+            "rotation": 0.1101234729233893,
+            "material_count_PVM_TV_from_preparation": 0.7474020907667537
+          },
+          {
+            "t": 4.0,
+            "norm": 0.9999999999999997,
+            "compact": 0.25045390197618345,
+            "fragmented": 0.05634728963627647,
+            "compact_site": [
+              0.20440832114267407,
+              0.0276535013037563,
+              0.0006500906331265404,
+              0.017741988896626478
+            ],
+            "Q_em_site_mean": [
+              0.6424132750024728,
+              0.15471700219075823,
+              0.022001884647281558,
+              0.18086783815948748
+            ],
+            "baryon_site_mean": [
+              0.6090372616446986,
+              0.204836607195719,
+              0.031540387700145306,
+              0.15458574345943554
+            ],
+            "ncolour_site_mean": [
+              7.827111784934096,
+              6.614509821587161,
+              6.09462116310044,
+              6.463757230378302
+            ],
+            "nwhite_site_mean": [
+              2.0000000000031224,
+              1.9999999999987983,
+              2.000000000001153,
+              1.999999999996923
+            ],
+            "nwhite_site_variance": [
+              0.07269553195617018,
+              0.07220579048287235,
+              0.0718116168519023,
+              0.07230135832520013
+            ],
+            "Phi": 5.221164928207985e-05,
+            "Phi2": 1.7243383545655269,
+            "Phi_boundary": 5.77448303761803e-09,
+            "Phi_energy": -1.9216061886028601,
+            "loopB": 0.251331690451333,
+            "loopC": 0.6003925805951978,
+            "electric": 2.364979068127224,
+            "rotation": 0.09497114280935515,
+            "material_count_PVM_TV_from_preparation": 0.807008127504818
+          }
+        ],
+        "ALL_hops_off": [
+          {
+            "t": 0.0,
+            "norm": 1.0000000000000007,
+            "compact": 1.0000000000000009,
+            "fragmented": 0.0,
+            "compact_site": [
+              1.0000000000000007,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              1.0000000000000007,
+              -3.122502256758253e-17,
+              5.954265748327387e-17,
+              -2.1658738340410866e-17
+            ],
+            "baryon_site_mean": [
+              1.0000000000000007,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              9.000000000000007,
+              6.000000000000005,
+              6.000000000000005,
+              6.000000000000005
+            ],
+            "nwhite_site_mean": [
+              2.000000000000001,
+              2.0000000000000013,
+              2.0000000000000013,
+              2.0000000000000018
+            ],
+            "nwhite_site_variance": [
+              0.11018462336101997,
+              0.11018462336101997,
+              0.11018462336102175,
+              0.11018462336101909
+            ],
+            "Phi": 5.334551593863535e-12,
+            "Phi2": 1.7822403370500162,
+            "Phi_boundary": 5.9756144893478505e-09,
+            "Phi_energy": -2.0195227382020846,
+            "loopB": 0.049219781026007416,
+            "loopC": 0.0015789577380950347,
+            "electric": 0.005684247857142127,
+            "rotation": 0.022017761455989424,
+            "material_count_PVM_TV_from_preparation": 2.5500435096859064e-16
+          },
+          {
+            "t": 0.25,
+            "norm": 1.0000000000000004,
+            "compact": 1.0000000000000007,
+            "fragmented": 0.0,
+            "compact_site": [
+              1.0000000000000004,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              1.0000000000000004,
+              -2.949029909160572e-17,
+              5.314845870401036e-17,
+              -2.6849726818099643e-17
+            ],
+            "baryon_site_mean": [
+              1.0000000000000004,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              9.000000000000002,
+              6.000000000000004,
+              6.000000000000004,
+              6.000000000000004
+            ],
+            "nwhite_site_mean": [
+              2.000000000000001,
+              2.000000000000001,
+              2.000000000000001,
+              2.000000000000001
+            ],
+            "nwhite_site_variance": [
+              0.11018462336101997,
+              0.11018462336102086,
+              0.11018462336102264,
+              0.11018462336102264
+            ],
+            "Phi": 5.3314873674735475e-12,
+            "Phi2": 1.7753510483189334,
+            "Phi_boundary": 1.3287024089806851e-09,
+            "Phi_energy": -2.019522738202086,
+            "loopB": 0.05216869380534107,
+            "loopC": 0.0017837433477709815,
+            "electric": 0.006421476051975532,
+            "rotation": 0.02201776145598941,
+            "material_count_PVM_TV_from_preparation": 2.0036056147532122e-16
+          },
+          {
+            "t": 0.5,
+            "norm": 0.9999999999999999,
+            "compact": 0.9999999999999997,
+            "fragmented": 0.0,
+            "compact_site": [
+              0.9999999999999998,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              0.9999999999999998,
+              -2.7755575615628914e-17,
+              5.1088792213643125e-17,
+              -2.017876002332079e-17
+            ],
+            "baryon_site_mean": [
+              0.9999999999999998,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              9.000000000000002,
+              6.000000000000001,
+              6.000000000000001,
+              6.000000000000001
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999991,
+              1.9999999999999998,
+              2.0,
+              1.9999999999999991
+            ],
+            "nwhite_site_variance": [
+              0.1101846233610253,
+              0.11018462336102353,
+              0.11018462336102353,
+              0.11018462336102797
+            ],
+            "Phi": 5.327679432603344e-12,
+            "Phi2": 1.7697351682705909,
+            "Phi_boundary": 1.6632519000319972e-09,
+            "Phi_energy": -2.0195227382020855,
+            "loopB": 0.057407312244366585,
+            "loopC": 0.0021475362949255348,
+            "electric": 0.0077311306617319185,
+            "rotation": 0.02201776145598941,
+            "material_count_PVM_TV_from_preparation": 2.5326962749261384e-16
+          },
+          {
+            "t": 1.0,
+            "norm": 0.9999999999999998,
+            "compact": 0.9999999999999997,
+            "fragmented": 0.0,
+            "compact_site": [
+              0.9999999999999996,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              0.9999999999999997,
+              -2.949029909160572e-17,
+              6.199889421163373e-17,
+              -1.818240924576081e-17
+            ],
+            "baryon_site_mean": [
+              0.9999999999999996,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              9.0,
+              6.000000000000001,
+              6.000000000000001,
+              6.000000000000001
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999991,
+              1.9999999999999991,
+              1.9999999999999993,
+              1.9999999999999998
+            ],
+            "nwhite_site_variance": [
+              0.11018462336102441,
+              0.11018462336102441,
+              0.1101846233610253,
+              0.11018462336102441
+            ],
+            "Phi": 5.325568165712863e-12,
+            "Phi2": 1.756578179636774,
+            "Phi_boundary": 1.2786276292138564e-09,
+            "Phi_energy": -2.0195227382020846,
+            "loopB": 0.05415593194174983,
+            "loopC": 0.0019217459961327022,
+            "electric": 0.006918285586077728,
+            "rotation": 0.022017761455989403,
+            "material_count_PVM_TV_from_preparation": 2.949029909160572e-16
+          },
+          {
+            "t": 2.0,
+            "norm": 0.9999999999999984,
+            "compact": 0.9999999999999987,
+            "fragmented": 0.0,
+            "compact_site": [
+              0.9999999999999986,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              0.9999999999999986,
+              -3.642919299551295e-17,
+              5.778606996934606e-17,
+              -1.5341460740669888e-17
+            ],
+            "baryon_site_mean": [
+              0.9999999999999986,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              8.99999999999999,
+              5.999999999999993,
+              5.999999999999993,
+              5.999999999999993
+            ],
+            "nwhite_site_mean": [
+              1.999999999999997,
+              1.9999999999999971,
+              1.9999999999999971,
+              1.9999999999999973
+            ],
+            "nwhite_site_variance": [
+              0.11018462336102797,
+              0.11018462336102886,
+              0.11018462336102886,
+              0.11018462336102886
+            ],
+            "Phi": 5.396630462384949e-12,
+            "Phi2": 1.7638935552298254,
+            "Phi_boundary": 9.444572539444453e-10,
+            "Phi_energy": -2.019522738202083,
+            "loopB": 0.05885478488307869,
+            "loopC": 0.0022480552281694327,
+            "electric": 0.008092998821409954,
+            "rotation": 0.022017761455989375,
+            "material_count_PVM_TV_from_preparation": 9.046582927219049e-16
+          },
+          {
+            "t": 4.0,
+            "norm": 0.9999999999999967,
+            "compact": 0.9999999999999966,
+            "fragmented": 0.0,
+            "compact_site": [
+              0.9999999999999969,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Q_em_site_mean": [
+              0.9999999999999967,
+              -2.7755575615628914e-17,
+              5.414049310392276e-17,
+              -1.818706792697071e-17
+            ],
+            "baryon_site_mean": [
+              0.9999999999999969,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ncolour_site_mean": [
+              8.99999999999997,
+              5.9999999999999805,
+              5.9999999999999805,
+              5.9999999999999805
+            ],
+            "nwhite_site_mean": [
+              1.9999999999999936,
+              1.9999999999999936,
+              1.9999999999999938,
+              1.9999999999999936
+            ],
+            "nwhite_site_variance": [
+              0.11018462336103418,
+              0.11018462336103418,
+              0.11018462336103507,
+              0.11018462336103596
+            ],
+            "Phi": 5.441205428932672e-12,
+            "Phi2": 1.7533260711899572,
+            "Phi_boundary": 2.304795515343077e-09,
+            "Phi_energy": -2.019522738202078,
+            "loopB": 0.04924204809714969,
+            "loopC": 0.0015805040624799237,
+            "electric": 0.0056898146249277195,
+            "rotation": 0.02201776145598933,
+            "material_count_PVM_TV_from_preparation": 1.861358289723114e-15
+          }
+        ]
+      },
+      "electric_off": {
+        "minimum_energy": -8.679970461238234,
+        "generalized_residuals": [
+          7.944262013947127e-14,
+          7.093986262720389e-14,
+          8.183274702961205e-14,
+          9.199475936413834e-14,
+          1.1355213315610594e-12,
+          2.0111182379371304e-12,
+          1.0387241175212708e-09,
+          5.31043782474137e-10
+        ],
+        "ground": {
+          "norm": 0.9999999999999911,
+          "compact": 0.21284192670872923,
+          "fragmented": 0.10458724983871798,
+          "compact_site": [
+            0.01356796644532889,
+            0.11043781128318558,
+            0.07726524564272544,
+            0.011570903337489311
+          ],
+          "Q_em_site_mean": [
+            0.15188090145907251,
+            0.526778726796311,
+            0.28191128720637804,
+            0.03942908453823009
+          ],
+          "baryon_site_mean": [
+            0.11558597919675465,
+            0.4393443553024746,
+            0.35756303785658056,
+            0.08750662764418084
+          ],
+          "ncolour_site_mean": [
+            6.346757937590223,
+            7.318033065907372,
+            7.0726891135696865,
+            6.2625198829325
+          ],
+          "nwhite_site_mean": [
+            1.9999999999957572,
+            2.000000000004098,
+            1.9999999999989126,
+            2.000000000001155
+          ],
+          "nwhite_site_variance": [
+            0.07454781082845763,
+            0.07454019645848575,
+            0.07456836408922207,
+            0.07457597845917618
+          ],
+          "Phi": -1.3353885432734465,
+          "Phi2": 1.7876152355634414,
+          "Phi_boundary": 1.0203201455170532e-08,
+          "Phi_energy": -2.0107771830405357,
+          "loopB": 0.34118184184006584,
+          "loopC": 0.22508306808112463,
+          "electric": 1.630508151501941,
+          "rotation": 0.050937477562255265
+        },
+        "channels": {
+          "C": {
+            "body_dimension": 796,
+            "full_Phi_dimension": 5572,
+            "minimum_energy": -5.201720265271485,
+            "generalized_residual": 1.0603226673474875e-10
+          },
+          "F": {
+            "body_dimension": 940,
+            "full_Phi_dimension": 6580,
+            "minimum_energy": -6.141706955519455,
+            "generalized_residual": 7.69808060662406e-10
+          },
+          "F_minus_C": -0.9399866902479701,
+          "meaning": "NONNESTED whole-sea occupation-channel discriminator, NOT a free/asymptotic breakup threshold or tagged-three-particle position PVM."
+        },
+        "meaning": "Same source/body/reference/Phi space, only electric term removed; not guaranteed nonbinding."
+      },
+      "material_EM_pulse_events": [
+        {
+          "t": 0.0,
+          "norm": 1.000000000000001,
+          "compact": 0.6189954879844024,
+          "fragmented": 0.00725145313043815,
+          "compact_site": [
+            0.6188515864920078,
+            8.972392217776924e-05,
+            6.990301997890596e-10,
+            5.4176871186416705e-05
+          ],
+          "Q_em_site_mean": [
+            0.9363335669994284,
+            0.04004110405448593,
+            0.00024509003767941016,
+            0.02338023890840704
+          ],
+          "baryon_site_mean": [
+            0.9443448322102732,
+            0.028030646461038578,
+            0.00016788776815245546,
+            0.027456633560537378
+          ],
+          "ncolour_site_mean": [
+            8.833034496630841,
+            6.084091939383126,
+            6.000503663304482,
+            6.082369900681627
+          ],
+          "nwhite_site_mean": [
+            1.9890541245915712,
+            2.000000000000003,
+            2.0,
+            2.0109458754084435
+          ],
+          "nwhite_site_variance": [
+            0.07179660403974886,
+            0.07050844230436581,
+            0.07051840662734499,
+            0.07180656836272448
+          ],
+          "Phi": 3.1530836043253824e-09,
+          "Phi2": 1.7805341574437634,
+          "Phi_boundary": 4.98428987511086e-09,
+          "Phi_energy": -2.012698797816813,
+          "loopB": 0.04823898863831853,
+          "loopC": 0.16080796886931106,
+          "electric": 0.5488844805625299,
+          "rotation": 0.05865363335513306
+        },
+        {
+          "t": 0.25,
+          "norm": 1.0000000000000016,
+          "compact": 0.4848795624783829,
+          "fragmented": 0.0038399107050472183,
+          "compact_site": [
+            0.4842552779654979,
+            0.00034599821285410286,
+            5.1800387224742803e-08,
+            0.0002782344996440238
+          ],
+          "Q_em_site_mean": [
+            0.8512855979135129,
+            0.0725176631672234,
+            0.0014407839473340271,
+            0.07475595497193033
+          ],
+          "baryon_site_mean": [
+            0.9150400145039479,
+            0.040681646350636945,
+            0.0009637611228293337,
+            0.04331457802258679
+          ],
+          "ncolour_site_mean": [
+            8.745120043511827,
+            6.1220449390519045,
+            6.002891283368499,
+            6.129943734067776
+          ],
+          "nwhite_site_mean": [
+            2.003771116704208,
+            2.0000000000000044,
+            2.0000000000000018,
+            1.9962288832958066
+          ],
+          "nwhite_site_variance": [
+            0.04520372533390571,
+            0.0422125613195492,
+            0.04223637781384593,
+            0.045227541828217976
+          ],
+          "Phi": -1.5562393297641197e-08,
+          "Phi2": 1.7792611420764868,
+          "Phi_boundary": 6.4144430811822575e-09,
+          "Phi_energy": -2.010688898892427,
+          "loopB": 0.04395116656711112,
+          "loopC": 0.2600829939614168,
+          "electric": 0.7004209498625205,
+          "rotation": 0.06913493964891447
+        },
+        {
+          "t": 0.5,
+          "norm": 1.0000000000000016,
+          "compact": 0.5304045678351259,
+          "fragmented": 0.005254444573864012,
+          "compact_site": [
+            0.5284058125512201,
+            0.0008266412918825799,
+            4.061282664289647e-07,
+            0.0011717078637565592
+          ],
+          "Q_em_site_mean": [
+            0.8340399102408338,
+            0.07616524885956406,
+            0.0016231138862056785,
+            0.08817172701339808
+          ],
+          "baryon_site_mean": [
+            0.9056762880896796,
+            0.04164955993155564,
+            0.0010211754958491625,
+            0.0516529764829173
+          ],
+          "ncolour_site_mean": [
+            8.717028864269064,
+            6.124948679794685,
+            6.003063526487581,
+            6.15495892944877
+          ],
+          "nwhite_site_mean": [
+            2.0021928360460404,
+            2.000000000000008,
+            1.9999999999999993,
+            1.9978071639539767
+          ],
+          "nwhite_site_variance": [
+            0.11439161703743128,
+            0.11054367033679835,
+            0.11064203658754579,
+            0.1144899832881916
+          ],
+          "Phi": -3.4287508319554016e-07,
+          "Phi2": 1.778375410702194,
+          "Phi_boundary": 7.935077419291926e-09,
+          "Phi_energy": -2.0015131295799495,
+          "loopB": 0.03921285601609925,
+          "loopC": 0.2826406812576616,
+          "electric": 0.6861276341195491,
+          "rotation": 0.07865872235852948
+        },
+        {
+          "t": 1.0,
+          "norm": 1.0000000000000022,
+          "compact": 0.48374382986095177,
+          "fragmented": 0.00954480249916198,
+          "compact_site": [
+            0.48148321104941566,
+            0.0011655442912036702,
+            5.3671764461664694e-06,
+            0.00108970734388619
+          ],
+          "Q_em_site_mean": [
+            0.7904547530247331,
+            0.1040762743869113,
+            0.0011936311791523532,
+            0.10427534140920607
+          ],
+          "baryon_site_mean": [
+            0.8580126489323517,
+            0.06683150443197858,
+            0.0005099102676600242,
+            0.07464593636801277
+          ],
+          "ncolour_site_mean": [
+            8.574037946797072,
+            6.200494513295962,
+            6.0015297308029885,
+            6.223937809104055
+          ],
+          "nwhite_site_mean": [
+            1.9855634220844367,
+            2.0000000000000075,
+            2.0000000000000084,
+            2.014436577915566
+          ],
+          "nwhite_site_variance": [
+            0.12149047910686805,
+            0.11979283800484009,
+            0.11993870893394565,
+            0.1216363500359563
+          ],
+          "Phi": -2.391754690874706e-06,
+          "Phi2": 1.7687117354172968,
+          "Phi_boundary": 6.239184881918104e-09,
+          "Phi_energy": -1.993335901875784,
+          "loopB": 0.04653785333274401,
+          "loopC": 0.30063127576766324,
+          "electric": 0.8569978795477633,
+          "rotation": 0.08019427623624274
+        },
+        {
+          "t": 2.0,
+          "norm": 1.0000000000000042,
+          "compact": 0.47218006495378134,
+          "fragmented": 0.011174482066055823,
+          "compact_site": [
+            0.46018513281482326,
+            0.005060755212431512,
+            4.818373535795424e-05,
+            0.006885993191168173
+          ],
+          "Q_em_site_mean": [
+            0.7796149396887923,
+            0.0984878504829074,
+            0.0022534457829287606,
+            0.11964376404537377
+          ],
+          "baryon_site_mean": [
+            0.8157317273507884,
+            0.08854764599772764,
+            0.003180994794543313,
+            0.09253963185694729
+          ],
+          "ncolour_site_mean": [
+            8.447195182052386,
+            6.265642937993205,
+            6.009542984383658,
+            6.277618895570865
+          ],
+          "nwhite_site_mean": [
+            1.9893096816076392,
+            2.0000000000000266,
+            2.0000000000000124,
+            2.010690318392361
+          ],
+          "nwhite_site_variance": [
+            0.1353538570970323,
+            0.13239455430744052,
+            0.13266337752981094,
+            0.13562268031940938
+          ],
+          "Phi": -5.469052567038529e-06,
+          "Phi2": 1.7540735967239072,
+          "Phi_boundary": 7.0590682874650266e-09,
+          "Phi_energy": -1.9683865866491106,
+          "loopB": 0.04511347260649243,
+          "loopC": 0.3064880558083516,
+          "electric": 0.8651508252207176,
+          "rotation": 0.08835629090796791
+        },
+        {
+          "t": 4.0,
+          "norm": 1.0000000000000056,
+          "compact": 0.5153023615031709,
+          "fragmented": 0.011015210569361554,
+          "compact_site": [
+            0.48923711965935684,
+            0.014241294626485894,
+            0.0009178879613083419,
+            0.010906059256019866
+          ],
+          "Q_em_site_mean": [
+            0.7285335660698297,
+            0.13036956340280445,
+            0.01576470999409028,
+            0.12533216053328108
+          ],
+          "baryon_site_mean": [
+            0.8091464687439008,
+            0.09238634573108655,
+            0.01966961654098411,
+            0.07879756898403238
+          ],
+          "ncolour_site_mean": [
+            8.427439406231766,
+            6.277159037193277,
+            6.059008849622987,
+            6.236392706952124
+          ],
+          "nwhite_site_mean": [
+            2.004742042069592,
+            2.000000000000034,
+            2.000000000000083,
+            1.9952579579303344
+          ],
+          "nwhite_site_variance": [
+            0.11902367172234651,
+            0.11586793261514039,
+            0.1164337354823397,
+            0.11958947458958935
+          ],
+          "Phi": 6.627029613919888e-05,
+          "Phi2": 1.724363066656975,
+          "Phi_boundary": 7.46532434655939e-09,
+          "Phi_energy": -1.9349450799382968,
+          "loopB": 0.03472894727993517,
+          "loopC": 0.2512962059153349,
+          "electric": 0.8370968913440777,
+          "rotation": 0.10622298611883205
+        }
+      ],
+      "same_age_no_EM_events": [
+        {
+          "t": 0.0,
+          "norm": 1.0000000000000027,
+          "compact": 0.6180163061341785,
+          "fragmented": 0.007254979344707925,
+          "compact_site": [
+            0.617872345905253,
+            8.986132968734821e-05,
+            7.101068244501829e-10,
+            5.40981891305184e-05
+          ],
+          "Q_em_site_mean": [
+            0.9252798142800948,
+            0.040165969806505046,
+            0.0002445064117416304,
+            0.03430970950166223
+          ],
+          "baryon_site_mean": [
+            0.9442514973012884,
+            0.028110052518477906,
+            0.00016796894972302714,
+            0.027470481230510865
+          ],
+          "ncolour_site_mean": [
+            8.832754491903867,
+            6.084330157555463,
+            6.00050390684918,
+            6.0824114436915515
+          ],
+          "nwhite_site_mean": [
+            2.0000000000000075,
+            2.000000000000005,
+            2.0000000000000075,
+            2.0000000000000075
+          ],
+          "nwhite_site_variance": [
+            0.07025106357664068,
+            0.07025619684170525,
+            0.07026597286250702,
+            0.07026083959745755
+          ],
+          "Phi": -1.795593548197319e-09,
+          "Phi2": 1.780546996457458,
+          "Phi_boundary": 4.9911167463313264e-09,
+          "Phi_energy": -2.012715015356939,
+          "loopB": 0.04823293599302218,
+          "loopC": 0.1608977422698326,
+          "electric": 0.5502031756172729,
+          "rotation": 0.05856509599406365
+        },
+        {
+          "t": 0.25,
+          "norm": 1.0000000000000029,
+          "compact": 0.4884039523670339,
+          "fragmented": 0.003568920950065481,
+          "compact_site": [
+            0.4878002041513978,
+            0.00034890532243945724,
+            5.231465261592345e-08,
+            0.000254790578543928
+          ],
+          "Q_em_site_mean": [
+            0.8681255562421873,
+            0.07317362129102348,
+            0.0014564046382718116,
+            0.057244417828518745
+          ],
+          "baryon_site_mean": [
+            0.9179617616258765,
+            0.0410648598202134,
+            0.0009725179717431776,
+            0.040000860582169756
+          ],
+          "ncolour_site_mean": [
+            8.753885284877645,
+            6.12319457946066,
+            6.002917553915254,
+            6.12000258174653
+          ],
+          "nwhite_site_mean": [
+            2.000000000000008,
+            2.0000000000000067,
+            2.0000000000000036,
+            1.9999999999999996
+          ],
+          "nwhite_site_variance": [
+            0.042558249531363224,
+            0.04258605611773891,
+            0.042610241483934885,
+            0.04258243489756275
+          ],
+          "Phi": -3.605780222039161e-08,
+          "Phi2": 1.7792995309587603,
+          "Phi_boundary": 6.444939205021717e-09,
+          "Phi_energy": -2.010691985739825,
+          "loopB": 0.04422220681874122,
+          "loopC": 0.24877379971104263,
+          "electric": 0.6950414636937499,
+          "rotation": 0.06835033048431202
+        },
+        {
+          "t": 0.5,
+          "norm": 1.0000000000000033,
+          "compact": 0.5328118803495617,
+          "fragmented": 0.0051475225401442564,
+          "compact_site": [
+            0.5309090555704424,
+            0.0008374111161692217,
+            4.0188672316234877e-07,
+            0.001065011776226991
+          ],
+          "Q_em_site_mean": [
+            0.8501912199754588,
+            0.07732806124874517,
+            0.0016121674537094826,
+            0.07086855132209086
+          ],
+          "baryon_site_mean": [
+            0.9087372331284289,
+            0.04228673283587164,
+            0.0010185369458141941,
+            0.047957497089888376
+          ],
+          "ncolour_site_mean": [
+            8.726211699385294,
+            6.126860198507635,
+            6.003055610837456,
+            6.1438724912697
+          ],
+          "nwhite_site_mean": [
+            2.000000000000002,
+            2.000000000000005,
+            1.9999999999999987,
+            2.000000000000009
+          ],
+          "nwhite_site_variance": [
+            0.11133301373563054,
+            0.11149712890660002,
+            0.11159927528672497,
+            0.11143516011574128
+          ],
+          "Phi": -3.030134442896272e-07,
+          "Phi2": 1.7784658367389345,
+          "Phi_boundary": 8.009898951688828e-09,
+          "Phi_energy": -2.0014421089541856,
+          "loopB": 0.03979288000312343,
+          "loopC": 0.2716753579053743,
+          "electric": 0.681638417533812,
+          "rotation": 0.0781090990047364
+        },
+        {
+          "t": 1.0,
+          "norm": 1.0000000000000036,
+          "compact": 0.48653865802798085,
+          "fragmented": 0.008765456732659174,
+          "compact_site": [
+            0.4844426285762529,
+            0.0011617345889558927,
+            5.368720142934637e-06,
+            0.0009289261426291633
+          ],
+          "Q_em_site_mean": [
+            0.7931131455866256,
+            0.10483787561674646,
+            0.00113509140306254,
+            0.1009138873935679
+          ],
+          "baryon_site_mean": [
+            0.8617510565615516,
+            0.06745236859247992,
+            0.00050200373488514,
+            0.0702945711110862
+          ],
+          "ncolour_site_mean": [
+            8.585253169684659,
+            6.202357105777475,
+            6.001506011204685,
+            6.210883713333299
+          ],
+          "nwhite_site_mean": [
+            2.0000000000000093,
+            2.0000000000000084,
+            2.0000000000000155,
+            2.000000000000003
+          ],
+          "nwhite_site_variance": [
+            0.12043551692641064,
+            0.12065174583905858,
+            0.12080186320014619,
+            0.12058563428751867
+          ],
+          "Phi": -2.0974269284051213e-06,
+          "Phi2": 1.7687469050839395,
+          "Phi_boundary": 6.308361695419276e-09,
+          "Phi_energy": -1.9931522667179125,
+          "loopB": 0.047026902073756496,
+          "loopC": 0.2868809711609664,
+          "electric": 0.8500005057024719,
+          "rotation": 0.07940324684822637
+        },
+        {
+          "t": 2.0,
+          "norm": 1.0000000000000047,
+          "compact": 0.47122517481398934,
+          "fragmented": 0.011169123107507794,
+          "compact_site": [
+            0.459524601520182,
+            0.005056596993725105,
+            4.708536057625325e-05,
+            0.0065968909395059646
+          ],
+          "Q_em_site_mean": [
+            0.7852235970455991,
+            0.09592242843416965,
+            0.002319344972955712,
+            0.11653462954727926
+          ],
+          "baryon_site_mean": [
+            0.8198809170553776,
+            0.08792310514996005,
+            0.003159530469037124,
+            0.08903644732562803
+          ],
+          "ncolour_site_mean": [
+            8.459642751166175,
+            6.26376931544992,
+            6.009478591407125,
+            6.267109341976896
+          ],
+          "nwhite_site_mean": [
+            2.000000000000034,
+            2.0000000000000275,
+            2.000000000000014,
+            1.9999999999999682
+          ],
+          "nwhite_site_variance": [
+            0.1351003470705665,
+            0.1353654092985126,
+            0.13564304460853283,
+            0.1353779823805814
+          ],
+          "Phi": -6.171800460091567e-06,
+          "Phi2": 1.753854434433946,
+          "Phi_boundary": 7.078404419126631e-09,
+          "Phi_energy": -1.968077807279125,
+          "loopB": 0.0453721652864011,
+          "loopC": 0.3008446645827536,
+          "electric": 0.8671805199115805,
+          "rotation": 0.08822217471533876
+        },
+        {
+          "t": 4.0,
+          "norm": 1.0000000000000067,
+          "compact": 0.5219175676039469,
+          "fragmented": 0.010735635008301917,
+          "compact_site": [
+            0.49623119761908513,
+            0.014225339191866759,
+            0.0009139608173013594,
+            0.010547069975693771
+          ],
+          "Q_em_site_mean": [
+            0.7422559618651672,
+            0.13051261074898743,
+            0.0154474141545055,
+            0.11178401323134633
+          ],
+          "baryon_site_mean": [
+            0.8141535000020869,
+            0.09101586917068137,
+            0.019252965234470294,
+            0.07557766559276981
+          ],
+          "ncolour_site_mean": [
+            8.442460500006286,
+            6.273047607512091,
+            6.0577588957034525,
+            6.22673299677834
+          ],
+          "nwhite_site_mean": [
+            2.0000000000000147,
+            2.0000000000000244,
+            2.000000000000086,
+            1.9999999999999294
+          ],
+          "nwhite_site_variance": [
+            0.11682386883713569,
+            0.11719437637817176,
+            0.11774834341259144,
+            0.1173778358715678
+          ],
+          "Phi": 6.630413247276767e-05,
+          "Phi2": 1.723406551381019,
+          "Phi_boundary": 7.484721240137584e-09,
+          "Phi_energy": -1.9342075927970828,
+          "loopB": 0.034836439952989504,
+          "loopC": 0.24655391727625153,
+          "electric": 0.8293063250035788,
+          "rotation": 0.10474556641536914
+        }
+      ],
+      "field_only_kick_events": [
+        {
+          "t": 0.0,
+          "norm": 1.0000000000000004,
+          "compact": 1.0000000000000004,
+          "fragmented": 0.0,
+          "compact_site": [
+            1.0000000000000004,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Q_em_site_mean": [
+            1.0000000000000004,
+            -5.0306980803327406e-17,
+            3.872729926053227e-17,
+            9.575495710473052e-18
+          ],
+          "baryon_site_mean": [
+            1.0000000000000004,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "ncolour_site_mean": [
+            9.000000000000004,
+            6.0000000000000036,
+            6.0000000000000036,
+            6.0000000000000036
+          ],
+          "nwhite_site_mean": [
+            2.0000000000000004,
+            2.000000000000001,
+            2.0000000000000004,
+            2.000000000000001
+          ],
+          "nwhite_site_variance": [
+            0.11018462336102086,
+            0.11018462336102175,
+            0.11018462336102441,
+            0.11018462336102175
+          ],
+          "Phi": 0.023891476860924066,
+          "Phi2": 1.842822786855135,
+          "Phi_boundary": 5.630302990621459e-05,
+          "Phi_energy": -1.9030160588451024,
+          "loopB": 0.04921978102600741,
+          "loopC": 0.0015789577380950345,
+          "electric": 0.005684247857142127,
+          "rotation": 0.022017761455989424
+        },
+        {
+          "t": 0.25,
+          "norm": 1.0000000000000009,
+          "compact": 0.40976537597425766,
+          "fragmented": 0.0027037101209998944,
+          "compact_site": [
+            0.4097452123999567,
+            1.1963798734085583e-05,
+            5.3292608299306326e-11,
+            8.199722274661904e-06
+          ],
+          "Q_em_site_mean": [
+            0.9379445531889818,
+            0.03164636379761439,
+            5.2398314652348585e-05,
+            0.030356684698752495
+          ],
+          "baryon_site_mean": [
+            0.9430721788499212,
+            0.02850061684931353,
+            3.702358097971314e-05,
+            0.028390180719785354
+          ],
+          "ncolour_site_mean": [
+            8.829216536549758,
+            6.085501850547937,
+            6.000111070742929,
+            6.0851705421593465
+          ],
+          "nwhite_site_mean": [
+            1.999999999999998,
+            1.999999999999998,
+            1.9999999999999973,
+            1.9999999999999982
+          ],
+          "nwhite_site_variance": [
+            0.15670516267384205,
+            0.15670978039222128,
+            0.15671497284942504,
+            0.15671035513104492
+          ],
+          "Phi": 0.016046390997644162,
+          "Phi2": 1.8404508248776172,
+          "Phi_boundary": 5.177277130832561e-05,
+          "Phi_energy": -1.8973026409283051,
+          "loopB": 0.047771063832079186,
+          "loopC": 0.2085180703661118,
+          "electric": 0.7474445734688143,
+          "rotation": 0.09640314015858172
+        },
+        {
+          "t": 0.5,
+          "norm": 1.000000000000001,
+          "compact": 0.7685048691189224,
+          "fragmented": 0.0073156147859873635,
+          "compact_site": [
+            0.7681703006491754,
+            0.00020430790635224885,
+            1.5835200451816407e-08,
+            0.0001302447281935885
+          ],
+          "Q_em_site_mean": [
+            0.9142526219398088,
+            0.047941837512766976,
+            0.0005826201179776048,
+            0.037222920429447304
+          ],
+          "baryon_site_mean": [
+            0.9469499335823611,
+            0.026945672047095488,
+            0.00039535401508530236,
+            0.025709040355459113
+          ],
+          "ncolour_site_mean": [
+            8.840849800747115,
+            6.0808370161413,
+            6.001186062045264,
+            6.077127121066397
+          ],
+          "nwhite_site_mean": [
+            2.0000000000000053,
+            2.000000000000001,
+            2.0000000000000004,
+            1.9999999999999991
+          ],
+          "nwhite_site_variance": [
+            0.016123619878097628,
+            0.016123656906850137,
+            0.016131109869865767,
+            0.016131072841121252
+          ],
+          "Phi": 0.008375076518932888,
+          "Phi2": 1.8410811923120696,
+          "Phi_boundary": 5.380734474098798e-05,
+          "Phi_energy": -1.8972405474166545,
+          "loopB": 0.04798515205499553,
+          "loopC": 0.1281804488664046,
+          "electric": 0.3733360108675914,
+          "rotation": 0.030721610991963293
+        },
+        {
+          "t": 1.0,
+          "norm": 1.0000000000000013,
+          "compact": 0.7233810185615664,
+          "fragmented": 0.005072015942103736,
+          "compact_site": [
+            0.7208468500232929,
+            0.00110619418555941,
+            1.0337266879818534e-06,
+            0.001426940626026425
+          ],
+          "Q_em_site_mean": [
+            0.8566812376325758,
+            0.07143015174774384,
+            0.0006659865410123332,
+            0.07122262407867072
+          ],
+          "baryon_site_mean": [
+            0.9153901168936921,
+            0.038112662964741466,
+            0.00046634181607193073,
+            0.04603087832549498
+          ],
+          "ncolour_site_mean": [
+            8.746170350681075,
+            6.114337988894234,
+            6.001399025448225,
+            6.138092634976486
+          ],
+          "nwhite_site_mean": [
+            2.0000000000000013,
+            2.000000000000008,
+            1.999999999999999,
+            2.0000000000000075
+          ],
+          "nwhite_site_variance": [
+            0.10575805025769824,
+            0.10591798069997349,
+            0.1060141565995627,
+            0.10585422615727502
+          ],
+          "Phi": 0.0024451014808895416,
+          "Phi2": 1.8371934937464025,
+          "Phi_boundary": 5.3612791834077644e-05,
+          "Phi_energy": -1.8862658556045115,
+          "loopB": 0.04068498957100336,
+          "loopC": 0.19950178900726892,
+          "electric": 0.41747119025074886,
+          "rotation": 0.05098730113381106
+        },
+        {
+          "t": 2.0,
+          "norm": 1.0000000000000022,
+          "compact": 0.520438406809566,
+          "fragmented": 0.008793735219389203,
+          "compact_site": [
+            0.507362765579395,
+            0.00565368900288239,
+            2.540518005311277e-05,
+            0.007396547047236043
+          ],
+          "Q_em_site_mean": [
+            0.7584318443575782,
+            0.11628297637433806,
+            0.004018251071547318,
+            0.1212669281965384
+          ],
+          "baryon_site_mean": [
+            0.8316602638286824,
+            0.07862018937934824,
+            0.001955649185753072,
+            0.08776389760621998
+          ],
+          "ncolour_site_mean": [
+            8.49498079148606,
+            6.235860568138063,
+            6.005866947557264,
+            6.263291692818673
+          ],
+          "nwhite_site_mean": [
+            1.999999999999987,
+            1.9999999999999873,
+            2.000000000000021,
+            2.000000000000039
+          ],
+          "nwhite_site_variance": [
+            0.09658937081577346,
+            0.09682081368626871,
+            0.09704528078851649,
+            0.09681383791801412
+          ],
+          "Phi": 0.012679573598532926,
+          "Phi2": 1.820858675901699,
+          "Phi_boundary": 5.5015482501678126e-05,
+          "Phi_energy": -1.8633901612082884,
+          "loopB": 0.03475193351093772,
+          "loopC": 0.3088934328516385,
+          "electric": 0.7783046823196713,
+          "rotation": 0.08031357356787762
+        },
+        {
+          "t": 4.0,
+          "norm": 1.0000000000000064,
+          "compact": 0.3713876728985451,
+          "fragmented": 0.010627573286654885,
+          "compact_site": [
+            0.3511767126966072,
+            0.011523461838023242,
+            0.0006628245494686637,
+            0.008024673814446081
+          ],
+          "Q_em_site_mean": [
+            0.7256609300692343,
+            0.1420318419525911,
+            0.014909472873976487,
+            0.11739775510420433
+          ],
+          "baryon_site_mean": [
+            0.800097722380859,
+            0.09464065485552275,
+            0.017061143332878642,
+            0.08820047943074541
+          ],
+          "ncolour_site_mean": [
+            8.4002931671426,
+            6.283921964566598,
+            6.051183429998669,
+            6.264601438292274
+          ],
+          "nwhite_site_mean": [
+            1.9999999999998637,
+            1.9999999999999767,
+            2.0000000000000444,
+            2.000000000000161
+          ],
+          "nwhite_site_variance": [
+            0.08094102551978732,
+            0.08101636503597653,
+            0.08105852058970076,
+            0.08098318107349733
+          ],
+          "Phi": 0.008967596697323641,
+          "Phi2": 1.790186629019725,
+          "Phi_boundary": 5.385468141601223e-05,
+          "Phi_energy": -1.8222593641534774,
+          "loopB": 0.05459902453082889,
+          "loopC": 0.28320777055710067,
+          "electric": 1.0111575356907565,
+          "rotation": 0.11639227035923068
+        }
+      ],
+      "original_Peierls_current": {
+        "EM": {
+          "0": [
+            2.58350310682957e-17,
+            0.11393021039322589,
+            0.12331307580255499,
+            -0.029380760189498575,
+            -0.12190058748717017,
+            0.11097974999928858
+          ],
+          "1": [
+            1.1253020969954757e-17,
+            0.0003361876276833139,
+            0.0026244276169324282,
+            -0.00641254941405678,
+            -0.007883588213314526,
+            -0.00525741481581111
+          ],
+          "2": [
+            -7.518449765015745e-17,
+            -0.00033450491544860256,
+            -0.0017599152902200068,
+            0.004152470689877075,
+            0.005591054893520979,
+            0.002910244067667056
+          ],
+          "3": [
+            7.390887458294566e-17,
+            0.09661601694852294,
+            0.07330269188815823,
+            0.022762456985806076,
+            -0.04883126237621363,
+            0.010605704416485201
+          ]
+        },
+        "baryon": {
+          "0": [
+            0.0,
+            0.07645521900467761,
+            0.033761669780351125,
+            -0.008928504625565884,
+            -0.034926849353142726,
+            -0.0074033762649616495
+          ],
+          "1": [
+            0.0,
+            0.00024963826303151383,
+            0.0019383227916175585,
+            -0.0038643329523072724,
+            -0.0041460235595303175,
+            0.0019953994177422064
+          ],
+          "2": [
+            0.0,
+            -0.0002169987005261443,
+            -0.0010181174892005384,
+            0.0021707818557387673,
+            8.79250246417732e-05,
+            -0.002831181253056686
+          ],
+          "3": [
+            0.0,
+            0.07494310654208512,
+            0.02732317405869015,
+            0.008233654337004147,
+            -0.01860833774220902,
+            -0.03338534249295469
+          ]
+        }
+      },
+      "original_Peierls_contact": {
+        "EM": {
+          "0": 0.30897130273251144,
+          "1": 0.3089713027325146,
+          "2": 0.3089713027325145,
+          "3": 0.3089713027325145
+        },
+        "baryon": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "Ward_after_ALL_MGS_and_actual_metric": {
+        "EM": [
+          6.121758250998083e-14,
+          4.86448973988134e-14,
+          4.5040629438481995e-14,
+          1.0234253595278341e-14
+        ],
+        "baryon": [
+          8.482085868217181e-15,
+          7.047665337351636e-15,
+          7.041477234224209e-15,
+          4.178297680901545e-15
+        ]
+      },
+      "source_law": "Original microscopic physicalQ chord phases BEFORE projection, fixed zero-A source/body isometry. Actual count gauge-orbit closure and independentPhi factor preserve source continuity; J/contact direct derivatives, Ward measured separately. No lab3D/mechanicalEM/photon/COM claim."
+    }
+  },
+  "threehalf_minus_half": 1.2656486762732992,
+  "resource": {
+    "peak_RSS_KiB": 815468,
+    "elapsed_seconds": 20347.82153081894
+  }
+}

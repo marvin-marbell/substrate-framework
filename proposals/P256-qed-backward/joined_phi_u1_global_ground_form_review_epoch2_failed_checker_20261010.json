@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--project",
+    "/tmp/joined_phi_u1_global_ground_form_review_pyright_20261010.json",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--stats",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_global_ground_form_review_control.py"
+  ],
+  "selected_actual_files": [
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_global_ground_form_review_control.py"
+  ],
+  "configuration": {
+    "pythonVersion": "3.12",
+    "pythonPlatform": "Linux",
+    "typeCheckingMode": "basic",
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward"
+    ],
+    "venvPath": "/home/administrator/substrate-framework",
+    "venv": ".venv"
+  },
+  "configuration_sha256": "570ad4b1961a2c09e634a369e218f9fc0013858ee593b41bf5a9cbdbf98ea8c5",
+  "source_sha256": "80b7ba804eef285d161b904ee22a3733c195f499462dae1cf03ec5bcc30b8f44",
+  "natural_exit_code": 1,
+  "elapsed_seconds": 7.843555491010193,
+  "stdout": "Loading configuration file at /tmp/joined_phi_u1_global_ground_form_review_pyright_20261010.json\nSetting pythonPath for service \"<default>\": \"/home/administrator/substrate-framework/.venv/bin/python\"\nAuto-excluding **/node_modules\nAuto-excluding **/__pycache__\nAuto-excluding **/.*\nAuto-excluding **/__editable__.*\nFound 1 source file\n[FG] Long operation: checking: file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_global_ground_form_review_control.py (6692ms)\n[FG] Long operation: analyzing: file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_global_ground_form_review_control.py (7088ms)\npyright 1.1.414\n/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_global_ground_form_review_control.py\n  /home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_global_ground_form_review_control.py:35:17 - error: Argument of type \"tuple[int, ...]\" cannot be assigned to parameter \"key\" of type \"tuple[int, int, int]\" in function \"__getitem__\"\n  \u00a0\u00a0\"tuple[int, ...]\" is not assignable to \"tuple[int, int, int]\"\n  \u00a0\u00a0\u00a0\u00a0Tuple size mismatch; expected 3 but received indeterminate (reportArgumentType)\n1 error, 0 warnings, 0 informations\nCompleted in 7.577sec\n\nAnalysis stats\nTotal files parsed and bound: 176\nTotal files checked: 1\n\nTiming stats\nFind Source Files:    0sec\nRead Source Files:    0.03sec\nTokenize:             0.26sec\nParse:                0.51sec\nResolve Imports:      0.16sec\nBind:                 0.83sec\nCheck:                5.43sec\nDetect Cycles:        0sec\n",
+  "stderr": ""
+}

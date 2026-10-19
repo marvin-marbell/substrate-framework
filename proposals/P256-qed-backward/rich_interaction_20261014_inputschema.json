@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RichInteraction finite coupled scientific CLI request",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "t": {"type":"array","minItems":4,"maxItems":4,"items":{"type":"number"},"description":"Positive hopping magnitudes in strong-hopping energy units; actual default [1,.65,1,.65]"},
+        "omega": {"type":"array","minItems":2,"maxItems":2,"items":{"type":"number","exclusiveMinimum":0},"description":"Primitive oscillator frequencies, not inferred photon mass or Maxwell stiffness"},
+        "g": {"type":"number","description":"Dimensionless coupling of quantum link coordinates into Peierls phase"},
+        "photon_levels": {"type":"integer","minimum":2,"description":"Finite oscillator levels per mode; total photon dimension is levels squared"},
+        "mode_momenta": {"type":"array","minItems":2,"maxItems":2,"items":{"$ref":"#/$defs/vector3"},"description":"Standing-wave momenta in inverse link length, real part of plane-wave link integral used"},
+        "mode_polarizations": {"type":"array","minItems":2,"maxItems":2,"items":{"$ref":"#/$defs/vector3"},"description":"Real physical mode polarizations; supplied default transverse unit vectors"},
+        "external_phase": {"$ref":"#/$defs/vector4","description":"Static oriented dimensionless number-phase source phi; default zero"}
+      }
+    },
+    "frequencies": {"type":"array","items":{"type":"number"},"description":"Full retarded photon/current tensor samples; actual [.4,.75,1.05,1.4]"},
+    "eta": {"type":"number","exclusiveMinimum":0,"description":"Causal spectral broadening for tensor samples; .035 default; not physical damping derived from substrate"},
+    "G_omega": {"type":"number","description":"Spin-up 4site charged Green function frequency; default .6"},
+    "vertex_direction": {"$ref":"#/$defs/vector4","description":"Static phase-source direction for relaxed amputated Gamma; default [.2,.4,-.3,.1]"},
+    "scattering": {"type":"array","items":{"type":"object","additionalProperties":false,"required":["kin","epsin","kout","epsout","omega"],"properties":{
+      "kin":{"$ref":"#/$defs/vector3"},"epsin":{"$ref":"#/$defs/vector3"},"kout":{"$ref":"#/$defs/vector3"},"epsout":{"$ref":"#/$defs/vector3"},
+      "omega":{"type":"number","exclusiveMinimum":0},"eta":{"type":"number","exclusiveMinimum":0}
+    }},"description":"Source q,epsilon and receiver q,epsilon. Pure link integral inserts these into the SAME H derivatives. Outgoing energy determined per exact receiver, not supplied from another law."},
+    "electron_params": {"type":"object","additionalProperties":false,"properties":{
+      "t_strong":{"type":"number"},"t_weak":{"type":"number"},"omega":{"type":"number","exclusiveMinimum":0},"coupling":{"type":"number"},"boson_levels":{"type":"integer","minimum":2}
+    },"description":"Literal RichElectron peer single-mode law parameters. This is a separate same-H consumer, not a way to mix different laws' G and D."}
+  },
+  "$defs": {
+    "vector3": {"type":"array","minItems":3,"maxItems":3,"items":{"type":"number"}},
+    "vector4": {"type":"array","minItems":4,"maxItems":4,"items":{"type":"number"}}
+  },
+  "state_semantics": "Own initial Nup3,Ndown2 ground, charge -1 and physical spin+1/2; all receivers actual exact coupled same-sector eigenvectors. Peer selects spin-up member of exact N5 eigenspace. Peer N4-reference G labeled separate state.",
+  "current_semantics": "J=-dH/d(number-link-phase), electric electron charge current -J; C=d2H/dphase2; each external source/receiver uses same declared edge ordering and normalization",
+  "source_semantics": "Unit-amplitude plane wave epsilon exp(i q.x), exact straight-link integral; not a canonical free-photon asymptotic state or invented incident flux",
+  "units": "hbar=abs(electron charge)=nearest-link length=strong hopping=1; frequency/energy same units, momentum inverse length",
+  "output_encoding": "Every complex scalar is [real,imag]; complex ndarray appends final length2 axis. Other real arrays ordinary. Scientific module does not invoke a hidden schema validator."
+}

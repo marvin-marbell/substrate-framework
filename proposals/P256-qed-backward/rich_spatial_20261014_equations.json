@@ -1,0 +1,30 @@
+{
+  "candidate_id": "rich-spatial-open-integer-gauss-two-plane-ladder-20261014",
+  "governing_plan": "issue222-rich-backward-candidates-20261014",
+  "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "owner": "SpatialFieldCarrier",
+  "root": "Repeated connected xy/xz unit faces share an x-spine, with full y/z outer rails. Open ends; x=0,...,Nc is actual geometric position.",
+  "law": "H=P[sum_e E_e^2/(2I)+U sum_v n_up(v)n_down(v)-sum_(a,b),s t_e(c†_(b,s) U_e c_(a,s)+h.c.)]P. U_e raises oriented E_e by one. No primitive plaquette cosine or B² term.",
+  "Gauss": "B E + n-b=0; B_(a,e)=+1, B_(b,e)=-1 for edge a->b. Hop a->b reduces rho_a and increases rho_b, raising E_e. E_e are ordinary integers. P retains every local-Gauss basis state with all |E_e|<=1.",
+  "finite_domain": "Tree solutions are not cut only in a chosen chord box: EVERY solved link satisfies the same integer bound. Projection preserves local Gauss exactly. Compact raising is nonunitary at this finite-domain boundary; boundary probability is reported and no continuum/truncation-error theorem asserted. Open ends and two fixed integer ions break translations. There is no Bloch dispersion and no external profile is called momentum.",
+  "matter_state": "Lowest joint electric/CAR eigenstate in Nup=Ndown=1, b_0=b_(x1,spine)=1. Same t=1,U=4,I=1 across Nc=1,2,3. Low eigenstate residues are partial diagnostics only; all time propagation uses full retained H.",
+  "operators": {
+    "Wilson": "W_(x,r)=P product U_e^(face_e) P for oriented x-r face, with r=y or z; a single net integer-loop shift, not multiplication of already boundary-projected links. Gauss preserved.",
+    "flux": "F_(x,r)=(W-W†)/(2i). This is a compact sine-of-flux operator, not flux itself in an unwrapped continuum.",
+    "current": "If T_e=-t_e P c†_b U_e c_a P, J_e=-i(T_e-T†_e)=-dH/dtheta_e for convention T(theta)=exp(i theta)T. K_e=-(T_e+T†_e)=d²H/dtheta_e². Local transverse current is the spine-to-r rung at actual x, perpendicular to x propagation direction; not a globally divergence-free current projection.",
+    "continuity": "i[H,n_v]+sum_e B_(v,e)J_e=0, including retained projection. Executed operator maximum-error recorded.",
+    "retarded": "chi_AB(t)=-i Theta(t)<[A(t),B(0)]>=2 Theta(t) Im <g|A exp[-i(H-Eg)t] B|g>. Hermitian local operators; disconnected ground component removed. Receivers span every cell y/z Wilson sine and every x y/z rung current; sources first-cell y/z sine and first-x y/z current.",
+    "spectral": "Partial positive-frequency residues |<m|A|g>|² and gaps Em-Eg are recorded from selected exact-H low eigenstates. They do not replace full-H time response or prove masslessness.",
+    "pulse": "Prepared new state exp(-0.4 i F_(0,y))|g>; full-H time evolution. Electric-energy excess is resolved on the union of links of each cell's two faces. Neighbor cells share boundary links, so cell energies are non-additive local receiver observables, not a partition of total energy.",
+    "physical_charge": "Start from the empty-matter E=0 vacuum of the same electric law, add one spin-up CAR particle at (x0,y) with b_0=1 static countercharge and explicit tree Wilson E string from 0 to site. Source rho=delta_site-delta_0 and B E=delta_0-delta_site. Under full-H evolution the charge and string fluctuate jointly; cell densities, literal link currents, E energy and total energy are recorded. This is a different disclosed prepared charged state, not the two-particle ground with an isolated Green function grafted onto it."
+  },
+  "comparators": {
+    "no_matter": "Same geometry/domain, N=0,b=0,H=E²/(2I), E=0 ground. Local sine Wilson operator still produces bare electric poles. Any absence of remote response means absence of propagation/mixing, not absence of all field dynamics.",
+    "frozen_field": "A=0 matter-only one-particle graph with same hopping. Explicit NON-Gauss comparator; not a physical full-H state. Compare actual same-site charge preparation and cell density time histories.",
+    "open_rails": "Set only outer x-directed y/z rail hopping to zero; keep rungs/spine and all electric and Gauss couplings. This materially prevents charged circulation on either spatial plaquette family, rather than changing cutoff digits.",
+    "no_motion": "Set every matter hopping to zero; keep primitive electric E² and matter occupations. Tests the distinct local-pole/nonpropagation regime."
+  },
+  "units": "hbar=unit charge=unit link spacing=1; t=1 base energy, U=4,I=1. Times are inverse hopping units. No fitted velocity.",
+  "executable_API": ["Parameters(cells,electric_bound=1,hopping=1,repulsion=4,inertia=1,rail_hopping=1)", "Sector(p,up=1,down=1): H,electric,rho,index,positions,edges,tree,chords,faces,transfers,currents,contacts", "Sector.wilson(face), Sector.solve(count), Sector.continuity_error()", "transverse_current(sector,x,rail=1|2)", "time_response(sector,ground,energy,operators,times,source_indices)", "physical_charge_source(target_one_up_sector,site)", "charge_packet(p,times)"],
+  "unexplained_inputs": ["CAR and primitive spin species", "Architecture and static ionic references", "Microscopic hopping/U/electric inertia", "Integer compact gauge field", "Why an unbounded infinite lattice might support massless transverse excitations", "Relativistic charge-pair/positron sector", "Isolated-charge infinite-volume reference removal"]
+}

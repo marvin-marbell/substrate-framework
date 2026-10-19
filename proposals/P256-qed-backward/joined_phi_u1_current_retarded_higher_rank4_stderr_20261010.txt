@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_current_retarded_higher.py", line 301, in <module>
+    with threadpool_limits(limits=1):result=run(args.output,args.term_cap,args.seed_cap)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_current_retarded_higher.py", line 266, in run
+    controls=boundary_control()
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_current_retarded_higher.py", line 215, in boundary_control
+    raise ArithmeticError(f'Independent finite-Fock R3 does not converge: {rows[-2:]}')
+ArithmeticError: Independent finite-Fock R3 does not converge: [{'levels': 28, 'state': 'background', 'direct_real': np.float64(-23541425.278667536), 'direct_imaginary': np.float64(0.0), 'analytic_real': -9947738.23869786, 'analytic_imaginary': 0.0, 'relative_defect': 1.3665103276530386}, {'levels': 28, 'state': 'raw_source', 'direct_real': np.float64(-6835464.466204585), 'direct_imaginary': np.float64(0.0), 'analytic_real': -2871902.2050951086, 'analytic_imaginary': 0.0, 'relative_defect': 1.3801174197636772}]

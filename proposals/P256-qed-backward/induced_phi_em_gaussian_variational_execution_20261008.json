@@ -1,0 +1,63 @@
+{
+  "source": "induced_phi_em_gaussian_variational.py",
+  "source_sha256": "36f144282959941ee65b65fac2e4622a43d301b052f3ad17460d3897032e30ac",
+  "input_sha256": {
+    "induced_phi_ir_mean_certificate_normal_transfer_final_receipt.json": "30a4182e252463319caea5235176a0e5e87018a740ca0a95d76f1487796b4d78"
+  },
+  "final_CLI_runs": [
+    {
+      "command": "/home/administrator/substrate-framework/.venv/bin/python induced_phi_em_gaussian_variational.py",
+      "natural_exit": 0,
+      "size": 6,
+      "receipt": "induced_phi_em_gaussian_variational_final_receipt_20261008.json",
+      "receipt_sha256": "87a6a2cc2e59095be2b33323a1849b420a71f5e4d3018c0c633cde449dbe5e48",
+      "runtime_seconds_reported": 7.209348103031516,
+      "density_variance": 0.2951163928926157,
+      "Gaussian_energy_per_site": -2569.2670502291085,
+      "same_native_old_packet_energy_per_site": 21841.025709319158,
+      "improvement_per_site": 24410.292759548265,
+      "connected_Coulomb_energy": 65136.11395674307,
+      "independent_CAR_Gaussian_packet_static_max_error": 4.547473508864641e-12
+    },
+    {
+      "command": "/home/administrator/substrate-framework/.venv/bin/python induced_phi_em_gaussian_variational.py --size 2 --output induced_phi_em_gaussian_variational_N2_seed_receipt_20261008.json",
+      "natural_exit": 0,
+      "size": 2,
+      "receipt": "induced_phi_em_gaussian_variational_N2_seed_receipt_20261008.json",
+      "receipt_sha256": "7e0d4e2c673a103620cb366370241be4fbcbb26a01aa45a45f91b9dd8992d453",
+      "runtime_seconds_reported": 4.758928457973525,
+      "density_variance": 0.3827721886611537,
+      "Gaussian_energy_per_site": -2307.8161648148252,
+      "same_native_old_packet_energy_per_site": 23638.935645860514,
+      "improvement_per_site": 25946.75181067534,
+      "connected_Coulomb_energy": 3031.583397866554,
+      "independent_CAR_Gaussian_packet_static_max_error": 1.000444171950221e-11
+    }
+  ],
+  "LSP": {
+    "server": "pyright-langserver --stdio",
+    "root": "/home/administrator/substrate-222",
+    "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+    "actual_symbol_definition_reference_probes": true,
+    "final_publishDiagnostics": {
+      "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_em_gaussian_variational.py",
+      "version": 5,
+      "diagnostics": []
+    }
+  },
+  "AST": {
+    "parser": "python ast and ast-grep python",
+    "positive_final_query": "matter_hamiltonian($$$ARGS)",
+    "positive_matches": 2
+  },
+  "exported_consumer_probe": {
+    "natural_exit": 0,
+    "sizes": [2, 6],
+    "profiles": ["active filled charged", "auxiliary filled charged"],
+    "Pocc_projector_max_error": 7.216472234035103e-16,
+    "Pocc_orthonormal_max_error": 2.8865799661571245e-15,
+    "literal_edge_current_matrix_finite_difference_max_error": 1.0935596872485576e-10,
+    "literal_edge_current_Hermitian_error": 0.0
+  },
+  "scope": "Normalized pure realEM Gaussian times all64 fixed-centre full Slaters, lambda_dressing0, with operator real Gauss lift and connected Coulomb; original finiteN Href variational improvement only. Static current correlators on nine explicitly named edges, not retarded correlators. No globalground, photonvacuum, pole, speed or macro222 promotion. Frozen files untouched."
+}

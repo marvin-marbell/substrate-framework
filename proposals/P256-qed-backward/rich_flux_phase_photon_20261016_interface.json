@@ -1,0 +1,13 @@
+{
+ "state_module":"rich_flux_phase_photon_20261016_state",
+ "pure_imports":{"rich_bulk_photon_20261016_state.py":["POSITIONS","ARCS","INCIDENCE","LOOPS","parity","envelope","detdata","submatrix","replacement","diagonal","sample","sources"],"rich_bulk_photon_20261016_run.py":["estimate"]},
+ "no_producer_CLI":true,"no_ancestor_arrays":true,"no_evolved_replay":true,
+ "state":"physical_amplitude(occupations[2,64],E[192],F,codes,g,a,b) canonical CAR scalar, zero on illegal Gauss/occupation inputs",
+ "H":"sum 2(n-1)^2 + E^2/32 minus legal fermionic hop times unit qutrit shift; external phase0, no magnetic term",
+ "source":"F_p(q)=sum c_p,e(q) E_e /16, J_p(q)=-i[H,sum c E]. H F=F H+i J/16; J(-q)=-conj J(q) for real state coefficients",
+ "contact":"same Peierls H second derivative, c_p* c_q contraction, psi conjugate implicit real intrinsic pi phase",
+ "response":"B=(F1+,F2+,rho+,F1-,F2-,rho-), G=<B Omega|B Omega>, K=<B Omega|[H,B]Omega>. EOM=HB-BHpsi constructed without psi division. Kfull=<B|(H-Emean)|B> saved SEPARATELY: it is not the source metric generator. Gdot=i(K-Kdag). No Hermitization. Exact initial Gdot=0 for real Omega, real H and commuting diagonal B; sampled drift is MC error, not demonstrated metric motion. Positive observed Gram span only, frozen-time diagnostic is not evolving nonstationary dynamics.",
+ "full_virtuals":"All 0..32 doublons allowed and all E=-1,0,1; actual samples need not explore them all. Nonunitary qutrit U is never assigned a cnumber eigenphase.",
+ "known_physics":"Known pi-flux preference hypothesis, not novelty. Magnetic translation Clifford, if inferred, is band/pseudospin only, not physical Noether spin. Large current outside E/rho can be UV pairs.",
+ "finish":"compact synthesis <=80 lines; raw arrays separate; fixed source/input natural exit manifest and delivery capsule."
+}

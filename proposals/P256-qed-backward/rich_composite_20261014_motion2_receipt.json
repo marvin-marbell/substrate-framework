@@ -1,0 +1,137 @@
+{
+  "candidate": "COMPOSITE_ELASTIC_BREATHER_V1",
+  "parameters": {
+    "candidate": "COMPOSITE_ELASTIC_BREATHER_V1",
+    "N": 10,
+    "phonon_levels": 14,
+    "hopping": 0.25,
+    "omega": 1.0,
+    "binding_g": 1.2,
+    "range": 1.0,
+    "spin_J": 0.4,
+    "alpha": 0.05,
+    "coulomb_softening": 0.5,
+    "charges": [
+      0.6666666666666666,
+      0.6666666666666666,
+      -0.3333333333333333
+    ],
+    "lanczos_steps": 90,
+    "frequencies": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "eta": 0.03,
+    "units": "hbar=1; lattice spacing a=1; primitive constituent mass for magnetic moment m=1; energy in oscillator omega-reference units",
+    "state_domain": "three distinct primitive CAR flavors, one each; hard-core spatial configurations; Sz=+1/2 block; one dynamical neutral deformation mode; periodic 1D ring",
+    "target_reference": "charged fermionic spin-half composite with finite size, electromagnetic structure, internal correlations and a strong binding sector; not positive-charge electron",
+    "law_distinction": "new separate carrier-and-elastic-deformation hypothesis, not old SU4 law, QCD action, CURRENT427 or body408"
+  },
+  "translation_dispersion_and_elastic_vertices": [
+    {
+      "momentum_mode": 0,
+      "k": 0.0,
+      "energy": -2.9204596478102753,
+      "ground_block_multiplicity": 2,
+      "next_internal_gap": 0.013584098519814791,
+      "full_H_residual": 2.308467132139232e-14,
+      "translation_sector_dimension": 3024
+    },
+    {
+      "momentum_mode": 1,
+      "k": 0.6283185307179586,
+      "energy": -2.9191381726734598,
+      "ground_block_multiplicity": 2,
+      "next_internal_gap": 0.013586678910986638,
+      "full_H_residual": 2.467711523556345e-14,
+      "translation_sector_dimension": 3024,
+      "recoil_energy": 0.0013214751368155753,
+      "small_k_mass_estimator": 149.3725326512406,
+      "elastic_ground_block_density_vertex_real": [
+        -0.5573460923192118,
+        0.2256392807793662
+      ],
+      "elastic_ground_block_density_vertex_imag": [
+        5.768876411460127e-14,
+        0.4208825233974598
+      ],
+      "elastic_ground_block_density_vertex_norm": 0.7339549374147832,
+      "elastic_ground_block_current_vertex_real": [
+        -0.0011722064010414703,
+        0.00047456295630485604
+      ],
+      "elastic_ground_block_current_vertex_imag": [
+        1.0706132803568327e-16,
+        0.0008851971778613165
+      ],
+      "elastic_Ward_vertex_norm_error": 7.763408853308515e-16,
+      "contact_ground_expectation": 0.05654971038170588
+    },
+    {
+      "momentum_mode": 2,
+      "k": 1.2566370614359172,
+      "energy": -2.9156854276816895,
+      "ground_block_multiplicity": 2,
+      "next_internal_gap": 0.013593250832204973,
+      "full_H_residual": 2.4420383453875188e-14,
+      "translation_sector_dimension": 3024,
+      "recoil_energy": 0.00477422012858586,
+      "small_k_mass_estimator": 165.38163947648167,
+      "elastic_ground_block_density_vertex_real": [
+        0.01008869764023471,
+        -0.009437256977907447
+      ],
+      "elastic_ground_block_density_vertex_imag": [
+        -7.17258722349753e-15,
+        -0.05128523499490036
+      ],
+      "elastic_ground_block_density_vertex_norm": 0.05311326546000813,
+      "elastic_ground_block_current_vertex_real": [
+        3.83290170435264e-05,
+        -3.5854061292090373e-05
+      ],
+      "elastic_ground_block_current_vertex_imag": [
+        -1.274728346012095e-17,
+        -0.00019484305272075297
+      ],
+      "elastic_Ward_vertex_norm_error": 3.203529876697674e-16,
+      "contact_ground_expectation": 0.051149693553744255
+    }
+  ],
+  "all_single_fragment_threshold_exact": -1.5,
+  "binding_below_all_single_fragments": 1.4204596478102753,
+  "no_breather_energy": -1.3441034818400985,
+  "no_breather_pair_single_controls": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "fragment_energy": -1.460163821341335,
+      "binding_below_fragment": -0.11606033950123651
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "fragment_energy": -1.4717460864107057,
+      "binding_below_fragment": -0.12764260457060717
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "fragment_energy": -1.4717460864107057,
+      "binding_below_fragment": -0.12764260457060717
+    }
+  ],
+  "phase_note": "one normalized k0 ground preparation; transitions projected into entire degenerate target ground block; vector norm invariant under target basis rotations",
+  "mass_note": "finite lattice dispersion curvature estimator, not relativistic/proton physical mass",
+  "neutral_reference_note": "omega n zero-point convention: vacuum=0 in each domain; pair load of singleton K=0, so a separated singleton does not independently dress the shared oscillator",
+  "finite_ring_threshold_note": "energies of fragments are same N domain; true infinite-separation threshold remains open"
+}

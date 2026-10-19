@@ -1,0 +1,1066 @@
+{
+  "source_bytes": "import hashlib,itertools,json,math,os,sys,tempfile,time\nfrom pathlib import Path\nfor key in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[key]='1'\nimport numpy as np\nfrom scipy.linalg import expm\nstarted=time.monotonic();source=Path(__file__).read_bytes();input_path=Path(sys.argv[1]);raw=input_path.read_bytes();cap=json.loads(raw)\nexpected='bd4d5e1d0e9fcfadef72cc9dba2cc4f7e6efacc6a577ee331fcd5b82574e5e49';assert cap['capsule']['source_sha256']==expected\nwith tempfile.TemporaryDirectory(prefix='centre-global-frozen-') as directory:\n    replay=Path(directory)\n    for name,text in cap['capsule']['source_bytes_at_IMPORT'].items():\n        assert Path(name).name==name and hashlib.sha256(text.encode()).hexdigest()==cap['capsule']['source_sha256_at_IMPORT'][name]\n        (replay/name).write_text(text)\n    sys.path.insert(0,str(replay))\n    import covariant_root_transfer as root\n    from covariant_induced_photon import Parameters,phi_frame\n    edges=((0,1),(0,2),(0,3),(0,4),(4,5),(4,6),(4,7),(1,5))\n    model=root.BosonicEdgeModel(8,edges)\n    masks=sum((np.rint(np.diag(model.n(i)).real).astype(int)*(1<<i) for i in range(8)),np.zeros(model.dimension,dtype=int))\n    Xstars=root.tensor_pauli(['X' if edge in ((0,1),(0,2),(0,3),(4,5),(4,6),(4,7)) else 'I' for edge in model.edges])\n    adjacency={i:[] for i in range(8)}\n    for a,b in edges[:-1]:adjacency[a].append(b);adjacency[b].append(a)\n    def path(start,end):\n        queue=[(start,)];seen={start}\n        while queue:\n            p=queue.pop(0)\n            if p[-1]==end:return p\n            for other in adjacency[p[-1]]:\n                if other not in seen:seen.add(other);queue.append((*p,other))\n        raise ArithmeticError('Disconnected actual primitive tree')\n    E={}\n    for i,j in itertools.product(range(8),repeat=2):E[i,j]=model.n(i) if i==j else model.bilinear(i,j,path=path(j,i))\n    graph={m:[] for m in range(256)};pattern_error=0.\n    for i,j in itertools.product(range(8),repeat=2):\n        actual=Xstars@E[i,j].conj()@Xstars;target=(model.identity if i==j else 0)-E[j,i]\n        pattern_error=max(pattern_error,float(np.linalg.norm((abs(actual)>1e-10).astype(int)-(abs(target)>1e-10).astype(int))))\n        for row,col in np.argwhere(abs(actual)>1e-10):graph[int(masks[col])].append((int(masks[row]),target[row,col]/actual[row,col]))\n    assert pattern_error==0\n    phase={};consistency=0.\n    for seed in range(256):\n        if seed in phase:continue\n        phase[seed]=1.+0j;queue=[seed]\n        while queue:\n            old=queue.pop()\n            for new,ratio in graph[old]:\n                desired=ratio*phase[old]\n                if new in phase:consistency=max(consistency,abs(phase[new]-desired))\n                else:phase[new]=desired;queue.append(new)\n    assert consistency<1e-12\n    C0=np.diag([phase[int(m)] for m in masks])@Xstars\n    error=max(float(np.linalg.norm(C0@E[i,j].conj()@C0.conj().T-((model.identity if i==j else 0)-E[j,i]))) for i,j in E)\n    chord=model.bilinear(1,5,path=(5,1));reverse=model.bilinear(5,1,path=(1,5))\n    chord_error=float(np.linalg.norm(C0@chord.conj()@C0.conj().T+reverse))\n    old=json.loads((input_path.parent/'covariant_centre_neutral_stat_20261008.json').read_bytes())\n    local_phase={int(k):complex(v['real'],v['imag']) for k,v in old['actual_phase_table'].items()}\n    local=np.diag([local_phase[int(m)&15]*local_phase[int(m)>>4] for m in masks])@Xstars\n    local_spatial_error=float(np.linalg.norm(local@chord.conj()@local.conj().T+reverse))\n    gamma,_=phi_frame(Parameters());_,basis=np.linalg.eigh(gamma[0]);frame=np.column_stack((basis[:,2:],basis[:,:2]))\n    Rb=frame.conj().T@(-1j*gamma[1]@gamma[2]@gamma[3])@frame;values,vectors=np.linalg.eigh(Rb);minus=vectors[:,values<0]\n    Pminus=minus@minus.conj().T\n    GR=expm(1j*math.pi*(root.native_lift(model,Pminus)+root.native_lift(model,Pminus,4)));C=GR@C0\n    external=[]\n    for index,edge in enumerate(model.edges):\n        if edge not in ((0,4),(1,5)):continue\n        word=['I']*len(edges);word[index]='Z';Z=root.tensor_pauli(word)\n        external.append(dict(edge=edge,C_Z_Cdag_error=float(np.linalg.norm(C@Z.conj()@C.conj().T-Z))))\n    stabilizer=model.stabilizers[0];Serror=float(np.linalg.norm(C@stabilizer.conj()@C.conj().T-stabilizer))\n    assert error<1e-11 and chord_error<1e-11 and Serror<1e-11 and max(r['C_Z_Cdag_error'] for r in external)<1e-11, json.dumps(dict(all64=error,chord=chord_error,S=Serror,external=external,naive=local_spatial_error))\n    result=dict(source_bytes=source.decode(),source_sha256=hashlib.sha256(source).hexdigest(),\n        input=dict(path=str(input_path),sha256=hashlib.sha256(raw).hexdigest(),frozen_root_sha256=expected),\n        runtime=dict(executable=sys.executable,python=sys.version,numpy=np.__version__),\n        geometry='Actual root 8-edge primitive graph interpreted as TWO four-mode body fibres for this spatial PH test, not claiming its second fibre remains Ref4 here. Previous separate Ref4-neutral probe remains valid.',\n        native_full_dimension=model.dimension,all64_primitive_matrixunit_antiCAR_error=error,\n        actual_direct_spatial_chord_antiCAR_error=chord_error,product_of_independently_seeded_local_PH_spatial_error=local_spatial_error,\n        all_spatial_Dstat_Z_controls=external,actual_statistical_stabilizer_C_error=Serror,\n        phase_consistency_error=consistency,global_occupation_phase_table={str(k):dict(real=v.real,imag=v.imag) for k,v in phase.items()},\n        lesson='Onsite number-complement/matrixunit proof alone leaves relative phases between local number sectors undetermined. Check physical spatial hops. Global occupation-diagonal phase correction is solved from actual primitive paths, while X support stays only on onsite edges; therefore spatial Dstat still commutes. No independent Fock isometry or new state.',\n        scope='Executed ideal primitive spatial antiCAR/defect representation. Does not certify whole field/outside law or SAME moving-photon/source CP trace. Gamma(R) and connection/centre descent still need the stated actual ideal-kernel assumptions.',\n        elapsed_seconds=time.monotonic()-started)\n    Path(sys.argv[2]).write_text(json.dumps(result,indent=2)+'\\n')\n    print(json.dumps(dict(output=sys.argv[2],source_sha256=result['source_sha256'],all64_antiCAR_error=error,\n        direct_chord_error=chord_error,naive_local_product_chord_error=local_spatial_error,\n        spatial_Z_error=max(r['C_Z_Cdag_error'] for r in external),S_error=Serror,elapsed_seconds=result['elapsed_seconds'])))\n    print('Natural exit: actual global primitive antiCAR phase, spatial hop, Dstat and statistical cycle')\n",
+  "source_sha256": "bcb346c9aa782da3dbf54d8ad7105f5efa2823fc6c6d5a687002f53db3e991b1",
+  "input": {
+    "path": "proposals/P256-qed-backward/covariant_root_transfer_capsule_bd4d5e1d.json",
+    "sha256": "f89f85c6f63f52d011d059fdc4476d416b550fafe360066d4b0615c143688b9d",
+    "frozen_root_sha256": "bd4d5e1d0e9fcfadef72cc9dba2cc4f7e6efacc6a577ee331fcd5b82574e5e49"
+  },
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3"
+  },
+  "geometry": "Actual root 8-edge primitive graph interpreted as TWO four-mode body fibres for this spatial PH test, not claiming its second fibre remains Ref4 here. Previous separate Ref4-neutral probe remains valid.",
+  "native_full_dimension": 256,
+  "all64_primitive_matrixunit_antiCAR_error": 0.0,
+  "actual_direct_spatial_chord_antiCAR_error": 0.0,
+  "product_of_independently_seeded_local_PH_spatial_error": 16.0,
+  "all_spatial_Dstat_Z_controls": [
+    {
+      "edge": [
+        0,
+        4
+      ],
+      "C_Z_Cdag_error": 1.3599361672048815e-14
+    },
+    {
+      "edge": [
+        1,
+        5
+      ],
+      "C_Z_Cdag_error": 1.3599361672048815e-14
+    }
+  ],
+  "actual_statistical_stabilizer_C_error": 1.3599818740555044e-14,
+  "phase_consistency_error": 0.0,
+  "global_occupation_phase_table": {
+    "0": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "1": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "2": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "3": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "6": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "10": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "18": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "34": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "66": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "130": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "5": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "9": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "17": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "33": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "65": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "129": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "132": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "136": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "144": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "160": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "192": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "68": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "72": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "80": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "96": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "36": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "40": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "48": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "20": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "24": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "12": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "4": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "7": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "8": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "11": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "13": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "14": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "15": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "30": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "46": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "78": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "142": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "29": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "45": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "77": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "141": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "27": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "43": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "75": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "139": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "23": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "39": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "71": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "135": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "150": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "166": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "198": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "149": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "165": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "197": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "147": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "163": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "195": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "202": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "210": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "226": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "201": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "209": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "225": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "83": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "99": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "102": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "106": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "114": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "101": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "105": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "113": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "51": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "54": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "58": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "178": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "53": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "57": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "177": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "180": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "184": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "240": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "169": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "153": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "154": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "156": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "216": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "89": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "90": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "92": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "120": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "85": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "86": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "116": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "212": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "204": {
+      "real": 1.0,
+      "imag": -0.0
+    },
+    "228": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "232": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "172": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "108": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "60": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "170": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "16": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "19": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "21": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "22": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "25": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "26": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "28": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "31": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "32": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "35": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "37": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "38": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "41": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "42": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "44": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "47": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "49": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "50": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "52": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "55": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "56": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "59": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "61": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "62": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "63": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "126": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "190": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "125": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "189": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "123": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "187": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "119": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "183": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "111": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "175": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "95": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "159": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "222": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "221": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "219": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "215": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "207": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "238": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "237": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "235": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "231": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "246": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "245": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "243": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "250": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "249": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "252": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "64": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "67": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "69": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "70": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "73": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "74": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "76": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "79": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "81": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "82": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "84": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "87": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "88": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "91": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "93": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "94": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "97": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "98": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "100": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "103": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "104": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "107": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "109": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "110": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "112": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "115": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "117": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "118": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "121": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "122": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "124": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "127": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "128": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "131": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "133": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "134": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "137": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "138": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "140": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "143": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "145": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "146": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "148": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "151": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "152": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "155": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "157": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "158": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "161": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "162": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "164": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "167": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "168": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "171": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "173": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "174": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "176": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "179": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "181": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "182": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "185": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "186": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "188": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "191": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "193": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "194": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "196": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "199": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "200": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "203": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "205": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "206": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "208": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "211": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "213": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "214": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "217": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "218": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "220": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "223": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "224": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "227": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "229": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "230": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "233": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "234": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "236": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "239": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "241": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "242": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "244": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "247": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "248": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "251": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "253": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "254": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "255": {
+      "real": 1.0,
+      "imag": 0.0
+    }
+  },
+  "lesson": "Onsite number-complement/matrixunit proof alone leaves relative phases between local number sectors undetermined. Check physical spatial hops. Global occupation-diagonal phase correction is solved from actual primitive paths, while X support stays only on onsite edges; therefore spatial Dstat still commutes. No independent Fock isometry or new state.",
+  "scope": "Executed ideal primitive spatial antiCAR/defect representation. Does not certify whole field/outside law or SAME moving-photon/source CP trace. Gamma(R) and connection/centre descent still need the stated actual ideal-kernel assumptions.",
+  "elapsed_seconds": 4.315852002939209
+}

@@ -1,0 +1,18 @@
+{
+  "candidate": "ORIENTED_AXIAL_NEUTRAL_BOND_COMPOSITE_V1",
+  "module": "rich_composite_rot_20261014_consumer.py",
+  "supplier": "RotationalComposite",
+  "public_functions": {
+    "build(parameters, flavors=(0,1,2), loading='difference', removed=False)": "Returns full sparse H and metadata. Basis flattened as ordered flavor positions, tensor-product spins up/down, four neutral oriented cells in |0,x,y,z> tensor order. H units arbitrary common energy, lattice side=1, hbar=1.",
+    "current_contact(metadata,q,polarization,magnetic=False)": "Returns full sparse physical Peierls current at +q and same-profile contact, including carrier-assisted spin-orbit hopping. q in inverse lattice side. magnetic=True gives orbital moment derivative for A=(B/2)(-y,x,0) and its contact.",
+    "spectrum(H,E0,source,steps)": "Nonnegative discrete Krylov spectral approximation for source: frequencies poles E_n-E0 and squared source matrix elements. Full-state calculation, not spin-only Hamiltonian.",
+    "summary(parameters,loading='difference',removed=False,fragments=True)": "Returns actual full-state energies, J/S/carrier angular measurements and dressed same-law fragment thresholds, plus full H/metadata and time-reversed states after symmetry-orbit restoration. axial_bias parameter defaults zero; .35 selects the explicit anisotropic material alternative.",
+    "polarized_ensemble_response(metadata,operator)": "Returns moment eigenvalues and equal-weight traces within maximum/minimum Jz sectors of the restored symmetry-generated ground block. Use these, not arbitrary degenerate pure-state partners, to attribute spin-dependent current.",
+    "rich_composite_rot_20261014_magnetic.evaluate(parameters,output_prefix)": "Executes selected loading-only magnetic fork with explicit spin_orbit=0, axial_bias=.35. Produces dressed breakup, current/contact, moment-polarization blocks, no-spin-loading and reversed/zero axial material controls."
+  },
+  "receiver_semantics": "Standalone finite composite branch, not compatible by identity with loop-photon/Hubbard electron branch. No claimed actual peer join. Reviewer may execute new selected observables via these pure functions; parent reads synthesis only.",
+  "density": "rho(q)=sum_i q_i exp(+i q.r_i), positions diagonal. Chosen Peierls phase +i q_i integral A produces [H,rho]=q.J with J=-dH/dA.",
+  "generator": "J=sum primitive constituent spins + all local neutral carrier spin-one L. At axial_bias=0 this is a genuine internal SU(2) generator, not a continuous orbital rotation generator of the embedded square. At nonzero axial_bias only Jz commutes with H; J2 is measured and not a spin-half invariant. No continuum total spatial angular momentum claim.",
+  "EM": "External probe only. No Maxwell dynamics or bare constituent Zeeman term. A nonzero neutral L or input spin label is never relabelled as a physical magnetic moment.",
+  "selected_magnetic_candidate": "AXIAL_PRETWIST_MOVING_SPIN_DIFFERENCE_LOADING_NO_EXPLICIT_SO_V1: same carrier local law, no explicit spin-orbit hopping. Axial pre-twist and primitive spin-carrier loading remain inputs. Binding and spin-dependent charge current are finite material behavior; J2=.763169, not a true rotationally invariant spin-half particle."
+}

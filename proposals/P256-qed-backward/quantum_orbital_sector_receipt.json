@@ -1,0 +1,1174 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "all_finite_consumers": true,
+    "nested_Galerkin_variational_order": true,
+    "photon_orbital_correlation_observed": true
+  },
+  "cutoff_sequences": [
+    {
+      "g": 0.15,
+      "nested_variational_energy_nonincrease": true,
+      "oscillator_dimension": 4,
+      "plus_ground_change": null
+    },
+    {
+      "g": 0.15,
+      "nested_variational_energy_nonincrease": true,
+      "oscillator_dimension": 8,
+      "plus_ground_change": -0.0004608226517083258
+    },
+    {
+      "g": 0.15,
+      "nested_variational_energy_nonincrease": true,
+      "oscillator_dimension": 12,
+      "plus_ground_change": -2.0728383332002664e-07
+    },
+    {
+      "g": 0.9,
+      "nested_variational_energy_nonincrease": true,
+      "oscillator_dimension": 4,
+      "plus_ground_change": null
+    },
+    {
+      "g": 0.9,
+      "nested_variational_energy_nonincrease": true,
+      "oscillator_dimension": 8,
+      "plus_ground_change": -0.0066811758645635155
+    },
+    {
+      "g": 0.9,
+      "nested_variational_energy_nonincrease": true,
+      "oscillator_dimension": 12,
+      "plus_ground_change": -9.568426600714552e-05
+    }
+  ],
+  "domain": "Full physical N=2 raw Pauli square, two code sectors, noncyclic photon rotors, quantum quartic oscillator",
+  "input_debt": [
+    "Primitive quantum tensor/Born/dynamics and scalar couplings remain model inputs",
+    "Finite square is not a Coulomb phase or a full fluctuating Clifford-selection theorem",
+    "Fock/electric boundary weights are diagnostics, not certified continuum errors"
+  ],
+  "primitive_source_sha256": "7e0c4b2d83427b246b92d32eb698a5d2b615780b9b2a8ed9410efefb8aa8b93f",
+  "rows": [
+    {
+      "adverse": {
+        "stabilizer_dressed_quantum_path_identity_residual": 1.8229308607505992,
+        "wrong_rotor_edge": 1,
+        "wrong_rotor_identity_residual": 10.320024461509469,
+        "wrong_sector_sign_primitive_path": [
+          0,
+          1
+        ]
+      },
+      "all_checks_pass": true,
+      "checks": {
+        "coupled_energy_Hellmann_Feynman": true,
+        "defect_operator_bound": true,
+        "exact_operator_identity": true,
+        "ground_defect_bound": true,
+        "microscopic_Gauss_preserved": true,
+        "noncommuting_quantum_coefficient": true,
+        "orbital_not_spectator": true,
+        "ordered_spectrum_bound": true,
+        "wrong_code_path_sign_rejected": true,
+        "wrong_rotor_factor_rejected": true
+      },
+      "cutoff_diagnostics": {
+        "expected_CCR_boundary_defect": 0.0004464064312983079,
+        "not_a_cutoff_error_bound": true,
+        "orbital_top_Fock_probability": 0.00011160160782457697,
+        "rotor_any_boundary_probability": 0.675673236930354
+      },
+      "dimensions": {
+        "each_actual_sector": 52,
+        "full_two_code_sectors": 104,
+        "physical_raw": 26
+      },
+      "gauss": {
+        "max_raw_residual": 0,
+        "primitive_constraint_violations": 0,
+        "silent_projection_used": false
+      },
+      "inputs": {
+        "Delta": 2.0,
+        "K": 0.7,
+        "N": 2,
+        "UE": 0.8,
+        "background": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "eta": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "g": 0.15,
+        "hopping": 0.6,
+        "improved_hopping": 0.19,
+        "omega": 1.3,
+        "oscillator_dimension": 4,
+        "phase": 0.23,
+        "quartic": 0.08,
+        "rotor_electric_cutoff": 1
+      },
+      "primitive_paths": [
+        {
+          "coefficient": [
+            0.5841998370032249,
+            0.13678651412111303
+          ],
+          "path": [
+            0,
+            1
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.5376314985153151,
+            0.2663688641793119
+          ],
+          "path": [
+            0,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.4627476089982639,
+            0.3819223093331808
+          ],
+          "path": [
+            1,
+            2
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.3634920939860777,
+            0.4773609720218196
+          ],
+          "path": [
+            2,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.17566039771970202,
+            0.07241149544758836
+          ],
+          "path": [
+            0,
+            1,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.1859438595464624,
+            -0.03904972595250152
+          ],
+          "path": [
+            0,
+            3,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.08694840907397997,
+            0.020358392851692324
+          ],
+          "path": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "quantum_X_coupling": false
+        }
+      ],
+      "quantum_state": {
+        "Hellmann_Feynman_residual": 2.098410334383516e-11,
+        "aux_H_X_commutator_norm": 3.5777384993831967,
+        "centered_energy_difference_g": -0.4501708064374998,
+        "covariance_X_electric_energy": 0.0014471338492924313,
+        "covariance_X_hopping": -0.007372883604974956,
+        "covariance_X_photon_cosine": -0.0022755982316435344,
+        "energy_derivative_g": -0.4501708064165157,
+        "mean_X": 0.18045407908775618,
+        "mean_electric_energy": 0.4064227900578857,
+        "mean_hopping_derivative": -2.453798357177644,
+        "mean_photon_cosine": 0.3328215843837007,
+        "orbital_entropy_nats": 0.001915248862018164,
+        "orbital_linear_entropy": 0.00040254340576317826
+      },
+      "residuals": {
+        "actual_hopping_derivative": 1.2947314098277875e-15,
+        "all_present_primitive_path_QR_cancellation": 4.440892098500626e-16,
+        "derived_QR_tensor_identity": 1.1322097734007351e-15,
+        "full_quantum_transformed_identity": 1.776073297902745e-14,
+        "full_spectrum_union": 3.7293458244583345e-14,
+        "hamiltonian_hermiticity": 0.0,
+        "physical_code_sector_commutator": 0.0,
+        "quantum_matter_cancellation": 2.2632072339039287e-15,
+        "truncated_CCR": 6.280369834735101e-16,
+        "unchanged_auxiliary_H": 0.0
+      },
+      "spectrum": {
+        "cosine_operator_norm": 0.7071067811865475,
+        "defect_ground_gap": 2.035778960926085,
+        "guaranteed_Delta_minus_2K": 0.6000000000000001,
+        "minus_ground": 1.3069626783157497,
+        "operator_margin_above_bound": 0.4100505063388305,
+        "ordered_spectrum_margin_above_bound": 1.194040486633431,
+        "plus_first_excitation_gap": 0.8176255084232302,
+        "plus_ground": -0.7288162826103353
+      }
+    },
+    {
+      "adverse": {
+        "stabilizer_dressed_quantum_path_identity_residual": 3.93798073988336,
+        "wrong_rotor_edge": 1,
+        "wrong_rotor_identity_residual": 15.189762562179322,
+        "wrong_sector_sign_primitive_path": [
+          0,
+          1
+        ]
+      },
+      "all_checks_pass": true,
+      "checks": {
+        "coupled_energy_Hellmann_Feynman": true,
+        "defect_operator_bound": true,
+        "exact_operator_identity": true,
+        "ground_defect_bound": true,
+        "microscopic_Gauss_preserved": true,
+        "noncommuting_quantum_coefficient": true,
+        "orbital_not_spectator": true,
+        "ordered_spectrum_bound": true,
+        "wrong_code_path_sign_rejected": true,
+        "wrong_rotor_factor_rejected": true
+      },
+      "cutoff_diagnostics": {
+        "expected_CCR_boundary_defect": 2.847545743727525e-06,
+        "not_a_cutoff_error_bound": true,
+        "orbital_top_Fock_probability": 3.559432179659406e-07,
+        "rotor_any_boundary_probability": 0.6756894293607381
+      },
+      "dimensions": {
+        "each_actual_sector": 104,
+        "full_two_code_sectors": 208,
+        "physical_raw": 26
+      },
+      "gauss": {
+        "max_raw_residual": 0,
+        "primitive_constraint_violations": 0,
+        "silent_projection_used": false
+      },
+      "inputs": {
+        "Delta": 2.0,
+        "K": 0.7,
+        "N": 2,
+        "UE": 0.8,
+        "background": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "eta": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "g": 0.15,
+        "hopping": 0.6,
+        "improved_hopping": 0.19,
+        "omega": 1.3,
+        "oscillator_dimension": 8,
+        "phase": 0.23,
+        "quartic": 0.08,
+        "rotor_electric_cutoff": 1
+      },
+      "primitive_paths": [
+        {
+          "coefficient": [
+            0.5841998370032249,
+            0.13678651412111303
+          ],
+          "path": [
+            0,
+            1
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.5376314985153151,
+            0.2663688641793119
+          ],
+          "path": [
+            0,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.4627476089982639,
+            0.3819223093331808
+          ],
+          "path": [
+            1,
+            2
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.3634920939860777,
+            0.4773609720218196
+          ],
+          "path": [
+            2,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.17566039771970202,
+            0.07241149544758836
+          ],
+          "path": [
+            0,
+            1,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.1859438595464624,
+            -0.03904972595250152
+          ],
+          "path": [
+            0,
+            3,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.08694840907397997,
+            0.020358392851692324
+          ],
+          "path": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "quantum_X_coupling": false
+        }
+      ],
+      "quantum_state": {
+        "Hellmann_Feynman_residual": 7.273942559393731e-11,
+        "aux_H_X_commutator_norm": 11.002209770003411,
+        "centered_energy_difference_g": -0.4531737324620088,
+        "covariance_X_electric_energy": 0.0014582718692238705,
+        "covariance_X_hopping": -0.007422507258763755,
+        "covariance_X_photon_cosine": -0.0022915316169731317,
+        "energy_derivative_g": -0.4531737323892694,
+        "mean_X": 0.1816541905875985,
+        "mean_electric_energy": 0.4064360449134952,
+        "mean_hopping_derivative": -2.453844988043656,
+        "mean_photon_cosine": 0.33280811116110376,
+        "orbital_entropy_nats": 0.0019290235886943131,
+        "orbital_linear_entropy": 0.0004057783212343402
+      },
+      "residuals": {
+        "actual_hopping_derivative": 1.2947314098277875e-15,
+        "all_present_primitive_path_QR_cancellation": 4.440892098500626e-16,
+        "derived_QR_tensor_identity": 1.6011864169946884e-15,
+        "full_quantum_transformed_identity": 3.354102980905935e-14,
+        "full_spectrum_union": 1.269938034867044e-13,
+        "hamiltonian_hermiticity": 0.0,
+        "physical_code_sector_commutator": 0.0,
+        "quantum_matter_cancellation": 3.2809743722190237e-15,
+        "truncated_CCR": 2.710399819191012e-15,
+        "unchanged_auxiliary_H": 0.0
+      },
+      "spectrum": {
+        "cosine_operator_norm": 0.7071067811865475,
+        "defect_ground_gap": 2.0357621807756723,
+        "guaranteed_Delta_minus_2K": 0.6000000000000001,
+        "minus_ground": 1.3064850755136286,
+        "operator_margin_above_bound": 0.4100505063388281,
+        "ordered_spectrum_margin_above_bound": 1.1934717547016098,
+        "plus_first_excitation_gap": 0.8177212802796642,
+        "plus_ground": -0.7292771052620436
+      }
+    },
+    {
+      "adverse": {
+        "stabilizer_dressed_quantum_path_identity_residual": 6.045977683869345,
+        "wrong_rotor_edge": 1,
+        "wrong_rotor_identity_residual": 19.30486843849738,
+        "wrong_sector_sign_primitive_path": [
+          0,
+          1
+        ]
+      },
+      "all_checks_pass": true,
+      "checks": {
+        "coupled_energy_Hellmann_Feynman": true,
+        "defect_operator_bound": true,
+        "exact_operator_identity": true,
+        "ground_defect_bound": true,
+        "microscopic_Gauss_preserved": true,
+        "noncommuting_quantum_coefficient": true,
+        "orbital_not_spectator": true,
+        "ordered_spectrum_bound": true,
+        "wrong_code_path_sign_rejected": true,
+        "wrong_rotor_factor_rejected": true
+      },
+      "cutoff_diagnostics": {
+        "expected_CCR_boundary_defect": 3.906510798101774e-09,
+        "not_a_cutoff_error_bound": true,
+        "orbital_top_Fock_probability": 3.2554256650848115e-10,
+        "rotor_any_boundary_probability": 0.6756894465552075
+      },
+      "dimensions": {
+        "each_actual_sector": 156,
+        "full_two_code_sectors": 312,
+        "physical_raw": 26
+      },
+      "gauss": {
+        "max_raw_residual": 0,
+        "primitive_constraint_violations": 0,
+        "silent_projection_used": false
+      },
+      "inputs": {
+        "Delta": 2.0,
+        "K": 0.7,
+        "N": 2,
+        "UE": 0.8,
+        "background": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "eta": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "g": 0.15,
+        "hopping": 0.6,
+        "improved_hopping": 0.19,
+        "omega": 1.3,
+        "oscillator_dimension": 12,
+        "phase": 0.23,
+        "quartic": 0.08,
+        "rotor_electric_cutoff": 1
+      },
+      "primitive_paths": [
+        {
+          "coefficient": [
+            0.5841998370032249,
+            0.13678651412111303
+          ],
+          "path": [
+            0,
+            1
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.5376314985153151,
+            0.2663688641793119
+          ],
+          "path": [
+            0,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.4627476089982639,
+            0.3819223093331808
+          ],
+          "path": [
+            1,
+            2
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.3634920939860777,
+            0.4773609720218196
+          ],
+          "path": [
+            2,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.17566039771970202,
+            0.07241149544758836
+          ],
+          "path": [
+            0,
+            1,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.1859438595464624,
+            -0.03904972595250152
+          ],
+          "path": [
+            0,
+            3,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.08694840907397997,
+            0.020358392851692324
+          ],
+          "path": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "quantum_X_coupling": false
+        }
+      ],
+      "quantum_state": {
+        "Hellmann_Feynman_residual": 1.2467749055389277e-11,
+        "aux_H_X_commutator_norm": 24.616316561346952,
+        "centered_energy_difference_g": -0.45317743072592614,
+        "covariance_X_electric_energy": 0.001458303343692735,
+        "covariance_X_hopping": -0.00742261220512741,
+        "covariance_X_photon_cosine": -0.0022915716261584784,
+        "energy_derivative_g": -0.4531774307134584,
+        "mean_X": 0.18165565137262496,
+        "mean_electric_energy": 0.40643605972841945,
+        "mean_hopping_derivative": -2.453845036695099,
+        "mean_photon_cosine": 0.332808094325126,
+        "orbital_entropy_nats": 0.0019290624713740306,
+        "orbital_linear_entropy": 0.00040578741444607935
+      },
+      "residuals": {
+        "actual_hopping_derivative": 1.2947314098277875e-15,
+        "all_present_primitive_path_QR_cancellation": 4.440892098500626e-16,
+        "derived_QR_tensor_identity": 1.961044852356119e-15,
+        "full_quantum_transformed_identity": 7.820276577712948e-14,
+        "full_spectrum_union": 1.7797315090883567e-13,
+        "hamiltonian_hermiticity": 0.0,
+        "physical_code_sector_commutator": 0.0,
+        "quantum_matter_cancellation": 4.225609778114889e-15,
+        "truncated_CCR": 3.4327262884970693e-15,
+        "unchanged_auxiliary_H": 0.0
+      },
+      "spectrum": {
+        "cosine_operator_norm": 0.7071067811865475,
+        "defect_ground_gap": 2.0357621613629857,
+        "guaranteed_Delta_minus_2K": 0.6000000000000001,
+        "minus_ground": 1.3064848488171088,
+        "operator_margin_above_bound": 0.4100505063388207,
+        "ordered_spectrum_margin_above_bound": 1.19439662898492,
+        "plus_first_excitation_gap": 0.8177213512676363,
+        "plus_ground": -0.7292773125458769
+      }
+    },
+    {
+      "adverse": {
+        "stabilizer_dressed_quantum_path_identity_residual": 10.937585164503597,
+        "wrong_rotor_edge": 1,
+        "wrong_rotor_identity_residual": 18.41516466126595,
+        "wrong_sector_sign_primitive_path": [
+          0,
+          1
+        ]
+      },
+      "all_checks_pass": true,
+      "checks": {
+        "coupled_energy_Hellmann_Feynman": true,
+        "defect_operator_bound": true,
+        "exact_operator_identity": true,
+        "ground_defect_bound": true,
+        "microscopic_Gauss_preserved": true,
+        "noncommuting_quantum_coefficient": true,
+        "orbital_not_spectator": true,
+        "ordered_spectrum_bound": true,
+        "wrong_code_path_sign_rejected": true,
+        "wrong_rotor_factor_rejected": true
+      },
+      "cutoff_diagnostics": {
+        "expected_CCR_boundary_defect": 0.05332997964128964,
+        "not_a_cutoff_error_bound": true,
+        "orbital_top_Fock_probability": 0.01333249491032241,
+        "rotor_any_boundary_probability": 0.7237528608162328
+      },
+      "dimensions": {
+        "each_actual_sector": 52,
+        "full_two_code_sectors": 104,
+        "physical_raw": 26
+      },
+      "gauss": {
+        "max_raw_residual": 0,
+        "primitive_constraint_violations": 0,
+        "silent_projection_used": false
+      },
+      "inputs": {
+        "Delta": 2.0,
+        "K": 0.7,
+        "N": 2,
+        "UE": 0.8,
+        "background": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "eta": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "g": 0.9,
+        "hopping": 0.6,
+        "improved_hopping": 0.19,
+        "omega": 1.3,
+        "oscillator_dimension": 4,
+        "phase": 0.23,
+        "quartic": 0.08,
+        "rotor_electric_cutoff": 1
+      },
+      "primitive_paths": [
+        {
+          "coefficient": [
+            0.5841998370032249,
+            0.13678651412111303
+          ],
+          "path": [
+            0,
+            1
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.5376314985153151,
+            0.2663688641793119
+          ],
+          "path": [
+            0,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.4627476089982639,
+            0.3819223093331808
+          ],
+          "path": [
+            1,
+            2
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.3634920939860777,
+            0.4773609720218196
+          ],
+          "path": [
+            2,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.17566039771970202,
+            0.07241149544758836
+          ],
+          "path": [
+            0,
+            1,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.1859438595464624,
+            -0.03904972595250152
+          ],
+          "path": [
+            0,
+            3,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.08694840907397997,
+            0.020358392851692324
+          ],
+          "path": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "quantum_X_coupling": false
+        }
+      ],
+      "quantum_state": {
+        "Hellmann_Feynman_residual": 2.4096946660279173e-10,
+        "aux_H_X_commutator_norm": 3.5777384993831967,
+        "centered_energy_difference_g": -2.5833918925521893,
+        "covariance_X_electric_energy": 0.005742137399223413,
+        "covariance_X_hopping": -0.011874337773575494,
+        "covariance_X_photon_cosine": -0.009514215028115114,
+        "energy_derivative_g": -2.5833918927931587,
+        "mean_X": 0.9965479211125001,
+        "mean_electric_energy": 0.45283152888152356,
+        "mean_hopping_derivative": -2.58042538701888,
+        "mean_photon_cosine": 0.2643246365035118,
+        "orbital_entropy_nats": 0.010841950478459008,
+        "orbital_linear_entropy": 0.0028619436462096193
+      },
+      "residuals": {
+        "actual_hopping_derivative": 1.2947314098277875e-15,
+        "all_present_primitive_path_QR_cancellation": 4.440892098500626e-16,
+        "derived_QR_tensor_identity": 1.1322097734007351e-15,
+        "full_quantum_transformed_identity": 1.8122499318705092e-14,
+        "full_spectrum_union": 5.460914968845214e-14,
+        "hamiltonian_hermiticity": 0.0,
+        "physical_code_sector_commutator": 0.0,
+        "quantum_matter_cancellation": 4.25481522369049e-15,
+        "truncated_CCR": 6.280369834735101e-16,
+        "unchanged_auxiliary_H": 0.0
+      },
+      "spectrum": {
+        "cosine_operator_norm": 0.7071067811865475,
+        "defect_ground_gap": 1.9798667960749505,
+        "guaranteed_Delta_minus_2K": 0.6000000000000001,
+        "minus_ground": 0.08236520564328748,
+        "operator_margin_above_bound": 0.41005050633883056,
+        "ordered_spectrum_margin_above_bound": 1.2084844193209454,
+        "plus_first_excitation_gap": 1.2253621244943504,
+        "plus_ground": -1.897501590431663
+      }
+    },
+    {
+      "adverse": {
+        "stabilizer_dressed_quantum_path_identity_residual": 23.627884439300157,
+        "wrong_rotor_edge": 1,
+        "wrong_rotor_identity_residual": 36.2803989536202,
+        "wrong_sector_sign_primitive_path": [
+          0,
+          1
+        ]
+      },
+      "all_checks_pass": true,
+      "checks": {
+        "coupled_energy_Hellmann_Feynman": true,
+        "defect_operator_bound": true,
+        "exact_operator_identity": true,
+        "ground_defect_bound": true,
+        "microscopic_Gauss_preserved": true,
+        "noncommuting_quantum_coefficient": true,
+        "orbital_not_spectator": true,
+        "ordered_spectrum_bound": true,
+        "wrong_code_path_sign_rejected": true,
+        "wrong_rotor_factor_rejected": true
+      },
+      "cutoff_diagnostics": {
+        "expected_CCR_boundary_defect": 0.000141782532391071,
+        "not_a_cutoff_error_bound": true,
+        "orbital_top_Fock_probability": 1.7722816548883875e-05,
+        "rotor_any_boundary_probability": 0.724054404293057
+      },
+      "dimensions": {
+        "each_actual_sector": 104,
+        "full_two_code_sectors": 208,
+        "physical_raw": 26
+      },
+      "gauss": {
+        "max_raw_residual": 0,
+        "primitive_constraint_violations": 0,
+        "silent_projection_used": false
+      },
+      "inputs": {
+        "Delta": 2.0,
+        "K": 0.7,
+        "N": 2,
+        "UE": 0.8,
+        "background": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "eta": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "g": 0.9,
+        "hopping": 0.6,
+        "improved_hopping": 0.19,
+        "omega": 1.3,
+        "oscillator_dimension": 8,
+        "phase": 0.23,
+        "quartic": 0.08,
+        "rotor_electric_cutoff": 1
+      },
+      "primitive_paths": [
+        {
+          "coefficient": [
+            0.5841998370032249,
+            0.13678651412111303
+          ],
+          "path": [
+            0,
+            1
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.5376314985153151,
+            0.2663688641793119
+          ],
+          "path": [
+            0,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.4627476089982639,
+            0.3819223093331808
+          ],
+          "path": [
+            1,
+            2
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.3634920939860777,
+            0.4773609720218196
+          ],
+          "path": [
+            2,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.17566039771970202,
+            0.07241149544758836
+          ],
+          "path": [
+            0,
+            1,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.1859438595464624,
+            -0.03904972595250152
+          ],
+          "path": [
+            0,
+            3,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.08694840907397997,
+            0.020358392851692324
+          ],
+          "path": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "quantum_X_coupling": false
+        }
+      ],
+      "quantum_state": {
+        "Hellmann_Feynman_residual": 1.5342305204057993e-10,
+        "aux_H_X_commutator_norm": 11.002209770003411,
+        "centered_energy_difference_g": -2.6226849379362704,
+        "covariance_X_electric_energy": 0.006204192208763448,
+        "covariance_X_hopping": -0.012494047177192602,
+        "covariance_X_photon_cosine": -0.01052942136245777,
+        "energy_derivative_g": -2.6226849380896935,
+        "mean_X": 1.0112551158470597,
+        "mean_electric_energy": 0.4532098016443877,
+        "mean_hopping_derivative": -2.5811398627398994,
+        "mean_photon_cosine": 0.2634075728158975,
+        "orbital_entropy_nats": 0.011531984990464227,
+        "orbital_linear_entropy": 0.0030684355192783785
+      },
+      "residuals": {
+        "actual_hopping_derivative": 1.2947314098277875e-15,
+        "all_present_primitive_path_QR_cancellation": 4.440892098500626e-16,
+        "derived_QR_tensor_identity": 1.6011864169946884e-15,
+        "full_quantum_transformed_identity": 3.432151865838359e-14,
+        "full_spectrum_union": 9.899292972630786e-14,
+        "hamiltonian_hermiticity": 0.0,
+        "physical_code_sector_commutator": 0.0,
+        "quantum_matter_cancellation": 7.983154464040113e-15,
+        "truncated_CCR": 2.710399819191012e-15,
+        "unchanged_auxiliary_H": 0.0
+      },
+      "spectrum": {
+        "cosine_operator_norm": 0.7071067811865475,
+        "defect_ground_gap": 1.9794031580128186,
+        "guaranteed_Delta_minus_2K": 0.6000000000000001,
+        "minus_ground": 0.0752203917165922,
+        "operator_margin_above_bound": 0.4100505063388283,
+        "ordered_spectrum_margin_above_bound": 1.1899144941849253,
+        "plus_first_excitation_gap": 1.227822681583127,
+        "plus_ground": -1.9041827662962265
+      }
+    },
+    {
+      "adverse": {
+        "stabilizer_dressed_quantum_path_identity_residual": 36.275866103216075,
+        "wrong_rotor_edge": 1,
+        "wrong_rotor_identity_residual": 54.142840488811835,
+        "wrong_sector_sign_primitive_path": [
+          0,
+          1
+        ]
+      },
+      "all_checks_pass": true,
+      "checks": {
+        "coupled_energy_Hellmann_Feynman": true,
+        "defect_operator_bound": true,
+        "exact_operator_identity": true,
+        "ground_defect_bound": true,
+        "microscopic_Gauss_preserved": true,
+        "noncommuting_quantum_coefficient": true,
+        "orbital_not_spectator": true,
+        "ordered_spectrum_bound": true,
+        "wrong_code_path_sign_rejected": true,
+        "wrong_rotor_factor_rejected": true
+      },
+      "cutoff_diagnostics": {
+        "expected_CCR_boundary_defect": 1.5031547591572177e-07,
+        "not_a_cutoff_error_bound": true,
+        "orbital_top_Fock_probability": 1.2526289659643481e-08,
+        "rotor_any_boundary_probability": 0.724056942395285
+      },
+      "dimensions": {
+        "each_actual_sector": 156,
+        "full_two_code_sectors": 312,
+        "physical_raw": 26
+      },
+      "gauss": {
+        "max_raw_residual": 0,
+        "primitive_constraint_violations": 0,
+        "silent_projection_used": false
+      },
+      "inputs": {
+        "Delta": 2.0,
+        "K": 0.7,
+        "N": 2,
+        "UE": 0.8,
+        "background": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "eta": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "g": 0.9,
+        "hopping": 0.6,
+        "improved_hopping": 0.19,
+        "omega": 1.3,
+        "oscillator_dimension": 12,
+        "phase": 0.23,
+        "quartic": 0.08,
+        "rotor_electric_cutoff": 1
+      },
+      "primitive_paths": [
+        {
+          "coefficient": [
+            0.5841998370032249,
+            0.13678651412111303
+          ],
+          "path": [
+            0,
+            1
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.5376314985153151,
+            0.2663688641793119
+          ],
+          "path": [
+            0,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.4627476089982639,
+            0.3819223093331808
+          ],
+          "path": [
+            1,
+            2
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.3634920939860777,
+            0.4773609720218196
+          ],
+          "path": [
+            2,
+            3
+          ],
+          "quantum_X_coupling": true
+        },
+        {
+          "coefficient": [
+            0.17566039771970202,
+            0.07241149544758836
+          ],
+          "path": [
+            0,
+            1,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.1859438595464624,
+            -0.03904972595250152
+          ],
+          "path": [
+            0,
+            3,
+            2
+          ],
+          "quantum_X_coupling": false
+        },
+        {
+          "coefficient": [
+            0.08694840907397997,
+            0.020358392851692324
+          ],
+          "path": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "quantum_X_coupling": false
+        }
+      ],
+      "quantum_state": {
+        "Hellmann_Feynman_residual": 2.3098856161141157e-11,
+        "aux_H_X_commutator_norm": 24.616316561346952,
+        "centered_energy_difference_g": -2.622798942142346,
+        "covariance_X_electric_energy": 0.006201369228351239,
+        "covariance_X_hopping": -0.012488650698509574,
+        "covariance_X_photon_cosine": -0.010525518898436503,
+        "energy_derivative_g": -2.6227989421654447,
+        "mean_X": 1.011299298417316,
+        "mean_electric_energy": 0.45321280620875315,
+        "mean_hopping_derivative": -2.581145162022828,
+        "mean_photon_cosine": 0.26340407643582714,
+        "orbital_entropy_nats": 0.011529795193747562,
+        "orbital_linear_entropy": 0.003067725555092382
+      },
+      "residuals": {
+        "actual_hopping_derivative": 1.2947314098277875e-15,
+        "all_present_primitive_path_QR_cancellation": 4.440892098500626e-16,
+        "derived_QR_tensor_identity": 1.961044852356119e-15,
+        "full_quantum_transformed_identity": 7.908917849487089e-14,
+        "full_spectrum_union": 2.0492006749321974e-13,
+        "hamiltonian_hermiticity": 0.0,
+        "physical_code_sector_commutator": 0.0,
+        "quantum_matter_cancellation": 1.2541186458939014e-14,
+        "truncated_CCR": 3.4327262884970693e-15,
+        "unchanged_auxiliary_H": 0.0
+      },
+      "spectrum": {
+        "cosine_operator_norm": 0.7071067811865475,
+        "defect_ground_gap": 1.9794005487445026,
+        "guaranteed_Delta_minus_2K": 0.6000000000000001,
+        "minus_ground": 0.07512209818226889,
+        "operator_margin_above_bound": 0.41005050633882073,
+        "ordered_spectrum_margin_above_bound": 1.1922601916783697,
+        "plus_first_excitation_gap": 1.2278419725691607,
+        "plus_ground": -1.9042784505622337
+      }
+    }
+  ],
+  "source_sha256": "60a81ec6b91f035dece31621654a705aec352abd79220ed173958e2f15517994",
+  "status": "quantum_orbital_coefficients_share_actual_bosonic_statistics_selector",
+  "theorem": "T_s=Q_eta R_eta tensor I_aux: T_s* H_s T_s=H_plus+2K sum_def C_p+Delta Ndef; inf(spec H_s)-inf(spec H_plus)>=(Delta-2K)Ndef"
+}

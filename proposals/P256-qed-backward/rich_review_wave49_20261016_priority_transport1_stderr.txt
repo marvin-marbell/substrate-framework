@@ -1,0 +1,24 @@
+/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/linalg/np_conserved.py:3435: UserWarning: can't detect total charge: no entry larger than cutoff. Return 0 charge.
+  qflat[i] = detect_qtotal(A_i, legs_known, cutoff)
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_priority_consumer.py", line 127, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_priority_consumer.py", line 120, in main
+    mode=sys.argv[3];m,compiled=core.load_compiled(sys.argv[1],sys.argv[2]);neutral,charged,preparation=initial_pair(m)
+                                                                                                        ^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_priority_consumer.py", line 46, in initial_pair
+    neutral,old=load_saved(m,'neutral_preparation','zero_source_repair2')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_priority_consumer.py", line 23, in load_saved
+    with np.load(payload) as raw:state=storage.restore(m,raw,'state')
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_integrated_storage.py", line 40, in restore
+    state=MPS.from_Bflat(m.sites,tensors,singular,bc='finite',permute=False,form='B',unit_cell_width=1)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/networks/mps.py", line 2335, in from_Bflat
+    B = npc.Array.from_ndarray(B, legs, dtype)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/linalg/np_conserved.py", line 517, in from_ndarray
+    raise ValueError('wrong sector with non-zero entries')
+ValueError: wrong sector with non-zero entries

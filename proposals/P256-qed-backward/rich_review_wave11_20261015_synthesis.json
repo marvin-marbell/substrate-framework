@@ -1,0 +1,404 @@
+{
+  "owner": "ScientificReviewWave11",
+  "kind": "INDEPENDENT_READSOURCE_PLUS_NEW_PHYSICAL_CONSUMER_REVIEW_NOT_ADMISSION",
+  "scope": [
+    "Frozen ExtensiveInducedPhoton",
+    "Frozen PhysicalNoetherEmbedding"
+  ],
+  "governing_plan": {
+    "id": "issue222-rich-backward-candidates-20261014",
+    "captured_revision": "de9ef901e011fcbb9eebe53d0aea74b86487dbdac7c570403e08393809d5e09e",
+    "template": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe"
+  },
+  "source_revisions": {
+    "photon_model": "b1789c6eac097e5adeb43a74b8d25051ed296a7e82b29b9dc5e09d647e12d561",
+    "noether_model": "18b43f14def96c72ca1b6dde2f5392fd2fdf78d637348d05a54f46568f9b939f"
+  },
+  "mechanism_and_verdict": {
+    "photon": "A correlated tetrahedral Hubbard source with three noncoplanar loops provides Peierls current/contact restoring response to two orthogonal transverse coordinates of ONE common3Dq. Its density/volume normalization and own D-residue-to-hopping feedback are real. Independent field-only preparation produces molecular reaction. Retain finite current-bright rank2 modes and regulated homogenized Gaussian continuation, NOT exact/converged photons or a charged join.",
+    "noether": "Full geometry/frame/field rotations, charged source halfspin and inclusive field-only angular transfer survive the independent frozen-H consumer. Halfspin depends on the supplied charged Z2 bundle, and the moving whole state is not pure halfspin. However the frozen implementation omits retained off-diagonal p^2 terms: it is a rotationally covariant finite law, NOT the exact projected mechanical kinetic law stated in its Lagrangian."
+  },
+  "findings": [
+    {
+      "id": "W11-N1",
+      "severity": "scientific mechanism mismatch; does not invalidate observed rotation algebra or frozen-H data",
+      "owning_revision": "18b43f14def96c72ca1b6dde2f5392fd2fdf78d637348d05a54f46568f9b939f",
+      "source": "rich_physical_noether_20261014_model.py:98-100; equations.json:6,9",
+      "trigger": "geometry_cut2 retains vacuum and three oscillator two-quanta axis states",
+      "expected": "Full Pcut p^2/(2M) Pcut has vacuum\u2194each two-quanta-axis matrix element -sqrt(2)/(4 M ell^2)=-.3945908377157073",
+      "actual": "Implemented kinetic is diagonal (sum n+1.5)/(2M ell^2); those six Hermitian matrix entries are zero",
+      "consequence": {
+        "kinetic_matrix_defect_norm": 0.9665462095808465,
+        "relative_kinetic_defect": 0.17541160386140583,
+        "neutral_energy_change_in_explicit_different_law": -0.05401038001454239,
+        "frozen_gap": 1.0362888687947387,
+        "true_kinetic_different_law_gap": 1.0362206292143412
+      },
+      "smallest_corrective_direction": "For a NEW mechanical root, integrate continuum kinetic derivatives or use extended-shell p^2 products before projection, including retained shell0\u2194shell2 entries; recompute its own states/current. Do not overwrite immutable frozen capsules. Narrow old exact-mechanical-Lagrangian wording. [H,J]=0 alone cannot catch a rotational scalar kinetic omission.",
+      "counterevidence": "Lowest source gap remains positive and halfspin, and the frozen H truly conserves total physical J. This is not a global obstruction to the mechanism."
+    }
+  ],
+  "photon_independent_evidence": {
+    "whole_H_population": "1296 joint states and all1295 virtuals at each q. NEW all-state diagonalization q0.5; q0.25/1 use exact hash-bound frozen full eigenbases with NEW whole-H/current/contact/tensor/event consumption.",
+    "density": 0.04,
+    "volume": 25.0,
+    "actual_inverse_sqrt_epsilon_V_vertex": 0.23904572186687872,
+    "current_Gram_ranks": [
+      2,
+      2,
+      2
+    ],
+    "current_Gram_eigenvalues": [
+      [
+        6.424637890799273e-06,
+        6.433183988945671e-06
+      ],
+      [
+        5.547582769423995e-05,
+        5.554595796870667e-05
+      ],
+      [
+        0.0003909229720992068,
+        0.00039142690362891025
+      ]
+    ],
+    "max_eigenbasis_residual": 3.69941072212543e-14,
+    "max_current_derivative_error": 3.7428681313708624e-11,
+    "max_contact_numeric_error": 2.4694480585950404e-08,
+    "uniform_A_Ward_norm": 1.1403718331177618e-15,
+    "selfconsistent_feedback": {
+      "converged": true,
+      "iterations": 33,
+      "last_error": 7.719122008253976e-10,
+      "six_hoppings": [
+        0.9356596065720306,
+        0.9357986130887279,
+        0.9357133476233734,
+        0.9356996965667566,
+        0.9356249796006432,
+        0.9357639301678222
+      ],
+      "one_pass": [
+        0.01741556689350654,
+        0.017422626557877095
+      ],
+      "returned": [
+        0.016794055303515423,
+        0.01680134396307068
+      ]
+    },
+    "different_phase_average_law": {
+      "homogenized_static": [
+        [
+          0.00028393066368942455,
+          -1.2456858952909143e-07
+        ],
+        [
+          -1.245685895303586e-07,
+          0.00028393059034652335
+        ]
+      ],
+      "single_sine_static": [
+        [
+          0.000567264750677211,
+          -2.4887544359381396e-07
+        ],
+        [
+          -2.488754435938054e-07,
+          0.0005672646038365351
+        ]
+      ],
+      "homogenized_frequencies": [
+        0.016794055303515423,
+        0.01680134396307068
+      ],
+      "single_sine_frequencies": [
+        0.023811740325037675,
+        0.02382218842426014
+      ]
+    },
+    "new_field_only_event_q0p5": [
+      {
+        "time": 0.0,
+        "norm": 0.9999999999999994,
+        "energy": -4.981539655744849,
+        "current": [
+          3.6357364601585784e-16,
+          4.822327975308183e-16
+        ],
+        "electric_excess": 0.005179175335424897,
+        "double_change": -6.938893903907228e-17
+      },
+      {
+        "time": 7.0,
+        "norm": 0.9999999999999989,
+        "energy": -4.98153965574485,
+        "current": [
+          -0.00132922067492885,
+          0.0008379672730445825
+        ],
+        "electric_excess": 0.004699673441819128,
+        "double_change": -6.6134296753395105e-06
+      },
+      {
+        "time": 19.0,
+        "norm": 0.9999999999999991,
+        "energy": -4.98153965574485,
+        "current": [
+          -0.0032446239260763027,
+          0.0020428075125063622
+        ],
+        "electric_excess": 0.00240475374702696,
+        "double_change": -3.966231644796092e-05
+      },
+      {
+        "time": 37.0,
+        "norm": 0.9999999999999992,
+        "energy": -4.981539655744848,
+        "current": [
+          -0.004140469790141121,
+          0.002599435922012449
+        ],
+        "electric_excess": 0.0005461708804467662,
+        "double_change": -6.571745304589927e-05
+      }
+    ],
+    "artifact_verified_not_new_largewall_diagonalization": {
+      "baseline_step": 2.8,
+      "new_step": 2.8000000000000003,
+      "baseline_pole": 0.026856554139251365,
+      "larger_pole": 0.024130646373971665,
+      "relative_change": -0.10149879061721234,
+      "larger_boundary": 0.0007217120995680728
+    },
+    "artifact_verified_whole_time_approx_current_errors": [
+      0.12056264641525027,
+      0.07479723331137592,
+      0.3894993479771831
+    ],
+    "bare_electric_projection_gap_not_photon": 0.018117285959209854,
+    "no_convergence_claim": "Fixedstep2.8 wall change moves pole -10.15%; Gaussian full-time current errors12.06/7.48/38.95%; phase averaging discards Bragg mixing and intercell longitudinal correlations, fixed26point UVIR mesh is not converged. Lowq .06724 is conditional continuation, not observed exact massless photons.",
+    "current_zero_correction": "Actual1 collective default-zero display is not physical current evidence; actual2 current/contact amplitudes and this independent current consumer supersede it. Exact actual1 current data remain valid."
+  },
+  "noether_independent_evidence": {
+    "whole_H_dimension": 4800,
+    "neutral_addition_removal_dimensions": {
+      "2": 1800,
+      "3": 1200,
+      "1": 1200
+    },
+    "all_three_sectors_new_full_diagonalizations": true,
+    "neutral_J2": -2.1362139701913715e-18,
+    "source_J2": 0.7500000000000013,
+    "lowest_pole_J2": [
+      0.7499999999999991,
+      0.7500000000000026
+    ],
+    "whole_unfiltered_moving_J2": 1.41493567675017,
+    "addition_gap": 1.0362888687947387,
+    "removal_gap": 1.0362888687947471,
+    "all_adjacent_spectral_CAR": 6.9636138744174724e-15,
+    "independent_polynomial_coordinate_and_Haar_frame_action_vs_generator": 7.820844120674432e-16,
+    "canonical_X_PX_Q_P_vector_covariance": {
+      "X": 4.8683094962416153e-14,
+      "PX": 7.741161976990546e-14,
+      "Q": 2.9528181508856135e-14,
+      "P": 1.3391967039131565e-13
+    },
+    "actual_spatial_A_B_covariance": {
+      "A": 4.955361418800576e-17,
+      "B": 1.0569008315563939e-16
+    },
+    "full_H_J_relative": [
+      2.4565325882367533e-16,
+      2.4527407835860666e-16,
+      2.1583340058952887e-16
+    ],
+    "frame_only_H_relative": [
+      0.0017285241892686697,
+      0.001728524189268683,
+      0.0017285241892686725
+    ],
+    "charged_2pi_minus": 3.0780885871987188e-15,
+    "trivial_SO3_bundle_odd_weight": 0.0,
+    "mechanical_current_derivative_errors": [
+      7.304670153567673e-16,
+      7.559460553546144e-16,
+      1.0260681473552377e-10
+    ],
+    "neutral_full_current_Lehmann_strength_NOT_pair_yield": [
+      7.472680991733398e-06,
+      7.47268099173344e-06,
+      7.472680991732561e-06
+    ],
+    "radial_continuity": 5.780004423925073e-14,
+    "supplied_Maxwell_NOT_induced": {
+      "metric": 3.463945480269068,
+      "stiffness": 6.013794236578244,
+      "omega": 1.317615691736825
+    },
+    "new_field_only_angular_impulse": [
+      4.9187232894859516e-23,
+      -0.18169147266985355,
+      2.220446049250313e-16
+    ],
+    "inclusive_event_metrics": {
+      "max_torque_sum": 3.122502256758253e-17,
+      "max_energy_drift": 8.704148513061227e-14,
+      "max_probability_sum_error": 2.5979218776228663e-14,
+      "max_Jz_PVM_drift": 2.919886554764162e-14
+    },
+    "new_event_final": {
+      "time": 3.7,
+      "norm": 1.0000000000000018,
+      "energy": 4.58635297740882,
+      "J": [
+        1.81603863891322e-17,
+        -0.1816914726698525,
+        0.6928258342462446
+      ],
+      "partition": {
+        "S": [
+          0.0007291599230575678,
+          -0.0038459452000976424,
+          0.498751716733576
+        ],
+        "L": [
+          8.546885483671216e-05,
+          -0.0014059454429437917,
+          0.19245050861016433
+        ],
+        "F": [
+          -0.0008146287778942624,
+          -0.176439582026811,
+          0.00162360890250429
+        ]
+      },
+      "torques": {
+        "S": [
+          3.92585523949126e-05,
+          0.00630136501325221,
+          0.0015940158163716192
+        ],
+        "L": [
+          -1.3523302426684077e-05,
+          0.002121469775631238,
+          0.0005008745361043362
+        ],
+        "F": [
+          -2.5735249968228818e-05,
+          -0.008422834788883417,
+          -0.00209489035247596
+        ]
+      },
+      "torque_sum": [
+        -2.981555974335137e-19,
+        3.122502256758253e-17,
+        -4.7704895589362195e-18
+      ],
+      "current_excess": [
+        -0.0038419127556315966,
+        -0.0005502845863259137,
+        -0.004600504492733901
+      ],
+      "centre_excess": [
+        -0.00432756698152037,
+        -0.012344837093129231,
+        0.0003741202574350295
+      ],
+      "radius": 0.9880157129441975,
+      "field_energy_excess": 0.544054222188892
+    },
+    "source_inspection_not_new_source_identity_evaluation": "Read the full raw Gauss/CAR helper and complete physical-source covariance implementation. NEW consumer independently rebuilds raw CAR, neutral/reference, full adjacent source strengths/G, pole J2, raw Haar action, physical fields and inclusive event; do not label every inspected author operator identity as newly re-executed.",
+    "remaining_inputs": "Primitive charged nontrivialZ2 bundle, scalarCAR/colour, shell binding/inertial/shape/radial collective channel geometry. Relative-centre motion only, free CM not propagated; field/shape boundaries large. Supplied toroidal l1 triplet is not two asymptotic photon polarizations. Radial collective toroidal line average zero is not individual trajectory Peierls equality."
+  },
+  "semantic_distinctions": {
+    "contact": "Photon contact=+H second derivative. Noether documented contact=dcurrent/dA=-H second derivative; independent second differences confirm. Different API convention, not a physical sign bug. Translate explicitly in a NEW joined response.",
+    "angular": "Noether J is canonical total rotation, not EMcurrent=-H derivative. S,L,F exchange torque; only total J conserved. F alone is not full longitudinal+transverse Poynting angular momentum.",
+    "source": "Raw conditional insertion strengths, pole residues, full signed virtual spectra and inclusive PVM probabilities are distinct. Neutral current_pair_response includes field and diamagnetic transitions, not resolved pair yield."
+  },
+  "exact_artifact_audit": [
+    {
+      "prefix": "rich_extensive_photon_20261014_actual1",
+      "producer_natural_exit": true,
+      "producer_returncode": 0,
+      "capsule_sha256": "3636cff2662208e58a468f4376dc3ca1dde4d6f46998f23d3293768e2c896e8b",
+      "exact_member_mismatches": [],
+      "current_vs_capture_revision_differences": []
+    },
+    {
+      "prefix": "rich_extensive_photon_20261014_actual2",
+      "producer_natural_exit": true,
+      "producer_returncode": 0,
+      "capsule_sha256": "534fdf1f4f8d60d6f74e6fce4884fa822a73c280dd36a84d67f9b8b8a5147206",
+      "exact_member_mismatches": [],
+      "current_vs_capture_revision_differences": []
+    },
+    {
+      "prefix": "rich_extensive_photon_20261014_actual3",
+      "producer_natural_exit": true,
+      "producer_returncode": 0,
+      "capsule_sha256": "ecf88a4619368a0028414f4f27e0df389717656d8c172da358e5e22cc6a02109",
+      "exact_member_mismatches": [],
+      "current_vs_capture_revision_differences": []
+    },
+    {
+      "prefix": "rich_physical_noether_20261014_actual1",
+      "producer_natural_exit": true,
+      "producer_returncode": 0,
+      "capsule_sha256": "ad59707a79de04cba911158e7c03cd7fc2f6838c8a9cb98c059b57f866c91a26",
+      "exact_member_mismatches": [],
+      "current_vs_capture_revision_differences": [
+        "rich_physical_noether_20261014_model.py",
+        "rich_physical_noether_20261014_calculate.py",
+        "rich_physical_noether_20261014_equations.json"
+      ]
+    },
+    {
+      "prefix": "rich_physical_noether_20261014_actual2",
+      "producer_natural_exit": true,
+      "producer_returncode": 0,
+      "capsule_sha256": "0407f723287fd72b97e16bc6e83052c8a096f8261c367eee569a4e9cfa040584",
+      "exact_member_mismatches": [],
+      "current_vs_capture_revision_differences": []
+    }
+  ],
+  "new_primary": {
+    "prefix": "rich_review_wave11_20261015_actual3",
+    "natural_exit": 0,
+    "seconds": 49.84381818771362,
+    "source_unchanged": true,
+    "capsule": "rich_review_wave11_20261015_actual3_capsule.zip",
+    "sha256": "7d10245f5ee9209ebc76d3b8ac3e275dd7167d2b3083141397074b0d186b8880",
+    "contents": "Exact reviewer source/input, transitive pure helper imports, all consumed frozen inputs/states/receipts, producer capsules, NEW result/state/output/natural receipt."
+  },
+  "failed_and_corrected_attempts": [
+    {
+      "prefix": "rich_review_wave11_20261015_actual1",
+      "natural_returncode": 1,
+      "capsule_sha256": "8cf2bbe3f4504d6204884946c46dc28f73a2e4e70e006fa4c4d180acd1ae1667",
+      "failure": "After both scientific calculations, JSON serialization rejected complex-valued p^2 matrix entries; no result serialized, no scientific verdict from attempt1."
+    },
+    {
+      "prefix": "rich_review_wave11_20261015_actual2",
+      "natural_returncode": 0,
+      "capsule_sha256": "326f7746d19f77284864ddabab6e19716b865cad8b6425254058654965032933",
+      "correction": "Independent Haar probe used Pauli m=(+1/2,-1/2) while frozen raw frame uses m=(-1/2,+1/2): false pullback defect0.6038097648. Current/PVM/kinetic measurements remain separate valid observations. Correct only reviewer probe ordering; frozen author source untouched."
+    }
+  ],
+  "language": {
+    "preedit": "rich_review_wave11_20261015_language_preedit.json",
+    "positive_AST": "Mounted ast_grep matches actual whole_h and shifted_h; direct Pyright LSP symbols/definition at root before new source.",
+    "ten_file_diagnostics": "rich_review_wave11_20261015_language_final.json: natural Pyright1, ten selected files117errors (review consumer13,capture0). Not all-clean; first CLI flags outputjson+stats rejected exit4 before file checking.",
+    "invalidation": "The initially labelled final ten-file capture preceded discovery of the reviewer Haar-order mistake. Only the reviewer consumer changed. Earlier source3-external diagnostics are retained as prior-revision evidence, not claimed final for the changed file.",
+    "final_changed_file": "rich_review_wave11_20261015_language_final2.json: exactly changed consumer selected, natural Pyright1, filesAnalyzed1/errors13; direct LSP version2 symbols/definition and diagnostic publication13, stable hash. No error suppression or author edits.",
+    "native_device_unavailable": true,
+    "no_build_lint_formatter_or_test_runner": true
+  },
+  "constructive_feedback": {
+    "RotCovInducedCarrier": "Shared omitted full-p2 entries and source/pole consequences. Author reports NEW continuum-gradient quadrature retains full kinetic and uses own state/current; this review does not audit that active new root.",
+    "CommonVectorResponse": "Shared nonportable contact sign convention and need for actual new full-kinetic response, not inherited poles."
+  },
+  "boundaries": "No review of RotCovInducedCarrier/CommonVectorResponse/CommonRoot/FullPair, no G/D/state borrow, no rigid-wrapper Nature claim, no permission gate or science admission. No author files/plan mutations/nested delegates/old producer replay/merge/push/graph admission/closure/timer/server/model changes."
+}

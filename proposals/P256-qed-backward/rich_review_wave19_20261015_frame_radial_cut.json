@@ -1,0 +1,41 @@
+{
+  "kind": "FRAME_FINITE_RADIAL_PULSE_CUT_DIAGNOSTIC_NOT_NEW_DYNAMICS",
+  "code": "import json,numpy as np\nfrom pathlib import Path\nfrom scipy.linalg import expm\nfrom scipy.special import roots_genlaguerre,eval_genlaguerre,gammaln\nfrom rich_common_frame_orbit_20261015_frame import RadialForm\np=json.loads(Path('rich_common_frame_orbit_20261015_actual4_input.json').read_text());r=RadialForm(p);kick=.17;answer={}\nfor j in [0.,.5,1.,1.5,2.,2.5]:\n beta=r.beta(j);x,w=roots_genlaguerre(180,beta+1);n=np.arange(r.count);normal=np.exp((gammaln(n+1)-gammaln(n+beta+2))/2);l=np.array([eval_genlaguerre(i,beta+1,x) for i in n]);continuous=normal[:,None]*(l*(w*np.exp(-1j*kick*np.sqrt(x/r.scale))))@l.T*normal[None,:];finite=expm(-1j*kick*r.moment(j,j,1));a=r.moment(j,j,1);b=r.moment(j,j,2)\n answer[str(j)]=dict(projected_r_r2_commutator=float(np.linalg.norm(a@b-b@a)),finite_unitary_vs_continuous_projection=float(np.linalg.norm(finite-continuous)),continuous_projection_unitarity_defect=float(np.linalg.norm(continuous.conj().T@continuous-np.eye(r.count))))\nprint(json.dumps(answer))\n",
+  "code_sha256": "53b195490b42ed7d54e610e76eb70e7cf73bb38d9da27b5b1f28bc698b293915",
+  "selected_input_sha256": "d365b7a319e394b0e30a743f505cbd28e849dda02405aca13ed5eb0281441677",
+  "natural_exit": true,
+  "returncode": 0,
+  "observations": {
+    "0.0": {
+      "projected_r_r2_commutator": 4.359744954334101,
+      "finite_unitary_vs_continuous_projection": 0.03029075941800231,
+      "continuous_projection_unitarity_defect": 0.05958894804613629
+    },
+    "0.5": {
+      "projected_r_r2_commutator": 4.454096557601508,
+      "finite_unitary_vs_continuous_projection": 0.030864812695939364,
+      "continuous_projection_unitarity_defect": 0.06069847081837948
+    },
+    "1.0": {
+      "projected_r_r2_commutator": 4.5340236242267915,
+      "finite_unitary_vs_continuous_projection": 0.031370716735727396,
+      "continuous_projection_unitarity_defect": 0.061675615947494836
+    },
+    "1.5": {
+      "projected_r_r2_commutator": 4.597772496406608,
+      "finite_unitary_vs_continuous_projection": 0.03178742046650497,
+      "continuous_projection_unitarity_defect": 0.06247997362529298
+    },
+    "2.0": {
+      "projected_r_r2_commutator": 4.648995498396171,
+      "finite_unitary_vs_continuous_projection": 0.03213089454891375,
+      "continuous_projection_unitarity_defect": 0.06314263247429476
+    },
+    "2.5": {
+      "projected_r_r2_commutator": 4.690860594008833,
+      "finite_unitary_vs_continuous_projection": 0.032417434779485464,
+      "continuous_projection_unitarity_defect": 0.0636952102764354
+    }
+  },
+  "interpretation": "Own full native6 event t0 r\u00b2 excess .0017501914 is a finite projected-unitary effect: exp(-i k P r P) does not commute P r\u00b2 P. Continuum multiplication exp(-ikr) WOULD commute r\u00b2. Do not describe this t0 change as instantaneous continuum radial motion, COM or photon absorption. No source/cut counterterm or author write."
+}

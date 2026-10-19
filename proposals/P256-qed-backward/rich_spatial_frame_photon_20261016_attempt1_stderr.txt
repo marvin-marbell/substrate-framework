@@ -1,0 +1,17 @@
+/home/administrator/substrate-222/proposals/P256-qed-backward/rich_gauge_band_frame_20261016_model.py:145: FutureWarning: Input has data type int64, but the output has been cast to float64.  In the future, the output data type will match the input. To avoid this warning, set the `dtype` parameter to `None` to have the output dtype match the input, or set it to the desired output data type.
+  self.E=[self.lift_f(sp.diags(s.electric[:,e])) for e in range(8)]
+/home/administrator/substrate-222/proposals/P256-qed-backward/rich_gauge_band_frame_20261016_model.py:146: FutureWarning: Input has data type int64, but the output has been cast to float64.  In the future, the output data type will match the input. To avoid this warning, set the `dtype` parameter to `None` to have the output dtype match the input, or set it to the desired output data type.
+  self.n=[self.lift_f(sp.diags(s.n[:,v])) for v in range(8)]
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_frame_photon_20261016_run.py", line 122, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_frame_photon_20261016_run.py", line 66, in main
+    reference=m.Model(4,p);neutral=reference.preparation();neutral_end,err=evolve(reference.apply,neutral,t)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_frame_photon_20261016_run.py", line 21, in evolve
+    vectors.append(q);w=apply(q)-beta*old;a=float(np.vdot(q,w).real);alpha.append(a);w-=a*q
+                        ^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_frame_photon_20261016_model.py", line 135, in apply
+    out+=np.einsum('...i,ji->...j',x,self.p2,optimize=True)/(2*self.parameters['cavity_inertia'])
+numpy._core._exceptions._UFuncOutputCastingError: Cannot cast ufunc 'add' output from dtype('complex128') to dtype('float64') with casting rule 'same_kind'

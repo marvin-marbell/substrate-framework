@@ -1,0 +1,51 @@
+{
+  "exit": 1,
+  "diagnostics": {
+    "version": "1.1.414",
+    "time": "1792114683623",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave39_20261016_enriched.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"real\" for class \"NDArray[Unknown]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 42,
+            "character": 266
+          },
+          "end": {
+            "line": 42,
+            "character": 270
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave39_20261016_enriched.py",
+        "severity": "error",
+        "message": "Operator \">\" not supported for types \"int | list[int] | float | str | dict[Unknown, Unknown]\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"list[int]\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"dict[Unknown, Unknown]\" and \"float\"",
+        "range": {
+          "start": {
+            "line": 47,
+            "character": 11
+          },
+          "end": {
+            "line": 47,
+            "character": 63
+          }
+        },
+        "rule": "reportOperatorIssue"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 1,
+      "errorCount": 2,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 9.682
+    }
+  },
+  "positive_AST": [
+    "main"
+  ]
+}

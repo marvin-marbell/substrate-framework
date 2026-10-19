@@ -1,0 +1,438 @@
+{
+  "mechanism": "Fixed preproduction Hodge translations with symmetric +/- proposals; original Wilson action unchanged.",
+  "receipt": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "source_sha256": "0eeb4d6d4c69d79af65bada7d4196290eec298a32384e4060b57e75cfb77b67d"
+  },
+  "inputs": {
+    "size": 6,
+    "beta": 11.11111111111111,
+    "hot_seed": 11351,
+    "preparation_sweeps": 600,
+    "samples": 400,
+    "thinning": 2
+  },
+  "before_global_kernel": {
+    "absolute_dual_link_count": 12,
+    "density": 0.0023148148148148147,
+    "nonzero_winding_cycles": 2,
+    "cycles": [
+      {
+        "length": 6,
+        "winding": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "vertices": [
+          [
+            3,
+            1,
+            0,
+            5
+          ],
+          [
+            3,
+            1,
+            1,
+            5
+          ],
+          [
+            3,
+            1,
+            2,
+            5
+          ],
+          [
+            3,
+            1,
+            3,
+            5
+          ],
+          [
+            3,
+            1,
+            4,
+            5
+          ],
+          [
+            3,
+            1,
+            5,
+            5
+          ]
+        ]
+      },
+      {
+        "length": 6,
+        "winding": [
+          0,
+          0,
+          -1,
+          0
+        ],
+        "vertices": [
+          [
+            5,
+            5,
+            1,
+            5
+          ],
+          [
+            5,
+            5,
+            0,
+            5
+          ],
+          [
+            5,
+            5,
+            5,
+            5
+          ],
+          [
+            5,
+            5,
+            4,
+            5
+          ],
+          [
+            5,
+            5,
+            3,
+            5
+          ],
+          [
+            5,
+            5,
+            2,
+            5
+          ]
+        ]
+      }
+    ],
+    "scope": "A directed simple-cycle decomposition; at intersections the decomposition need not be unique."
+  },
+  "fixed_remove_sheet_candidate": {
+    "action_change": -568.0009014344105,
+    "topology": {
+      "absolute_dual_link_count": 0,
+      "density": 0.0,
+      "nonzero_winding_cycles": 0,
+      "cycles": [],
+      "scope": "A directed simple-cycle decomposition; at intersections the decomposition need not be unique."
+    }
+  },
+  "after_production": {
+    "absolute_dual_link_count": 0,
+    "density": 0.0,
+    "nonzero_winding_cycles": 0,
+    "cycles": [],
+    "scope": "A directed simple-cycle decomposition; at intersections the decomposition need not be unique."
+  },
+  "global_attempts": 800,
+  "global_accepts": 1,
+  "strong_topology_positive_control": {
+    "density": 0.478515625,
+    "absolute_dual_link_count": 490
+  },
+  "hot_with_frozen_moves": {
+    "size": 6,
+    "beta": 11.11111111111111,
+    "bare_charge": 0.3,
+    "seed": 11351,
+    "burn_sweeps": 0,
+    "samples": 400,
+    "thinning": 2,
+    "initial_links": "random",
+    "block_samples": 20,
+    "integer_flux_updates": "one random plane and sign proposal per sweep",
+    "plaquette": {
+      "mean": 0.9772791830559806,
+      "blocked_standard_error": 2.630416513671366e-05,
+      "first_half_mean": 0.9772901233004816,
+      "second_half_mean": 0.9772682428114798
+    },
+    "helicity": {
+      "mean": 10.856760438929186,
+      "blocked_standard_error": 0.00032266094050228673,
+      "first_half_mean": 10.856878692533794,
+      "second_half_mean": 10.85664218532458
+    },
+    "monopole_density": {
+      "mean": 0.0,
+      "blocked_standard_error": 0.0,
+      "first_half_mean": 0.0,
+      "second_half_mean": 0.0
+    },
+    "connected_helicity": {
+      "mean": 10.85676371541247,
+      "blocked_jackknife_error": 0.00032228612971841876,
+      "definition": "beta mean(cos) - beta squared/volume connected variance(sum sin)"
+    },
+    "magnetic_channels": {
+      "transverse_correlations": [
+        [
+          0.03823278917435184,
+          0.014756431382284916,
+          0.006129848030312811,
+          0.004667069129761199
+        ],
+        [
+          0.041308393412066345,
+          0.01705600008443931,
+          0.007034039407049645,
+          0.004316823973431614
+        ]
+      ],
+      "longitudinal_correlation": [
+        1.561460143239022e-05,
+        -1.1755867937568651e-07,
+        -3.060143439694678e-07,
+        6.467133069018759e-07
+      ],
+      "blocked_standard_errors": [
+        [
+          0.0012742347343156872,
+          0.0010441981995195292,
+          0.0010356618086778836,
+          0.0009492624680952325
+        ],
+        [
+          0.000960573037944079,
+          0.0010825552215599612,
+          0.0010991533400692664,
+          0.0011792571653128428
+        ],
+        [
+          2.807748948314673e-07,
+          2.272914447868242e-07,
+          2.689736160933079e-07,
+          3.4490940660181167e-07
+        ]
+      ],
+      "longitudinal_to_transverse_equal_time": 0.00039261677849523056,
+      "effective_energies": [
+        {
+          "time_separation": 1,
+          "energy": 0.9229809998547445,
+          "blocked_jackknife_error": 0.03187736675782172,
+          "interpretation": "correlator estimate; invalid/unstable positive spectral fit is null"
+        },
+        {
+          "time_separation": 2,
+          "energy": 1.0054890033312294,
+          "blocked_jackknife_error": 0.07794307776427147,
+          "interpretation": "correlator estimate; invalid/unstable positive spectral fit is null"
+        }
+      ]
+    },
+    "wilson_loops": [
+      {
+        "distance": 1,
+        "time_extent": 1,
+        "measured": 0.9772771854848473,
+        "blocked_standard_error": 3.9282149983652174e-05,
+        "bare_gaussian_prediction": 0.9777682121885563,
+        "independent_stiffness_gaussian_prediction": 0.9772533443801519
+      },
+      {
+        "distance": 1,
+        "time_extent": 2,
+        "measured": 0.9611944196716331,
+        "blocked_standard_error": 8.512141314140653e-05,
+        "bare_gaussian_prediction": 0.9620188246917349,
+        "independent_stiffness_gaussian_prediction": 0.9611465304734305
+      },
+      {
+        "distance": 1,
+        "time_extent": 3,
+        "measured": 0.9464143551689783,
+        "blocked_standard_error": 0.0001489888674194995,
+        "bare_gaussian_prediction": 0.947553868088524,
+        "independent_stiffness_gaussian_prediction": 0.9463587363383966
+      },
+      {
+        "distance": 2,
+        "time_extent": 1,
+        "measured": 0.9611565621457887,
+        "blocked_standard_error": 5.9021888012769556e-05,
+        "bare_gaussian_prediction": 0.9620188246917349,
+        "independent_stiffness_gaussian_prediction": 0.9611465304734305
+      },
+      {
+        "distance": 2,
+        "time_extent": 2,
+        "measured": 0.939200612942788,
+        "blocked_standard_error": 0.00011398561503774533,
+        "bare_gaussian_prediction": 0.9405745690658496,
+        "independent_stiffness_gaussian_prediction": 0.9392255554902399
+      },
+      {
+        "distance": 2,
+        "time_extent": 3,
+        "measured": 0.9208150761730025,
+        "blocked_standard_error": 0.00019224027904765262,
+        "bare_gaussian_prediction": 0.9226041243111163,
+        "independent_stiffness_gaussian_prediction": 0.9208646209673892
+      }
+    ],
+    "canonical_charge_from_stiffness": 0.3034937885252385,
+    "bare_charge_rate_normalization_ratio": 1.04740395404266,
+    "free_massless_lattice_energy": 0.9624236501192068,
+    "scope": "Finite 4D pure-gauge Euclidean Wilson ensemble; blocked estimates. No thermodynamic phase proof, no charged-matter vacuum feedback included, no continuum-time Hamiltonian equivalence beyond its regulator limit, no scattering calculation. Measured stiffness is not the bare beta."
+  },
+  "ordered_control": {
+    "size": 6,
+    "beta": 11.11111111111111,
+    "bare_charge": 0.3,
+    "seed": 10117,
+    "burn_sweeps": 600,
+    "samples": 400,
+    "thinning": 2,
+    "initial_links": "ordered",
+    "block_samples": 20,
+    "integer_flux_updates": "one random plane and sign proposal per sweep",
+    "plaquette": {
+      "mean": 0.9772532495528814,
+      "blocked_standard_error": 2.5180107603344735e-05,
+      "first_half_mean": 0.9772176154766803,
+      "second_half_mean": 0.9772888836290826
+    },
+    "helicity": {
+      "mean": 10.856388086154027,
+      "blocked_standard_error": 0.0002974154415719818,
+      "first_half_mean": 10.855935150967516,
+      "second_half_mean": 10.856841021340538
+    },
+    "monopole_density": {
+      "mean": 0.0,
+      "blocked_standard_error": 0.0,
+      "first_half_mean": 0.0,
+      "second_half_mean": 0.0
+    },
+    "connected_helicity": {
+      "mean": 10.856392045572605,
+      "blocked_jackknife_error": 0.0002976165885887068,
+      "definition": "beta mean(cos) - beta squared/volume connected variance(sum sin)"
+    },
+    "magnetic_channels": {
+      "transverse_correlations": [
+        [
+          0.039974487138148516,
+          0.015369013093153052,
+          0.006415591549560432,
+          0.004287111285192542
+        ],
+        [
+          0.03930492353042343,
+          0.014875798453401303,
+          0.006497138454911659,
+          0.0045966238325415906
+        ]
+      ],
+      "longitudinal_correlation": [
+        1.5781939199251056e-05,
+        7.77504341790232e-08,
+        5.401951419857442e-08,
+        -5.519608795393056e-07
+      ],
+      "blocked_standard_errors": [
+        [
+          0.0012172737046597887,
+          0.0009903659443107977,
+          0.0008963588606541774,
+          0.001159988571034438
+        ],
+        [
+          0.0009748329375465852,
+          0.0010255786170173488,
+          0.0011735929810733792,
+          0.001231099624653262
+        ],
+        [
+          3.524546938677339e-07,
+          1.782279938486977e-07,
+          2.491453322342407e-07,
+          3.3766425792290333e-07
+        ]
+      ],
+      "longitudinal_to_transverse_equal_time": 0.00039813462451751937,
+      "effective_energies": [
+        {
+          "time_separation": 1,
+          "energy": 0.9836734353423623,
+          "blocked_jackknife_error": 0.03153271342989622,
+          "interpretation": "correlator estimate; invalid/unstable positive spectral fit is null"
+        },
+        {
+          "time_separation": 2,
+          "energy": 0.9758222540335605,
+          "blocked_jackknife_error": 0.0675618994365956,
+          "interpretation": "correlator estimate; invalid/unstable positive spectral fit is null"
+        }
+      ]
+    },
+    "wilson_loops": [
+      {
+        "distance": 1,
+        "time_extent": 1,
+        "measured": 0.9772954698802595,
+        "blocked_standard_error": 3.21159432257195e-05,
+        "bare_gaussian_prediction": 0.9777682121885563,
+        "independent_stiffness_gaussian_prediction": 0.9772525745707937
+      },
+      {
+        "distance": 1,
+        "time_extent": 2,
+        "measured": 0.9612120003296052,
+        "blocked_standard_error": 7.82153659628256e-05,
+        "bare_gaussian_prediction": 0.9620188246917349,
+        "independent_stiffness_gaussian_prediction": 0.9611452265031348
+      },
+      {
+        "distance": 1,
+        "time_extent": 3,
+        "measured": 0.9464297150330421,
+        "blocked_standard_error": 0.00012798456779348214,
+        "bare_gaussian_prediction": 0.947553868088524,
+        "independent_stiffness_gaussian_prediction": 0.9463569500840994
+      },
+      {
+        "distance": 2,
+        "time_extent": 1,
+        "measured": 0.961213532894317,
+        "blocked_standard_error": 6.0035911307924505e-05,
+        "bare_gaussian_prediction": 0.9620188246917349,
+        "independent_stiffness_gaussian_prediction": 0.9611452265031348
+      },
+      {
+        "distance": 2,
+        "time_extent": 2,
+        "measured": 0.9393394125385097,
+        "blocked_standard_error": 0.00013710562169633867,
+        "bare_gaussian_prediction": 0.9405745690658496,
+        "independent_stiffness_gaussian_prediction": 0.9392235394177256
+      },
+      {
+        "distance": 2,
+        "time_extent": 3,
+        "measured": 0.9209799794464681,
+        "blocked_standard_error": 0.00022468326420182615,
+        "bare_gaussian_prediction": 0.9226041243111163,
+        "independent_stiffness_gaussian_prediction": 0.9208620219045103
+      }
+    ],
+    "canonical_charge_from_stiffness": 0.30349898355328736,
+    "bare_charge_rate_normalization_ratio": 1.04747567126177,
+    "free_massless_lattice_energy": 0.9624236501192068,
+    "scope": "Finite 4D pure-gauge Euclidean Wilson ensemble; blocked estimates. No thermodynamic phase proof, no charged-matter vacuum feedback included, no continuum-time Hamiltonian equivalence beyond its regulator limit, no scattering calculation. Measured stiffness is not the bare beta."
+  },
+  "limits": [
+    "A frozen kernel can accelerate known traps, not prove equilibrium in every sector.",
+    "Blocked errors do not quantify undetected trapping; compare starts and actual winding.",
+    "Pure Euclidean gauge theory only; no thermodynamic or unquenched sector proof."
+  ]
+}

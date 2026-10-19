@@ -1,0 +1,27 @@
+{
+  "kind": "INDEPENDENT_POSITIVE_FINITE_L1_GAUGE_TRANSPORT_BEFORE_L2",
+  "governor": {"plan_id":"issue222-rich-backward-candidates-20261014","launch_revision":"fbc5d613dcc248118658f2c81e30b3ebb77fe63eb6bb63e942029fb644faed95","work_item":"independent-review","requirements":["outcome","verification"],"parent_sole_plan_writer":true},
+  "decision": "Positive finite spatial gauge transport independently observed. L1 rotor reliability is poor; do the single authorized same-protocol L2 continuation next, not reject the finite model.",
+  "consumer": "rich_review_wave25_20261015_consume.py",
+  "input": "rich_review_wave25_20261015_input.json, cutoff argument 1",
+  "result": "rich_review_wave25_20261015_L1_result.json",
+  "exit": "rich_review_wave25_20261015_L1_exit.json: returncode0, natural exit, unchanged sources",
+  "independence": "New physical Wilson product, state, regional energies, currents, all-basis algebra, own trajectory and independent Chebyshev action; only pure frozen Parameters/Sector helpers consumed. No producer evolved states/results or CLI.",
+  "geometry": "cube8sites/12edges, full Nup=Ndown1, 5 chords in [-1,1], dimension15552",
+  "preparation": "Neutral E0 ionic spin-up site0/down site4; exp(-i0.7 Bleft). Nonstationary: independently measured seed H variance6, not a vacuum/eigenground.",
+  "physical_algebra": "All maximum-entry residuals exactly0: physical whole left yz-cycle E support, unchanged matter, Gauss, primitive-hop single-link E/density support, dotE=J, density continuity, H reconstruction and ownership. Actual projected source commutes with every right physical E, density and directed hopping/adjoint and right owned energy. No unsupported abstract tensor-factor assumption.",
+  "controls": "Same exact prepared state pair. Independently constructed Hoff/HRoff commute and source commutes with HRoff. Hcut deletes exactly four x-bridge hopping terms, not electric/Hubbard terms; [Lcut,Rcut]=[Lcut,ER]=[Bleft,Rcut]=[Bleft,ER]=0. Thus receiver energy and electric trajectory excess are identically zero for all t in these actual controls, without calling coupled HR a control energy.",
+  "t4": {
+    "work":0.45126791550690554,
+    "ER_baseline_pulse":[0.8851691330204097,0.9075963287696344],
+    "delta_ER":0.022427195749224693,
+    "HR_baseline_pulse":[0.013553978210601053,0.12249058702411211],
+    "delta_HR":0.10893660881351105,
+    "delta_ER_over_actual_work":0.04969818366996556,
+    "delta_HR_over_actual_work":0.2414011833549998
+  },
+  "resolution": {"global_Chebyshev_degree":184,"analytic_tail_excluding_roundoff":1.0117984729617267e-12,"state_l2_error_per_column":[9.652389119646362e-15,8.549558638451582e-15]},
+  "boundary": {"max_sampled_ANYchord_baseline_pulse":[0.9306769368521524,0.9426625818848263],"meaning":"Severe retained-boundary occupancy, not an omitted-norm value or proof this finite projected law is invalid."},
+  "stderr": "Two SciPy int64-to-float64 sparse diagonal FutureWarnings; no error; exact raw stderr preserved.",
+  "no_promotion": "No Maxwell B2, massless/two-photon/speed/continuum/rotor convergence/CAR36/Nature conclusion."
+}

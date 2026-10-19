@@ -1,0 +1,28 @@
+{
+  "source_sha256": "dae823744522b4bd5f540a0e7e906135876bb57ed772f3b6849caa64ed3ed89f",
+  "controls_sha256": "d01bf2f8aedc498db48f6a5a720f2a48550cd65d33e4fc48b3433e7cad24e723",
+  "moments_receipt_sha256": "d267a425e63be09c39200743ea75a2efec5d339f4387483507d42fe21688ec3a",
+  "natural_capsule_sha256": "681eb30095a0933cc6234305af242746090195a9714d27de116ec2235fc26845",
+  "inspection": [
+    "Initial source raw fourSlater mixture and Refcharge",
+    "Full64charged HC commutator/Wick mean and covariance",
+    "Pi integration by parts sign and sharedTheta Fourier factors",
+    "Matter triple-product signs",
+    "All129/full192 output and factored source/operator jets",
+    "Independent8orbital source/Pi/matter oracle and blind two-link controls"
+  ],
+  "parent_matrix_consumer": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "-c",
+      "import json,numpy as np\nfrom pathlib import Path\np=Path('proposals/P256-qed-backward')\nz=np.load(p/'joined_phi_u1_current_moments_receipt.npz')\nr={}\nfor state in ('background','raw_source'):\n c=z[state+'_covariance'];pi=z[state+'_F_Pi'];contact=z[state+'_contact']\n assert c.shape==pi.shape==contact.shape==(129,129)\n herm=float(np.max(np.abs(c-c.conj().T)))\n ce=np.linalg.eigvalsh((c+c.conj().T)*.5);pe=np.linalg.eigvalsh((pi+pi.conj().T)*.5)\n tol=2e-12*max(1.,np.linalg.norm(c),np.linalg.norm(pi))\n assert herm<tol and ce[0]>-tol and pe[-1]<tol\n assert (-pe[0])>1e3,'Wrong positive Pi sign would evade this consumer'\n r[state]={'covariance_Hermitian_defect':herm,'covariance_min_eigenvalue':float(ce[0]),'Pi_F_max_eigenvalue':float(pe[-1]),'Pi_F_min_eigenvalue':float(pe[0]),'floating_tolerance':float(tol)}\nprint(json.dumps(r))\n"
+    ],
+    "cwd": "/home/administrator/substrate-222",
+    "natural_returncode": 0,
+    "wall_seconds": 1.3154192750007496,
+    "stdout": "{\"background\": {\"covariance_Hermitian_defect\": 3.710650544659212e-11, \"covariance_min_eigenvalue\": 109545.18765662481, \"Pi_F_max_eigenvalue\": -9836352.336477032, \"Pi_F_min_eigenvalue\": -9939534.027518272, \"floating_tolerance\": 0.0002246964795629969}, \"raw_source\": {\"covariance_Hermitian_defect\": 2.1245851207193518e-11, \"covariance_min_eigenvalue\": 54615.898997145116, \"Pi_F_max_eigenvalue\": -4899848.452193647, \"Pi_F_min_eigenvalue\": -4969571.544341132, \"floating_tolerance\": 0.00011232130676663053}}\n",
+    "stderr": ""
+  },
+  "admission": "Finite floating full129 initial current/contact and first retarded moments for NEW specified same-H body; derived initial CAR/Gaussian/Pi/HC identities. Not finite-time/stationary kernel, current transfer to compactPhi, ground/pole/cone/SOURCE certification.",
+  "captured_review_revision": "8b9b84910e9c501ea14923ad4ce9a2c4de10d456a9843a90006a4cb984082bc0"
+}

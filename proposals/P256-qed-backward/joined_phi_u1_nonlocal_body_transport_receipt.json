@@ -1,0 +1,1863 @@
+{
+  "status": "ACTUAL12_BODY_FINITE_TRANSPORT",
+  "derivation": {
+    "kernel": "C_x0(t)=<Ex UB(t)psi,US(t)E0psi>, Kx=HSEx-ExHB, Lx=HSKx-KxHB; Cprime=-i<Kx UBpsi,US E0psi>, Cdoubleprime=-<Lx UBpsi,US E0psi>. Raw E0 norm squared .5, background norm1. No normalization change.",
+    "receiver": "Ex=exp(iq.Theta)*.5 sum4 c_xalpha dagger R0alpha. Ref4 to Ref3, delta=ex-e0=Dk (ROW minus COL), q=Q^T k. Unreduced full Wilson is qTheta+delta lambda_C; lambda_C=Lplus D A minus ANY anchor. Neutral delta removes anchor. Reduced CAR already contains longitudinal dressing. Ex norm <=1 on Ref4 background, since ExdagEx=(4-n_x)/4.",
+    "initial": "B_x0=.25 sum_alpha c_xalpha c_0alpha dagger, b=.25Tr(1-P)_x0. m1=<Kxpsi,E0psi>. Pi term: exp(-iqTheta)[q\u00b2-i qTheta/S] b integrates to0 by Gaussian IBP, S2. This is cancellation, not omission of Pi dynamics. Matter term is .25 E exp(-iqTheta) Tr sum_j h_xj(Theta)(1-P)_j0 (actual ROW x).",
+    "coulomb": "KHC=Ex Vdelta, Vdelta=128 deltaLrho+64deltaLdelta; rho is background all64 charged plus static Ref4 offsets. <rho_v B_x0>=meanrho_v b-.25Tr(P_xv(1-P)_v0). Thus mHC=64 exp(-S q\u00b2/2)[(2deltaLmeanrho+deltaLdelta)b-.5 sum_v(deltaL)_v Tr(P_xv(1-P)_v0)]. Auxiliary connected contractions vanish ONLY for this initial active transition; their full mean and future HC/Sobolev effects remain. Not the 59/122 energy increment or64/128 bare selfcoefficient.",
+    "blind_exact": "Fixed translational mean h(k)=sum_mu real d_mu(k) gamma_mu, h(k)^2 scalar, signh(k)=sum real d_mu gamma_mu/|d|. Orthogonal Clifford traces vanish. Hence TrP_x0=0 offsite, C0=0 exactly. In Tr(P_xv(1-P)_v0), nonzero offsite products of two gamma vectors have trace symmetric under v->x-v; deltaL changes sign under that reflection, while endpoint single-gamma traces vanish. Thus full initial HC contraction is0 exactly (aux meanrho0). Pi and HC initial omission controls are blind and must remain labeled blind. They are discriminated at finite time in the separate actual same-H dense CAR/Hermite consumer, not inferred from m1.",
+    "blind_row_column": "The N4 ROW formula is correct even where the wrong column formula happens to agree. Translation/AP covariance makes the Gaussian weighted h a twisted convolution; spin trace of the convolution commutator [h_weighted,1-P]_x0 vanishes termwise by Tr(gamma_mu gamma_nu)=Tr(gamma_nu gamma_mu). Thus this initial scalar trace is exactly blind to row versus column. Removing static Ref shifts meanrho bydelta0 times C0=0 and is likewise initially blind. The random nontranslation dense SAME-H control discriminates both; no claim of discrimination on blind N4 moments.",
+    "domain": "On realR129, finite fixed charged sectors: HC positive bounded matrix, M smooth bounded Fourier multiplier. H=64Pi\u00b2+HC+M selfadjoint on D(Pi\u00b2); Gaussian and Ex-inserted states lie on Schwartz core. Neutral heavy commutes Ex,Pi,HC and factors out EXACTLY. No neutral Lambda in conserved body energies.",
+    "conservation": "E=64Pi\u00b2+HC; E terms commute and are positive. E1=<E>0+2m norm\u00b2, E2=||64Pi\u00b2psi||+||HCpsi||+2m norm bound <E>t and ||E UBpsi||. Therefore P=||grad||<=sqrt(E1/64), D=||Delta||<=E2/64, ||HC^.5 grad||<=E2/(2sqrt64). These are conserved state-weighted estimates, NOT operatornormPi or future Wick/Slater propagation.",
+    "second_price": "Lx decomposes TT,2TC,CC,TM+MT,CM+MC,MM. TT<=g\u00b2(q4+4q\u00b3P)+4gq\u00b2E2. CC<=4gdE2+4(gd)^1.5 sqrtE1+(gd)\u00b2. 2TC<=2g[q\u00b2v1(d)+2|q|(sqrt(d)E2+gdP)], v1(d)=2sqrt(gdE1)+gd. MM<=hmax_active\u00b2 by same-flavour creation commutator, NOT extensive M\u00b2. Incoming active creation chains j,x have coefficient b, f=q+q_jx, delta_j=e_j-e0; TM+MT chain price b*g[(q\u00b2+|f|\u00b2)+2|2q+q_jx|P], CM+MC chain b[v1(d_x)+v1(d_j)]. Contact products from [M,Pi] and [M,rho] sum genuinely ALL64 charged hop coefficients: 2g sum_h 4b_h load |q dot q_h| and 2g sum_h 4b_h load |deltaLdelta_h|. Onsite active chain included, aux HC never dropped.",
+    "remainder": "|C(t)-C0+it m1|<=t\u00b2/2 Lstar ||E0psi||. Uniform bound on Lx UB(t)psi uses the same conserved background E1,E2, not old K0. Kx price independently retained. Any finiteclock lower relative to observed m1 uses explicit1percent floating allowance; no interval signal certification.",
+    "transfer": "If actual NEW uniform source receipt establishes ||HT-T(Hb+Ephi)||<=epsilon and receiver endpoint defect<=eta, ordinary bounded-receiver Duhamel gives |Cfull-Cbody|<=eta*sqrt(.5)+2|t|epsilon*sqrt(.5) (Ex norm1, E0 norm sqrt(.5)); endpoint eta assumed on evolved body vectors, not merely initial state. This lane does not bind an absent receipt or use unbounded-current graph proof."
+  },
+  "receiver_rows": [
+    {
+      "path": 48,
+      "row": 48,
+      "col": 0,
+      "length": 1,
+      "C0": {
+        "real": 2.9062287437949987e-19,
+        "imag": -6.93102975795337e-18
+      },
+      "Pi_self": {
+        "real": 1.2496783598318489e-17,
+        "imag": -2.9803427959199473e-16
+      },
+      "Pi_IBP": {
+        "real": -1.2496783598318489e-17,
+        "imag": 2.9803427959199473e-16
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": 6.103080361969497e-18,
+        "imag": -1.4555162491702075e-16
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": 7.841792803610878e-17,
+        "imag": 1.7099222031759909e-16
+      },
+      "HC_total": {
+        "real": 8.452100839807827e-17,
+        "imag": 2.5440595400578333e-17
+      },
+      "matter": {
+        "real": 1.802174923990475,
+        "imag": 2.252745996901423e-16
+      },
+      "m1": {
+        "real": 1.802174923990475,
+        "imag": 2.507151950907206e-16
+      },
+      "wrong_old_column_formula": {
+        "real": 1.8021749239904754,
+        "imag": 3.353868529306629e-16
+      },
+      "row_column_observed_contrast": 4.575368123101763e-16,
+      "omitted_second_link_matter": {
+        "real": 1.7814558501587725,
+        "imag": 2.362147139536837e-16
+      },
+      "second_link_observed_contrast": 0.02071907383170246,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": 1.802174923990475,
+            "imag": 2.507151950907206e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": 1.802174923990475,
+            "imag": 2.252745996901423e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": 1.802174923990475,
+            "imag": 7.972297477312156e-17
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": 1.8021749239904754,
+            "imag": 3.353868529306629e-16
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": 1.7814558501587725,
+            "imag": 2.362147139536837e-16
+          },
+          "discriminates": true,
+          "observed_contrast": 0.02071907383170246
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": 2.906228780278861e-19,
+          "imag": -2.6225103651627625e-11
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.5962845753391886e-11,
+        "rational_remainder_upper": "205735478346783167159291128660913343647867546234472360528123/2208558830972980411979121875928648144784354871094523697652007751615774720",
+        "remainder_upper": 9.315372335186852e-14,
+        "observed_imaginary_signal_minus_remainder": 2.5869692030040017e-11,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.6318257381069828e-11
+      },
+      "rational_caps": {
+        "TT": "1312077245785172240744447853259/2361183241434822606848",
+        "TC": "252684534664115518517278183728921657986361/649037107316853453566312041152512",
+        "CC": "2560313256401560004688209101305/9444732965739290427392",
+        "TM": "26913218765254964030710600502067050034257007/1661534994731144841129758825350430720",
+        "CM": "5068803435355314316028531377275113867824436567/425352958651173079329218259289710264320",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "111281020478900746002978785/4722366482869645213696",
+        "K_HC": "310897891713515057451274069/18889465931478580854784",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "759576497265879256641564377/18889465931478580854784",
+        "Lstar": "529242067822065753494785927351977565502961615959/425352958651173079329218259289710264320",
+        "quadratic_cap": "205735478346783167159291128660913343647867546234472360528123/467680523945888933825179146469210566289898413752320"
+      }
+    },
+    {
+      "path": 96,
+      "row": 32,
+      "col": 0,
+      "length": 2,
+      "C0": {
+        "real": -3.955733938536628e-18,
+        "imag": -8.713123235497392e-19
+      },
+      "Pi_self": {
+        "real": -4.0823174245698007e-16,
+        "imag": -8.991943179033308e-17
+      },
+      "Pi_IBP": {
+        "real": 4.0823174245698007e-16,
+        "imag": 8.991943179033308e-17
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": -9.810220167570842e-17,
+        "imag": -2.160854562403354e-17
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": 7.127563060597644e-17,
+        "imag": 2.6340938329815612e-17
+      },
+      "HC_total": {
+        "real": -2.682657106973198e-17,
+        "imag": 4.732392705782073e-18
+      },
+      "matter": {
+        "real": -0.17282155679143993,
+        "imag": -5.562659754156459e-17
+      },
+      "m1": {
+        "real": -0.17282155679143996,
+        "imag": -5.089420483578251e-17
+      },
+      "wrong_old_column_formula": {
+        "real": -0.1728215567914403,
+        "imag": 1.1045237262785376e-16
+      },
+      "row_column_observed_contrast": 3.972091244837053e-16,
+      "omitted_second_link_matter": {
+        "real": 0.1970775462859935,
+        "imag": -5.531418149771479e-17
+      },
+      "second_link_observed_contrast": 0.36989910307743346,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": -0.17282155679143996,
+            "imag": -5.089420483578251e-17
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": -0.17282155679143993,
+            "imag": -5.562659754156459e-17
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": -0.17282155679144004,
+            "imag": -7.723514316559812e-17
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": -0.1728215567914403,
+            "imag": 1.1045237262785376e-16
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": 0.1970775462859935,
+            "imag": -5.531418149771479e-17
+          },
+          "discriminates": true,
+          "observed_contrast": 0.36989910307743346
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": -3.955733939277236e-18,
+          "imag": 2.5148837727510983e-12
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.4897357976227878e-12,
+        "rational_remainder_upper": "97146488851927026173799547107070337899445726459366481532923/552139707743245102994780468982162036196088717773630924413001937903943680",
+        "remainder_upper": 1.759454853355736e-13,
+        "observed_imaginary_signal_minus_remainder": 2.313790312287214e-12,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.6908341799565076e-12
+      },
+      "rational_caps": {
+        "TT": "19720597481524594036184181865797/14757395258967641292800",
+        "TC": "1332331885540330789876655716399168704110507/2028240960365167042394725128601600",
+        "CC": "151213833961784877508366523326179/472236648286964521369600",
+        "TM": "1856353554251485311506741710022638574598189409/79753679747094952374228423616820674560",
+        "CM": "4259367512461541299468865539058932866088466561/319014718988379809496913694467282698240",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "862842909612271929584392901/23611832414348226068480",
+        "K_HC": "13515807887840829174524197053/755578637259143234191360",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "8253792388180795905671955321/151115727451828646838272",
+        "Lstar": "249903463684492974042287535301065353445953814359/106338239662793269832304564822427566080",
+        "quadratic_cap": "97146488851927026173799547107070337899445726459366481532923/116920130986472233456294786617302641572474603438080"
+      }
+    },
+    {
+      "path": 140,
+      "row": 12,
+      "col": 0,
+      "length": 1,
+      "C0": {
+        "real": -2.9079520370383226e-17,
+        "imag": -4.001672483172374e-20
+      },
+      "Pi_self": {
+        "real": -1.250419375926479e-15,
+        "imag": -1.7207191677641217e-18
+      },
+      "Pi_IBP": {
+        "real": 1.250419375926479e-15,
+        "imag": 1.7207191677641217e-18
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": -6.106699277780477e-16,
+        "imag": -8.403512214661986e-19
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": 8.470256130365451e-16,
+        "imag": -6.913305818166098e-17
+      },
+      "HC_total": {
+        "real": 2.3635568525849744e-16,
+        "imag": -6.997340940312718e-17
+      },
+      "matter": {
+        "real": 1.802174923990475,
+        "imag": 5.5328913971394604e-17
+      },
+      "m1": {
+        "real": 1.8021749239904752,
+        "imag": -1.4644495431732573e-17
+      },
+      "wrong_old_column_formula": {
+        "real": 1.802174923990477,
+        "imag": -1.82250827282628e-16
+      },
+      "row_column_observed_contrast": 2.01247421502381e-15,
+      "omitted_second_link_matter": {
+        "real": 1.7814558501587725,
+        "imag": 5.288231101991076e-17
+      },
+      "second_link_observed_contrast": 0.02071907383170246,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": 1.8021749239904752,
+            "imag": -1.4644495431732573e-17
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": 1.802174923990475,
+            "imag": 5.5328913971394604e-17
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": 1.8021749239904743,
+            "imag": 5.44885627499284e-17
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": 1.802174923990477,
+            "imag": -1.82250827282628e-16
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": 1.7814558501587725,
+            "imag": 5.288231101991076e-17
+          },
+          "discriminates": true,
+          "observed_contrast": 0.02071907383170246
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": -2.907952037059633e-17,
+          "imag": -2.6225096760614593e-11
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.596284575339189e-11,
+        "rational_remainder_upper": "205735478346783167159291128660913343647867546234472360528123/2208558830972980411979121875928648144784354871094523697652007751615774720",
+        "remainder_upper": 9.315372335186852e-14,
+        "observed_imaginary_signal_minus_remainder": 2.586969203004002e-11,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.6318279523497643e-11
+      },
+      "rational_caps": {
+        "TT": "1312077245785172240744447853259/2361183241434822606848",
+        "TC": "252684534664115518517278183728921657986361/649037107316853453566312041152512",
+        "CC": "2560313256401560004688209101305/9444732965739290427392",
+        "TM": "26913218765254964030710600502067050034257007/1661534994731144841129758825350430720",
+        "CM": "5068803435355314316028531377275113867824436567/425352958651173079329218259289710264320",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "111281020478900746002978785/4722366482869645213696",
+        "K_HC": "310897891713515057451274069/18889465931478580854784",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "759576497265879256641564377/18889465931478580854784",
+        "Lstar": "529242067822065753494785927351977565502961615959/425352958651173079329218259289710264320",
+        "quadratic_cap": "205735478346783167159291128660913343647867546234472360528123/467680523945888933825179146469210566289898413752320"
+      }
+    },
+    {
+      "path": 200,
+      "row": 8,
+      "col": 0,
+      "length": 2,
+      "C0": {
+        "real": 1.1627297068322862e-17,
+        "imag": 1.4000569192412887e-18
+      },
+      "Pi_self": {
+        "real": 1.1999370574509195e-15,
+        "imag": 1.44485874065701e-16
+      },
+      "Pi_IBP": {
+        "real": -1.1999370574509195e-15,
+        "imag": -1.44485874065701e-16
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": 2.883569672944069e-16,
+        "imag": 3.4721411597183945e-17
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": -2.631197603966114e-16,
+        "imag": -4.076560206894393e-17
+      },
+      "HC_total": {
+        "real": 2.523720689779547e-17,
+        "imag": -6.044190471759984e-18
+      },
+      "matter": {
+        "real": -0.1728215567914402,
+        "imag": 1.141491791837963e-16
+      },
+      "m1": {
+        "real": -0.17282155679144018,
+        "imag": 1.0810498871203633e-16
+      },
+      "wrong_old_column_formula": {
+        "real": -0.17282155679144054,
+        "imag": -1.1484535684520677e-16
+      },
+      "row_column_observed_contrast": 4.0419310029717623e-16,
+      "omitted_second_link_matter": {
+        "real": 0.19707754628599322,
+        "imag": 1.144615952276461e-16
+      },
+      "second_link_observed_contrast": 0.36989910307743346,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": -0.17282155679144018,
+            "imag": 1.0810498871203633e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": -0.1728215567914402,
+            "imag": 1.141491791837963e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": -0.17282155679143993,
+            "imag": 1.4887059078098024e-16
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": -0.17282155679144054,
+            "imag": -1.1484535684520677e-16
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": 0.19707754628599322,
+            "imag": 1.144615952276461e-16
+          },
+          "discriminates": true,
+          "observed_contrast": 0.36989910307743346
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": 1.1627297069895997e-17,
+          "imag": 2.5148860441203442e-12
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.4897357976227906e-12,
+        "rational_remainder_upper": "97146488851927026173799547107070337899445726459366481532923/552139707743245102994780468982162036196088717773630924413001937903943680",
+        "remainder_upper": 1.759454853355736e-13,
+        "observed_imaginary_signal_minus_remainder": 2.313790312287217e-12,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.690841840684005e-12
+      },
+      "rational_caps": {
+        "TT": "19720597481524594036184181865797/14757395258967641292800",
+        "TC": "1332331885540330789876655716399168704110507/2028240960365167042394725128601600",
+        "CC": "151213833961784877508366523326179/472236648286964521369600",
+        "TM": "1856353554251485311506741710022638574598189409/79753679747094952374228423616820674560",
+        "CM": "4259367512461541299468865539058932866088466561/319014718988379809496913694467282698240",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "862842909612271929584392901/23611832414348226068480",
+        "K_HC": "13515807887840829174524197053/755578637259143234191360",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "8253792388180795905671955321/151115727451828646838272",
+        "Lstar": "249903463684492974042287535301065353445953814359/106338239662793269832304564822427566080",
+        "quadratic_cap": "97146488851927026173799547107070337899445726459366481532923/116920130986472233456294786617302641572474603438080"
+      }
+    },
+    {
+      "path": 259,
+      "row": 3,
+      "col": 0,
+      "length": 1,
+      "C0": {
+        "real": -2.334850821228712e-17,
+        "imag": -2.6580301664327765e-17
+      },
+      "Pi_self": {
+        "real": -1.0039858531283462e-15,
+        "imag": -1.1429529715660938e-15
+      },
+      "Pi_IBP": {
+        "real": 1.0039858531283462e-15,
+        "imag": 1.1429529715660938e-15
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": -4.903186724580295e-16,
+        "imag": -5.58186334950883e-16
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": 5.670464355057108e-16,
+        "imag": 3.596553749168134e-16
+      },
+      "HC_total": {
+        "real": 7.672776304768125e-17,
+        "imag": -1.9853096003406964e-16
+      },
+      "matter": {
+        "real": 1.8021749239904752,
+        "imag": 4.809698003258159e-16
+      },
+      "m1": {
+        "real": 1.8021749239904754,
+        "imag": 2.8243884029174623e-16
+      },
+      "wrong_old_column_formula": {
+        "real": 1.8021749239904756,
+        "imag": -9.684021688642593e-17
+      },
+      "row_column_observed_contrast": 7.28752113064562e-16,
+      "omitted_second_link_matter": {
+        "real": 1.7814558501587727,
+        "imag": 4.456819247224412e-16
+      },
+      "second_link_observed_contrast": 0.02071907383170246,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": 1.8021749239904754,
+            "imag": 2.8243884029174623e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": 1.8021749239904752,
+            "imag": 4.809698003258159e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": 1.8021749239904747,
+            "imag": -7.721653462506716e-17
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": 1.8021749239904756,
+            "imag": -9.684021688642593e-17
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": 1.7814558501587727,
+            "imag": 4.456819247224412e-16
+          },
+          "discriminates": true,
+          "observed_contrast": 0.02071907383170246
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": -2.3348508208177094e-17,
+          "imag": -2.6225123300899538e-11
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.5962845753391893e-11,
+        "rational_remainder_upper": "205735478346783167159291128660913343647867546234472360528123/2208558830972980411979121875928648144784354871094523697652007751615774720",
+        "remainder_upper": 9.315372335186852e-14,
+        "observed_imaginary_signal_minus_remainder": 2.5869692030040024e-11,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.631828582283147e-11
+      },
+      "rational_caps": {
+        "TT": "1312077245785172240744447853259/2361183241434822606848",
+        "TC": "252684534664115518517278183728921657986361/649037107316853453566312041152512",
+        "CC": "2560313256401560004688209101305/9444732965739290427392",
+        "TM": "26913218765254964030710600502067050034257007/1661534994731144841129758825350430720",
+        "CM": "5068803435355314316028531377275113867824436567/425352958651173079329218259289710264320",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "111281020478900746002978785/4722366482869645213696",
+        "K_HC": "310897891713515057451274069/18889465931478580854784",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "759576497265879256641564377/18889465931478580854784",
+        "Lstar": "529242067822065753494785927351977565502961615959/425352958651173079329218259289710264320",
+        "quadratic_cap": "205735478346783167159291128660913343647867546234472360528123/467680523945888933825179146469210566289898413752320"
+      }
+    },
+    {
+      "path": 322,
+      "row": 2,
+      "col": 0,
+      "length": 2,
+      "C0": {
+        "real": -7.456435389548217e-18,
+        "imag": -1.7294197252095478e-18
+      },
+      "Pi_self": {
+        "real": -7.695041322013758e-16,
+        "imag": -1.7847611564162532e-16
+      },
+      "Pi_IBP": {
+        "real": 7.695041322013758e-16,
+        "imag": 1.7847611564162532e-16
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": -1.8491959766079572e-16,
+        "imag": -4.288960918519677e-17
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": 1.7058717321588675e-16,
+        "imag": 4.181714678465071e-17
+      },
+      "HC_total": {
+        "real": -1.4332424444908962e-17,
+        "imag": -1.0724624005460609e-18
+      },
+      "matter": {
+        "real": -0.17282155679143987,
+        "imag": 3.1654305301628334e-16
+      },
+      "m1": {
+        "real": -0.1728215567914399,
+        "imag": 3.1547059061573726e-16
+      },
+      "wrong_old_column_formula": {
+        "real": -0.17282155679143998,
+        "imag": -4.468891925059958e-18
+      },
+      "row_column_observed_contrast": 3.3966839776332197e-16,
+      "omitted_second_link_matter": {
+        "real": 0.19707754628599355,
+        "imag": 3.168554690601331e-16
+      },
+      "second_link_observed_contrast": 0.36989910307743346,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": -0.1728215567914399,
+            "imag": 3.1547059061573726e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": -0.17282155679143987,
+            "imag": 3.1654305301628334e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": -0.17282155679144007,
+            "imag": 2.7365344383108656e-16
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": -0.17282155679143998,
+            "imag": -4.468891925059958e-18
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": 0.19707754628599355,
+            "imag": 3.168554690601331e-16
+          },
+          "discriminates": true,
+          "observed_contrast": 0.36989910307743346
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": -7.456435384957516e-18,
+          "imag": 2.514882914643696e-12
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.489735797622787e-12,
+        "rational_remainder_upper": "97146488851927026173799547107070337899445726459366481532923/552139707743245102994780468982162036196088717773630924413001937903943680",
+        "remainder_upper": 1.759454853355736e-13,
+        "observed_imaginary_signal_minus_remainder": 2.313790312287213e-12,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.6908377837651545e-12
+      },
+      "rational_caps": {
+        "TT": "19720597481524594036184181865797/14757395258967641292800",
+        "TC": "1332331885540330789876655716399168704110507/2028240960365167042394725128601600",
+        "CC": "151213833961784877508366523326179/472236648286964521369600",
+        "TM": "1856353554251485311506741710022638574598189409/79753679747094952374228423616820674560",
+        "CM": "4259367512461541299468865539058932866088466561/319014718988379809496913694467282698240",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "862842909612271929584392901/23611832414348226068480",
+        "K_HC": "13515807887840829174524197053/755578637259143234191360",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "8253792388180795905671955321/151115727451828646838272",
+        "Lstar": "249903463684492974042287535301065353445953814359/106338239662793269832304564822427566080",
+        "quadratic_cap": "97146488851927026173799547107070337899445726459366481532923/116920130986472233456294786617302641572474603438080"
+      }
+    },
+    {
+      "path": 384,
+      "row": 16,
+      "col": 0,
+      "length": 1,
+      "C0": {
+        "real": 2.9445957623881124e-17,
+        "imag": -2.271700971661258e-17
+      },
+      "Pi_self": {
+        "real": 1.266176177826889e-15,
+        "imag": -9.768314178143414e-16
+      },
+      "Pi_IBP": {
+        "real": -1.266176177826889e-15,
+        "imag": 9.768314178143414e-16
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": 6.183651101015034e-16,
+        "imag": -4.77057204048864e-16
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": -7.851177413164242e-16,
+        "imag": 4.3007541221097834e-16
+      },
+      "HC_total": {
+        "real": -1.6675263121492075e-16,
+        "imag": -4.698179183788567e-17
+      },
+      "matter": {
+        "real": -1.802174923990475,
+        "imag": 4.841742977166751e-16
+      },
+      "m1": {
+        "real": -1.8021749239904752,
+        "imag": 4.371925058787894e-16
+      },
+      "wrong_old_column_formula": {
+        "real": -1.8021749239904759,
+        "imag": -4.640073859361739e-17
+      },
+      "row_column_observed_contrast": 1.034587248315327e-15,
+      "omitted_second_link_matter": {
+        "real": -1.7814558501587725,
+        "imag": 4.893360025187596e-16
+      },
+      "second_link_observed_contrast": 0.02071907383170246,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": -1.8021749239904752,
+            "imag": 4.371925058787894e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": -1.802174923990475,
+            "imag": 4.841742977166751e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": -1.8021749239904743,
+            "imag": 7.117093667811083e-18
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": -1.8021749239904759,
+            "imag": -4.640073859361739e-17
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": -1.7814558501587725,
+            "imag": 4.893360025187596e-16
+          },
+          "discriminates": true,
+          "observed_contrast": 0.02071907383170246
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": 2.9445957630243114e-17,
+          "imag": 2.6225074003588154e-11
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.596284575339189e-11,
+        "rational_remainder_upper": "205735478346783167159291128660913343647867546234472360528123/2208558830972980411979121875928648144784354871094523697652007751615774720",
+        "remainder_upper": 9.315372335186852e-14,
+        "observed_imaginary_signal_minus_remainder": 2.586969203004002e-11,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.631828763436451e-11
+      },
+      "rational_caps": {
+        "TT": "1312077245785172240744447853259/2361183241434822606848",
+        "TC": "252684534664115518517278183728921657986361/649037107316853453566312041152512",
+        "CC": "2560313256401560004688209101305/9444732965739290427392",
+        "TM": "26913218765254964030710600502067050034257007/1661534994731144841129758825350430720",
+        "CM": "5068803435355314316028531377275113867824436567/425352958651173079329218259289710264320",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "111281020478900746002978785/4722366482869645213696",
+        "K_HC": "310897891713515057451274069/18889465931478580854784",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "759576497265879256641564377/18889465931478580854784",
+        "Lstar": "529242067822065753494785927351977565502961615959/425352958651173079329218259289710264320",
+        "quadratic_cap": "205735478346783167159291128660913343647867546234472360528123/467680523945888933825179146469210566289898413752320"
+      }
+    },
+    {
+      "path": 448,
+      "row": 32,
+      "col": 0,
+      "length": 2,
+      "C0": {
+        "real": -3.955733938536625e-18,
+        "imag": -8.713123235497384e-19
+      },
+      "Pi_self": {
+        "real": -4.0823174245697993e-16,
+        "imag": -8.991943179033304e-17
+      },
+      "Pi_IBP": {
+        "real": 4.0823174245697993e-16,
+        "imag": 8.991943179033304e-17
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": -9.810220167570836e-17,
+        "imag": -2.1608545624033523e-17
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": 7.127563060597639e-17,
+        "imag": 2.6340938329815594e-17
+      },
+      "HC_total": {
+        "real": -2.682657106973197e-17,
+        "imag": 4.73239270578207e-18
+      },
+      "matter": {
+        "real": 0.1728215567914401,
+        "imag": -9.110589192734922e-17
+      },
+      "m1": {
+        "real": 0.17282155679144007,
+        "imag": -8.637349922156716e-17
+      },
+      "wrong_old_column_formula": {
+        "real": 0.17282155679144018,
+        "imag": -1.142172874820224e-16
+      },
+      "row_column_observed_contrast": 8.641460758620973e-17,
+      "omitted_second_link_matter": {
+        "real": -0.19707754628599336,
+        "imag": -9.141830797119902e-17
+      },
+      "second_link_observed_contrast": 0.36989910307743346,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": 0.17282155679144007,
+            "imag": -8.637349922156716e-17
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": 0.1728215567914401,
+            "imag": -9.110589192734922e-17
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": 0.17282155679143998,
+            "imag": -1.1271443755138275e-16
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": 0.17282155679144018,
+            "imag": -1.142172874820224e-16
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": -0.19707754628599336,
+            "imag": -9.141830797119902e-17
+          },
+          "discriminates": true,
+          "observed_contrast": 0.36989910307743346
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": -3.955733939793525e-18,
+          "imag": -2.514885515375747e-12
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.489735797622789e-12,
+        "rational_remainder_upper": "97146488851927026173799547107070337899445726459366481532923/552139707743245102994780468982162036196088717773630924413001937903943680",
+        "remainder_upper": 1.759454853355736e-13,
+        "observed_imaginary_signal_minus_remainder": 2.3137903122872152e-12,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.690834179956509e-12
+      },
+      "rational_caps": {
+        "TT": "19720597481524594036184181865797/14757395258967641292800",
+        "TC": "1332331885540330789876655716399168704110507/2028240960365167042394725128601600",
+        "CC": "151213833961784877508366523326179/472236648286964521369600",
+        "TM": "1856353554251485311506741710022638574598189409/79753679747094952374228423616820674560",
+        "CM": "4259367512461541299468865539058932866088466561/319014718988379809496913694467282698240",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "862842909612271929584392901/23611832414348226068480",
+        "K_HC": "13515807887840829174524197053/755578637259143234191360",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "8253792388180795905671955321/151115727451828646838272",
+        "Lstar": "249903463684492974042287535301065353445953814359/106338239662793269832304564822427566080",
+        "quadratic_cap": "97146488851927026173799547107070337899445726459366481532923/116920130986472233456294786617302641572474603438080"
+      }
+    },
+    {
+      "path": 512,
+      "row": 4,
+      "col": 0,
+      "length": 1,
+      "C0": {
+        "real": 1.484930061984463e-17,
+        "imag": -1.2780986833205656e-17
+      },
+      "Pi_self": {
+        "real": 6.385199266533195e-16,
+        "imag": -5.495824338278435e-16
+      },
+      "Pi_IBP": {
+        "real": -6.385199266533195e-16,
+        "imag": 5.495824338278435e-16
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": 3.118353130167371e-16,
+        "imag": -2.6840072349731863e-16
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": -3.9338846463207005e-16,
+        "imag": 3.7314814068009917e-16
+      },
+      "HC_total": {
+        "real": -8.155315161533296e-17,
+        "imag": 1.0474741718278054e-16
+      },
+      "matter": {
+        "real": -1.8021749239904752,
+        "imag": 6.857159428015257e-17
+      },
+      "m1": {
+        "real": -1.8021749239904754,
+        "imag": 1.7331901146293309e-16
+      },
+      "wrong_old_column_formula": {
+        "real": -1.8021749239904765,
+        "imag": 5.13941466196625e-16
+      },
+      "row_column_observed_contrast": 1.4047388937301379e-15,
+      "omitted_second_link_matter": {
+        "real": -1.7814558501587725,
+        "imag": 6.715631525580123e-17
+      },
+      "second_link_observed_contrast": 0.020719073831702683,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": -1.8021749239904754,
+            "imag": 1.7331901146293309e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": -1.8021749239904752,
+            "imag": 6.857159428015257e-17
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": -1.802174923990475,
+            "imag": -1.9982912921716606e-16
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": -1.8021749239904765,
+            "imag": 5.13941466196625e-16
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": -1.7814558501587725,
+            "imag": 6.715631525580123e-17
+          },
+          "discriminates": true,
+          "observed_contrast": 0.020719073831702683
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": 1.4849300622366754e-17,
+          "imag": 2.6225083939611038e-11
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.5962845753391893e-11,
+        "rational_remainder_upper": "205735478346783167159291128660913343647867546234472360528123/2208558830972980411979121875928648144784354871094523697652007751615774720",
+        "remainder_upper": 9.315372335186852e-14,
+        "observed_imaginary_signal_minus_remainder": 2.5869692030040024e-11,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.63182700361766e-11
+      },
+      "rational_caps": {
+        "TT": "1312077245785172240744447853259/2361183241434822606848",
+        "TC": "252684534664115518517278183728921657986361/649037107316853453566312041152512",
+        "CC": "2560313256401560004688209101305/9444732965739290427392",
+        "TM": "26913218765254964030710600502067050034257007/1661534994731144841129758825350430720",
+        "CM": "5068803435355314316028531377275113867824436567/425352958651173079329218259289710264320",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "111281020478900746002978785/4722366482869645213696",
+        "K_HC": "310897891713515057451274069/18889465931478580854784",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "759576497265879256641564377/18889465931478580854784",
+        "Lstar": "529242067822065753494785927351977565502961615959/425352958651173079329218259289710264320",
+        "quadratic_cap": "205735478346783167159291128660913343647867546234472360528123/467680523945888933825179146469210566289898413752320"
+      }
+    },
+    {
+      "path": 576,
+      "row": 8,
+      "col": 0,
+      "length": 2,
+      "C0": {
+        "real": 1.1627297068322856e-17,
+        "imag": 1.4000569192412879e-18
+      },
+      "Pi_self": {
+        "real": 1.1999370574509191e-15,
+        "imag": 1.4448587406570096e-16
+      },
+      "Pi_IBP": {
+        "real": -1.1999370574509191e-15,
+        "imag": -1.4448587406570096e-16
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": 2.8835696729440674e-16,
+        "imag": 3.4721411597183926e-17
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": -2.6311976039661133e-16,
+        "imag": -4.076560206894391e-17
+      },
+      "HC_total": {
+        "real": 2.523720689779542e-17,
+        "imag": -6.044190471759984e-18
+      },
+      "matter": {
+        "real": 0.1728215567914399,
+        "imag": 1.159410875439913e-16
+      },
+      "m1": {
+        "real": 0.17282155679143993,
+        "imag": 1.0989689707223129e-16
+      },
+      "wrong_old_column_formula": {
+        "real": 0.17282155679144023,
+        "imag": -1.6911357186838012e-16
+      },
+      "row_column_observed_contrast": 4.383944840544961e-16,
+      "omitted_second_link_matter": {
+        "real": -0.19707754628599353,
+        "imag": 1.156286715001415e-16
+      },
+      "second_link_observed_contrast": 0.36989910307743346,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": 0.17282155679143993,
+            "imag": 1.0989689707223129e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": 0.1728215567914399,
+            "imag": 1.159410875439913e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": 0.17282155679144018,
+            "imag": 1.5066249914117523e-16
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": 0.17282155679144023,
+            "imag": -1.6911357186838012e-16
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": -0.19707754628599353,
+            "imag": 1.156286715001415e-16
+          },
+          "discriminates": true,
+          "observed_contrast": 0.36989910307743346
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": 1.1627297069922067e-17,
+          "imag": -2.5148832440065023e-12
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.4897357976227874e-12,
+        "rational_remainder_upper": "97146488851927026173799547107070337899445726459366481532923/552139707743245102994780468982162036196088717773630924413001937903943680",
+        "remainder_upper": 1.759454853355736e-13,
+        "observed_imaginary_signal_minus_remainder": 2.3137903122872136e-12,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.6908418406840013e-12
+      },
+      "rational_caps": {
+        "TT": "19720597481524594036184181865797/14757395258967641292800",
+        "TC": "1332331885540330789876655716399168704110507/2028240960365167042394725128601600",
+        "CC": "151213833961784877508366523326179/472236648286964521369600",
+        "TM": "1856353554251485311506741710022638574598189409/79753679747094952374228423616820674560",
+        "CM": "4259367512461541299468865539058932866088466561/319014718988379809496913694467282698240",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "862842909612271929584392901/23611832414348226068480",
+        "K_HC": "13515807887840829174524197053/755578637259143234191360",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "8253792388180795905671955321/151115727451828646838272",
+        "Lstar": "249903463684492974042287535301065353445953814359/106338239662793269832304564822427566080",
+        "quadratic_cap": "97146488851927026173799547107070337899445726459366481532923/116920130986472233456294786617302641572474603438080"
+      }
+    },
+    {
+      "path": 640,
+      "row": 1,
+      "col": 0,
+      "length": 1,
+      "C0": {
+        "real": -7.479146352332075e-19,
+        "imag": 2.3036261442417395e-17
+      },
+      "Pi_self": {
+        "real": -3.2160329315027926e-17,
+        "imag": 9.905592420239479e-16
+      },
+      "Pi_IBP": {
+        "real": 3.2160329315027926e-17,
+        "imag": -9.905592420239479e-16
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": -1.5706207339897353e-17,
+        "imag": 4.837614902907652e-16
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": 8.505696532585029e-17,
+        "imag": -6.973072028615624e-16
+      },
+      "HC_total": {
+        "real": 6.935075798595293e-17,
+        "imag": -2.1354571257079718e-16
+      },
+      "matter": {
+        "real": -1.8021749239904752,
+        "imag": -3.762294120174407e-17
+      },
+      "m1": {
+        "real": -1.8021749239904752,
+        "imag": -2.5116865377254125e-16
+      },
+      "wrong_old_column_formula": {
+        "real": -1.8021749239904754,
+        "imag": -8.118252849402479e-16
+      },
+      "row_column_observed_contrast": 8.054148469121399e-16,
+      "omitted_second_link_matter": {
+        "real": -1.7814558501587727,
+        "imag": -5.04542053499309e-17
+      },
+      "second_link_observed_contrast": 0.02071907383170246,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": -1.8021749239904752,
+            "imag": -2.5116865377254125e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": -1.8021749239904752,
+            "imag": -3.762294120174407e-17
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": -1.8021749239904752,
+            "imag": 4.461385490890211e-16
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": -1.8021749239904754,
+            "imag": -8.118252849402479e-16
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": -1.7814558501587727,
+            "imag": -5.04542053499309e-17
+          },
+          "discriminates": true,
+          "observed_contrast": 0.02071907383170246
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": -7.479146388881925e-19,
+          "imag": 2.6225119756859313e-11
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.596284575339189e-11,
+        "rational_remainder_upper": "205735478346783167159291128660913343647867546234472360528123/2208558830972980411979121875928648144784354871094523697652007751615774720",
+        "remainder_upper": 9.315372335186852e-14,
+        "observed_imaginary_signal_minus_remainder": 2.586969203004002e-11,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.6318273492349194e-11
+      },
+      "rational_caps": {
+        "TT": "1312077245785172240744447853259/2361183241434822606848",
+        "TC": "252684534664115518517278183728921657986361/649037107316853453566312041152512",
+        "CC": "2560313256401560004688209101305/9444732965739290427392",
+        "TM": "26913218765254964030710600502067050034257007/1661534994731144841129758825350430720",
+        "CM": "5068803435355314316028531377275113867824436567/425352958651173079329218259289710264320",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "111281020478900746002978785/4722366482869645213696",
+        "K_HC": "310897891713515057451274069/18889465931478580854784",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "759576497265879256641564377/18889465931478580854784",
+        "Lstar": "529242067822065753494785927351977565502961615959/425352958651173079329218259289710264320",
+        "quadratic_cap": "205735478346783167159291128660913343647867546234472360528123/467680523945888933825179146469210566289898413752320"
+      }
+    },
+    {
+      "path": 704,
+      "row": 2,
+      "col": 0,
+      "length": 2,
+      "C0": {
+        "real": -7.45643538954821e-18,
+        "imag": -1.7294197252095467e-18
+      },
+      "Pi_self": {
+        "real": -7.695041322013756e-16,
+        "imag": -1.7847611564162525e-16
+      },
+      "Pi_IBP": {
+        "real": 7.695041322013756e-16,
+        "imag": 1.7847611564162525e-16
+      },
+      "Pi_total": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "HC_self": {
+        "real": -1.8491959766079557e-16,
+        "imag": -4.288960918519674e-17
+      },
+      "HC_covariance_and_allcharged_mean": {
+        "real": 1.7058717321588663e-16,
+        "imag": 4.1817146784650685e-17
+      },
+      "HC_total": {
+        "real": -1.4332424444908938e-17,
+        "imag": -1.0724624005460547e-18
+      },
+      "matter": {
+        "real": 0.17282155679144004,
+        "imag": 2.892379425943589e-16
+      },
+      "m1": {
+        "real": 0.17282155679144,
+        "imag": 2.8816548019381285e-16
+      },
+      "wrong_old_column_formula": {
+        "real": 0.17282155679144026,
+        "imag": -7.656053340095968e-17
+      },
+      "row_column_observed_contrast": 4.279162670626239e-16,
+      "omitted_second_link_matter": {
+        "real": -0.1970775462859934,
+        "imag": 2.889255265505091e-16
+      },
+      "second_link_observed_contrast": 0.36989910307743346,
+      "initial_C0_Pi_HC_omissions_exactly_blind": true,
+      "initial_adverse_controls": {
+        "no_Pi": {
+          "m1": {
+            "real": 0.17282155679144,
+            "imag": 2.8816548019381285e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Gaussian IBP"
+        },
+        "no_HC": {
+          "m1": {
+            "real": 0.17282155679144004,
+            "imag": 2.892379425943589e-16
+          },
+          "discriminates": false,
+          "reason": "Exact initial Clifford/reflection spintrace cancellation"
+        },
+        "bare_Coulomb_self_shortcut": {
+          "m1": {
+            "real": 0.17282155679143985,
+            "imag": 2.4634833340916215e-16
+          },
+          "discriminates": false,
+          "reason": "C0=0 makes self-only shortcut blind; full covariance still computed"
+        },
+        "omitted_Ref": {
+          "discriminates": false,
+          "reason": "Initial extra meanrho times C0=0; finite dense control discriminates"
+        },
+        "wrong_column": {
+          "m1": {
+            "real": 0.17282155679144026,
+            "imag": -7.656053340095968e-17
+          },
+          "discriminates": false,
+          "reason": "Initial translation/AP and Clifford scalar trace; independent random dense control discriminates"
+        },
+        "omitted_second_link": {
+          "m1": {
+            "real": -0.1970775462859934,
+            "imag": 2.889255265505091e-16
+          },
+          "discriminates": true,
+          "observed_contrast": 0.36989910307743346
+        }
+      },
+      "background_allcharged_mean_defect": 5.81756864903582e-14,
+      "clock": {
+        "t_exact": "1/68719476736",
+        "power": -36,
+        "t": 1.4551915228366852e-11,
+        "linear": {
+          "real": -7.456435385354851e-18,
+          "imag": -2.5148863734831478e-12
+        },
+        "observed_imaginary_signal_with_one_percent_allowance": 2.489735797622788e-12,
+        "rational_remainder_upper": "97146488851927026173799547107070337899445726459366481532923/552139707743245102994780468982162036196088717773630924413001937903943680",
+        "remainder_upper": 1.759454853355736e-13,
+        "observed_imaginary_signal_minus_remainder": 2.3137903122872144e-12,
+        "differs_from_C0_with_declared_float_allowance": true,
+        "co_local_C0": 0.5,
+        "co_local_change_upper": 1.9362743201481495e-09,
+        "nonlocal_absolute_upper": 2.690837783765156e-12
+      },
+      "rational_caps": {
+        "TT": "19720597481524594036184181865797/14757395258967641292800",
+        "TC": "1332331885540330789876655716399168704110507/2028240960365167042394725128601600",
+        "CC": "151213833961784877508366523326179/472236648286964521369600",
+        "TM": "1856353554251485311506741710022638574598189409/79753679747094952374228423616820674560",
+        "CM": "4259367512461541299468865539058932866088466561/319014718988379809496913694467282698240",
+        "MM": "701363316551693881873565384373361/19807040628566084398385987584",
+        "K_Pi": "862842909612271929584392901/23611832414348226068480",
+        "K_HC": "13515807887840829174524197053/755578637259143234191360",
+        "K_matter": "26483264839360231/140737488355328",
+        "Kstar": "8253792388180795905671955321/151115727451828646838272",
+        "Lstar": "249903463684492974042287535301065353445953814359/106338239662793269832304564822427566080",
+        "quadratic_cap": "97146488851927026173799547107070337899445726459366481532923/116920130986472233456294786617302641572474603438080"
+      }
+    }
+  ],
+  "conserved_background_rational_prices": {
+    "E1": "13262917006408675427/4123168604160",
+    "E2": "884821779065121719/274877906944",
+    "P": "246498237542503/1099511627776",
+    "rootE1": "492996475085005/274877906944",
+    "matter": "855444290449274477/549755813888",
+    "HCmean": "1553408/15",
+    "HCnorm": "3551223638981/33554432",
+    "charged_particles": "8192"
+  },
+  "co_local_actual_matter_m1": {
+    "real": 9.339374765347722,
+    "imag": 2.4231937835094847e-16
+  },
+  "dense_same_H_CAR_Hermite": {
+    "law": "Small SAME-H two-site spin2 CAR, active2/3, one auxiliary, static Ref2/1, shared realTheta Hermitecut24; no N4 or untruncated convergence claim",
+    "cutoff": 24,
+    "time": 0.03,
+    "raw_source_norm_squared": 0.2239431566932048,
+    "C0": {
+      "real": -0.015353309832714525,
+      "imag": 0.004162168261275995
+    },
+    "m1_dense": {
+      "real": 0.024541957563581105,
+      "imag": 0.030187683763363123
+    },
+    "m1_Wick_Gaussian": {
+      "real": 0.02454195756358308,
+      "imag": 0.03018768376336259
+    },
+    "initial_ROW_Wick_defect": 2.0451411309580867e-15,
+    "initial_HC": {
+      "real": 0.008022076185250535,
+      "imag": 0.024455520077005362
+    },
+    "initial_matter": {
+      "real": 0.016519881378332543,
+      "imag": 0.0057321636863572265
+    },
+    "rejected_column_matter": {
+      "real": 0.0019418618749403184,
+      "imag": -0.001469315788272112
+    },
+    "row_column_contrast": 0.016259765043345236,
+    "finite_kernel": {
+      "real": -0.014415315310362813,
+      "imag": 0.0034095892206956746
+    },
+    "finite_linear": {
+      "real": -0.014447679319813632,
+      "imag": 0.0034259095343685615
+    },
+    "observed_remainder": 3.624612732574469e-05,
+    "finite_matrix_remainder_upper": 0.020391683290670717,
+    "Kx_matrix_norm": 7.6413140322792605,
+    "Lx_matrix_norm": 95.75725009096354,
+    "adverse_controls": {
+      "no_Pi": {
+        "kernel": {
+          "real": -0.014422783834624064,
+          "imag": 0.003413942354443781
+        },
+        "finite_time_contrast": 8.644572173901563e-06,
+        "initial_moment": {
+          "real": 0.024541957563581112,
+          "imag": 0.03018768376336312
+        }
+      },
+      "no_HC": {
+        "kernel": {
+          "real": -0.015167451513111547,
+          "imag": 0.0036714471201758645
+        },
+        "finite_time_contrast": 0.0007964159886676439,
+        "initial_moment": {
+          "real": 0.01651988137833058,
+          "imag": 0.005732163686357772
+        }
+      },
+      "no_Ref": {
+        "kernel": {
+          "real": -0.014843092623831523,
+          "imag": 0.0033561040963682454
+        },
+        "finite_time_contrast": 0.0004311079777072417,
+        "initial_moment": {
+          "real": 0.02705607614985952,
+          "imag": 0.016191002213818147
+        }
+      },
+      "no_second_link": {
+        "kernel": {
+          "real": -0.014413164602460539,
+          "imag": 0.0034097378169752
+        },
+        "finite_time_contrast": 2.1558351827526677e-06,
+        "initial_moment": {
+          "real": 0.02447250959167845,
+          "imag": 0.03020734430344352
+        }
+      }
+    },
+    "neutral_anchor_invariance_defect": 0.0,
+    "long_dressing_covariance_defect": 0.0,
+    "omitted_long_dressing_gauge_defect": 0.7418409388259654,
+    "wrong_single_endpoint_anchor_defect": 0.5238185362990488
+  },
+  "gauge_complete_receiver_controls": {
+    "all_orthogonal_Gauss_split_defect": 1.1102230246251565e-15,
+    "full_unreduced_Wilson_lift_defect": 4.440892098500626e-15,
+    "arbitrary_local_U1_receiver_covariance_defect": 9.325873406851315e-15,
+    "wrong_unreduced_CAR_without_long_dressing_defect": 1.9998420924724525
+  },
+  "exact_rational_remainder_coefficients": true,
+  "signal_arithmetic": "FLOATING, NOT INTERVAL; 1percent allowance is declared, not proven lower",
+  "source_action_binding": null,
+  "full_current_transfer_claim": false,
+  "conditional": [
+    "Selected exact meanPhi root, Clifford and orthogonalQ preparation",
+    "Conditional analytic body proof; observed Slater matrices and first moments floating",
+    "Finite Hermite same-H control is a cutoff observation, NOT convergence"
+  ],
+  "excluded": [
+    "ground",
+    "charged pole",
+    "common cone",
+    "original SOURCE",
+    "future Slater/Wick propagation",
+    "fullN4 measured finite evolution"
+  ],
+  "governing_plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "captured_parent_revision": "027e45d965834c9861190f672dd346fc3387dd8d4a6a73e0b5f9346e3de817f9",
+  "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "input_hashes": {
+    "induced_phi_nonuniform_field_car.py": "55661707f096422947a816924664de94e8da1d092e278164e4e9be57a26e775c",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum.py": "f63c1590af4fa9922757615b1bfccb788f430760d401d7c66372e8656163251c",
+    "induced_phi_uniform_relative_colour_quantum.py": "8f50cdc7ab6f5860fde58a0d0607ced4afd6549c6b4207d916b1b14839faf01b",
+    "induced_phi_nonuniform_gauss_quantum.py": "2bd70176910108fd695c5490b31ce490da70c860a9a43693758479ec2ccc2c06",
+    "induced_phi_uniform_full_normal_quantum.py": "2832ab998db0bcef0f21fc984a40d63f4e953d36674a63058563a9612260db80",
+    "induced_phi_quantum_oscillator_backreaction.py": "404dfbee04a0f8d0ba449c396881675c5763464f0aa81061b69bffc2e6b3ec4c",
+    "induced_phi_static_backreaction_bound.py": "cd279069774aa40e78d73b807290ab42095870607321ffc75a8e8b4a47a58b45",
+    "induced_phi_pauli_band_volume.py": "00e0c4aa7cbc070449dcaa5b9d8d3b8e1a4f924d44ae41721e59a2e55c472ff4",
+    "induced_phi_pauli_band_response_control.py": "bfb1bdbb72d06c54369b5678e62cbd3f7dd2e71effc9a6d6e5a005ae4a22e768",
+    "induced_phi_pauli_gaussian_ward.py": "1b4bde56877c9da48ee615bb2ef4ed1fe89da1d1a6097f30cddc9b6840f6a560",
+    "induced_reference_electric_graph.py": "a6395a15a6ae26cc2c0afa2a5e39e1a004dc695e792b0774e78ccb3e20db7a3f",
+    "induced_reference_field_following.py": "a00017b203dfb24693302d25f017a1d64f48aca3fcbc4009417eecb0c897ceac",
+    "induced_phi_em_gaussian_variational.py": "986c34d93435be153d1b23600f4ffe01c600655a06da0bf8ab0943d6b10d7ef8",
+    "induced_phi_backreaction.py": "7ef885a77455824ca1e0e296ffaa0c4a0c16a5c8343a59bd5b1470a43cad8148",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+    "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+    "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+    "induced_photon_response.py": "4906bf0bb8c3a80fd20d2b93388878e9975af54bffd7f114ee027d5c3c00e64f",
+    "improved_phi_band.py": "da97aa8d9bcdb578db966533714b05a45d3747cca3f0b9dd253afb79bff76a76",
+    "original_charged_principal.py": "95242f66759648031475b4a47be0cb3f316fc9dafd283d560cb2726d9c4ddc7c",
+    "bulk_flat_holonomy_bound.py": "b9a6f096ac5cede629e18aa15fa615e19165998fa398119e19123683144d30f5",
+    "bulk_quantum_selection.py": "0dcdb45b755cc805186e72d1db70cc32bf392fa1a35c2e42d8dd99ff43b8f24f",
+    "unrestricted_field_minimum.py": "443840b860a0adfb4fd5455ecf9188ddb63b31fae252619568a60ed4a9915301",
+    "centre_flux_sea.py": "b9fd12acd165a0af1003d49dfd34bf45bf481f0723dc393d1c702bb436fda5d1",
+    "full_band_gauss_section.py": "1bb48d986e83c5df3b707ad74337a2f4b0ec6a4495af90ba87b6a8e68eb366cb",
+    "gauss_charge_intertwiner.py": "861008cb7dea64d2b2e0cef513c62de1d55539a1527a5b6fea8b5b879ea956fa",
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "quantum_su4_gauss.py": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+    "full_field_charge_bound.py": "b86f5fe62f2a838f2a5cd84e70c1b3e74e801aef91cd2dda6d4ce123e58541bf",
+    "full_band_packet_bound.py": "9b8e6f0d4c20d875389bd38d76d273be8d431a18cbe0331f9925daa72a8450d9",
+    "full_spatial_gauge_stability.py": "2c1eb9ba04eef7dc851f0af2e6c70d8ae470396bc15e324fcd58d6fe3c89e0bf",
+    "periodic_bulk_frame.py": "b784c7734bc7f35b3b0db5d3e4e4b888d64328647bf9e63e8b70b40b5128c1a8",
+    "bosonic_original_law_join.py": "8e107f1fecb8483200c1520b8afd0032a653c24bae5b81d1ecad36a81d0cdd9e",
+    "noncompact_coulomb_carrier.py": "073b97c04de1d38bc356cc096a5151cd16acf0d6ff38106f407d648a6e65bba6",
+    "noncompact_screened_gauss_dressing.py": "74a5a5155a3f75eb812c8abf80ad5603ccb6945150dbfc01b2c50f2c82773cf2",
+    "noncompact_charged_packet_transport.py": "c9296b17432759d95cfbcb9a352e67ebaebc7bc809cf477d0a35fb9c6cb4974c",
+    "noncompact_maxwell_phase.py": "f9bfef5e64c597b4f3f095834624c1605c74ac263e4045626c156e4f7c4e2710",
+    "original_compact_charge_bound.py": "b980bfb62ed9fa8de18eea39c855cba2833c287118496dbb0a4f08a0c436ccc7",
+    "original_centre_charge.py": "37745e237aad5435162f4b44d99efd336fac9933de03aca8dd48719dfdcb7ae5",
+    "original_normal_gap_bound.py": "9d9f1ec26995b8be6fa5960a184ab11ebca5b782e82e07624a52fdb4724f9bf8",
+    "original_massive_photon_locality.py": "2829890a4a0f8a527ab984aa9bc250b92f78812888c4992c9b041ae3c012fa86",
+    "original_uniform_charge_gap.py": "8483a19b8135e6f96e8f92f3f2c3c5ae51b4b024ee83a1b7f12b089feb7697d8",
+    "noncompact_marked_metric.py": "552d5153f8ca0d484067d0bbf5e9c49ab429f76e46dc1cd0070235d52e415dd8",
+    "noncompact_native_current.py": "83ee632b748d5a5f6b47e8bd72d552ff87a170221cbdc9f97efe8b2a21dfde5b",
+    "noncompact_neutral_supplier.py": "314d4bab4695727c4d47dc0752ae7afc0bf9e6bdfec0855e066014d4b9f0a7ad",
+    "noncompact_finite_packet_spin.py": "4b85d323c7b96ee1a614a3f80ea9b200ae0b9308ddc83640e1be7f2e5bc1af64",
+    "original_physical_rotation_lift.py": "28c84681cb80503def00fece882b5daa1cc3de801ee430db2750e45f39fc7665",
+    "physical_spin_boundary.py": "a67649d1abe0664283310a1dd186a443ecdc40560225d6025d89fe954fc7a655",
+    "bulk_frame_compton.py": "0d869fa925c7946096ab152d7d415437424f41b031d882f75c089f2d4943f284",
+    "photon_matched_compton.py": "3ca0501d1636910c9be90f8a423e592d0c246de3e7286c7a6444268f6caa5c64",
+    "photon_matching.py": "efa046a5976b48b7d34b6d1faaeb78927ff00d4b83011e62b89d518994b5f994",
+    "vacuum_limit.py": "1ab70e9378d48e4cee9ed2c46e917496d4be2686f34cba87c7b82660ef6c3297",
+    "pair_full_field_charge_transfer.py": "b699fad8485d91502f2d6197dcd762fafe7b901af870399156e5f9eb1ab21c47",
+    "pair_full_field_concentration.py": "4a485d5ffd1d1c180c13858f09c3f3e3cdcd54242297f12897e4dc66336f5d25",
+    "pair_global_field_bound.py": "f419c53c881c6d66175a551e6ee2f074521c8fb726fffc17e5ae82eb9ef533f3",
+    "noncompact_wilson_photon_envelope.py": "4b9f10c87d9dfb055a2a718e25cfad23ffc4261d6b8ad48a211b1ddf412957ca",
+    "noncompact_centre_source_energy.py": "8cfde5230cac1c1458143fb4b033bd6f54244d971a99d0b5fe1a67d059cdfb19",
+    "noncompact_physical_rotation_join.py": "b950319832910770f6ec2777b01ce8abaa6606d2be5de999f5dea82940c23bd6",
+    "noncompact_mechanical_pulse.py": "5f6b980cd3a4e712d666ee3197e8a9d25936691dc4b148b8c6d27aafe0e28b25",
+    "noncompact_frame_pulse_transfer.py": "368875f9ce5816456d8ad43735320d402d3f1f861688479281d7779b2013812f",
+    "bosonic_frame_torque.py": "d6565ce84fddeac23dd76e2eb909e12bf02c51c183d20eaa1c54e276de66a77e",
+    "original_total_angular_transfer.py": "0f3ea2d1f7cc0918a03190b5c0babd0996d2d1a6d2985dbc25c6d9409be8718a",
+    "original_intrinsic_angular_transfer.py": "c678d2092f29ab3652b6a4579e895f7db0bc7b8ec71e601e47249ccda14d044f",
+    "original_slow_kinetic_bo.py": "8ca4f73a2c8f412a1dab42af9a81e44ef714742799f8bfcf398847f12a0fc8d1",
+    "noncompact_native_metric_admission.py": "12ab7f5aa353cf4a98d272fc85332485ee36f4741529be96bd42002177003ca9",
+    "bulk_global_gram.py": "a078f989b3199c1ceeab274d59ade61e8f96c0352f65aa3be2fd7baf2553e0a5",
+    "noncompact_quantitative_normal_budget.py": "bd66f24c524e95e582a4282a9bd758dff97ffddf4e962056189460b122795854",
+    "induced_photon_mode_frame.py": "7385772fced5cc6bcc98ff76b81f46f168608783a2932c402fe40d1af4ab075e",
+    "induced_compton_transfer.py": "22aee2e714373acad4f7148e436d99b3573bf0532fb845e02ca19b00a0247f3b",
+    "induced_phi_ir_well_transfer.py": "d624514808f6947b6558b3ca7487961f389b7babfc18e2f0ed6d4ec5675edc60",
+    "induced_reference_electric_graph_enclosure.py": "00a212b54455c3c7d4b997383785f1ebe7f53f174a466d9ee6ddbffbf2542e95",
+    "induced_phi_pauli_initial_moment.py": "41d2f6b2a0d28a84e5aa5b1151f420ae725a74fe3defa329b5084d990e2f8845",
+    "induced_phi_pauli_beta_continuation.py": "9a52bdb152fff0b744fc4ff03725738bba186ad03397d0f658c98cc0e18ced34",
+    "induced_phi_pauli_source_metric.py": "06db8f0d341c6acef7e9ce19b086fdf70a5b5844d2ad115786766a315d021352",
+    "induced_phi_em_ygraph_evolving_field_clock.py": "76ad0692682c96986aae3c4ad02e2037d9ec6bdb744ad3a42813afd560ae490d",
+    "induced_phi_em_ygraph_centre_bridge.py": "a63e60ef8affd3e027001a2701952e891cf949c6544ef4ebef1e85c5ea6c2c3c",
+    "induced_phi_em_ygraph_clock_transfer.py": "72a65537162068a576d8969e6e7eae358617519ab3df428e6ab42ae53af32c23",
+    "induced_phi_em_ygraph_full_phi_energy.py": "4e0ac4d8b844855631bafe8f93883b8ebd5cfb3ccf86f52addb384cb42e65540",
+    "induced_phi_em_ygraph_initial_contact.py": "1807820746cea2ce87f092a14e7433114b71a545c29dce1bf4067bd1f06d38f1",
+    "induced_phi_em_ygraph_weak_domain.py": "0d17640e6522670e7ade8cade6dbde2eed975835849bf3c2452587af39bf4772",
+    "induced_phi_em_macro_photon_domain.py": "2a9f3ef2629cc16b1983abab3f9331d8d2514c6604ef199e6623ccbe80586423",
+    "induced_phi_em_macro_squeeze.py": "8ca1f3dc93ff1c9523efb58328b58c9df0d9f2bd7ae854b2e4136f54f295882b",
+    "induced_phi_em_macro_virial.py": "77908875dca6e24d5a8aec53ca37d8fdfc179274183a6ccc4f7e6454379c844c",
+    "induced_phi_em_macro_preparation.py": "a9ec60a853e4ddc27c7009065815444a6104e83e42c765005b7ef9dd89e5f603",
+    "induced_phi_em_sw_preparation.py": "57b62db9e98cafbc803cfde8255644a630396699c476fc890ff2bd9aed446c78",
+    "induced_phi_em_sw_momentum.py": "dc6a00cd1b0ed65179d28e131bebc6c131b3668a6320dd9cd96879d380a913cb",
+    "induced_phi_em_momentum_dressing.py": "01617fd4c72797c26fd8dca6e4e80997d8ee31a62143859eef744bac9593bf15",
+    "induced_phi_em_gain_certificate.py": "9225ca3205943f7e8eefec1fdd17df9b7b0e012ac8c117b6fbd70625805e81d3",
+    "induced_phi_pauli_magnetic_join.py": "b50da99431dfbb3a0a3be45b5bae05fe1c8c2493d9b20394cc92d1efb4c46724",
+    "induced_phi_spin_photon_joined_heat.py": "13ea6c0540a50bea5d502c880a670212b144274ed601c80e8baa596068e7f87d",
+    "induced_phi_spin_shape_full_source.py": "ae43a045406b2e89fe74c957cb16c0186bdb5475fb01585587b5104456c0c3c4",
+    "induced_phi_spin_shape_contact.py": "6120d968ef2e2bb91e64b4fb91b3e022b821a5f533922a9a6f980e597038c5a9",
+    "induced_phi_force_quantum_heat.py": "b235cd760c14adf73e68dc68c91357d58b8fd7a4379d15dccfd1d82b1a1e8099",
+    "induced_phi_quantum_force_source_gram.py": "ad509e7181540f79f589f995f00fb0d0804cf3929cfc8052b6244c19784b101e",
+    "induced_phi_quantum_source_force.py": "fd07c465720d0241e4e34d8bdbec018f24ae5aaf809cb6e0c678d29691b0aeba",
+    "induced_real_em_joined_heat_continuation.py": "428c33096f7df58d980684d751a1e5112818a2cc299546cbe935aae0571d982d",
+    "induced_real_em_photon_heat_receiver.py": "ca6698b2497b86dc7fa4990b62e2048ca5628cb45be1599c6cdd009838b88878",
+    "induced_real_em_coulomb_heat.py": "569ae5b6a08c81d7563704b1b3c4eb6571394b8f8988e5b8a9b1f366a4a9de63",
+    "induced_phi_em_source_translation.py": "17f351e16fd7fc08ded2e8bf1930192a42adc865155d18988f32fed51052c7e1",
+    "induced_phi_em_charged_photon_response.py": "e363dbb15d3c8e061915af1a92b55516d374f66c9bda03f57d2b11b829d5a108",
+    "induced_phi_em_charged_photon_source.py": "5f26c140d27e2b9a16c259880b8504e9b6c1cc4bfe75c24f7d890cf9381510ca",
+    "induced_phi_em_compensated_transition_graph.py": "6ec51626787323ffedf6f17c633de229e84c5abdfff220919d29f1b2d6f2d952",
+    "induced_phi_em_compensated_green_receiver_typed.py": "2515ef32242e4cd7e350a1e6adc22e6acba2bbf9c4aa9ee5db430ad72d1c2fa7",
+    "induced_phi_em_compensated_source_energy.py": "dcc3580baa77bf8bfdc8ef249ec5cbd699b57168b3d6a0911757eec13530ba23",
+    "induced_phi_em_compensated_charged_green.py": "c42d2be614c4b74ab7f8e5689a8706c25cbe838fd60f9223468c79d643d13806",
+    "induced_phi_em_full_current_inserted_response.py": "5c6b12d6e00659d6ba0623812a737f4a88a3b9164ba7f4c3d279315257d40fcc",
+    "induced_phi_em_full_inserted_response.py": "248f2f03d79cf55420a0690bd5228e4fce07ed162dc22c16ebd11354bc86c8d6",
+    "induced_phi_em_full_source_force_clock.py": "e4b38e370f21d43b418c06a50b1e42ceccf9a69efb588420f24cf53fc27e2a2c",
+    "induced_phi_em_ygraph_current_source_retarded.py": "4784df39f865cf4415a02f25eeef8d9d079e9bddf2d5dcb07f3202fe490ced44",
+    "induced_phi_em_ygraph_retarded_transfer.py": "e8c7c8b7a10451bac62f690af5a1a95769b09e1865b0439f0fbed241f1065b8e",
+    "induced_phi_ir_c_full_action.py": "6550aa333c75b1b49b4faded7dbc8b6b8c4526c6b36488e92dfde5507acd73d0",
+    "induced_phi_ir_charge_symmetry.py": "6b2f1a003822204d2d937ddca10572d13f9867b16f2a2eab14cfc7c8d843a903",
+    "induced_phi_pauli_four_link_loop.py": "fb590dfe3c219e1682471d75ae71cb753fc58661c5dba8351b35d3d377807b80",
+    "induced_phi_uniform_quantum_backreaction.py": "0c3d65dce2d22181073cc9bdd373a7ba7c99977f895ffab1a097e7ae070c9da7",
+    "joined_phi_u1_finite_car.py": "5bea651fdeca88736ba2e833f376062527376259789506af373f68501a9b525e",
+    "joined_phi_u1_body_word.py": "5ac906cb786f0e6283f3abd402548611f799d06bea77cb73fabec96505c3c7c4",
+    "induced_phi_nonuniform_fermionic_source_unitary_resumed_actual_receipt.json": "da1998065d6622c4ac780409c29ae10711e01b5c5143edf620557fe15234e9e6",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_root_actual_receipt.json": "4691ffaa9cd81902942cbc228fc47fafff14518be6b5df2e84d08c29c7da4756",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json": "5b97862fc7fca21b8797d549d7d4dfdde58b101e8c46c7a7cfb6531a669c4354",
+    "joined_phi_u1_current_moments.py": "dae823744522b4bd5f540a0e7e906135876bb57ed772f3b6849caa64ed3ed89f",
+    "joined_phi_u1_finite_current_kernel.py": "8dcd83f2c161bd6d5ac20f09ffbd73f6e3e4b787e7d4a3dd22600e1f45c3e270",
+    "joined_phi_u1_nonlocal_receiver_electric_control.py": "09f8cff891355717c78eac740d04d2c12575da5d2a9e7df4e994d274b2c67194",
+    "joined_phi_u1_nonlocal_body_transport.py": "3e3d3135ace146643f15cd6df6b089a6588ad2e4e1acea80e1e485bd98830ab6",
+    "joined_phi_u1_nonlocal_body_transport_controls.py": "e5eaeab9e2e9675d019d98a862cad04901c8fd2bf5d3854c3a5ae26adc2eb150"
+  },
+  "own_source_sha256": "3e3d3135ace146643f15cd6df6b089a6588ad2e4e1acea80e1e485bd98830ab6",
+  "own_source_utf8": "\"\"\"NEW N4 mixed ROW receiver moments and finite-clock Sobolev transport.\n\nExact identities and rational upper coefficients are conditional on the pinned\nmeanPhi/Clifford body. Floating Slater/Fourier signals are NOT interval lowers.\nNo ground, pole, cone, original SOURCE or free-band propagation is claimed.\n\"\"\"\nfrom __future__ import annotations\n\nimport argparse\nfrom fractions import Fraction as F\nimport hashlib\nimport json\nimport math\nfrom pathlib import Path\nimport sys\nimport time\nfrom typing import Any\n\nimport numpy as np\nfrom threadpoolctl import threadpool_limits\nimport joined_phi_u1_body_word as body\nimport joined_phi_u1_current_moments as current\nimport joined_phi_u1_finite_current_kernel as prices\nimport joined_phi_u1_nonlocal_receiver_electric_control as electric\nfrom joined_phi_u1_nonlocal_body_transport_controls import dense_control\n\nROOT = Path(__file__).resolve().parent\nPLAN = 'issue-222-induced-photon-delta13-continuation-20261008'\nREVISION = '027e45d965834c9861190f672dd346fc3387dd8d4a6a73e0b5f9346e3de817f9'\nG = F(64)\nDERIVATION = {\n 'kernel': 'C_x0(t)=<Ex UB(t)psi,US(t)E0psi>, Kx=HSEx-ExHB, Lx=HSKx-KxHB; Cprime=-i<Kx UBpsi,US E0psi>, Cdoubleprime=-<Lx UBpsi,US E0psi>. Raw E0 norm squared .5, background norm1. No normalization change.',\n 'receiver': 'Ex=exp(iq.Theta)*.5 sum4 c_xalpha dagger R0alpha. Ref4 to Ref3, delta=ex-e0=Dk (ROW minus COL), q=Q^T k. Unreduced full Wilson is qTheta+delta lambda_C; lambda_C=Lplus D A minus ANY anchor. Neutral delta removes anchor. Reduced CAR already contains longitudinal dressing. Ex norm <=1 on Ref4 background, since ExdagEx=(4-n_x)/4.',\n 'initial': 'B_x0=.25 sum_alpha c_xalpha c_0alpha dagger, b=.25Tr(1-P)_x0. m1=<Kxpsi,E0psi>. Pi term: exp(-iqTheta)[q\u00b2-i qTheta/S] b integrates to0 by Gaussian IBP, S2. This is cancellation, not omission of Pi dynamics. Matter term is .25 E exp(-iqTheta) Tr sum_j h_xj(Theta)(1-P)_j0 (actual ROW x).',\n 'coulomb': 'KHC=Ex Vdelta, Vdelta=128 deltaLrho+64deltaLdelta; rho is background all64 charged plus static Ref4 offsets. <rho_v B_x0>=meanrho_v b-.25Tr(P_xv(1-P)_v0). Thus mHC=64 exp(-S q\u00b2/2)[(2deltaLmeanrho+deltaLdelta)b-.5 sum_v(deltaL)_v Tr(P_xv(1-P)_v0)]. Auxiliary connected contractions vanish ONLY for this initial active transition; their full mean and future HC/Sobolev effects remain. Not the 59/122 energy increment or64/128 bare selfcoefficient.',\n 'blind_exact': 'Fixed translational mean h(k)=sum_mu real d_mu(k) gamma_mu, h(k)^2 scalar, signh(k)=sum real d_mu gamma_mu/|d|. Orthogonal Clifford traces vanish. Hence TrP_x0=0 offsite, C0=0 exactly. In Tr(P_xv(1-P)_v0), nonzero offsite products of two gamma vectors have trace symmetric under v->x-v; deltaL changes sign under that reflection, while endpoint single-gamma traces vanish. Thus full initial HC contraction is0 exactly (aux meanrho0). Pi and HC initial omission controls are blind and must remain labeled blind. They are discriminated at finite time in the separate actual same-H dense CAR/Hermite consumer, not inferred from m1.',\n 'blind_row_column': 'The N4 ROW formula is correct even where the wrong column formula happens to agree. Translation/AP covariance makes the Gaussian weighted h a twisted convolution; spin trace of the convolution commutator [h_weighted,1-P]_x0 vanishes termwise by Tr(gamma_mu gamma_nu)=Tr(gamma_nu gamma_mu). Thus this initial scalar trace is exactly blind to row versus column. Removing static Ref shifts meanrho bydelta0 times C0=0 and is likewise initially blind. The random nontranslation dense SAME-H control discriminates both; no claim of discrimination on blind N4 moments.',\n 'domain': 'On realR129, finite fixed charged sectors: HC positive bounded matrix, M smooth bounded Fourier multiplier. H=64Pi\u00b2+HC+M selfadjoint on D(Pi\u00b2); Gaussian and Ex-inserted states lie on Schwartz core. Neutral heavy commutes Ex,Pi,HC and factors out EXACTLY. No neutral Lambda in conserved body energies.',\n 'conservation': 'E=64Pi\u00b2+HC; E terms commute and are positive. E1=<E>0+2m norm\u00b2, E2=||64Pi\u00b2psi||+||HCpsi||+2m norm bound <E>t and ||E UBpsi||. Therefore P=||grad||<=sqrt(E1/64), D=||Delta||<=E2/64, ||HC^.5 grad||<=E2/(2sqrt64). These are conserved state-weighted estimates, NOT operatornormPi or future Wick/Slater propagation.',\n 'second_price': 'Lx decomposes TT,2TC,CC,TM+MT,CM+MC,MM. TT<=g\u00b2(q4+4q\u00b3P)+4gq\u00b2E2. CC<=4gdE2+4(gd)^1.5 sqrtE1+(gd)\u00b2. 2TC<=2g[q\u00b2v1(d)+2|q|(sqrt(d)E2+gdP)], v1(d)=2sqrt(gdE1)+gd. MM<=hmax_active\u00b2 by same-flavour creation commutator, NOT extensive M\u00b2. Incoming active creation chains j,x have coefficient b, f=q+q_jx, delta_j=e_j-e0; TM+MT chain price b*g[(q\u00b2+|f|\u00b2)+2|2q+q_jx|P], CM+MC chain b[v1(d_x)+v1(d_j)]. Contact products from [M,Pi] and [M,rho] sum genuinely ALL64 charged hop coefficients: 2g sum_h 4b_h load |q dot q_h| and 2g sum_h 4b_h load |deltaLdelta_h|. Onsite active chain included, aux HC never dropped.',\n 'remainder': '|C(t)-C0+it m1|<=t\u00b2/2 Lstar ||E0psi||. Uniform bound on Lx UB(t)psi uses the same conserved background E1,E2, not old K0. Kx price independently retained. Any finiteclock lower relative to observed m1 uses explicit1percent floating allowance; no interval signal certification.',\n 'transfer': 'If actual NEW uniform source receipt establishes ||HT-T(Hb+Ephi)||<=epsilon and receiver endpoint defect<=eta, ordinary bounded-receiver Duhamel gives |Cfull-Cbody|<=eta*sqrt(.5)+2|t|epsilon*sqrt(.5) (Ex norm1, E0 norm sqrt(.5)); endpoint eta assumed on evolved body vectors, not merely initial state. This lane does not bind an absent receipt or use unbounded-current graph proof.'}\n\n\ndef sqrt_upper(x: F, bits: int = 40) -> F:\n    \"\"\"Outward dyadic rational square root, checked by integer arithmetic.\"\"\"\n    if x < 0:\n        raise ArithmeticError('Negative squared norm')\n    scale = 1 << bits\n    n = math.isqrt((x.numerator*scale*scale)//x.denominator)\n    if F(n*n, scale*scale) < x:\n        n += 1\n    answer = F(n, scale)\n    if answer*answer < x:\n        raise ArithmeticError('Outward rational root failed')\n    return answer\n\n\ndef rational_energies(geom: dict[str, Any], species: list[body.Species]) -> dict[str, F]:\n    tr, tr2, diag = (F(geom[key]) for key in ('exact_L_trace','exact_L2_trace','exact_L_diagonal'))\n    particles = 8192\n    # Initial fixed-number cumulant bound from the full charged density proof;\n    # background meanrho=0, so third-cumulant/mean terms are absent.\n    fourth = 3*((128*tr)**2+2*128**2*tr2)+78*particles*diag**2\n    hcmean = G*128*tr\n    hcnorm = G*sqrt_upper(fourth/3)\n    matter = 128*species[0].hmax_exact+8064*species[1].hmax_exact\n    e1 = G*F(129,8)+hcmean+2*matter\n    e2 = G*sqrt_upper(F(129*131))/8+hcnorm+2*matter\n    return dict(E1=e1,E2=e2,P=sqrt_upper(e1/G),rootE1=sqrt_upper(e1),matter=matter,\n                HCmean=hcmean,HCnorm=hcnorm,charged_particles=F(particles))\n\n\ndef rational_caps(r: int, geo: dict[str, Any], geom: dict[str, Any], sp: body.Species,\n                  species: list[body.Species], energy: dict[str,F]) -> dict[str,F]:\n    den = int(geom['denominator']); lint = geom['L_integer']\n    k = geo['k'].astype(np.int64); delta = geo['delta'].astype(np.int64)\n    dr = delta[r]; kr = k[r]; x = int(geo['x'][r])\n    def density(a: np.ndarray, b: np.ndarray) -> F:\n        return F(int(a@lint@b),den)\n    def gram(a: np.ndarray, b: np.ndarray, da: np.ndarray, db: np.ndarray) -> F:\n        return F(int(a@b))-density(da,db)\n    q2 = gram(kr,kr,dr,dr); d = density(dr,dr); q = sqrt_upper(q2)\n    p,e2,re = energy['P'],energy['E2'],energy['rootE1']\n    def v1(dd: F) -> F:\n        return 2*sqrt_upper(G*dd)*re+G*dd\n    terms = dict(TT=G**2*(q2**2+4*q*q2*p)+4*G*q2*e2,\n                 TC=2*G*(q2*v1(d)+2*q*(sqrt_upper(d)*e2+G*d*p)),\n                 CC=4*G*d*e2+4*G*d*sqrt_upper(G*d)*re+(G*d)**2,\n                 TM=F(0),CM=F(0),MM=sp.hmax_exact**2)\n    # Incoming active h_jx paths, which create at j. Geometry is not col0.\n    lookup = {(int(z['axis']),int(z['length'])):abs(F(z['c0']))+abs(F(z['ci'])) for z in sp.profile['paths']}\n    native_paths = body.joined.old.native_paths(sp.profile, _NATIVE)\n    op = [lookup[(int(z['axis']),int(z['length']))] for z in native_paths]\n    op = op+op\n    for h in np.flatnonzero(geo['y']==x):\n        dd = np.eye(64,dtype=np.int64)[int(geo['x'][h])]-np.eye(64,dtype=np.int64)[0]\n        f2 = gram(kr+k[h],kr+k[h],dr+delta[h],dr+delta[h])\n        fdouble = gram(2*kr+k[h],2*kr+k[h],2*dr+delta[h],2*dr+delta[h])\n        terms['TM'] += op[h]*G*(q2+f2+2*sqrt_upper(fdouble)*p)\n        terms['CM'] += op[h]*(v1(d)+v1(density(dd,dd)))\n    onsite = abs(F(sp.profile['onsite']))\n    terms['TM'] += onsite*G*(2*q2+4*q*p)\n    terms['CM'] += 2*onsite*v1(d)\n    for flavour,load in zip(species,(1,63)):\n        lookupf = {(int(z['axis']),int(z['length'])):abs(F(z['c0']))+abs(F(z['ci'])) for z in flavour.profile['paths']}\n        paths = body.joined.old.native_paths(flavour.profile,_NATIVE)\n        coeff = [lookupf[(int(z['axis']),int(z['length']))] for z in paths]*2\n        for h,b in enumerate(coeff):\n            terms['TM'] += 2*G*4*b*load*abs(gram(kr,k[h],dr,delta[h]))\n            terms['CM'] += 2*G*4*b*load*abs(density(dr,delta[h]))\n    km = sp.hmax_exact\n    terms['K_Pi'] = G*(q2+2*q*p)\n    terms['K_HC'] = v1(d)\n    terms['K_matter'] = km\n    terms['Kstar'] = terms['K_Pi']+terms['K_HC']+km\n    terms['Lstar'] = sum((terms[z] for z in ('TT','TC','CC','TM','CM','MM')),F(0))\n    terms['quadratic_cap'] = terms['Lstar']*sqrt_upper(F(1,2))/2\n    return terms\n\n\ndef moments(r: int, geo: dict[str,Any], sp: body.Species, aux: body.Species,\n            native: dict[str,Any]) -> dict[str,Any]:\n    x = int(geo['x'][r]); q = geo['q'][r]; delta = geo['delta'][r]\n    empty = np.eye(256)-sp.p\n    pb = sp.p.reshape(64,4,64,4).transpose(0,2,1,3)\n    eb = empty.reshape(64,4,64,4).transpose(0,2,1,3)\n    b = .25*np.trace(eb[x,0]); phase = np.exp(-float(q@q))\n    density = np.einsum('xixi->x',sp.p.reshape(64,4,64,4)).real\n    density += 63*np.einsum('xixi->x',aux.p.reshape(64,4,64,4)).real-128\n    cov = np.einsum('vij,vji->v',pb[x],eb[:,0])\n    dl = delta@native['Lplus']; d = float(dl@delta)\n    hcself = 64*phase*d*b\n    hccross = 64*phase*(2*(dl@density)*b-.5*(dl@cov))\n    matter = 0j; wrongcol = 0j; omitsecond = 0j\n    blocks = current.blocks(sp)\n    for h in np.flatnonzero(geo['x']==x):\n        j = int(geo['y'][h]); attenuation = np.exp(-np.sum((geo['q'][h]-q)**2))\n        value = .25*attenuation*np.trace(blocks[h]@eb[j,0])\n        matter += value\n        if np.dot(geo['k'][h],geo['k'][h])==1:omitsecond += value\n    onsite = .25*phase*np.trace(sp.onsite@eb[x,0]); matter += onsite;omitsecond += onsite\n    for h in np.flatnonzero(geo['y']==0):\n        j=int(geo['x'][h]);wrongcol += .25*np.exp(-np.sum((geo['q'][h]-q)**2))*np.trace(eb[x,j]@blocks[h])\n    wrongcol += .25*phase*np.trace(eb[x,0]@sp.onsite)\n    # Bra Pi acts on the initial Gaussian: the two nonzero constituents cancel.\n    pibare = 64*float(q@q)*phase*b;pi_ibp = -pibare\n    m1 = matter+hcself+hccross+pibare+pi_ibp\n    return dict(path=int(r),row=x,col=0,length=int(geo['k'][r]@geo['k'][r]),\n                C0=complex(phase*b),Pi_self=complex(pibare),Pi_IBP=complex(pi_ibp),Pi_total=0j,\n                HC_self=complex(hcself),HC_covariance_and_allcharged_mean=complex(hccross),\n                HC_total=complex(hcself+hccross),matter=complex(matter),m1=complex(m1),\n                wrong_old_column_formula=complex(wrongcol),row_column_observed_contrast=float(abs(matter-wrongcol)),\n                omitted_second_link_matter=complex(omitsecond),second_link_observed_contrast=float(abs(matter-omitsecond)),\n                initial_C0_Pi_HC_omissions_exactly_blind=True,\n                initial_adverse_controls=dict(\n                    no_Pi=dict(m1=complex(m1),discriminates=False,reason='Exact initial Gaussian IBP'),\n                    no_HC=dict(m1=complex(matter),discriminates=False,reason='Exact initial Clifford/reflection spintrace cancellation'),\n                    bare_Coulomb_self_shortcut=dict(m1=complex(matter+hcself),discriminates=False,reason='C0=0 makes self-only shortcut blind; full covariance still computed'),\n                    omitted_Ref=dict(discriminates=False,reason='Initial extra meanrho times C0=0; finite dense control discriminates'),\n                    wrong_column=dict(m1=complex(wrongcol),discriminates=False,reason='Initial translation/AP and Clifford scalar trace; independent random dense control discriminates'),\n                    omitted_second_link=dict(m1=complex(omitsecond),discriminates=True,observed_contrast=float(abs(matter-omitsecond)))),\n                background_allcharged_mean_defect=float(np.max(abs(density))))\n\n\n_NATIVE: dict[str,Any] = {}\n\n\ndef run(source_receipt: Path | None = None) -> dict[str,Any]:\n    global _NATIVE\n    start=time.monotonic();own=Path(__file__).read_bytes()\n    data,species,inputs,_=body.full_inputs();_NATIVE=data['native']\n    geo=current.geometry(data,species[0]);geom=prices.exact_geometry(_NATIVE,geo)\n    energy=rational_energies(geom,species)\n    rows=[];caps=[]\n    for r in np.flatnonzero(geo['y']==0):\n        rows.append(moments(int(r),geo,species[0],species[1],_NATIVE))\n        caps.append(rational_caps(int(r),geo,geom,species[0],species,energy))\n    if len(rows)!=12 or {z['length'] for z in rows}!={1,2}:raise ArithmeticError('Actual12 receivers absent')\n    for z in rows:\n        body.require(abs(z['C0']),1e-10);body.require(abs(z['HC_total']),1e-8)\n        if abs(z['m1'].real)<1e-5:raise ArithmeticError('Mixed ROW signal vanished')\n    colocal=complex(species[0].mean_source_derivative(2))\n    allowance=F(99,100)\n    # Explicit dyadic clock selected only from measured first moments and exact\n    # rational caps; no state/receiver/H retuning. Finite signal remains floating.\n    allowed=min(.125*min(abs(z['m1'].real),abs(z['m1'].real-colocal.real))/float(c['quadratic_cap']) for z,c in zip(rows,caps))\n    power=max(1,math.ceil(-math.log2(allowed)));t=F(1,1<<power)\n    for z,c in zip(rows,caps):\n        remainder=t*t*c['quadratic_cap']; signal=float(t)*float(allowance)*abs(z['m1'].real)\n        # Co-local body only has active KM: K0=c(h col0); double commutator\n        # needs its own bound, not reused as this receiver's remainder.\n        z['clock']=dict(t_exact=str(t),power=-power,t=float(t),linear=complex(z['C0']-1j*float(t)*z['m1']),\n                        observed_imaginary_signal_with_one_percent_allowance=signal,\n                        rational_remainder_upper=str(remainder),remainder_upper=float(remainder),\n                        observed_imaginary_signal_minus_remainder=signal-float(remainder),\n                        differs_from_C0_with_declared_float_allowance=signal>float(remainder),\n                        # C0 coloc=.5, so real separation persists regardless of\n                        # co-local first derivative; bounded K0 allows first-order bound.\n                        co_local_C0=.5,co_local_change_upper=float(t)*float(species[0].hmax_exact)*math.sqrt(.5),\n                        nonlocal_absolute_upper=abs(z['C0'])+float(t)*abs(z['m1'])+float(remainder))\n        z['rational_caps']={name:str(v) for name,v in c.items()}\n        if signal<=float(remainder):raise ArithmeticError('Useful actual12 clock not obtained')\n        if .5-z['clock']['co_local_change_upper']<=z['clock']['nonlocal_absolute_upper']:\n            raise ArithmeticError('Co-local finiteclock separation not obtained')\n    oracle=dense_control()\n    gauge=electric.run()\n    captured={**body.CAPTURED,**inputs,Path(current.__file__).name:Path(current.__file__).read_bytes(),\n              Path(prices.__file__).name:Path(prices.__file__).read_bytes(),\n              Path(electric.__file__).name:Path(electric.__file__).read_bytes(),Path(__file__).name:own,\n              'joined_phi_u1_nonlocal_body_transport_controls.py':(ROOT/'joined_phi_u1_nonlocal_body_transport_controls.py').read_bytes()}\n    hashes={name:hashlib.sha256(raw).hexdigest() for name,raw in captured.items()}\n    for name,raw in captured.items():\n        if (ROOT/name).exists() and (ROOT/name).read_bytes()!=raw:raise ArithmeticError('Input changed: '+name)\n    binding=None\n    if source_receipt is not None:\n        raw=source_receipt.read_bytes();binding=dict(path=str(source_receipt),sha256=hashlib.sha256(raw).hexdigest(),receipt=json.loads(raw),\n            status='Parent supplies source-action receipt; no full-source acceptance inferred by this bounded body lane')\n    return dict(status='ACTUAL12_BODY_FINITE_TRANSPORT',derivation=DERIVATION,receiver_rows=rows,\n                conserved_background_rational_prices={k:str(v) for k,v in energy.items()},\n                co_local_actual_matter_m1=colocal,dense_same_H_CAR_Hermite=oracle,\n                gauge_complete_receiver_controls={k:gauge[k] for k in ('all_orthogonal_Gauss_split_defect','full_unreduced_Wilson_lift_defect','arbitrary_local_U1_receiver_covariance_defect','wrong_unreduced_CAR_without_long_dressing_defect')},\n                exact_rational_remainder_coefficients=True,signal_arithmetic='FLOATING, NOT INTERVAL; 1percent allowance is declared, not proven lower',\n                source_action_binding=binding,full_current_transfer_claim=False,\n                conditional=['Selected exact meanPhi root, Clifford and orthogonalQ preparation','Conditional analytic body proof; observed Slater matrices and first moments floating','Finite Hermite same-H control is a cutoff observation, NOT convergence'],\n                excluded=['ground','charged pole','common cone','original SOURCE','future Slater/Wick propagation','fullN4 measured finite evolution'],\n                governing_plan=PLAN,captured_parent_revision=REVISION,template_revision='89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe',\n                input_hashes=hashes,own_source_sha256=hashes[Path(__file__).name],own_source_utf8=own.decode(),\n                runtime=dict(executable=sys.executable,python=sys.version,numpy=np.__version__),elapsed_seconds=time.monotonic()-start)\n\n\nif __name__=='__main__':\n    parser=argparse.ArgumentParser(description=__doc__)\n    parser.add_argument('--output',type=Path,default=ROOT/'joined_phi_u1_nonlocal_body_transport_receipt.json')\n    parser.add_argument('--source-receipt',type=Path)\n    args=parser.parse_args()\n    with threadpool_limits(limits=1):result=run(args.source_receipt)\n    args.output.write_text(json.dumps(body.packed(result),indent=2)+'\\n')\n    print(json.dumps(dict(status=result['status'],rows=len(result['receiver_rows']),clock=result['receiver_rows'][0]['clock'],\n                          elapsed_seconds=result['elapsed_seconds']),default=body.packed),flush=True)\n",
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3"
+  },
+  "elapsed_seconds": 4.680645390995778
+}

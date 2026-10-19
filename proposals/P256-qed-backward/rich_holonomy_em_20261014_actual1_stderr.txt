@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_holonomy_em_20261014_calculate.py", line 159, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_holonomy_em_20261014_calculate.py", line 152, in main
+    p=json.loads(path.read_text());result,states,model=run(p)
+                                                       ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_holonomy_em_20261014_calculate.py", line 61, in run
+    model=build(p);h=model['H'];dim=h.shape[0];blocks=diagonalize(model)
+          ^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_holonomy_em_20261014_model.py", line 86, in build
+    g=geometry(p);f=field_grid(p);d=frame['source'];s=frame['S']
+      ^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_holonomy_em_20261014_model.py", line 27, in geometry
+    gram=np.einsum('...ia,...ja->ij',raw,raw)*dv
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numpy/_core/einsumfunc.py", line 1608, in einsum
+    return c_einsum(*operands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: output has more dimensions than subscripts given in einstein sum, but no '...' ellipsis provided to broadcast the extra dimensions.

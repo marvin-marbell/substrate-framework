@@ -1,0 +1,52 @@
+{
+  "kind": "NATIVE_FIELD_PRICE_REVIEW_LANGUAGE_EVIDENCE",
+  "root": "/home/administrator/substrate-222",
+  "manifest": "pyproject.toml",
+  "server_binary": "/home/administrator/.local/bin/pyright-langserver",
+  "LSP_documentSymbols_count": 52,
+  "probe_symbols": [
+    "support_price",
+    "signed_native_response",
+    "main"
+  ],
+  "definition_probe": {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": null
+  },
+  "publishDiagnostics": [
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/native_loop_dark_supported_consumer_20261012.py",
+        "version": 1,
+        "diagnostics": [
+          {
+            "range": {
+              "start": {
+                "line": 11,
+                "character": 7
+              },
+              "end": {
+                "line": 11,
+                "character": 12
+              }
+            },
+            "message": "Import \"sympy\" could not be resolved",
+            "severity": 1,
+            "code": "reportMissingImports",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportMissingImports"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "LSP_natural_exit": 0,
+  "LSP_limitation": "OMP lsp device absent; direct JSON-RPC exercised. Existing source sympy import unresolved under server configuration; actual scientific runtime uses pinned substrate-framework venv. Definition cursor missed; documentSymbols positively exercised required symbol integration. Parent owns integrated changed-file diagnostics.",
+  "AST": "ast_grep Python def support_price($$$ARGS) positive at line17",
+  "standalone_build_lint_tests_pyright": false
+}

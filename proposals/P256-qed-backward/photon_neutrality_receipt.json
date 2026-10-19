@@ -1,0 +1,1790 @@
+{
+  "source_sha256": "87559151ee39db2114c7e2ff3e45207216e17aeb84ce2a38e439a3cfd2da2eff",
+  "runtime": {
+    "python_executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "numpy_version": "2.5.3"
+  },
+  "units": {
+    "hbar": 1,
+    "angles_fields_charges": "dimensionless; integer field and character labels",
+    "UE_K_ground_energies": "same energy unit",
+    "heat_time": "inverse energy"
+  },
+  "graph": {
+    "vertices": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "tree": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "integer_cycles": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "theorem": {
+    "untruncated": "H_ph(q)>=epsilon_0 I for every admissible complete integer character",
+    "boundary": "add fixed external electric energy C_b; q=Q-b, sum q=0",
+    "not_claimed": "full charged-fermion mass gap or finite Fourier angle positivity"
+  },
+  "adverse_controls": {
+    "R1_free_projected_heat_kernel_at_pi": -0.14363078675559965,
+    "heat_time": 0.1,
+    "UE": 1.0,
+    "cyclic_R1_wrap_exact_Gauss_change": [
+      0,
+      -3,
+      0,
+      0,
+      3,
+      0
+    ],
+    "cyclic_R1_wrap_mod3_Gauss_change": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "rejected_character_controls": [
+      "fractional",
+      "uncompensated_boundary"
+    ],
+    "scope": "These invalidate angle-positivity/modular-Gauss shortcuts, NOT the finite ground bound."
+  },
+  "one_plaquette_Holder_positive_control": [
+    {
+      "R": 1,
+      "UE": 0.6,
+      "K": 0.25,
+      "complete_integer_affine_domains": 65,
+      "minimum_ground_margin_including_neutral": -8.326672684688674e-17,
+      "positive_control_source_sha256": "cd80de1a7d5ff968c9f476da98053721d3db6ffc5f137046c918b0591b5e8161"
+    },
+    {
+      "R": 1,
+      "UE": 0.11,
+      "K": 3.0,
+      "complete_integer_affine_domains": 65,
+      "minimum_ground_margin_including_neutral": 4.440892098500626e-16,
+      "positive_control_source_sha256": "cd80de1a7d5ff968c9f476da98053721d3db6ffc5f137046c918b0591b5e8161"
+    },
+    {
+      "R": 2,
+      "UE": 0.6,
+      "K": 0.25,
+      "complete_integer_affine_domains": 369,
+      "minimum_ground_margin_including_neutral": 3.122502256758253e-17,
+      "positive_control_source_sha256": "cd80de1a7d5ff968c9f476da98053721d3db6ffc5f137046c918b0591b5e8161"
+    },
+    {
+      "R": 2,
+      "UE": 0.11,
+      "K": 3.0,
+      "complete_integer_affine_domains": 369,
+      "minimum_ground_margin_including_neutral": 0.0,
+      "positive_control_source_sha256": "cd80de1a7d5ff968c9f476da98053721d3db6ffc5f137046c918b0591b5e8161"
+    },
+    {
+      "R": 3,
+      "UE": 0.6,
+      "K": 0.25,
+      "complete_integer_affine_domains": 1105,
+      "minimum_ground_margin_including_neutral": -1.3773704399255848e-15,
+      "positive_control_source_sha256": "cd80de1a7d5ff968c9f476da98053721d3db6ffc5f137046c918b0591b5e8161"
+    },
+    {
+      "R": 3,
+      "UE": 0.11,
+      "K": 3.0,
+      "complete_integer_affine_domains": 1105,
+      "minimum_ground_margin_including_neutral": 4.440892098500626e-16,
+      "positive_control_source_sha256": "cd80de1a7d5ff968c9f476da98053721d3db6ffc5f137046c918b0591b5e8161"
+    }
+  ],
+  "noncyclic_two_plaquette_all_characters": [
+    {
+      "R": 1,
+      "UE": 0.6,
+      "K_by_plaquette": [
+        0.25,
+        0.25
+      ],
+      "complete_charge_characters": 1387,
+      "all_Fourier_fields": 2187,
+      "neutral_dimension": 7,
+      "dimensions_histogram": {
+        "1": 866,
+        "2": 336,
+        "3": 122,
+        "4": 36,
+        "5": 24,
+        "6": 2,
+        "7": 1
+      },
+      "distinct_nontrivial_cached_operators": 41,
+      "neutral_ground_energy": -0.05065766709157729,
+      "minimum_nonzero_charge_margin": 0.30052694000376956,
+      "minimizing_complete_charge": [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -0.3005261890191162,
+        "neutral_Galerkin_upper_bound": -0.05065766709157729,
+        "discarded_neutral_kinetic_lower_bound": 1.2,
+        "potential_norm_upper_bound": 0.5,
+        "all_charged_Galerkin_energies_at_least": -0.3005261890191162,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 928,
+          "dimension_with_orbital_multiplicity": 6471420,
+          "minimum_charged_margin": 0.30052694000376956
+        },
+        "0": {
+          "patterns": 1081,
+          "dimension_with_orbital_multiplicity": 7921866,
+          "minimum_charged_margin": 0.30052694000376956
+        },
+        "1": {
+          "patterns": 928,
+          "dimension_with_orbital_multiplicity": 6471420,
+          "minimum_charged_margin": 0.30052694000376956
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 1,
+      "UE": 0.0072,
+      "K_by_plaquette": [
+        0.888888888888889,
+        0.888888888888889
+      ],
+      "complete_charge_characters": 1387,
+      "all_Fourier_fields": 2187,
+      "neutral_dimension": 7,
+      "dimensions_histogram": {
+        "1": 866,
+        "2": 336,
+        "3": 122,
+        "4": 36,
+        "5": 24,
+        "6": 2,
+        "7": 1
+      },
+      "distinct_nontrivial_cached_operators": 41,
+      "neutral_ground_energy": -1.0779156769263432,
+      "minimum_nonzero_charge_margin": 0.09772726143345822,
+      "minimizing_complete_charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -1.777777777777778,
+        "neutral_Galerkin_upper_bound": -1.0779156769263432,
+        "discarded_neutral_kinetic_lower_bound": 0.014399999999999968,
+        "potential_norm_upper_bound": 1.777777777777778,
+        "all_charged_Galerkin_energies_at_least": -1.777777777777778,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 928,
+          "dimension_with_orbital_multiplicity": 6471420,
+          "minimum_charged_margin": 0.09772726143345822
+        },
+        "0": {
+          "patterns": 1081,
+          "dimension_with_orbital_multiplicity": 7921866,
+          "minimum_charged_margin": 0.09772726143345822
+        },
+        "1": {
+          "patterns": 928,
+          "dimension_with_orbital_multiplicity": 6471420,
+          "minimum_charged_margin": 0.09772726143345822
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 1,
+      "UE": 0.11,
+      "K_by_plaquette": [
+        3.0,
+        3.0
+      ],
+      "complete_charge_characters": 1387,
+      "all_Fourier_fields": 2187,
+      "neutral_dimension": 7,
+      "dimensions_histogram": {
+        "1": 866,
+        "2": 336,
+        "3": 122,
+        "4": 36,
+        "5": 24,
+        "6": 2,
+        "7": 1
+      },
+      "distinct_nontrivial_cached_operators": 41,
+      "neutral_ground_energy": -3.5129376014282783,
+      "minimum_nonzero_charge_margin": 0.3636791757500659,
+      "minimizing_complete_charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -6.0,
+        "neutral_Galerkin_upper_bound": -3.5129376014282783,
+        "discarded_neutral_kinetic_lower_bound": 0.21999999999999975,
+        "potential_norm_upper_bound": 6.0,
+        "all_charged_Galerkin_energies_at_least": -6.0,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 928,
+          "dimension_with_orbital_multiplicity": 6471420,
+          "minimum_charged_margin": 0.3636791757500659
+        },
+        "0": {
+          "patterns": 1081,
+          "dimension_with_orbital_multiplicity": 7921866,
+          "minimum_charged_margin": 0.3636791757500659
+        },
+        "1": {
+          "patterns": 928,
+          "dimension_with_orbital_multiplicity": 6471420,
+          "minimum_charged_margin": 0.3636791757500659
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 1,
+      "UE": 0.6,
+      "K_by_plaquette": [
+        0.01,
+        2.0
+      ],
+      "complete_charge_characters": 1387,
+      "all_Fourier_fields": 2187,
+      "neutral_dimension": 7,
+      "dimensions_histogram": {
+        "1": 866,
+        "2": 336,
+        "3": 122,
+        "4": 36,
+        "5": 24,
+        "6": 2,
+        "7": 1
+      },
+      "distinct_nontrivial_cached_operators": 41,
+      "neutral_ground_energy": -0.9362588573672805,
+      "minimum_nonzero_charge_margin": 0.30000373838313066,
+      "minimizing_complete_charge": [
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -2.01,
+        "neutral_Galerkin_upper_bound": -0.9362588573672805,
+        "discarded_neutral_kinetic_lower_bound": 1.2,
+        "potential_norm_upper_bound": 2.01,
+        "all_charged_Galerkin_energies_at_least": -2.01,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 928,
+          "dimension_with_orbital_multiplicity": 6471420,
+          "minimum_charged_margin": 0.30000373838313066
+        },
+        "0": {
+          "patterns": 1081,
+          "dimension_with_orbital_multiplicity": 7921866,
+          "minimum_charged_margin": 0.30000373838313066
+        },
+        "1": {
+          "patterns": 928,
+          "dimension_with_orbital_multiplicity": 6471420,
+          "minimum_charged_margin": 0.30000373838313066
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 2,
+      "UE": 0.6,
+      "K_by_plaquette": [
+        0.25,
+        0.25
+      ],
+      "complete_charge_characters": 26413,
+      "all_Fourier_fields": 78125,
+      "neutral_dimension": 19,
+      "dimensions_histogram": {
+        "1": 9170,
+        "2": 5280,
+        "3": 5138,
+        "4": 1644,
+        "5": 1416,
+        "6": 1586,
+        "7": 504,
+        "8": 504,
+        "9": 552,
+        "11": 288,
+        "12": 48,
+        "13": 96,
+        "10": 98,
+        "14": 60,
+        "16": 24,
+        "15": 2,
+        "18": 2,
+        "19": 1
+      },
+      "distinct_nontrivial_cached_operators": 562,
+      "neutral_ground_energy": -0.051197204272252425,
+      "minimum_nonzero_charge_margin": 0.2848580793090167,
+      "minimizing_complete_charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -0.15725286089984358,
+        "neutral_Galerkin_upper_bound": -0.051197204272252425,
+        "discarded_neutral_kinetic_lower_bound": 2.6999999999999997,
+        "potential_norm_upper_bound": 0.5,
+        "all_charged_Galerkin_energies_at_least": -0.15725286089984358,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 1666,
+          "dimension_with_orbital_multiplicity": 29547560,
+          "minimum_charged_margin": 0.2848580793090167
+        },
+        "0": {
+          "patterns": 1751,
+          "dimension_with_orbital_multiplicity": 33820440,
+          "minimum_charged_margin": 0.2848580793090167
+        },
+        "1": {
+          "patterns": 1666,
+          "dimension_with_orbital_multiplicity": 29547560,
+          "minimum_charged_margin": 0.2848580793090167
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 2,
+      "UE": 0.0072,
+      "K_by_plaquette": [
+        0.888888888888889,
+        0.888888888888889
+      ],
+      "complete_charge_characters": 26413,
+      "all_Fourier_fields": 78125,
+      "neutral_dimension": 19,
+      "dimensions_histogram": {
+        "1": 9170,
+        "2": 5280,
+        "3": 5138,
+        "4": 1644,
+        "5": 1416,
+        "6": 1586,
+        "7": 504,
+        "8": 504,
+        "9": 552,
+        "11": 288,
+        "12": 48,
+        "13": 96,
+        "10": 98,
+        "14": 60,
+        "16": 24,
+        "15": 2,
+        "18": 2,
+        "19": 1
+      },
+      "distinct_nontrivial_cached_operators": 562,
+      "neutral_ground_energy": -1.422763696716455,
+      "minimum_nonzero_charge_margin": 0.024066927325619103,
+      "minimizing_complete_charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -1.777777777777778,
+        "neutral_Galerkin_upper_bound": -1.422763696716455,
+        "discarded_neutral_kinetic_lower_bound": 0.032399999999999984,
+        "potential_norm_upper_bound": 1.777777777777778,
+        "all_charged_Galerkin_energies_at_least": -1.777777777777778,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 1666,
+          "dimension_with_orbital_multiplicity": 29547560,
+          "minimum_charged_margin": 0.024066927325619103
+        },
+        "0": {
+          "patterns": 1751,
+          "dimension_with_orbital_multiplicity": 33820440,
+          "minimum_charged_margin": 0.024066927325619103
+        },
+        "1": {
+          "patterns": 1666,
+          "dimension_with_orbital_multiplicity": 29547560,
+          "minimum_charged_margin": 0.024066927325619103
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 2,
+      "UE": 0.11,
+      "K_by_plaquette": [
+        3.0,
+        3.0
+      ],
+      "complete_charge_characters": 26413,
+      "all_Fourier_fields": 78125,
+      "neutral_dimension": 19,
+      "dimensions_histogram": {
+        "1": 9170,
+        "2": 5280,
+        "3": 5138,
+        "4": 1644,
+        "5": 1416,
+        "6": 1586,
+        "7": 504,
+        "8": 504,
+        "9": 552,
+        "11": 288,
+        "12": 48,
+        "13": 96,
+        "10": 98,
+        "14": 60,
+        "16": 24,
+        "15": 2,
+        "18": 2,
+        "19": 1
+      },
+      "distinct_nontrivial_cached_operators": 562,
+      "neutral_ground_energy": -4.534374367409684,
+      "minimum_nonzero_charge_margin": 0.110207051876694,
+      "minimizing_complete_charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -6.0,
+        "neutral_Galerkin_upper_bound": -4.534374367409684,
+        "discarded_neutral_kinetic_lower_bound": 0.4950000000000001,
+        "potential_norm_upper_bound": 6.0,
+        "all_charged_Galerkin_energies_at_least": -6.0,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 1666,
+          "dimension_with_orbital_multiplicity": 29547560,
+          "minimum_charged_margin": 0.110207051876694
+        },
+        "0": {
+          "patterns": 1751,
+          "dimension_with_orbital_multiplicity": 33820440,
+          "minimum_charged_margin": 0.110207051876694
+        },
+        "1": {
+          "patterns": 1666,
+          "dimension_with_orbital_multiplicity": 29547560,
+          "minimum_charged_margin": 0.110207051876694
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 2,
+      "UE": 0.6,
+      "K_by_plaquette": [
+        0.01,
+        2.0
+      ],
+      "complete_charge_characters": 26413,
+      "all_Fourier_fields": 78125,
+      "neutral_dimension": 19,
+      "dimensions_histogram": {
+        "1": 9170,
+        "2": 5280,
+        "3": 5138,
+        "4": 1644,
+        "5": 1416,
+        "6": 1586,
+        "7": 504,
+        "8": 504,
+        "9": 552,
+        "11": 288,
+        "12": 48,
+        "13": 96,
+        "10": 98,
+        "14": 60,
+        "16": 24,
+        "15": 2,
+        "18": 2,
+        "19": 1
+      },
+      "distinct_nontrivial_cached_operators": 562,
+      "neutral_ground_energy": -0.9909919831305309,
+      "minimum_nonzero_charge_margin": 0.24231027127458282,
+      "minimizing_complete_charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -2.01,
+        "neutral_Galerkin_upper_bound": -0.9909919831305309,
+        "discarded_neutral_kinetic_lower_bound": 2.6999999999999997,
+        "potential_norm_upper_bound": 2.01,
+        "all_charged_Galerkin_energies_at_least": -2.01,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 1666,
+          "dimension_with_orbital_multiplicity": 29547560,
+          "minimum_charged_margin": 0.24231027127458282
+        },
+        "0": {
+          "patterns": 1751,
+          "dimension_with_orbital_multiplicity": 33820440,
+          "minimum_charged_margin": 0.24231027127458282
+        },
+        "1": {
+          "patterns": 1666,
+          "dimension_with_orbital_multiplicity": 29547560,
+          "minimum_charged_margin": 0.24231027127458282
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 3,
+      "UE": 0.6,
+      "K_by_plaquette": [
+        0.25,
+        0.25
+      ],
+      "complete_charge_characters": 167767,
+      "all_Fourier_fields": 823543,
+      "neutral_dimension": 37,
+      "dimensions_histogram": {
+        "1": 38738,
+        "2": 21744,
+        "3": 30530,
+        "4": 12420,
+        "5": 10920,
+        "6": 14210,
+        "7": 4512,
+        "8": 4392,
+        "9": 7560,
+        "10": 4178,
+        "11": 2568,
+        "12": 3912,
+        "13": 768,
+        "14": 2520,
+        "15": 2618,
+        "17": 1440,
+        "18": 600,
+        "19": 1200,
+        "16": 324,
+        "21": 530,
+        "22": 576,
+        "24": 360,
+        "20": 336,
+        "25": 48,
+        "23": 144,
+        "26": 360,
+        "28": 50,
+        "29": 96,
+        "27": 24,
+        "31": 24,
+        "30": 36,
+        "33": 26,
+        "36": 2,
+        "37": 1
+      },
+      "distinct_nontrivial_cached_operators": 2885,
+      "neutral_ground_energy": -0.051198253864467566,
+      "minimum_nonzero_charge_margin": 0.28477371441337795,
+      "minimizing_complete_charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -0.10791441853158545,
+        "neutral_Galerkin_upper_bound": -0.051198253864467566,
+        "discarded_neutral_kinetic_lower_bound": 4.8,
+        "potential_norm_upper_bound": 0.5,
+        "all_charged_Galerkin_energies_at_least": -0.10791441853158545,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 1686,
+          "dimension_with_orbital_multiplicity": 68154508,
+          "minimum_charged_margin": 0.28477371441337795
+        },
+        "0": {
+          "patterns": 1751,
+          "dimension_with_orbital_multiplicity": 76362118,
+          "minimum_charged_margin": 0.28477371441337795
+        },
+        "1": {
+          "patterns": 1686,
+          "dimension_with_orbital_multiplicity": 68154508,
+          "minimum_charged_margin": 0.28477371441337795
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 3,
+      "UE": 0.0072,
+      "K_by_plaquette": [
+        0.888888888888889,
+        0.888888888888889
+      ],
+      "complete_charge_characters": 167767,
+      "all_Fourier_fields": 823543,
+      "neutral_dimension": 37,
+      "dimensions_histogram": {
+        "1": 38738,
+        "2": 21744,
+        "3": 30530,
+        "4": 12420,
+        "5": 10920,
+        "6": 14210,
+        "7": 4512,
+        "8": 4392,
+        "9": 7560,
+        "10": 4178,
+        "11": 2568,
+        "12": 3912,
+        "13": 768,
+        "14": 2520,
+        "15": 2618,
+        "17": 1440,
+        "18": 600,
+        "19": 1200,
+        "16": 324,
+        "21": 530,
+        "22": 576,
+        "24": 360,
+        "20": 336,
+        "25": 48,
+        "23": 144,
+        "26": 360,
+        "28": 50,
+        "29": 96,
+        "27": 24,
+        "31": 24,
+        "30": 36,
+        "33": 26,
+        "36": 2,
+        "37": 1
+      },
+      "distinct_nontrivial_cached_operators": 2885,
+      "neutral_ground_energy": -1.544850993979639,
+      "minimum_nonzero_charge_margin": 0.00953222604109194,
+      "minimizing_complete_charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -1.777777777777778,
+        "neutral_Galerkin_upper_bound": -1.544850993979639,
+        "discarded_neutral_kinetic_lower_bound": 0.057600000000000096,
+        "potential_norm_upper_bound": 1.777777777777778,
+        "all_charged_Galerkin_energies_at_least": -1.777777777777778,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 1686,
+          "dimension_with_orbital_multiplicity": 68154508,
+          "minimum_charged_margin": 0.00953222604109194
+        },
+        "0": {
+          "patterns": 1751,
+          "dimension_with_orbital_multiplicity": 76362118,
+          "minimum_charged_margin": 0.00953222604109194
+        },
+        "1": {
+          "patterns": 1686,
+          "dimension_with_orbital_multiplicity": 68154508,
+          "minimum_charged_margin": 0.00953222604109194
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 3,
+      "UE": 0.11,
+      "K_by_plaquette": [
+        3.0,
+        3.0
+      ],
+      "complete_charge_characters": 167767,
+      "all_Fourier_fields": 823543,
+      "neutral_dimension": 37,
+      "dimensions_histogram": {
+        "1": 38738,
+        "2": 21744,
+        "3": 30530,
+        "4": 12420,
+        "5": 10920,
+        "6": 14210,
+        "7": 4512,
+        "8": 4392,
+        "9": 7560,
+        "10": 4178,
+        "11": 2568,
+        "12": 3912,
+        "13": 768,
+        "14": 2520,
+        "15": 2618,
+        "17": 1440,
+        "18": 600,
+        "19": 1200,
+        "16": 324,
+        "21": 530,
+        "22": 576,
+        "24": 360,
+        "20": 336,
+        "25": 48,
+        "23": 144,
+        "26": 360,
+        "28": 50,
+        "29": 96,
+        "27": 24,
+        "31": 24,
+        "30": 36,
+        "33": 26,
+        "36": 2,
+        "37": 1
+      },
+      "distinct_nontrivial_cached_operators": 2885,
+      "neutral_ground_energy": -4.8090595825191444,
+      "minimum_nonzero_charge_margin": 0.05723425691338413,
+      "minimizing_complete_charge": [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        1
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -6.0,
+        "neutral_Galerkin_upper_bound": -4.8090595825191444,
+        "discarded_neutral_kinetic_lower_bound": 0.8799999999999999,
+        "potential_norm_upper_bound": 6.0,
+        "all_charged_Galerkin_energies_at_least": -6.0,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 1686,
+          "dimension_with_orbital_multiplicity": 68154508,
+          "minimum_charged_margin": 0.05723425691338413
+        },
+        "0": {
+          "patterns": 1751,
+          "dimension_with_orbital_multiplicity": 76362118,
+          "minimum_charged_margin": 0.05723425691338413
+        },
+        "1": {
+          "patterns": 1686,
+          "dimension_with_orbital_multiplicity": 68154508,
+          "minimum_charged_margin": 0.05723425691338413
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    },
+    {
+      "R": 3,
+      "UE": 0.6,
+      "K_by_plaquette": [
+        0.01,
+        2.0
+      ],
+      "complete_charge_characters": 167767,
+      "all_Fourier_fields": 823543,
+      "neutral_dimension": 37,
+      "dimensions_histogram": {
+        "1": 38738,
+        "2": 21744,
+        "3": 30530,
+        "4": 12420,
+        "5": 10920,
+        "6": 14210,
+        "7": 4512,
+        "8": 4392,
+        "9": 7560,
+        "10": 4178,
+        "11": 2568,
+        "12": 3912,
+        "13": 768,
+        "14": 2520,
+        "15": 2618,
+        "17": 1440,
+        "18": 600,
+        "19": 1200,
+        "16": 324,
+        "21": 530,
+        "22": 576,
+        "24": 360,
+        "20": 336,
+        "25": 48,
+        "23": 144,
+        "26": 360,
+        "28": 50,
+        "29": 96,
+        "27": 24,
+        "31": 24,
+        "30": 36,
+        "33": 26,
+        "36": 2,
+        "37": 1
+      },
+      "distinct_nontrivial_cached_operators": 2885,
+      "neutral_ground_energy": -0.9918298788649568,
+      "minimum_nonzero_charge_margin": 0.23058401946001494,
+      "minimizing_complete_charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "common_continuum_reference_formula": {
+        "neutral_continuum_lower_bound": -1.8605633424303916,
+        "neutral_Galerkin_upper_bound": -0.9918298788649568,
+        "discarded_neutral_kinetic_lower_bound": 4.8,
+        "potential_norm_upper_bound": 2.01,
+        "all_charged_Galerkin_energies_at_least": -1.8605633424303916,
+        "floating_evaluation_is_not_interval_certified": true,
+        "meaning": "proved Schur/block-form inequality; floating evaluation uses numerical neutral Ritz energy"
+      },
+      "charged_lower_than_neutral": [],
+      "actual_N11_N12_N13_occupations": {
+        "-1": {
+          "patterns": 1686,
+          "dimension_with_orbital_multiplicity": 68154508,
+          "minimum_charged_margin": 0.23058401946001494
+        },
+        "0": {
+          "patterns": 1751,
+          "dimension_with_orbital_multiplicity": 76362118,
+          "minimum_charged_margin": 0.23058401946001494
+        },
+        "1": {
+          "patterns": 1686,
+          "dimension_with_orbital_multiplicity": 68154508,
+          "minimum_charged_margin": 0.23058401946001494
+        }
+      },
+      "status": "all_enumerated_blocks_compared",
+      "universal_finite_Fourier_theorem": false
+    }
+  ],
+  "positivity_preserving_finite_route": {
+    "comparison": "proved finite-dimensional diamagnetic inequality",
+    "continuum_limit": "fixed charge and Wilson coefficients; see form-convergence proof",
+    "cases": [
+      {
+        "sites_per_cycle": 9,
+        "dimension": 81,
+        "UE_by_link": [
+          0.6,
+          0.4,
+          0.7,
+          0.3,
+          0.5,
+          0.9,
+          0.8
+        ],
+        "real_Wilson_terms": [
+          {
+            "winding": [
+              1,
+              0
+            ],
+            "K": 0.25,
+            "phase": 0.0
+          },
+          {
+            "winding": [
+              0,
+              1
+            ],
+            "K": 2.0,
+            "phase": 0.0
+          },
+          {
+            "winding": [
+              1,
+              1
+            ],
+            "K": -0.4,
+            "phase": 0.37
+          }
+        ],
+        "neutral_ground_energy": -1.0383404316953435,
+        "cases": [
+          {
+            "charge": [
+              1,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "ground_energy": -0.7549227095756856,
+            "neutral_margin": 0.2834177221196579,
+            "random_diamagnetic_form_margin": 7.111290916152376,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.038683217726252495,
+            "actual_operator_plane_wave_symbol_residual": 1.889435110426887e-16,
+            "integer_cycle_origin_operator_error": 2.0014830212433605e-15
+          },
+          {
+            "charge": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "ground_energy": -0.5027385056516143,
+            "neutral_margin": 0.5356019260437292,
+            "random_diamagnetic_form_margin": 6.640591619869388,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.0696997986446134,
+            "actual_operator_plane_wave_symbol_residual": 1.889435110426887e-16,
+            "integer_cycle_origin_operator_error": 2.0014830212433605e-15
+          },
+          {
+            "charge": [
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0
+            ],
+            "ground_energy": -0.7802674372835998,
+            "neutral_margin": 0.2580729944117437,
+            "random_diamagnetic_form_margin": 6.737009451963571,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.05571028101073616,
+            "actual_operator_plane_wave_symbol_residual": 1.889435110426887e-16,
+            "integer_cycle_origin_operator_error": 1.9860273225978185e-15
+          },
+          {
+            "charge": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "ground_energy": -1.0383404316953435,
+            "neutral_margin": 0.0,
+            "random_diamagnetic_form_margin": 6.313246759186657,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.025794867139809607,
+            "actual_operator_plane_wave_symbol_residual": 6.330327208927513e-16,
+            "integer_cycle_origin_operator_error": 1.9860273225978185e-15
+          }
+        ]
+      },
+      {
+        "sites_per_cycle": 17,
+        "dimension": 289,
+        "UE_by_link": [
+          0.6,
+          0.4,
+          0.7,
+          0.3,
+          0.5,
+          0.9,
+          0.8
+        ],
+        "real_Wilson_terms": [
+          {
+            "winding": [
+              1,
+              0
+            ],
+            "K": 0.25,
+            "phase": 0.0
+          },
+          {
+            "winding": [
+              0,
+              1
+            ],
+            "K": 2.0,
+            "phase": 0.0
+          },
+          {
+            "winding": [
+              1,
+              1
+            ],
+            "K": -0.4,
+            "phase": 0.37
+          }
+        ],
+        "neutral_ground_energy": -1.019592606285306,
+        "cases": [
+          {
+            "charge": [
+              1,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "ground_energy": -0.7269211132178369,
+            "neutral_margin": 0.2926714930674691,
+            "random_diamagnetic_form_margin": 24.144207400381283,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.010681621368403782,
+            "actual_operator_plane_wave_symbol_residual": 1.8199974399529903e-15,
+            "integer_cycle_origin_operator_error": 8.104628079763643e-15
+          },
+          {
+            "charge": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "ground_energy": -0.452347813795501,
+            "neutral_margin": 0.567244792489805,
+            "random_diamagnetic_form_margin": 23.907676529055927,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.01930910678850012,
+            "actual_operator_plane_wave_symbol_residual": 4.3640600552739714e-17,
+            "integer_cycle_origin_operator_error": 7.944109290391274e-15
+          },
+          {
+            "charge": [
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0
+            ],
+            "ground_energy": -0.7398976159129725,
+            "neutral_margin": 0.2796949903723335,
+            "random_diamagnetic_form_margin": 23.484796341677807,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.015340459640108883,
+            "actual_operator_plane_wave_symbol_residual": 1.8199974399529903e-15,
+            "integer_cycle_origin_operator_error": 8.104628079763643e-15
+          },
+          {
+            "charge": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "ground_energy": -1.019592606285306,
+            "neutral_margin": 0.0,
+            "random_diamagnetic_form_margin": 22.75358039489859,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.007047041729772108,
+            "actual_operator_plane_wave_symbol_residual": 3.596354279353241e-15,
+            "integer_cycle_origin_operator_error": 8.104628079763643e-15
+          }
+        ]
+      },
+      {
+        "sites_per_cycle": 33,
+        "dimension": 1089,
+        "UE_by_link": [
+          0.6,
+          0.4,
+          0.7,
+          0.3,
+          0.5,
+          0.9,
+          0.8
+        ],
+        "real_Wilson_terms": [
+          {
+            "winding": [
+              1,
+              0
+            ],
+            "K": 0.25,
+            "phase": 0.0
+          },
+          {
+            "winding": [
+              0,
+              1
+            ],
+            "K": 2.0,
+            "phase": 0.0
+          },
+          {
+            "winding": [
+              1,
+              1
+            ],
+            "K": -0.4,
+            "phase": 0.37
+          }
+        ],
+        "neutral_ground_energy": -1.0144030301516833,
+        "cases": [
+          {
+            "charge": [
+              1,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "ground_energy": -0.7190633391563874,
+            "neutral_margin": 0.2953396909952959,
+            "random_diamagnetic_form_margin": 88.45512569554083,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.0028238473069542858,
+            "actual_operator_plane_wave_symbol_residual": 5.205753183895279e-15,
+            "integer_cycle_origin_operator_error": 3.614624287906422e-14
+          },
+          {
+            "charge": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "ground_energy": -0.4381476500493313,
+            "neutral_margin": 0.576255380102352,
+            "random_diamagnetic_form_margin": 88.77591007926844,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.005108943042330449,
+            "actual_operator_plane_wave_symbol_residual": 5.205753183895279e-15,
+            "integer_cycle_origin_operator_error": 3.614624287906422e-14
+          },
+          {
+            "charge": [
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0
+            ],
+            "ground_energy": -0.7286091568592465,
+            "neutral_margin": 0.2857938732924368,
+            "random_diamagnetic_form_margin": 92.29771819059931,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.004052000586382887,
+            "actual_operator_plane_wave_symbol_residual": 7.648610853946533e-16,
+            "integer_cycle_origin_operator_error": 3.3937249765157416e-14
+          },
+          {
+            "charge": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "ground_energy": -1.0144030301516833,
+            "neutral_margin": 0.0,
+            "random_diamagnetic_form_margin": 91.14008403600555,
+            "exact_Gauss_residual": 0,
+            "grid_minus_R6_same_operator_Ritz": -0.0018574655961494102,
+            "actual_operator_plane_wave_symbol_residual": 7.648610853946533e-16,
+            "integer_cycle_origin_operator_error": 3.3937249765157416e-14
+          }
+        ]
+      }
+    ],
+    "fixed_mode_symbol_consistency": [
+      {
+        "sites_per_cycle": 9,
+        "maximum_fixed_mode_kinetic_error": 10.014559701427014,
+        "bound_h2_sum_UE_field4_over24": 14.07941714254167
+      },
+      {
+        "sites_per_cycle": 17,
+        "maximum_fixed_mode_kinetic_error": 3.5774442226386682,
+        "bound_h2_sum_UE_field4_over24": 3.9461342164217137
+      },
+      {
+        "sites_per_cycle": 33,
+        "maximum_fixed_mode_kinetic_error": 1.0201403522157015,
+        "bound_h2_sum_UE_field4_over24": 1.0472293742386365
+      }
+    ],
+    "independent_noncyclic_same_operator_Galerkin_sequence": [
+      {
+        "R": 2,
+        "charge": [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dimension": 16,
+        "ground_energy": -0.7149806366339999
+      },
+      {
+        "R": 2,
+        "charge": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "dimension": 14,
+        "ground_energy": -0.41915827767154723
+      },
+      {
+        "R": 2,
+        "charge": [
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "dimension": 18,
+        "ground_energy": -0.7149696932667069
+      },
+      {
+        "R": 2,
+        "charge": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dimension": 19,
+        "ground_energy": -1.0113869062083007
+      },
+      {
+        "R": 4,
+        "charge": [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dimension": 56,
+        "ground_energy": -0.7162394723674754
+      },
+      {
+        "R": 4,
+        "charge": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "dimension": 52,
+        "ground_energy": -0.4330379969193251
+      },
+      {
+        "R": 4,
+        "charge": [
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "dimension": 60,
+        "ground_energy": -0.7245568766549393
+      },
+      {
+        "R": 4,
+        "charge": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dimension": 61,
+        "ground_energy": -1.0125455474155718
+      },
+      {
+        "R": 6,
+        "charge": [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dimension": 120,
+        "ground_energy": -0.7162394918494331
+      },
+      {
+        "R": 6,
+        "charge": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "dimension": 114,
+        "ground_energy": -0.43303870700700087
+      },
+      {
+        "R": 6,
+        "charge": [
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "dimension": 126,
+        "ground_energy": -0.7245571562728637
+      },
+      {
+        "R": 6,
+        "charge": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dimension": 127,
+        "ground_energy": -1.012545564555534
+      }
+    ]
+  },
+  "real_Wilson_finite_cube_search": {
+    "status": "strict_finite_Fourier_counterexample",
+    "smallest_nontrivial_R": 1,
+    "witness": {
+      "R": 1,
+      "UE": 0.01,
+      "trial": 6,
+      "charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "neutral_dimension": 7,
+      "charged_dimension": 6,
+      "neutral_fields": [
+        [
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0,
+          1,
+          0,
+          1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          1,
+          0,
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          0,
+          1
+        ]
+      ],
+      "charged_fields": [
+        [
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "terms": [
+        {
+          "winding": [
+            0,
+            1
+          ],
+          "K": -2.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            0,
+            2
+          ],
+          "K": -3.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            1,
+            -1
+          ],
+          "K": 0.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            1,
+            0
+          ],
+          "K": -1.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            1,
+            1
+          ],
+          "K": -3.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            1,
+            2
+          ],
+          "K": 1.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            2,
+            0
+          ],
+          "K": -1.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            2,
+            1
+          ],
+          "K": -1.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            2,
+            2
+          ],
+          "K": 3.0,
+          "phase": 0.0
+        }
+      ],
+      "neutral_energy": -3.440583803585343,
+      "charged_energy": -3.6456904340600973,
+      "charged_minus_neutral": -0.20510663047475441,
+      "exact_certificate": {
+        "threshold": "-1771569/500000",
+        "neutral_H_minus_threshold_LDL_pivots": [
+          "1786569/500000",
+          "3120395946761/893284500000",
+          "5113808436475048009/1560197973380500000",
+          "6982685832394289326256121/2556904218237524004500000",
+          "9963499853183451571438791233849/3491342916197144663128060500000",
+          "7271628042187891992320024422197129081/4981749926591725785719395616924500000",
+          "392381706737238883361624460412913401704363/1211938007031315332053337403699521513500000"
+        ],
+        "charged_trial_vector": [
+          "234371/500000",
+          "33401/125000",
+          "-145311/500000",
+          "-242047/500000",
+          "-190487/1000000",
+          "594801/1000000"
+        ],
+        "charged_Rayleigh_quotient": "-28043796471897/7692314248600",
+        "strict_order": "E_charged <= rational Rayleigh < threshold < E_neutral",
+        "arithmetic": "exact Python Fraction, not floating eigenvalue tolerance"
+      }
+    },
+    "does_not_apply_to_positive_fundamental_terms": true
+  }
+}

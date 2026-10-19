@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_nonlocal_signal_interval_certificate.py",
+    "--output",
+    "joined_phi_u1_nonlocal_signal_interval_certificate_actual_receipt.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "natural_exit_code": 1,
+  "natural_exit_observed": true,
+  "timed_out": false,
+  "source_unchanged": true,
+  "source_sha256": "2505c28d1385ce1bf6e784c27bff25eda6395e53f0549a80e2d15b7c9e91423d",
+  "driver_sha256": "84a20daaef7c512319ea984f2c9513477232c28d64b99bceeb77a2ca172757af",
+  "receipt_path": "joined_phi_u1_nonlocal_signal_interval_certificate_actual_receipt.json",
+  "receipt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_nonlocal_signal_interval_certificate.py\", line 348, in <module>\n    receipt = run(args.output)\n              ^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_nonlocal_signal_interval_certificate.py\", line 211, in run\n    hops = hop_vectors(species[0].profile, paths, bloch.frame)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_nonlocal_signal_interval_certificate.py\", line 116, in hop_vectors\n    return result+[[z.conjugate() for z in v] for v in result]\n                    ^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/mpmath/ctx_iv.py\", line 205, in conjugate\n    return s.ctx.make_mpc((a, mpf_neg(b)))\n                              ^^^^^^^^^^\n  File \"/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/mpmath/libmp/libmpf.py\", line 667, in mpf_neg\n    sign, man, exp, bc = s\n    ^^^^^^^^^^^^^^^^^^\nValueError: not enough values to unpack (expected 4, got 2)\n",
+  "elapsed_seconds": 4.773810168000637,
+  "runtime_archive": {
+    "path": "joined_phi_u1_nonlocal_signal_interval_certificate_natural_exit_capsule_runtime_bytes.zip",
+    "sha256": "f6966bd6552d663b1857c10d30d00b2e127cc227ae38f36ab86099d82bcf5c73"
+  },
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  }
+}

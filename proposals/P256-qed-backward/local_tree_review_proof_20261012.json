@@ -1,0 +1,86 @@
+{
+  "kind": "INDEPENDENT_ALLFIELD_NATIVE_CAP_TREE_KYFAN_PROOF_REVIEW_NOT_BODY_RIGIDITY",
+  "target": {
+    "proof": "local_body_leading_proof_20261012.json",
+    "proof_sha256": "ebf08371a0652d0122b6ebd7a3a18e637d25592194b592b0013fdca03bbba4bb",
+    "source_sha256": "e61485150400637349936840cd3b2b6d86b3d4404cfc48c00f098da7e8f781e3",
+    "interface_sha256": "8953df655368289684994a74cbf68cd93a9067f93d6a1ba3433b2ac25beb4c50",
+    "executed_archive_sha256": "14df46fc3afe9eb61c2c6573e0813ba6e3ebe595ac078ca4587f8defab8b7781",
+    "frozen_originals_retained": true
+  },
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "parent_capture_revision": "e2f1abb4f6f69694a14f8d359747e0e1cf89d78467f5de8369ea48497c808332",
+    "scientists_capture_revision_not_rebound": "2f0bfe8e2ca9c558be5ad3eab0e06e6773692b7b573886a0d4dcead3d2118ea6",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "requirement_ids": ["outcome", "verification"],
+    "parent_sole_plan_writer": true
+  },
+  "definitions": {
+    "r": "r_x=(sum_mu ||Phi_mux||HS^2)^(1/2); s_x=r_x^2; M=V^-1 sum r_x^4",
+    "A": "sum_positive_native_edges,mu ||Phi_mux-Uxy Phi_muy Uxy^dag||HS^2",
+    "C": "sum_positive_native_plaquettes(4-Re Tr Uface)",
+    "J": "4 sum_x,all16orderedmu,nu ||{Phi_mux,Phi_nux}||HS^2",
+    "h": "onsite mPhi0; each of three positive-axis length1 blocks ap*[c0(Phi0xU+UPhi0y)+i ci(PhiaxU+UPhia y)]/2 plus its adjoint. This is the original neutral primitive, not charged length2 or another Hamiltonian.",
+    "KyFan": "K_k(h)=max_{0<=Gamma<=I,TrGamma=k} Tr Gamma h, k=2V in dimension4V, including negative levels whenever needed. No positive-only or independent box occupation restriction.",
+    "b_D": "b=|c0|+|ci|, D=2|m|+12b"
+  },
+  "independent_derivation": [
+    {
+      "id": "partition",
+      "proof": "For q=floor(N/R)>=2, distribute N-qR residual sites among q base-R intervals. Every length is between R and2R-1: N-qR<=q(R-1) follows from N<=q(2R-1), using q>=2 and R>=2; R=1 is exact. There are q incoming interval boundaries. Uniform cyclic shift sends each fixed positive-axis edge to a boundary on exactly q of N shifts, hence cut probability q/N<=1/R. Independent shifts of three coordinates give at most(2R-1)^3<8R^3 sites/box. R=N/2 still gives two contractible intervals; no open box wraps a full coordinate cycle."
+    },
+    {
+      "id": "joint_radial_cap",
+      "proof": "The four-field tuple lives in a real Hilbert space with total HS metric. Projection onto its closed radius-L ball is 1-Lipschitz and commutes with simultaneous unitary conjugation. Therefore ||cap(Phi_x)-Ad_U cap(Phi_y)||<=||Phi_x-Ad_U Phi_y|| edgewise, giving A(Psi,U)<=A(Phi,U). At a site Psi=tPhi with one common nonnegative t for all four fields. Each anticommutator-square trace is nonnegative and homogeneous degree4, so J(Psi)=t^4 J(Phi)<=J(Phi). This argument would be false for separate coordinate clipping; none is used."
+    },
+    {
+      "id": "trace_tail",
+      "proof": "For any Hermitian perturbation Delta h, |K_k(h+Delta h)-K_k(h)|<=||Delta h||1 from the defining density-matrix maximum. A4x4 onsite perturbation costs ||mDeltaPhi0||1<=2|m| delta_x, where delta_x is the total tuple HS distance. An offdiagonal edge with block Delta f has rank<=8 and trace norm2||Delta f||1<=4||Delta f||HS. Endpoint averaging gives ||Delta f||HS<=b(delta_x+delta_y)/2. Six endpoint incidences/site thus cost12b sum delta_x. Hence ||Delta h||1<=D sum delta_x. For radial cap delta_x=(r_x-L)_+<=r_x 1_{r_x>L}<=r_x^4/L^3. This proves the tail price DVM/L^3 uniformly for every global rank2V density, not just a special sea."
+    },
+    {
+      "id": "lexicographic_tree",
+      "proof": "Use root coordinates and canonical paths increasing axis0, then1, then2. Parent of x deletes its final positive step; all tree paths have length at most3(2R-2)<6R. Let P_x be the ordered native link product root-to-x and Psi'_x=P_x Psi_x P_x^dag; U'_xy=P_x Uxy P_y^dag. A tree edge becomes I. Along the tree, differences in root fields are unitary conjugates of actual edge alignment differences. Cauchy bounds ||Psi'_x-Psi'_root||tuple^2 by6R times the sum along its path. Sum over at most8R^3 vertices bounds it by48R^4 A_box. The HS mean B minimizes the squared error, so sum_x||Psi'_x-B||tuple^2<=48R^4 A_box. Every B_mu stays traceless Hermitian and joint norm<=L by convexity; B is an arbitrary four-matrix tuple, not a Clifford tuple. Summing boxes gives the displayed global48R^4 A."
+    },
+    {
+      "id": "nonabelian_curvature_with_conjugations",
+      "proof": "For an internal positive-axis i edge, concatenate canonical path(x) and step i. Bubble this last i step left across higher-axis steps until the word equals canonical path(y). Each exchange j,i -> i,j at vertex v replaces A=Uj(v) Ui(v+ej) by B=Ui(v) Uj(v+ei). The ratio of complete old/new path products is Pprefix A B^dag Pprefix^dag: the common suffix cancels, but the conjugation does not. Multiplying these ratios telescopes exactly to P_x Uxy P_y^dag. There are at most4R exchanges (two later coordinates each<2R), in particular <=12R^2. Each exchange is an actual native plaquette or its reversed orientation, counted without multiplicity for this canonical path. For unitary factors ||product T-I||HS<=sum||T-I||HS; conjugation invariance and Cauchy give ||U'_e-I||HS^2<=12R^2 sum_filling||Uface-I||HS^2<=24R^2 C_box. At most24R^3 internal positive edges yields sum_e||U'_e-I||HS^2<=576R^5 C_box. No commutative Stokes theorem, all-links flattening, global holonomy erasure or centre projection occurs. Exact face-product conjugations are consumed in the new CLI."
+    },
+    {
+      "id": "open_AP_and_boundary",
+      "proof": "The scalar AP connection restricted to each contractible box is a vertex-sign coboundary, including a box crossing the torus coordinate seam. Local vertex signs remove internal AP factors while leaving all holonomy on omitted interbox edges. The original global h and all AP edge blocks remain unchanged before cutting. Since ||Psi||tuple<=L, ||f_edge||HS<=bL and the Hermitian crossing block trace norm<=4bL, rank<=8. There are3V positive native edges and cut probability<=1/R, so averaged boundary trace norm<=12bLV/R. This is the cost of cutting, not permission to discard global AP or centre sectors."
+    },
+    {
+      "id": "field_and_link_prices",
+      "proof": "The endpoint trace calculation from trace_tail also applies on open boxes: field replacement costs<=D sum_x||Psi'_x-B_box||tuple<=D sqrt(48R^4 VA). Next, at constant B with joint norm<=L, replacing residual U'_e by I costs<=4bL||U'_e-I||HS per edge (each endpoint operator norm<=L). At most3V edges and the proven residual bound give total link trace price<=4bL sqrt(1728R^5 VC). No imaginary c_i or endpoint conjugation is dropped."
+    },
+    {
+      "id": "ordered_Jordan_Lipschitz",
+      "proof": "Write a_mu=||Pmu||HS and d_mu=||dPmu||HS, with sum a_mu^2<=L^2. The ordered anticommutator array Q has ||Q||array<=2L^2. Its derivative satisfies ||dQ||array<=4L||dP||tuple by HS product inequalities and the outer-product triangle bound. Because J=4||Q||array^2, |dJ|<=8||Q||array||dQ||array<=64L^3||dP||tuple. Thus the claimed1024L^3 is conservative by a factor16. The segment between Psi'_x and its HS mean remains in the joint radius-L ball. Integrate the derivative and sum/Cauchy to obtain |J(Psi')-sum_box|box|J(B_box)|<=1024L^3 sqrt(48R^4 VA). All16 ordered pairs are indispensable; diagonal-only is rejected by the consumer."
+    },
+    {
+      "id": "global_canonical_error",
+      "proof": "H0 is the direct sum of native open constant arbitrary-matrix boxes, each with onsite mB0 and all three endpoint-averaged axes. K_2V(H0) maximizes globally over all complete box eigenlevels with total2V, equivalently over integer box ranks0..4|box|. Negative levels and compensating ranks remain; fixed2|box| and positive-part truncation are different functionals. Combining cap, tree, Jordan, field and link prices for every partition, then averaging only its cut price, proves existence of a shift p with (J-K_2V(h))/V >= [sum_box |box|J(B_box)-K_2V(H0)]/V - E_RL, E_RL=(1024L^3+D)sqrt(48R^4 A/V)+4bL sqrt(1728R^5 C/V)+12bL/R+DM/L^3. This matches route1 without replacing the bracket by an antecedent periodic uniform theorem."
+    },
+    {
+      "id": "quantum_conditional_density",
+      "proof": "Disintegrate the finite-N physical quantum state over Cartesian/Haar/U1 configuration, retaining its full charged/Ref fibre. For almost every configuration with nonzero norm, the reduced neutral onebody density obeys0<=Gamma<=I and TrGamma=2V because the entire neutral fibre has fixed global particle number2V; mixed states use the same CAR fact. TrGamma h<=K_2V(h), including all signed levels. Pointwise comparison therefore integrates. A mathematically explicit safe form averages the bracket over ALL finitely many translated partitions; every shift has the same tree/Jordan/link bounds and the averaged cut cost is<=12bLV/R. Alternatively choose a measurable finite minimizing-cut shift at each configuration. One cannot silently use an arbitrary fixed shift with the averaged boundary constant. Jensen/Cauchy gives errors at <A/V>,<C/V>,<M>. Configuration-dependent box means are comparison variables, not an adopted ground field. This clarifies the target's 'some partition' bracket when used inside the quantum expectation."
+    }
+  ],
+  "fullH_scope": {
+    "unchanged": "Lambda[J-dGamma(hneutral)]+F[A/40+7C/10]+sum_actual64 dGamma(hcharged)+Q on the original fullRef/Gauss/noncompact-U1 module. Q retains Phi4chi, SU4kinetic3chi/20 and the ONE shared64 electric term. Adding these terms preserves the comparison; this review does not numerically compute Q or charged expectations.",
+    "charged_review_owner": "Independent LocalIMSGroundReview slice; no re-review or adoption of its results here.",
+    "finiteN": "all evenN>=4, integer1<=R<=N/2, L>0; all fields/links/canonical occupations. Integrability follows from inherited actual-family fourth moments when that family is used. No numerical ground prerequisite."
+  },
+  "decision": {
+    "route1_mathematical_verdict": "The all-field inequality and constants are independently proved, with an explicit translated-partition convention required for the integrated bracket. No load-bearing counterexample found.",
+    "source_control_scope": "Original source tests an exact square and canonical two-site control, not a full general proof. The new source independently consumes an exact noncommuting three-dimensional cube, explicit conjugated plaquette decomposition, radial cap, covariant mean, AP coboundary, rank8 block, open arbitrary-matrix h, complete12-level canonical occupations and a mixed conditional density.",
+    "first_gate": "R4096,L2^32 applies only forN>=8192. Boundary12bL/R>21 independently of tiny field/curvature/tail prices; this fails the displayed cap gate. It is not an all-R,L obstruction and not a no-go. No optimization of that gate or patch functional is claimed.",
+    "correction_epoch": "No change to frozen targets. This independent epoch makes the averaged/measurably-selected partition in the quantum bracket explicit; parent may cite this clarification without rebinding originals.",
+    "not_paid": ["open arbitrary-matrix patch minimum", "ground-family stationary body", "Clifford rigidity or projection", "phase or stiffness", "atoms", "sharp IR residue/common cone", "centre/holonomy winner", "infinite-volume spectral gap", "SOURCE or law adoption"]
+  },
+  "scientific_admission": false,
+  "campaign_complete": false
+}

@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave18_20261015_charge.py", line 279, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave18_20261015_charge.py", line 258, in main
+    apulse=law(op,data['rotor'],data['scalar'],p,data['geometry'],fields=np.array(p['A_pulse']+[0.,0.,0.]));aafter=evolve(apulse,state,request['pulse_duration']);bafter=evolve(h[name],state,request['pulse_duration']);afinal=evolve(h[name],aafter,timepoint);bfinal=evolve(h[name],bafter,timepoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_root_20261015_model.py", line 354, in law
+    one+=1j*p['vector_velocity']*scale*(forward-forward.conj().T)
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_base.py", line 837, in __add__
+    return self._add_sparse(other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_compressed.py", line 258, in _add_sparse
+    return self._binopt(other, '_plus_')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_compressed.py", line 1221, in _binopt
+    data = np.empty(maxnnz, dtype=upcast(self.dtype, other.dtype))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 726. MiB for an array with shape (47549088,) and data type complex128

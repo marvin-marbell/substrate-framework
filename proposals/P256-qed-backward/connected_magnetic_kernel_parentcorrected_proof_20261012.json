@@ -1,0 +1,83 @@
+{
+  "attempt1_connected_quantum_response": {
+    "closure_attempt": "For real finite face f, d_r=C^T[f P_r]/(2r), use ||C||^2<=12 to get omega(||d_r||^2)<=3/r^2 sum_a|f_a|^2 omega(P_{r,a}^2)<=3/r^2 (1+4pi max sqrtK_a)(1+r^2)/(1-r^2)||f||2^2. Mixed twoface Poisson Cauchy gives |omega(P_aP_b)|<=sqrt(omega(P_a^2)omega(P_b^2)). These bounds actually reach the unpaid seam statistic, but remain O((1-r)^-1), without spatial q cancellation. Normalized connected current R requires the signed quantities 1-omega(P_r) and Z, not only the positive envelope. Neither gives an IR rank-two Gram lower; QF covariance can be zero even when ordinary variance is not.",
+    "exact_normalized_Ward": "Write Z_aj=<F_{r,a} Omega,P0 E_hj Omega>, K_aj(z)=<QF_{r,a}Omega,(L-z)^-1 QJ_jOmega>, Im z!=0. Since J_jOmega=-i L E_hjOmega, K_aj(z)=-i<F_aOmega,QE_jOmega>-iz<F_aOmega,(L-z)^-1 QE_jOmega>. The Abel static limit z=-epsilon up to0 is exactly -i<F_aOmega,QE_jOmega>, by strong L/(L+epsilon)->Q; no inverse-domain assumption. Its REAL part gives R_aj=2Re K_aj(0)=2Im<F_aOmega,QE_jOmega>. For real source columns, R_aj+2Im Z_aj=omega(partial_hj F_a)=(c_a.h_j)/(2r)[1-omega(P_r(B_a-pi))]. This is the exact connected Schwinger-Dyson seam/current response of the ACTUAL normalized ground, including the entire stationary-block term. A chosen-vector covariance does not remove Z. For arbitrary complex polarization coefficients preserve full K, Z and Hermitian Gram; the displayed real-part identity is not permission for entrywise real deletion.",
+    "full_commutator": "[H,E_hj]=i J_j, with J_j=-i[H,E_hj], using every charged literal one/two/AP hopping and its adjoint with full ordered Phi/SU4/CAR factors. This definition fixes the inherited sign LE_h Omega=iJ_h Omega regardless of which hopping coefficient is included inside T. Phi/Haar kinetic, potentials, onsite, neutral charge0 and collective HC commute the constant closed E translation, but remain fully in H, L and the ground. Neutral is not a spectator ground factor. Every charged frequency is h_j.t_p and reverse terms have opposite frequency.",
+    "geometry": "Adjacent native xy faces a at0 and b at ex have c_a^2=c_b^2=4, c_a.c_b=-1, D c_a=D c_b=0. Use unit closed h_a=c_a/2, h_b=c_b/2; their Gram [[1,-1/4],[-1/4,1]] is positive. H_j=E_{h_j} remains the full shared electric operator, not projected Pi only.",
+    "ground_transport": "For the exact unitary family H(t)=V(t)^* H V(t), V=exp(itE_h), Omega(t)=V(t)^*Omega is an actual minimizing state of the transported operator. Differentiating omega_t(F) gives i omega([E_h,F]). This is a mathematical response experiment, NOT new boundary/coupling adoption. Degenerate ground transport produces Z; no nondegenerate perturbation theorem is silently applied.",
+    "native_adverse_control": "On native N4/6/8 compact phase-character kinematics, distinct adjacent face integer characters are linearly independent and all nonzero joint harmonics integrate to0. Hence mean P_a=mean P_b=1, mean P_aP_b=1 and mean P_a^2=(1+r^2)/(1-r^2). The normalized Poisson seam contact is strictly positive at q0 and diverges as r->1, although every local electric H1 moment of the Haar-character vector is finite. This is a native torus/electric reference CONTROL, not the physical1 ground and not a photon no-go. It falsifies promoting local H1/radial moments or seam nonatomicity to connected seam suppression. Own exact degenerate-Hilbert method control separately catches omission of wholeP0 Z and omission of imaginary cross.",
+    "nontrivial_paid_comparison": "Let U_a=exp(iB_a) and p_a=E_ca/4, [p_a,U_a]=U_a. The inherited electric form bound K_a=||p_a Omega||^2 pays a vector-valued H1 circle marginal: the full entangled state, decomposed along the face rotation with all remaining quantum coordinates as a Hilbert-valued fibre, has density w_a(theta), integral w=1 and total variation integral|w'_a|<=2sqrt(K_a). The native deck-covariant boundary condition does not affect its periodic norm density. Thus ||w_a||infinity<=1/(2pi)+2sqrt(K_a). Because integral P_r dtheta=2pi, 0<=omega(P_r)<=1+4pi sqrt(K_a), uniformly r. Also integral P_r^2 dtheta=2pi(1+r^2)/(1-r^2), so omega(P_r^2)<= (1+4pi sqrt(K_a))(1+r^2)/(1-r^2). This is an actual-ground Poisson comparison reaching the seam, stronger than just a bounded fixed-r contact. It follows at finite physical ground from the complete electric form and passes by continuous fixed-r marginals along the SAME accepted history, with the inherited uniform local K bound. It is not a density measurement or a stiffness lower.",
+    "normalized_connected_kernel_and_Gram_comparison": "Put X=[QF_aOmega,QF_bOmega], Y=[QE_haOmega,QE_hbOmega], S=X^*X, T=Y^*Y, C=X^*Y, all FULL complex matrices. On actual supports, normalized response Khat(z)=S^-1/2 K(z) T^-1/2=-i W_X^* L(L-z)^-1 W_Y, W_X=X S^-1/2 and W_Y=Y T^-1/2. For z=-epsilon<0 its operator norm is<=1, and static Khat(0)=-i W_X^*W_Y. This pays an actual-ground normalized connected response, not an invented numerical kernel. Positivity of the joint block Gram gives S>=C T^+ C^* with C annihilating kerT. In particular ||QF_uOmega||^2>=|<QF_uOmega,QE_vOmega>|^2/||QE_vOmega||^2 when the denominator is positive. The Ward equation determines ONLY 2ImC from the signed Poisson mean minus wholeP0 Z, not C itself, and supplies no uniform lower singular value. Thus this is a genuine comparison reaching positive Gram whose exact unpaid input is signed connected current/seam overlap, not merely an abstract positive-order hypothesis.",
+    "outcome": "FAILED_SUFFICIENT_LOCAL_MOMENT_TO_CONNECTED_SEAM_GATE. Paid r-uniform one-Poisson expectation, exact normalized current response and explicit two-Poisson divergence envelope; unpaid actual correlated seam/current phase and positive wholeP0 magnetic Gram. This is not a rerun of the old energy upper or curvature criterion."
+  },
+  "attempt2_native_signed_occupation_connected_loops": {
+    "allcopy_and_shared_denominator": "Enumerate the15 equality partitions of4 labelled legs, and split whether one block is active or all blocks auxiliary. Weights are falling(63,k) or falling(63,k-1), and sum exactly64^4; replacing by64 same-copy loops deletes mixed assignments. A native two-profile CAR transition between local configurations with2 particles per profile has a nonzero mixed loop matrix element but zero allsame-profile contribution. At intermediate steps electric flows ADD before squaring; HE cost64|k1+k2|^2 is256 for equal unit flows and0 for opposite, not independent128. Choose a CLOSED face c and initial fullE=-c/2, so its initial Gauss divergence is0. For every partial oriented face flow k, 64(2E.k+|k|^2)=0; the hop changes fullE by k and totalrho by Dk together. With initial E=-3c/4 the relative electric cost is negative. These are compatible continuous-character kinematic controls, not adopted ground fibres or fullH excitation measurements. Actual globally minimizing ground does not provide E=0 on every intermediate occupation. Thus neither a fixed positive electric denominator nor factorized copy costs can justify the signed-loop expansion as a positive lower. Full-H denominators remain correlated with quantumPhi/SU4/occupation and cannot be replaced by these kinematic costs.",
+    "exact_missing_connected_quantity": "The unpaid object is the normalized twoface retarded four-current/occupation cumulant (and contact derivatives for the literal Peierls deformation), with full-H semigroups or SAME-L resolvents, ALL64^4 assignments, and imaginary polarization cross. Its sign/alignment and eta~q scaling must be bounded after actual wholeP0 subtraction and division by the actual supported magnetic Gram S. Available bounds leave eta^-3, an unfixed signed conditional coefficient, and no lower eigenvalue of S. Even a favourable diagonal onecopy coefficient would not control mixed-species offdiagonal connected response or two polarizations.",
+    "exact_normalized_functional": "For finite time tau and bounded cutoff bonds V_i, define Z_tau(t)=<Omega, exp[-tau(H-E0+sum_i t_i V_i)] Omega>, Z_tau(0)=1, and W_tau=log Z_tau. Mixed derivatives at zero are EXACT ground connected, time-ordered Duhamel cumulants with full quantumPhi/SU4/all65/sharedE propagation. The fourth derivative is the sum over all24 literal orders integrated on 0<s1<s2<s3<s4<tau, minus ALL normalization partitions with coefficient(-1)^(k-1)(k-1)!; the partition absolute coefficient sum is26. Each leg V_e=sum_charged64 V_s,e retains64^4 assignments. Log normalization removes expectation partitions, NOT the entire stationary spectral block. In a degenerate ground, retain the explicit P0 stationary contributions; the target spectral current response removes ENTIRE P0 as in attempt1, and these two notions of connected are never equated. No R/Q/P is inserted into or used to redefine the original bare symmetrized A_face. Reduced resolvents, when used to represent connected response after ground subtraction, belong to this response calculation, not to A_face itself.",
+    "material_change": "Instead of local marginal regularity, build a signed native hopping/occupation expansion of the NORMALIZED actual-ground response. Keep H and Omega untouched. For calculation only use gauge-invariant radial multipliers chi_M(Phi) to bound each literal charged hopping V_{s,p,M}=chi_M (T_s,p+T_s,p^dag) chi_M. This is a regulator in a response functional, not a replacement Hamiltonian or adopted source. The target remains the original full native loop and connected current.",
+    "occupation_mechanism_attempt": "Try to turn the fourleg signed coefficient into a positive connected aligning response by the actual canonical occupation. For one colour on a native square, all24 symmetrized CAR forward loops have diagonal coefficients0 for n=0,4; +1 for n=1,3; -2 for adjacent n=2; -4 for opposite n=2. These are exact native CAR operator coefficients, not spin traces and not chosen ground occupations. Canonical2V per species constrains TOTAL number only, and permits ALL these local patterns with compensating spectators. Therefore it does not fix the local signed coefficient, nor the correlated multi-copy imaginary coherences of the full matrix loop. The actual coefficient requires the occupation-weighted, ordered Phi/SU4/electric conditional ground kernel rather than product occupation averages.",
+    "outcome": "FAILED_SUFFICIENT_NATIVE_SIGNED_OCCUPATION_RESPONSE_GATE after actual all24 CAR/equality-class/sharedE controls and explicit physical1 connected cumulant bound. This route is materially different from marginal Poisson regularity and from the prior CP spin/carrier or abstract curvature criterion. Failure is not absence of native ground, not an inferred physical gap, and not a photon no-go.",
+    "physical1_paid_estimate": "For bounded fixed cutoff legs full exp(-tL) are contractions. The literal fourth labelled log derivative satisfies unchanged 26 tau^4 product norms, and per finite time 26 tau^3. Define the lag target as SUM over all24 chronological permutations, not an average. Each ordered cumulant has absolute partition coefficient sum26, so three lag integrals and24 orders give 624 eta^-3 product norms. With actual all1+63 literal leg norm<=32 W M, the safe SUM bound is 624(32WM)^4 eta^-3. AVG=SUM/24 has26 but is a different target. Neither estimate pays signed actual-ground weights, eta~q scaling or positive supported magnetic Gram. Physical1 sufficient gate still fails, not no-go."
+  },
+  "consumer": "connected_magnetic_kernel_consumer_20261012.py",
+  "governor": {
+    "captured_revision": "1b17acc8bcc51c39d0d1208975f45e7ecfda24b72705300e6c52954a280ad8b6",
+    "parent_sole_plan_README_writer": true,
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "requirements": [
+      "outcome",
+      "verification"
+    ],
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon"
+  },
+  "independent_cumulant_review": {
+    "path": "magnetic_cumulant_review_verdict_20261012.json",
+    "sha256": "e68cede15f023286b2f54f2201c0fbf6f493da62f6bd8459e0715925c29ccb94"
+  },
+  "kind": "PARENT_CORRECTED_LITERAL_ALL24_LAG_CONNECTED_KERNEL_NOT_PHASE",
+  "launcher": "connected_magnetic_kernel_execute_20261012.py",
+  "original_proof": {
+    "path": "connected_magnetic_kernel_proof_20261012.json",
+    "sha256": "85e9f4de64e1a7f860c5aa6854d0383dce30d2b9df63044e74416f1348462d73"
+  },
+  "owner": "ConnectedMagneticKernel",
+  "parent_correction": {
+    "finding_id": "CUMULANT-SUM24-BOUND",
+    "finite_cube_bound_unchanged": true,
+    "no_law_or_source_normalization_change": true,
+    "old_summed_bound_withdrawn": true,
+    "original_epochs_preserved": true,
+    "parent_exact_control": {
+      "path": "history_operator_reset_parent_connected_graph_control_actual1_20261012_receipt.json",
+      "sha256": "75c9d0ae4c90fb70c2779a730c3dd8ac2436c02c022ddabb3160fc14ca2c4f65"
+    }
+  },
+  "precision": "Analytic full-law proof conditional only on inherited realization/actual-ground/history inputs; exact rational native incidence/CAR/equality classes and Sympy complex response controls; binary64 trigonometric kinematic checks labelled. Neither controls nor author proof alone authorize scientific admission. Parent independent review remains required.",
+  "schema": 1,
+  "scientific_result": {
+    "actual_ground_normalized_connected_response_derived": true,
+    "campaign_complete": false,
+    "controlled_physical1_gapped_branch": false,
+    "native_signed_occupation_attempt_executed": true,
+    "nontrivial_Poisson_comparison_paid": true,
+    "photon_no_go": false,
+    "positive_Gram_lower": false,
+    "small_energy_completion_credit": false,
+    "two_genuine_native_attempts": true,
+    "uniform_actual_ground_IR_closure": false
+  },
+  "supported_normalization_and_limits": {
+    "limiting_seam": "One-Poisson expectation comparison is uniformr; two-Poisson/seam response bound is not. The strong bounded principal limit does not imply differentiability at the branch seam or exchange r->1 with tau->infinity, eta->0, N->infinity or q->0. This proof makes none of those exchanges. Fixed local same-history sources are not automatically N-dependent inversecurl plane waves or pointwise common-ae magnetic fields.",
+    "scope": "Exact response and cumulant identities in the inherited actual-ground realization plus analytic native upper comparisons; native geometry/CAR/flow controls and separately labelled exact spectral method controls. No numerical fullH ground/evolution, positive Gram/stiffness, controlled physical1 gapped branch, isolated atom or photon residue is claimed.",
+    "twoface": "X=[QF_aOmega,QF_bOmega], S=X^*X is FULL complex Hermitian. Use S^-1/2 ONLY on suppS. For positive band I, X_I=P_I X and current/seam kernel is normalized with its ACTUAL S_I, not the unfiltered Gram or real paired contact. Full complex imaginary cross is retained. Bounds on unnormalized response do not bound normalized response without S_I>=c(q)I on two-dimensional support. No parent positive-band l2 completion is promoted to such a lower."
+  },
+  "unchanged_law": {
+    "E": "FULL E=E_T+D^T Lplus rho, rho=sum64(n_s-2)+(NRef-4)delta0; no independent electric copies or factorized occupations.",
+    "ground": "Inherited analytic globally minimizing compatible character family and translation average; accepted SAME full bounded-history representation, L>=0, L Omega=0. Entire P0=1_{0}(L) is introduced after L, Q=1-P0. Numerical ground characterization is neither needed nor invented.",
+    "normalization": "F_{r,a}=b_r(B_a)/(2r), fixed first harmonic1, 0<r<1; principal limit is HALF angle. No q-dependent weakening, no raw unwrapped-angle multiplication, no finiteP0=limitingP0, no frozen reference adoption.",
+    "parent_owned": "Existing real3072/complex6144 contact-energy map and positive-band completion are not this worker's mechanism or new deliverable.",
+    "primitive": "a=1/64, Lambda=2^8192, chi=2^-4096, F=2^10240; full four traceless matrix Jordan Phi/site, quantum SU4 Haar/Casimir, noncompact U1; HE=64 sum FULL E^2 and HC=64 rho^T Lplus rho ONCE. All65 quantum species, charged active1+aux63 and neutral heavy; each canonical2V of4V, Ref4, AP one/two-link literal paths and onsite. No bareB2."
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "kind": "REVISION_BOUND_INDEPENDENT_LEADING_UNIFORM_REVIEW_NOT_SCIENCE_ACCEPTANCE",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "3fc02d01a95d53a814f2cd560e1eaedaf8f2d248db7e7054a138e2d9fdaf2d97",
+    "accepted_scoped_science": "03e7a09a0dd929f32f3522cf9d7d30b76fe3f5d7c985576fc7cf8fdf2c8c6cc8",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "requirement_ids": [
+      "outcome",
+      "verification"
+    ]
+  },
+  "contract_sha256": "c9e6a26f4dcc21ad9de5a72a9c315c9b67740b8496fb52146aa60dc56f3786fe",
+  "reviewed_target_pins": {
+    "native_neutral_body_proof_20261012.json": "5993b9bd186501472ada9b93c7869eb93537fe114f0f55b660b3164a9f77ac49",
+    "native_neutral_body_consumer_20261012.py": "4dfe8f82f60a28c97e16d072942159798b1e4a298963268ceb154c2b84e0574b",
+    "native_neutral_body_interface_20261012.json": "edbc830802531c32bc81de26b3cc13f0ab5cc9ea4ff0c7b14cfa732efdf54aab",
+    "native_neutral_body_actual1_20261012_receipt.json": "d93214e0506426ab4fc1f88da03e2c9861df8ad85123fa53a9a4e74ddb20badf",
+    "native_neutral_body_actual1_20261012_capsule.json": "5b9f021968a75b644945064f8f2b89a16aec0bfa47a1176790d58e0cb256554b",
+    "native_neutral_body_actual1_20261012_preexecution.zip": "5fde4a67a97839ef83b7b441b2172063aa8df196529a82c18215003468427019",
+    "native_neutral_body_actual1_20261012_executed.zip": "ea24239b32c13a2b4824c7667209c0a643270029bab0d4eb7077f8d2a4d8ef81",
+    "neutral_body_parent_primitive_profiles_20261012.json": "36f653729d91d0d8c021e708faed651098eb8e1e3e0a062d6f362e114fbf3c72",
+    "neutral_body_parent_method_20261012.py": "7eaa409375125a4e46a91557e43908b302bbae396f166ddf116b0a017a870d04",
+    "neutral_body_parent_wilson_mass_20261012.py": "e0f596ac43ba8cb14699c42f26e83ad8a0e0582fa600de9a34d9b8e717302bcd",
+    "neutral_body_parent_uniform_certificate_20261012.py": "d251531ed5417e53db173b2b33afb2f5407070d557fb04125fca73d31e03eea8",
+    "neutral_body_parent_holonomy_control_20261012.py": "985f0a67498947f0c328a4fdd895d5dc3718d6b00f5a26579305191c79faa1a3",
+    "neutral_body_parent_uniform_class_proof_20261012.json": "7daca5503e6d44c9c718c1b55191053449f45c08ad46f08b838fe732ea0d417f",
+    "neutral_body_parent_centre_holonomy_correction_20261012.json": "3aae8c5db584e70752901972a7d3df468b146c0247ef30a0d6b26ea08657001f",
+    "history_operator_reset_parent_neutral_uniform_class_actual2_20261012_receipt.json": "b1db7c7909c9de90ed0246bc74d1447801d9ba497fc25fda0336e1e00a1d1b52",
+    "history_operator_reset_parent_neutral_uniform_class_actual2_20261012_capsule.json": "b392b780bc3a130e2b65f638a6460722fc09e36c261b8b53302a32a26974ffb4",
+    "history_operator_reset_parent_neutral_holonomy_actual1_20261012_receipt.json": "de95f44b91202d5e8f103f444cfad2e0a33fee70d70273daa71515be1e965cd3",
+    "history_operator_reset_parent_neutral_holonomy_actual1_20261012_capsule.json": "c35b64fe94401a8bfe9ac66a5079b66eeaa8d8dc2172fe2a1be0c2153ede168f"
+  },
+  "verdict": "Correct within explicitly corrected exact classical scopes; no remaining load-bearing flaw found in route1 or corrected uniform/holonomy claims. No full quantum minimizing body/ground support established.",
+  "scope_labels": {
+    "exact_universal": "All finite actual four traceless Hermitian fields/site, arbitrary SU4 links, AP signs and holonomies: coercive KyFan/Jordan inequalities only.",
+    "exact_uniform": "Every constant four-matrix traceless Hermitian body, identity links, untwisted AP grid, all even N>=4: exact reduction to convex norm-square functional.",
+    "exact_finite": "N4/6/8 rational norm candidates, enclosures and interiority; independent400bit controls support parent384bit bounds.",
+    "exact_holonomy_point": "Fixed s=1/2,r=1/3 Clifford point N4: constant central links versus single i seam; not centre optimization.",
+    "conditional": "Clifford Bloch gap requires specified classical fields/links.",
+    "FLOAT": "Original numerical candidate selection; binary-rational input norms independently certified, optimizer never executed.",
+    "open": "Inhomogeneous/nontrivial-winding minimizing body, full Phi/Haar/Gauss/character ground-family transport, uniform quantum BO remainder, quantum gap/phase/source adoption."
+  },
+  "derivation": [
+    {
+      "claim": "Universal ordered Jordan",
+      "proof": "Hermitian anticommutators have nonnegative squared traces. Diagonal ordered terms yield16sum Tr(Phi_mu^4). Dimension4 Cauchy gives >=4sum(Tr Phi_mu^2)^2. Four-field/site Cauchy then gives J>=sum_x s_x^2>=S^2/V. No actual ordered cross term removed."
+    },
+    {
+      "claim": "Universal transport bound",
+      "proof": "Write each native hopping f=(c0 A+i ci B)U, with A=(Phi0x+U Phi0y Udag)/2 and B=(Phiax+U Phia y Udag)/2 Hermitian. Tr(ffdag)=c0^2Tr A^2+ci^2Tr B^2 by trace-commutator cancellation; f itself need not be Hermitian. Endpoint convexity and both block orientations give Tr h^2<=[m^2+6c0^2]sum_x s0x+2ci^2sum_x,a sax<=Ch S. AP signs and arbitrary SU4 holonomies preserve this estimate.",
+      "constants": {
+        "Ch": "49800541185386145523063312337391/79228162514264337593543950336",
+        "Wilson_floor": "56294995342131/281474976710656",
+        "universal_lower": "-48",
+        "Clifford_upper": "-128206222392169583/7599824371187712",
+        "global_minimum_identified": false
+      }
+    },
+    {
+      "claim": "Complete-canonical universal lower",
+      "proof": "Tr h=0; rank2V P in4V has Tr(P-I/2)^2=V. KyFan_top2V=max Tr Ph<=sqrt(V Tr h^2), with no positive-level-count assumption. Hence e/(Lambda V)>=u^2-32sqrt(u)+(F/Lambda)W>=-48+(F/Lambda)W. At t=sqrt(u), t^4-32t+48=(t-2)^2(t^2+4t+12)>=0. This relaxed estimate does not classify equality of the true competition."
+    },
+    {
+      "claim": "Uniform trial upper",
+      "proof": "At s=1/2,r=1/3, Jordan=172/27; M=m+2c0sum cos k>=m-6|c0|>1/8. Epsilon>=sM and AP mean M=m; Clifford spectrum supplies exactly2V positive levels. Complete-canonical trial upper172/27-m<-16, but >-48. No global minimizing field identified."
+    },
+    {
+      "claim": "New generic compensation falsifier",
+      "proof": "Independent exact AP N4 ordering with Phi0=diag(1,-1/5,-1/5,-3/5), spatial fields0 requires64 negative levels in top128. Its top sum256m/5-96c0sqrt2/5 strictly exceeds incorrect two-per-k256m/5 and lies below incorrect positive-only64m. Different diagonal from frozen producer; no old consumer executed."
+    },
+    {
+      "claim": "All-matrix uniform reflection reduction",
+      "proof": "For x_mu=Tr Phi_mu^2/4, KyFan<=Tr h_positive=Tr|h_total|/2 since total trace0. AP eightfold axis reflections keep M fixed and reverse spatial D_i, so mean Tr h(k)^2=4[M^2x0+sum D_i^2xi]. Schatten Cauchy Tr|h|<=2sqrt(Tr h^2), then sqrt Jensen, give reflected mean <=4sqrt(M^2x0+sum D_i^2xi). Jordan>=64sum x_mu^2. Therefore e>=f(x)=64sum x_mu^2-2mean sqrt(M^2x0+sum D_i^2xi). Four traceless anticommuting gammas at Phi_mu=sqrt(x_mu)Gamma_mu simultaneously saturate Jordan, reflection and canonical bounds. Thus all constant matrices reduce exactly, not just Clifford trial search."
+    },
+    {
+      "claim": "Constrained strong convexity/interiority",
+      "proof": "Negative square-root terms are convex, quadratic Hessian128I; f is coercive and128-strongly convex on nonnegative orthant. Unique norm-square minimizer x*. At positive candidate x, strong convexity and constrained optimality give ||x-x*||<=||grad f(x)||/128 and f(x)-f*<=||grad f(x)||^2/256. Neither bound presumes interiority; a boundary minimizer uses the constrained subgradient. Independently computed exact distance-square upper<min_mu x_mu^2 for N4/6/8 certifies interiority. Withdrawn original sentence is not relied upon; no untested all-N interior claim."
+    },
+    {
+      "claim": "Equality versus uniqueness",
+      "proof": "At interior norms, Jordan equality forces Phi_mu^2=x_mu I and off-diagonal anticommutators0. Clifford frames attain this, but conjugation/frame symmetries give many matrix representatives. Only the norm-square vector is unique. Spatial S3 symmetry forces x1=x2=x3. No unique matrix/gauge representative or global ground follows."
+    },
+    {
+      "claim": "Enclosure audit",
+      "proof": "Parent sqrt floor=isqrt(floor(q*2^768))/2^384 and incremented upper ensure rational outward inclusion. AP N4/6/8 use exact sqrt2, sqrt3, sqrt(2+/-sqrt2) halves. Parent positive division and sign-crossing square are interval-correct. Independent source uses400bit outward arithmetic, no parent helpers. Candidate energy intervals are contained in parent boxes; gradient intervals overlap; independent finite boundary-distance tests pass."
+    },
+    {
+      "claim": "Genuine seam correction",
+      "proof": "N4 uniform centre z links have winding z^4=1; AP permutations are trivial-winding only. One seam z=i has winding i and shift pi/8, not pi/2. Literal AP transfer fourth powers are -iI for seam and -I for constant links. Independent radical enclosure gives positive seam-minus-identity fixed-point difference. Both central flat connections have alignment and colour-plaquette0. No optimized centre winner/quantum selection.",
+      "difference_exact": [
+        "91393327594771077393885045644412483473216253563086662692903331525903769714603938844221292316195072124192128033644901083/2582249878086908589655919172003011874329705792829223512830659356540647622016841194629645353280137831435903171972747493376",
+        "91393327594771077393885045644412483473216253563086662692903331525903769714603938844221292316195072124192128033644901277/2582249878086908589655919172003011874329705792829223512830659356540647622016841194629645353280137831435903171972747493376"
+      ],
+      "difference_display_NOT_PROOF": [
+        0.035392906151468555,
+        0.035392906151468555
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "corrected_scope",
+      "target": "uniform parent frozen source/receipt supporting interior sentence",
+      "finding": "Original supporting sentence remains in frozen bytes; parent correction withdraws reliance and replaces it with finite distance-to-boundary proof independently reproduced.",
+      "direction": "Cite corrected uniform proof and N4/6/8 certificates; do not infer all-N interiority from the original sentence."
+    },
+    {
+      "severity": "corrected_scope",
+      "target": "native route1 original constant-centre probe",
+      "finding": "Constant N4 links have winding1. Independent i seam distinguishes actual winding and positive fixed-point energy difference.",
+      "direction": "Keep permutation and genuine-seam controls separate; neither selects ground."
+    },
+    {
+      "severity": "open_obligation",
+      "finding": "Classical universal lower/uniform norm minimum do not pay global quantum body support or uniform BO bridge.",
+      "direction": "Retain these scientific debts; no SOURCE/law/phase adoption."
+    }
+  ],
+  "receipt": "neutral_leading_review_receipt_20261012.json",
+  "certificate_summary": [
+    {
+      "N": 4,
+      "energy_display_NOT_PROOF": [
+        -22.375846637397284,
+        -22.375846637391703
+      ],
+      "distance2_display_NOT_PROOF": 8.716283995096809e-14,
+      "boundary2_display_NOT_PROOF": 0.010972993846638957
+    },
+    {
+      "N": 6,
+      "energy_display_NOT_PROOF": [
+        -22.280457898466988,
+        -22.28045789846686
+      ],
+      "distance2_display_NOT_PROOF": 2.016348285719962e-15,
+      "boundary2_display_NOT_PROOF": 0.010630130207824598
+    },
+    {
+      "N": 8,
+      "energy_display_NOT_PROOF": [
+        -22.27216501045255,
+        -22.272165010452348
+      ],
+      "distance2_display_NOT_PROOF": 3.1612871992612e-15,
+      "boundary2_display_NOT_PROOF": 0.010601031767507822
+    }
+  ],
+  "execution": {
+    "successful_attempt": 2,
+    "natural_exit": true,
+    "returncode": 0,
+    "failed_attempt_preserved": "Initial exact Clifford product equality used structural comparison of unexpanded complex entries. Corrected by entrywise exact simplification, not weaker assertion."
+  },
+  "language_tooling": {
+    "actual_symbols": 88,
+    "actual_definition": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": [
+        {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/neutral_body_parent_uniform_certificate_20261012.py",
+          "range": {
+            "start": {
+              "line": 39,
+              "character": 4
+            },
+            "end": {
+              "line": 39,
+              "character": 12
+            }
+          }
+        }
+      ]
+    },
+    "positive_AST": "five sqrt_out call matches",
+    "limitation": "Representative original-file Pyright default-interpreter diagnostics report unresolved sympy and type issues; not claimed clean. Parent selected diagnostics should use project venv. No build/lint/test/formatter suite run."
+  },
+  "parent_coordination_note": "Parent timing correction and separate Schur frozen-exterior addendum do not alter this leading review scope. No parent runtime was reused as this review runtime.",
+  "scientific_admission": false,
+  "campaign_complete": false
+}

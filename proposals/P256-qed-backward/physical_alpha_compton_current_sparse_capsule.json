@@ -1,0 +1,851 @@
+{
+  "parameters": {
+    "inverse_alpha": "137.035999084",
+    "beta_power": 150,
+    "kappa_power": 250,
+    "mass": 1.0,
+    "spacing": 0.01,
+    "orders": [
+      2
+    ],
+    "toron_cutoffs": [
+      4
+    ],
+    "observation_times": [
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "toron_packet_width": 0.4,
+    "dense_limit": 2000
+  },
+  "charge_contract": {
+    "Q": "302822120871752642766244268870792234538330042246939666741325127946637218186",
+    "auxiliary_charge": 1,
+    "reference_primitive_charge": 0,
+    "physical_e": 0.30282212087175264,
+    "bare_alpha": "0.0072973525692838009972851054723806635679725607012964885313901711576038178315789862927553712596416102827135875732",
+    "relative_integer_rounding": "3.1608318876736117723276328702241677E-75",
+    "Naux": "625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "SU4_species_count": "625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+    "active_filled_vacuum_count": 1,
+    "beta": "1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000E+150",
+    "selected_integer_charge_is_input": true,
+    "charges": "rho=Q(n_active-2)+sum_aux(n_aux-2); Ref contributes zero. Source has +Q and needs a compensating -Q charge and electric-flux dressing.",
+    "background_active_per_site": "605644241743505285532488537741584469076660084493879333482650255893274436372",
+    "auxiliary_background_per_site": 2,
+    "neutralizing_background": "Charged sector has integer -Q static compensator at site1. Integer x-link flux E0-E1=Q(n0-2) gives exact Gauss; Ref remains charge0. Photon projection does not replace this charge ledger.",
+    "exact_link": "U=exp(i theta), theta=A/sqrt(beta); active U**Q=exp(i Q theta), aux U. No noninteger compact character.",
+    "literal_compact_character_probe": {
+      "decimal_digits": 180,
+      "primitive_theta": "2.3e-76",
+      "active_power_error": "9.57558298115025909324741400637368347223088116306861520777741545474171394247678283835624804194008733643056721811711783958852582908556212887840406020564510064389758514519648913198851e-108",
+      "integer_periodicity_error": "5.95104674354452620292295753654289931474155157441221869574466001227012428409251851331011226730874791622003389156952579752358308201073022208908575775767381035318783967878475434110892e-107",
+      "auxiliary_link_change": "2.29999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999493041666666666666666666667e-76"
+    },
+    "active_kappa": 0.12468671940919021,
+    "full_Wilson_B_lower": 0.2518796835448587,
+    "Ref_modes": 4,
+    "Ref_initial_occupation": 4,
+    "Ref_after_source_occupation": 3,
+    "inherited_chart_Q_delta": 3.028221208717527e+24,
+    "inherited_global_state_budget": 4.234500023531083e+30,
+    "inherited_bounds_rejected": true,
+    "actual_compact_typical_phase_scale": 0.30282212087175264,
+    "microscopic_parameters_are_inputs": [
+      "Grassmann/Haar quantum law",
+      "Q",
+      "m0=expm1(a mass)",
+      "a",
+      "Naux",
+      "kaux",
+      "selected Clifford/Phi frame"
+    ]
+  },
+  "active_unquenched_response": {
+    "time_slices": 6,
+    "spatial_box": [
+      2,
+      1,
+      1
+    ],
+    "field_amplitude": 0.23,
+    "direct_active_logdet": 29.36424726365059,
+    "transfer_logdet": 29.364247263650537,
+    "determinant_identity_defect": 5.3290705182007514e-14,
+    "omitted_detB_error": 13.353097370974481,
+    "actual_current": -0.15238412551198338,
+    "current_current_bubble": -0.2001986837336538,
+    "actual_contact": -0.46258041041553644,
+    "active_radiative_curvature": -0.6627790941491902,
+    "finite_difference_curvature": -0.6627768556199953,
+    "curvature_disagreement": 2.2385291948978647e-06,
+    "missing_contact_curvature": -0.2001986837336538,
+    "primitive_gauge_Ward_hessian": 5.551115123125783e-17,
+    "primitive_gauge_current_bubble": -0.38172644183451376,
+    "primitive_gauge_contact": 0.3817264418345138,
+    "actual_temporal_contact": 0.5333647660372325,
+    "omitted_temporal_contact_gauge_defect": 0.5333647660372325,
+    "interpretation": "One filled active determinant only; not multiplied again into native Fock transfer. Exact time-dependent Wilson action retains both transfer bands and temporal Grassmann hoppings; finite transverse response is not zero-momentum alpha renormalization."
+  },
+  "native_positive_transfer": [
+    {
+      "charged": {
+        "order": 2,
+        "toron_cutoff": 4,
+        "active_number": 5,
+        "dimension": 2016,
+        "retained_spectral_dimension": 160,
+        "observed_eigen_residual": 5.542441072389144e-13,
+        "transfer_minimum_lower_bound": 0.0020289454662799273,
+        "transfer_maximum": 265.0145741961472,
+        "one_body_transfer_minimum": 0.32877416655739505,
+        "log_ground_transfer": 5.579784821440538,
+        "local_periodic_preparation": {
+          "angular_packet_width": 0.4,
+          "integer_Fourier_projection_weight": 0.9050564792882334,
+          "local_sea_overlap_gram_minimum": 0.6557179844883051,
+          "exclusive_probabilities": [
+            4.133741283252548e-05,
+            4.234964574941275e-05,
+            4.6247035156562e-05,
+            5.971887542982446e-05
+          ],
+          "amplitudes": [
+            [
+              0.0041126199058401725,
+              0.004942041110979617
+            ],
+            [
+              0.006397031044008515,
+              0.0011948387219219469
+            ],
+            [
+              0.0025445220946901078,
+              -0.006306539658655599
+            ],
+            [
+              -0.005797110995931836,
+              0.005110027351264438
+            ]
+          ],
+          "finite_spectral_amplitude_error": 0.8839423705550872,
+          "finite_spectral_probability_intervals": [
+            [
+              0.0,
+              0.7927619214412441
+            ],
+            [
+              0.0,
+              0.792901257883473
+            ],
+            [
+              0.0,
+              0.7934228922132016
+            ],
+            [
+              0.0,
+              0.7950756910488697
+            ]
+          ],
+          "integer_toron_edge_probability": 0.08580412611768262,
+          "meaning": "Prepared local periodic Gaussian around holonomy0 with actual field-dependent filled Wilson Slater and one projected charged mode. SAME positive native transfer, no trap, no mass fit, no global-ground substitution. Finite observation, not stationary dressed photon/electron poles."
+        },
+        "dressed_ground_degeneracy": 2,
+        "dressed_spin_eigenvalues": [
+          -0.4992646857475599,
+          0.49926468574755983
+        ],
+        "dressed_excitation_gaps": [
+          0.018236253211698982,
+          0.01823625321170882,
+          0.28288384508000186,
+          0.28288384508000436,
+          0.2960847280837033,
+          0.296084728083707,
+          0.5581452259461853,
+          0.5581452259461884
+        ],
+        "photon_spectral_measure": [
+          {
+            "gap": 1.7552668813556154,
+            "normalized_packet_residue": 0.268869450553599
+          },
+          {
+            "gap": 1.7564346319093473,
+            "normalized_packet_residue": 0.25492844033422346
+          },
+          {
+            "gap": 1.7564346319093553,
+            "normalized_packet_residue": 0.2212827315969343
+          },
+          {
+            "gap": 1.7552668813556238,
+            "normalized_packet_residue": 0.18812022299380213
+          },
+          {
+            "gap": 1.9106665178796851,
+            "normalized_packet_residue": 0.016636835270921867
+          },
+          {
+            "gap": 1.9106665178796889,
+            "normalized_packet_residue": 0.015538423964437277
+          },
+          {
+            "gap": 1.8971795545407184,
+            "normalized_packet_residue": 0.014237608423982535
+          },
+          {
+            "gap": 1.8971795545407175,
+            "normalized_packet_residue": 0.00965686298393958
+          }
+        ],
+        "initial_final_overlap": 8.51558126450942e-17,
+        "initial_highest_photon_shell_probability": 0.9999999999999986,
+        "observation_times": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "amplitudes": [
+          [
+            -0.000370166757601903,
+            0.0002329302576896397
+          ],
+          [
+            -0.0004137095523057896,
+            0.000823296721837008
+          ],
+          [
+            0.0010894578157879808,
+            0.0018315576747236356
+          ],
+          [
+            0.003877028215011749,
+            -0.0035042878397440747
+          ]
+        ],
+        "exclusive_probabilities": [
+          1.9127993338086794e-07,
+          8.489730858566205e-07,
+          4.541521848220568e-06,
+          2.7311381043775383e-05
+        ],
+        "finite_spectral_amplitude_error": 3.5001088208792e-06,
+        "finite_spectral_probability_intervals": [
+          [
+            1.8823059965551185e-07,
+            1.9435376862974006e-07
+          ],
+          [
+            8.425353545986267e-07,
+            8.554353186381304e-07
+          ],
+          [
+            4.5266160425162475e-06,
+            4.556452155448405e-06
+          ],
+          [
+            2.7274809952839085e-05,
+            2.73479766362352e-05
+          ]
+        ],
+        "error_meaning": "Cauchy-Schwarz bound for omitted spectral subspace of THIS finite matrix, excluding floating-point/ARPACK residual error and infinite-toron/photon truncation. Dense cases have all eigenpairs.",
+        "norm_residual": 3.500115900889611e-06,
+        "toron_highest_shell_probability": 0.00014349633052207923,
+        "nonzero_winding_transition_norm": 154.18742798148523,
+        "compact_Haar_quadrature_points": 24,
+        "exact_integer_Gauss": true,
+        "source": "Charged intertwiner with neutral Ref and -Q static compensator at site1. Integer string on x0 and ALL retained integer winding characters; norm conditional on dressed spectral preparation.",
+        "meaning": "Exact finite projected quantum spectral probability for same-spin y-to-z packet on interacting charged dressed ground. Vacuum polarization conversion is the disconnected control; not a full-box cross section or unprojected error certificate.",
+        "source_preparation": {
+          "source_norm_squared": 0.9474555874509787,
+          "dressed_ground_preparation_weight": 0.002892140525250047,
+          "addressed_spin_ground_overlap": 0.0014460702626249175,
+          "exact_integer_Gauss_defect": "0",
+          "external_reference_charge": "-302822120871752642766244268870792234538330042246939666741325127946637218186",
+          "source_charge": "302822120871752642766244268870792234538330042246939666741325127946637218186",
+          "reference_operator_charge": 0,
+          "reference_distance": 0.01,
+          "external_sector": "One static spin-zero -Q worldline at site1; no fictitious boundary.",
+          "compact_dressing": "Integer Ux0**Q string. In tree gauge this is c0dagger; source shifts E0 by Q and leaves E1=Qm. Fourier torons retain winding transitions.",
+          "self_energy": "Included in integer electric energy e\u00b2[(r0+m)\u00b2+m\u00b2]/2 before transfer. No hand-subtracted Coulomb or self-energy.",
+          "preparation_scope": "Conditional spectral preparation has the reported nonunit probability; not an unprepared charged-packet experiment."
+        },
+        "dressed_mass_gap_lattice": 0.9371198172891777,
+        "dressed_mass_gap_physical": 93.71198172891776
+      },
+      "vacuum": {
+        "order": 2,
+        "toron_cutoff": 4,
+        "active_number": 4,
+        "dimension": 2520,
+        "retained_spectral_dimension": 160,
+        "observed_eigen_residual": 8.953981583068809e-13,
+        "transfer_minimum_lower_bound": 0.0009369318737030533,
+        "transfer_maximum": 676.481187553495,
+        "one_body_transfer_minimum": 0.32877416655739505,
+        "log_ground_transfer": 6.516904638729716,
+        "local_periodic_preparation": {
+          "angular_packet_width": 0.4,
+          "integer_Fourier_projection_weight": 0.8417340976037486,
+          "local_sea_overlap_gram_minimum": 0.6557179844883051,
+          "exclusive_probabilities": [
+            1.8164069916194274e-29,
+            1.82129063462167e-29,
+            1.8214336687742784e-29,
+            1.809750627904506e-29
+          ],
+          "amplitudes": [
+            [
+              3.363628819919029e-15,
+              -2.6172640443800077e-15
+            ],
+            [
+              9.71445146547012e-17,
+              -4.266552389164957e-15
+            ],
+            [
+              -4.199331854470856e-15,
+              7.615436059538183e-16
+            ],
+            [
+              3.54230533794464e-15,
+              -2.355754480376504e-15
+            ]
+          ],
+          "finite_spectral_amplitude_error": 0.8945151273761247,
+          "finite_spectral_probability_intervals": [
+            [
+              0.0,
+              0.8001573131047321
+            ],
+            [
+              0.0,
+              0.8001573131047321
+            ],
+            [
+              0.0,
+              0.8001573131047321
+            ],
+            [
+              0.0,
+              0.8001573131047321
+            ]
+          ],
+          "integer_toron_edge_probability": 0.1081201650127423,
+          "meaning": "Prepared local periodic Gaussian around holonomy0 with actual field-dependent filled Wilson Slater and one projected charged mode. SAME positive native transfer, no trap, no mass fit, no global-ground substitution. Finite observation, not stationary dressed photon/electron poles."
+        },
+        "dressed_ground_degeneracy": 1,
+        "dressed_spin_eigenvalues": [
+          0.0
+        ],
+        "dressed_excitation_gaps": [
+          0.3093768525320497,
+          0.6154925876607432,
+          0.9182425499939075,
+          1.2176090467097431,
+          1.523471584381073,
+          1.7517681884353817,
+          1.751768188435383,
+          1.815727487097722
+        ],
+        "photon_spectral_measure": [
+          {
+            "gap": 1.7517681884353817,
+            "normalized_packet_residue": 0.5537469367852136
+          },
+          {
+            "gap": 1.751768188435383,
+            "normalized_packet_residue": 0.3733761009730848
+          },
+          {
+            "gap": 1.9147844782329089,
+            "normalized_packet_residue": 0.04285568413052738
+          },
+          {
+            "gap": 1.9147844782329069,
+            "normalized_packet_residue": 0.03001502128885277
+          },
+          {
+            "gap": 2.3466892537462405,
+            "normalized_packet_residue": 1.7947179403503273e-06
+          },
+          {
+            "gap": 3.558710200542472,
+            "normalized_packet_residue": 4.205639893029373e-07
+          },
+          {
+            "gap": 2.3466892537462387,
+            "normalized_packet_residue": 3.371461842191611e-07
+          },
+          {
+            "gap": 2.4466519161579794,
+            "normalized_packet_residue": 2.744246038900389e-07
+          }
+        ],
+        "initial_final_overlap": 6.2341624917916505e-18,
+        "initial_highest_photon_shell_probability": 0.9999999999999993,
+        "observation_times": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "amplitudes": [
+          [
+            6.938893903907228e-17,
+            -2.220446049250313e-16
+          ],
+          [
+            9.71445146547012e-17,
+            -1.3877787807814457e-16
+          ],
+          [
+            3.5388358909926865e-16,
+            -3.3480163086352377e-16
+          ],
+          [
+            -6.591949208711867e-16,
+            -9.575673587391975e-16
+          ]
+        ],
+        "exclusive_probabilities": [
+          5.411863143728134e-32,
+          2.869635617136981e-32,
+          2.3732572666265524e-31,
+          1.3514731902251329e-30
+        ],
+        "finite_spectral_amplitude_error": 3.085964449700551e-06,
+        "finite_spectral_probability_intervals": [
+          [
+            0.0,
+            9.523176586251428e-12
+          ],
+          [
+            0.0,
+            9.523176585861149e-12
+          ],
+          [
+            0.0,
+            9.523176587822347e-12
+          ],
+          [
+            0.0,
+            9.52317659199067e-12
+          ]
+        ],
+        "error_meaning": "Cauchy-Schwarz bound for omitted spectral subspace of THIS finite matrix, excluding floating-point/ARPACK residual error and infinite-toron/photon truncation. Dense cases have all eigenpairs.",
+        "norm_residual": 3.085964447868683e-06,
+        "toron_highest_shell_probability": 0.00013207036627996572,
+        "nonzero_winding_transition_norm": 229.94556970497797,
+        "compact_Haar_quadrature_points": 24,
+        "exact_integer_Gauss": true,
+        "source": "Charged intertwiner with neutral Ref and -Q static compensator at site1. Integer string on x0 and ALL retained integer winding characters; norm conditional on dressed spectral preparation.",
+        "meaning": "Exact finite projected quantum spectral probability for same-spin y-to-z packet on interacting charged dressed ground. Vacuum polarization conversion is the disconnected control; not a full-box cross section or unprojected error certificate."
+      }
+    }
+  ],
+  "adverse_controls": {
+    "drop_detB": {
+      "order": 2,
+      "toron_cutoff": 1,
+      "active_number": 5,
+      "dimension": 672,
+      "retained_spectral_dimension": 672,
+      "observed_eigen_residual": 2.762602365489783e-14,
+      "transfer_minimum_lower_bound": 0.0015862133173472296,
+      "transfer_maximum": 16.660929906268866,
+      "one_body_transfer_minimum": 0.32877416655739505,
+      "log_ground_transfer": 2.8130664518838153,
+      "local_periodic_preparation": {
+        "angular_packet_width": 0.4,
+        "integer_Fourier_projection_weight": 0.4727804797780598,
+        "local_sea_overlap_gram_minimum": 0.6557179844883051,
+        "exclusive_probabilities": [
+          7.629399132358422e-09,
+          1.3737301664695807e-07,
+          3.099034316937711e-06,
+          3.514493655253494e-05
+        ],
+        "amplitudes": [
+          [
+            -5.637098319787731e-05,
+            -6.67211464654427e-05
+          ],
+          [
+            -0.00034858085024369254,
+            0.0001259539895769185
+          ],
+          [
+            0.0010686321121278555,
+            0.0013989495079762063
+          ],
+          [
+            -0.002473140000265002,
+            -0.005387811716422927
+          ]
+        ],
+        "finite_spectral_amplitude_error": 0.0,
+        "finite_spectral_probability_intervals": [
+          [
+            7.629399132358422e-09,
+            7.629399132358422e-09
+          ],
+          [
+            1.3737301664695807e-07,
+            1.3737301664695807e-07
+          ],
+          [
+            3.099034316937711e-06,
+            3.099034316937711e-06
+          ],
+          [
+            3.514493655253494e-05,
+            3.514493655253494e-05
+          ]
+        ],
+        "integer_toron_edge_probability": 0.6407027781919253,
+        "meaning": "Prepared local periodic Gaussian around holonomy0 with actual field-dependent filled Wilson Slater and one projected charged mode. SAME positive native transfer, no trap, no mass fit, no global-ground substitution. Finite observation, not stationary dressed photon/electron poles."
+      },
+      "dressed_ground_degeneracy": 2,
+      "dressed_spin_eigenvalues": [
+        -0.49933153194080154,
+        0.49933153194080154
+      ],
+      "dressed_excitation_gaps": [
+        0.03347490873250854,
+        0.03347490873251359,
+        0.2658722055968158,
+        0.2658722055968177,
+        0.37905067652264274,
+        0.3790506765226434,
+        0.6199282069945976,
+        0.6199282069945994
+      ],
+      "photon_spectral_measure": [
+        {
+          "gap": 1.7648879822119097,
+          "normalized_packet_residue": 0.14031611887497206
+        },
+        {
+          "gap": 1.7648879822119095,
+          "normalized_packet_residue": 0.13809169758495743
+        },
+        {
+          "gap": 1.7701340012850655,
+          "normalized_packet_residue": 0.11513867841717793
+        },
+        {
+          "gap": 1.7701340012850673,
+          "normalized_packet_residue": 0.11410548290417802
+        },
+        {
+          "gap": 1.7269902010752416,
+          "normalized_packet_residue": 0.058301931729755126
+        },
+        {
+          "gap": 1.7269902010752411,
+          "normalized_packet_residue": 0.05829673874838765
+        },
+        {
+          "gap": 1.7227819662603827,
+          "normalized_packet_residue": 0.05468005563449401
+        },
+        {
+          "gap": 1.7227819662603823,
+          "normalized_packet_residue": 0.05467996038785849
+        }
+      ],
+      "initial_final_overlap": 2.0258761662670072e-17,
+      "initial_highest_photon_shell_probability": 0.9999999999999991,
+      "observation_times": [
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "amplitudes": [
+        [
+          -0.0003629985880856182,
+          0.0002321496096213821
+        ],
+        [
+          -0.00039661039238187215,
+          0.0008182301747037823
+        ],
+        [
+          0.0011303421008653641,
+          0.0017880990961296472
+        ],
+        [
+          0.003754855081980181,
+          -0.0037383650211778863
+        ]
+      ],
+      "exclusive_probabilities": [
+        1.856614161995124e-07,
+        8.268004221410847e-07,
+        4.474971642568386e-06,
+        2.8074309718238733e-05
+      ],
+      "finite_spectral_amplitude_error": 2.220446049250313e-16,
+      "finite_spectral_probability_intervals": [
+        [
+          1.8566141619932105e-07,
+          1.8566141619970375e-07
+        ],
+        [
+          8.268004221406809e-07,
+          8.268004221414885e-07
+        ],
+        [
+          4.474971642567447e-06,
+          4.474971642569325e-06
+        ],
+        [
+          2.8074309718236378e-05,
+          2.8074309718241084e-05
+        ]
+      ],
+      "error_meaning": "Cauchy-Schwarz bound for omitted spectral subspace of THIS finite matrix, excluding floating-point/ARPACK residual error and infinite-toron/photon truncation. Dense cases have all eigenpairs.",
+      "norm_residual": 1.1102230246251565e-16,
+      "toron_highest_shell_probability": 0.36104907053926216,
+      "nonzero_winding_transition_norm": 9.587333065554677,
+      "compact_Haar_quadrature_points": 24,
+      "exact_integer_Gauss": true,
+      "source": "Charged intertwiner with neutral Ref and -Q static compensator at site1. Integer string on x0 and ALL retained integer winding characters; norm conditional on dressed spectral preparation.",
+      "meaning": "Exact finite projected quantum spectral probability for same-spin y-to-z packet on interacting charged dressed ground. Vacuum polarization conversion is the disconnected control; not a full-box cross section or unprojected error certificate."
+    },
+    "zero_coupling": {
+      "order": 2,
+      "toron_cutoff": 1,
+      "active_number": 5,
+      "dimension": 672,
+      "retained_spectral_dimension": 672,
+      "observed_eigen_residual": 2.1525932319223693e-13,
+      "transfer_minimum_lower_bound": 0.02973310081915876,
+      "transfer_maximum": 84.59092418405437,
+      "one_body_transfer_minimum": 0.3322203765689059,
+      "log_ground_transfer": 4.4378269817090645,
+      "local_periodic_preparation": {
+        "angular_packet_width": 0.4,
+        "integer_Fourier_projection_weight": 0.6102923528344872,
+        "local_sea_overlap_gram_minimum": 0.9999999999999997,
+        "exclusive_probabilities": [
+          5.0754272565679875e-31,
+          4.03542508659888e-31,
+          3.0357470748403805e-31,
+          3.1594880737672604e-31
+        ],
+        "amplitudes": [
+          [
+            -3.0184188481996443e-16,
+            -6.453171330633722e-16
+          ],
+          [
+            -5.204170427930421e-16,
+            -3.642919299551295e-16
+          ],
+          [
+            -4.440892098500626e-16,
+            3.2612801348363973e-16
+          ],
+          [
+            5.620504062164855e-16,
+            6.938893903907228e-18
+          ]
+        ],
+        "finite_spectral_amplitude_error": 4.440892098500626e-16,
+        "finite_spectral_probability_intervals": [
+          [
+            7.20015896866796e-32,
+            1.3375143142374238e-30
+          ],
+          [
+            3.654243148906787e-32,
+            1.164973038441214e-30
+          ],
+          [
+            1.1424815960014043e-32,
+            9.90155051618568e-31
+          ],
+          [
+            1.3924950485657916e-32,
+            1.0124031168783e-30
+          ]
+        ],
+        "integer_toron_edge_probability": 0.630216842261825,
+        "meaning": "Prepared local periodic Gaussian around holonomy0 with actual field-dependent filled Wilson Slater and one projected charged mode. SAME positive native transfer, no trap, no mass fit, no global-ground substitution. Finite observation, not stationary dressed photon/electron poles."
+      },
+      "dressed_ground_degeneracy": 6,
+      "dressed_spin_eigenvalues": [
+        -0.5,
+        -0.49999999999999994,
+        -0.4999999999999992,
+        0.4999999999999994,
+        0.5000000000000002,
+        0.5000000000000009
+      ],
+      "dressed_excitation_gaps": [
+        0.019999999999993367,
+        0.01999999999999416,
+        0.0199999999999945,
+        0.020000000000001864,
+        0.02000000000000243,
+        0.02000000000000243,
+        1.0919567454272634,
+        1.0919567454272638
+      ],
+      "photon_spectral_measure": [
+        {
+          "gap": 1.7627471740390885,
+          "normalized_packet_residue": 0.4465011528404923
+        },
+        {
+          "gap": 1.7627471740390899,
+          "normalized_packet_residue": 0.2353414806097909
+        },
+        {
+          "gap": 1.7627471740390894,
+          "normalized_packet_residue": 0.1455149866607347
+        },
+        {
+          "gap": 1.762747174039088,
+          "normalized_packet_residue": 0.04965056841845037
+        },
+        {
+          "gap": 1.7627471740390874,
+          "normalized_packet_residue": 0.03228641707135913
+        },
+        {
+          "gap": 1.7627471740390879,
+          "normalized_packet_residue": 0.03143600853114356
+        },
+        {
+          "gap": 1.7627471740390905,
+          "normalized_packet_residue": 0.017172933896133294
+        },
+        {
+          "gap": 1.7627471740390874,
+          "normalized_packet_residue": 0.013799360390189128
+        }
+      ],
+      "initial_final_overlap": 1.6327250832509997e-17,
+      "initial_highest_photon_shell_probability": 0.9999999999999994,
+      "observation_times": [
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "amplitudes": [
+        [
+          -1.942890293094024e-16,
+          1.3530843112619095e-16
+        ],
+        [
+          -1.457167719820518e-16,
+          2.0816681711721685e-16
+        ],
+        [
+          -6.938893903907228e-18,
+          3.122502256758253e-16
+        ],
+        [
+          4.510281037539698e-16,
+          7.28583859910259e-17
+        ]
+      ],
+      "exclusive_probabilities": [
+        5.605659844382099e-32,
+        6.456680138558208e-32,
+        9.754835168321351e-32,
+        2.087346947851191e-31
+      ],
+      "finite_spectral_amplitude_error": 8.599750569898517e-16,
+      "finite_spectral_probability_intervals": [
+        [
+          0.0,
+          1.2028338110563988e-30
+        ],
+        [
+          0.0,
+          1.2411631948379196e-30
+        ],
+        [
+          0.0,
+          1.3742928513283826e-30
+        ],
+        [
+          0.0,
+          1.734093868412493e-30
+        ]
+      ],
+      "error_meaning": "Cauchy-Schwarz bound for omitted spectral subspace of THIS finite matrix, excluding floating-point/ARPACK residual error and infinite-toron/photon truncation. Dense cases have all eigenpairs.",
+      "norm_residual": 1.6653345369377348e-15,
+      "toron_highest_shell_probability": 0.9768997220687016,
+      "nonzero_winding_transition_norm": 1.3802174472318344e-14,
+      "compact_Haar_quadrature_points": 24,
+      "exact_integer_Gauss": true,
+      "source": "Charged intertwiner with neutral Ref and -Q static compensator at site1. Integer string on x0 and ALL retained integer winding characters; norm conditional on dressed spectral preparation.",
+      "meaning": "Exact finite projected quantum spectral probability for same-spin y-to-z packet on interacting charged dressed ground. Vacuum polarization conversion is the disconnected control; not a full-box cross section or unprojected error certificate."
+    }
+  },
+  "truncation_sequence_probability_differences": [],
+  "photon_kernel": "Same induced beta, canonical coexact oscillator: omega=2asinh(khat/2), khat=2. Vacuum variance1/(2sinh omega). Symmetric positive photon/Fock/Coulomb transfer; no imported Thomson or KN coefficient.",
+  "material_repairs": [
+    "Reject Q delta<<1 and free-global-state closeness; retain full nonlinear compact character at all DVR nodes.",
+    "Replace free sea boundary by exact interacting dressed charged/vacuum ground states, then create/detect polarized photon packets. First spinflip probe failed by forward-channel selection; repaired to same-spin polarization conversion.",
+    "Reject fixed minimizing integer-flux state: it kills compact hopping. Retain integer toron m, exact winding Fourier transitions, actual electric cost and addressed remote source.",
+    "Reject global holonomy ground mass93.7 as physical mass1: prepare a periodic Gaussian around holonomy0 with field-dependent filled sea and real charged local packet, propagated by the unchanged transfer. Preparation and spectral truncation prices remain explicit.",
+    "Increase native photon/toron cutoffs after edge-shell/convergence failure; determinant scalar retained at every node."
+  ],
+  "rejected_historical_capsules": {
+    "first_probe": "Spinflip forward selection gives zero; free/fractional background construction withdrawn.",
+    "repaired_probe": "Finite photon cutoff converged but minimized toron string incompatible with x hopping; not a compact source result.",
+    "sparse_probe": "Complex ARPACK degeneracy gave nonorthogonal retained vectors and false clamped spectral error. Withdrawn; QR plus Hermitian Rayleigh-Ritz is now used."
+  },
+  "conditional_packet": "Normalized finite standing-wave y/z photons on the two-site coexact pi mode; projected Gaussian oscillator/reference. NOT the baseline125-mode spatial Gaussian packet or full-box continuum scattering.",
+  "error_status": "Finite spectral-subspace Cauchy-Schwarz intervals only, with numerical eigen residual observed separately. Successive cutoffs/highest-shell probability are NOT rigorous infinite-toron/photon or omitted-mode bounds. No unprojected probability/error or observed physical-QED claim.",
+  "continuum_and_renormalization_debt": [
+    "Two-site box has k=pi/a, NOT continuum/IR Compton. No continuum/lattice/finite-volume extrapolation paid.",
+    "Gaussian induced photon kernel imported from the large-box supplier as a conditional reference. The auxiliary law CANNOT be rerun on two sites: length-two winding would dominate Naux kaux\u00b2. Thus this native diagnostic is not literally the same full microscopic lattice law.",
+    "Charge-Q toron flux coset0 chosen in native finite quotient. Auxiliary charge1 winding mixes other cosets in the full law; this omitted effect is not certified by native diagnostics.",
+    "Bare alpha=Q^2/(4pi beta); measured zero-momentum renormalized alpha not obtained from finite UV response.",
+    "Mass means finite dressed charged-neutral transfer gap, not infinite-volume infraparticle pole; bare mass remains input.",
+    "No measured velocity renormalization with only two momenta; no fitted common speed.",
+    "Full compact Haar transfer, all omitted coexact/toron modes and rigorous infinite-Fock remainder remain missing. Integer Gauss/source dressing and its Coulomb energy are retained in the native quotient.",
+    "Normal/Phi/colour transport conditional; Naux+1 count unchanged. Native diagnostic is not full SU4 gauge-projected source probability."
+  ],
+  "capsule": {
+    "source_at_import": {
+      "physical_alpha_compton.py": "a61af60d30695f8d8c97ddcdb41203789a594958a9c9e9426e4af559f17e7737",
+      "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+      "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459"
+    },
+    "source_snapshot_at_import": {
+      "physical_alpha_compton.py": "#!/usr/bin/env python3\n\"\"\"NEW integer-charge physical-alpha fork; not the ultraweak baseline.\n\nExact native two-site/two-coexact-mode Wilson quantum experiment.  Positive\ntransfer and its real-time spectral continuation include the active sea once.\nThe finite projected probability is NOT a full L=2**24 continuum QED result.\nThe unprojected compact, omitted-mode, colour/Phi and continuum debts are printed.\n\"\"\"\nfrom __future__ import annotations\n\nimport argparse\nfrom dataclasses import asdict, dataclass\nfrom decimal import Decimal, localcontext\nimport hashlib\nimport itertools\nimport json\nimport math\nimport os\nfrom pathlib import Path\nimport platform\nimport sys\nimport time\nfrom typing import Any, cast\n\nif __name__ == '__main__':\n    os.environ['OPENBLAS_NUM_THREADS'] = '1'\n\nimport numpy as np\nimport scipy\nimport mpmath as mp\nfrom scipy.linalg import eigh\nfrom scipy.sparse.linalg import LinearOperator, eigsh\n\nROOT = Path(__file__).resolve().parent\nSOURCE_BYTES = {name: (ROOT / name).read_bytes() for name in\n                ('physical_alpha_compton.py', 'sea_selection.py', 'rotation_band.py')}\nSOURCE_HASHES = {name: hashlib.sha256(value).hexdigest() for name, value in SOURCE_BYTES.items()}\nfrom sea_selection import SELECTED\n\n\n@dataclass(frozen=True)\nclass Parameters:\n    inverse_alpha: str = '137.035999084'\n    beta_power: int = 150\n    kappa_power: int = 250\n    mass: float = 1.\n    spacing: float = .01\n    orders: tuple[int, ...] = (3, 3, 4)\n    toron_cutoffs: tuple[int, ...] = (1, 3, 5)\n    observation_times: tuple[float, ...] = (.25, .5, 1., 2.)\n    toron_packet_width: float = .4\n    dense_limit: int = 2000\n\n\ndef charge_contract(p: Parameters) -> dict[str, Any]:\n    # 110 decimal digits resolve the enormous integer choice, not merely e.\n    with localcontext() as context:\n        context.prec = 110\n        pi = Decimal('3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651')\n        beta = Decimal(10) ** p.beta_power\n        target = (4*pi*beta/Decimal(p.inverse_alpha)).sqrt()\n        q = int(target.to_integral_value())\n        alpha = Decimal(q*q)/(4*pi*beta)\n        e = Decimal(q)/beta.sqrt()\n        rounding = abs(alpha*Decimal(p.inverse_alpha)-1)\n    naux = 10**(p.beta_power+4*p.kappa_power)//16\n    volume = 2**72\n    with mp.workdps(180):\n        theta = mp.mpf('.23')/mp.sqrt(mp.mpf(str(beta)))\n        link = mp.exp(mp.j*theta)\n        active = link**q\n        expected = mp.exp(mp.j*mp.mpf(str(e))*mp.mpf('.23'))\n        character_error = str(abs(active-expected))\n        periodic_error = str(abs(mp.exp(mp.j*(theta+2*mp.pi))**q-active))\n        aux_phase = str(abs(link-1))\n    kappa = 1/(2*(4+math.expm1(p.spacing*p.mass)))\n    return dict(Q=str(q), auxiliary_charge=1, reference_primitive_charge=0,\n                physical_e=float(e), bare_alpha=str(alpha), relative_integer_rounding=str(rounding),\n                Naux=str(naux), SU4_species_count=str(naux+1), active_filled_vacuum_count=1,\n                beta=str(beta), selected_integer_charge_is_input=True,\n                charges='rho=Q(n_active-2)+sum_aux(n_aux-2); Ref contributes zero. Source has +Q and needs a compensating -Q charge and electric-flux dressing.',\n                background_active_per_site=str(2*q), auxiliary_background_per_site=2,\n                neutralizing_background='Charged sector has integer -Q static compensator at site1. Integer x-link flux E0-E1=Q(n0-2) gives exact Gauss; Ref remains charge0. Photon projection does not replace this charge ledger.',\n                exact_link='U=exp(i theta), theta=A/sqrt(beta); active U**Q=exp(i Q theta), aux U. No noninteger compact character.',\n                literal_compact_character_probe=dict(decimal_digits=180,\n                    primitive_theta=mp.nstr(theta, 12), active_power_error=character_error,\n                    integer_periodicity_error=periodic_error, auxiliary_link_change=aux_phase),\n                active_kappa=kappa, full_Wilson_B_lower=1-6*kappa,\n                Ref_modes=4, Ref_initial_occupation=4, Ref_after_source_occupation=3,\n                inherited_chart_Q_delta=float(e)*10**(p.beta_power/2-50),\n                inherited_global_state_budget=32*4*volume*2**20*math.log(1+8/math.expm1(p.spacing*p.mass)),\n                inherited_bounds_rejected=True,\n                actual_compact_typical_phase_scale=float(e),\n                microscopic_parameters_are_inputs=['Grassmann/Haar quantum law','Q','m0=expm1(a mass)','a','Naux','kaux','selected Clifford/Phi frame'])\n\n\ndef gamma_frame() -> np.ndarray:\n    beta, alpha = SELECTED[0], SELECTED[1:]\n    gamma = np.array([beta] + [1j*beta@x for x in alpha])\n    if max(np.linalg.norm(gamma[i]@gamma[j]+gamma[j]@gamma[i]\n                          -(2*np.eye(4) if i == j else 0))\n           for i in range(4) for j in range(4)) > 1e-12:\n        raise ArithmeticError('Captured frame is not Clifford')\n    return gamma\n\n\ndef spatial_blocks(gamma: np.ndarray, p: Parameters, phases: np.ndarray) -> tuple[np.ndarray, np.ndarray]:\n    \"\"\"Actual two-site Wilson links, including transverse self-links.\"\"\"\n    b = (1+math.expm1(p.spacing*p.mass)+3)*np.eye(8, dtype=complex)\n    c = np.zeros((8, 8), complex)\n    for x in range(2):\n        for j in range(3):\n            y = 1-x if j == 0 else x\n            sx, sy = slice(4*x, 4*x+4), slice(4*y, 4*y+4)\n            link = np.exp(1j*phases[x, j])\n            b[sx, sy] -= .5*link*np.eye(4)\n            b[sy, sx] -= .5*link.conjugate()*np.eye(4)\n            c[sx, sy] += .5*link*gamma[j+1]\n            c[sy, sx] -= .5*link.conjugate()*gamma[j+1]\n    return b, c\n\n\ndef one_transfer(gamma: np.ndarray, p: Parameters, phases: np.ndarray) -> tuple[np.ndarray, float]:\n    b, c = spatial_blocks(gamma, p, phases)\n    _, basis = np.linalg.eigh(gamma[0])\n    plus = np.kron(np.eye(2), basis[:, 2:])\n    minus = np.kron(np.eye(2), basis[:, :2])\n    bp, bm = plus.conj().T@b@plus, minus.conj().T@b@minus\n    f = plus.conj().T@c@minus\n    l = np.block([[np.eye(4), -f], [np.zeros((4, 4)), np.eye(4)]])\n    t = l.conj().T@scipy.linalg.block_diag(np.linalg.inv(bp), bm)@l\n    if np.linalg.eigvalsh(t)[0] <= 0 or np.linalg.eigvalsh(bp)[0] <= 0:\n        raise ArithmeticError('Wilson transfer lost positivity')\n    return t, float(np.linalg.slogdet(bp)[1])\n\n\ndef second_quantized(h: np.ndarray, number: int) -> tuple[np.ndarray, list[int]]:\n    masks = [sum(1 << j for j in occupied) for occupied in itertools.combinations(range(8), number)]\n    lookup = {mask: i for i, mask in enumerate(masks)}\n    out = np.zeros((len(masks), len(masks)), complex)\n    for column, mask in enumerate(masks):\n        for j in range(8):\n            if not mask & (1 << j):\n                continue\n            removed = mask ^ (1 << j)\n            first = (-1)**((mask & ((1 << j)-1)).bit_count())\n            for i in range(8):\n                if removed & (1 << i):\n                    continue\n                sign = first*(-1)**((removed & ((1 << i)-1)).bit_count())\n                out[lookup[removed | (1 << i)], column] += sign*h[i, j]\n    return out, masks\n\n\ndef integer_electric_energy(masks: list[int], e: float, torons: np.ndarray) -> np.ndarray:\n    # Every state has exact integer flux E0=Q(r0+m), E1=Qm.\n    # Static -Q at site1 in K5 ensures rho1=-rho0. Ref has EM charge zero.\n    # Keeping m transitions is essential: fixing the minimizing flux kills hops.\n    site0 = (0, 1, 4, 5)\n    r0 = np.array([sum(bool(mask & (1 << i)) for i in site0)-2 for mask in masks])\n    return .5*e*e*((r0[None, :]+torons[:, None])**2+torons[:, None]**2)\n\n\ndef oscillator(order: int, omega: float) -> tuple[np.ndarray, np.ndarray, np.ndarray]:\n    annihilator = np.diag(np.sqrt(np.arange(1, order)), 1)\n    coordinate = (annihilator+annihilator.T)/math.sqrt(2*math.sinh(omega))\n    nodes, transform = np.linalg.eigh(coordinate)\n    return nodes, transform, annihilator\n\n\ndef native_sector(gamma: np.ndarray, p: Parameters, e: float, order: int, number: int,\n                  drop_prefactor: bool = False, toron_cutoff: int = 1) -> dict[str, Any]:\n    \"\"\"Positive finite Fourier/Gauss projection of detB Gamma(T1).\n\n    Exact integer electric flux includes the charged source string and winding.\n    A normalized Haar Fourier quadrature gives a positive Toeplitz compression.\n    Photon DVR remains a finite model, not an infinite-Fock truncation theorem.\n    \"\"\"\n    omega = 2*math.asinh(1.)\n    nodes, transform, annihilator = oscillator(order, omega)\n    photon_basis = np.kron(transform, transform)\n    occupations = np.array([i+j for i in range(order) for j in range(order)])\n    half_photon = photon_basis.T@np.diag(np.exp(-.5*omega*occupations))@photon_basis\n    _, masks = second_quantized(np.eye(8), number)\n    fock_size = len(masks)\n    torons = np.arange(-toron_cutoff, toron_cutoff+1)\n    size = fock_size*len(torons)\n    electric = integer_electric_energy(masks, e, torons).reshape(-1)\n    quadrature = max(24, 4*toron_cutoff+4)\n    angles = 2*np.pi*np.arange(quadrature)/quadrature\n    characters = np.exp(-1j*np.outer(torons, angles))/math.sqrt(quadrature)\n    local_blocks = []\n    minimum = float('inf')\n    local_minimum = float('inf')\n    winding_norm = 0.\n    spin_x = -.5j*gamma[2]@gamma[3]\n    _, basis = np.linalg.eigh(gamma[0])\n    change = np.column_stack((basis[:, 2:], basis[:, :2]))\n    site_spin = np.kron(np.eye(2), change.conj().T@spin_x@change)\n    permutation = [0, 1, 4, 5, 2, 3, 6, 7]\n    site_spin = site_spin[np.ix_(permutation, permutation)]\n    free_transfer, _ = one_transfer(gamma, p, np.zeros((2, 3)))\n    _, free_vectors = eigh(free_transfer)\n    free_sea = free_vectors[:, 4:]\n    # A continuous local occupied frame, not arbitrary eigensolver phases.\n    free_positive = free_vectors[:, 2:4]\n    _, free_spin = eigh(free_positive.conj().T@site_spin@free_positive)\n    free_electron = free_positive@free_spin[:, -1]\n    signed_angles = (angles+math.pi) % (2*math.pi)-math.pi\n    angular_packet = np.exp(-signed_angles**2/(2*p.toron_packet_width**2))\n    angular_packet /= np.linalg.norm(angular_packet)\n    photon_vacuum = photon_basis[0]\n    local_wave = np.zeros((order*order, quadrature, fock_size), complex)\n    gram_minimum = 1.\n    for coordinate_index, (ay, az) in enumerate(itertools.product(nodes, repeat=2)):\n        coordinate_blocks = []\n        winding = np.zeros((fock_size, fock_size), complex)\n        for index, holonomy in enumerate(angles):\n            phases = np.zeros((2, 3))\n            # Tree gauge theta_x0=0, Q theta_x1=holonomy; character m means\n            # primitive integer electric flux Qm, never noninteger charge.\n            phases[1, 0] = holonomy if e else 0.\n            phases[:, 1] = e*ay*np.array([1., -1.])/math.sqrt(2)\n            phases[:, 2] = e*az*np.array([1., -1.])/math.sqrt(2)\n            t, logdet_b = one_transfer(gamma, p, phases)\n            eigenvalues, one_vectors = eigh(t)\n            occupied = one_vectors[:, 4:]@one_vectors[:, 4:].conj().T\n            mapped = occupied@free_sea\n            gram_values, gram_vectors = eigh(mapped.conj().T@mapped)\n            gram_minimum = min(gram_minimum, float(gram_values[0]))\n            if gram_values[0] <= 1e-12:\n                raise ArithmeticError('Local sea chart fails before packet preparation')\n            sea = mapped@(gram_vectors/np.sqrt(gram_values))@gram_vectors.conj().T\n            if number == 5:\n                electron = free_electron-occupied@free_electron\n                electron /= np.linalg.norm(electron)\n                columns = np.column_stack((sea, electron))\n            else:\n                columns = sea\n            local_fock = np.array([np.linalg.det(columns[\n                [bit for bit in range(8) if mask & (1 << bit)], :]) for mask in masks])\n            local_wave[coordinate_index, index] = (\n                photon_vacuum[coordinate_index]*angular_packet[index]*local_fock)\n            minimum = min(minimum, float(eigenvalues[0]))\n            logarithm = (one_vectors*np.log(eigenvalues))@one_vectors.conj().T\n            lifted, _ = second_quantized(logarithm, number)\n            if not drop_prefactor:\n                lifted += logdet_b*np.eye(fock_size)\n            eigen, spin = eigh(lifted)\n            local = (spin*np.exp(eigen))@spin.conj().T\n            local_minimum = min(local_minimum, float(math.exp(eigen[0])))\n            coordinate_blocks.append(local)\n            winding += np.exp(-1j*holonomy)*local/quadrature\n        winding_norm = max(winding_norm, float(np.linalg.norm(winding)))\n        local_blocks.append(coordinate_blocks)\n    blocks = np.array(local_blocks)\n    electric_half = np.exp(-.5*electric).reshape(len(torons), fock_size)\n    dimension = order*order*size\n    def apply_kernel(argument: np.ndarray) -> np.ndarray:\n        single = argument.ndim == 1\n        state = argument.reshape(order*order, len(torons), fock_size, -1)\n        state = np.einsum('ab,bmfc->amfc', half_photon, state, optimize=True)\n        state *= electric_half[None, :, :, None]\n        phase_state = np.einsum('mq,amfc->aqfc', characters.conj(), state, optimize=True)\n        phase_state = np.einsum('aqfg,aqgc->aqfc', blocks, phase_state, optimize=True)\n        state = np.einsum('mq,aqfc->amfc', characters, phase_state, optimize=True)\n        state *= electric_half[None, :, :, None]\n        state = np.einsum('ab,bmfc->amfc', half_photon, state, optimize=True)\n        return state.reshape(dimension) if single else state.reshape(dimension, -1)\n    # SciPy's runtime factory accepts callbacks; its abstract-class stub does not.\n    kernel = cast(Any, LinearOperator)((dimension, dimension),\n                 matvec=apply_kernel, matmat=apply_kernel, dtype=np.dtype(complex))\n    transfer_lower = local_minimum*math.exp(-2*omega*(order-1)-float(max(electric)))\n    if dimension <= p.dense_limit:\n        transfer = np.empty((dimension, dimension), complex)\n        for start in range(0, dimension, 32):\n            stop = min(dimension, start+32)\n            unit_columns = np.zeros((dimension, stop-start))\n            unit_columns[np.arange(start, stop), np.arange(stop-start)] = 1.\n            transfer[:, start:stop] = apply_kernel(unit_columns)\n        values, vectors = eigh((transfer+transfer.conj().T)/2, driver='evd')\n        if values[0] <= 0:\n            raise ArithmeticError('Native full quantum transfer is not positive')\n        transfer_lower = float(values[0])\n    else:\n        # Installed SciPy stub incorrectly types fractional tolerance as int.\n        values, vectors = cast(Any, eigsh)(kernel, k=min(160, dimension-2),\n             which='LA', tol=1e-12, v0=np.linspace(.1, 1., dimension).astype(complex))\n        orthonormal, _ = np.linalg.qr(vectors)\n        projected = orthonormal.conj().T@apply_kernel(orthonormal)\n        values, rotations = eigh((projected+projected.conj().T)/2)\n        vectors = orthonormal@rotations\n    eigen_residual = 0.\n    for start in range(max(0, len(values)-160), len(values), 32):\n        chosen = vectors[:, start:start+32]\n        residual = apply_kernel(chosen)-chosen*values[None, start:start+32]\n        eigen_residual = max(eigen_residual, float(max(np.linalg.norm(residual, axis=0))))\n    energies = -np.log(values/values[-1])\n    ground = vectors[:, -1]\n    ground_dimension = int(np.count_nonzero(energies < 1e-9))\n    # Diagonalize physical Jx in the degenerate charged dressed ground space.\n    spin_fock, _ = second_quantized(site_spin, number)\n    if number == 5 and ground_dimension >= 2:\n        subspace = vectors[:, -ground_dimension:]\n        tensor = subspace.reshape(order*order*len(torons), fock_size, ground_dimension)\n        spin_applied = np.einsum('fg,agc->afc', spin_fock, tensor).reshape(dimension, ground_dimension)\n        spins, rotations = eigh(subspace.conj().T@spin_applied)\n        incoming_ground = subspace@rotations[:, -1]\n        outgoing_ground = incoming_ground\n    else:\n        spins = np.array([0.])\n        incoming_ground = outgoing_ground = ground\n    creator = transform.T@annihilator.T@transform\n    def create_packet(state: np.ndarray, axis: int) -> np.ndarray:\n        tensor = state.reshape(order, order, size)\n        return (np.einsum('ij,jkf->ikf', creator, tensor) if axis == 0\n                else np.einsum('ij,kjf->kif', creator, tensor)).reshape(-1)\n    initial = create_packet(incoming_ground, 0)\n    final = create_packet(outgoing_ground, 1)\n    initial -= incoming_ground*np.vdot(incoming_ground, initial)\n    final -= outgoing_ground*np.vdot(outgoing_ground, final)\n    initial /= np.linalg.norm(initial)\n    # Detector orthogonal to initial: exclusive connected channel, no t=0 echo.\n    final -= initial*np.vdot(initial, final)\n    final /= np.linalg.norm(final)\n    vi, vf = vectors.conj().T@initial, vectors.conj().T@final\n    initial_missing = max(0., 1-float(np.vdot(vi, vi).real))\n    final_missing = max(0., 1-float(np.vdot(vf, vf).real))\n    amplitude_error = math.sqrt(initial_missing*final_missing)\n    probabilities, amplitudes = [], []\n    for observation in p.observation_times:\n        amplitude = np.vdot(vf, np.exp(-1j*observation*energies)*vi)\n        amplitudes.append([float(amplitude.real), float(amplitude.imag)])\n        probabilities.append(float(abs(amplitude)**2))\n    # High-shell probability is a discriminant, not a truncation certificate.\n    edge = np.array([i == order-1 or j == order-1 for i in range(order) for j in range(order)])\n    initial_number = (photon_basis@initial.reshape(order*order, size)).reshape(-1)\n    shell = float(np.sum(abs(initial_number.reshape(order*order, size)[edge])**2))\n    toron_state = initial_number.reshape(order*order, len(torons), fock_size)\n    toron_edge = float(np.sum(abs(toron_state[:, [0, -1], :])**2))\n    prepared = np.einsum('mq,aqf->amf', characters, local_wave).reshape(-1)\n    projection_weight = float(np.vdot(prepared, prepared).real)\n    prepared /= math.sqrt(projection_weight)\n    local_initial = create_packet(prepared, 0)\n    local_final = create_packet(prepared, 1)\n    local_initial -= prepared*np.vdot(prepared, local_initial)\n    local_final -= prepared*np.vdot(prepared, local_final)\n    local_initial /= np.linalg.norm(local_initial)\n    local_final -= local_initial*np.vdot(local_initial, local_final)\n    local_final /= np.linalg.norm(local_final)\n    local_vi, local_vf = vectors.conj().T@local_initial, vectors.conj().T@local_final\n    local_error = math.sqrt(max(0., 1-float(np.vdot(local_vi, local_vi).real))*\n                            max(0., 1-float(np.vdot(local_vf, local_vf).real)))\n    local_amplitudes = [np.vdot(local_vf, np.exp(-1j*t*energies)*local_vi)\n                        for t in p.observation_times]\n    local_probabilities = [float(abs(amplitude)**2) for amplitude in local_amplitudes]\n    local_intervals = [[max(0., abs(amplitude)-local_error)**2,\n                       min(1., (abs(amplitude)+local_error)**2)]\n                      for amplitude in local_amplitudes]\n    return dict(order=order, toron_cutoff=toron_cutoff, active_number=number, dimension=dimension,\n                retained_spectral_dimension=len(values), observed_eigen_residual=eigen_residual,\n                transfer_minimum_lower_bound=transfer_lower, transfer_maximum=float(values[-1]),\n                one_body_transfer_minimum=minimum, log_ground_transfer=float(math.log(values[-1])),\n                local_periodic_preparation=dict(\n                    angular_packet_width=p.toron_packet_width,\n                    integer_Fourier_projection_weight=projection_weight,\n                    local_sea_overlap_gram_minimum=gram_minimum,\n                    exclusive_probabilities=local_probabilities,\n                    amplitudes=[[float(z.real), float(z.imag)] for z in local_amplitudes],\n                    finite_spectral_amplitude_error=local_error,\n                    finite_spectral_probability_intervals=local_intervals,\n                    integer_toron_edge_probability=float(np.sum(abs(\n                        prepared.reshape(order*order, len(torons), fock_size)[:, [0, -1]])**2)),\n                    meaning='Prepared local periodic Gaussian around holonomy0 with actual field-dependent filled Wilson Slater and one projected charged mode. SAME positive native transfer, no trap, no mass fit, no global-ground substitution. Finite observation, not stationary dressed photon/electron poles.'),\n                dressed_ground_degeneracy=ground_dimension, dressed_spin_eigenvalues=spins.tolist(),\n                dressed_excitation_gaps=sorted(energies[energies > 1e-9].tolist())[:8],\n                photon_spectral_measure=[dict(gap=float(energies[index]),\n                                              normalized_packet_residue=float(abs(vi[index])**2))\n                                         for index in np.argsort(abs(vi)**2)[-8:][::-1]],\n                initial_final_overlap=float(abs(np.vdot(initial, final))),\n                initial_highest_photon_shell_probability=shell,\n                observation_times=list(p.observation_times), amplitudes=amplitudes,\n                exclusive_probabilities=probabilities,\n                finite_spectral_amplitude_error=amplitude_error,\n                finite_spectral_probability_intervals=[\n                    [max(0., math.sqrt(probability)-amplitude_error)**2,\n                     min(1., (math.sqrt(probability)+amplitude_error)**2)]\n                    for probability in probabilities],\n                error_meaning='Cauchy-Schwarz bound for omitted spectral subspace of THIS finite matrix, excluding floating-point/ARPACK residual error and infinite-toron/photon truncation. Dense cases have all eigenpairs.',\n                norm_residual=float(abs(np.vdot(vi, vi)-1)),\n                toron_highest_shell_probability=toron_edge,\n                nonzero_winding_transition_norm=winding_norm,\n                compact_Haar_quadrature_points=quadrature,\n                exact_integer_Gauss=True,\n                _states=dict(masks=masks, ground=ground, charged_ground=incoming_ground,\n                             ground_space=vectors[:, -ground_dimension:]),\n                source='Charged intertwiner with neutral Ref and -Q static compensator at site1. Integer string on x0 and ALL retained integer winding characters; norm conditional on dressed spectral preparation.',\n                meaning='Exact finite projected quantum spectral probability for same-spin y-to-z packet on interacting charged dressed ground. Vacuum polarization conversion is the disconnected control; not a full-box cross section or unprojected error certificate.')\n\n\ndef determinant_response(gamma: np.ndarray, p: Parameters, e: float) -> dict[str, Any]:\n    \"\"\"Full unquenched active determinant on a time-dependent finite link slab.\"\"\"\n    nt = 6\n    profile = np.sin(2*np.pi*np.arange(nt)/nt)\n    def dirac(amplitude: float) -> tuple[np.ndarray, np.ndarray, float]:\n        d = np.zeros((8*nt, 8*nt), complex)\n        product = np.eye(8, dtype=complex)\n        prefactor = 0.\n        plus, minus = (np.eye(4)+gamma[0])/2, (np.eye(4)-gamma[0])/2\n        for t in range(nt):\n            phases = np.zeros((2, 3))\n            phases[:, 1] = amplitude*e*profile[t]*np.array([1., -1.])/math.sqrt(2)\n            b, c = spatial_blocks(gamma, p, phases)\n            sx = slice(8*t, 8*t+8)\n            d[sx, sx] = b+c\n            next_t = (t+1) % nt\n            sy = slice(8*next_t, 8*next_t+8)\n            sign = -1 if t == nt-1 else 1\n            d[sx, sy] -= sign*np.kron(np.eye(2), minus)\n            d[sy, sx] -= sign*np.kron(np.eye(2), plus)\n            transfer, logdet = one_transfer(gamma, p, phases)\n            product = transfer@product\n            prefactor += logdet\n        return d, product, prefactor\n    amplitude = .23\n    d, product, scalar = dirac(amplitude)\n    _, direct = np.linalg.slogdet(d)\n    _, recurrence = np.linalg.slogdet(np.eye(8)+product)\n    defect = abs(direct-scalar-recurrence)\n    if defect > 1e-9:\n        raise ArithmeticError(f'Active determinant/positive transfer mismatch {defect}')\n    h = 1e-4\n    low, _, _ = dirac(amplitude-h)\n    high, _, _ = dirac(amplitude+h)\n    derivative = (high-low)/(2*h)\n    contact = (high-2*d+low)/(h*h)\n    inverse = np.linalg.inv(d)\n    current = -np.trace(inverse@derivative).real\n    bubble = np.trace(inverse@derivative@inverse@derivative).real\n    seagull = -np.trace(inverse@contact).real\n    action_curvature = float(bubble+seagull)\n    curvature_check = (-np.linalg.slogdet(high)[1]+2*direct-np.linalg.slogdet(low)[1])/(h*h)\n    # Full primitive temporal current/contact: an actual gauge orbit changes\n    # temporal AND spatial links. The Ward Hessian must vanish, not just its\n    # transverse response. Dropping the temporal contact gives a false signal.\n    gauge = np.repeat(np.array([math.sin(2*math.pi*t/nt)+.31*(-1)**x\n                                for t in range(nt) for x in range(2)]), 4)\n    delta = gauge[:, None]-gauge[None, :]\n    gauge_current = 1j*e*delta*d\n    gauge_contact = -e*e*delta**2*d\n    temporal_mask = np.repeat(np.arange(nt), 8)[:, None] != np.repeat(np.arange(nt), 8)[None, :]\n    ward_bubble = np.trace(inverse@gauge_current@inverse@gauge_current).real\n    ward_contact = -np.trace(inverse@gauge_contact).real\n    temporal_contact = -np.trace(inverse@(gauge_contact*temporal_mask)).real\n    ward_residual = abs(ward_bubble+ward_contact)\n    if ward_residual > 1e-10 or abs(temporal_contact) < 1e-5:\n        raise ArithmeticError('Temporal-contact control does not discriminate')\n    return dict(time_slices=nt, spatial_box=[2, 1, 1], field_amplitude=amplitude,\n                direct_active_logdet=float(direct), transfer_logdet=float(scalar+recurrence),\n                determinant_identity_defect=float(defect), omitted_detB_error=float(abs(scalar)),\n                actual_current=float(current), current_current_bubble=float(bubble),\n                actual_contact=float(seagull), active_radiative_curvature=action_curvature,\n                finite_difference_curvature=float(curvature_check),\n                curvature_disagreement=float(abs(curvature_check-action_curvature)),\n                missing_contact_curvature=float(bubble),\n                primitive_gauge_Ward_hessian=float(ward_bubble+ward_contact),\n                primitive_gauge_current_bubble=float(ward_bubble),\n                primitive_gauge_contact=float(ward_contact),\n                actual_temporal_contact=float(temporal_contact),\n                omitted_temporal_contact_gauge_defect=float(abs(temporal_contact)),\n                interpretation='One filled active determinant only; not multiplied again into native Fock transfer. Exact time-dependent Wilson action retains both transfer bands and temporal Grassmann hoppings; finite transverse response is not zero-momentum alpha renormalization.')\n\n\ndef dressed_source_price(charged: dict[str, Any], vacuum: dict[str, Any],\n                         p: Parameters, q: int) -> dict[str, Any]:\n    \"\"\"Actual compact integer string intertwiner c0dagger times Ux0**Q.\"\"\"\n    charged_states, vacuum_states = charged.pop('_states'), vacuum.pop('_states')\n    cm, vm = charged_states['masks'], vacuum_states['masks']\n    lookup = {mask: i for i, mask in enumerate(cm)}\n    source = np.zeros((len(cm), len(vm)), complex)\n    # Addressed rank-one neutral Ref supplies the missing fermion; external\n    # apparatus adds -Q at site1, so total charge is zero in every component.\n    for column, mask in enumerate(vm):\n        if not mask & 1:\n            source[lookup[mask | 1], column] = 1.\n    replicas = charged['order']**2*(2*charged['toron_cutoff']+1)\n    acted = (vacuum_states['ground'].reshape(replicas, len(vm))@source.T).reshape(-1)\n    norm_squared = float(np.vdot(acted, acted).real)\n    ground_weight = float(np.linalg.norm(charged_states['ground_space'].conj().T@acted)**2)\n    gauss_defects = []\n    for mask in cm:\n        n0 = sum(bool(mask & (1 << i)) for i in (0, 1, 4, 5))\n        n1 = 5-n0\n        for m in range(-charged['toron_cutoff'], charged['toron_cutoff']+1):\n            e0, e1 = q*(n0-2+m), q*m\n            rho0, rho1 = q*(n0-2), q*(n1-2)-q\n            gauss_defects.extend((e0-e1-rho0, e1-e0-rho1))\n    return dict(source_norm_squared=norm_squared,\n                dressed_ground_preparation_weight=ground_weight/norm_squared,\n                addressed_spin_ground_overlap=float(abs(np.vdot(charged_states['charged_ground'], acted))**2/norm_squared),\n                exact_integer_Gauss_defect=str(max(abs(x) for x in gauss_defects)),\n                external_reference_charge=str(-q), source_charge=str(q),\n                reference_operator_charge=0, reference_distance=p.spacing,\n                external_sector='One static spin-zero -Q worldline at site1; no fictitious boundary.',\n                compact_dressing='Integer Ux0**Q string. In tree gauge this is c0dagger; source shifts E0 by Q and leaves E1=Qm. Fourier torons retain winding transitions.',\n                self_energy='Included in integer electric energy e\u00b2[(r0+m)\u00b2+m\u00b2]/2 before transfer. No hand-subtracted Coulomb or self-energy.',\n                preparation_scope='Conditional spectral preparation has the reported nonunit probability; not an unprepared charged-packet experiment.')\n\n\ndef run(p: Parameters) -> dict[str, Any]:\n    contract = charge_contract(p)\n    gamma = gamma_frame()\n    e = contract['physical_e']\n    response = determinant_response(gamma, p, e)\n    native = []\n    for order, cutoff in zip(p.orders, p.toron_cutoffs, strict=True):\n        charged = native_sector(gamma, p, e, order, 5, toron_cutoff=cutoff)\n        vacuum = native_sector(gamma, p, e, order, 4, toron_cutoff=cutoff)\n        charged['source_preparation'] = dressed_source_price(charged, vacuum, p, int(contract['Q']))\n        charged['dressed_mass_gap_lattice'] = vacuum['log_ground_transfer']-charged['log_ground_transfer']\n        charged['dressed_mass_gap_physical'] = charged['dressed_mass_gap_lattice']/p.spacing\n        native.append(dict(charged=charged, vacuum=vacuum))\n    adverse = native_sector(gamma, p, e, p.orders[0], 5, drop_prefactor=True)\n    zero = native_sector(gamma, p, 0., p.orders[0], 5)\n    adverse.pop('_states')\n    zero.pop('_states')\n    differences = [max(abs(np.array(b['charged']['exclusive_probabilities'])\n                           -np.array(a['charged']['exclusive_probabilities'])))\n                   for a, b in zip(native, native[1:])]\n    return dict(parameters=asdict(p), charge_contract=contract,\n                active_unquenched_response=response, native_positive_transfer=native,\n                adverse_controls=dict(drop_detB=adverse, zero_coupling=zero),\n                truncation_sequence_probability_differences=differences,\n                photon_kernel='Same induced beta, canonical coexact oscillator: omega=2asinh(khat/2), khat=2. Vacuum variance1/(2sinh omega). Symmetric positive photon/Fock/Coulomb transfer; no imported Thomson or KN coefficient.',\n                material_repairs=['Reject Q delta<<1 and free-global-state closeness; retain full nonlinear compact character at all DVR nodes.',\n                                  'Replace free sea boundary by exact interacting dressed charged/vacuum ground states, then create/detect polarized photon packets. First spinflip probe failed by forward-channel selection; repaired to same-spin polarization conversion.',\n                                  'Reject fixed minimizing integer-flux state: it kills compact hopping. Retain integer toron m, exact winding Fourier transitions, actual electric cost and addressed remote source.',\n                                  'Reject global holonomy ground mass93.7 as physical mass1: prepare a periodic Gaussian around holonomy0 with field-dependent filled sea and real charged local packet, propagated by the unchanged transfer. Preparation and spectral truncation prices remain explicit.',\n                                  'Increase native photon/toron cutoffs after edge-shell/convergence failure; determinant scalar retained at every node.'],\n                rejected_historical_capsules=dict(\n                    first_probe='Spinflip forward selection gives zero; free/fractional background construction withdrawn.',\n                    repaired_probe='Finite photon cutoff converged but minimized toron string incompatible with x hopping; not a compact source result.',\n                    sparse_probe='Complex ARPACK degeneracy gave nonorthogonal retained vectors and false clamped spectral error. Withdrawn; QR plus Hermitian Rayleigh-Ritz is now used.'),\n                conditional_packet='Normalized finite standing-wave y/z photons on the two-site coexact pi mode; projected Gaussian oscillator/reference. NOT the baseline125-mode spatial Gaussian packet or full-box continuum scattering.',\n                error_status='Finite spectral-subspace Cauchy-Schwarz intervals only, with numerical eigen residual observed separately. Successive cutoffs/highest-shell probability are NOT rigorous infinite-toron/photon or omitted-mode bounds. No unprojected probability/error or observed physical-QED claim.',\n                continuum_and_renormalization_debt=['Two-site box has k=pi/a, NOT continuum/IR Compton. No continuum/lattice/finite-volume extrapolation paid.',\n                    'Gaussian induced photon kernel imported from the large-box supplier as a conditional reference. The auxiliary law CANNOT be rerun on two sites: length-two winding would dominate Naux kaux\u00b2. Thus this native diagnostic is not literally the same full microscopic lattice law.',\n                    'Charge-Q toron flux coset0 chosen in native finite quotient. Auxiliary charge1 winding mixes other cosets in the full law; this omitted effect is not certified by native diagnostics.',\n                    'Bare alpha=Q^2/(4pi beta); measured zero-momentum renormalized alpha not obtained from finite UV response.',\n                    'Mass means finite dressed charged-neutral transfer gap, not infinite-volume infraparticle pole; bare mass remains input.',\n                    'No measured velocity renormalization with only two momenta; no fitted common speed.',\n                    'Full compact Haar transfer, all omitted coexact/toron modes and rigorous infinite-Fock remainder remain missing. Integer Gauss/source dressing and its Coulomb energy are retained in the native quotient.',\n                    'Normal/Phi/colour transport conditional; Naux+1 count unchanged. Native diagnostic is not full SU4 gauge-projected source probability.'])\n\n\ndef main() -> None:\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument('--output', required=True)\n    parser.add_argument('--orders', default='3,3,4')\n    parser.add_argument('--toron-cutoffs', default='1,3,5')\n    parser.add_argument('--dense-limit', type=int, default=2000)\n    args = parser.parse_args()\n    p = Parameters(orders=tuple(int(x) for x in args.orders.split(',')),\n                   toron_cutoffs=tuple(int(x) for x in args.toron_cutoffs.split(',')),\n                   dense_limit=args.dense_limit)\n    started = time.time()\n    result = run(p)\n    input_bytes = json.dumps(asdict(p), sort_keys=True, separators=(',', ':')).encode()\n    result['capsule'] = dict(source_at_import=SOURCE_HASHES,\n        source_snapshot_at_import={name: content.decode() for name, content in SOURCE_BYTES.items()},\n        input_sha256=hashlib.sha256(input_bytes).hexdigest(), input_json=input_bytes.decode(),\n        runtime=dict(python=sys.version, numpy=np.__version__, scipy=scipy.__version__, mpmath=mp.__version__,\n                     executable=sys.executable, platform=platform.platform()),\n        runtime_seconds=time.time()-started, startup_source_unchanged={\n            name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest() == digest\n            for name, digest in SOURCE_HASHES.items()})\n    path = Path(args.output)\n    path.write_text(json.dumps(result, indent=2)+'\\n')\n    print(json.dumps(dict(output=str(path), source_sha256=SOURCE_HASHES['physical_alpha_compton.py'],\n                         input_sha256=result['capsule']['input_sha256'], runtime_seconds=result['capsule']['runtime_seconds'],\n                         probabilities=[x['charged']['exclusive_probabilities'] for x in result['native_positive_transfer']],\n                         truncation_differences=result['truncation_sequence_probability_differences'])))\n\n\nif __name__ == '__main__':\n    main()\n",
+      "sea_selection.py": "#!/usr/bin/env python3\n\"\"\"Half-filled sea selects a Clifford four-frame from an HS budget, not a penalty.\n\nThe proof is in sea_selection.md. This CLI computes actual occupied eigenvalues\nfor unrestricted traceless Hermitian orthonormal frames and the existing local\nRotationBand couplings. No Dirac spectrum is assumed for the alternatives.\n\"\"\"\nfrom __future__ import annotations\n\nimport argparse\nimport itertools\nimport json\nfrom typing import Any\n\nimport numpy as np\nfrom scipy.linalg import expm\n\nfrom rotation_band import HOPPING, I4, MIXING, RotationBand, spatial_rotation\n\nSELECTED = np.concatenate((MIXING[None], HOPPING))\nQUADRATIC_PAIRS = list(itertools.combinations_with_replacement(range(4), 2))\n\n\ndef matrix_unit_basis():\n    \"\"\"All 15 traceless Hermitian matrix-unit directions, tr(B_a B_b)=4 delta.\"\"\"\n    units = np.eye(4, dtype=complex)\n    basis = []\n    for i, j in itertools.combinations(range(4), 2):\n        unit = np.outer(units[:, i], units[:, j])\n        basis.extend((np.sqrt(2) * (unit + unit.conj().T),\n                      -1j * np.sqrt(2) * (unit - unit.conj().T)))\n    for k in range(1, 4):\n        diagonal = np.zeros(4)\n        diagonal[:k], diagonal[k] = 1, -k\n        basis.append(np.sqrt(4 / (k * (k + 1))) * np.diag(diagonal))\n    return np.array(basis)\n\n\ndef gram(frame):\n    return np.einsum('aij,bji->ab', frame, frame).real / 4\n\n\ndef random_frame(rng, basis):\n    coefficients, _ = np.linalg.qr(rng.normal(size=(15, 4)))\n    return np.einsum('am,aij->mij', coefficients, basis)\n\n\ndef coefficients(band, momenta):\n    return np.column_stack(([band.mass(p) for p in momenta],\n                            band.v * np.sin(band.a * momenta) / band.a))\n\n\ndef quadratic_design(x):\n    # Off-diagonal columns multiply anticommutators, diagonal ones A_mu^2-I.\n    return np.column_stack([x[:, i] * x[:, j] for i, j in QUADRATIC_PAIRS])\n\n\ndef rank_report(x) -> dict[str, Any]:\n    design = quadratic_design(x)\n    singular = np.linalg.svd(design, compute_uv=False)\n    tolerance = max(design.shape) * np.finfo(float).eps * singular[0]\n    rank = int(np.sum(singular > tolerance))\n    return dict(momentum_count=len(x), quadratic_rank=rank,\n                columns=[list(pair) for pair in QUADRATIC_PAIRS],\n                singular_values=singular.tolist(),\n                rank_tolerance=float(tolerance),\n                saturation_forces_full_clifford=(rank == 10))\n\n\ndef minimal_rank_witness(band) -> dict[str, Any]:\n    \"\"\"Ten momenta with an analytic nonzero determinant, even on the L=3 cube.\"\"\"\n    k = 2 * np.pi / (3 * band.a)\n    axes = np.eye(3)\n    momenta = np.array([np.zeros(3)]\n                       + [sign * k * axes[i] for i in range(3) for sign in [1, -1]]\n                       + [k * (axes[i] + axes[j]) for i, j in itertools.combinations(range(3), 2)])\n    x = coefficients(band, momenta)\n    measured = float(abs(np.linalg.det(quadratic_design(x))))\n    mu, t = x[1, 0], x[1, 1]\n    predicted = float(8 * band.m**2 * mu**3 * abs(t)**15)\n    return dict(**rank_report(x), momenta=momenta.tolist(),\n                determinant_absolute=measured, analytic_determinant_absolute=predicted,\n                determinant_relative_error=abs(measured / predicted - 1))\n\n\ndef reframe(matrix, frame):\n    \"\"\"Keep RotationBand's exact local scalar couplings, vary only orbital frame.\"\"\"\n    weights = np.einsum('aij,ji->a', SELECTED, matrix) / 4\n    return np.einsum('a,aij->ij', weights, frame)\n\n\ndef h_from_couplings(band, momenta, frame):\n    onsite, terms = band.couplings()\n    h = np.broadcast_to(reframe(onsite, frame), (len(momenta), 4, 4)).copy()\n    for displacement, coupling in terms:\n        phase = np.exp(1j * band.a * (momenta @ displacement))\n        varied = reframe(coupling, frame)\n        h += phase[:, None, None] * varied\n        h += phase.conj()[:, None, None] * varied.conj().T\n    return h\n\n\ndef algebra_defects(frame):\n    return np.array([frame[i] @ frame[j] + frame[j] @ frame[i]\n                     - (2 * I4 if i == j else 0)\n                     for i, j in QUADRATIC_PAIRS])\n\n\ndef evaluate(frame, band, momenta) -> dict[str, Any]:\n    x = coefficients(band, momenta)\n    h = h_from_couplings(band, momenta, frame)\n    eigenvalues = np.linalg.eigvalsh(h)\n    occupied = eigenvalues[:, :2].sum(axis=1)\n    q = np.einsum('pij,pji->p', h, h).real\n    lower_bound = -np.sqrt(np.maximum(q, 0))\n    excess = occupied - lower_bound\n    pair_splitting = ((eigenvalues[:, 1] - eigenvalues[:, 0])**2\n                     + (eigenvalues[:, 3] - eigenvalues[:, 2])**2) / 2\n    saturation = h @ h - (q / 4)[:, None, None] * I4\n    defects = algebra_defects(frame)\n    return dict(sea_energy=float(occupied.sum()),\n                sea_lower_bound=float(lower_bound.sum()),\n                excess_energy=float(excess.sum()),\n                minimum_pointwise_excess=float(excess.min()),\n                maximum_pointwise_excess=float(excess.max()),\n                maximum_saturation_error=float(np.max(np.linalg.norm(saturation, axis=(1, 2)))),\n                maximum_clifford_defect=float(np.max(np.linalg.norm(defects, axis=(1, 2)))),\n                gram_error=float(np.linalg.norm(gram(frame) - np.eye(4))),\n                trace_error=float(np.max(abs(np.trace(frame, axis1=1, axis2=2)))),\n                hermiticity_error=float(np.linalg.norm(frame - frame.conj().transpose(0, 2, 1))),\n                local_coupling_error=float(np.max(np.linalg.norm(\n                    h - np.einsum('pa,aij->pij', x, frame), axis=(1, 2)))),\n                fixed_budget_error=float(np.max(abs(q - 4 * np.sum(x**2, axis=1)))),\n                exact_pair_splitting_identity_error=float(np.max(abs(q - occupied**2 - pair_splitting))),\n                sample_eigenvalues=eigenvalues[:3].tolist())\n\n\ndef rotated_mass_frame(theta, basis):\n    \"\"\"An exact SO(15) plane rotation, NOT Gram restoration after perturbation.\"\"\"\n    # This matrix unit is orthogonal to the four selected directions. It commutes\n    # with M,T3 and anticommutes with T1,T2; hence strictly positive curvature.\n    b = np.diag([1., -1., 1., -1.]).astype(complex)\n    u = np.einsum('aij,ji->a', basis, MIXING).real / 4\n    w = np.einsum('aij,ji->a', basis, b).real / 4\n    generator = np.outer(w, u) - np.outer(u, w)\n    rotation = expm(theta * generator)\n    coordinates = np.einsum('aij,mji->am', basis, SELECTED).real / 4\n    frame = np.einsum('am,aij->mij', rotation @ coordinates, basis)\n    return frame, float(np.linalg.norm(rotation.T @ rotation - np.eye(15)))\n\n\ndef curvature_probe(band, momenta, basis) -> dict[str, Any]:\n    x = coefficients(band, momenta)\n    radius = np.linalg.norm(x, axis=1)\n    predicted = float(np.sum(2 * x[:, 0]**2 * (x[:, 0]**2 + x[:, 3]**2) / radius**3))\n    selected_energy = evaluate(SELECTED, band, momenta)['sea_energy']\n    rows = []\n    for theta in [0.1, 0.03, 0.01, 0.003]:\n        plus, orthogonality = rotated_mass_frame(theta, basis)\n        minus, _ = rotated_mass_frame(-theta, basis)\n        plus_result, minus_result = evaluate(plus, band, momenta), evaluate(minus, band, momenta)\n        measured = (plus_result['sea_energy'] + minus_result['sea_energy']\n                    - 2 * selected_energy) / theta**2\n        rows.append(dict(theta=theta, excess_energy=plus_result['excess_energy'],\n                         gram_error=plus_result['gram_error'],\n                         so15_orthogonality_error=orthogonality,\n                         clifford_defect=plus_result['maximum_clifford_defect'],\n                         measured_second_derivative=float(measured),\n                         relative_curvature_error=float(abs(measured / predicted - 1))))\n    return dict(analytic_second_derivative=predicted, path=rows)\n\n\ndef selected_consumer_probe(band, momenta) -> dict[str, Any]:\n    \"\"\"Use unchanged RotationBand spinors, link current and SU(2) rotations.\"\"\"\n    p = np.array([0.23, -0.17, 0.31]) / band.a\n    pout = np.array([-0.11, 0.28, 0.19]) / band.a\n    axis, angle = np.array([1., -2., 3.]), 0.47\n    j = band.generators\n    commutator = max(np.linalg.norm(j[i] @ j[k] - j[k] @ j[i]\n                                    - 1j * j[l])\n                     for i, k, l in [(0, 1, 2), (1, 2, 0), (2, 0, 1)])\n    rotation = band.rotation(axis, angle)\n    spatial = spatial_rotation(axis, angle)\n    vector_residual = max(np.linalg.norm(rotation @ band.alpha[i] @ rotation.conj().T\n                                        - np.einsum('j,jab->ab', spatial[:, i], band.alpha))\n                          for i in range(3))\n    sine_transfer = 2 * np.sin(band.a * (pout - p) / 2) / band.a\n    ward = band.h(pout) - band.h(p) - np.einsum('i,ijk->jk', sine_transfer, band.current(pout, p))\n    return dict(coupling_to_existing_h_error=max(float(np.linalg.norm(\n                    h - band.h(p0))) for p0, h in zip(momenta, h_from_couplings(band, momenta, SELECTED))),\n                spinor_eigenstate_error=max(float(np.linalg.norm(\n                    band.h(p) @ band.spinor(p, label) - band.energy(p) * band.spinor(p, label)))\n                    for label in range(2)),\n                su2_commutator_error=float(commutator),\n                casimir_error=float(np.linalg.norm(np.sum(j @ j, axis=0) - 0.75 * I4)),\n                full_turn_minus_identity_error=float(np.linalg.norm(band.rotation(axis, 2 * np.pi) + I4)),\n                vector_rotation_error=float(vector_residual),\n                finite_link_current_ward_error=float(np.linalg.norm(ward)),\n                rest_generator_spectrum=np.linalg.eigvalsh(j[2]).tolist())\n\n\ndef run(args):\n    band = RotationBand(a=args.a, m=args.m, r=args.r, v=args.v, improved=args.improved)\n    basis = matrix_unit_basis()\n    rng = np.random.default_rng(args.seed)\n    n = args.lattice_size\n    momenta = np.array(list(itertools.product(range(n), repeat=3))) * (2 * np.pi / (n * band.a))\n    # Independent noncyclic input guards against silently treating rank-poor\n    # cubic grids (notably L=2) as full identifiability of ten quadratic products.\n    rich = rng.uniform(-np.pi / band.a, np.pi / band.a, (48, 3))\n    diagonal = np.column_stack([np.linspace(-2, 2, 13) / band.a] * 3)\n    selected = evaluate(SELECTED, band, momenta)\n    alternatives = [evaluate(random_frame(rng, basis), band, momenta)\n                    for _ in range(args.alternatives)]\n    rich_selected = evaluate(SELECTED, band, rich)\n    curvature = curvature_probe(band, momenta, basis)\n    consumer = selected_consumer_probe(band, momenta)\n    rank = rank_report(coefficients(band, momenta))\n    rich_rank = rank_report(coefficients(band, rich))\n    witness = minimal_rank_witness(band)\n    checks = dict(matrix_unit_basis_orthonormal=np.linalg.norm(gram(basis) - np.eye(15)) < 1e-12,\n                  selected_attains_sea_bound=abs(selected['excess_energy']) < 1e-9,\n                  alternatives_respect_budget=all(row['gram_error'] < 1e-12 and row['trace_error'] < 1e-12\n                                                  and row['hermiticity_error'] < 1e-12 for row in alternatives),\n                  actual_occupied_energy_obeys_bound=all(row['minimum_pointwise_excess'] > -1e-10\n                                                        for row in alternatives + [selected]),\n                  alternatives_have_nonzero_excess=all(row['excess_energy'] > 1e-6 for row in alternatives),\n                  rich_inputs_identify_full_algebra=rich_rank['quadratic_rank'] == 10,\n                  analytic_ten_point_rank_witness=witness['quadratic_rank'] == 10\n                      and witness['determinant_relative_error'] < 1e-10,\n                  rich_selected_attains_bound=abs(rich_selected['excess_energy']) < 1e-9,\n                  coupling_and_budget_identities=all(row['local_coupling_error'] < 1e-10\n                                                      and row['fixed_budget_error'] < 1e-9\n                                                      and row['exact_pair_splitting_identity_error'] < 1e-9\n                                                      for row in alternatives + [selected]),\n                  perturbation_has_positive_curvature=curvature['analytic_second_derivative'] > 0\n                      and all(row['excess_energy'] > 0 for row in curvature['path'])\n                      and curvature['path'][-1]['relative_curvature_error'] < 1e-4,\n                  existing_spinor_rotation_current_consumer=all(value < 1e-10 for key, value in consumer.items()\n                                                                if key.endswith('error')))\n    report = dict(scope='Conditional uniform-orbital mean-field energy theorem; no anticommutator penalty, no full-QED origin claim.',\n                  parameters=vars(args), basis='15 Hermitian traceless matrix-unit directions',\n                  cubic_momentum_identifiability=rank, noncyclic_momentum_identifiability=rich_rank,\n                  adverse_diagonal_momentum_identifiability=rank_report(coefficients(band, diagonal)),\n                  exact_ten_momentum_rank_witness=witness,\n                  selected=selected, alternatives=alternatives, noncyclic_selected=rich_selected,\n                  gram_preserving_curvature=curvature, existing_rotation_band_consumer=consumer,\n                  assertions={key: bool(value) for key, value in checks.items()})\n    print(json.dumps(report, indent=2))\n    return 0 if all(checks.values()) else 1\n\n\ndef main():\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument('--a', type=float, default=0.5)\n    parser.add_argument('--m', type=float, default=1.)\n    parser.add_argument('--r', type=float, default=1.)\n    parser.add_argument('--v', type=float, default=1.)\n    parser.add_argument('--improved', action='store_true')\n    parser.add_argument('--lattice-size', type=int, default=3)\n    parser.add_argument('--alternatives', type=int, default=8)\n    parser.add_argument('--seed', type=int, default=22291)\n    args = parser.parse_args()\n    if (not all(np.isfinite([args.a, args.m, args.r, args.v]))\n            or min(args.a, args.m, args.v) <= 0 or args.r < 0\n            or args.lattice_size < 2 or args.alternatives < 1):\n        parser.error('Require finite a,m,v>0, r>=0, lattice-size>=2 and alternatives>=1.')\n    return run(args)\n\n\nif __name__ == '__main__':\n    raise SystemExit(main())\n",
+      "rotation_band.py": "#!/usr/bin/env python3\n\"\"\"Local four-orbital band, without imported gamma matrices or spin labels.\n\nThe internal matrix units are bosonic qudit transitions. Spectral isotropy and\nminimal block dimension SELECT their hopping pattern; they are not a dynamical\nprediction of generic bosons. Many-body fermionic filling needs the statistics\nsupplier. Run directly for deterministic discriminating numerical evidence.\n\"\"\"\nfrom __future__ import annotations\n\nimport itertools\nimport json\nfrom dataclasses import dataclass\n\nimport numpy as np\nfrom scipy.linalg import expm\n\nI2 = np.eye(2, dtype=complex)\nI4 = np.eye(4, dtype=complex)\nE00, E01 = np.outer(I2[:, 0], I2[:, 0]), np.outer(I2[:, 0], I2[:, 1])\nE10, E11 = E01.T, np.outer(I2[:, 1], I2[:, 1])\n# Matrix units on two initially unassigned internal labels, NOT spatial spin.\nTRANSITIONS = np.array([E01 + E10, -1j * (E01 - E10), E00 - E11])\nX, Y, Z = TRANSITIONS\nHADAMARD = (X + Z) / np.sqrt(2)\nTO_WILSON = np.kron(HADAMARD, I2)\nHOPPING = np.array([np.kron(Z, operator) for operator in TRANSITIONS])\nMIXING = np.kron(X, I2)\n# Solve the vector-action commutators; the half-angle is an output of the algebra.\nROTATION = np.array([-0.5j * HOPPING[j] @ HOPPING[k]\n                     for j, k in [(1, 2), (2, 0), (0, 1)]])\nCHARGE_CONJUGATION = np.kron(Y, Y)\n\n\ndef norm(matrix):\n    return float(np.linalg.norm(matrix))\n\n\ndef isotropy_defect(operators):\n    \"\"\"Operator identity needed for two degenerate isotropic linear bands.\"\"\"\n    return max(norm(operators[i] @ operators[j] + operators[j] @ operators[i]\n                    - (2 * I4 if i == j else 0))\n               for i in range(3) for j in range(3))\n\n\ndef spatial_rotation(axis, angle):\n    axis = np.asarray(axis, dtype=float)\n    axis = axis / np.linalg.norm(axis)\n    cross = np.array([[0., -axis[2], axis[1]],\n                      [axis[2], 0., -axis[0]], [-axis[1], axis[0], 0.]])\n    return (np.cos(angle) * np.eye(3) + (1 - np.cos(angle)) * np.outer(axis, axis)\n            + np.sin(angle) * cross)\n\n\n@dataclass(frozen=True)\nclass RotationBand:\n    a: float\n    m: float = 1.0\n    e: float = 1.0\n    r: float = 1.0\n    v: float = 1.0\n    improved: bool = False\n\n    @property\n    def charge(self):\n        return -self.e\n\n    @property\n    def alpha(self):\n        return HOPPING\n\n    @property\n    def beta(self):\n        return MIXING\n\n    @property\n    def generators(self):\n        return ROTATION\n\n    def couplings(self):\n        \"\"\"h(p)=onsite+sum(T_d exp(i p.d)+T_d^dagger exp(-i p.d)).\"\"\"\n        coefficient = 4.5 if self.improved else 3.\n        onsite = (self.m + coefficient * self.r / self.a) * MIXING\n        nearest_mass = self.r / self.a if self.improved else self.r / (2 * self.a)\n        terms = []\n        for i in range(3):\n            displacement = np.eye(3, dtype=int)[i]\n            terms.append((displacement, -1j * self.v * HOPPING[i] / (2 * self.a)\n                          - nearest_mass * MIXING))\n            if self.improved:\n                terms.append((2 * displacement, self.r * MIXING / (4 * self.a)))\n        return onsite, terms\n\n    def h_from_couplings(self, p):\n        onsite, terms = self.couplings()\n        result = onsite.copy()\n        for displacement, coupling in terms:\n            phase = np.exp(1j * self.a * np.dot(p, displacement))\n            result += coupling * phase + coupling.conj().T * phase.conjugate()\n        return result\n\n    def mass(self, p):\n        delta = 2 * np.sin(self.a * np.asarray(p) / 2)**2\n        return self.m + self.r / self.a * np.sum(delta**2 if self.improved else delta)\n\n    def h(self, p):\n        return (np.einsum('i,ijk->jk', self.v * np.sin(self.a * np.asarray(p)) / self.a,\n                          HOPPING) + self.mass(p) * MIXING)\n\n    def energy(self, p):\n        return float(np.sqrt(np.sum((self.v * np.sin(self.a * np.asarray(p)) / self.a)**2)\n                             + self.mass(p)**2))\n\n    def continuum_h(self, p):\n        return self.v * np.einsum('i,ijk->jk', p, HOPPING) + self.m * MIXING\n\n    def projector(self, p, sign=1):\n        if sign not in (-1, 1):\n            raise ValueError('sector sign must be +1 or -1')\n        return (I4 + sign * self.h(p) / self.energy(p)) / 2\n\n    def rotation(self, axis, angle):\n        axis = np.asarray(axis, dtype=float)\n        axis = axis / np.linalg.norm(axis)\n        return expm(-1j * angle * np.einsum('i,ijk->jk', axis, ROTATION))\n\n    def spinor(self, p, label):\n        \"\"\"Positive-band basis; labels refer to the derived rest-frame J_z.\"\"\"\n        energy, mass = self.energy(p), self.mass(p)\n        chi = I2[:, label]\n        lower = np.einsum('i,ijk->jk', self.v * np.sin(self.a * np.asarray(p)) / self.a,\n                          TRANSITIONS) @ chi\n        wilson_vector = np.concatenate((np.sqrt((energy + mass) / (2 * energy)) * chi,\n                                        lower / np.sqrt(2 * energy * (energy + mass))))\n        return TO_WILSON.conj().T @ wilson_vector\n\n    def current(self, pout, pin):\n        \"\"\"Finite-transfer midpoint-link current divided by charge.\"\"\"\n        midpoint = self.a * (np.asarray(pout) + np.asarray(pin)) / 2\n        mass_vertex = self.r * np.sin(midpoint)\n        if self.improved:\n            transfer = self.a * (np.asarray(pout) - np.asarray(pin)) / 2\n            mass_vertex = self.r * (2 * np.sin(midpoint)\n                                    - np.cos(transfer) * np.sin(2 * midpoint))\n        return (self.v * np.cos(midpoint)[:, None, None] * HOPPING\n                + mass_vertex[:, None, None] * MIXING)\n\n    def vertex(self, pout, pin, eps):\n        return self.charge * (eps[0] * I4\n                              - np.einsum('i,ijk->jk', eps[1:], self.current(pout, pin)))\n\n    def contact(self, pout, pin, eps_in, eps_out, k, kout):\n        midpoint = self.a * (np.asarray(pout) + np.asarray(pin)) / 2\n        curvature = self.r * np.cos(midpoint)\n        if self.improved:\n            curvature = self.r * (2 * np.cos(midpoint)\n                                  - 2 * np.cos(self.a * np.asarray(k) / 2)\n                                  * np.cos(self.a * np.asarray(kout) / 2)\n                                  * np.cos(2 * midpoint))\n        matrices = self.a * (-self.v * np.sin(midpoint)[:, None, None] * HOPPING\n                            + curvature[:, None, None] * MIXING)\n        return self.e**2 * np.einsum('i,i,ijk->jk', eps_in[1:], eps_out[1:], matrices)\n\n\ndef local_bosonic_operators():\n    \"\"\"15-state local qudit: vacuum, four singles, ten bosonic doubles.\"\"\"\n    basis = sorted((occupation for occupation in itertools.product(range(3), repeat=4)\n                    if sum(occupation) <= 2), key=lambda state: (sum(state), state))\n    lookup = {state: index for index, state in enumerate(basis)}\n    lowering = []\n    for orbital in range(4):\n        operator = np.zeros((len(basis), len(basis)), dtype=complex)\n        for column, state in enumerate(basis):\n            if state[orbital]:\n                target = list(state)\n                target[orbital] -= 1\n                operator[lookup[tuple(target)], column] = np.sqrt(state[orbital])\n        lowering.append(operator)\n    return basis, np.array(lowering), np.diag([sum(state) for state in basis])\n\n\ndef bosonic_dimer_probe():\n    \"\"\"Actual finite-penalty two-site sector; double occupations are not hidden.\"\"\"\n    band = RotationBand(0.5)\n    onsite, terms = band.couplings()\n    hopping = terms[0][1]\n    omega = 20.\n    single = np.block([[onsite + omega * I4, hopping],\n                       [hopping.conj().T, onsite + omega * I4]])\n    # Two total bosons on eight modes; each site's local cutoff is still two.\n    basis = []\n    for first in range(8):\n        for second in range(first, 8):\n            occupation = [0] * 8\n            occupation[first] += 1\n            occupation[second] += 1\n            basis.append(tuple(occupation))\n    lookup = {state: index for index, state in enumerate(basis)}\n    quadratic = np.zeros((len(basis), len(basis)), dtype=complex)\n    for column, state in enumerate(basis):\n        for source in range(8):\n            if not state[source]:\n                continue\n            intermediate = list(state)\n            intermediate[source] -= 1\n            for target in range(8):\n                output = intermediate.copy()\n                output[target] += 1\n                amplitude = np.sqrt(state[source] * (intermediate[target] + 1))\n                quadratic[lookup[tuple(output)], column] += single[target, source] * amplitude\n    doubles = np.array([sum(state[:4]) * (sum(state[:4]) - 1) / 2\n                        + sum(state[4:]) * (sum(state[4:]) - 1) / 2 for state in basis])\n    rows = []\n    for penalty in [2., 8., 32.]:\n        h = quadratic + penalty * np.diag(doubles)\n        energies, states = np.linalg.eigh(h)\n        state = states[:, 0]\n        rows.append(dict(Delta=penalty, lowest_two_boson_energy=float(energies[0]),\n                         double_occupation_probability=float(np.vdot(state, doubles * state).real),\n                         actual_eigenstate_residual=norm(h @ state - energies[0] * state)))\n    local_basis, lowering, number = local_bosonic_operators()\n    return dict(local_dimension=len(local_basis), two_particle_dimension=len(basis),\n                local_number_action_residual=max(norm(number @ b - b @ number + b)\n                                                 for b in lowering),\n                single_sector_energies=np.linalg.eigvalsh(single).tolist(),\n                two_particle_hermiticity_residual=norm(quadratic - quadratic.conj().T),\n                finite_penalty_extra_sector=rows,\n                interpretation='Bare bosonic model only: finite Delta leaves measurable double-occupation admixture; not CAR.')\n\n\ndef magnetic_probe(m=1., v=1., q=-1.):\n    \"\"\"Weak-field spectrum of the derived continuum generator, not lattice g.\"\"\"\n    cutoff = 6\n    lowering = np.diag(np.sqrt(np.arange(1, cutoff)), 1).astype(complex)\n    rows = []\n    for field in [0.02, 0.01, 0.005, 0.0025]:\n        scale = np.sqrt(abs(q * field) / 2)\n        pix = scale * (lowering + lowering.conj().T)\n        piy = -1j * np.sign(q * field) * scale * (lowering - lowering.conj().T)\n        h = (np.kron(m * MIXING, np.eye(cutoff))\n             + v * np.kron(HOPPING[0], pix) + v * np.kron(HOPPING[1], piy))\n        rest_positive = np.array([1., 1.]) / np.sqrt(2)\n        energies, variances, spectral_distances = [], [], []\n        spectrum = np.linalg.eigvalsh(h)\n        for label in [0, 1]:\n            state = np.kron(np.kron(rest_positive, I2[:, label]), np.eye(cutoff)[:, 0])\n            squared_state = h @ (h @ state)\n            squared_energy = float(np.vdot(state, squared_state).real)\n            energy = np.sqrt(squared_energy)\n            energies.append(float(energy))\n            variances.append(norm(squared_state - squared_energy * state))\n            spectral_distances.append(float(np.min(abs(spectrum - energy))))\n        split = abs(energies[0] - energies[1])\n        rows.append(dict(B=field, positive_energies=energies,\n                         g_from_weak_field_split=float(2 * m * split / (v*v * abs(q*field))),\n                         squared_eigenstate_residual=max(variances),\n                         actual_spectrum_distance=max(spectral_distances)))\n    return rows\n\n\ndef run():\n    # Existing consumer is used ONLY as a comparison target, never a supplier.\n    from lattice_compton import ALPHA, BETA, WilsonLink\n\n    p = np.array([0.23, 0.31, 0.17])\n    axis, angle = np.array([1., 2., -1.]), 0.71\n    rotation = spatial_rotation(axis, angle)\n    rows = []\n    for improved in [False, True]:\n        for a in [0.2, 0.1, 0.05, 0.025]:\n            band = RotationBand(a, improved=improved)\n            old = WilsonLink(a, improved=improved)\n            d = band.rotation(axis, angle)\n            plus, minus = band.projector(p, 1), band.projector(p, -1)\n            pin, pout = -0.4 * p, 0.6 * p\n            k, kout = np.array([0.11, -0.08, 0.19]), np.array([0.04, 0.09, 0.05])\n            eps, epsout = np.array([0., 0.3, -0.2, 0.4]), np.array([0., -0.1, 0.5, 0.2])\n            khat = 2 * np.sin(a * (pout - pin) / 2) / a\n            ward = np.einsum('i,ijk->jk', khat, band.current(pout, pin))\n            corners = [band.energy(np.pi / a * np.array(corner))\n                       for corner in itertools.product([0, 1], repeat=3)]\n            axes_p = np.array([np.linalg.norm(p), 0., 0.])\n            continuum_energy = np.sqrt(band.m**2 + band.v**2 * np.dot(p, p))\n            rows.append(dict(a=a, improved=improved,\n                microscopic_fourier_residual=norm(band.h_from_couplings(p) - band.h(p)),\n                spectrum=np.linalg.eigvalsh(band.h(p)).tolist(),\n                relativistic_energy_error=float(band.energy(p) - continuum_energy),\n                continuum_rotation_residual=norm(d @ band.continuum_h(p) @ d.conj().T\n                                                - band.continuum_h(rotation @ p)),\n                finite_a_rotation_residual=norm(d @ band.h(p) @ d.conj().T\n                                              - band.h(rotation @ p)),\n                oblique_minus_axis_energy=float(band.energy(p) - band.energy(axes_p)),\n                projector_residual=max(norm(plus @ plus - plus), norm(minus @ minus - minus),\n                                       norm(plus @ minus), norm(plus + minus - I4)),\n                rest_spin_eigenvalues=np.linalg.eigvalsh(ROTATION[2]).tolist(),\n                charge_conjugation_residual=norm(CHARGE_CONJUGATION @ band.h(p).conj()\n                                                @ CHARGE_CONJUGATION.conj().T + band.h(-p)),\n                spinor_residual=max(norm(band.h(p) @ band.spinor(p, s)\n                                        - band.energy(p) * band.spinor(p, s)) for s in [0, 1]),\n                current_ward_residual=norm(ward - band.h(pout) + band.h(pin)),\n                wilson_h_residual=norm(TO_WILSON @ band.h(p) @ TO_WILSON.conj().T - old.h(p)),\n                wilson_vertex_residual=norm(TO_WILSON @ band.vertex(pout, pin, eps)\n                                           @ TO_WILSON.conj().T - old.vertex(pout, pin, eps)),\n                wilson_contact_residual=norm(TO_WILSON @ band.contact(pout, pin, eps, epsout, k, kout)\n                                            @ TO_WILSON.conj().T\n                                            - old.contact(pout, pin, eps, epsout, k, kout)),\n                corner_gaps=corners,\n                naive_r_zero_corner_gaps=[RotationBand(a, r=0).energy(np.pi / a * np.array(c))\n                                         for c in itertools.product([0, 1], repeat=3)]))\n    band = RotationBand(0.1)\n    # An axis-only fit cannot reject this commuting fake: oblique probes must.\n    commuting = np.array([HOPPING[2]] * 3)\n    anisotropic = HOPPING * np.array([1., 0.8, 1.2])[:, None, None]\n    missing_hopping = HOPPING.copy()\n    missing_hopping[1] = 0\n    false_positives = []\n    target_energy = np.sqrt(1 + np.dot(p, p))\n    for name, operators in [('commuting', commuting), ('anisotropic', anisotropic),\n                            ('missing_y_hopping', missing_hopping)]:\n        fake = MIXING + np.einsum('i,ijk->jk', p, operators)\n        spectrum = np.linalg.eigvalsh(fake)\n        fake_rotation = band.rotation(axis, angle)\n        false_positives.append(dict(name=name, isotropy_defect=isotropy_defect(operators),\n            positive_energy_error=float(spectrum[-1] - target_energy),\n            covariance_error=norm(fake_rotation @ fake @ fake_rotation.conj().T\n                - MIXING - np.einsum('i,ijk->jk', rotation @ p, operators))))\n    tiny = 0.001\n    slopes = []\n    for improved in [False, True]:\n        for a in [0.1, 0.05]:\n            b = RotationBand(a, improved=improved)\n            coefficient = (b.energy(np.array([tiny, 0., 0.]))**2 - b.m**2) / tiny**2\n            expected = b.v**2 + (0 if improved else b.m * b.r * a)\n            slopes.append(dict(a=a, improved=improved, measured_p_squared_coefficient=coefficient,\n                               analytic_p_squared_coefficient=expected))\n    return dict(\n        inputs=dict(quantum_hilbert_law='declared', mass='declared scalar mixing m',\n                    charge='declared q=-e shared with link supplier',\n                    pattern='selected by spectral isotropy, minimal two-level blocks and a gap',\n                    many_body='requires bosonic-statistics encoded sector; bare bosons do not fill a Dirac sea'),\n        algebra=dict(isotropy_defect=isotropy_defect(HOPPING),\n            mass_anticommutation=max(norm(MIXING @ h + h @ MIXING) for h in HOPPING),\n            spin_casimir_residual=norm(sum(j @ j for j in ROTATION) - 0.75 * I4),\n            two_pi_minus_identity_residual=norm(band.rotation(axis, 2*np.pi) + I4),\n            four_pi_identity_residual=norm(band.rotation(axis, 4*np.pi) - I4),\n            alpha_unitary_map_residual=max(norm(TO_WILSON @ HOPPING[i] @ TO_WILSON.conj().T\n                                                - ALPHA[i]) for i in range(3)),\n            beta_unitary_map_residual=norm(TO_WILSON @ MIXING @ TO_WILSON.conj().T - BETA)),\n        bands=rows, mass_and_velocity_coefficients=slopes,\n        weak_field_continuum_magnetic_response=magnetic_probe(), rejected_false_positives=false_positives,\n        bare_bosonic_extra_sectors=bosonic_dimer_probe(),\n        limitations=['No mechanism selects isotropy from generic local couplings.',\n                     'Continuous rotations are effective at low momentum, not exact on the cubic lattice.',\n                     'The central 2pi phase is a derived internal band response, not by itself a boson-to-fermion proof.',\n                     'Negative bands are holes only after the separate fermionic filling construction.',\n                     'No measured electron mass, charge, or common photon velocity is generated.'])\n\n\nif __name__ == '__main__':\n    print(json.dumps(run(), indent=2, sort_keys=True))\n"
+    },
+    "input_sha256": "af591e663370034e515aa179ad3be7c085cfdb4d05f1e4a9852fb58f0d666ec6",
+    "input_json": "{\"beta_power\":150,\"dense_limit\":2000,\"inverse_alpha\":\"137.035999084\",\"kappa_power\":250,\"mass\":1.0,\"observation_times\":[0.25,0.5,1.0,2.0],\"orders\":[2],\"spacing\":0.01,\"toron_cutoffs\":[4],\"toron_packet_width\":0.4}",
+    "runtime": {
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "mpmath": "1.3.0",
+      "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+      "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.39"
+    },
+    "runtime_seconds": 11.580350637435913,
+    "startup_source_unchanged": {
+      "physical_alpha_compton.py": true,
+      "sea_selection.py": true,
+      "rotation_band.py": true
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "kind": "REVISION_BOUND_NATIVE_ALGEBRA_AND_CONDITIONAL_STATIONARY_SCHUR_MATHEMATICAL_REVIEW_NOT_PHOTON_ADMISSION",
+  "reviewer": "NativeSchurProofReview",
+  "verdict": "CONDITIONAL",
+  "summary": "The corrected native algebra, contact signs, Bianchi and alignment normalizations are valid at the stated core/structural-control scope. The source-projected Schur identity and residue formula are mathematically valid with the stated stationary-GROUND and source-domain hypotheses. Actual source Gram, orthogonal response, induced stiffness, uniform infrared limit and sharp pole are not evaluated. One summary phrase must not be read as saying stationarity alone implies a positive generator; the body correctly requires a ground representation.",
+  "governor": {
+    "id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "revision": "bfbdb285c81532169a067d4da487d5dada605829a715ccf3c5b4d95de8422f0d",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "requirement": "verification",
+    "plan_ownership": "Inherited pinned governing contract; parent sole plan/README/world-model/integration owner. No independent plan or shared-file mutation. Memory availability status was inspected and was ready."
+  },
+  "binding": {
+    "proof": {"path": "joined_phi_u1_native_ir_mechanism_proof_corrected_20261010.json", "sha256": "0f38e399c179b79f7df920b0d975d0dc377348bfe14dab7867005e7b98bcf06f"},
+    "consumer": {"path": "joined_phi_u1_native_ir_mechanism_consumer.py", "sha256": "98ecb55fc17663612e855723e0d642effeb0bafff8226d6990ea556b89f0a6d8"},
+    "capsule": {"path": "joined_phi_u1_native_ir_mechanism_capsule.py", "sha256": "9dde7f341c49abb0f755df0ca2d663b7e55bc11ceda5aa0f554e0752e7e867d9"},
+    "actual": {"path": "joined_phi_u1_native_ir_mechanism_corrected2_20261010_actual.json", "sha256": "35f3c586a52cf818d57f3643c35e1609a2b48e6f5a1ad3c2e7c6a8e6e3f37635"},
+    "natural_exit": {"path": "joined_phi_u1_native_ir_mechanism_corrected2_20261010_natural_exit.json", "sha256": "7d469a7058dd9a4f46516f8bf4b620defcaf957d69429b02d58e8e1416acf340", "exit": 0, "elapsed_seconds": 8.724982302999706},
+    "archives": {
+      "joined_phi_u1_native_ir_mechanism_corrected2_20261010_actual.zip": "664005e521235c7a62217a1afeefd067fd32afb110accc4791f5a89cdc7ce1d9",
+      "joined_phi_u1_native_ir_mechanism_corrected2_20261010_preexecution.zip": "fedf1621db40f4d06b724923b4c99faedbc86bc26ca0b6616587f4a453cdfd6d",
+      "joined_phi_u1_native_ir_mechanism_corrected2_20261010_execution.zip": "9ce1e71c5fc076b959ea4f2ec1fd24cd15c53da496335828ff0c1ed493c6f79b",
+      "joined_phi_u1_native_ir_mechanism_corrected2_20261010_checker_execution.zip": "9e901628d4515d2c76d7a764e7dfac5000ccc02f6bc17ea025316792e31c4d20"
+    },
+    "direct_observations": [
+      "Computed the listed file/archive SHA256 values from actual bytes; they match the advertised corrected2 epoch.",
+      "Preexecution and outer execution source/input byte dictionaries are identical; every science-archive executed member matches the outer execution capture.",
+      "Live proof/consumer/capsule bytes matched the captured corrected2 bytes at inspection.",
+      "Read the captured natural_exit.json, stdout and empty stderr from the execution ZIP; natural scientific exit was 0, not an inferred completed flag.",
+      "Checker execution archive contains the same proof/consumer/capsule bytes; captured Pyright 1.1.414 stdout reports two analyzed files, zero errors/warnings and empty diagnostics. This is historical captured evidence, not a checker run by this reviewer."
+    ]
+  },
+  "scope_verdicts": [
+    {
+      "scope": "Native Heisenberg, continuity and fullE reduction",
+      "verdict": "VALID",
+      "keys": ["microscopic_law.coordinates", "microscopic_law.Hamiltonian", "microscopic_law.equations"],
+      "derivation": "For T=c_x^dag B c_y exp(i k.theta), [rho_lambda,T]=(lambda_x-lambda_y)T=(lambda.Dk)T and [H,E_e]=i J_e. Thus dotE=-J and dotrho=-DJ with the source-minus-target incidence. Their difference preserves DE-rho. QPi and D^T Lplus rho are orthogonal, so 64E^2=64Pi^2+64rho^T Lplus rho on the neutral physical sector. HC commutes E_T but generally not charged hopping. Dotx=8chi p follows from 4chi p^2. All identities require the stated common invariant physical core or a justified closure, not arbitrary unbounded-operator products.",
+      "evidence": "Consumer lines 64-112 verifies literal incidence, exact Lplus and collective/incoming fullE controls; arbitrary-Phi path jets at lines 179-244 verify gradient Ward identities."
+    },
+    {
+      "scope": "External phase source_j versus independent electric momentum translation",
+      "verdict": "VALID",
+      "keys": ["microscopic_law.contacts", "actual_fullPhi_SU4_current_contact", "actual_native_algebra.incoming_fullE_transfer_exact"],
+      "derivation": "The native phase source has J_v=i sum(v.k)(T-Tdag) and K_vw=-sum(v.k)(w.k)(T+Tdag); for v=D^Tlambda, J_v=i[rho_lambda,H_m] and K_vv=-[rho_lambda,[rho_lambda,H_m]]. In contrast, Pi->Pi+alpha Q^Tv gives Jkin=128v.E_T and Kkin=128v.P_Tw. These are different variations. The actual j at consumer lines 203-206 is the former, not the kinetic source. The incoming transfer control is 64[(E+k)^2-E^2]=112 for E_0=3/8,k_0=1, versus 64 after wrongly resetting incoming E. Its full contact is 128 and includes longitudinal HE+HC; the assertion label incomingPi_contact must not be treated as a standalone reduced-Pi contact calculation.",
+      "limits": "Static E0''=<K>-2<J Q0(H-E0)^-1 Q0J> additionally needs differentiable nondegenerate ground perturbation and the stated insertion/inverse domains. General mixed-q time-ordered responses require the appropriate conjugate/source ordering; the even spectral kernel is the symmetrized temporal construction, not an automatic reciprocity claim."
+    },
+    {
+      "scope": "Fourier orientation and Bianchi correction",
+      "verdict": "VALID",
+      "keys": ["physical_momentum_and_state.Fourier", "microscopic_law.equations", "actual_native_algebra.Bianchi_cube_times_curl_exact_zero"],
+      "derivation": "The site/midpoint Fourier phases and source-minus-target D give +2i sin(q_j a/2). The integer cube incidence S and plaquette curl C satisfy SC=0; they do not satisfy C^TC=0. The captured single-edge field has |CA|^2=4 and |C^TCA|^2=28. Therefore divB=0 is correct and the superseded curlB=0 is false. B=curltheta and B_phys=curltheta/a^2 are distinct normalizations; dotB_phys has the corresponding a^-2 factor. Sinflux is bounded but does not obey the linear unwrapped identity without further arguments.",
+      "limits": "The smallest N4 physical momentum has |q|a=pi/2 and is not infrared. No relation to the 129-dimensional configuration Bloch beta is implied."
+    },
+    {
+      "scope": "Actual alignment normalization",
+      "verdict": "VALID",
+      "keys": ["microscopic_law.alignment_normalization", "actual_alignment_norm_conversion"],
+      "derivation": "Captured bosonic_original_law_join.py field_potential_at/full_form_contract explicitly use scientific 1/5 times ordinary matrix Frobenius squared divided by 8. For traceless Hermitian DeltaPhi, HS^2=4 sum y_A^2=(1/2)sum x_A^2 with x=sqrt8 y. Hence Va/F=(1/40)HS^2=(1/10)sum y_A^2=(1/80)sum x_A^2, with four fields, fifteen coordinates and three positive-axis links per site once. The primitive's obsolete bare-EM branch is not imported.",
+      "evidence": "Captured primitive lines 75-90; consumer lines 146-176; exact four-field endpoint HS^2=44288 and wrong-divisor ratio 8."
+    },
+    {
+      "scope": "Discrete electric translation and continuous-flux route boundary",
+      "verdict": "VALID",
+      "keys": ["symmetry_route_test_and_obstruction.exact_native_symmetry", "symmetry_route_test_and_obstruction.full_algebra", "symmetry_route_test_and_obstruction.why_no_goldstone"],
+      "derivation": "Exp(i2pi n.E) shifts theta by 2pi n and all literal charged integer path phases return to themselves. It is central on the specified native integer periodic/dressed/electric algebra. The longitudinal factor cannot be removed after Gauss reduction: the captured Pi-only open-hop phase is -0.47139673682599786-0.8819212643483549i, while fullE gives 1. A closed cycle c with n.c=1 and fractional Weyl exp(i c.theta/2) gives phase -1, disproving centrality on the full real-cover observable algebra.",
+      "limits": "A discrete central superselection translation is not a continuous broken physical symmetry and cannot alone invoke ordinary Goldstone. The proof does NOT disprove every other continuous magnetic/flux symmetry mechanism: implementation, dynamics, order, susceptibility and domain hypotheses remain uninstantiated. Beta minimization and real-cover regularity remain separate obligations."
+    },
+    {
+      "scope": "Connected physical stationary-ground momentum sources and positive measures",
+      "verdict": "CONDITIONAL",
+      "keys": ["physical_momentum_and_state.representation", "physical_momentum_and_state.observables", "physical_momentum_and_state.Lehmann"],
+      "derivation": "Accepted finite-volume compact-resolvent ground existence supplies abstract ground vectors/projections without a numerical groundvector. Translation averaging ground functionals preserves stationarity and the ground condition, with the appropriate physical translation action/fiber orbit. On a ground representation L>=0, xi=Q0 O_q Omega yields a positive spectral measure and resolvent int dmu/(z-epsilon). Q0 removes the entire zero-energy block, not merely <O>Omega. Spatial reflection positivity is not used in this temporal spectral theorem.",
+      "load_bearing": ["Actual physical ground representation, not an arbitrary stationary or prepared state", "Translation implementation and same-state momentum sources", "O_q Omega insertion domain; raw B additionally needs unwrapped regularity", "Ground degeneracy/static terms separated", "Uniform local bounds and limiting dynamics for an infinite-volume GNS limit"],
+      "limits": "No computed groundvector is a prerequisite for the abstract construction. No actual Gram or pointwise/rescaled-q infrared measure is evaluated by corrected2. Spatial RP failure does not invalidate temporal Hamiltonian positivity."
+    },
+    {
+      "scope": "Source Gram, finite-rank domain boundary and exact irreducible Schur matrix",
+      "verdict": "CONDITIONAL",
+      "keys": ["materially_different_irreducible_route.source_projection", "materially_different_irreducible_route.exact_Feshbach"],
+      "derivation": "On positive Gram support W=Xi S^-1/2 has WdagW=I, P=WWdag and R=Q0-P. On the excitation Hilbert space the block operator is [[M,Bdag],[B,C]], with M=WdagLW, B=RLW and C=RLR. Eliminating u_R gives Wdag(z-L)^-1W=[zI-M-Bdag(z-C)^-1B]^-1 and original source matrix S^1/2[...]^-1S^1/2. For finitely many sources in D(L), LP and PL extend bounded finite-rank operators. P preserves D(L), and removing the bounded off-diagonal B+Bdag from selfadjoint L gives a selfadjoint block-diagonal operator on D(L). Thus the compression C is selfadjoint on R D(L), and is nonnegative when L is. This supplies a precise sufficient finite-rank domain argument, once actual source membership in D(L) is established.",
+      "limits": "Boundedness of a flux observable alone does not prove O Omega in D(L). D(L^1/2) only gives a first form moment, not automatically the displayed bounded operator B or the operator-block proof. The proof explicitly leaves additional form-source control and justified regularization limits conditional. Singular Gram directions must be removed. Uniform inverse-Gram and domain estimates remain open."
+    },
+    {
+      "scope": "Irreducible versus reducible full JJ and current-force sign",
+      "verdict": "VALID",
+      "keys": ["materially_different_irreducible_route.not_full_JJ", "stationary_irreducible_route_method_controls"],
+      "derivation": "For an electric source and H Omega=E0 Omega, L E_T Omega=[H,E_T]Omega=i J_T Omega. Hence the normalized orthogonal force includes the i, Gram normalization, ground removal and source projection: B=i R J_T Omega S^-1/2 for a collection of electric sources with justified domains. It is not an unprojected full current source. The captured positive 3x3 model gives proper Sigma=-91/170-27i/170 and reducible Sigma=-349/593-188i/593, with a nonzero resulting resolvent difference. Source recursions in full JJ would be double-counted if inserted as the Schur selfenergy.",
+      "limits": "This model verifies the mathematical method, not the actual N4 ground response. The external contact-minus-fullJJ Hessian remains a legitimate response for its own probe but is not automatically a photon 1PI kernel."
+    },
+    {
+      "scope": "Derivative and pole residue",
+      "verdict": "CONDITIONAL",
+      "keys": ["materially_different_irreducible_route.sharp_branch_criterion", "stationary_irreducible_route_method_controls.exact_residue"],
+      "derivation": "d_z(z-C)^-1=-(z-C)^-2, so Sigma'=-Bdag(z-C)^-2B. At a real isolated simple zero and normalized nullvector u, the residue is S^1/2 u udag S^1/2 divided by udag(I-Sigma')u. For real e outside bath spectrum this denominator equals 1+||(e-C)^-1Bu||^2>0. The exact 2x2 control residue 1/2+sqrt5/10 matches eigenvector overlap; the reversed-sign residue 1/2+sqrt5/2 does not.",
+      "load_bearing": ["Real-frequency isolation/analyticity or an independent spectral-atom argument", "Simple null and physical nonzero overlap", "Volume convergence and correctly scaled residue", "Actual bath/kernel estimates, not a finite toy eigenvalue"],
+      "limits": "No actual null, residue, atom or commoncone is established. A branch cut or resonance is not a sharp spectral atom."
+    },
+    {
+      "scope": "State-weighted force controls and stiffness boundary",
+      "verdict": "VALID",
+      "keys": ["materially_different_irreducible_route.actual_force_discriminator", "materially_different_irreducible_route.actual_mechanism", "actual_fullPhi_SU4_current_contact.physical_transverse_force_route"],
+      "derivation": "Canonical fixed-N trace covariance is N(M-N)/(M(M-1))[tr(j^2)-(tr j)^2/M], equal to 64/255 at M=256,N=128. Literal offsite native jets have tr j=tr k=0. At the captured arbitrary fullPhi/SU4 section the active and auxiliary single-copy variances are 1247.3256111390103 and the 64-copy sum is 79828.83911289666; nonzero onebody [h,j] rejects an identically absent force. This is not a physical Gauss-ground trace. J depends linearly on Phi, so scaling a nonzero field section by t makes J scale by t; a uniform full-field operator-norm force bound is false. Relevant estimates must instead bound ||J Omega|| or moments by state-weighted Phi moments, with finite-volume/path constants and domains. Such estimates are not automatically N-uniform.",
+      "limits": "Tracial copy variances do not factorize collective HC, yield ground stiffness, or price full dynamical response. Integrating the bare 64Pi^2 gives electric action dotTheta_T^2/256 and inverse-quadratic frequency coefficient 1/128. Neither this bare coefficient nor positive force variance determines renormalized epsilon or generated kappa. No bare U1 B2 is introduced."
+    },
+    {
+      "scope": "Sharp photon versus positive gapless continuum",
+      "verdict": "VALID",
+      "keys": ["sharp_vs_continuum", "stationary_irreducible_route_method_controls.positive_gapless_no_atom_continuum"],
+      "derivation": "The atom q^-1 delta_cq and density 1/(c q^2) on [cq,2cq] both have mass 1/q. The density has no atom and its relative shrinking-window mass tends to zero; the atomic fraction is one. Both even Euclidean responses are Maxwell-comparable for fixed positive c. The consumer's c=1 ratios are analytic formula evaluations, while shrinking-window fractions are the analytic expression recorded directly, not a separate numerical spectral reconstruction.",
+      "limits": "Ward transversality, positivity, gapless support, first moments and Maxwell-comparable bounds cannot distinguish these examples. None admits an actual campaign pole."
+    }
+  ],
+  "findings": [
+    {
+      "id": "stationarity_only_summary_hypothesis",
+      "severity": "WORDING_WITH_LOAD_BEARING_HYPOTHESIS",
+      "file": "joined_phi_u1_native_ir_mechanism_proof_corrected_20261010.json",
+      "sha256": "0f38e399c179b79f7df920b0d975d0dc377348bfe14dab7867005e7b98bcf06f",
+      "key": "proved_vs_open.proved_steps",
+      "quoted_claim": "stationary positive temporal spectral representation conditional only on actual stationary representation",
+      "verdict_if_literal": "INVALID",
+      "counterexample": "H=diag(0,1), Omega=(0,1) is stationary but not ground. O=|0><1| sends Omega to the energy-zero vector; the implementing generator H-1 has eigenvalue -1 on that source and temporal correlation exp(+t), not a measure supported on nonnegative energies. Stationarity alone does not give L>=0.",
+      "contextual_resolution": "physical_momentum_and_state.representation and source_projection explicitly require a stationary ground representation, so the actual conditional construction is not invalidated and no unconditional physical realization is made by the body.",
+      "smallest_correction": "In parent integration, restate this summary as conditional on the actual stationary GROUND representation and the stated insertion domains. Do not extend it to arbitrary stationary states.",
+      "target_edited": false
+    }
+  ],
+  "retained_epochs": {
+    "superseded_original_proof": {
+      "sha256": "5c88b510208753d8c4c406f7ffb81db1585a8cf7686ef4fa3a88b360378c6a90",
+      "retained_in_delivered_preexecution": true,
+      "delivered_preexecution_sha256": "f8950eb57360bddb30db6a6e9356b1634827428a3aee7baca201b32c52b877e0",
+      "scientific_error": "microscopic_law.equations incorrectly said curlB=0; superseded rather than erased. Natural process success on an older epoch is not proof of that sentence."
+    },
+    "failed_corrected_epoch": {
+      "natural_exit": 1,
+      "elapsed_seconds": 6.427758961988729,
+      "consumer_sha256": "73b961332f78530eba4d637740fa07f4931c915422393e839cac3dec0320d72d",
+      "proof_sha256": "0f38e399c179b79f7df920b0d975d0dc377348bfe14dab7867005e7b98bcf06f",
+      "execution_archive_sha256": "9ae361314f3cd5859418fb1403c4bc1bce0a20b97f689cf3a087b025dbb92890",
+      "captured_failure": "alignment_controls line162 assert reconstructed==difference; unsimplified symbolic structural equality",
+      "correction": "Corrected2 source uses (reconstructed-difference).applyfunc(sp.simplify)==sp.zeros(4), exact symbolic equality rather than tolerance, exception suppression or fallback.",
+      "rerun_by_reviewer": false
+    }
+  },
+  "execution_limits": {
+    "review_activity": "Read captured and matching live source, inspected pinned archive members, computed hashes and compared capture dictionaries. Mathematical derivations above are reviewer deductions, not new physical measurements.",
+    "new_mathematical_probe_run": false,
+    "original_producer_or_checker_rerun": false,
+    "root_findroot_solve_mean_load_quantum_mean_old_precision_jobs": false,
+    "target_or_shared_files_edited": false,
+    "new_file_only": "joined_phi_u1_native_ir_mechanism_mathreview_NativeSchurProofReview_20261010.json"
+  },
+  "still_open": [
+    "Actual same-ground source Gram and D(L) insertion estimates, including inverse-Gram support conditioning",
+    "Actual mixed orthogonal response retaining fullPhi/SU4/incomingPi/collectiveHC/active1+aux63",
+    "Evaluated or rigorously bounded positive induced stiffness and renormalized electric susceptibility",
+    "Same-law thermodynamic ground dynamics, pointwise/rescaled-q infrared control and two-polarization commoncone",
+    "Real-frequency atom/isolation and nonzero correctly scaled residue",
+    "FullPhi ground characterization, betaStar identity, raw-field regularity or bounded-flux photon overlap",
+    "IR phase and originalSOURCE"
+  ],
+  "sameground_massless_pole_admitted": false,
+  "scientific_law_adopted_or_changed": false,
+  "campaign_closed": false
+}

@@ -1,0 +1,107 @@
+{
+  "scope": "Clifford mean-orbit algebra plus holomorphic projector bounds for the actual polar normal frame; not full Gauss/source dynamics certification",
+  "normalization": "Phi_mu=sqrt(g_mu)Gamma_mu; T_I=B_I/sqrt(8), Tr(T_I^2)=1/2; Ocart=sqrt(8)Oframe",
+  "test_couplings_exact": [
+    "1/4",
+    "1/16",
+    "1/16",
+    "1/16"
+  ],
+  "actual_orbit_formula_defect": 2.7755575615628914e-17,
+  "h": 0.03125,
+  "correct_min_orbit_metric": 0.031249999999999993,
+  "wrong_generator_normalization_min": 0.015625,
+  "missing_fourth_field_min": 0.0,
+  "universal_inputs": {
+    "V": 64,
+    "h_lower_strict": "1/64",
+    "rho": "1/256",
+    "R_upper": "1/1048576"
+  },
+  "exact_rational_bounds": {
+    "projector_norm": "263169/261119",
+    "projector_first_derivative": "137707388928/68183132161",
+    "radial_Kato_norm": "17803911286748159/17520783819273215",
+    "Q_derivatives": {
+      "1": "131072/455",
+      "2": "549755813888/1863225",
+      "3": "144115188075855872/282589125"
+    }
+  },
+  "approximate_bound_images": {
+    "projector_norm": 1.0078508266345996,
+    "projector_first_derivative": 2.019669448491061,
+    "radial_Kato_norm": 1.016159520623929,
+    "Q_derivatives": {
+      "1": 288.07032967032967,
+      "2": 295056.0527515464,
+      "3": 509981366.3241849
+    }
+  },
+  "conclusion": "Hphi eigenvalues=(1/2) sum_anticommuting g_mu, so Hphi>=h and OcartGram>=8h exactly. For normalized Ocart=U+E, ||E||<=rho/2. Both radial Kato and the ACTUAL polar normal frame have holomorphic norm below 9/8, implying Q1<512,Q2<2^20,Q3<2^33 on ||slow||<=R. A radial-only match to the actual supplier is withdrawn. Full D jets/tube/supplier/action estimates are not certified by this control.",
+  "status": "derived_subset_plus_natural_exit_0_finite_point_control",
+  "observed_returncode": 0,
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "note": "Exact rational envelope arithmetic; direct Clifford point control uses NumPy floating arithmetic, not an interval eigensolver."
+  },
+  "actual_code_bindings": {
+    "basis": "induced_phi_backreaction.py::clifford_cartesian_basis / SELECTED",
+    "frame_normalization": "induced_phi_em_gaussian_variational.py::_frame_image (sqrt(g_mu), not 2sqrt(g_mu))",
+    "target_sketch": "induced_phi_nonuniform_local_gauss.py::run derivative_certificate",
+    "actual_adapted_frame": "induced_phi_nonuniform_gauss_quantum.py::adapted_frame lines120-126: Q=(I-P)Q0 [Q0^T(I-P)Q0]^-1/2; POLAR, not radial Kato",
+    "source_proxy_warning": "Exact test couplings are only a discriminating structural control, NOT substituted into the campaign root."
+  },
+  "derivation": {
+    "orbit": "For degree-r signed Clifford monomial B_I, anticommute iff r-1_{mu in I} is odd. i[T_I,Phi_mu] has frame coefficient sqrt(g_mu/2); orthogonality gives diag(Oframe^T Oframe)_I=(1/2)sum_anti g_mu. Degree3 missing one mu attains min g_mu/2=h. Ocart=sqrt(8)Oframe, hence OcartGram>=8h.",
+    "derivative": "The estimate holds directly for complex generator coefficients and complex Cartesian variations: Tr(T_x^dagger T_x)=||x||^2/2, so ||T_x||op<=||x||/sqrt(2). Cartesian output norm is sqrt(2) times Hilbert-Schmidt norm, and ||deltaPhi||HS=||deltaCartPhi||/sqrt(2). Therefore ||Ocart'(deltaCartPhi)x||<=sqrt(2)||x||||deltaCartPhi||. Uniform slow coordinates divide by sqrt(V), giving ||Ocart_prime||<=sqrt(2/V) also on the complexified space. Ocart(s) is affine. Right-normalization by the real mean Gram inverse square root gives L<=sqrt(2/V)/sqrt(8h)<=1/2 for V64,h>1/64; no inference from real differentiability to a complex norm bound is used.",
+    "projection": "Write F=U+E=Ocart(s)(Ocart0^T Ocart0)^-1/2, where U is real orthonormal and ||F'||<=L=1/2 directly on the complexified slow space. For ||s||<=rho, epsilon=L*rho=1/512, t=1+epsilon, d=1-2epsilon-epsilon^2. Then ||F||<=t and ||(F^T F)^-1||<=1/d by the Neumann series. P=F(F^T F)^-1 F^T is holomorphic throughout this ball. Differentiating this formula gives ||P'||<=2*L*t/d+2*L*t^3/d^2. Since d+t^2=2 and L=1/2, this equals 2*t/d^2=137707388928/68183132161<33/16, not an asserted tighter constant. Integration along the complex radial segment yields ||P(s)-P0||<=P1*||s||.",
+    "radial_frame": "Radial Kato W solves dW/dt=[dP/dt,P]W and transports the normal complement. ||W||<=exp(2 Pnorm P1 rho)<=1/(1-2 Pnorm P1 rho)<9/8. Real inputs give orthogonal W. This bound is for this particular radial normal frame, not arbitrary chart rephasing.",
+    "polar_frame": "The actual supplier uses C=I-P(s), N=CQ0 and Q=N(N^T N)^-1/2. Idempotence gives N^T N=Q0^T C Q0. On the complex rho ball, ||P(s)-P0||<=P1*rho=537919488/68183132161=:delta<1. Hence ||N||<=1+delta and ||N^T N-I||<=delta. The analytic inverse-square-root binomial series gives norm <=1/(1-delta). Thus ||Qpolar||<=(1+delta)/(1-delta)=68721051649/67645212673<9/8. The same multivariate Cauchy bounds apply to the actual polar frame, without changing the supplier.",
+    "Cauchy": "At ||slow||<=R, complex polydiscs with each of n arguments radius (rho-R)/n remain inside the rho ball. Multivariate Cauchy gives ||D^n Q||<=n^n*(9/8)/(rho-R)^n, n=1,2,3; exact rational comparisons below 512,2^20,2^33."
+  },
+  "limits": [
+    "Subset only: does not independently certify full chart Dprime/Dsecond, global tube/injectivity, fast joint Gaussian/Riccati/root/input bounds, or physical source-time error.",
+    "Requires the declared Cartesian slow coordinates and mean-orthonormal normal Q0. The actual supplier's polar frame is addressed by the separate extension below; arbitrary coordinate/frame changes require new bounds.",
+    "No microscopic coupling, covariance epoch, source, receiver, counterterm or velocity adoption.",
+    "NumPy test couplings are a structural control, not the exact rational campaign root; universal envelope uses only declared inequalities V=64,h>1/64."
+  ],
+  "review_reconciliation": {
+    "reviewer": "NonuniformSourceReview",
+    "reviewed_scope": "Derived orbit/projector/polar-frame subset with finite floating structural controls; not global Gauss/source certification.",
+    "exposition_resolved": [
+      "Exact P1 now follows explicitly from differentiation: 2*L*t/d+2*L*t^3/d^2=2*t/d^2; Fraction arithmetic independently matched the stored rational.",
+      "The affine orbit derivative is bounded directly for complex coefficients using the Hilbert-Schmidt/Cartesian isometry, instead of an unstated real-to-complex transfer."
+    ],
+    "remaining_debts": [
+      "The mathematical bound requires exact mean-orthonormal Q0; this capsule does not interval-certify the actual supplier's rounded Q0 realization.",
+      "Floating point controls intentionally discriminate structure, not interval eigenvalue or global supplier certification.",
+      "Full D jets, global tube/injectivity, fast Gaussian/Riccati/root/input and complete source-action estimates remain outside this subset."
+    ],
+    "separate_primary_receipt_correction": "The resumed nonuniform source receipt's adapted_slice_transition_derivative_upper is 0.08729525445913037..., not the earlier relay 0.0446; it remains below 1/4. No scientific state, source, bound or gate was changed."
+  },
+  "complex_affine_derivative_control": {
+    "observed_returncode": 0,
+    "runtime": "/home/administrator/substrate-framework/.venv/bin/python",
+    "definition": "T=primitive.clifford_cartesian_basis()/sqrt(8), v[0,0]=i with all other Cartesian components zero, deltaPhi=sum_a v_mu,a T_a/8, D_mu,a,b=2 Tr(T_a i[T_b,deltaPhi_mu]); V=64.",
+    "correct_complex_derivative_norm": 0.08838834764831842,
+    "wrong_real_projection_derivative_norm": 0.0,
+    "universal_derivative_upper": 0.1767766952966369,
+    "deltaPhi_HS_squared": 0.007812499999999998,
+    "scope": "Floating structural control of the affine holomorphic extension. Dropping imaginary components at complex input erases a nonzero derivative. The real-only gauss.orbit API is not claimed to accept complex input; this is not an implementation defect or an interval proof."
+  },
+  "actual_polar_frame_extension": {
+    "observed_returncode": 0,
+    "test_couplings_exact": ["1/4", "1/16", "1/16", "1/16"],
+    "frozen_frame_normal_orbit_cross": 2.1380575882523466e-7,
+    "actual_polar_frame_normal_orbit_cross": 4.20266820243504e-16,
+    "actual_polar_frame_metric_defect": 1.3755351376223647e-14,
+    "exact_projector_change_bound": "537919488/68183132161",
+    "exact_polar_Q_norm_bound": "68721051649/67645212673",
+    "polar_Q_norm_bound_image": 1.0159041406403828,
+    "discriminated_wrong_case": "Frozen Q0 fails off-mean normal-orbit orthogonality, while the actual polar adapter preserves it. Radial-only identification is withdrawn; no source/kinetic-jet change.",
+    "limits": "Literal floating point control at exact test couplings plus exact rational envelope arithmetic, not interval eigenvalue or whole source certification."
+  },
+  "probe_source_sha256": "3abc3924b0b2e045417a1c7ed2a2a36f55ce9ddd05de49ac218f5b296956d318",
+  "probe_source_utf8": "\nfrom fractions import Fraction as F\nimport json,sys\nimport numpy as np\nsys.path.insert(0,'/home/administrator/substrate-222/proposals/P256-qed-backward')\nimport induced_phi_backreaction as primitive\nB=primitive.clifford_cartesian_basis();G=primitive.SELECTED\nassert np.max(abs(np.einsum('aij,bji->ab',B,B)-4*np.eye(15)))==0\n# Exact test couplings, not a new source epoch or substituted campaign root.\ng=np.array([.25,.0625,.0625,.0625]);Phi=np.sqrt(g)[:,None,None]*G\nT=B/np.sqrt(8.)\ndef orbit(frame,generators):\n    comm=1j*(generators[:,None]@frame[None]-frame[None]@generators[:,None])\n    return np.real(np.einsum('mij,anji->anm',B,comm)/4).reshape(15,60).T\nO=orbit(Phi,T)\nfrom itertools import combinations\nexpected=[]\nfor degree in range(1,5):\n    for I in combinations(range(4),degree):\n        anti=[j for j in range(4) if (degree-(j in I))%2]\n        expected.append(sum(g[j] for j in anti)/2)\nassert np.max(abs(O.T@O-np.diag(expected)))<1e-15\nh=min(g)/2\nbad_generator_min=np.linalg.eigvalsh(orbit(Phi,B/4).T@orbit(Phi,B/4))[0]\nassert bad_generator_min<h*.51  # wrong normalization must not certify Hphi >= h\nmissing=Phi.copy();missing[3]=0\nmissing_orbit_min=np.linalg.eigvalsh(orbit(missing,T).T@orbit(missing,T))[0]\nassert missing_orbit_min<1e-15  # fourth Clifford field is essential for a free orbit\n# Universal exact rational bounds: V=64,h>1/64,rho=1/256,R<=2^-20.\n# ||Ocart'|| <= sqrt(2/V), Ocart0^T Ocart0 >= 8h, hence normalized L<1/2.\nrho,R=F(1,256),F(1,1<<20);epsilon=rho/2\nD=1-2*epsilon-epsilon*epsilon\nP=(1+epsilon)**2/D\nP1=(1+P)*(1+epsilon)/D\nK=2*P*P1\nW=1/(1-K*rho)  # exp(K*rho) <= 1/(1-K*rho)\nassert P<F(65,64) and P1<F(33,16) and W<F(9,8)\nQbounds={n:F(n**n)*F(9,8)/(rho-R)**n for n in (1,2,3)}\nlimits={1:F(512),2:F(1<<20),3:F(1<<33)}\nassert all(Qbounds[n]<limits[n] for n in limits)\nprint(json.dumps({'scope':'Clifford mean-orbit algebra plus analytic radial-normal-projector bounds; not full Gauss/source dynamics certification','normalization':'Phi_mu=sqrt(g_mu)Gamma_mu; T_I=B_I/sqrt(8), Tr(T_I^2)=1/2; Ocart=sqrt(8)Oframe','test_couplings_exact':['1/4','1/16','1/16','1/16'],'actual_orbit_formula_defect':float(np.max(abs(O.T@O-np.diag(expected)))),'h':float(h),'correct_min_orbit_metric':float(np.linalg.eigvalsh(O.T@O)[0]),'wrong_generator_normalization_min':float(bad_generator_min),'missing_fourth_field_min':float(missing_orbit_min),'universal_inputs':{'V':64,'h_lower_strict':'1/64','rho':str(rho),'R_upper':str(R)},'exact_rational_bounds':{'projector_norm':str(P),'projector_first_derivative':str(P1),'radial_Kato_norm':str(W),'Q_derivatives':{str(n):str(Qbounds[n]) for n in Qbounds}},'approximate_bound_images':{'projector_norm':float(P),'projector_first_derivative':float(P1),'radial_Kato_norm':float(W),'Q_derivatives':{str(n):float(Qbounds[n]) for n in Qbounds}},'conclusion':'Hphi eigenvalues=(1/2) sum_anticommuting g_mu, so Hphi>=h and OcartGram>=8h exactly. For normalized Ocart=U+E, ||E||<=rho/2; holomorphic projector and radial Kato bounds imply Q1<512,Q2<2^20,Q3<2^33 on ||slow||<=R. Full D jets/tube/supplier/action estimates not certified by this control.'}))\n"
+}
