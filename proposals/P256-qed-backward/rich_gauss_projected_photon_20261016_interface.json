@@ -1,0 +1,18 @@
+{
+ "kind":"EXACT_GAUSS_COHERENT_SINGLET_PAIR_AMPLITUDE",
+ "source":"rich_gauss_projected_photon_20261016_state.py",
+ "module":"rich_gauss_projected_photon_20261016_state",
+ "call":"SELECTED: table=pair_table(g=.45,eta=.08); physical_amplitude(bits,E,table,a=.15,b=.08,tau=.10,shift=-10.). BASE control: eta0,b0,tau0.",
+ "bits":"16-bit interleaved orbital order up0,down0,up1,down1,...; Nup=Ndown4",
+ "E":"24 int64 physical arc fields in -1,0,1; frozen EDGES ordering. Physical wrapper returns0 outside INCIDENCE@E+rho=0",
+ "state":"delta_G det F(up,down) interleaved-sign exp(-gD-a sum E^2-b sum oppositearc(Ea+Eb)^2). F=Phi diag(occupied:1,unoccupied:eta) PhiT. Occupied cube momenta |kbits|<=1, a unique cubic filled shell. eta0 exact closed-shell Slater, eta>0 genuine singlet pair state.",
+ "dressing":"tau!=0 applies [1-tau(H-shift)] to actual base amplitude using ALL legal CAR hops; not extra Hamiltonian coupling. Unnormalized scalar amplitude and fresh table sufficient to reconstruct entire state.",
+ "sampling":"guide=abs(psi)^2+epsilon^2 exp(-2gD)*field_weight^2 strictly positive over legal state space, so discrete Slater nodes remain in H2 estimator. Every observable numerator reweighted by guide; normalize by mean abs(psi)^2/guide. Symmetric fixed proposals: primitive joint hops, spin swaps, plaquettes AND two-arc windings, invalid=self transition.",
+ "current":"vectors returns psi,F1psi,F2psi,J1psi,J2psi; F=cE/16, J=-i[H,cE], so [H,F]=iJ/16. Exact arc CAR. contact=-sum hxy c_p,e c_q,e psi_x psi_y/norm. H(A)=H+AJ+.5 A C A; response to -fO is chi, twist response=C-chiJJ. Mixed channels use W/(omega-z)+WT/(omega+z), not a scalar 2omega kernel on complex W. No stationary-pole claim.",
+ "frozen_law":"8site24distinctarcs fullCAR4 link3 Nup/down4 ions1 t1 U4 I16 Ecap1; no bareB term",
+ "parameters_exploratory_not_yet_selected":false,
+ "selected_state":"pair_Himage: actual16k positive-guide samples energy-12.1378766 blockSE.01579, fullH2 residual estimator1.34196; independent reviewer selected own chains also observe improvement. Exact base energy-11.58964378570911, undressed pair-11.533616905834917.",
+ "support_limit":"Field amplitude supports all legal Gauss configurations conditional on matter determinant, all0..4pair sectors retained. Fermionic symmetry nodes are real, not silently called strictly nonzero full support.",
+ "exact_contraction":"rich_gauss_projected_photon_20261016_exact.py sums all4900matter configs,1107rho,3125free netflow candidates and all9physical twoarc states per kernel. Exact base norm/energy, not exact dressed H2.",
+ "response_correction":"Attempt3 Gram/H/current/contact data valid, but mixed complex retarded response used a scalar kernel and twist sign inconsistent with positive static chi. Superseded arrays preserved; final attempt4 corrects both."
+}

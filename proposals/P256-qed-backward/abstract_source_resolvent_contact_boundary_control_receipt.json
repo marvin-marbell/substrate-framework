@@ -1,0 +1,11 @@
+{
+  "status": "natural_exit_0_independent_abstract_matrix_control",
+  "scope": "Abstract SPD 2x2 source-weighted resolvent/log control; NOT Alpha0226, a microscopic law, or physical current/contact certification",
+  "runtime": {"executable": "/home/administrator/substrate-framework/.venv/bin/python", "mpmath_decimal_precision": 90, "observed_returncode": 0},
+  "input": {"A_k": "[[1,k],[k,delta]]", "delta": "1e-12", "source_b": "[1,0]", "Galerkin_basis_V": "[[1],[0]]", "log_contact_difference_step": "1e-20", "resolvent_probe_k": "sqrt(delta)/2", "resolvent_probe_s": ["0", "1e-12", "0.001", "1"]},
+  "observed": {"full_source_log_at_zero": "0.0", "compressed_source_log_at_zero": "0.0", "compressed_contact": "0", "full_contact_second_derivative": "-53.2620422319656205008956728915843", "analytic_contact_second_derivative": "-53.2620422319656205008956728913843", "maximum_resolvent_residual_identity_defect": "6.13636683162e-92"},
+  "exact_identity": "For H=A+sI>0, y=V(V*HV)^-1V*b, r=b-Hy: b*H^-1b-b*y = r*H^-1r (Galerkin orthogonality). For b in range(V), compressed minus full log-source expectation is the integral of this nonnegative residual energy.",
+  "analytic_contact": "2*(log(delta)+1-delta)/(1-delta)^2",
+  "discriminated_wrong_case": "Exact base-source log and zero base residual do not certify contact: compressed contact is zero but full contact is below -50. Physical first/second source/operator derivative-resolvent jets need separate bounds.",
+  "limits": ["Finite high-precision execution plus explicit analytic 2x2 formula, not an interval certificate", "No target source/receiver/law change", "No evidence of a defect in completed Alpha integer totals", "No full noninteger operator or individual physical-current/contact admission"]
+}

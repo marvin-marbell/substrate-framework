@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--project",
+    "/tmp/joined_phi_u1_jordan_31_mathreview_pyright_20261010.json",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--stats",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_31_mathreview_independent.py"
+  ],
+  "selected_actual_project_files": [
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_31_mathreview_independent.py"
+  ],
+  "configuration": {
+    "pythonVersion": "3.12",
+    "pythonPlatform": "Linux",
+    "typeCheckingMode": "basic",
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward"
+    ],
+    "venvPath": "/home/administrator/substrate-framework",
+    "venv": ".venv"
+  },
+  "configuration_sha256": "cba155c5e985b9dcf0676ddcfe146db41f39ac541e07380e91bd61ab6c470075",
+  "source_sha256": "a77a0d5954592a7b4c958e71a764deac37d1db72b93a9c91e170cfaa7a156e3f",
+  "natural_exit_code": 1,
+  "elapsed_seconds": 12.40372892600135,
+  "stdout": "Loading configuration file at /tmp/joined_phi_u1_jordan_31_mathreview_pyright_20261010.json\nSetting pythonPath for service \"<default>\": \"/home/administrator/substrate-framework/.venv/bin/python\"\nAuto-excluding **/node_modules\nAuto-excluding **/__pycache__\nAuto-excluding **/.*\nAuto-excluding **/__editable__.*\nFound 1 source file\n[FG] Long operation: checking: file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_31_mathreview_independent.py (11136ms)\n[FG] Long operation: analyzing: file:///home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_31_mathreview_independent.py (11583ms)\npyright 1.1.414\n/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_31_mathreview_independent.py\n  /home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_31_mathreview_independent.py:56:12 - error: Type \"Rational | NaN | ComplexInfinity\" is not assignable to return type \"Rational\"\n  \u00a0\u00a0Type \"Rational | NaN | ComplexInfinity\" is not assignable to type \"Rational\"\n  \u00a0\u00a0\u00a0\u00a0\"ComplexInfinity\" is not assignable to \"Rational\" (reportReturnType)\n  /home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_31_mathreview_independent.py:120:16 - error: Operator \">=\" not supported for types \"Unknown | Self@AssocOp | Expr | Basic\" and \"Literal[0]\"\n  \u00a0\u00a0Operator \">=\" not supported for types \"AssocOp*\" and \"Literal[0]\"\n  \u00a0\u00a0Operator \">=\" not supported for types \"Basic\" and \"Literal[0]\" (reportOperatorIssue)\n  /home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_jordan_31_mathreview_independent.py:147:12 - error: Operator \">\" not supported for types \"Unknown | Self@AssocOp | Expr | Basic\" and \"Literal[0]\"\n  \u00a0\u00a0Operator \">\" not supported for types \"AssocOp*\" and \"Literal[0]\"\n  \u00a0\u00a0Operator \">\" not supported for types \"Basic\" and \"Literal[0]\" (reportOperatorIssue)\n3 errors, 0 warnings, 0 informations\nCompleted in 12.057sec\n\nAnalysis stats\nTotal files parsed and bound: 518\nTotal files checked: 1\n\nTiming stats\nFind Source Files:    0sec\nRead Source Files:    0.08sec\nTokenize:             0.71sec\nParse:                1.23sec\nResolve Imports:      0.33sec\nBind:                 1.62sec\nCheck:                7.49sec\nDetect Cycles:        0sec\n",
+  "stderr": ""
+}

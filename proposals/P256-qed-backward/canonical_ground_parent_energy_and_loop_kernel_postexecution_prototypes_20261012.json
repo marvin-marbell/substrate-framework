@@ -1,0 +1,23 @@
+{
+  "kind": "EXACT_FINITE_POSTEXECUTION_METHOD_PROTOTYPES_NOT_NATIVE_SCIENCE_OR_PREEXECUTION_BACKFILL",
+  "postexecution": true,
+  "preexecution_backfill": false,
+  "helper_source": {
+    "path": "canonical_ground_parent_singlet_20261012.py",
+    "sha256": "a308e99a99fa15b8b1c7f382d19bd56aa7740b11b37404eec5829bf21f40e91a"
+  },
+  "constrained_filter": {
+    "source_code": "import sympy as s\nfrom canonical_ground_parent_singlet_20261012 import wedge_action, complementary_singlet\nv=complementary_singlet(4,2); I=s.eye(6); g=s.diag(3,-1,-1,-1);g[0,1]=s.I;g[1,0]=-s.I\nh=s.Matrix([[2,1,s.I,0],[1,-2,0,1],[-s.I,0,1,1],[0,1,1,-1]])\nA=s.kronecker_product(wedge_action(g,2),I); common=s.kronecker_product(wedge_action(h,2),I)+s.kronecker_product(I,wedge_action(h,2));tau=s.Rational(1,3);F=s.eye(36)+tau*A;n=(v.H*v)[0]\nassert common*v==s.zeros(36,1)\nassert s.simplify((v.H*F*common*F*v)[0])==0\nassert s.simplify((v.H*A**3*v)[0])==0\nassert g*h!=h*g\na2=s.simplify((v.H*A**2*v)[0]/n);chi=s.Rational(1,64);delta=s.Rational(-3,2);D=10*chi;gain=s.simplify((D*tau**2+2*delta*a2*tau)/(1+a2*tau**2))\nassert gain<0\nprint({'a2':str(a2),'noncommuting_common_matter_energy':str(s.simplify((v.H*F*common*F*v)[0]/n)),'active_cube':str(s.simplify((v.H*A**3*v)[0]/n)),'complete_linear_filter_energy_difference':str(gain),'scope':'EXACT_FINITE_REPRESENTATION_PLUS_DECLARED_KINETIC_METHOD_NOT_NATIVE_GROUND'})\n",
+    "stdout": "{'a2': '14/3', 'noncommuting_common_matter_energy': '0', 'active_cube': '0', 'complete_linear_filter_energy_difference': '-4017/1312', 'scope': 'EXACT_FINITE_REPRESENTATION_PLUS_DECLARED_KINETIC_METHOD_NOT_NATIVE_GROUND'}\n",
+    "natural_returncode": 0,
+    "scope": "M4,k2,two charged copies finite CAR; D=10chi is declared normalized15-generator kinetic method; not a full native physical ground."
+  },
+  "joint_loop_kernel": {
+    "source_code": "import itertools,json,sympy as s\nfrom canonical_ground_parent_singlet_20261012 import wedge_action,complementary_singlet\nI=s.eye(6);psi=complementary_singlet(4,2)\ndef common(i,j):\n    e=s.zeros(4);e[i,j]=1;a=wedge_action(e,2)\n    return s.SparseMatrix(s.kronecker_product(a,I)+s.kronecker_product(I,a))\ncycles=[(0,1,2,3),(0,1,3,2),(0,2,1,3)];Gram=s.zeros(36);one=None\nfor cycle in cycles:\n    hops=[common(cycle[(i+1)%4],cycle[i]) for i in range(4)];B=s.zeros(36)\n    for order in itertools.permutations(range(4)):\n        word=s.eye(36)\n        for index in order:word=hops[index]*word\n        B+=word\n    assert B*psi==s.zeros(36,1) and B.H*psi==s.zeros(36,1)\n    g=B.H*B+B*B.H\n    if one is None:one=36-g.rank()\n    Gram+=g\nprint(json.dumps({'method_only_not_native':True,'single_cycle_joint_nullity':one,'three_distinct_cycle_joint_nullity':36-Gram.rank(),'common_SU4_singlet_dimension':1,'all_ordered_terms_per_cycle':24,'all_copy_assignments_retained':True,'joint_kernel_equals_singlet':36-Gram.rank()==1}))\n",
+    "stdout": "{\"method_only_not_native\": true, \"single_cycle_joint_nullity\": 1, \"three_distinct_cycle_joint_nullity\": 1, \"common_SU4_singlet_dimension\": 1, \"all_ordered_terms_per_cycle\": 24, \"all_copy_assignments_retained\": true, \"joint_kernel_equals_singlet\": true}\n",
+    "natural_returncode": 0,
+    "scope": "M4,k2,two charged copies full36 sector/all24 terms; three abstract cycles, not native N4 fullcolour lattice or all64 theorem."
+  },
+  "native_ground_or_phase_computed": false,
+  "campaign_complete": false
+}

@@ -1,0 +1,50 @@
+{
+  "law_id": "rich-photon-literal-gauss-cube-transport-20261015",
+  "purpose": "One new actual spatial cube transport experiment, not a massless-photon claim or historical-law join",
+  "historical_boundary": "Frozen fullq source f3af36d79727738822ed2d19b04bf6905c90de0110265717570e7868828dbf02 supplies pure construction. Historical ACTUAL fullq was six-site seven-link DOUBLE_FACE, Nup=Ndown=1. Its cube was only an API option. No historical states/outputs are consumed.",
+  "geometry": {
+    "sites": "Eight x,y,z triples in {0,1}^3, lexicographic order",
+    "edges": "All twelve nearest-neighbour edges oriented toward increasing coordinate",
+    "faces_defined_before_cut": "Left x=0 physical yz perimeter (0,0,0)->(0,1,0)->(0,1,1)->(0,0,1)->(0,0,0); right x=1 parallel perimeter with x replaced by 1. The two four-edge sets are disjoint.",
+    "cut": "Existing cube spanning tree gives seven solved tree links and five independent integer chords m in {-1,0,1}^5. It is an exact finite projected model, not a claimed rotor cutoff limit.",
+    "matter": "Complete spinful Nup=Ndown=1 Fock sector, 64 matter states times 243 flux states = 15552 joint states",
+    "static_ions": "b=(1,0,0,0,1,0,0,0); rho=n-b"
+  },
+  "Gauss": {
+    "incidence": "B_se=+1 at oriented source, -1 at target",
+    "constraint": "G_s=(B E)_s+rho_s=0",
+    "solution": "E_chord=m; after deleting anchor row0, E_tree=B_tree^-1(-rho-B_chord m). All electric fields fluctuate with actual occupations and chords.",
+    "hopping_transition": "T_e=-t sum_spin c_b,spin^dagger U_e c_a,spin changes occupations by -delta_a+delta_b and physical E by +unit_e. Boundary transitions are projected out; every retained transition is exactly Gauss preserving. Literal CAR signs are retained.",
+    "field_transition": "For oriented physical cycle c with Bc=0, W_c=P(product_e U_e^c_e)P shifts physical E by the whole c and leaves every matter state unchanged. Projection follows the complete product, never individually compressed factors. Actual transition support is checked on every nonzero entry."
+  },
+  "H": "sum_e E_e^2/(2 epsilon) + U sum_s n_s,up n_s,down + sum_e(T_e+T_e^dagger), t=1,U=4,epsilon=1,hbar=unit charge=spacing=1. No Maxwell B^2, cosine magnetic restoration, primitive oscillator or imported D/Pi.",
+  "same_primitive_current": {
+    "definition": "J_e=-dH(theta)/dtheta_e=-i(T_e-T_e^dagger), with T_e(theta)=exp(i theta_e)T_e",
+    "electric_identity": "dot E_e=i[H,E_e]=J_e",
+    "density_identity": "dot rho_s=i[H,rho_s]=-sum_e B_se J_e",
+    "constraint_identity": "dot G=B dotE+dotrho=0",
+    "scope": "All-basis finite projected operator identities. No commutator-defined current patch or noncompact CCR assumption."
+  },
+  "preparation": {
+    "baseline": "New explicit neutral E=0 basis state, up at site0=(0,0,0), down at site4=(1,0,0); it is not a stationary ground state or filled sea.",
+    "pulse": "psi_p=exp(-i alpha B_left)psi_0, B_left=(W_left-W_left^dagger)/(2i), alpha=0.7",
+    "locality": "B_left has only the oriented physical left-loop electric support; it acts as identity on matter. Initial matter reduced-state distance, receiver electric probability invariance, and commutators with receiver energies/currents are computed.",
+    "dynamics": "Both psi_0 and psi_p undergo the SAME full nonlinear H, retaining the full declared correlated Fock/flux space; no old eigenstate or low-pole reconstruction is used."
+  },
+  "receivers_and_energy_owners": {
+    "electric_receiver": "ER=sum_e_on_right_face E_e^2/2, disjoint from source loop",
+    "right_total_owner": "Let r_s=x_s (0 or 1), w_e=(r_a+r_b)/2. HR=sum_e w_e E_e^2/2 + U sum_s r_s n_up n_down + sum_e w_e(T_e+T_e^dagger). HL=H-HR. Thus each right edge belongs to right, left edge to left, and bridge edge is split equally.",
+    "powers": "PR=i[H,HR], PER=i[H,ER]; receiver rate is their actual expectation, not a substituted global electric-energy label.",
+    "differences": "delta O(t)=<psi_p(t)|O|psi_p(t)>-<psi_0(t)|O|psi_0(t)>. deltaHR+deltaHL=deltaH, fixed by initial pulse work. Individual ER is not the entire receiving-region energy."
+  },
+  "same_state_controls": {
+    "hopping_off": "Hoff=sum E^2/2+U doubles; HRoff=sum wE^2/2+U doubles_right. Both actual receiver energies commute with Hoff. Their initial pulse-baseline difference is zero and stays zero for all time. No re-grounding or full-H energy label is used for this comparator.",
+    "plane_cut": "Hcut deletes ONLY hopping on the four physical x links; all electric/Hubbard terms remain. HRcut=HRoff+right-face hopping, HLcut=Hcut-HRcut. If the reported exact matrices give [HLcut,HRcut]=[HLcut,ER]=[Bleft,HRcut]=[Bleft,ER]=0, receiver ER trajectory factors and is identical for the same pulse/baseline states. This is exact factorization, not an unrun numerical control trajectory."
+  },
+  "numerics": {
+    "primary": "SciPy adaptive scaled Taylor expm_multiply, duration4 and 33 samples, two joint states in one block",
+    "independent": "Global Hermitian Chebyshev recurrence at endpoint, Gershgorin spectral enclosure and an explicit Bessel coefficient majorant tail <=2e-12. Roundoff excluded from the analytic bound and separately exposed by state/receiver differences between methods.",
+    "not_enough": "Norm and energy drift are reported but are not the sole propagation accuracy evidence. No fixed Krylov schedule is certified from those invariants."
+  },
+  "interpretation": "Positive pulse-baseline spatial electric/owned-energy transfer with matter/current response, exact initial locality and same-state off/cut contrasts is a finite gauge-transport mechanism. Bare E^2 already has sin-flux transitions; their susceptibility alone is not transport. No dispersion, speed, infinite volume, two massless polarizations, Lorentz cone, electron/positron, QCD/proton or Nature claim. Open-graph q, if ever used, would be a profile rather than momentum."
+}

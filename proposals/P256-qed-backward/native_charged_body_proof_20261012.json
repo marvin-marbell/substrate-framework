@@ -1,0 +1,83 @@
+{
+  "kind": "CONDITIONAL_NATIVE_FULL_CHARGED_VARIATIONAL_COLLECTIVE_DEFECT_PROOF_NOT_GROUND_OR_PHASE",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "03e7a09a0dd929f32f3522cf9d7d30b76fe3f5d7c985576fc7cf8fdf2c8c6cc8",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "requirement_ids": ["outcome", "verification"]
+  },
+  "unchanged_law": {
+    "HE": 64,
+    "HC": 64,
+    "active": 1,
+    "auxiliary": 63,
+    "particles_per_species": "2V",
+    "neutral_scale": "-Lambda",
+    "neutral_particles": "2V",
+    "Ref": "full native spectator retained",
+    "bare_U1_B2": false,
+    "full_quantum_Gauss": "one total integer electric flow; divergence equals total charged n-2 per species; SU4 dressing remains unpaid for the point trial"
+  },
+  "body_authority": {
+    "originating_family": "Inherited analytic finite compact-fibre global-minimum selection and translation-averaged ground family, not a canonical trace, a computed vector, a frozen determinant or these trial vectors.",
+    "candidate_only": "Phi0=s beta; Phi_i=r alpha_i; identity colour links. Window s in [1/2,9/16], r in [5/16,3/8] is explicitly NOT actual ground support.",
+    "neutral_owner_reply": "No certified Clifford window follows from complete-field global bounds. Its all-field neutral comparison provides only variational upper/moment support, not this support or uniform BO Berry error.",
+    "numerical_ground_vector_is_prerequisite": false
+  },
+  "first_route_exact_failed_gate": [
+    "Starting from the full canonical onsite sea (negative beta occupancy2/site/species), one native NN transfer makes one positive-band particle and one negative-band hole, preserving each species canonical2V. Its onsite energy is 2sm_species and its physical shared electric cost64.",
+    "For one dimer, each direction has K=2(1+63)=128 disjoint fermionic channels. Their coherent image has norm sqrtK |ci|r, not K|ci|r. The symmetric bright state has t=16ci r at actual hopping1.",
+    "The explicit cluster Kato sufficient convergence gate is 2||V_cluster||<gap(H_cluster,0), with ||V_cluster||=sqrt2 |t| and gap=min(64+delta,2delta), delta=2s(m_active+63m_aux)/64. This sufficient gate already fails in the exact four-state charged cluster. It is not advertised as a necessary physical criterion or a global phase obstruction.",
+    "For the declared whole candidate window, gap<=2delta_max and |t|>=16|ci|r_min. Therefore ratio_squared>=8(16|ci|r_min)^2/(2delta_max)^2>1, checked exactly by the native consumer. All four corner diagnostics are supplementary, not the uniform proof.",
+    "Failure is retained in the immutable consumer receipt. No convergence, all-order response or physical gap is inferred from that expansion. The subsequent route does not reuse a second norm/root criterion."
+  ],
+  "material_second_route": [
+    "Construct actual signed coherent canonical defect vectors |0>, |+>, |->, |+-> on an axis0 dimer. The background occupies both negative beta components at each endpoint for every species. There are two spin channels per species in each direction. The plus and minus channel sets act on disjoint fermion modes, including when species coincide. Even fermionic pair operators in disjoint channels commute. Their CAR signs and native i ci alpha0 phases define the coherent vectors; no absolute coefficient replacement defines the states.",
+    "|+-> is the normalized product of both bright pair sums, with 128^2 allowed pairs. The electric flow is E=k0+p-q on ONE physical link, shared by all species. Its opposite pair electric cost is zero at k0=0, whereas assigning per-species/defect electric fields incorrectly costs128. Same-sign pair cost256 is also retained as a control.",
+    "After harmless basis phase choices, the exact compressed full native charged Hamiltonian relative to the onsite sea in basis [|0>,(|+>+|->)/sqrt2,|+->] is [[0,t,0],[t,64+delta,t],[0,t,2delta]]. The antisymmetric fourth state has energy64+delta and is essential for the electric response. Physical hopping is exactly1.",
+    "Active and auxiliary masses remain distinct. Their exact weighted mean enters the Ritz entries because the signed bright amplitudes have their literal multiplicities. The unequal-mass onsite bright-to-dark variance is 4s^2(m_active^2+63m_aux^2)/64-delta^2>0 (twice this for the opposite pair). It is orthogonal leakage, not a removed term or an invariant-subspace claim.",
+    "The consumer isolates all three real secular roots in rational intervals, proves the lowest is negative and builds its exact vector as (t/lambda,1,t/(lambda-2delta)). This is an explicit coherent quantum state, not a bare response coefficient or a second criterion-only upper. Its compressed electric spectral mass is [1+(t/lambda)^2+(t/(lambda-2delta))^2]^-1 and its one electric transition has gap64+delta-lambda. Signed complex cross is independently exercised on a complex canonical carrier, rejecting the erased imaginary contribution.",
+    "Tile the even-N torus by axis0 dimers with even first coordinate. Every species has exactly four particles on every dimer, hence exactly2V on the whole torus. Every Fock component is accompanied by its single TOTAL integer flow and satisfies U1 Gauss. Each dimer vector has fixed particle number for each species, so all cross-dimer one-fermion expectations vanish. Every nonselected NN and every length2 hopping term therefore has ZERO expectation, not zero operator; all AP factors are retained. N4 endpoint aliases have distinct two-link Peierls histories and are tested before any coalescing.",
+    "The full charged/HE+HC expectation relative to the onsite reference at the fixed body is exactly lambda V/2 for every even N>=4. This is an N-uniform variational energy density statement and finite-density coherent electric-defect construction. It is not a N-uniform fullH spectral gap. Nonselected bonds, c0 beta hopping, unequal masses and omitted higher defect sectors generate nonzero orthogonal leakage.",
+    "The dimer construction has no plaquette holonomy. A phase on its link is removable by a unitary number rotation, so its phase-translation curvature is NOT magnetic stiffness. This route exhibits collective opposite-flow electric screening and tests a mechanism beyond the failed dilute expansion; it does not supply the missing magnetic/IR theorem."
+  ],
+  "native_source_specific_consumer": {
+    "profiles": "Exact immutable rational primitive extraction supplied by parent; no old producer/main/root/optimizer/checker is rerun.",
+    "parent_pure_reuse": ["rational", "gammas"],
+    "controls": [
+      "full N4 native NN/length2/AP operator with canonical occupation and exact integer Peierls shifts",
+      "N4 length2 endpoint collisions retain distinct flows; wrong AP rejected on an unblocked full canonical mask",
+      "one total electric flow versus independent per-species/defect fields",
+      "load64 norm-square error and Pauli-blocked versus allowed transfer",
+      "signed complex carrier response versus erased Im cross",
+      "actual physical hopping1 and exact secular rational intervals"
+    ]
+  },
+  "originating_full_response_not_substituted": {
+    "formula": "For the SAME full self-adjoint L=H-E0 and originating ground functional rho_N, R_ab(z)=rho_N[J_a (1-P0) (L+z)^(-1) (1-P0) J_b], with P0=1_{0}(L) the ENTIRE ground spectral projector. Keep full complex cross and diagonal contact in the Ward/Kubo response before any symmetrization. All sector ground weights are rho_N, never uniform canonical-trace multiplicities.",
+    "P0_scope": "Native secular consumer evaluates the complete ground eigenspace ONLY of its explicitly named four-state compression. Its unique lowest eigenvalue makes the compressed P0 rank1. This is not evaluation or replacement of the actual fullH P0.",
+    "uniform_fullP0_control_paid": false,
+    "connected_IR_magnetic_lower_paid": false,
+    "shared_L_before_projection": true
+  },
+  "full_body_error_assumptions_unpaid": [
+    "Actual minimizing-family support in this Clifford/identity-link candidate window, or a replacement gauge-covariant support theorem allowing a transported charged construction. Neither the parent point probe nor a band gap establishes it.",
+    "The complete neutral -Lambda canonical fast sea, with all neutral hopping, Ref and characters, must accompany the charged state. In the fixed-body calculation its expectation is a common additive body energy, NOT deleted from the law. Transported neutral ground sections require their full Phi derivatives and Berry/Born-Huang connection cost.",
+    "A normalizable full Phi wave/ground functional and quantum SU4 Haar frame dressing must be supplied. The point fields and identity links are conditional evaluation arguments, NOT normalizable physical source vectors. Phi kinetic4chi p_Cart^2, SU4 kinetic(3chi/20)E4^2, full ordered Jordan, alignment and colour plaquette correction are all unpaid rather than declared zero.",
+    "Full local SU4 Gauss must be paid by a gauge-covariant moving occupied subspace and Haar/body dressing. U1 Gauss is exact in the defect components; that alone does not pay SU4 Gauss or the quantum body derivatives.",
+    "Body fluctuations must control charged operator FORM errors on the actual coherent sections, not merely local HS moments. Within the uniform Clifford class, matrix perturbation norm is at most4mbar|delta_s|+16sqrt2|ci||delta_r| per dimer. Leaving this class additionally needs endpoint/holonomy and all native operator error control; the inherited integrated norm bound cannot supply it.",
+    "For an actual fullH gapped branch one must bound orthogonal leakage and the all-sector complement with a N-uniform resolvent/linked-cluster control, and transport the entire originating P0 through the SAME L. The positive explicit leakage means compressed gaps/residues cannot be promoted to this claim.",
+    "For magnetic/IR mechanism one must control closed native loops and an actual connected transverse lower response in the originating family. Dimer energy lowering, determinant bands, local current norms and phase-translation curvature do not prove it."
+  ],
+  "scientific_scope": {
+    "first_failed_sufficient_gate_preserved": true,
+    "material_second_quantum_route_executed_by_consumer": "execution evidence attached by capsule, not claimed by this preexecution proof text",
+    "physical1_point_variational_N_uniformity": true,
+    "actual_originating_body_or_fullH_response_proved": false,
+    "actual_N_uniform_gapped_falsifier": false,
+    "phase_atom_law_source_covariance_common_speed_adopted": false,
+    "campaign_complete": false
+  }
+}

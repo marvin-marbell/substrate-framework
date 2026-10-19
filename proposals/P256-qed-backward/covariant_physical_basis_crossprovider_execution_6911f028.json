@@ -1,0 +1,48 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "-c",
+    "import os\nfor k in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[k]='1'\nimport json,hashlib\nfrom pathlib import Path\nimport numpy as np\nfrom scipy.linalg import expm\nimport covariant_root_transfer as root\nimport covariant_induced_photon as photon\ncfg=root.Parameters(kappa_power=400,beta_power=150,spatial_size=2**24,time_slices=2**20)\ngamma,_=photon.phi_frame(cfg)\np=root.RootParameters(normal_width_power=2000,tube_radius_power=2100)\npin=np.array(p.momentum);q=np.array([1e-10,0.,0.]);pol=np.array([0.,1.,0.])\nprovider=photon.soft_photon_transfer_vertex(gamma,p.a,p.mass,pin,q,pol,emission=False)\nframe=provider['initial_canonical_frame'];consumer=photon.WilsonConsumer(gamma,p.a,p.mass)\nvalues=np.repeat([np.exp(-consumer.energy(pin)),np.exp(consumer.energy(pin))],2)\nphysical_provider=frame@np.diag(values)@frame.conj().T\nphysical_root,detB,energy=root.wilson_step(gamma,p.a,p.mass,pin)\nvals,modes=np.linalg.eigh(physical_root)\nparticle=modes[:,vals<1]@modes[:,vals<1].conj().T\nsea=modes[:,vals>1]@modes[:,vals>1].conj().T\nh=1e-5\ncurrent=(root.wilson_step(gamma,p.a,p.mass,pin+h*pol)[0]-root.wilson_step(gamma,p.a,p.mass,pin-h*pol)[0])/(2*h)\ntheta=root.wilson_component_basis(gamma)\nprovider_current=theta@provider['native_field_derivative']@theta.conj().T\nin_modes=modes.conj().T@current@modes\nlog_current=modes@(np.array([[-photon.log_first(float(x),float(y)) for y in vals] for x in vals])*in_modes)@modes.conj().T\nprovider_h=provider['final_canonical_frame']@provider['vertex_without_oscillator']@frame.conj().T\nv=expm(.17j*(root.matrix_unit_basis()[0]+.27*root.matrix_unit_basis()[3]))\nrotated=root.wilson_step(np.array([v@g@v.conj().T for g in gamma]),p.a,p.mass,pin)[0]\nerrors=dict(physical_T1_crossprovider_error=float(np.linalg.norm(physical_root-physical_provider)),physical_particle_projector_error=float(np.linalg.norm(particle-frame[:,:2]@frame[:,:2].conj().T)),physical_sea_projector_error=float(np.linalg.norm(sea-frame[:,2:]@frame[:,2:].conj().T)),physical_Peierls_T_current_static_error=float(np.linalg.norm(current-provider_current)),physical_Peierls_log_current_static_error=float(np.linalg.norm(log_current-provider_h)),noncommuting_physical_T1_covariance_error=float(np.linalg.norm(rotated-v@physical_root@v.conj().T)))\nassert max(errors.values())<1e-8,errors\nwrong=float(np.linalg.norm(theta@physical_root@theta.conj().T-physical_root));assert wrong>.01\nprint(json.dumps(dict(natural_exit=0,root_source_sha256=root.SOURCE_HASHES_AT_IMPORT['covariant_root_transfer.py'],photon_source_sha256=hashlib.sha256(Path(photon.__file__).read_bytes()).hexdigest(),root_input_sha256='8e82a36c10f544a077adf782487cb4b1922e8ac28d23807dce307b8e4909ac70',parameters=dict(a=p.a,mass=p.mass,momentum=p.momentum,q=q.tolist()),errors=errors,wrong_double_Theta_error=wrong,scope='Actual physical onebody/Pe projectors/static Peierls-current ABI only; no full interacting/source Gram, no finite-frequency replacement.'),sort_keys=True))\n"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "natural_exit": 0,
+  "plan": "issue-222-induced-photon-delta13-continuation-20261008",
+  "result": {
+    "errors": {
+      "noncommuting_physical_T1_covariance_error": 2.467605006431976e-15,
+      "physical_Peierls_T_current_static_error": 9.63230980553424e-11,
+      "physical_Peierls_log_current_static_error": 6.434669214019398e-11,
+      "physical_T1_crossprovider_error": 1.0256037756255472e-15,
+      "physical_particle_projector_error": 2.9155529189743423e-16,
+      "physical_sea_projector_error": 4.712079305340906e-16
+    },
+    "natural_exit": 0,
+    "parameters": {
+      "a": 0.01,
+      "mass": 1.0,
+      "momentum": [
+        0.7,
+        -0.4,
+        0.3
+      ],
+      "q": [
+        1e-10,
+        0.0,
+        0.0
+      ]
+    },
+    "photon_source_sha256": "f022ff8823013e4a47974899efec187af17588b49a94d3af52eba3d731d8c6be",
+    "root_input_sha256": "8e82a36c10f544a077adf782487cb4b1922e8ac28d23807dce307b8e4909ac70",
+    "root_source_sha256": "6911f0283dc0f84f4cc05202deb67dcd3266d5c64ca1a05e149f1567451e0f9c",
+    "scope": "Actual physical onebody/Pe projectors/static Peierls-current ABI only; no full interacting/source Gram, no finite-frequency replacement.",
+    "wrong_double_Theta_error": 1.7839449052306853
+  },
+  "revision": "d21e32f5b786dc66274299d2b39a81fd9675c4a4572ab82f19586755b6d5da40",
+  "root_capsule_sha256": "7b7fd5f3914775751b05f39dbcdc9712e7eaec5adeb1ac7ccc5942313e6abb48",
+  "runtime_executable_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+  "script": "import os\nfor k in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[k]='1'\nimport json,hashlib\nfrom pathlib import Path\nimport numpy as np\nfrom scipy.linalg import expm\nimport covariant_root_transfer as root\nimport covariant_induced_photon as photon\ncfg=root.Parameters(kappa_power=400,beta_power=150,spatial_size=2**24,time_slices=2**20)\ngamma,_=photon.phi_frame(cfg)\np=root.RootParameters(normal_width_power=2000,tube_radius_power=2100)\npin=np.array(p.momentum);q=np.array([1e-10,0.,0.]);pol=np.array([0.,1.,0.])\nprovider=photon.soft_photon_transfer_vertex(gamma,p.a,p.mass,pin,q,pol,emission=False)\nframe=provider['initial_canonical_frame'];consumer=photon.WilsonConsumer(gamma,p.a,p.mass)\nvalues=np.repeat([np.exp(-consumer.energy(pin)),np.exp(consumer.energy(pin))],2)\nphysical_provider=frame@np.diag(values)@frame.conj().T\nphysical_root,detB,energy=root.wilson_step(gamma,p.a,p.mass,pin)\nvals,modes=np.linalg.eigh(physical_root)\nparticle=modes[:,vals<1]@modes[:,vals<1].conj().T\nsea=modes[:,vals>1]@modes[:,vals>1].conj().T\nh=1e-5\ncurrent=(root.wilson_step(gamma,p.a,p.mass,pin+h*pol)[0]-root.wilson_step(gamma,p.a,p.mass,pin-h*pol)[0])/(2*h)\ntheta=root.wilson_component_basis(gamma)\nprovider_current=theta@provider['native_field_derivative']@theta.conj().T\nin_modes=modes.conj().T@current@modes\nlog_current=modes@(np.array([[-photon.log_first(float(x),float(y)) for y in vals] for x in vals])*in_modes)@modes.conj().T\nprovider_h=provider['final_canonical_frame']@provider['vertex_without_oscillator']@frame.conj().T\nv=expm(.17j*(root.matrix_unit_basis()[0]+.27*root.matrix_unit_basis()[3]))\nrotated=root.wilson_step(np.array([v@g@v.conj().T for g in gamma]),p.a,p.mass,pin)[0]\nerrors=dict(physical_T1_crossprovider_error=float(np.linalg.norm(physical_root-physical_provider)),physical_particle_projector_error=float(np.linalg.norm(particle-frame[:,:2]@frame[:,:2].conj().T)),physical_sea_projector_error=float(np.linalg.norm(sea-frame[:,2:]@frame[:,2:].conj().T)),physical_Peierls_T_current_static_error=float(np.linalg.norm(current-provider_current)),physical_Peierls_log_current_static_error=float(np.linalg.norm(log_current-provider_h)),noncommuting_physical_T1_covariance_error=float(np.linalg.norm(rotated-v@physical_root@v.conj().T)))\nassert max(errors.values())<1e-8,errors\nwrong=float(np.linalg.norm(theta@physical_root@theta.conj().T-physical_root));assert wrong>.01\nprint(json.dumps(dict(natural_exit=0,root_source_sha256=root.SOURCE_HASHES_AT_IMPORT['covariant_root_transfer.py'],photon_source_sha256=hashlib.sha256(Path(photon.__file__).read_bytes()).hexdigest(),root_input_sha256='8e82a36c10f544a077adf782487cb4b1922e8ac28d23807dce307b8e4909ac70',parameters=dict(a=p.a,mass=p.mass,momentum=p.momentum,q=q.tolist()),errors=errors,wrong_double_Theta_error=wrong,scope='Actual physical onebody/Pe projectors/static Peierls-current ABI only; no full interacting/source Gram, no finite-frequency replacement.'),sort_keys=True))\n",
+  "script_sha256": "2ed9381f79c173cbb11af6872488706f27149867abbdc5a663efa72e31062b49",
+  "source_admission": false,
+  "stderr": "",
+  "stdout": "{\"errors\": {\"noncommuting_physical_T1_covariance_error\": 2.467605006431976e-15, \"physical_Peierls_T_current_static_error\": 9.63230980553424e-11, \"physical_Peierls_log_current_static_error\": 6.434669214019398e-11, \"physical_T1_crossprovider_error\": 1.0256037756255472e-15, \"physical_particle_projector_error\": 2.9155529189743423e-16, \"physical_sea_projector_error\": 4.712079305340906e-16}, \"natural_exit\": 0, \"parameters\": {\"a\": 0.01, \"mass\": 1.0, \"momentum\": [0.7, -0.4, 0.3], \"q\": [1e-10, 0.0, 0.0]}, \"photon_source_sha256\": \"f022ff8823013e4a47974899efec187af17588b49a94d3af52eba3d731d8c6be\", \"root_input_sha256\": \"8e82a36c10f544a077adf782487cb4b1922e8ac28d23807dce307b8e4909ac70\", \"root_source_sha256\": \"6911f0283dc0f84f4cc05202deb67dcd3266d5c64ca1a05e149f1567451e0f9c\", \"scope\": \"Actual physical onebody/Pe projectors/static Peierls-current ABI only; no full interacting/source Gram, no finite-frequency replacement.\", \"wrong_double_Theta_error\": 1.7839449052306853}\n"
+}

@@ -1,0 +1,84 @@
+{
+  "kind": "NEW_FIELD_FRAME_NOETHER_HALFSPIN_WITH_ACTUAL_CHARGED_GEOMETRIC_CURRENT_AND_QUANTUM_FEEDBACK_CANDIDATE",
+  "candidate_id": "rich_frame_gauss_20261014_gaussian_octafield_associated_bundle_v1_actual6",
+  "governor": {
+    "plan_id":"issue222-rich-backward-candidates-20261014",
+    "captured_revision":"87bedd8343641b2540426b62d725c656fa893e956a9ec2b56ba08082c518ab3e",
+    "template_id":"general",
+    "template_revision":"89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "parent_sole_plan_writer":true,
+    "memory":"memory_setup ready; reviewed pinned general template and explicitly bound shared plan without mutation"
+  },
+  "plain_mechanism": "A scalar charged colour mode has no physical-spin operator. A neutral adjoint triad supplies an SU2-lift frame U; left frame rotation is physical spatial Noether, right frame rotation is colour gauge. A physical dressed charge source contracts U with the scalar colour creation operator. Exact right Gauss ties its right half-integral colour representation to the LEFT field-frame differential representation. Odd source therefore has physical Noether jhalf, whereas the bare scalar creation operator is spinless and nonphysical. The adjoint field itself remains bosonic in the neutral sector. This uses a nontrivial associated-bundle/centre sewing and primitive colour fundamental/CAR inputs; it does not derive those inputs from classical fields.",
+  "backward_path": "Start from the obligation that measured charged physical Noether halfspin must be attached to actual motion/current, not an inserted S label. First construct physical left-frame halfspin with exact source/Gauss/CAR. Then derive cross-angular coupling from a positive common/relative field metric. The scalar charge is distributed over six Gaussian clouds on a separate marked bosonic spatial carrier W. That metric transfers the neutral frame's momentum to W's actual angular velocity. Minimal coupling to the same moving clouds gives the magnetic moment and contact. Thus the spinor source feeds a real 3D geometric current and a new quantum magnetic-field consumer, instead of stopping at SU2 representation identity.",
+  "new_material_root": {
+    "fields":"SO3 carrier W; neutral SU2-lift adjoint triad U; two colour-fundamental scalar fermionic charge modes; three quantum local vector magnetic oscillator coordinates; exact static longitudinal electric Gauss solution of the same six finite Gaussian charge clouds",
+    "kinetic":"Hkin=(L_W+S_U)^2/(2Ic)+L_W^2/(2Ir)+S_U^2/(2If), where S_U is a differential generator on U, NOT primitive physical charge spin. Positive inverse metric K derives common cross coupling. Ic=2,Ir=4,If=1.5.",
+    "geometry":"r=1.1, Gaussian coordinate width sigma=.35, q=-1. Charge current is symmetrized velocity of this same material geometry; cloud density and Fourier current are integrated by Haar quadrature on W. E electrostatic energy uses supplied epsilon=.04 and is finite because all clouds have finite width.",
+    "magnetic_feedback":"B=.45 Q, omega=.8; both charged L-containing kinetic squares receive the same displacement C_N B. Contact stays inside H. Vector modes are supplied local magnetic oscillators, NOT actual spatial photons. No imported gamma Hamiltonian, g2 or Maxwell magnetic stiffness.",
+    "source":"d_m^dag=sum U_m alpha epsilon_alpha beta c_beta^dag. Source also shifts reduced longitudinal electric dressing consistently with N->N+1. N0,N1,N2 are all included with charges 0,-1,-2; N2 is not a positron.",
+    "retained_states":"Raw frame j=0,.5,1 x complete colour Fock4 (56 states), exact colour-Gauss physical dimensions (1,2,1). Larger raw frame j cannot satisfy exact Gauss with this two-colour Fock population, so j_U=.5 is derived for N1 rather than chosen as a physical ground restriction. All W l=0,1,2, all M,K, all physical charge sectors and vector-field total occupancy<=2 retained. Complete reduced module is 1400 states; odd spatial/current block is 700. Higher orbital/neutral/field virtuals are present, not compressed to a chosen doublet. Unbounded higher W and field sectors are explicitly regulated, not claimed absent."
+  },
+  "executed_results": {
+    "physical_spin_source": {
+      "Gauss_residual":2.220446049250313e-16,
+      "bare_creation_physical_Gram":"zero 2x2; bare leakage norm1 for each colour; bare physical Noether commutator exactly0",
+      "dressed_source":"source Gram I2 in vacuum and pair transitions; mixed CAR residual <=6.3e-16; same-creation CAR residual0; dressed source leakage <=3e-16",
+      "charge_commutator_residual":3.1401849173675503e-16,
+      "physical_Noether_J2_by_N":"0, .75 twice, 0",
+      "proper_2pi_rotation":"diag(1,-1,-1,1); proper4pi residual2.17e-15",
+      "independent_nonidentity_U_coordinate_derivative_residual":4.7003965754694246e-11
+    },
+    "same_charge_current": {
+      "neutral_reference_energy":1.2000000000000002,
+      "charge_creation_energy":1.2305600312375757,
+      "pair_creation_energy":3.1919085999458234,
+      "one_charge_static_electric_energy":0.7681724580166827,
+      "pair_minus_two_single_local_addition_curvature":0.730788537470672,
+      "source_low_pole_weight_per_spin":0.9923886955401313,
+      "source_satellites":"energies2.059633376382166 and2.8318078238521824; weights .007226346945168 and .000384957514700 per spin. Higher virtual field states remain in the source resolvent.",
+      "higher_odd_orbital_ground_energies":"l0 2.430560031237576, l1 2.6689497232547135, l2 3.85736016055907. l2 lowest multiplet physical J2=3.75, not .75. Full multiplet/field spectra serialized.",
+      "finite_q_current":"qvector(.27,-.18,.31); full Cartesian complex leg Gram eigenvalues approximately 0,.001304945035941281,.006071346559291941, hence two transverse current legs are nonzero on the actual new charged state.",
+      "spatial_continuity_relative_residual":6.993024137787331e-11,
+      "spatial_continuity_on_current_state_residual":5.052524638002688e-15,
+      "electric_Fourier_Gauss_residual":5.728578682379216e-14,
+      "full_source_current_consumer":"G2x2 plus complete Cartesian source-current insertion3x2x2 and unamputated two-frequency threepoint3x2x2 are executed on same 700-state H. No spin-ket slice or separately normalized receiver is substituted."
+    },
+    "physical_current_not_Noether_renaming": {
+      "charge_second_moment_C1":-0.5258333333333334,
+      "actual_integral_half_x_cross_current_equals_magnetic_source_residual":0.0,
+      "magnetic_source_physical_vector_commutator_residual":1.2412670766236366e-16,
+      "projected_magnetic_moment_per_physical_total_J":-0.2473446904879737,
+      "material_adverse_comparator":"Keeping the very same frame/Gauss halfspin, change common inertia to1e12 (suppress cross inverse metric). Projected charge magnetic norm falls to3.65e-13 while J2 remains .75. Halfspin alone is therefore not identified with current/magnetization.",
+      "same_current_contact":0.20737552083333335,
+      "external_probe_current_derivative_residual":5.959314528413228e-13,
+      "external_probe_contact_derivative_residual":3.483120784980663e-10,
+      "quantum_field_feedback":"Odd ground field occupation .007776474979559465; selected pure ground member has <Qz>=-.06944831560996628. Source satellite weights, current complex Gram and full field3x3 resolvent are nonzero. Vector total angular generator commutes with each same-H charge/l block to <=1.1e-14.",
+      "field_cutoff_boundary_probability":0.00016517051969101135,
+      "probe_Bz_.002_ground_energy":2.430313079133222
+    }
+  },
+  "failed_fork_and_material_change": "The NEW magnetic-only actual3 calculation had odd creation .4521554667343617 but pair creation .07179850575333724: local addition curvature was strongly negative, and point charges would not have finite electromagnetic self-energy. Rather than polish this branch, changed the MATERIAL charge distribution to finite Gaussian clouds and added actual same-charge longitudinal Gauss energy computed from their finite Coulomb kernel. Magnetic tensor/current also changed consistently to include cloud width, not a hand-tuned on-site repulsion. Final curvature is positive .730788537470672. This is local fixed-charge addition evidence, NOT a simulated separated-two-carrier scattering/no-pairing theorem. Earlier failed startup captures actual1/actual2 retain natural exits; all final scientific claims use actual6.",
+  "meaning_and_limits": [
+    "The odd physical differential Noether halfspin is genuinely obtained after colour Gauss and centre sewing, not inserted on primitive charged scalar modes. However the chosen fundamental representation, CAR and associated-bundle spin structure remain explanations owed. A pure SO3 adjoint field with trivial centre sewing would not give this result.",
+    "The ordinary Casimir matrices enter only as coordinate differential representations and colour generators; no primitive physical charge S, gamma matrices or g2 is imported. The measured magnetic moment comes from actual moving-cloud current and positive metric, and its value is not constrained to g2.",
+    "The rigid W carrier, fixed cloud shape/radius and prescribed positive field metric are inputs, not self-binding solutions or derived electron parameters. No free centre-of-mass propagation or inertial mass is computed; charge creation energy1.23056 is not labelled mc2.",
+    "The three quantum vector modes carry real physical angular momentum and feed back via same current/contact, but are local supplied magnetic modes, not transverse 3D photons, a massless bulk cone, a complete EM Hamiltonian or an infraparticle continuum.",
+    "Longitudinal electric Gauss and finite energy are actual reduced electrostatics of the same charge; the electric quadratic law itself is supplied. No separate unconstrained longitudinal vacuum is mixed in. No transverse electric dynamics is derived.",
+    "Current/field D are positive spectral resolvent matrices, not a full retarded commutator photon propagator. The source threepoint is unamputated and not a QED scattering cross-section.",
+    "The complete finite regulator is retained, not a full infinite Hilbert space convergence proof. Boundary field probability is measured, but no claimed bound on discarded virtuals. No positron, proton, native-law derivation, package/merge or campaign closure."
+  ],
+  "new_material_next_choice": "Replace fixed-radius rigid W/collective Gaussian charge by a mobile, soft scalar-field core carrying the same associated-bundle frame. Retain the exact colour Gauss/dressed source and let spatial link/continuum transport and core deformation derive the angular metric, electromagnetic current and charge self-energy. Couple that actual current to spatial transverse modes with electric Gauss, so source propagation G(k,omega), physical halfspin, COM inertia and bulk photon feedback coexist. This is a new matter/field geometry obligation, not more Casimir or projected-doublet polishing. Current root is available now via pure APIs/serialized states; it is not claimed compatible with a peer photon law without a same-H reconstruction.",
+  "delivery": {
+    "model":"rich_frame_gauss_20261014_model.py",
+    "calculate":"rich_frame_gauss_20261014_calculate.py",
+    "equations":"rich_frame_gauss_20261014_equations.json",
+    "interface":"rich_frame_gauss_20261014_interface.json",
+    "language_and_runtime":"rich_frame_gauss_20261014_language.json",
+    "exact_new_capsule":"rich_frame_gauss_20261014_actual6_capsule.zip",
+    "natural_exit":"rich_frame_gauss_20261014_actual6_exit.json; returncode0, elapsed7.832846164703369 seconds, exact before/after source digests, input/output hashes, Python3.12.3, no timer/kill",
+    "result":"rich_frame_gauss_20261014_actual6_result.json and .npz",
+    "final_source_hashes":{"model":"c574256030831d507005f3065e2b9765a6ac30e2e4a1e50126ed5b922f71893f","calculate":"b8854f457e60b9bfddfdd027eb504220606ec78f36637ca69c751aa54ff82a6c","input":"cb99ef547cb14115d18338a0e8b598ed2c91e8511ce20980b3f02879e7cbd4eb","result":"8809dddbe9936f9ed69f2c25636ffb0becafd39e3039e38736616404150422f9"},
+    "review_boundary":"Independent reviewer owns raw scientific audit and changed-code final diagnostics; no build/lint/tests/formatter run by author. Parent reads this synthesis, not an implicit scientific approval."
+  }
+}

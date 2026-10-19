@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "governing_plan": {
+    "id": "issue222-rich-backward-candidates-20261014",
+    "revision": "1a04f83b03873da6491339f54862ed95bde820736e267ffdf17270d4824c48bb",
+    "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "composite-candidate",
+    "writer": "Main only"
+  },
+  "branch": "rich_colour_composite_20261014_*",
+  "law": "rich_colour_composite_20261014_equations.json",
+  "pure_helper": "rich_colour_composite_20261014_model.py",
+  "helper_contract": {
+    "material_root": "Actual field matrices, commutant linear solve, explicit complete intertwiners, physical material-spin and colour generators. Multiplicity3 is an explicit new law.",
+    "loop_field": "Exact PW19 Galerkin U_ab,L_a,R_a,C,ReTrU; all retained loop states. SU3 covariance exact; U not unitary.",
+    "colour_space": "513 dimensional3quark×19loop total-Gauss kernel, dimension7, including matter octet×loop adjoint; not separate matter singlet/classfunction loop.",
+    "build": "All27 ordered positions×7 Gauss states×three Mhalf spin arrangements, then exact identical-u antisymmetry; final297 states. Returns complete HE,HB,T,S2,rho,position distributions and loop operators.",
+    "hamiltonian": "H(A), actual J=-dH/dA and K=d²H/dA² for primitive flavour charge Peierls phases. H retains all S=.5/1.5 channels.",
+    "baryon_source": "Odd local epsilon-colour uud spin-CG source on own gauge-loop vacuum, charge1 and selected S=.5 or1.5; source selection does NOT project H."
+  },
+  "final_consumer": "rich_colour_composite_20261014_calculate.py",
+  "exact_input": "rich_colour_composite_20261014_actual2_input.json",
+  "natural_exit_receipt": "rich_colour_composite_20261014_actual2_exit.json",
+  "final_capsule": "rich_colour_composite_20261014_actual2_capsule.zip",
+  "result": "rich_colour_composite_20261014_actual2_result.json",
+  "matrices": "rich_colour_composite_20261014_actual2_result.npz",
+  "capsule_rule": "Captured copies inside ZIP plus source_before/source_after hashes own exact execution claims. Source/input/output bytes and natural exit retained. No old top-level producers imported or replayed.",
+  "matrix_axes": {
+    "H_HE_HB_S2_rho_current": "297×297 orthonormal exact fermionic M=+1/2 physical basis, Pauli columns embed in567 pre-antisymmetry basis; latter ordering position-major,7 Gauss colourloop states,3 spin arrangements.",
+    "GaussP": "513×7 columns in ordered colour(3^3) major then loopPW19 minor basis.",
+    "e_v_spins": "Complete297 orthonormal eigenstates; S2 first resolves spin sectors. Degenerate columns are not individually asserted basis-invariant residues; summed residues/response matrices are physical.",
+    "packet_states_pulse_states": "297×13, columns correspond result.motion.times. Initial pulse exp(-i0.9rho0), then literal H time evolution."
+  },
+  "semantic_contract": {
+    "units": "hbar=1, triangle side1, dimensionless supplied Hamiltonian energy units. No conversion to proton masses/radii.",
+    "current": "Edge order0->1,1->2,2->0. J=-partial H/partial A. Charge continuity incoming minus outgoing. Retarded JJ=-i theta(t)[J(t),J(0)] has both frequency signs; with_contact is chi_JJ+K, so for this H(A)=H-JA+K A²/2 convention delta<J>=-(chi_JJ+K)A.",
+    "spectrum": "Number-conserving N3 sector, particle-only. Vacuum-subtracted eigenvalue may be negative because no constituent rest energy or inter-sector stability law was supplied; NOT a positive baryon mass or stable-vacuum pole.",
+    "binding": "Finite SAME-N3 constrained no-colocation/all-separate variational energy costs and actual relative distribution; not separated gauge-invariant N2+N1 fragments or an asymptotic confinement threshold.",
+    "spin": "Primitive physical quaternion material-frame spin, not isospin. Both half and threehalf channels coexist without spin penalty; fixed routed triangle is not full continuous spatial Noether spin.",
+    "projection": "PW loop irreps1,3,bar3 only. Tree Gauss elimination exact but representation-boundary/root-change/continuum covariance debts not solved. Boundary occupation and U operator-unitarity defect explicitly reported.",
+    "old_attempt": "actual1 capsule is immutable antecedent; its controls.chord_cut.pulse.J2 used the UNcut current operator and is withdrawn. actual2 sets actual cut J2=0 and adds resolved triple-site packet probabilities. Main-law results unchanged."
+  },
+  "next_review": "ScientificReviewWave8 owns independent NEW rich_review_wave9_20261014_* consumer and final language diagnostics. No author build/lint/tests/formatters run midflight."
+}

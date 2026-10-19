@@ -1,0 +1,77 @@
+{
+  "stamp": "typing4",
+  "stage": "language",
+  "analysis_of": null,
+  "plan_id": "issue222-rich-backward-candidates-20261014",
+  "captured_plan_revision": "813490dc61fdae6c7b9b049ec7f59e2f9fc63415db5461f0f80e39ffecd139e4",
+  "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "law": {
+    "volume": 27.0,
+    "velocity": 0.7,
+    "wilson": 0.18,
+    "coupling": 0.65,
+    "charge": -0.45,
+    "phi_center": 1.0,
+    "phi_width": 0.8,
+    "phi_points": 5,
+    "field_width": 1.8,
+    "field_points": 3,
+    "scalar_inertia": 0.03,
+    "scalar_stiffness": 4.0,
+    "collective_step": 0.35,
+    "gram_tolerance": 1e-12,
+    "shell_cutoff": 2,
+    "shell_width": 1.0,
+    "packet_center": [
+      0,
+      0,
+      0
+    ],
+    "packet_width": 0.65,
+    "packet_momentum": [
+      0.7,
+      0.9,
+      1.1
+    ],
+    "kick_strength": 0.8,
+    "duration": 5.0,
+    "time_points": 11,
+    "eigensolver_tolerance": 1e-09,
+    "lanczos_steps": 48,
+    "frequencies": [
+      -3.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0
+    ],
+    "eta": 0.08
+  },
+  "law_input_sha256": "e09542296e5b19bfbbc0b7cdd5a8d28fb8db02343775b4b19baa6cef8bd65791",
+  "short_start": 0.01,
+  "dt": 0.095,
+  "duration": 0.2,
+  "minimum_bond": 64,
+  "numbers": [
+    54,
+    55,
+    53
+  ],
+  "protocols": [
+    "baseline",
+    "xcos",
+    "ycos"
+  ],
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "physics-tenpy": "1.1.1"
+  },
+  "physical_reference": "Fresh explicitly prepared reference Slater, not any old solved neutral state; new matched neutral evolved at the same clock.",
+  "field_protocol": "Finite-shell projected-Q-only unitary with strength0.8; no full-W/pure-photon claim.",
+  "algorithm": "109-site full108-CAR+75-state scalar/EM MPS, exact physical C3 and N; first actual same-H short Galerkin evolution in psi,Hpsi,four before-cut QJpsi, then occupied-Schmidt two-site TDVP; no zero padding or hard particle-hole-rank cutoff."
+}

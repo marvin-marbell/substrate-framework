@@ -1,0 +1,15 @@
+{
+  "kind": "PRESERVED_EXECUTOR_PREFLIGHT_FAILURE_NOT_SCIENTIFIC_EXIT",
+  "request": {
+    "path": "connected_sea_local_body_parent_integration_actual1_20261012_request.json",
+    "sha256": "f5f8c874070025395a6f0c9d18f5c37e86f69b69d44c53c9d32d609607655477"
+  },
+  "external_executor_returncode": 1,
+  "external_executor_stdout": "",
+  "external_executor_stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/native_charged_body_execute_20261012.py\", line 76, in <module>\n    main()\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/native_charged_body_execute_20261012.py\", line 35, in main\n    assert before[name] == expected\n           ~~~~~~^^^^^^\nKeyError: '/home/administrator/.omp/agent/sessions/-/2026-10-09T16-26-59-293Z_01a1217d-415d-7376-a17d-16be721cbe28/local/issue222-connected-quantum-sea-local-leading-contract-20261012.json'\n",
+  "cause": "Legacy native capture keys pins by basename, but request supplied absolute contract locator. Failure occurs before ZIP creation/consumer launch.",
+  "scientific_consumer_started": false,
+  "preexecution_archive_created": false,
+  "natural_scientific_receipt": false,
+  "repair": "New typed capture separates archive member names from absolute pin_paths; consumer pin checks explicit resolved paths."
+}

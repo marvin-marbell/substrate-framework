@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_connected_longwave_20261017_prepare.py", line 30, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_connected_longwave_20261017_prepare.py", line 9, in main
+    cfg=json.loads(Path(sys.argv[1]).read_text());out=cfg['out'];started=time.time();m=Phase();ref=m.stationary(cfg['preparation_iterations']);arrays={k:ref[k]for k in('rho','U','V','eo','ev','h','pmean')}
+                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_connected_longwave_20261017_functional.py", line 123, in stationary
+    rho,psis=self.initial();history=[];pmean=np.zeros(81)
+             ^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_connected_longwave_20261017_functional.py", line 120, in initial
+    h,_,_=self.mean(np.eye(256)/2,psis,np.zeros(81));u,_,_,_=self.orbitals(h);return u@u.conj().T,psis
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_connected_longwave_20261017_functional.py", line 104, in mean
+    for k,(f,o)in enumerate(zip(self.opfields,self.ops)):field[f]+=oc[k]*o+oc[k].conjugate()*o.conj().T
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy._core._exceptions._UFuncOutputCastingError: Cannot cast ufunc 'add' output from dtype('complex128') to dtype('float64') with casting rule 'same_kind'

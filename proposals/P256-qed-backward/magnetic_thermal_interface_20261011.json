@@ -1,0 +1,49 @@
+{
+  "kind": "ACTUAL_MAGNETIC_CANONICAL_THERMAL_INTERFACE_NOT_PHASE",
+  "governor": {"plan_id":"issue-222-induced-photon-delta13-continuation-20261008","captured_revision":"c8dc7a8e10cc6da564e0b3e01dabe9b60765e43bfa7b32ddcacc84063d36861b","template_revision":"89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe","work_item_id":"induced-photon","requirement_ids":["outcome","verification"]},
+  "owner": "MagneticThermalKernel; prefix magnetic_thermal_ excluding magnetic_thermal_parent_",
+  "source": "magnetic_thermal_scientist_20261011.py",
+  "proof": "magnetic_thermal_proof_20261011.json",
+  "heat_word_source": "magnetic_thermal_heatword_20261011.py",
+  "heat_word_proof": "magnetic_thermal_heatword_proof_20261011.json",
+  "physical_algebra": "Bounded native integer Wilson/CAR closed loops and fixed-boundary-preserving fullE Weyl/filtered insertions, with all-site SU4 and interior affine U1 Gauss covariance. Native J,K are full quantum Phi-linear operators on named heat moment domains, not bounded rawTheta observables. Fractional/unwrapped B requires another state/domain and is not admitted.",
+  "state": {
+    "canonical_counts": "Every one of64 charged species AND neutral each NL=2V, Ref wedge4; auxiliary onsite roles distinct, fullPhi/SU4 live.",
+    "primitive_cell": "D=DI, LI=DD^T, Q=I-D^TLI^-1D; integral saturated cycle basis C=( -DT^-1DB; I ), G=C^TC. Primitive deck Λ=Q Z^M=C G^-1 Z^d, not only C Z^d. detG=detLI; radian cell volume(2pi)^d/sqrt(detLI).",
+    "affine_gluing": "Full section plus exp(i lambda rhoI); reduced shift+2piQn carries exp(+2pi i b.j) exp(-2pi i (LI^-1Dn)rhoI). All canonical charge transitions intertwine this cocycle. Pi-only signs and half raw deck are rejected.",
+    "trace_normalization": "τ_N(A)=integral_[0,1)^d Tr_physical,b A_b db, normalized Haar db totalmass1. Z=τ(exp(-beta H)); omega(A)=τ(exp(-beta H/2)A exp(-beta H/2))/Z. No second freeheat/gaugevolume/CARdimension normalization. Ordinary full-cover Z is infinite.",
+    "parameters": {"beta_temperature":"inverse energy beta>0","b_electric_Bloch":"dimensionless full d-character torus, integrated with native heat weight","alpha_boundary_source":"radians at fixed amplitude1 and m1; stored2pi atlas uses alpha/(2pi)"},
+    "existence": "Exact finiteN full form bounds + explicit infinite-tail reference heat upper and physical trial lower; no compactness assumption or static determinant. At each beta>0 Z finite/positive and source twice differentiable."
+  },
+  "response_inputs": {
+    "native_N_controls": [4,6,8],
+    "general_N": "Even N>=4, same literal coefficients/species",
+    "q": "q_lattice=2pi/N along y; a_z=cos(qy) on both fixed boundaries, a_y=0, all other0; physical q=q_lattice/a if converted",
+    "flux": "Zero sum of added yz curvature on each boundary, so m1 and fixed boundary realization retained",
+    "unshifted_H": "Full H_alpha; no differentiation of silently ground-centred heat, no beta0 fibre, no change of chi/Lambda/F/HE/HC or bareB2"
+  },
+  "response_outputs": {
+    "J": "sum all charged one/two native i eta T - i eta Tdagger, fullPhi and ordered SU4, every64 CAR sign",
+    "K": "-sum eta^2(T+Tdagger); eta_z=length*cos(qy); eta2 at y0 yields K factor-4",
+    "F": "-log τ(exp(-beta H_alpha))/beta per primitive deck cell",
+    "Fsecond": "<K>-integral_0^beta <deltaJ(tau)deltaJ(0)>dtau with GLOBAL integrated thermal mean",
+    "thermal_spectral_measure": "Positive KMS measure on signed energy differences, whole ω0 block and between-fibre current variance retained; thermal generator NOT L>=0",
+    "native_exact_enclosures": "Z in[exp(-betaEtrial),exp(betaC0)Q]; <r²><=R2; |<J>|<=MJ sqrtR2, |<K>|<=MK sqrtR2;0<=chiD<=betaMJ²R2; Fsecond in[-MK sqrtR2-betaMJ²R2,+MK sqrtR2]. Exact symbolic pinned constants in source receipt, not numerical estimate.",
+    "native_numerical_value": false,
+    "magnetic_response_sign": "UNPAID; enclosure straddles0",
+    "spatial_pressure": "If p=logZ/(betaV), psecond=-Fsecond/V; do not confuse with Fsecond or cell normalization"
+  },
+  "heat_attempt": {
+    "regime": "N4,beta1,M16,oscillator cutoff64 and SU4shell64",
+    "exact_representation": "All-character affine E heat, fullPhi bridges, SU4 heat/gauge projector and exact65 canonical coefficient; common HC Hubbard-Stratonovich history retained, not independent determinant64 outside history integral. ONE b is conserved through the whole imaginary-time history and integrated once. FullE heat-word factor requires total raw dynamic flow0 and includes the exact transverse time-variance plus shared longitudinal HC; fresh b per slice is rejected. Split transverse T+V counts HC once, while fullE expansion already includes it.",
+    "failed_criteria": "Reference Phi tail>1-2^-2039; colour crop failsuR²>=7 atchi2^-4096; no finiteM trace-norm rate/native Galerkin tail/all-b or field quadrature errors. Proposed native numeric crop rejected. Existence tails and exact broad native enclosures paid separately.",
+    "numeric_native_pressure_or_sign_admitted": false
+  },
+  "limit_contract": {
+    "beta_infinity": "Global minimizing Bloch band/whole ground block. No automatic smoothness at degeneracy/character crossings; nonscalar P0JP0 can produce cusp/linearbeta response divergence.",
+    "N_infinity": "No N-uniform selected-site moments/state convergence supplied here. BoundaryBulkSpectral owns genuine common-algebra/averaged moment comparison. These finiteN bounds do not imply bulk phase.",
+    "q_to_zero": "N4/6/8 source controls are literal finite native controls, not extrapolation; no stiffness/atom inferred.",
+    "open": ["native numerical response sign","actual minimizing ground/state selection","local thermodynamic convergence","physical1 phase","stiffness","photon atom/residue/commoncone","originalSOURCE"]
+  },
+  "classification": {"exact":"native graph, coefficients, cocycle, source derivatives, bound expressions","derived":"physical heat existence/normalization and thermal Kubo enclosures","float":"independent finite noncommuting CAR quantum controls only","failed":"native_analytic_crop1 finite-price criteria","open":"response sign and ground/photon physics"}
+}

@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_integrated_repair_smoke.py", line 64, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_integrated_repair_smoke.py", line 27, in run
+    image=initial.copy();zero_error=zero.apply(image,{'compression_method':'zip_up','trunc_params':{'chi_max':16,'svd_min':1e-12}})
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/networks/mpo.py", line 1601, in apply
+    trunc_err = self.apply_zipup(psi, options)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/networks/mpo.py", line 1737, in apply_zipup
+    U, S, VH, err, norm_new = svd_theta(B, relax_trunc)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/linalg/truncation.py", line 296, in svd_theta
+    U, S, VH = npc.svd(theta, full_matrices=False, compute_uv=True, qtotal_LR=qtotal_LR, inner_labels=inner_labels)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/linalg/np_conserved.py", line 3758, in svd
+    U, S, VH = _svd_worker(a, full_matrices, compute_uv, overwrite_a, cutoff, qtotal_LR, inner_qconj)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/linalg/np_conserved.py", line 5002, in _svd_worker
+    raise RuntimeError('SVD found no singular values')  # (at least none > cutoff)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: SVD found no singular values

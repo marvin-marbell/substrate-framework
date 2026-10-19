@@ -1,0 +1,536 @@
+{
+  "governing_revision": "7650a3636f3d39a74243a986afb1683be8fae895c3f5afb77720b05330363a51",
+  "general_template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "work_item": "joined-explanatory-campaign",
+  "source_sha256": "4a16e1c245920a87ddd455fbaebd4b59a67b3921f39e3849131e7ad62a956b39",
+  "source_input_sha256": "38183b2acb35877031078c3da3f20811d8b4b2c8114d16ec2bb325ac416c90b5",
+  "artifacts": {
+    "covariant_auxiliary_charge_clock_bridge_verified_20261008.json": "a578e9afdbd18b50f15b1a81a7e7bd1e461097e10bdf5cb2481d8757a88fbe39",
+    "covariant_auxiliary_charge_clock_bridge_mixed_relative_20261008.json": "d63aed2f357880c9b86573baa5987788308543e19db44e9b56b3c153008e99fe",
+    "covariant_auxiliary_charge_clock_bridge_final_verified_20261008.json": "d3f75a07edcdac506aed53863c682c71379e380575fa91205fea23c563b768bb"
+  },
+  "execution": {
+    "command": "/home/administrator/substrate-framework/.venv/bin/python covariant_auxiliary_charge_clock_bridge.py --output covariant_auxiliary_charge_clock_bridge_final_verified_20261008.json",
+    "natural_exit": 0,
+    "scientific_seconds": 20.14349132589996,
+    "wall_seconds": 29.58,
+    "captured_compiled_source_count": 339,
+    "captured_compiled_sources_unchanged": true,
+    "loaded_main_matches_captured_source": true,
+    "output_evidence": "artifact://8607"
+  },
+  "language": {
+    "before": {
+      "consumer_sha256": "ad31c1edac79f3010144fa90b4bd41366d99f2aa789618db69cca71c5947fdf5",
+      "root": "/home/administrator/substrate-222",
+      "settings": {
+        "python": {
+          "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+          "analysis": {
+            "extraPaths": [
+              "/home/administrator/substrate-222/proposals/P256-qed-backward"
+            ],
+            "typeCheckingMode": "basic",
+            "diagnosticMode": "openFilesOnly"
+          }
+        }
+      },
+      "server": "pyright 1.1.414",
+      "symbols_count": 130,
+      "definitions": [
+        [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+            "range": {
+              "start": {
+                "line": 70,
+                "character": 4
+              },
+              "end": {
+                "line": 70,
+                "character": 13
+              }
+            }
+          }
+        ],
+        [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_auxiliary_charge_clock_bridge.py",
+            "range": {
+              "start": {
+                "line": 37,
+                "character": 4
+              },
+              "end": {
+                "line": 37,
+                "character": 13
+              }
+            }
+          },
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_auxiliary_charge_clock_bridge.py",
+            "range": {
+              "start": {
+                "line": 94,
+                "character": 20
+              },
+              "end": {
+                "line": 94,
+                "character": 29
+              }
+            }
+          }
+        ]
+      ],
+      "publishedDiagnostics": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_auxiliary_charge_clock_bridge.py",
+        "version": 1,
+        "diagnostics": []
+      },
+      "initial_band_probe": "artifact://6893",
+      "positive_AST": [
+        "class ImprovedPhiLaw: $$$BODY",
+        "def propagator($$$ARGS) -> $RETURN: $$$BODY"
+      ]
+    },
+    "discarded_final": {
+      "consumer_sha256": "05cba34642fc035b5020c1ebc6a391e8dded164ed61a7115c0a1280ccd4d8ef7",
+      "root": "/home/administrator/substrate-222",
+      "settings": {
+        "python": {
+          "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+          "analysis": {
+            "extraPaths": [
+              "/home/administrator/substrate-222/proposals/P256-qed-backward"
+            ],
+            "typeCheckingMode": "basic",
+            "diagnosticMode": "openFilesOnly"
+          }
+        }
+      },
+      "server": "pyright 1.1.414",
+      "symbols_count": 176,
+      "definitions": [
+        [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+            "range": {
+              "start": {
+                "line": 70,
+                "character": 4
+              },
+              "end": {
+                "line": 70,
+                "character": 13
+              }
+            }
+          }
+        ],
+        [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_auxiliary_charge_clock_bridge.py",
+            "range": {
+              "start": {
+                "line": 171,
+                "character": 4
+              },
+              "end": {
+                "line": 171,
+                "character": 32
+              }
+            }
+          }
+        ]
+      ],
+      "publishedDiagnostics": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_auxiliary_charge_clock_bridge.py",
+        "version": 1,
+        "diagnostics": [
+          {
+            "range": {
+              "start": {
+                "line": 150,
+                "character": 21
+              },
+              "end": {
+                "line": 150,
+                "character": 78
+              }
+            },
+            "message": "Argument of type \"bool_\" cannot be assigned to parameter \"ok\" of type \"bool\" in function \"require\"\n\u00a0\u00a0\"numpy.bool[builtins.bool]\" is not assignable to \"bool\"",
+            "severity": 1,
+            "code": "reportArgumentType",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 161,
+                "character": 30
+              },
+              "end": {
+                "line": 161,
+                "character": 34
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Unknown]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 161,
+                "character": 59
+              },
+              "end": {
+                "line": 161,
+                "character": 63
+              }
+            },
+            "message": "Cannot access attribute \"imag\" for class \"NDArray[Unknown]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 165,
+                "character": 60
+              },
+              "end": {
+                "line": 165,
+                "character": 64
+              }
+            },
+            "message": "Cannot access attribute \"real\" for class \"NDArray[Unknown]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 166,
+                "character": 63
+              },
+              "end": {
+                "line": 166,
+                "character": 67
+              }
+            },
+            "message": "Cannot access attribute \"imag\" for class \"NDArray[Unknown]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Unknown]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Unknown]]\" is not assignable to \"None\"",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          }
+        ]
+      },
+      "native_clock_probe": "artifact://8577",
+      "positive_AST": [
+        "np.linalg.det($$$ARGS)",
+        "def mixed_relative_fourier_bound($$$ARGS) -> $RETURN: $$$BODY"
+      ]
+    },
+    "final": {
+      "consumer_sha256": "4a16e1c245920a87ddd455fbaebd4b59a67b3921f39e3849131e7ad62a956b39",
+      "root": "/home/administrator/substrate-222",
+      "settings": {
+        "python": {
+          "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+          "analysis": {
+            "extraPaths": [
+              "/home/administrator/substrate-222/proposals/P256-qed-backward"
+            ],
+            "typeCheckingMode": "basic",
+            "diagnosticMode": "openFilesOnly"
+          }
+        }
+      },
+      "server": "pyright 1.1.414",
+      "symbols_count": 176,
+      "definitions": [
+        [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_relative_ring_boundary.py",
+            "range": {
+              "start": {
+                "line": 70,
+                "character": 4
+              },
+              "end": {
+                "line": 70,
+                "character": 13
+              }
+            }
+          }
+        ],
+        [
+          {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_auxiliary_charge_clock_bridge.py",
+            "range": {
+              "start": {
+                "line": 171,
+                "character": 4
+              },
+              "end": {
+                "line": 171,
+                "character": 32
+              }
+            }
+          }
+        ]
+      ],
+      "publishedDiagnostics": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_auxiliary_charge_clock_bridge.py",
+        "version": 1,
+        "diagnostics": []
+      },
+      "native_clock_probe": "artifact://8577",
+      "positive_AST": [
+        "np.linalg.det($$$ARGS)",
+        "def mixed_relative_fourier_bound($$$ARGS) -> $RETURN: $$$BODY"
+      ]
+    },
+    "external_config": {
+      "include": [
+        "../home/administrator/substrate-222/proposals/P256-qed-backward/covariant_auxiliary_charge_clock_bridge.py"
+      ],
+      "extraPaths": [
+        "/home/administrator/substrate-222/proposals/P256-qed-backward"
+      ],
+      "typeCheckingMode": "basic",
+      "reportMissingImports": true
+    },
+    "CLI": {
+      "command": "/home/administrator/.local/bin/pyright --pythonpath /home/administrator/substrate-framework/.venv/bin/python --project /tmp/issue222-clock-final-pyright.json /home/administrator/substrate-222/proposals/P256-qed-backward/covariant_auxiliary_charge_clock_bridge.py",
+      "natural_exit": 0,
+      "errors": 0,
+      "warnings": 0,
+      "information": 0,
+      "wall_seconds": 28.9
+    }
+  },
+  "scientific_result": {
+    "native_rows": [
+      {
+        "sites": 3,
+        "kappa": 0.04,
+        "whole_unprojected_comparison_clocks": 2,
+        "actual_joint_variance_over_kappa4": 574.3487640008922,
+        "actual_joint_cross_over_kappa4": 516.9645479190049,
+        "reference_ground_variance_over_kappa4": 54.169740438235316,
+        "actual_fourth_over_V2_kappa4": 8397.332586967117
+      },
+      {
+        "sites": 3,
+        "kappa": 0.04,
+        "whole_unprojected_comparison_clocks": 4,
+        "actual_joint_variance_over_kappa4": 54.215207819576115,
+        "actual_joint_cross_over_kappa4": 0.05210682238970033,
+        "reference_ground_variance_over_kappa4": 54.169740438235316,
+        "actual_fourth_over_V2_kappa4": 109.29588641311135
+      },
+      {
+        "sites": 3,
+        "kappa": 0.04,
+        "whole_unprojected_comparison_clocks": 8,
+        "actual_joint_variance_over_kappa4": 54.169740438632125,
+        "actual_joint_cross_over_kappa4": 6.256788195537706e-07,
+        "reference_ground_variance_over_kappa4": 54.169740438235316,
+        "actual_fourth_over_V2_kappa4": 108.47554417838161
+      },
+      {
+        "sites": 3,
+        "kappa": 0.004,
+        "whole_unprojected_comparison_clocks": 2,
+        "actual_joint_variance_over_kappa4": 306.69055511856527,
+        "actual_joint_cross_over_kappa4": 273.0704661315787,
+        "reference_ground_variance_over_kappa4": 33.610768722122266,
+        "actual_fourth_over_V2_kappa4": 4436.37600010308
+      },
+      {
+        "sites": 3,
+        "kappa": 0.004,
+        "whole_unprojected_comparison_clocks": 4,
+        "actual_joint_variance_over_kappa4": 33.61076991560529,
+        "actual_joint_cross_over_kappa4": 1.484656666323453e-06,
+        "reference_ground_variance_over_kappa4": 33.610768722122266,
+        "actual_fourth_over_V2_kappa4": 67.221565850282
+      },
+      {
+        "sites": 3,
+        "kappa": 0.004,
+        "whole_unprojected_comparison_clocks": 8,
+        "actual_joint_variance_over_kappa4": 33.61076872212229,
+        "actual_joint_cross_over_kappa4": 1.2635029391243354e-15,
+        "reference_ground_variance_over_kappa4": 33.610768722122266,
+        "actual_fourth_over_V2_kappa4": 67.22154268202337
+      },
+      {
+        "sites": 3,
+        "kappa": 0.0004,
+        "whole_unprojected_comparison_clocks": 2,
+        "actual_joint_variance_over_kappa4": 289.8016733651774,
+        "actual_joint_cross_over_kappa4": 257.645058026335,
+        "reference_ground_variance_over_kappa4": 32.15653235995309,
+        "actual_fourth_over_V2_kappa4": 4186.634233023447
+      },
+      {
+        "sites": 3,
+        "kappa": 0.0004,
+        "whole_unprojected_comparison_clocks": 4,
+        "actual_joint_variance_over_kappa4": 32.156532360059316,
+        "actual_joint_cross_over_kappa4": 1.327013669939198e-10,
+        "reference_ground_variance_over_kappa4": 32.15653235995309,
+        "actual_fourth_over_V2_kappa4": 64.31306472871714
+      },
+      {
+        "sites": 3,
+        "kappa": 0.0004,
+        "whole_unprojected_comparison_clocks": 8,
+        "actual_joint_variance_over_kappa4": 32.15653235995306,
+        "actual_joint_cross_over_kappa4": 1.089201150715452e-23,
+        "reference_ground_variance_over_kappa4": 32.15653235995309,
+        "actual_fourth_over_V2_kappa4": 64.31306472664693
+      }
+    ],
+    "mixed_evenness_falsifier": {
+      "sites": 3,
+      "kappa": 0.04,
+      "actual_field_thetas": [
+        0.31,
+        1.07
+      ],
+      "samples": 64,
+      "positive_mixed_character_minimum": 0.9996225931477196,
+      "mixed_character_imaginary_error": 1.3409412469300719e-15,
+      "mixed_character_evenness_defect": 0.0001129240167021539,
+      "scope": "Actual mean-Clifford central-U1 comparison. Mixed positivity is real; mixed evenness is FALSE. No full-Phi or source admission."
+    },
+    "macro_reference": {
+      "actual_parameter_epoch": "Existing Root-compatible Source\u03ba400\u03b2150, unchanged",
+      "kappa": "1e-400",
+      "Naux_exact": "625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "beta_induced": "1e150",
+      "actual_Naux_kappa4_log10": 148.79588001734407,
+      "NOT_applicable_to_Naux_1e1000": true,
+      "wrong_epoch_Naux1e1000_kappa4_log10": -600,
+      "volume_exact": "4722366482869645213696",
+      "Nt_exact": "1048576",
+      "actual_reference_ground_plus_occupation_mean_log10": -1575.0145103598895,
+      "canonical_thermal_excitation_relative_trace_log_upper": "-1928641001.2924127145688491073806071365154852260182558946827965292814791590409672354831850752214410448654025332",
+      "ALL_Naux_relative_charge_character_cold_bridge_log10_upper": -418797322.2168286,
+      "cold_joint_fourth_moment_upper_log10": -1569.2949404422739,
+      "two_clock_joint_fourth_moment_upper_log10": -1545.2125407891554,
+      "primitive_edge_probability_lower_over_kappa4": 1.52587890625e-05,
+      "primitive_edge_proof": "In gamma5-aligned physical chirality, Fxy=(plusdag gamma_j minus) Uxy/2 has BOTH singular values1/2 for every simple scalar-U1 nearest edge, L>=3. Analytic Riesz graph has X=-4\u03ba\u00b2F+O(\u03ba\u00b3), with operator remainder<=2048\u03ba\u00b3/(1-64\u03ba); at\u03ba400 this gives ||Xxy||F>=\u03ba\u00b2. Filled-minus overlap probability is det(1+X\u00b2)^-1>=exp(-2048V\u03ba4). The cold amplitude \u0393(T^(Nt/2)) differs from its ACTUAL leading eigenvector amplitude in Hilbert-Schmidt norm<=sqrt(2a); here sqrt(2a)<<\u03ba\u00b2, so summing BOTH spin arcs and dividing by1+2a gives probability>=\u03ba4/2^16. No primitive-arc claim is transferred to L2 coincident forward/back edges or generic noncentral Cartesian links.",
+      "exact_positive_ground_character_floor": ">=1-4*(2V)*(32kappa\u00b2)^2 >1/2",
+      "core_fourth_remainder_log10": -25.52793364222829,
+      "all_active_Ref_charge_shift_loss_log10": -71.80937705092315,
+      "mixed_SVD_all_occupation_actual_Nt_budget": {
+        "auxiliary_count_exact": "625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "spatial_volume_exact": "4722366482869645213696",
+        "actual_auxiliary_kappa": "1e-400",
+        "canonical_number_per_flavour": "9444732965739290427392",
+        "endpoint_collective_log10_upper": -300.31554035555354,
+        "singular_weight_collective_log10_upper": -615.0805205029782,
+        "full_canonical_kernel_relative_operator_error_log10_upper": -300.0145103598896,
+        "allNF_canonical_excitation_trace_log_upper": -1927183339.545083,
+        "excitation_Schatten_Nt_relative_log10_upper": -798.1921100428681,
+        "allNF_slab_static_kappa6_log10_upper": -606.651679381862,
+        "constants": {
+          "onebody_graph_norm_over_kappa2": 32,
+          "graph_to_mixed_singular_endpoint_constant": 1048576,
+          "canonical_tensor_kernel_constant": 281474976710656,
+          "mixed_sameN_next_singular_ratio_over_kappa2": 64,
+          "analytic_scaled_Riesz_radius": "1/64",
+          "analytic_log_kernel_bound_over_V": 1048576
+        },
+        "exact_full_operator": "At every pair of literal compact link fields, use detBpref Gamma_N(sqrtT1(Aprime)sqrtT1(A)), N=2V for EACH auxiliary. This keeps every canonical occupation. The instantaneous Omega(A) is only its exact static comparison vector.",
+        "kernel_bound": "After true canonical phase alignment, ||Kfull(Aprime,A)-K_Omega(Aprime,A)||op <= [2C sqrt(Naux V)kappa\u00b3 +2expm1(C Naux V kappa6)+128kappa\u00b2] K_Omega(Aprime,A), C=2^48. K_Omega is the ACTUAL positive occupied-minor Gram, not a guessed G.",
+        "uniform_gap_proof": "Bmin=(1-6k)/(2k), ||F||<=3. Minmax gives stable T1<=Bmin^-1 and unstable T1>=Bmin. Offblock<=3/Bmin, so the separated invariant top graph has ||X||<=2(3/Bmin)/(Bmin-Bmin^-1)<=32k\u00b2 at k<1/64. The canonical pair gap is>=2log Bmin.",
+        "mixed_singular_proof": "In the two instantaneous eigenframes hprime h has blocks Duprime Ruu Du, Duprime Rus Ds, Dsprime Rsu Du, Dsprime Rss Ds. ||Rsu||<=2||X||/(1-||X||\u00b2), Ds/Du<=4k. Thus mixed top singular graph endpoints are O(k\u00b3), its log singular determinant correction O(V k6), and the next canonical singular ratio<=64k\u00b2. The 2^20 endpoint bound follows by the separated-block Sylvester/tan-angle estimate; 2^48 absorbs its square, both endpoints, the 2V trace and phase alignment.",
+        "collective_proof": "Canonical dominant vectors are actual Slaters of the mixed onebody SVD; tensor alignment is a product of their cosines, so vector distance<=sqrt(Naux) times a single-flavour distance, while log singular weight adds Naux. The largest discarded tensor singular ratio is the single-flavour next ratio, not Naux times it. These are operator decomposition identities, never Gaussian-after-interacting-U.",
+        "exact_phase_proof": "In gamma5-aligned chirality J T1 J^-1=T1^-1 makes X=Xdag. U(X)=[X;I](1+X\u00b2)^-1/2 has strictly positive determinant overlap because ||Xprime X||<1 and the characteristic polynomial is real. Thus the comparison kernel is both PSD and pointwise nonnegative in its TRUE background-covariant phase gauge.",
+        "static_remainder_proof": "At complex |k|=1/64, ||2kT1-diag(0,I)||<=6|k|+64|k|\u00b2/(1-6|k|)<1/8. The radius1/2 Riesz contour separates the two bands, and graph/determinant logarithms are analytic with norm<=2^20 V. Bipartite even L removes odd closed words; the explicit fourth-order spatial/temporal Wilson traces give beta=16Naux k4. Cauchy bounds all remaining k6 terms by 2^20 V(64k)^6/(1-64k). The exact common vacuum constant is retained, not independently shifted in charged sectors.",
+        "Schatten_proof": "For EVEN p=Nt the dominant-minus-comparison kernel has pointwise rank<=2, so |Tr E1...Ep|<=2 product||Ei||; integrate against the TRUE positive K_Omega cyclic measure. It is not an assertion that the integral operator has rank2. Excitation cyclic Holder uses sum_j binomial(2V,j)^2 r^(jp); all flavours give <=exp[Naux(2V)^2 r^p]-1. No Fock-dimension bound substitutes for the thermal prices. Odd p+1 requires interpolation and the ACTUAL reference trace ratio, not a silently identical Nt denominator.",
+        "Gauss_scope": "The U1 graph frame transforms with Gamma(g) times the exact background2/site character. Full SU4/centre and statistical sectors must be transported through the existing Root physical bundle; this sublemma never projects them away.",
+        "scope": "Uniform frozen-Clifford auxiliary positive bare-Haar boundary kernel sublemma. Its scalar reference trace and actual active/source/photon toron-conditioned halfsteps remain separate obligations.",
+        "microscopic_fullpacket_admission_proved": false
+      },
+      "physical_Phi_projective_actual_budget": {
+        "auxiliary_count_exact": "625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "canonical_number_per_auxiliary": "9444732965739290427392",
+        "actual_tube_normal_radius": "1e-2100",
+        "onebody_halfstep_kappa_squared_Phi_log10_upper": -2886.841877190124,
+        "projective_coefficient_constant": "14392054995230.5972974517525045",
+        "projective_volume_squared_and_coordinate_factor": "2^20 * 8 * V^2",
+        "all_auxiliary_canonical_and_detB_collective_log10_upper": -1087.773987896895,
+        "all_auxiliary_projective_step_relative_Schatten_log10_upper": -1087.472957901231,
+        "Nt_plus2_unnormalized_power_trace_relative_log10_upper": -1081.1513271639371,
+        "proof": "The positive b blocks have bmin=(1-6k)/(2k), ||delta b||<=k(||Y0||+||Y||\u00b2), ||delta f||<=4k||Y||. The ONE-body relative square-root Sylvester integral has only the logarithmic condition factor C=2^24(1+kpower log10+log64)^2, giving C k\u00b2(||Y||+8||Y||\u00b2)/(1-6k)^3. Exterior-N multiplication and detB prefactors pay <=8V per flavour. A Cauchy/separable coefficient expansion, NOT an arbitrary bounded multiplier, pays the additional 2^20 V coordinate/projective factor. Tensor ALL flavours before the joint Haar projector and scalar normal heat. The retained analytic coefficient sum gives the displayed relative Schatten/power price by the physical Root projective theorem. NO inverse Phi heat, source commutation or character-term positivity is used.",
+        "limitation": "This supplies the small-Phi auxiliary boundary price only. Active charged/current kernels, full SU4/centre descent and the zero-Phi conditioned determinant/heat denominator must be joined before any macro M0/M1/PE or moving receiver Gram is admitted.",
+        "macro_source_admitted": false
+      },
+      "conditional_mixed_positive_boundary_relative_Haar": {
+        "beta_physical_exact": "16*Naux*kappa4=1e150",
+        "chart_link_bound": "1e-50",
+        "clock_boundaries": 1048579,
+        "Gaussian_dimension_exact": "4951774324240969708531089405",
+        "single_boundary_mixed_cosine_remainder_log10": -28.024810300331758,
+        "single_boundary_static_kappa6_remainder_log10": -612.6722805376663,
+        "all_boundaries_relative_scalar_charge_price_log10": -18.90389142114726,
+        "actual_global_Gaussian_normalization_entropy": "865843855422650562005146317311.20141370231091035978444409034312362181445128078274557925196069989482096238423976",
+        "actual_global_normalized_tail_natural_log_upper": "-219352681297644199139478160182763.04235296751885553401500534841353397498044045581134255493556895255123496621703",
+        "primitive_graph_proof": "Write a=B/(2\u03ba), ||B-I||<=6\u03ba, F=Fdag, ||F||<=3, t=||a^-1||<=3\u03ba. The graph Riccati map is X=-a^-1 F a^-1+a^-1 X a^-1-X F a^-1 F a^-1+X F a^-1 X a^-1. At ||X||<=32\u03ba\u00b2, \u03ba<1/128, it maps the ball into itself and has Lipschitz bound90\u03ba\u00b2+1728\u03ba4<1/2. Its leading remainder from -4\u03ba\u00b2F is bounded by199\u03ba\u00b3+2880\u03ba4+27648\u03ba6<=2048\u03ba\u00b3/(1-64\u03ba). This proves the constant used in the primitive-edge bound, rather than postulating a Riesz coefficient.",
+        "actual_mixed_kappa4_identity": "For U(X)=[X;I](1+X\u00b2)^-1/2, log det(U(Xprime)dag g U(X)) after background2/site is -||Xprime-gXgdag||F\u00b2/2+O(V\u03ba6) on the EVEN bipartite macro box. BOTH physical spins give log occupied_minor=-16\u03ba4 \u03a3_e[1-cos(Aprime_e-A_e-grad\u03c7_e)]+O(V\u03ba6). This is the original positive mixed kernel, not a substituted Gaussian model.",
+        "mixed_parity_repair": "Require actual Coulomb representatives D(Aprime-A)=0, retaining all harmonic coordinates. Then \u03a3(Aprime-A)grad\u03c7=0 exactly. Gaussian \u03c7 core is even; the ACTUAL mixed cosine need not be. Its entire core discrepancy, including odd terms, is paid by beta*V*(2chart+2delta)^4/8. No stationary toron or individual-character positivity is inferred.",
+        "normalized_tail_proof": "For 3D periodic L>=6, shell bound26r\u00b2 and sin(pi r/L)>=2r/L give Green00<=26/32+pi\u00b2/(48L)<1 and resistance<=4. Thus E=\u03a3|exp(i\u03c7x)-exp(i\u03c7y)|\u00b2>=||\u03c7||infinity\u00b2/pi\u00b2 in rooted principal angles. For ||\u03c7||infinity<=pi/4, Coulomb cancellation leaves |sin dA-dA|<=|dA|\u00b3/6 and |sin grad\u03c7-grad\u03c7|<=|grad\u03c7|\u00b3/6; the chart makes their energy error <E/4. For larger angles, Cauchy gives the cross error <=2chart sqrt(6V E)<<E/4. The mixed cosine action relative to \u03c70 is >=E/4 outside the core. Pay normalized Haar volume and Jlower=(24pi beta)^(-dimension/2) for ALL Nt+3 boundaries before dividing. This is an explicit relative tail, not absolute/Z or RN-to-Loewner.",
+        "scalar_charge_ratio": "On the Gaussian core, odd charge phase cancels in the EVEN REFERENCE, while loss<=((4V+1)delta)^2/2 for every active canonical occupation and all Ref4 states. Exact mixed oddness and source-preserved phases are handled by the uniform nonlinear price, not deleted. C0(Aprime,A), detB, normal heat and actual coexact/harmonic field density remain in BOTH numerators and denominators.",
+        "CONDITIONAL": true,
+        "required_join": "The f022 Root-compatible chart/admission remains conditional. Physical Dminus/fullPhi/Gauss statistical transport and consistent integer source/string dressing must supply these ACTUAL Coulomb pairs. Scalar per-charge Fourier estimates are not operator Loewner bounds or full active/source receiver-Gram admission. The frozen mixed-SVD canonical Schatten_Nt price is separately retained.",
+        "full_physical_conditioned_source_admitted": false
+      },
+      "proof": "J T Jdag=T^-1 at the actual frozen mean Clifford/central-U1 reference. X=Xdag and ||X||<=32\u03ba\u00b2. Ground character det(1+gdag X g X)/det(1+X\u00b2) is strictly positive and even, with true background2/site. \u0393_N(T^(Nt/2)) retains every occupation. Its excited Hilbert-Schmidt ratio is sum_j binom(2V,j)^2 r^(jNt)<=2a. Joint-law TV from the ground amplitude reference is<=2sqrt(2a)+4a; the positive reference character floor gives an explicitly RELATIVE all-Naux power error, not absolute/Z. For ALL thermal eigenoccupation Slaters, plus-chirality number mean<=j_e+\u03bcgraph; its fourth moment is the Poisson-binomial polynomial \u03bc+7\u03bc\u00b2+6\u03bc\u00b3+\u03bc\u2074. Summing the exact canonical excitation counts yields the quoted full joint fourth bound. These are reference decomposition identities, never an interacting Slater assertion.",
+      "actual_boundary_bridge": "The real K contains normal heat and a Haar projection EACH step. Only the frozen mixed-SVD uniform pair-kernel plus its canonical Schatten_Nt remainder may transfer this reference lemma to that boundary. Phi projective ledger is separately executable; actual active/source/globalGauss conditioned Gram join is NOT proved by the scalar reference.",
+      "full_physical_conditioned_source_admitted": false
+    }
+  },
+  "discarded_attempts": [
+    "bg_1163 inverse-duality numerical gate failed at ill-conditioned tiny \u03ba; actual T J T=J polynomial residual replaces unstable explicit-inverse gating, while explicit-inverse value remains recorded.",
+    "bg_1172/1173 exposed genuine NumPy scalar typing errors plus invalid absolute include. Fixed bool/complex dtype at source and external config relative target. Final actual LSP/CLI both succeed."
+  ],
+  "status": {
+    "reference_all_occupation_clock_complete": true,
+    "conditional_mixed_positive_boundary_scalar_lemma_complete": true,
+    "actual_fullGauss_K_Nt_source_join_proved": false,
+    "f022_chart_admission_conditional": true,
+    "no_macro_U_N_backend": true,
+    "macro_source_Gram": null,
+    "macro_photon_Gram": null,
+    "macro_Pe_Gram": null,
+    "macro_high_energy_Gram": null,
+    "macro_receiver_Gram": null,
+    "source_admitted": false,
+    "campaign_closed": false,
+    "issue_closed": false
+  }
+}

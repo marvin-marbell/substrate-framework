@@ -1,0 +1,37 @@
+{
+  "kind": "CONDITIONAL_COMPLETE_H_ACTUAL_FAMILY_STATIC_RADIAL_WINDOW_NOT_CLIFFORD_OR_PHASE",
+  "measure": "inherited normalized physical Gauss/sewn-cover Phi marginal; translation-averaged globally minimizing Bloch family",
+  "lattice_scope": "every even N>=4",
+  "neutral_trace_square_coefficients": {
+    "A0": "49800541185386145523063312337391/79228162514264337593543950336",
+    "Ai": "29206669829258403248756220714025/158456325028528675187087900672",
+    "Amax": "49800541185386145523063312337391/79228162514264337593543950336"
+  },
+  "all64_charged_Dch_exact": "855444290449274477/35184372088832",
+  "actual_family_mean_s_lower_exact": "441/676",
+  "actual_family_s2_upper": "16384",
+  "per_fixed_site_static_window": "1/4<=s_x=sum_mu Tr(Phi_mux^2)<=2^16",
+  "conditional_window_probability_lower_exact": "45423/7487094784",
+  "native_complex_trace_cross_vanishes_without_commuting_fields": true,
+  "source_trial_and_inherited_coercivity_must_be_reviewed": true,
+  "Phi0_static_component": {
+    "spatial_Jordan_and_neutral_lower_per_Lambda": ">-14",
+    "actual_family_mean_TrPhi0_squared_lower_exact": "169/2601",
+    "per_fixed_site_window": "1/64<=Tr(Phi0_x^2)<=2^20",
+    "conditional_probability_lower_exact": "474383/3546913701888",
+    "derivation": "J>=64 sum_mu x_mu^2; neutralK/V<=2sqrt(A0*x0)+2sqrt(Ai*sum_i xi); spatial minimization>-14, charged cost<.5Lambda, so 51sqrt(<x0>)>13/2 and <TrPhi0^2>>169/2601; Cauchy+Markov with M2^14"
+  },
+  "analytic_implication": [
+    "Trace0 K_2V(h)<=.5Tr|h|<=sqrt(V Trh^2)",
+    "Trh^2<=sum_x[(m^2+6c0^2)s0x+sum_i2ci^2six]",
+    "Eglob/V>=-(sqrt(Amax)Lambda+Dch)sqrt(<s>)",
+    "Eglob/V<-21Lambda and coefficient/Lambda<26 imply <s>>441/676",
+    "<s><=1/4+sqrt(<s^2>P(s>=1/4)); subtract Markov upper for s>2^16"
+  ],
+  "simultaneous_all_patch_or_Clifford_rigidity": false,
+  "ground_loop_Gram_or_wholeP0_excitation": false,
+  "sharp_field_projector_form_preservation_claimed": false,
+  "phase_stiffness_atom_commoncone_admitted": false,
+  "actual_minimizing_vector_computed": false,
+  "campaign_complete": false
+}

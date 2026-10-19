@@ -1,0 +1,75 @@
+{
+  "kind": "FINAL_EPOCH2_SEPARATE_SUPPLEMENTAL_GUARD_TEMPLE_FIDELITY_REVIEW",
+  "reviewer": "PositiveRowInertiaReview",
+  "verdict": "VALID",
+  "scope": "Under the explicit standard binary64 rounding model and the independently corrected exact selected-native harmonic representation, the normalized exact binary candidate has residual<=1/65536. Composing its Rayleigh/variance enclosure with lambda2>=-5123 proves unique ground, energy bounds, gap lower and infidelity ONLY in selected local harmonic14x690880. No ambient/fullPhi/lattice ground, stiffness, phase, photon or originalSOURCE admission.",
+  "final_target": {
+    "source": "local_so5_ground_upper_complete_state_consumer_20261011.py",
+    "source_sha256": "7ec61306fb52989a58008b488a13d9a9850d0e14688f8e21ee3d9ac5432f6769",
+    "receipt": "local_so5_ground_upper_complete_state_consumer_20261011_receipt.json",
+    "receipt_sha256": "8ac548432a5184ed1a281af1d2052fd9693c05399bc5095da9ccc882e215650d",
+    "executed_archive": "local_so5_ground_upper_complete_state_guard_epoch2_20261011_executed.zip",
+    "executed_archive_sha256": "a80ce9729ec3f9a0647d478984903c2235e9c5180a870ea161a63a6835058b71",
+    "parent_exit_capsule": "local_so5_ground_upper_complete_state_guard_epoch2_20261011_exit.json",
+    "parent_natural_exit": true,
+    "parent_exit_code": 0,
+    "parent_elapsed_seconds": 4.6121536690043285,
+    "serialized_state_sha256": "dd06400e1b7f70df935cf7ca02cf5ebf598481a8d5e209d1241aba5ed3fea2a2",
+    "corrected_joint_intertwiner_sha256": "102966f32c49f40d79d55343925a630e30a9cf7e4a8074cf8628142ba9c5b6e8",
+    "lower_receipt_sha256": "f6c8823eb6b5005cdb8067088d14fb561cdacbd3bba9c54e0c5042fe160e4e73"
+  },
+  "governing_bookkeeping": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "revision": "7c4f07b6fd9239b125593a653df6854082e3125f67d9065e547e3064b0c1a27e",
+    "extension_evidence_id": "local-positive-output-row-roundoff-temple-review-extension-20261011",
+    "accepted_science_unchanged": "909367f513e90e70209a1bf9dff3635f40b08f1a00add291fecc531a7887c06d",
+    "ownership": "Parent records separate extension evidence; reviewer did not amend shared plan."
+  },
+  "predecessors_not_rebound": {
+    "original_inertia_review": "local_so5_positive_row_review_verdict_20261011.json",
+    "original_supplemental_review": "local_so5_positive_row_review_ground_upper_supplemental_verdict_20261011.json",
+    "frozen_original_upper_source_sha256": "7715337d20651610d2ed73f3c56f1f7c1d5b23543fe0d2b093424fa47e4d6bb2",
+    "frozen_original_upper_receipt_sha256": "b3c60f0df1994942db53e754dd6a0927784ee1720f918f0ef5ad0b2d813f67f2",
+    "rule": "This is a new epoch-specific supplemental verdict; frozen original lower-only and upper-review capsules remain separate."
+  },
+  "exact_change_review": "Byte diff against original executed771533 archive shows ONLY addition of100D*2^-1074 underflow term to arithmetic cap and replacement of norm-ratio1/(1-gamma) by1/(1-4gamma), with an explanatory comment. Full native action, state, coefficients, Temple, fidelity and all substantive numerical results are unchanged.",
+  "final_guard_review": {
+    "coefficient_count": "At most8 transitions per role plus one full diagonal:17 terms<20. Both row and column absolute sums are bounded by1078272<2^22. Integer radical factors are below2^53; positive coefficient formation paths fit gamma64 and action accumulation fits gamma40.",
+    "parameter_budget": "Exact captured float-to-profile differences are<2^-48.768*2^-48 is justified as an operator-norm bound via norm2 one-particle A/B/C generators, their n-fold sums and totaln128, not as an individual-entry count.",
+    "norm_ratio": "gamma(2D+8)=2418081/1125899904424543<2^-27. The final4gamma factor safely encloses both residual-norm and source-norm reductions and final normalization under the declared model; the exact denominator is positive.",
+    "subnormal_clarification": "100D*2^-1074 bounds aggregate elementary absolute underflow errors, but a squared-norm radicand's absolute error is not carried unchanged through sqrt. Use |sqrt(a+epsilon)-sqrt(a)|<=sqrt(|epsilon|). Here100D<2^30, so that radical perturbation is<2^-522. An extra2^-490 covers BOTH normalized norm paths with the observed near-unit source denominator. Independently including this extra allowance still leaves total formation+accumulation+subtraction+underflow+norm-subnormal budget<2^-18. Thus the final claimed sigma is sound; do not describe100D*2^-1074 alone as the complete sqrt/norm underflow price.",
+    "normalized_residual_upper_float": 0.000003871487889926049,
+    "normalized_residual_upper_compared_to": "1/65536=0.0000152587890625",
+    "rounding_model_limit": "Correct rounding/basic binary64 BLAS/Numba arithmetic is a declared assumption, not an independently certified compiler/hardware theorem. Subnormal paths are covered by the explicit supplemental allowance and existing guard margin. No undocumented low-precision reduction is admitted."
+  },
+  "Temple_and_fidelity_review": {
+    "Rayleigh": "||(H-muq)u||<=sigma implies E in[muq-sigma,muq+sigma]. Centered variance equals that squared residual minus(E-muq)^2, hence is<=sigma^2.",
+    "ground_and_gap": "E_upper<beta=-5123<=lambda2 proves lambda1<lambda2 and selected finite-sector unique ground. Temple uses E_lower-sigma^2/(beta-E_upper), the smallest safe denominator. Actual gap is>=beta-E_upper.",
+    "fidelity": "Infidelity1-<u,Pground u>=||(I-Pground)u||^2<=sigma^2/(beta-E_upper)^2. The receipt field selected_ground_projector_error_upper_exact means SQUARED source projection error/infidelity. It is NOT an unsquared vector error, projector operator norm or trace distance.",
+    "ground_energy_interval_exact": ["-8267510975657833156129345/1613372267228007759872", "-176071894972193/34359738368"],
+    "selected_gap_lower_exact": "46955312929/34359738368",
+    "infidelity_upper_exact": "274877906944/2204801412260314559041"
+  },
+  "new_independent_control": {
+    "source": "local_so5_positive_row_review_ground_upper_epoch2_controls_20261011.py",
+    "source_sha256": "78abf3a4badb7fea503e33b1ed50a9a2c7de7b5c45c27afc69c4cef2879b88bb",
+    "receipt": "local_so5_positive_row_review_ground_upper_epoch2_controls_20261011_receipt.json",
+    "receipt_sha256": "a90b6c005bdd9e52fb9c494b825ce1be44b19212206998963b65d979696214d1",
+    "exit_capsule": "local_so5_positive_row_review_ground_upper_epoch2_controls_20261011_exit.json",
+    "natural_exit": true,
+    "exit_code": 0,
+    "elapsed_seconds": 0.08906277100322768,
+    "input_unchanged": true,
+    "contrary_controls": [
+      "Norm-as-variance error: diag(0,10), equal spectral weights gives trueground0, mean5, residualnorm5, variance25. Correct Temple lower0; wrong norm-as-variance lower4 is rejected.",
+      "Wrong denominator: diag(0,2), excited weight1/10 gives mean1/5 and variance9/25. Correct Temple lower0; denominatorbeta rather thanbeta-E gives false lower1/50. Correct infidelity cap1/9 covers actual1/10; wrongbeta denominator gives9/100 below actual1/10 and is rejected."
+    ],
+    "no_state_or_action_or_old_solver_rerun": true
+  },
+  "integration_findings": [
+    "Parent must label the projector-error fraction as infidelity/squared source projection error before using it in an unsquared norm budget.",
+    "Parent should carry the square-root amplification clarification for subnormal squared-norm error; total sigma remains valid because the independently checked supplemental allowance fits the existing arithmetic cap."
+  ],
+  "not_admitted": ["other_spin_representations", "ambient_fullground", "wholePhi_ground", "lattice_ground", "whole_rho_zero_projector_equals_ground", "stiffness", "phase", "IRatom", "photon", "commoncone", "originalSOURCE", "law", "coupling", "vfit"],
+  "parent_only": "Parent owns final integrated consumer/checker and any scientific admission; worker verdict itself grants none."
+}

@@ -1,0 +1,713 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "physical_c_bare_electric_mass.py",
+    "--investigation",
+    "mode_deletion",
+    "--quadrature-order",
+    "4",
+    "--output",
+    "physical_c_bare_electric_mass_mode_deletion_20261008.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "natural_exit_observed": true,
+  "completion_evidence": "bg_1253 completed naturally, terminal capsule_written, no timeout/cancellation",
+  "process_wall_seconds": 489.64,
+  "capsule": "physical_c_bare_electric_mass_mode_deletion_20261008.json",
+  "capsule_sha256": "c9c0c53af3a435c8b31553f6c6dce34c619822a8fb3ec8f6a70445ac3b6fd542",
+  "execution": {
+    "input_json": "{\"NEW_Coulomb_coefficient\":0.02,\"arguments\":{\"investigation\":\"mode_deletion\",\"mass\":null,\"mass_tolerance\":0.002,\"output\":\"physical_c_bare_electric_mass_mode_deletion_20261008.json\",\"quadrature_order\":[4],\"scan_normal_order\":1,\"scan_photon_grade\":0,\"selected_new_mass\":-1.1134192897656376,\"selected_reference_mass\":-1.1806176541281859,\"spacing\":0.01,\"target_physical\":1.0},\"core_epoch\":\"6a66ca3a45b05e8df46cc1cec90aa775d97cd60341186639fdaf1dfd5fce9e64\",\"electric_coefficient\":0.02,\"exact89_Coulomb_coefficient\":0.01,\"exact_REFERENCE89_epoch\":\"89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2\",\"full_default_parameters\":{\"bare_mass\":-2.0282053185612114,\"centre_penalty\":10.0,\"chart_radius\":0.02,\"colour_order\":1,\"colour_sigma\":0.003,\"electric_coefficient\":0.02,\"normal_order\":3,\"normal_sigma\":0.01,\"outside_couplings\":[0.07,0.02,0.03],\"outside_quartic\":0.02,\"photon_grade\":1,\"prefix_steps\":4,\"quadrature_order\":2,\"spacing\":0.01},\"no_source_fitted_shift\":true,\"original_bare_mass\":-2.0282053185612114,\"pinned_template_revision\":\"89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe\",\"plan_id\":\"issue-222-induced-photon-continuation-20261008\",\"scan_uses_complete_KN_KC_eigenpairs\":true,\"scoped_work_items\":[\"joined-explanatory-campaign\",\"shared-compton-transfer\"],\"target_transfer\":0.01}",
+    "input_sha256": "6aef3766417cda1dd923682bf8cd5d61487000fae8cee6426270563bd6d36f82",
+    "source_at_IMPORT": {
+      "physical_c_bare_electric_mass.py": "d390663d9c378ea00a0887ef92b12b19a99a99197a4c2ed21069178c9af7342a",
+      "physical_c_bare_electric_kernel.py": "6a66ca3a45b05e8df46cc1cec90aa775d97cd60341186639fdaf1dfd5fce9e64",
+      "captured_reference89.py": "89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2",
+      "captured_ledger.py": "567985093c8e3e512d78b064427996aa92a5a7abab36886d7cf21b4e1d623c87",
+      "captured_Alpha56/physical_alpha_compton.py": "56e1c611bffe17964644b47b6aca7ed496a195c8f4795e76e657ee2c01c3ff04",
+      "captured_Alpha56/sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+      "captured_Alpha56/rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459"
+    },
+    "capsule_hashes_at_IMPORT": {
+      "physical_c_real_cover_kernel_smooth_packet_capsule.json": "e6242d6801be2806624305469f21732c5d25473a672dbc17d0255692c1b2f57b",
+      "physical_c_completed_ledger_same_halfstep_capsule.json": "0aaaf5d58e3073d12337c34b4b2c7915e990d70e22382ccd8e93eb737d353f3a",
+      "physical_alpha_compton_Cartesian_final_native_capsule.json": "569e932d9cee150395fa4a27dd9a4355dace8b7de367db9c271b6c7bcca84d51"
+    },
+    "startup_unchanged": {
+      "physical_c_bare_electric_mass.py": true,
+      "physical_c_bare_electric_kernel.py": true,
+      "physical_c_real_cover_kernel_smooth_packet_capsule.json": true,
+      "physical_c_completed_ledger_same_halfstep_capsule.json": true,
+      "physical_alpha_compton_Cartesian_final_native_capsule.json": true
+    },
+    "runtime": {
+      "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.39",
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    },
+    "runtime_seconds": 487.83485102653503
+  },
+  "diagnostic_case_summaries": [
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -2.0282053185612114,
+      "transfer_coupling": "full",
+      "gaps_TRANSFER": {
+        "5": [
+          0.22970602451297534
+        ]
+      },
+      "negative": false,
+      "lambdaN": 148.1324209393376,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 26.93401354134073,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999908581938,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.39353171539933607,
+          "gap_raw_weight": 0.49515343653844085,
+          "half_Gram": 0.7539286198082769,
+          "E1_PHYSICAL": 20.306323655120455
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 226.24261752419088,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999389427291887,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 3.5958458086281043e-09,
+          "gap_raw_weight": 4.52440131184293e-09,
+          "half_Gram": 0.10212117501058912,
+          "E1_PHYSICAL": 23.104161939041674
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -2.0282053185612114,
+      "transfer_coupling": "coexact_only",
+      "gaps_TRANSFER": {
+        "5": [
+          0.006274766193628796
+        ]
+      },
+      "negative": false,
+      "lambdaN": 78.49427373756875,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 0.8572139845030318,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.9980590353156498,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.9814730139013799,
+          "gap_raw_weight": 0.9876508896820635,
+          "half_Gram": 0.9888977109734577,
+          "E1_PHYSICAL": 0.8476969470894852
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 174.18591817468766,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 9.298969224092739e-08,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 1.6064025389944113e-08,
+          "gap_raw_weight": 1.616514029783377e-08,
+          "half_Gram": 0.17275060281223173,
+          "E1_PHYSICAL": 30.090722366079365
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -2.0282053185612114,
+      "transfer_coupling": "harmonic_only",
+      "gaps_TRANSFER": {
+        "5": [
+          0.23353009655368978
+        ]
+      },
+      "negative": false,
+      "lambdaN": 143.78307468622282,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.11272475309133,
+          "literal_TRANSFER_Pe0_4_fraction": 0.999999998266677,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.402975200170074,
+          "gap_raw_weight": 0.5089781653948793,
+          "half_Gram": 0.7530661662527105,
+          "E1_PHYSICAL": 20.417675686475455
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 231.127684908943,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999347727992974,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 3.4191576973175246e-33,
+          "gap_raw_weight": 4.318570004412125e-33,
+          "half_Gram": 0.09786700717765817,
+          "E1_PHYSICAL": 22.61977479793904
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -1.1806176541281859,
+      "transfer_coupling": "full",
+      "gaps_TRANSFER": {
+        "5": [
+          0.2279391396025639
+        ]
+      },
+      "negative": false,
+      "lambdaN": 152.09687847940222,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 26.929835688950444,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999910228546,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.3862358444422093,
+          "gap_raw_weight": 0.4851156511300491,
+          "half_Gram": 0.75381794991692,
+          "E1_PHYSICAL": 20.30019353064413
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 225.89284400784916,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999396859363507,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 3.4177810347591328e-09,
+          "gap_raw_weight": 4.292763336068855e-09,
+          "half_Gram": 0.10242038472133673,
+          "E1_PHYSICAL": 23.136031989080816
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -1.1806176541281859,
+      "transfer_coupling": "coexact_only",
+      "gaps_TRANSFER": {
+        "5": [
+          0.0026370277039962343
+        ]
+      },
+      "negative": false,
+      "lambdaN": 80.12386811061222,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 0.9624286398567619,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.998081622925309,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 6.04607191115243e-26,
+          "gap_raw_weight": 6.062036610708573e-26,
+          "half_Gram": 0.9878487524732975,
+          "E1_PHYSICAL": 0.9507339312270747
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 174.3134869499611,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999999999999,
+          "literal_PHYSICAL_Pe0_4_fraction": 9.111490895720629e-08,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 6.771505918448985e-32,
+          "gap_raw_weight": 6.789386132101633e-32,
+          "half_Gram": 0.17254025366359038,
+          "E1_PHYSICAL": 30.076093255331237
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -1.1806176541281859,
+      "transfer_coupling": "harmonic_only",
+      "gaps_TRANSFER": {
+        "5": [
+          0.2313205391716603
+        ]
+      },
+      "negative": false,
+      "lambdaN": 147.55334829946807,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.06622210463593,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999983521353,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.3959223023754911,
+          "gap_raw_weight": 0.49896628336043314,
+          "half_Gram": 0.7532675993141627,
+          "E1_PHYSICAL": 20.38810814726303
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 230.8511309388983,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999353092709069,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 5.619384769073512e-35,
+          "gap_raw_weight": 7.081903485036933e-35,
+          "half_Gram": 0.09809818742636925,
+          "E1_PHYSICAL": 22.646077510433354
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -2.0282053185612114,
+      "transfer_coupling": "full",
+      "gaps_TRANSFER": {
+        "5": [
+          0.23225908322790376
+        ],
+        "3": [
+          0.23225908322790376
+        ]
+      },
+      "negative": false,
+      "lambdaN": 137.44069236087412,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.031812533943842,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999983729857,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.39361980834619037,
+          "gap_raw_weight": 0.4965303319810269,
+          "half_Gram": 0.7531340062687686,
+          "E1_PHYSICAL": 20.35857727039544
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.031812533943807,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999983729855,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.39361980834619004,
+          "gap_raw_weight": 0.49653033198102664,
+          "half_Gram": 0.7531340062687689,
+          "E1_PHYSICAL": 20.358577270395422
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.86425614564564,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999927123854,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 1.3435226520971443e-08,
+          "gap_raw_weight": 1.6947819553916037e-08,
+          "half_Gram": 0.5632826093837614,
+          "E1_PHYSICAL": 31.467363973002104
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.86425614564566,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999927123854,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 1.3435226520976462e-08,
+          "gap_raw_weight": 1.6947819553922373e-08,
+          "half_Gram": 0.5632826093837612,
+          "E1_PHYSICAL": 31.467363973002104
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -2.0282053185612114,
+      "transfer_coupling": "coexact_only",
+      "gaps_TRANSFER": {
+        "5": [
+          0.004076404599098516
+        ],
+        "3": [
+          0.004076404599098739
+        ]
+      },
+      "negative": false,
+      "lambdaN": 73.10494970721987,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 0.7641000435341003,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.996948803144813,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.9809108878880828,
+          "gap_raw_weight": 0.9849176385628436,
+          "half_Gram": 0.9893807228563165,
+          "E1_PHYSICAL": 0.7559858534063111
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 0.7641000435341334,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.9969488031448129,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.9809108878880816,
+          "gap_raw_weight": 0.9849176385628428,
+          "half_Gram": 0.9893807228563154,
+          "E1_PHYSICAL": 0.755985853406343
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 3.8620862763765613,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.9992516476608837,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 6.08041880739002e-08,
+          "gap_raw_weight": 6.105255642682766e-08,
+          "half_Gram": 0.9506161134596967,
+          "E1_PHYSICAL": 3.6713614458951187
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 3.8620862763766284,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.9992516476608837,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 6.080418807388961e-08,
+          "gap_raw_weight": 6.105255642681706e-08,
+          "half_Gram": 0.9506161134596968,
+          "E1_PHYSICAL": 3.6713614458951827
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -2.0282053185612114,
+      "transfer_coupling": "harmonic_only",
+      "gaps_TRANSFER": {
+        "5": [
+          0.23529698594607357
+        ],
+        "3": [
+          0.23529698594607357
+        ]
+      },
+      "negative": false,
+      "lambdaN": 133.25147172454635,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.171273927000133,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999982863895,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.4040161985651006,
+          "gap_raw_weight": 0.5111954275911637,
+          "half_Gram": 0.7526757525388569,
+          "E1_PHYSICAL": 20.451159050444247
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.171273927000126,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999982863895,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.40401619856510085,
+          "gap_raw_weight": 0.5111954275911638,
+          "half_Gram": 0.7526757525388569,
+          "E1_PHYSICAL": 20.45115905044424
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 59.94656650485482,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999972038253,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 8.42908935888394e-32,
+          "gap_raw_weight": 1.066519598551317e-31,
+          "half_Gram": 0.542084931894511,
+          "E1_PHYSICAL": 32.496130421094
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 59.946566504854744,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999972038257,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 7.614441371811995e-32,
+          "gap_raw_weight": 9.634434527020753e-32,
+          "half_Gram": 0.5420849318945109,
+          "E1_PHYSICAL": 32.49613042109395
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -1.1134192897656376,
+      "transfer_coupling": "full",
+      "gaps_TRANSFER": {
+        "5": [
+          0.2306765167611816
+        ],
+        "3": [
+          0.2306765167611813
+        ]
+      },
+      "negative": false,
+      "lambdaN": 141.43904375933,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.04135501042212,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999984776416,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.38551675691211285,
+          "gap_raw_weight": 0.4855397587779633,
+          "half_Gram": 0.7529125560721084,
+          "E1_PHYSICAL": 20.359775720550232
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.0413550104221,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999984776416,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.38551675691211285,
+          "gap_raw_weight": 0.4855397587779632,
+          "half_Gram": 0.7529125560721082,
+          "E1_PHYSICAL": 20.359775720550214
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.50066457257761,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999931895613,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 1.2974108521074597e-08,
+          "gap_raw_weight": 1.6340263837397286e-08,
+          "half_Gram": 0.5649822076863142,
+          "E1_PHYSICAL": 31.35688799827251
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.50066457257763,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999931895613,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 1.2974108521070074e-08,
+          "gap_raw_weight": 1.6340263837391585e-08,
+          "half_Gram": 0.5649822076863138,
+          "E1_PHYSICAL": 31.35688799827249
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -1.1134192897656376,
+      "transfer_coupling": "coexact_only",
+      "gaps_TRANSFER": {
+        "5": [
+          0.005978380439786163
+        ],
+        "3": [
+          0.005978380439786275
+        ]
+      },
+      "negative": false,
+      "lambdaN": 75.61023282087578,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 2.031296424886921,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.9970248958380589,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 9.057058418011745e-27,
+          "gap_raw_weight": 9.11136713623533e-27,
+          "half_Gram": 0.9769226761463596,
+          "E1_PHYSICAL": 1.9844195394470638
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 2.031296424886949,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.997024895838059,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 1.0004451630348424e-26,
+          "gap_raw_weight": 1.0064441189816586e-26,
+          "half_Gram": 0.9769226761463601,
+          "E1_PHYSICAL": 1.984419539447092
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 5.143143697327752,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 6.17843779664212e-08,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 2.148280868853759e-29,
+          "gap_raw_weight": 2.1611625766872484e-29,
+          "half_Gram": 0.938527915053778,
+          "E1_PHYSICAL": 4.826983931074994
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 5.143143697327699,
+          "literal_TRANSFER_Pe0_4_fraction": 1.0,
+          "literal_PHYSICAL_Pe0_4_fraction": 6.178437796640343e-08,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 2.2925591659345176e-29,
+          "gap_raw_weight": 2.306306007790588e-29,
+          "half_Gram": 0.9385279150537783,
+          "E1_PHYSICAL": 4.826983931074946
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -1.1134192897656376,
+      "transfer_coupling": "harmonic_only",
+      "gaps_TRANSFER": {
+        "5": [
+          0.2331324274725318
+        ],
+        "3": [
+          0.2331324274725322
+        ]
+      },
+      "negative": false,
+      "lambdaN": 137.03931341223281,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.129298866060104,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999983778592,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.3962232878616126,
+          "gap_raw_weight": 0.5002511828881673,
+          "half_Gram": 0.7528308155275392,
+          "E1_PHYSICAL": 20.423772190026373
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.129298866060118,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999983778595,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 0.39622328786161254,
+          "gap_raw_weight": 0.5002511828881673,
+          "half_Gram": 0.7528308155275387,
+          "E1_PHYSICAL": 20.42377219002637
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 59.65600774086243,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999972895839,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 1.1888601946710175e-33,
+          "gap_raw_weight": 1.50099385092315e-33,
+          "half_Gram": 0.5434219768822902,
+          "E1_PHYSICAL": 32.41838565944467
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 59.65600774086245,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999972895839,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_half_weight": 7.651074997805046e-35,
+          "gap_raw_weight": 9.659854519593153e-35,
+          "half_Gram": 0.5434219768822899,
+          "E1_PHYSICAL": 32.41838565944466
+        }
+      ]
+    }
+  ],
+  "scoped_spectral_source_reconstruction": {
+    "source_centre_rows": 36,
+    "minimum_K_eigenvalue": 0.15844725782001068,
+    "max_raw_Gram_residual": 1.2212453270876722e-15,
+    "max_E1_TRANSFER_residual": 5.551115123125783e-17,
+    "max_physical_Pe4_residual": 1.1102230246251565e-16
+  },
+  "quadrature_capsule_reconstruction": {
+    "source_centre_rows": 36,
+    "minimum_K_eigenvalue": 0.15843902086744177,
+    "max_raw_Gram_residual": 9.992007221626409e-16,
+    "max_E1_TRANSFER_residual": 5.551115123125783e-17,
+    "max_physical_Pe4_residual": 0.0
+  },
+  "language_tooling": {
+    "pyright_langserver_version": "1.1.414",
+    "mass_file_diagnostics": [],
+    "actual_complete_case_definition_and_document_symbols": true,
+    "ast_grep_version": "0.45.3",
+    "positive_projected_transfer_factor_query": true
+  },
+  "reviewed_causal_result": {
+    "quadrature_bias_not_sufficient_to_explain_large_gap": true,
+    "native_harmonic_transfercoupling_dominates_large_gap_in_both_constructions": true,
+    "all5_real_field_heat_and_full_Coulomb_and_fullphase_Psi_retained": true,
+    "coupling_deletion_is_not_full_law_solution": true,
+    "no_negative_charged_energy_observed": true,
+    "no_target_root_or_physical_electronpole_claim": true,
+    "source_constraint": "The selectedmass coexact-only lowest charged state is dark even to pureS (~1e-26 weight), despite pureS physicalPe4 about.997. Never identify operatornorm gap with a sourced electronpole.",
+    "next_legitimate_construction": "Actual volume-dependent normalized harmonic geometry with full transfercouplings and same fullphase Ref source; no fitted Hermite width, charge, UE or massshift. This is an unexecuted construction requirement, not a claimed numerical result.",
+    "bounded_scope": "Centre0, grade1normal1 and Q4, finite Hermite basis; no quadrature or continuum certificate."
+  },
+  "historical_artifacts_preserved": [
+    "physical_c_bare_electric_mass_scan_native_20261008.json",
+    "physical_c_bare_electric_mass_scan_grade1_20261008.json",
+    "physical_c_bare_electric_mass_quadrature_20261008.json"
+  ]
+}

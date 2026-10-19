@@ -1,0 +1,73 @@
+{
+  "kind": "INDEPENDENT_POLYNOMIAL_CARTESIAN_HAAR_GAUSS_FORM_REVIEW_NOT_SCIENTIFIC_ADMISSION",
+  "governor": {"plan_id":"issue-222-induced-photon-delta13-continuation-20261008","captured_revision":"3fc02d01a95d53a814f2cd560e1eaedaf8f2d248db7e7054a138e2d9fdaf2d97","accepted_scoped_science":"03e7a09a0dd929f32f3522cf9d7d30b76fe3f5d7c985576fc7cf8fdf2c8c6cc8","template_id":"general","template_revision":"89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe","work_item_id":"induced-photon","requirement_ids":["outcome","verification"]},
+  "target_pins": {
+    "native_neutral_body_proof_20261012.json":"5993b9bd186501472ada9b93c7869eb93537fe114f0f55b660b3164a9f77ac49",
+    "native_neutral_body_consumer_20261012.py":"4dfe8f82f60a28c97e16d072942159798b1e4a298963268ceb154c2b84e0574b",
+    "native_neutral_body_interface_20261012.json":"edbc830802531c32bc81de26b3cc13f0ab5cc9ea4ff0c7b14cfa732efdf54aab",
+    "joined_phi_u1_uniform_sharp_gauss_proof_20261010.json":"fb99f8b2accadee1f868922a972d0dbbb46dacc06b88fef61dfe4bc8e3d44dfb",
+    "neutral_body_parent_primitive_profiles_20261012.json":"36f653729d91d0d8c021e708faed651098eb8e1e3e0a062d6f362e114fbf3c72"
+  },
+  "verdict": "SUPPORTED_EXACT_FINITE_VOLUME_FULL_BODY_VARIATIONAL_ROUTE2_WITH_EXPLICIT_INHERITED_DOMAIN_AND_GROUND_ANTECEDENTS; NOT_A_GROUND_BO_COMPARISON",
+  "scope": "Only native_neutral_body route2, its fullH omitted-expectation terms and inherited sharp Gaussian/Haar proof. Universal leading/minimizer classification belongs to another owner. Analytic prices are uniform for every even N>=4; operator-domain and original-cover packet constructions are at each finite N.",
+  "independent_derivation": {
+    "normalization": [
+      "Use the full canonical four-particle sector of eight modes per matching dimer, dimension choose(8,4)=70. With p=full4 tail/empty0 head and native onebody block f, w=dGamma(hop)p has norm squared B=Tr(ffdag), and p is orthogonal to w. Thus ||p+t w||^2=1+t^2 B. Matching dimers have disjoint mode and field supports, not independent interacting colour links.",
+      "At fixed arbitrary U, f=(c0(Phi0x U+U Phi0y)+i ci(Phi1x U+U Phi1y))/2. The mixed trace is real and cancels from Tr(ffdag). With Tr(T_A T_B)=delta_AB/2, each endpoint contributes sum_A Tr(T_A^2)=15/2, giving E_q B=(15/4)(c0^2+ci^2) eta=b eta, for every U, including nontrivial holonomy. Independent pair fields then give integral_q product_d(1+t^2 B_d)=Z^(V/2), Z=1+t^2 b eta. The wave amplitude factor Z^(-V/4) is exact. Consequently the entire interacting Wilson Haar marginal remains exp(-T C)/Z_c(T), without Haar link independence or a numerical colour partition estimate.",
+      "This is integrated normalization, not pointwise CAR normalization. A pointwise division by sqrt(1+t^2 B) defines a different state with different derivatives and prices. The exact control rejects replacing integrated Z by the norm at q=0."
+    ],
+    "full_matter": [
+      "Matching hopping numerator is 2t B: transfer parity kills <p,H^3 p>, and onsite is zero at degree0 by tracelessness, at degree1 by differing site occupation, and after filter squared by odd Gaussian degree3. Other neutral hops join distinct dimers and change their exact total numbers4 into3/5; expectation is zero. Chosen matching x0-even edges have no AP seam; other AP signs remain in H and the zero expectation argument.",
+      "Every one of active1+aux63 charged species stays full4/empty0 on bipartite parity and canonical2V. Charged onsite trace vanishes pointwise even in the correlated neutral/Phi/Haar state. All charged nearest and length2 native hops have zero mask matrix element, including same-parity full/full and empty/empty length2 paths, and all AP/Peierls factors. This is zero expectation, not zero action; their action is retained in D(H). Neutral global canonical number2V and dimer number4 are preserved exactly. Full Ref remains a fixed full wedge and is a colour singlet; no spectator or background is discarded.",
+      "There are V/2 matching pairs. Complete neutral expectation is -Lambda V t b eta/Z. No auxiliary diagonalizer or ground sea appears."
+    ],
+    "Cartesian_D120": [
+      "Let D=120, r^2=|q_pair|^2, g=p+t w, x=t^2 b eta. For Gaussian density varianceeta and homogeneous B degree2: E(r^2 B)=(D+2)eta E B=(D+2)b eta^2; sum_j||partial_j w||^2=b; Re sum_j q_j<w,partial_j w>=B by Euler homogeneity.",
+      "The Gaussian gradient term divided by Z is [D+(D+2)x]/(4eta Z). The pure filter gradient is t^2 b/Z. The actual scalar/filter cross is -t^2 EB/(eta Z)=-t^2 b/Z. They cancel, leaving [D+2x/Z]/(4eta). Multiply by4chi and divide by2 sites: Kphi/V=(chi/eta)[60+x/Z]. Cross is nonzero and negative; neutrality does not justify dropping it.",
+      "Exact rational adverse controls at eta=1/7,t=2/5 reject missing Gaussian derivative, missing cross, D60 instead of D120 and wrong integrated normalization; the full native SU4/CAR derivative Gram is evaluated at two exact links. These are scientific perturbations of the formula, not hash/wiring checks."
+    ],
+    "ordered_Jordan_alignment": [
+      "Independent SU4 completeness gives sum T_A^2=(15/8)I, sum_AB Tr(T_A^2 T_B^2)=225/16 and sum_AB Tr(T_A T_B T_A T_B)=-15/16. Wick ETrPhi^4=(435/16)eta^2. Four diagonal ordered Jordan terms contribute1740eta^2; twelve off-diagonal ordered terms contribute1260eta^2. The full price is3000eta^2/site, not the wrong diagonal-only1740.",
+      "B<=C_B r^2 with C_B=max(c0^2,ci^2)/4 follows from endpoint sum squared <=2 sum endpoint norms squared. For Jpair>=0 homogeneous degree4, E(Jpair r^2)=124eta E Jpair. Thus E[Jpair(1+t^2 B)]/Z <=6000eta^2(1+124C_B t^2 eta)/Z. Jordan/site is3000Lambda eta^2(1+124C_B t^2 eta)/Z.",
+      "Each alignment edge/mu satisfies ||Phi_x-U Phi_y Udag||^2<=2(s_x+s_y); six incident edges/site give A<=12 sum s_x. Filtered pair E(s_x+s_y)=60eta+eta x/Z, so per-site mean is30eta+eta x/(2Z)<31eta. Hence alignment/V<93F eta/10, with all matching and nonmatching field/link correlations retained."
+    ],
+    "Haar_cross": [
+      "The inherited Wilson scalar price is (27/8)chi T/site: Haar integration by parts gives T E|grad C|^2=E Delta C; with normalized15 SU4 generators, Delta C=(15/2)sum_faces ReTr Uface<=90V. This Delta need not be pointwise positive. No electromagnetic B2 term is introduced.",
+      "For the actual filtered section apply ||a+b||^2<=2||a||^2+2||b||^2, not a zero mixed term. The exact unchanged Haar marginal doubles the scalar price to(27/4)chi T. Along any matching-link generator ||partial dGamma(hop)||op<=4||partial f||op. The elementary endpoint Cauchy bound is ||partial f||op<=sqrt(2(c0^2+ci^2))|q_pair|/4; |c0|<4,|ci|<10 makes the canonical4 norm less than16|q_pair|, much smaller than the stated2^10|q_pair| conservative cap.",
+      "There are15 derivatives on each of V/2 matching links; other pair normalizers integrate toZ. Integrating |q_pair|^2 under the unfiltered density gives120eta. Twice(3chi/20) times15/2 times120 times2^20 t^2 eta/Z equals270*2^20 chi t^2 eta/Z per site, including scalar/filter cross. No Haar derivative or ground Berry term is declared zero."
+    ],
+    "Haar_partition": [
+      "The pinned small-ball derivation is valid: complex4x4 Ginibre yields real32 ball probability>=exp(-(2+delta)^2)delta^32/16!; polar Haar U4 and determinant correction yield Haar SU4 ball probability>2^-150 r^32 for0<r<=1. This conservative exponent32 need not equal group dimension15.",
+      "For r=T^-1/2 all3V links in the ball imply C<=24V/T, hence Z_c(T)>2^(-450V)T^(-48V)exp(-24V). Convexity logZ and its [T/2,T] secant give C/V<=2/T[450log2+48logT+24]. Colour energy bound is(7/5)(F/T)[450log2+48logT+24]. At T=2^7168 use log2<1 outward, not as equality."
+    ],
+    "Gauss_Ref_electric": [
+      "Radial full60 field Gaussian, Wilson Haar scalar and singlet full/empty wedges are colour gauge invariant. Native contracted H_d commutes with joint colour Gauss, so its polynomial filter preserves that constraint, though scalar, link and fermionic Gauss contributions need not vanish separately after filtering. The neutral filter is independent of U1 theta and preserves charge exactly.",
+      "All64 charged copies have local n-2=2 parity, thus rho=128 parity. The integer edge flow k_(x,0)=64 parity and other axes0 has divergence k(x)-k(x-e0)=128 parity. Its norm squared is4096V. The one complete electric coefficient64 gives262144V, exactly once; HE and HC are the transverse/longitudinal split of that same field. Neutral filter has no theta derivative, so its electric cross really vanishes. This reason cannot be generalized to Cartesian or Haar derivatives."
+    ],
+    "strict_hierarchy": [
+      "At eta=2^-7168,t=2^3072,T=2^7168 use the literal rational primitive coefficients, not their displayed decimals. b=(15/4)(c0^2+ci^2)>256; C_B=max(c0^2,ci^2)/4; x=b*2^-1024<2^-1000;124C_B*2^-1024<1. Exact rational arithmetic independently checks the seven complete positive prices, gain>2^4096, positive total<2^3092, and energy/site<-2^4095 for all even N>=4.",
+      "Unfiltered state has matter expectation0 and nonnegative bosonic kinetic/potentials with electric price262144/site, so this is a strict fullH decrement. Earlier unrelated trial<-2^6070 is a stronger negative upper, not improved by this trial. Neither bound is an actual-ground equality or BO/Berry approximation."
+    ]
+  },
+  "operator_domain_and_original_cover": {
+    "antecedent": "Inherited microscopic fullH Friedrichs realization on the physical smooth invariant sewn core and inherited finite-volume physical Hilbert module, with native charges and full Ref, unchanged. No newly computed backend or ground vector is required.",
+    "proof": [
+      "For each finite N the CAR-valued polynomial filter has finite degree V/2 and smooth bounded compact-SU4 coefficients. Multiply by the full Schwartz Gaussian and smooth Wilson scalar. Every first/second Cartesian and Haar Leibniz term is polynomial growth times Gaussian. Jordan is quartic, alignment quadratic and native charged/neutral onsite and hopping fields linear with smooth bounded link and Peierls factors, including all charged length2/AP terms. FiniteCAR and full Ref introduce no unbounded local number. Thus each full differential-H term, including all cross derivatives and full electric action, is in L2; no claimed uniform H-action norm is needed.",
+      "For a constructive core approximation take an SU4-invariant smooth radial Cartesian cutoff equal1 insideR and0 outside2R. Cartesian derivatives of the cutoff are O(1/R), O(1/R^2); all commutator tails tend to0 against polynomial times Gaussian. It preserves both Gauss constraints. The compact Haar factor needs no cutoff. Thus both section and fullH action converge in graph norm. Alternatively the closed form representation gives D(H) from finite form norm and the distributional H section in L2. Mere membership of the form domain alone would not suffice; the second-derivative and graph-tail argument is essential.",
+      "In the original noncompact U1 cover use a normalized smooth even Bloch-MOMENTUM packet h(beta) supported in a symmetric small coordinate neighborhood of trial beta0, with the inherited harmonic representative b(beta) linear, Db=0. It is a direct-integral construction, not a nonnormalizable single Bloch fibre. H/E differentiate fibre coordinates, not beta; there is no h-prime energy. In each fibre electric energy is64||k+b(beta)||^2; evenness gives E b=0 and cancels2k dot E b. Remaining extra is64 E||b||^2, arbitrarily small at each fixed finite N. Select width smaller than the strict energy margin. This maintains D(H) and the negative full-original-Hilbert-space upper without claiming trial beta0 minimizes global energy. No uniform packet width or infinite-volume norm statement is asserted."
+    ]
+  },
+  "originating_ground_moments": {
+    "antecedents": ["Inherited analytic finite globally minimizing-character ground family, not any numerical trial/shell eigenvector.","Inherited coercivity H+8192Lambda V>=Kphi+Khaar+64E^2+(Lambda/2)sum s_x^2+F W_total on that actual full physical family.","The original-cover variational comparison above implies the global minimizing energy is strictly negative; translation averaging is performed on the originating ground functional itself."],
+    "consequence": "After translation averaging: <s_x^2><16384, <w_x><8192Lambda/F=2^-2035, and each positive kinetic budget/site<8192Lambda. This is a consequence conditional only on the named inherited existence/coercivity antecedents, not evidence that the trial is ground or occupies a charged conditional window.",
+    "not_improved_here": "The older stronger negative trial could be inserted into the same coercivity for a slightly stronger moment budget. The quoted coarse inequalities are valid but do not establish optimal sharpening."
+  },
+  "finding_and_correcting_direction": {
+    "mathematical_defect_found_in_scoped_route2": null,
+    "precision_correction": "Interface flag quantum_trial_Berry_Haar_and_Gauss_prices_paid should be read or relabeled as trial Cartesian/Haar derivative and Gauss prices paid. It is not a ground Berry price. Original proof explicitly preserves this distinction; no original bytes are edited.",
+    "next_unpaid_boundary": "A comparison on the actual originating minimizing-character family, paying fullPhi/Haar/Gauss and fast-neutral spectral transport, would be needed before any ground BO/Berry error or Clifford/charged-body support inference. The present trial does not supply that comparison."
+  },
+  "evidence_labels": {"CAR_SU4_Wick_derivative_controls":"EXACT mathematical CLI receipt","hierarchy":"EXACT rational outward bounds","normalization_Haar_domain":"ANALYTIC proof, no fullH backend execution","ground_moments":"DERIVED using explicit inherited antecedents","ground_BO_phase_gap_window":"OPEN","FLOAT_claims":[]},
+  "scientific_admission": false,
+  "campaign_complete": false
+}

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/harmonic_car_bridge_scientist_20261011.py", line 263, in <module>
+    parser=argparse.ArgumentParser();parser.add_argument('--epoch',required=True);run(parser.parse_args())
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/harmonic_car_bridge_scientist_20261011.py", line 212, in run
+    control,J,maps=exact_controls();(ROOT/f'harmonic_car_bridge_{args.epoch}_controls.json').write_text(json.dumps(control,indent=2)+'\n')
+                   ^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/harmonic_car_bridge_scientist_20261011.py", line 149, in exact_controls
+    if n>=2:assert s.simplify(gn[1]*wrong[1]+sum((one[1][1,j]*wrong[j] for j in range(5)),s.zeros(*wrong[1].shape))-wrong[1]*g[1])!=s.zeros(*wrong[1].shape)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

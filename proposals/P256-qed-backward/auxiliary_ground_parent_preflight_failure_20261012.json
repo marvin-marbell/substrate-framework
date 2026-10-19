@@ -1,0 +1,20 @@
+{
+  "kind": "PARENT_ARCHIVE_PREFLIGHT_FAILURE_NOT_SCIENTIFIC_EXECUTION",
+  "request": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/history_operator_reset_parent_auxiliary_ground_actual1_20261012_request.json",
+    "sha256": "52bca9735927a0fb9743f2ae61525c23871769a0751589c3736f95fd063e3343"
+  },
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "history_join_parent_execute_20261012.py",
+    "--request",
+    "history_operator_reset_parent_auxiliary_ground_actual1_20261012_request.json",
+    "--epoch",
+    "history_operator_reset_parent_auxiliary_ground_actual1_20261012"
+  ],
+  "natural_capture_driver_exit": 1,
+  "scientific_consumer_launched": false,
+  "before_execution_zip_created": false,
+  "failure": "Capture-driver unique flattened member assertion: absolute and relative paths named the same current source twice. Tool bg_309 observed exit1 before scientific consumer launch.",
+  "correction": "Normalize current parent pins to one project-relative key per resolved source; historical capsule member maps remain untouched."
+}

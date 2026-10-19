@@ -1,0 +1,507 @@
+{
+  "kind": "ACTUAL_FINITE_COHERENT_GAUSS_STATE_AND_NONSTATIONARY_RESPONSE",
+  "selected": {
+    "name": "pair_Himage",
+    "parameters": {
+      "g": 0.45,
+      "eta": 0.08,
+      "a": 0.15,
+      "b": 0.08,
+      "tau": 0.1,
+      "shift": -10.0,
+      "epsilon": 0.2
+    },
+    "table_file": "rich_gauss_projected_photon_20261016_pair_Himage_raw.npz",
+    "representation": "amplitude function + 65536 matter lookup only, never a field configuration list"
+  },
+  "exact_base_results": {
+    "results": [
+      {
+        "parameters": {
+          "g": 0.45,
+          "eta": 0.0,
+          "a": 0.15,
+          "b": 0.0,
+          "tau": 0.0
+        },
+        "norm": 3676190.1021338515,
+        "energy": -11.58964378570911,
+        "kinetic": -17.23318352981359,
+        "electric": 0.40282734019172156,
+        "chargeenergy": 5.240712403912759,
+        "energy_per_physical_arc": -0.48290182440454626,
+        "pair_sector_weights": [
+          0.13823544568059246,
+          0.4687171540761627,
+          0.3394702980375968,
+          0.05178805799575758,
+          0.0017890442098900774
+        ],
+        "matter_configurations": 4900,
+        "nonzero_matter_amplitudes": 3364,
+        "charge_patterns": 1107,
+        "free_net_flows": 3125,
+        "admissible_netflows": 653845,
+        "tree_edges": [
+          2,
+          1,
+          6,
+          0,
+          9,
+          8,
+          11
+        ],
+        "chord_edges": [
+          3,
+          4,
+          5,
+          7,
+          10
+        ],
+        "physical_arcs": 24,
+        "merged_contraction_edges": 12,
+        "method": "Exact sum of all 4900 matter configs and3125 free netflow candidates per rho. Each K(delta) sums all9 physical twoarc states; treeGauss exact integer solve. Each hopping kernel shifts ONE physical arc and retains full CAR sign.",
+        "limitation": "Exact norm/energy only for undressed state; not full H2. Parent physics remains finite8sites Ecap1."
+      },
+      {
+        "parameters": {
+          "g": 0.45,
+          "eta": 0.08,
+          "a": 0.15,
+          "b": 0.08,
+          "tau": 0.0
+        },
+        "norm": 472132.72722583887,
+        "energy": -11.533616905834917,
+        "kinetic": -18.235658730565856,
+        "electric": 0.36243354978580533,
+        "chargeenergy": 6.3396082749451335,
+        "energy_per_physical_arc": -0.48056737107645486,
+        "pair_sector_weights": [
+          0.08544651513746608,
+          0.38226230978556164,
+          0.4043843630780704,
+          0.1177562152010266,
+          0.010150596797875387
+        ],
+        "matter_configurations": 4900,
+        "nonzero_matter_amplitudes": 3856,
+        "charge_patterns": 1107,
+        "free_net_flows": 3125,
+        "admissible_netflows": 653845,
+        "tree_edges": [
+          2,
+          1,
+          6,
+          0,
+          9,
+          8,
+          11
+        ],
+        "chord_edges": [
+          3,
+          4,
+          5,
+          7,
+          10
+        ],
+        "physical_arcs": 24,
+        "merged_contraction_edges": 12,
+        "method": "Exact sum of all 4900 matter configs and3125 free netflow candidates per rho. Each K(delta) sums all9 physical twoarc states; treeGauss exact integer solve. Each hopping kernel shifts ONE physical arc and retains full CAR sign.",
+        "limitation": "Exact norm/energy only for undressed state; not full H2. Parent physics remains finite8sites Ecap1."
+      }
+    ],
+    "elapsed_seconds": 6.012343645095825,
+    "source_sha256": "800212ad240076e53c396f2efd20271b1c8b5c14906855a7040e568eabcf32c0"
+  },
+  "quality": {
+    "base": {
+      "norm_reweight": 0.5774443314517693,
+      "energy": -11.562949226670296,
+      "energy_block_SE": 0.03355176769334543,
+      "full_H_residual_squared_estimator": 5.138249548258557,
+      "full_H_residual_estimator": 2.266770731295637,
+      "residual_squared_block_SE": 0.10342853541025766,
+      "doublons": 1.2970482497022027,
+      "electric_squared": 12.954980838468328,
+      "total_flux_mean": 0.15263630692517183,
+      "total_flux_squared": 18.497492409656157,
+      "four_pair_weight": 0.001246333277693716,
+      "guide_node_fraction": 0.128375,
+      "chains": 4,
+      "blocks": 40,
+      "samples": 16000,
+      "error_limit": "Block SE not a proved autocorrelation bound; compare chain means and exact small benchmark; full H2 includes nonzero Hpsi at psi=0 through positive guide."
+    },
+    "dressed": {
+      "norm_reweight": 0.7418171056198951,
+      "energy": -12.137876603870279,
+      "energy_block_SE": 0.015788604683693284,
+      "full_H_residual_squared_estimator": 1.800853842120091,
+      "full_H_residual_estimator": 1.3419589569432036,
+      "residual_squared_block_SE": 0.07483435712127944,
+      "doublons": 1.4612811875442495,
+      "electric_squared": 11.399204043903696,
+      "total_flux_mean": 0.04330792369093101,
+      "total_flux_squared": 13.638650728194968,
+      "four_pair_weight": 0.0032506807918718118,
+      "guide_node_fraction": 0.0045625,
+      "chains": 4,
+      "blocks": 40,
+      "samples": 16000,
+      "error_limit": "Block SE not a proved autocorrelation bound; compare chain means and exact small benchmark; full H2 includes nonzero Hpsi at psi=0 through positive guide."
+    }
+  },
+  "responses": [
+    {
+      "qbits": [
+        1,
+        0,
+        0
+      ],
+      "incidence_transverse_error": 0.0,
+      "samples": 3200,
+      "energy": -12.145892232461277,
+      "gram_eigenvalues": [
+        0.0010242769305776238,
+        0.0010981854729458184,
+        0.502534752152621,
+        0.5259499896752452
+      ],
+      "ritz_shifted_energies": [
+        0.5052819656904997,
+        0.5589509838950506,
+        5.476986831584081,
+        5.639462548422655
+      ],
+      "field_gram": [
+        [
+          0.00221567780710043,
+          9.04337613929616e-06
+        ],
+        [
+          9.04337613929616e-06,
+          0.002300521374676336
+        ]
+      ],
+      "current_gram": [
+        [
+          0.5022827125714417,
+          0.004560213086411505
+        ],
+        [
+          0.004560213086411505,
+          0.5238082924781712
+        ]
+      ],
+      "field_current_imag": [
+        [
+          -0.024393246102057557,
+          -2.4129286567227547e-05
+        ],
+        [
+          -0.0007351094669650695,
+          -0.025108141845244496
+        ]
+      ],
+      "contact": [
+        [
+          0.7685729864457737,
+          0.0
+        ],
+        [
+          0.0,
+          0.7696765949400578
+        ]
+      ],
+      "unhermitized_shifted_H_error": 0.030668952337275374,
+      "interpretation": "Sampled connected four-source Ritz response, not stationary Lehmann poles. Nonzero residual and finite-chain errors prohibit photon or massless claims. Complex-frequency resolvent is projected; contact retained separately."
+    },
+    {
+      "qbits": [
+        1,
+        1,
+        0
+      ],
+      "incidence_transverse_error": 5.551115123125783e-17,
+      "samples": 3200,
+      "energy": -12.145892232461277,
+      "gram_eigenvalues": [
+        0.001051879249539538,
+        0.002155523478902564,
+        0.48811228393493356,
+        0.5164020826420377
+      ],
+      "ritz_shifted_energies": [
+        0.5345842447625899,
+        0.6280789830914124,
+        5.500983586341931,
+        6.689555823016922
+      ],
+      "field_gram": [
+        [
+          0.003405067814838379,
+          2.5231691356836796e-05
+        ],
+        [
+          2.5231691356836796e-05,
+          0.0021573339927218687
+        ]
+      ],
+      "current_gram": [
+        [
+          0.5146623910393355,
+          -0.003680765717352074
+        ],
+        [
+          -0.003680765717352074,
+          0.4874969764585176
+        ]
+      ],
+      "field_current_imag": [
+        [
+          -0.025310274932063146,
+          -0.0003770047246598577
+        ],
+        [
+          0.0007199648052203051,
+          -0.023172178247681002
+        ]
+      ],
+      "contact": [
+        [
+          0.764319913531601,
+          0.0
+        ],
+        [
+          0.0,
+          0.7696765949400578
+        ]
+      ],
+      "unhermitized_shifted_H_error": 0.04889423564773409,
+      "interpretation": "Sampled connected four-source Ritz response, not stationary Lehmann poles. Nonzero residual and finite-chain errors prohibit photon or massless claims. Complex-frequency resolvent is projected; contact retained separately."
+    }
+  ],
+  "correlation_summary": {
+    "samples": 16000,
+    "symmetry": {
+      "translation0": {
+        "max_absolute": 2.7755575615628914e-17,
+        "relative_to_max_amplitude": 1.8654932321228173e-16
+      },
+      "translation1": {
+        "max_absolute": 5.551115123125783e-17,
+        "relative_to_max_amplitude": 3.7309864642456347e-16
+      },
+      "translation2": {
+        "max_absolute": 2.0816681711721685e-17,
+        "relative_to_max_amplitude": 1.399119924092113e-16
+      },
+      "axes[1, 0, 2]": {
+        "max_absolute": 5.551115123125783e-17,
+        "relative_to_max_amplitude": 3.7309864642456347e-16
+      },
+      "axes[2, 1, 0]": {
+        "max_absolute": 5.551115123125783e-17,
+        "relative_to_max_amplitude": 3.7309864642456347e-16
+      }
+    },
+    "spin_raising_annihilation_max": 6.245004513516506e-17,
+    "spin_raising_relative": 4.197359772276339e-16,
+    "cycle_dimension": 17,
+    "cycle_field_eigenvalues": [
+      0.001961073255462747,
+      0.0020117586056081415,
+      0.00204997390780545,
+      0.0020924899895975266,
+      0.002134453199229932,
+      0.0021615813120986556,
+      0.002190527010202744,
+      0.002250413882445067,
+      0.0022688151019620894,
+      0.0022782682977930888,
+      0.0022883641598046476,
+      0.002405748089058709,
+      0.0031339008957413476,
+      0.003218425847744788,
+      0.0032926089961465353,
+      0.0034028424359097025,
+      0.003536806032785459
+    ],
+    "charge_field_covariance_norm": 0.027794751458267656,
+    "charge_current_covariance_norm": 2.6536043957121414,
+    "doublon_E2_connected": 0.10063328126335946,
+    "field_current_covariance_norm": 0.11798572799269219,
+    "loop_coherence": [
+      {
+        "length": 4,
+        "value": 0.3498671070073125
+      },
+      {
+        "length": 4,
+        "value": 0.3439767225622842
+      },
+      {
+        "length": 4,
+        "value": 0.34448951597302685
+      },
+      {
+        "length": 4,
+        "value": 0.34337870384880625
+      },
+      {
+        "length": 4,
+        "value": 0.3436447092301431
+      },
+      {
+        "length": 4,
+        "value": 0.3401876388595313
+      },
+      {
+        "length": 2,
+        "value": 0.5378420794651471
+      },
+      {
+        "length": 4,
+        "value": 0.3374064383002062
+      },
+      {
+        "length": 2,
+        "value": 0.5416301632439195
+      },
+      {
+        "length": 4,
+        "value": 0.34295534735224154
+      },
+      {
+        "length": 2,
+        "value": 0.543837999105754
+      },
+      {
+        "length": 4,
+        "value": 0.3371912108860187
+      },
+      {
+        "length": 2,
+        "value": 0.5341926560679272
+      },
+      {
+        "length": 4,
+        "value": 0.34739014894571085
+      },
+      {
+        "length": 4,
+        "value": 0.3365694393459211
+      },
+      {
+        "length": 2,
+        "value": 0.5411691111033764
+      },
+      {
+        "length": 4,
+        "value": 0.3380056439350796
+      },
+      {
+        "length": 2,
+        "value": 0.5382791205937516
+      },
+      {
+        "length": 4,
+        "value": 0.3383437000518906
+      },
+      {
+        "length": 4,
+        "value": 0.3500154391710388
+      },
+      {
+        "length": 2,
+        "value": 0.5415303370865424
+      },
+      {
+        "length": 4,
+        "value": 0.3434359725962893
+      },
+      {
+        "length": 4,
+        "value": 0.3480891793002652
+      },
+      {
+        "length": 4,
+        "value": 0.34566543524373705
+      },
+      {
+        "length": 2,
+        "value": 0.545329130431529
+      },
+      {
+        "length": 4,
+        "value": 0.34296196986720284
+      },
+      {
+        "length": 2,
+        "value": 0.5435521132200904
+      },
+      {
+        "length": 4,
+        "value": 0.35023141590062656
+      },
+      {
+        "length": 4,
+        "value": 0.34056240742126853
+      },
+      {
+        "length": 2,
+        "value": 0.5457341597122051
+      },
+      {
+        "length": 4,
+        "value": 0.3497067034478418
+      },
+      {
+        "length": 4,
+        "value": 0.336229026094989
+      },
+      {
+        "length": 2,
+        "value": 0.5435808841164597
+      },
+      {
+        "length": 4,
+        "value": 0.33983933149751466
+      },
+      {
+        "length": 4,
+        "value": 0.34769371177844577
+      },
+      {
+        "length": 2,
+        "value": 0.5377660607362207
+      }
+    ],
+    "limits": "Finite-chain connected covariance and coherent Wilson insertions, not time evolution or17 photons. Cube symmetries checked at102 actual sampled raw states including CAR permutation signs; spin-raising annihilation is a state-amplitude singlet check."
+  },
+  "language_summary": {
+    "filesAnalyzed": 7,
+    "errorCount": 0,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 19.591
+  },
+  "actual_science_exits": {
+    "attempt1": 1,
+    "attempt2": 1,
+    "attempt3": 0,
+    "attempt4": 0,
+    "attempt5": 0,
+    "exact1": 0,
+    "exact2": 0,
+    "observe1": 0,
+    "observe2": 0
+  },
+  "synthesis_lines": 50,
+  "governor": {
+    "plan": "issue222-rich-backward-candidates-20261014",
+    "revision": "58589f21e86de29c925ce31215357cb25d8cde838ffebb9d53d8a38bc3f478d9",
+    "work_item": "photon-candidate"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "verdict": "VALID",
+  "scope": "VALID under the declared standard binary64 model: external incoming-electric curvature of the unique selected local active2 x auxiliary126 harmonic ground in the frozen Clifford-Phi one-edge native electric tree, interval [5.539178656718396,14.816795211017482]. No ambient, fullPhi, intercell, thermodynamic or pole admission.",
+  "assumptions": [
+    "Correctly rounded binary64 elementary operations/sqrt and normal-precision BLAS/Numba reductions, no fastmath or undocumented low-precision/flush-to-zero reduction; this is an explicit model, not an independently proved machine implementation theorem.",
+    "Use independently corrected freeframe102966f3 and accepted exact lambda2>=-5123 for this selected representation. Prior review is supporting evidence, not a new solver run.",
+    "Scalar parent receipts are trusted records of the archived natural-exit execution; this review does not reconstruct the 9.6M vectors v,b,x or rerun their action."
+  ],
+  "analytic_review": {
+    "native_operator": "Archived native representation has at most8 offdiagonal entries per role and one full diagonal. n_total128, |m|<20, |c0|,|d|<6, |rho|<=128. ci radical <=(n+1)/2; sqrt2 times CG f <=sqrt(n(n+3))<n+2<=128. The deliberately looser 2*6*128 per offdiagonal and 16 total entries give symmetric row/column bound1078272<2^22. Integer radicands are below2^53; positive formation paths fit gamma64. Captured coefficient errors<2^-48 give operator error6*n_total*2^-48=768*2^-48 by the norm2 one-particle generators, not a pointwise current cap. Numba full_action covers all rows and exterior in this invariant selected space.",
+    "sigma": "Exact rational recomputation gives action_error5.029642318925349e-8<2^-24. Coefficient formation+gamma40 action accumulation+4u(2^22+|mu|) subtraction+100D*2^-1074+2*2^-490 covers native H-muq action. gamma(2D+8)=2418081/1125899904424543\u22482.147687366e-9. Squared-norm underflow is amplified by sqrt; the2*2^-490 allowance dominates the amplified errors. Source-normalization and residual reductions are enclosed by1/(1-4gamma). (computed residual+action_error)/(1-4gamma)=1.0708703667410749e-7<sigma2^-22. The recovered observed source norm1+2^-52 and its outward defect make this denominator safe; unnormalized-residual inference alone would be wrong.",
+    "normalization_denominator": "The new CLI independently checks norm_defect<2gamma and (1-norm_defect)(1-2gamma)>1-4gamma. Since exact ||v||>=1-norm_defect, this protects the normalized residual ratio including the source denominator; it is not a floating Ritz upper claim. Inverting the norm-defect formula has two sign branches. The positive branch is observed_float_norm=1+2^-52; the negative branch has a non-dyadic denominator and cannot be a finite binary64 scalar. Recovery is scalar consistency, not independent full-vector measurement.",
+    "unique_ground_and_projection": "For normalized exact binary u=v/||v||, ||(H-muq)u||<=sigma. Rayleigh E in[muq-sigma,muq+sigma] lies below beta=-5123<=lambda2. Temple gives E0>=muq-sigma-sigma\u00b2/g, E0<=muq+sigma, g=beta-(muq+sigma)=1502586528801/1099511627776>1. Thus |E0-muq|<=sigma+sigma\u00b2/g and excited weight<=sigma\u00b2/g\u00b2. p=sigma/g is UNSQUARED source spectral projection error/sin-angle; upper-ground earlier1.2467e-10 remains infidelity only. Since Rayleigh below beta and lambda2>=beta, selected ground is unique. Whole P0, not density-zero, is rank one.",
+    "lift": "A0=H-E0+P0>=I. Atilde=H-muq+vv^T is the exact mathematical operator approximated by the numerical matvec, not the binary assembled matrix interpreted as exact H. With eta=| ||v||\u00b2-1 |<=norm_defect, ||Atilde-A0||<=|E0-muq|+2p+eta=deltaA5.89489974214883e-7; the true projector difference is<=p so2p is conservative. Atilde>=(1-deltaA)I. Both energy shift and Pi replacement are selected-local only.",
+    "source": "Choose ground sign so ||u-Omega||<=sqrt2*p. ||Q_u rho u-Q0 rho Omega|| <=128*(sqrt2+1)*p<384p. Scaling u to exact binary v adds a norm-defect term bounded by1024eta for eta<.001. Rounded rho*v, mean contraction and mean*v subtraction add<=512gamma, including integer-rho multiplication and |rho|<=128. Hence ||b_binary-Q0rhoOmega||<=delta_b7.029219188387624e-5. The approximate mean-subtracted b is NOT itself a true ground projection; the full discrepancy is priced. Actual weight .641876... with huge margin gives ||b_binary||<=1 even after subnormal allowance.",
+    "dot_and_solve": "Recovered scalar xnorm_upper\u2248.00457431229004605, derived with the outward norm factor, is<1. Exact Atilde-action error<=action_error+16gamma, including native coefficients, mu subtraction and approximate rank-one dot/vector formation. Exact solve residual upper4.382979781919084e-10 includes residual norm rounding, action error*xnorm_upper and final b-ax rounding u(1+2^23*xnorm_upper). For fixed exact binary x, V=2<b,x>-<x,Atilde x> satisfies <b,Atilde^-1 b>-V=<r,Atilde^-1 r> in[0,||r||\u00b2/Amin]. The computed floating form is enclosed by gamma*(2+2^23*xnorm_upper\u00b2)+lifted_action_error*xnorm_upper\u00b2+underflow=3.8127217585679244e-7. gamma2D+8 has room for dot multiplication/reduction and final arithmetic. Attempt2 unpriced1e-7 is not used. CG convergence is not the proof; the paid residual is.",
+    "inverse": "||Atilde^-1||<=1/Amin and ||A0^-1||<=1. Resolvent identity gives ||Atilde^-1-A0^-1||<=deltaA/Amin, NOT a missing Amin^-2: the exact inverse has norm<=1. Insertion plus inverse discrepancy is safely bounded by2delta_b(1+delta_b)/Amin+(1+delta_b)\u00b2deltaA/Amin=.00014118392182895092. Exact scalar recomputation reproduces both alpha endpoints and outward reversed curvature endpoints.",
+    "contact_and_coupling": "Native Block diagonal64(rho+s)\u00b2 gives Hprime(0)=128rho and Hsecond(0)=128I. Isolated selected-ground perturbation theory gives Esecond(0)=128-2*128\u00b2*<Q0rhoOmega,(H-E0)^-1Q0rhoOmega>=128-32768alpha. A sign change of the linear coupling leaves its square unchanged, but changing the negative second-order energy correction or halving contact is wrong. This is a finite selected-sector analytic ground derivative, not dielectric-to-bulk promotion.",
+    "diagnostics_and_corrections": "No mathematical correction is required for the stated local curvature interval under its assumptions. Preserve explicit model and scope. The first/current moments are unpriced float diagnostics; no certified exact-moment or pole claim follows. The complete_projected_resolvent_residual_float field measures the approximate lifted solve, not the exact-ground resolvent residual; proof separately prices its discrepancy. Keeping xnorm_float and source_norm_squared_float explicitly in a future receipt would improve provenance, but neither is needed as a new theorem assumption: their exact values/bounds are recoverable from current rational budgets. No pointwise/unbounded-current cap, global or moment promotion survives this review."
+  },
+  "independent_controls": {
+    "whole_ground_vs_density_zero": {
+      "alpha": "288/625",
+      "density_zero_proxy": "337/625",
+      "mean_only_nonstationary_proxy": "1263200/4198467"
+    },
+    "lift_normalization": {
+      "norm_defect": "2001/1000000",
+      "exact_rank_one_lift_defect": "2001/1000000"
+    },
+    "solve_variational_identity": {
+      "exact_response": "7/5",
+      "form": "283953734451123382932861766423893/324518553658426726783156020576256",
+      "exact_error": "851861203353370172817783311914327/1622592768292133633915780102881280",
+      "residual_squared_cap": "122821258155446225955725063079709/162259276829213363391578010288128"
+    },
+    "actual_binary64_dot_cancellation": {
+      "binary_sum": "0",
+      "exact_sum": "1",
+      "derived_cap": "60000000000000003/9007199254740989",
+      "unpriced_1e_minus7_rejected": true
+    },
+    "inverse_and_insertion": {
+      "actual_error": "279419/1000499000",
+      "price": "752001/124750000"
+    },
+    "contact_coupling": {
+      "alpha": "1/32768",
+      "curvature": "127",
+      "actual_eigenvalue_finite_difference": "127.000000000000000024999999999999998750000000000000078125000000000",
+      "wrong_positive_response_sign_and_half_contact_rejected": true,
+      "linear_coupling_sign_invariance": true
+    },
+    "normalization_contrary": {
+      "true_infidelity": "25/169",
+      "wrong_cap": "25/676",
+      "normalized_cap": "25/169"
+    }
+  },
+  "exact_scalar_budget_review": {
+    "gamma_exact": "2418081/1125899904424543",
+    "native_row_and_column_cap": 1078272,
+    "action_error": "3150591253557049778793089592855507087966811212660024796128759296523271522937606184343889083686893980950911188748459437790992485840064442222107906667980607927576338281632906376015947379015251811902888311343458499068449130573911047221474899350363164044005763423590557791742627252048178046446300174072911056836721689152532788109637078563014320377/62640463352674675872560422953466225553420705788257694809298399723939747109297379030173233718460780812457482698343855171050527176988393046672602763844190677562925002297447401743045876113224269127703636971413552065591987970249346360099162694012300524661226060062470058239400895072435192521812813742189789508557436439900322601295400322967004868369186816",
+    "normalized_residual_upper": "7552515773308849223236785240127065351034670495045947186312249307672078080260990595293951230624305377142059979868776678025065113759901251274991737189152360263678530161690823523870563670916317727784018352308901527307142911268389271067932857184080400255356821527654251378238303013476742763186663822681756966150118969061634794102083952744106269065893575531202151/70526891096006648884085729722084319076809874703973094917810833395309023474686958095358431801950098654369963731538135690502656810127807473026052533691299894799998705702351668396254354244768562493122443828501101399813231024180553819397926176324635657939457495294515477624046459124343807472670767763738740275903391054933076868749676253139941282336268824080398841544704",
+    "sigma": "1/4194304",
+    "gap": "1502586528801/1099511627776",
+    "recovered_norm_float_scalar_exact": "4503599627370497/4503599627370496",
+    "recovered_xnorm_upper_exact": "357903242456446514539423623926077661211328418909299029569972055909496911314601600382994580161078272792341671233587907165159475506179108828868843057753191223517/78241978195337302652382812491073742406444610889883662303558895613767068036679397304799992958620164945007684248749876806123881012705196282196422597597576545959936",
+    "budget_floats": {
+      "norm_defect": 2.147687592556626e-09,
+      "rank_one_ground_lift_error": 5.89489974214883e-07,
+      "source_insertion_error": 7.029219188387624e-05,
+      "solve_residual_upper": 4.382979781919084e-10,
+      "variational_form_error": 3.8127217585679244e-07,
+      "state_response_error": 0.00014118392182895092
+    },
+    "alpha_interval_float": [
+      0.0034540772945856483,
+      0.003737207682595264
+    ],
+    "curvature_interval_float": [
+      5.539178656718396,
+      14.816795211017482
+    ],
+    "scalar_consistency_not_independent_full_vector_measurement": true
+  },
+  "producer_sha256": "105e332c48cd89189c6597f86704dc5120856dea6e0951a0bc9432b54ff344fb",
+  "directly_executed": "This new standard-library rational/small-matrix CLI only; no native/9.6M solver, old checker, or parent consumer was imported or run.",
+  "parent_execution_evidence": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "local_so5_ground_electric_memory_consumer_20261011.py"
+    ],
+    "returncode": 0,
+    "natural_exit": true,
+    "elapsed_seconds": 50.24060213800112,
+    "source_and_input_sha256": {
+      "local_so5_ground_electric_memory_consumer_20261011.py": "105e332c48cd89189c6597f86704dc5120856dea6e0951a0bc9432b54ff344fb",
+      "local_so5_ground_electric_memory_execute_20261011.py": "86480c0a9725051db5886a10d87c5742061ccba5fb760b78b84bedd8f56682ea",
+      "local_so5_resum_source_20261011.py": "7f73170ca3a33782b5b391a6f6d3b6e0e3b7bf385c2f03cc2b5f7696fde8e009",
+      "local_so5_resum_actual04_20261011_receipt.json": "a31c2d5be2a368b7de703d92461e230af59adf7e8ee8f4eaca0944fe4f556fc1",
+      "local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json": "102966f32c49f40d79d55343925a630e30a9cf7e4a8074cf8628142ba9c5b6e8",
+      "local_so5_positive_output_row_inertia_certificate_20261011_receipt.json": "e8fc8c9159b66fca7544d83813a833ba6018151bc863f6396a4ef5666ced227c"
+    },
+    "unchanged": {
+      "local_so5_ground_electric_memory_consumer_20261011.py": true,
+      "local_so5_ground_electric_memory_execute_20261011.py": true,
+      "local_so5_resum_source_20261011.py": true,
+      "local_so5_resum_actual04_20261011_receipt.json": true,
+      "local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json": true,
+      "local_so5_positive_output_row_inertia_certificate_20261011_receipt.json": true
+    },
+    "stdout_sha256": "2df5d3c7eca68be88182132e6f54182f6baf37cd42a7767f333122b5e483cf65",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "maxrss_KiB": 1455552,
+    "stage": "NEW projected electric resolvent/moments, not original source solver rerun, parent review pending"
+  },
+  "local_positive_response_NOT_bulk_stiffness": true,
+  "ground_below_gap_weight_probe_not_run": "tautological zero under certified selected gap, not a phase discriminator",
+  "moments": "First/double-commutator and current-weight fields remain binary64 diagnostics, not exact moments or spectral constraints. No pointwise current cap is claimed.",
+  "not_admitted": [
+    "other canonical representations",
+    "fullPhi/Gauss stationary ground",
+    "intercell/lattice ground",
+    "bulk stiffness",
+    "N-uniform linked stability",
+    "global bounded current",
+    "IR atom",
+    "spectral pole",
+    "photon dispersion",
+    "campaign"
+  ],
+  "source_sha256": "e78dc788b14a8f84703048f3dc3add8618b755ecc329cc696b723e385180ca95",
+  "inputs_sha256": "447f17092b62d0c13c682917043ab27676765dcd6d846f2e904a8b75cdc4eb55",
+  "all_inputs_unchanged": true,
+  "source_unchanged": true
+}

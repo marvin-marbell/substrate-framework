@@ -1,0 +1,15 @@
+{
+  "kind": "NEW_PROJECTPYTHON_EXACT_THREE_RESOLVENT_DERIVATIVE_CONTROL",
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "-c",
+    "import json, sympy as s\nz=s.symbols('z'); c=1/((z-2)*(z-3)*(z-5)); derivative=s.diff(c,z).subs(z,0); metric=-derivative\nwrong=c.subs(z,0)*sum(s.Rational(1,-e) for e in (2,3,5))\nassert derivative==-s.Rational(31,900) and metric==s.Rational(31,900)\nassert wrong==-derivative and wrong!=derivative\nprint(json.dumps(dict(C0=str(c.subs(z,0)),z_derivative=str(derivative),source_metric=str(metric),wrong_original_prose_derivative=str(wrong),wrongcase_rejected=True)))\n"
+  ],
+  "code_sha256": "47be1c336477e7725dc9b7b968ef80b8f5a2a5f9682538e75c153a98d761ffb7",
+  "returncode": 0,
+  "natural_exit": true,
+  "wall_seconds": 0.80582264700206,
+  "stdout": "{\"C0\": \"-1/30\", \"z_derivative\": \"-31/900\", \"source_metric\": \"31/900\", \"wrong_original_prose_derivative\": \"31/900\", \"wrongcase_rejected\": true}\n",
+  "stderr": "",
+  "scope": "Method sign control; original consumer derivative arithmetic already correct. Parent corrected proof prose, not law/coefficients/remainder."
+}

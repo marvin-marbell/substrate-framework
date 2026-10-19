@@ -1,0 +1,325 @@
+{
+  "source_sha256": "3c5c44eb78d4e1877191506e362c84680fff9065fea164406ae45e77f028c88f",
+  "units": {
+    "hbar": 1,
+    "angles_fields_charges": "dimensionless; integer field and character labels",
+    "UE_K_ground_energies": "same energy unit",
+    "heat_time": "inverse energy"
+  },
+  "graph": {
+    "vertices": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "tree": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "integer_cycles": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "theorem": {
+    "untruncated": "H_ph(q)>=epsilon_0 I for every admissible complete integer character",
+    "boundary": "add fixed external electric energy C_b; q=Q-b, sum q=0",
+    "not_claimed": "full charged-fermion mass gap or finite Fourier angle positivity"
+  },
+  "real_Wilson_finite_cube_search": {
+    "status": "strict_finite_Fourier_counterexample",
+    "smallest_nontrivial_R": 1,
+    "witness": {
+      "R": 1,
+      "UE": 0.01,
+      "trial": 6,
+      "charge": [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "neutral_dimension": 7,
+      "charged_dimension": 6,
+      "neutral_fields": [
+        [
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0,
+          1,
+          0,
+          1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          1,
+          0,
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          0,
+          1
+        ]
+      ],
+      "charged_fields": [
+        [
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "terms": [
+        {
+          "winding": [
+            0,
+            1
+          ],
+          "K": -2.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            0,
+            2
+          ],
+          "K": -3.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            1,
+            -1
+          ],
+          "K": 0.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            1,
+            0
+          ],
+          "K": -1.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            1,
+            1
+          ],
+          "K": -3.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            1,
+            2
+          ],
+          "K": 1.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            2,
+            0
+          ],
+          "K": -1.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            2,
+            1
+          ],
+          "K": -1.0,
+          "phase": 0.0
+        },
+        {
+          "winding": [
+            2,
+            2
+          ],
+          "K": 3.0,
+          "phase": 0.0
+        }
+      ],
+      "neutral_energy": -3.440583803585343,
+      "charged_energy": -3.6456904340600973,
+      "charged_minus_neutral": -0.20510663047475441,
+      "exact_certificate": {
+        "threshold": "-1771569/500000",
+        "neutral_H_minus_threshold_LDL_pivots": [
+          "1786569/500000",
+          "3120395946761/893284500000",
+          "5113808436475048009/1560197973380500000",
+          "6982685832394289326256121/2556904218237524004500000",
+          "9963499853183451571438791233849/3491342916197144663128060500000",
+          "7271628042187891992320024422197129081/4981749926591725785719395616924500000",
+          "392381706737238883361624460412913401704363/1211938007031315332053337403699521513500000"
+        ],
+        "charged_trial_vector": [
+          "234371/500000",
+          "33401/125000",
+          "-145311/500000",
+          "-242047/500000",
+          "-190487/1000000",
+          "594801/1000000"
+        ],
+        "charged_Rayleigh_quotient": "-28043796471897/7692314248600",
+        "strict_order": "E_charged <= rational Rayleigh < threshold < E_neutral",
+        "arithmetic": "exact Python Fraction, not floating eigenvalue tolerance"
+      }
+    },
+    "does_not_apply_to_positive_fundamental_terms": true
+  }
+}

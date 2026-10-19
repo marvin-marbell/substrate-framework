@@ -1,0 +1,88 @@
+{
+  "kind": "FROZEN_EXECUTABLE_OWNING_LOCAL_MODEL_AND_NEW_REFERENCE",
+  "module": "rich_local_frame_carrier_20261015_model",
+  "model_api": "Model(number, parameters), number5/6/7; full sparse scipy CSR operators",
+  "parameters": {
+    "electric_cap": 2,
+    "electric_inertia": 16.0,
+    "charge_cost": 0.35,
+    "radial_nodes": [
+      0.55,
+      1.0,
+      1.45
+    ],
+    "radial_mass": 2.0,
+    "radial_stiffness": 3.0,
+    "radial_centre": 1.0,
+    "material_inertia": 4.0,
+    "root_coupling": 1.0,
+    "hopping": 1.0,
+    "vector_hopping": 0.65
+  },
+  "tensor_order": [
+    "literal_Gauss_CAR12",
+    "material_SO3_10",
+    "r0",
+    "r1",
+    "r2"
+  ],
+  "neutral_shape": [
+    3780,
+    10,
+    3,
+    3,
+    3
+  ],
+  "neutral_dimension": 1020600,
+  "neutral_basis_SHA256": "e47a1057f254e6cb1b49d040ca887adac0ecd53cad79877652521d00fc80b4d3",
+  "gauge_basis_SHA256": "df026e996bd3afd67306d7043465478321f96e8b10ef0cd1b916501b480e278d",
+  "source_SHA256": {
+    "rich_local_frame_carrier_20261015_model.py": "0d41504e8e1780e9775bb224af81f207af8efd4e2e2354f88d5a3ce1d5801f61",
+    "rich_local_frame_carrier_20261015_equations.json": "2e43e7377d996b89f2e5526709d9d4680e8cb2303db0c030e65dd1f236a395d1",
+    "rich_local_frame_carrier_20261015_prepare.py": "6687950ca784e616661d8a9eb66de9e422294bdfcee519ffcd1f1ca6a2db90fc",
+    "rich_frame_holonomy_20261014_model.py": "8debf18967ae5cef7ff07b81f63e6a443e1f7c274ee7c5dd9aeb3da355031c11",
+    "rich_frame_gauss_20261014_model.py": "c574256030831d507005f3065e2b9765a6ac30e2e4a1e50126ed5b922f71893f",
+    "rich_frame_gauss_join_20261015_model.py": "84ecca7835279587566aa2697d15c70d579756fbb484a6b2cfe112069c5dcddf",
+    "rich_local_frame_carrier_20261015_input.json": "01ae2477f7b79eb0ca34abd5a95c903e1bfd9c0020c4c915573332a54cf82a4e"
+  },
+  "neutral_reference": {
+    "path": "rich_local_frame_carrier_20261015_neutral_reference.npz",
+    "key": "psi",
+    "SHA256": "03f91b9c729741281816e9f0f050df6761c041d3bd770d4332a604ff0279d1c3",
+    "status": "NEW owning prepared nonstationary INPUT; consumer does not claim independent ground solve",
+    "energy": -3.427209007334139,
+    "energy_variance": 7.606373927145469
+  },
+  "law_api": "law(variant=full/path_cut/vector_off/all_hop_off,phase=0,phase_edge=0)->(H,current[3],contact[3]); q=-1, exp(-i phase)",
+  "source_api": "target.source_from(reference,site,branch=addition/removal,component=0/1,orbital=0/1)->CSR; preserves radial/material, literal boundary tree and CAR",
+  "density_api": "n[v], Q[v]=2-n[v]; count_projector(v,count0..4); sector.density/electric/states/lookup",
+  "local_noether_api": "S_local[v][axis], S2_local[v]; S[axis]=sum_v S_v; local_spin_projector(v,j=0/.5/1)",
+  "field_api": "r2_local[v], E[e], HE, F=Wilson_sine, Wcos; lift_gauge(A), lift_material(A), lift_radial(A)",
+  "angular_api": "material_L[axis], J[axis]=S+L; no invented U1 field angular momentum",
+  "root_api": "Hroot,Hframe,Hradial,Hmaterial; root_band_count(site,signed=+1/-1); architecture raw Gauss/LEFT/source and Gamma constitutive matrices",
+  "transport_api": "scalar_transport[e],vector_transport[e] actual forwards; all products preprojection",
+  "primitive_provenance": {
+    "raw_dimension": 224,
+    "physical_dimension": 16,
+    "haar_gram_error": 2.4839688178980058e-15,
+    "right_gauss_error": 1.864096324428179e-15,
+    "CAR_error": 5.329070518200751e-15,
+    "clifford_error": 1.7763568394002505e-15
+  },
+  "neutral_local_n": [
+    2.000000000000001,
+    2.000000000000001,
+    2.000000000000001
+  ],
+  "neutral_local_S2": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "neutral_local_r2": [
+    1.5361242685811582,
+    1.536124268581158,
+    1.5361242685811582
+  ],
+  "warning": "Signed density difference is NOT added-particle PVM; r\u00b2 is NOT spatial radius; finite material triangle no Nature/COM/Maxwell photon theorem"
+}

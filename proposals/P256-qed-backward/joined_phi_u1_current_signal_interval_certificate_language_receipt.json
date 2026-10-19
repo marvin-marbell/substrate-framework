@@ -1,0 +1,34 @@
+{
+  "project_root": "/home/administrator/substrate-222",
+  "python": "/home/administrator/substrate-framework/.venv/bin/python",
+  "source_sha256": "386c684f42aa3715dbf370d075cb1b4f5a1b0a645c2784fd9ace2c97ee491810",
+  "AST_before_edit": {
+    "device": "xd://ast_grep",
+    "positive_pattern": "class Species:\n    $$$BODY",
+    "path": "proposals/P256-qed-backward/joined_phi_u1_body_word.py",
+    "observed_match": "line217 constructor, initial projector and microscopic path methods"
+  },
+  "LSP": {
+    "server": "pyright-langserver1.1.414 direct stdio JSON-RPC",
+    "device_limitation": "xd://lsp unavailable, reported; direct protocol exercised instead",
+    "before_edit_symbols": 165,
+    "before_edit_definition": "current.body.full_inputs resolves joined_phi_u1_body_word.py line290",
+    "before_edit_diagnostic_limitation": "Initial default Python import resolution missed numpy/threadpoolctl; resolved by selected project venv and pythonPath setting",
+    "after_final_edit_symbols": 394,
+    "after_final_edit_publishDiagnostics": [],
+    "after_final_edit_source": "joined_phi_u1_current_signal_interval_certificate.py"
+  },
+  "single_selected_checker_attempt": {
+    "command": "/home/administrator/.local/bin/pyright joined_phi_u1_current_signal_interval_certificate.py --pythonpath /home/administrator/substrate-framework/.venv/bin/python --stats",
+    "version": "1.1.414",
+    "checked_files": 1,
+    "natural_exit_code": 1,
+    "reported_errors": 7,
+    "cause": "NumPy ndarray .real/.imag descriptor-stub access errors",
+    "correction": "Replaced only diagnosed accesses with np.real/np.imag, no suppressions. Final source actual LSP diagnostics empty.",
+    "output_artifact": "artifact://618",
+    "own_rerun": false,
+    "integration_owner_check": "Parent final selected checker on this final source after integration"
+  },
+  "scope": "New certificate source only. No supplier/root scientific truth implied by diagnostics. No repository-wide checks."
+}

@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "owner": "FullColourPairClosure, sole rich_full_colour_pairs_20261015_* prefix owner; no old-prefix edits or producer replay; no nested agents",
+  "plan": {"id":"issue222-rich-backward-candidates-20261014","captured_revision":"3bd3d2950ee595476e0e177580f2c97254f37dee0c2edf500490f4a75decf9ad","template":"general","template_revision":"89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe","writer":"Main only; worker explicitly bound shared plan"},
+  "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "python": "/home/administrator/substrate-framework/.venv/bin/python",
+  "physical_run": {
+    "command": "python rich_full_colour_pairs_20261015_capture.py actual1",
+    "input": "rich_full_colour_pairs_20261015_actual1_input.json",
+    "result": "rich_full_colour_pairs_20261015_actual1_result.json",
+    "arrays": "rich_full_colour_pairs_20261015_actual1_result.npz",
+    "exit": "rich_full_colour_pairs_20261015_actual1_exit.json",
+    "capsule": "rich_full_colour_pairs_20261015_actual1_capsule.zip",
+    "capsule_sha256": "d348616a9d2fee47372a46e03e4bce2bf2735e518d825ee48ddc8c2f05fac404",
+    "model_sha256": "cf11523bcae1a2cf63f4369bc14daef02a2d8b7f3536388b8d01b0e75b5c40fc",
+    "calculate_sha256": "bd97949a74528a8893a86895ed2b5fe4cb9df01a9e1673a4229aefbd6d8dea41",
+    "result_sha256": "020898a96a580935d4b8ec7dea485a5283a63fbcce5595bde8a6f73fff874b28",
+    "arrays_sha256": "212bb7104a6aa7497f6565ff034962be4e48498e83b42452671393ac88696e78",
+    "natural_exit": true,
+    "returncode": 0,
+    "elapsed_seconds": 1.2201075553894043,
+    "stderr": "empty",
+    "source_unchanged": true
+  },
+  "original_law_and_source_proof": {
+    "command": "python rich_full_colour_pairs_20261015_closure.py --capture",
+    "result": "rich_full_colour_pairs_20261015_closure1_result.json",
+    "arrays": "rich_full_colour_pairs_20261015_closure1_result.npz",
+    "exit": "rich_full_colour_pairs_20261015_closure1_exit.json",
+    "capsule": "rich_full_colour_pairs_20261015_closure1_capsule.zip",
+    "capsule_sha256": "1cde4f4e563e1a2a2ec472d7b6984f526da5485f734753aefd97865d8d59cbd8",
+    "natural_exit": true,
+    "returncode": 0,
+    "purpose": "Finite114x114 quadratic coefficient witnesses at four EM angles for each charge, plus literal original-CAR physical source equality on all4608 source masks, not a pair-truncated equality. No old CLI replay.",
+    "equations_revision_note": "Primary actual1 capsule freezes initial equations bytes. The final equations file adds explicit no-Dirac-pair-feedback interpretation and particle/hole bound detail; final bytes are frozen in closure1 capsule. Physical model/calculation/input bytes unchanged."
+  },
+  "pure_imports": {
+    "module": "rich_full_colour_pairs_20261015_model",
+    "project": "project(sector,raw_sparse_operator)->dense selected Gauss operator",
+    "project_between": "project_between(target,raw_sparse_operator,source)->dense projected rectangular map",
+    "rotated_conjugation": "rotated_conjugation(source_sector,target_sector,loop)->(projected_C,raw_C); rotated CAR24 mirror conjugation includes(-1)^N",
+    "spin_spectrum": "spin_spectrum(H,S2)->(all_energies,all_vectors,all_spins), resolves complete spin sectors and preserves all degeneracies",
+    "retarded": "retarded(all_e,all_v,J,state,frequencies,eta,K)->energy,gaps,weights,first,second,retarded,contact,kernel; all virtuals, both orders, no pole cutoff",
+    "rotate_to_original": "rotate_to_original(rotated_CAR24_mask)->dict(original_mask: signed Hadamard wedge coefficient), exact full original-mirror pair support",
+    "law": "law(rotated_operators,scalar,parameters,A)->H,J,K for exactly frozen actual2 unprojected law in rotated basis, NOT scalar-only control",
+    "build": "build(parameters)->selected exact mirror population branches N12/N15/N9, common reference source, actual raw C-related laws. Parameter pair_cut is not used; masks_for(...,0) denotes rotated occupancy, not discarded original pairs."
+  },
+  "state_order": "Projected index=gauge_index*scalar7+phi_index. Raw P row=rotated_matter_mask_index*PW19+loop_index. Mode numbers unchanged but mirror label now Hadamard eigenmode. DO NOT interpret masks/P as original mirror determinants without rotate_to_original.",
+  "array_contract": {
+    "common": "reference21,Cneutral21x21,Cbaryon84x84",
+    "per_sector": "{neutral,baryon,antibaryon}_{H,J,K,energies,vectors,spins,P,masks,current,contact,spin_squared,loop_C,loop_B,matter_octet,loop_boundary,phi,phi2,scalar_energy,scalar_boundary,original_pair_number}",
+    "sources": "{baryon,antibaryon}_source_{0.5,1.5}; source_state_{0.5,1.5}; full raw source strength preserved",
+    "event": "{sector}_{EMflux,fieldonly}_{states,prepared}; {sector}_baseline_states; {sector}_receiver",
+    "pair_measurement_warning": "original_pair_number array is the compressed expectation operator, a constant6 or4.5. Its powers do NOT give full pair-number distribution. Use original_pair_distributions JSON, proven by exact original-CAR expansion."
+  },
+  "language_evidence": "rich_full_colour_pairs_20261015_language.py/json: actual Pyright documentSymbol/definition/references positive and positive Python AST masks_for. Native xd://lsp unavailable; direct JSON-RPC at selected root exercised. No midflight build/lint/tests/formatters. Independent final diagnostics belong queued Wave12 only after explicit Main transition.",
+  "science_boundary": "Exact full-pair source/current-invariant closure of the actual2 scalar-tau_x law, NOT general rich Dirac pair-current feedback. Complete neutral fixedN12 lower bounds, but charged disconnected occupation blocks/all-number global stability unpaid. No photon/COM/continuum/QCD/nature claim."
+}

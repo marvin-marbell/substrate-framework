@@ -1,0 +1,348 @@
+{
+  "source_sha256": {
+    "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+    "centre_flux_sea.py": "b9fd12acd165a0af1003d49dfd34bf45bf481f0723dc393d1c702bb436fda5d1",
+    "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+    "full_band_gauss_section.py": "1bb48d986e83c5df3b707ad74337a2f4b0ec6a4495af90ba87b6a8e68eb366cb",
+    "full_band_packet_bound.py": "9b8e6f0d4c20d875389bd38d76d273be8d431a18cbe0331f9925daa72a8450d9",
+    "full_field_charge_bound.py": "b86f5fe62f2a838f2a5cd84e70c1b3e74e801aef91cd2dda6d4ce123e58541bf",
+    "gauss_charge_intertwiner.py": "861008cb7dea64d2b2e0cef513c62de1d55539a1527a5b6fea8b5b879ea956fa",
+    "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "pair_full_field_charge_transfer.py": "b699fad8485d91502f2d6197dcd762fafe7b901af870399156e5f9eb1ab21c47",
+    "pair_full_field_concentration.py": "4a485d5ffd1d1c180c13858f09c3f3e3cdcd54242297f12897e4dc66336f5d25",
+    "pair_global_field_bound.py": "f419c53c881c6d66175a551e6ee2f074521c8fb726fffc17e5ae82eb9ef533f3",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "quantum_su4_gauss.py": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286",
+    "unrestricted_field_minimum.py": "443840b860a0adfb4fd5455ecf9188ddb63b31fae252619568a60ed4a9915301",
+    "full_band_gauss_section.md": "1b7706e6944c1416dbe00dd09b5d3ad516cdadc9378a03a353237664e5bcfa3f",
+    "gauss_born_bundle.py": "ed0b037ba52293f60e311d09831903511db0daf3447038cd61bdef4ed2072515",
+    "quantum_su4_photon.py": "ffadad919f74fe510484530037d4ae11b7860046fa384aa721839d2771d5c0bf",
+    "full_band_packet_bound.md": "9fde8dd4f98905fb84019cca18a715b6d81a00c5a44a4a8d45cb4f7f50f13520",
+    "gauss_born_bundle.md": "58962ca9b44e22e3345a14f6d0484c3aeef580ae76c98af747b3304d26c805f0",
+    "full_field_charge_bound.md": "f47cbc7759350b21b5a28703bd01aa8e5e4bbfd1a19621dd13d9cfcd63288c57",
+    "centre_flux_sea.md": "402387490becf5756f587e9d640834ef32efee0cd6fd4da08ae542847aae8855",
+    "unrestricted_field_minimum.md": "c436da4b6829885d624ebebbfe776d7d1c1698b7afee538700c7a360aaba7563",
+    "pair_global_field_bound.md": "9448732e57ac2a833317cf9094e0c7b7c8930eb9bf55e3ff1ef7c6dc31f928f7",
+    "pair_full_field_concentration.md": "15dd0c7f6d185ba8ebab721c7c808a7b8001fed450095c1453ab7aefce51c69c",
+    "gauss_charge_intertwiner.md": "45d5f71a88e70023c46d6cdd717268ebfaf1979a098b941a03b5189306700366",
+    "pair_full_field_charge_transfer.md": "05355d0b877ee52f422cc2cbf75c4f531abd9dc194bbc1089626aa74d6d671df"
+  },
+  "source_bindings_unchanged": true,
+  "governing_plan": "issue-222-continuing-backward-20260930",
+  "work_item": "campaign",
+  "bare_coefficients": {
+    "a": 1.0,
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.3,
+    "improved": false,
+    "stiffness": 2.0,
+    "alignment": 0.2,
+    "ue4": 0.3,
+    "ue1": 0.4,
+    "magnetic": 0.7
+  },
+  "exact_neutral_domain": "physical neutral NH4 NL4 fullL2(R120 x SU4 x T2) x4900",
+  "exact_charged_domains": "NH4 NL3/5 and genuine external fundamental/antifundamental at right; fullR120/SU4/T2, all3920x4 fibres",
+  "charge_extension": "same full coordinate Hamiltonian; boundary only in Gauss constraints, no added boundary/tree q\u00b2 Hamiltonian",
+  "reflection_control": {
+    "native_involution": 0.0,
+    "arbitrary_all120_noncentral_phase_points": 8
+  },
+  "sector_controls": [
+    {
+      "charge": -1,
+      "boundary": "4",
+      "original_Pauli_dimension": 3920,
+      "with_boundary_dimension": 15680,
+      "all_native_Nright_counts": {
+        "0": 70,
+        "1": 1120,
+        "2": 2520,
+        "3": 1120,
+        "4": 70
+      },
+      "residuals": {
+        "norm_operator": 6.64651868968836e-14,
+        "colour_Gauss": 7.771561172376096e-15,
+        "EM_Gauss": 0.0,
+        "wrong_boundary_sign": 70.0000000000001,
+        "omitted_boundary": 35.00000000000005,
+        "common_heavy": 0.0,
+        "light_commutator": 9.908859942313618e-15
+      },
+      "frozen_anchor_Lambda": 1000000.0,
+      "norm_squared": 2.000000000000001,
+      "frozen_anchor_neutral_energy": -529424.7093085509,
+      "frozen_anchor_charged_trial_energy": -529424.5328338817,
+      "measured_frozen_trial_gap": 0.17647466924972832,
+      "exact_frozen_trial_gap": 0.17647466780329318,
+      "false_unit_norm_creator_gap": -529424.3563592129,
+      "freeze_scope": "native pointwise matter/creator control only, not the full quantum neutral ground"
+    },
+    {
+      "charge": 1,
+      "boundary": "bar4",
+      "original_Pauli_dimension": 3920,
+      "with_boundary_dimension": 15680,
+      "all_native_Nright_counts": {
+        "0": 70,
+        "1": 1120,
+        "2": 2520,
+        "3": 1120,
+        "4": 70
+      },
+      "residuals": {
+        "norm_operator": 6.64651868968836e-14,
+        "colour_Gauss": 7.771561172376096e-15,
+        "EM_Gauss": 0.0,
+        "wrong_boundary_sign": 70.00000000000003,
+        "omitted_boundary": 35.000000000000014,
+        "common_heavy": 0.0,
+        "light_commutator": 9.903458783367174e-15
+      },
+      "frozen_anchor_Lambda": 1000000.0,
+      "norm_squared": 2.0,
+      "frozen_anchor_neutral_energy": -529424.7093085509,
+      "frozen_anchor_charged_trial_energy": -529424.5328338821,
+      "measured_frozen_trial_gap": 0.17647466878406703,
+      "exact_frozen_trial_gap": 0.17647466780329318,
+      "false_unit_norm_creator_gap": -529424.3563592134,
+      "freeze_scope": "native pointwise matter/creator control only, not the full quantum neutral ground"
+    }
+  ],
+  "uniform_analytic_constants": {
+    "global_minimum": -0.5294240034098796,
+    "optimal_average_norms": [
+      0.29012662631596453,
+      0.06374852629012889
+    ],
+    "chart_radius": 0.001,
+    "leading_slope": 6.067040332362413,
+    "A_field_fisher": 2560.0,
+    "A_field_metric": 3648535.6767599834,
+    "B_electric_fisher": 217377780.19701403,
+    "B_electric_metric": 445.12920132186935,
+    "light_u_coefficient": 4.100386719675124,
+    "light_v_coefficient": 1.2,
+    "light_anchor_lower_cost": 2.5115895000610506,
+    "light_Young_coefficient": 4.665858004957259,
+    "magnetic_lower_cost": 0.7,
+    "chart_packet": {
+      "anchor": {
+        "elastic": 0.17647466780329316,
+        "exact_full_field_W": 0.0,
+        "alignment": 0.0,
+        "whole_heavy_occupied_coefficient": -0.7058986712131727,
+        "light_occupied_energy": -0.7058986712131728,
+        "leading_coefficient": -0.5294240034098796
+      },
+      "radii": {
+        "R": 0.001,
+        "eta": 0.001,
+        "tau": 0.001
+      },
+      "anchor_projection_weight": 0.9105147150062737,
+      "endpoint_HS_bound": 0.09957505101711718,
+      "owner_onsite": [
+        0.32000000000000006,
+        0.32000000000000006
+      ],
+      "owner_path_norm": 0.16155494421403513,
+      "field_onebody_derivative_bound": 0.9631098884280704,
+      "onebody_uniform_change": 0.0011622599904623047,
+      "local_anchor_gap": 1.077268074930218,
+      "global_anchor_gap": 0.2883132511107732,
+      "certified_local_gap": 1.073268074930218,
+      "certified_global_gap": 0.28598873112984863,
+      "raw_uniform_change": 0.15447053209432177,
+      "certified_projection_weight": 0.6395815326709556,
+      "gram_Frobenius_upper": 0.4217724387773072,
+      "elastic_upper": 0.17789199011215734,
+      "alignment_HS_root_upper": 0.005207923382717087,
+      "alignment_upper": 6.780616490062847e-07,
+      "whole_heavy_upper": -0.7012496312513236,
+      "C_Lambda": -0.5233569630775172,
+      "section_derivative_bounds": {
+        "field_each": 246.59466325530997,
+        "colour_each": 9.8831547363819,
+        "phase_each": 3.494222866805794
+      },
+      "envelope_fisher": {
+        "fields": 5120000000.0,
+        "colour": 724592596656713.5,
+        "phases": 6000000.0
+      },
+      "section_metric_upper": {
+        "fields": 7297071.353519967,
+        "colour": 1465.15121314902,
+        "phases": 24.419186885817002
+      },
+      "Haar_exponential_Jacobian_lower": 0.999998000001933,
+      "T_sqrt_Lambda": 2563648535.67676,
+      "B_constant": 217377780197459.16,
+      "bound": "E0 <= Etrial <= C*Lambda + T*sqrt(Lambda) + B; Lambda>=1",
+      "strict_negative_for_Lambda_greater_than": 2.3995841898711175e+19,
+      "negative_energy_at_four_times_threshold": -2.5116999262975648e+19
+    }
+  },
+  "rows": [
+    {
+      "Lambda": 1e+20,
+      "neutral_ground_moment_upper": {
+        "Lambda": 1e+20,
+        "physical_trial_support_radius": 0.001,
+        "scaled_trial_ground_energy_upper": -0.26698993573203916,
+        "expected_global_remainder_upper": 0.34991209023712055,
+        "expected_average_norm_deviation_squared_upper": 0.17495604511856028,
+        "expected_endpoint_norm_spread_squared_upper": 0.34991209023712055,
+        "expected_sum_unused_normalized_field_fourth_upper": 0.34991209023712055,
+        "expected_sum_unused_normalized_field_squared_upper": 1.1830673526678361,
+        "expected_offdiagonal_Gram_squared_sum_upper": 0.34991209023712055,
+        "expected_KyFan_slack_upper": 0.34991209023712055,
+        "expected_full_W_upper": 13.996483609484821,
+        "ground_energy_lower_excess_divided_by_Lambda": -3.2115905052896847e-20,
+        "occupation": "NH4 NL4, all70 light and70 heavy Pauli configurations retained",
+        "numerical_status": "floating evaluation of derived analytic bounds, not interval certification or sampled quantum ground"
+      },
+      "neutral_average_u_v_upper": [
+        0.7084041001518864,
+        0.48202600012605074
+      ],
+      "both_charged_minus_neutral_ground_energy_upper": 1.0710747878000944,
+      "large_Lambda_charge_cost_upper_limit": 0.6278973750152627,
+      "exact_trial_cost_identity": "Etrial(q=+/-1)-Eneutral=-<Hlight>neutral/4",
+      "exact_charge_trial_norm_squared": 2.0,
+      "rate": "upper cost tends finite limit, correction O(Lambda^-1/12)",
+      "scope": "full physical field/link/phase domains; charged-ground upper bound, not a lower mass gap or computed quantum eigenstate"
+    },
+    {
+      "Lambda": 1e+24,
+      "neutral_ground_moment_upper": {
+        "Lambda": 1e+24,
+        "physical_trial_support_radius": 0.0009449982979784742,
+        "scaled_trial_ground_energy_upper": -0.5208203404490108,
+        "expected_global_remainder_upper": 0.011471550614491784,
+        "expected_average_norm_deviation_squared_upper": 0.005735775307245892,
+        "expected_endpoint_norm_spread_squared_upper": 0.011471550614491784,
+        "expected_sum_unused_normalized_field_fourth_upper": 0.011471550614491784,
+        "expected_sum_unused_normalized_field_squared_upper": 0.21421064973050974,
+        "expected_offdiagonal_Gram_squared_sum_upper": 0.011471550614491784,
+        "expected_KyFan_slack_upper": 0.011471550614491784,
+        "expected_full_W_upper": 0.45886202457967135,
+        "ground_energy_lower_excess_divided_by_Lambda": -3.21158954671963e-24,
+        "occupation": "NH4 NL4, all70 light and70 heavy Pauli configurations retained",
+        "numerical_status": "floating evaluation of derived analytic bounds, not interval certification or sampled quantum ground"
+      },
+      "neutral_average_u_v_upper": [
+        0.3658615278293744,
+        0.13948342780353876
+      ],
+      "both_charged_minus_neutral_ground_energy_upper": 0.7320874249610808,
+      "large_Lambda_charge_cost_upper_limit": 0.6278973750152627,
+      "exact_trial_cost_identity": "Etrial(q=+/-1)-Eneutral=-<Hlight>neutral/4",
+      "exact_charge_trial_norm_squared": 2.0,
+      "rate": "upper cost tends finite limit, correction O(Lambda^-1/12)",
+      "scope": "full physical field/link/phase domains; charged-ground upper bound, not a lower mass gap or computed quantum eigenstate"
+    },
+    {
+      "Lambda": 1e+30,
+      "neutral_ground_moment_upper": {
+        "Lambda": 1e+30,
+        "physical_trial_support_radius": 9.449982979784742e-05,
+        "scaled_trial_ground_energy_upper": -0.5285639983431422,
+        "expected_global_remainder_upper": 0.001146673422316538,
+        "expected_average_norm_deviation_squared_upper": 0.000573336711158269,
+        "expected_endpoint_norm_spread_squared_upper": 0.001146673422316538,
+        "expected_sum_unused_normalized_field_fourth_upper": 0.001146673422316538,
+        "expected_sum_unused_normalized_field_squared_upper": 0.06772513336469817,
+        "expected_offdiagonal_Gram_squared_sum_upper": 0.001146673422316538,
+        "expected_KyFan_slack_upper": 0.001146673422316538,
+        "expected_full_W_upper": 0.04586693689266152,
+        "ground_energy_lower_excess_divided_by_Lambda": -3.211589500527636e-30,
+        "occupation": "NH4 NL4, all70 light and70 heavy Pauli configurations retained",
+        "numerical_status": "floating evaluation of derived analytic bounds, not interval certification or sampled quantum ground"
+      },
+      "neutral_average_u_v_upper": [
+        0.3140710768454352,
+        0.08769297681959957
+      ],
+      "both_charged_minus_neutral_ground_energy_upper": 0.6633241390160404,
+      "large_Lambda_charge_cost_upper_limit": 0.6278973750152627,
+      "exact_trial_cost_identity": "Etrial(q=+/-1)-Eneutral=-<Hlight>neutral/4",
+      "exact_charge_trial_norm_squared": 2.0,
+      "rate": "upper cost tends finite limit, correction O(Lambda^-1/12)",
+      "scope": "full physical field/link/phase domains; charged-ground upper bound, not a lower mass gap or computed quantum eigenstate"
+    },
+    {
+      "Lambda": 1e+36,
+      "neutral_ground_moment_upper": {
+        "Lambda": 1e+36,
+        "physical_trial_support_radius": 9.449982979784745e-06,
+        "scaled_trial_ground_energy_upper": -0.5293380032644134,
+        "expected_global_remainder_upper": 0.00011466686062170216,
+        "expected_average_norm_deviation_squared_upper": 5.733343031085108e-05,
+        "expected_endpoint_norm_spread_squared_upper": 0.00011466686062170216,
+        "expected_sum_unused_normalized_field_fourth_upper": 0.00011466686062170216,
+        "expected_sum_unused_normalized_field_squared_upper": 0.021416522651607303,
+        "expected_offdiagonal_Gram_squared_sum_upper": 0.00011466686062170216,
+        "expected_KyFan_slack_upper": 0.00011466686062170216,
+        "expected_full_W_upper": 0.004586674424868086,
+        "ground_energy_lower_excess_divided_by_Lambda": -3.211589500065716e-36,
+        "occupation": "NH4 NL4, all70 light and70 heavy Pauli configurations retained",
+        "numerical_status": "floating evaluation of derived analytic bounds, not interval certification or sampled quantum ground"
+      },
+      "neutral_average_u_v_upper": [
+        0.29769851051415797,
+        0.0713204104883223
+      ],
+      "both_charged_minus_neutral_ground_energy_upper": 0.6394283830764244,
+      "large_Lambda_charge_cost_upper_limit": 0.6278973750152627,
+      "exact_trial_cost_identity": "Etrial(q=+/-1)-Eneutral=-<Hlight>neutral/4",
+      "exact_charge_trial_norm_squared": 2.0,
+      "rate": "upper cost tends finite limit, correction O(Lambda^-1/12)",
+      "scope": "full physical field/link/phase domains; charged-ground upper bound, not a lower mass gap or computed quantum eigenstate"
+    },
+    {
+      "Lambda": 1e+48,
+      "neutral_ground_moment_upper": {
+        "Lambda": 1e+48,
+        "physical_trial_support_radius": 9.449982979784747e-08,
+        "scaled_trial_ground_energy_upper": -0.5294231434084614,
+        "expected_global_remainder_upper": 1.1466685575747116e-06,
+        "expected_average_norm_deviation_squared_upper": 5.733342787873558e-07,
+        "expected_endpoint_norm_spread_squared_upper": 1.1466685575747116e-06,
+        "expected_sum_unused_normalized_field_fourth_upper": 1.1466685575747116e-06,
+        "expected_sum_unused_normalized_field_squared_upper": 0.002141652219735699,
+        "expected_offdiagonal_Gram_squared_sum_upper": 1.1466685575747116e-06,
+        "expected_KyFan_slack_upper": 1.1466685575747116e-06,
+        "expected_full_W_upper": 4.586674230298846e-05,
+        "ground_energy_lower_excess_divided_by_Lambda": -3.211589500061051e-48,
+        "occupation": "NH4 NL4, all70 light and70 heavy Pauli configurations retained",
+        "numerical_status": "floating evaluation of derived analytic bounds, not interval certification or sampled quantum ground"
+      },
+      "neutral_average_u_v_upper": [
+        0.2908838147197237,
+        0.06450571469388806
+      ],
+      "both_charged_minus_neutral_ground_energy_upper": 0.6290659380152623,
+      "large_Lambda_charge_cost_upper_limit": 0.6278973750152627,
+      "exact_trial_cost_identity": "Etrial(q=+/-1)-Eneutral=-<Hlight>neutral/4",
+      "exact_charge_trial_norm_squared": 2.0,
+      "rate": "upper cost tends finite limit, correction O(Lambda^-1/12)",
+      "scope": "full physical field/link/phase domains; charged-ground upper bound, not a lower mass gap or computed quantum eigenstate"
+    }
+  ],
+  "all_checks_pass": true,
+  "limits": [
+    "Analytic exactground trial/cost bounds, not computed full quantum eigenstates or interval certificates.",
+    "Constant creator intertwinning cancels common full Cartesian/link/phase/heavy operator; no scalar inertia or BO/light/field cut.",
+    "q denotes light-number departure with fixed compensating colour/EM reference at R; no isolated or separated charge/reference energy bound.",
+    "No positive charged lower gap, propagating packet, mechanical spin, bulk compact phase, radiative/Lorentz closure or campaign completion."
+  ]
+}

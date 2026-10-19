@@ -1,0 +1,24 @@
+{
+  "candidate_id": "rich_frame_gauss_20261014_gaussian_octafield_associated_bundle_v1_actual6",
+  "model": "rich_frame_gauss_20261014_model.py",
+  "state": "New Gauss-constrained neutral ground; charged source creates odd sector and all computations use originating scalar angular metric, Gaussian cloud, static longitudinal Gauss solution and quantum magnetic vector modes. No old states or law imported.",
+  "units": "hbar=1; charge=-1; lengths radius=1.1 and sigma=.35; angular inertias Ic=2, Ir=4, If=1.5; epsilon=.04; field omega=.8 and B amplitude=.45. No supplied c or mass conversion.",
+  "pure_functions": {
+    "frame_gauss()": "Returns full raw j=0,.5,1 x colour Fock4 Gauss generators, physical isometry P(56,4), N(4), physical left Noether S(3,4,4), dressed creation sources(2,4,4) and adverse bare sources. Physical basis ordered by N=0,1,1,2; odd-basis phase is eigensolver-dependent, so consume serialized sources and Noether together.",
+    "charge_geometry(p)": "Returns exact one-charge longitudinal Gaussian Coulomb energy and charge second-moment C1, both from same six clouds.",
+    "carrier(p,l,occupation)": "Returns full field-coupled one-K block H, L/S/J, total physical J including field, mu and shifted angular kinetic momenta. Restore 2l+1 identical K copies. N in {0,1,2}; ALL M and field occupations sum<=cutoff retained. Sum l=0..lmax for finite complete module.",
+    "spatial_consumer(p,k)": "Returns complete odd-charge W harmonics with ALL M,K,l<=lmax, full magnetic field states, density rho(k), physical current j(k) in three Cartesian directions and same H. For supplied input H(700,700), rho(700,700), current(3,700,700). This is the actual finite-q current root, not an imported Dirac gamma vertex."
+  },
+  "serialized_exact_states": {
+    "file": "rich_frame_gauss_20261014_actual6_result.npz",
+    "arrays": "physical_projector, physical_number, physical_Noether, source, odd_H, odd_eigenvalues, odd_eigenvectors, source_vectors, spatial_H, spatial_current, spatial_density, current_legs, spatial_state, field_Q, magnetic_source, contact",
+    "ordering": "spatial basis loops l=0..2 then M=-l..l then K=-l..l; physical odd index after N diagonalization; field tuples (nx,ny,nz) nested ascending with nx+ny+nz<=2. np.kron ordering W, odd frame, field. Source vectors carry both physical source m labels, not separately normalized moment-labelled states.",
+    "source_G": "G_mn(z)=V_m^dag[z-(Hodd-Eneutral)]^-1 V_n, z=.9+.07i; source vectors V=d_m^dag|neutral>. Full source CAR Gram is identity, no low-pole repinning.",
+    "current_insertion": "current_vertex_3x2x2[a,m,n]=V_m^dag R(z) j_a(k) V_n. unamputated_threepoint_3x2x2=V^dag R(zout) j_a(k) R(zin) V; zin=.9+.07i,zout=1.1+.07i. This is unamputated, not a claimed QED Gamma or physical scattering amplitude.",
+    "current_D": "Current and field response matrices are source-leg positive-resolvent functions at z=.9+.07i with reference Eodd, not retarded commutator D with both positive/negative spectral terms. Complex real/imag JSON arrays preserve full phases. No spatial-photon D(q,omega) is exported by this local oscillator model.",
+    "state_semantics": "G is neutral-vacuum creation. Current/field leg Grams use a selected pure odd ground-doublet member; degeneracy matrices and exact eigenvectors are retained. N2 is two negative charges, not a positron. Electrostatic Gauss is reduced exactly and not a separate unconstrained Fock field."
+  },
+  "receipt": "rich_frame_gauss_20261014_actual6_exit.json",
+  "exact_capsule": "rich_frame_gauss_20261014_actual6_capsule.zip",
+  "consumer_limits": "Do not join to a peer's photon law, mass or neutral minimizing family without constructing a compatible same-H extension. Natural-exit calculations are executed, independent review and final code diagnostics remain reviewer-owned."
+}

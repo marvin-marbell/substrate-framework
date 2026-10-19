@@ -1,0 +1,59 @@
+# Physical spatial Noether, current spin, and the rest little group
+
+This pair identifies the completed intrinsic Phi/reference-clamp group with a physical spatial/current rest spin. It preserves the frozen112/115 scientific packets and executions. The only115 source successor is Main's explicitly authorized concrete-local/array annotation correction and proven nonempty-nine-node binding guard, recorded independently from the immutable c7 scientific source. It does not claim exact continuous rotations of the finite cubic torus, rotate or move RIGHT, change the bare/heavy/statistical laws, or reinterpret a fast native current control as a low-momentum physical rotation.
+
+## Physical transformation before colour lock
+
+The primitive matter is a scalar under coordinate rotation before locking. Its gauge-covariant orbital generator is the existing Hermitian scalar_orbital built from actual links and real U1 phases. A physical weak rotation has xi=chi(r) e_i cross r. The literal field transformation is minus xi times the full covariant Phi difference, plus minus epsilon_ijk chi Phi_k on the spatial vector indices. The full15 colour-link curvature flow and literal sin(curl A) EM flow come from primitive_flow. No spin matrix is inserted into this coordinate/vector transformation.
+
+For the EM potential, the canonical spatial Lie representative adds minus d(xi.A) to the curvature representative. Its matter Gauss term is minus Lambda rho, Lambda=xi.A. Both are retained explicitly. Their source boundary contributions cancel only as an operator identity, leaving the real sine-curvature contribution. The matched neutral EM/Gauss image is measured, not replaced by zero. Ordinary harmonic offsets and the vacuum density subtraction remain part of the scalar boundary.
+
+Only after these physical transformations are specified do the full15 Phi tangents determine the compensating colour generator. At a locked pole, i[S_i,Phi_j]=-epsilon_ijk Phi_k, with S derived from the actual Phi/mass Gauss solver. Away from that pole the actual full Cartesian Phi horizontal remainder is retained. Complete colour Gauss reduction includes every oriented link and its electric flux, and the Wilson continuation to the independent fixed far reference. It is not a field-only internal rotation.
+
+The resulting Noether identity is a decomposition of the original physical generator into covariant coordinate orbital, Phi-derived matter spin, retained horizontal Phi, colour-link/electric boundary stress, real EM, and anchored-reference/scalar terms. The latter terms cannot be discarded from total angular momentum. They are explicitly subtracted in the relative SOURCE/rest observable. Arbitrary-packet total J is not a doublet Casimir.
+
+## Same actual source and reference
+
+native_spatial_identification consumes the carrier's actual native_source_chart object: the same once-prepared B, source, Omega, global norm, ordinary H, current/contact,16 quantum Phi/SU4/A/paired-kappa nodes, all primitive16016 states, and both charge/anti branches. It performs no source re-preparation, per-column normalization, quaternion projection, or outcome restriction.
+
+The finite prototype bulk third coordinate is distinct from physical RIGHT. The independent_reference_phi supplied by the carrier is held fixed while all three prototype bulk Phi vectors can transform. The continued anchor Wilson link and phase are explicit. At birth this coefficient equals the existing carrier coefficient; the new representation does not alter its initial source. At physical flow times the independent far Phi is never silently replaced by the evolving third bulk field.
+
+The source differential is evaluated on the actual Phi chart, noncentral Wilson products, original eta18 whole-group scalar, and real EM phases. Its physical first word is decomposed into actual coordinate orbital, horizontal Phi, colour/electric anchor flux, and EM terms. What remains is the local Gauss source spin, which is the115 K action on the full16 source matrix seed. The anti-source uses the actual adjoint primitive transfer with the correct external derivative sign.
+
+The numerical comparison uses the already-executed115 Ki matrices from its immutable receipt. Actual source/reference Phi-frame bridges transport the SAME arbitrary full16 seed into that stored basis and back. No completed115 supplier is re-executed. Both first-action equality and the new independently differentiated physical SOURCE Casimir are observed. The explicit primitive reference spin SOURCE word and charged-reference charge image are retained; spinless neutral Ref0/4 values are observed as such, not imposed to erase the nonzero matched total/orbital/EM/field noise.
+
+The second word is independently exercised using actual complete Gauss-transformed Phi, links, anchor continuation, primitive source operators, and the transformed SAME neutral. The relative expression D²(B Omega)-2D(B D Omega)+B D² Omega retains neutral first and second derivatives. It is not just the square of a first compressed matrix. The real physical functional neutral response is additionally obtained from the transported occupied heavy cluster, with the actual scalar orbital and EM boundary. Actual current derivatives and ordinary orbital torque are measured on the same ordinary H/source. Omitted orbital, omitted EM, omitted compensating Ref charge, and Phi-internal-only-as-total are discriminating adverse cases.
+
+The retained finite native horizontal/colour/anchor norms are witness diagnostics, not declared microscopic errors of that size. Their legal physical reduction uses the existing normal/field transfer. The source-core exact Casimir remains separate from the nonzero eta18/local-boundary scalar correction. The existing SOURCE19 high-precision curvature and scalar correction are imported without erasure; RAW41 is not relabelled SOURCE19.
+
+## Physical current fixes rest spin without a gamma-spin postulate
+
+At the actual selected rest Hamiltonian h(0), let P be the positive two-mode cluster and Q the negative cluster. The velocity/current vertices V_j are derivatives of the literal improved one/two-link physical Hamiltonian. Define
+
+S_current,i = -i P(V_j Q V_k - V_k Q V_j)P / (4 c_eff²),
+
+for cyclic i,j,k. These are independently obtained from the physical current and compared with the Phi-derived spatial Noether generators. A second independent spectral-current calculation uses the actual negative-cluster resolvent (m-h_minus) inverse to obtain the magnetic moment; comparing it with S_current measures rest g=2, rather than assigning that coefficient. The mass is the actual improved positive gap, with legal lower bound .129417988064. The common photon c is the exact fraction1130202988249777/9007199254740992; the authoritative full10 heavy metric and binary64 calibration debts are byte-bound.
+
+At REST, W=(0,m S_current) and minus W²/m²=3/4. This is the physical current/Pauli-Lubanski equivalent of the115 source-clamp spin, not an assumption that an arbitrary orbital/photon packet has total J²=3/4. The charge-conjugate branch reverses the magnetic charge, not the rest Casimir.
+
+The anti-particle observer is derived from the primitive hole dual h_bar(p)=-h(-p) transpose, with S_bar=-S transpose and the actual transposed velocity vertices. Its own positive cluster, spectral magnetic moment, rest Casimir, and Wigner map are exercised. Opposite magnetic charge does not change the rest Casimir.
+
+## Supported physical spinor and finite-lattice debts
+
+The coarse physical rotation acts on a wavefunction as D(R) psi(R inverse p). The coordinate argument transformation is compulsory. D is obtained from the preceding physical Phi/Gauss reduction, not imported gamma-spin matrices. The positive-energy embedding is constructed from the actual h_Phi(p) projector and one anchored rest frame. The Wigner map is U(Rp) dagger D(R) U(p).
+
+For |p|<=.05, the literal sin term gives |sin p-p|<=|p|³/6. The code also retains the actual rotation-dependent one/two-link mass difference. These give a quantified operator covariance and positive-cluster/Wigner bound using the physical gap. A scalar-coordinate rotation with the colour-restoring action omitted fails on the same actual band. Continuous spatial SO3 is therefore a supported coarse assertion with explicit lattice debt, not an exact torus symmetry. The full SOURCE19/BZ source and hard Compton q=2pi/5 remain separate and unfiltered.
+
+The final receipt includes both observed nontrivial rotation samples and a uniform inequality for every |p|<=.05 and every R, obtained from the authoritative full10 heavy metric distance, binary64 calibration, sin-cubic remainder, literal improved mass anisotropy, and microscopic gap bound. The current/Noether identification upper bound and long-clock phase debt use this uniform bound, not the sampled maximum. A trivial p=0 or identity rotation is valid API input and is not falsely rejected by an adverse-case assertion.
+
+## Supported clock and ledger
+
+A C6 cutoff is1 through radius48 and0 beyond64. RIGHT is at distance N/2 far outside support. A steady supported rotation has period4pi64/c, giving maximum coordinate speed at most c/2; this is not a suddenly inserted T6 pulse or a claim of running the entire long clock numerically. The onebody orbital geometry bound is192, the native whole-Pauli matter bound1920, and the rest SOURCE axis bound1/2. Native light number density is at most4 and compensated density at most6; spatial support has at most131³ sites. This long clock is separate from Compton T6 and fast finite native controls. The lattice phase debt is period times the uniform all-|p|<=.05 operator covariance bound, and is not hidden as a scattering-amplitude error.
+
+The degree13 cutoff derivative coefficient bound, six geometric factors, support-site count, and source/path canonical factors fit a conservative1024-bit supplementary stress/normal reserve. This reserve multiplies the existing SAME-field q6 normal/EM graphs: the joined root aggregate bound -32874 becomes -31850 and its already-contained coexact EM component -47199 becomes -46175. The EM component is not paid again in addition to its root aggregate. Both remain far below the physical transfer target. This identification does not insert a new pulse into Compton, so the additional Compton SOURCE-word reserve is0: the existing150-bit composition and original/improved words -4970/-5334 are unchanged. Lowk projector/current/phase errors are dimensional identification debts, not amplitude debts.
+
+The original ordinary E0(kappa)/all64 shifts, actual reference Coulomb boundary, original heavy/scalar law, normal selector, deeper microscopic/statistical hypotheses, and independently improved branch stay explicit. Consumed scientific helper bytes and the immutable pre-identification carrier source capsule are bound in the receipt, avoiding a circular whole-composer hash when only the final CLI later integrates this API.
+
+## Scientific interface
+
+Exports: spatial_flow, spatial_source_identification, physical_rest_spin, lowk_little_group, native_spatial_identification, geometric_identification_budget. physical_rest_spin and lowk_little_group accept branch=+1/-1. native_spatial_identification takes the SAME chart, frame, band, branch, and raw frozen115 intrinsic receipt. The CLI takes --descriptor, --cartesian-packet, --cartesian-receipt, --cartesian-correction, --band-metadata, --pre-identification-source, and --output. It reuses the carrier's independently recomputable correction verifier, including the exact approved two-statement guard delta rather than a false blanket type-only AST claim. The final joined consumer calls the identification API on its same chart instance. Source-bound natural execution and final supplier diagnostics are recorded after scientific repair; the joined carrier retains responsibility for final combined runtime and ledger.

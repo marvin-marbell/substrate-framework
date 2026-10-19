@@ -1,0 +1,120 @@
+{
+  "kind": "INDEPENDENT_REVISION_BOUND_MAGNETIC_SLAB_PROOF_REVIEW_WITH_DOMAIN_CORRECTION_NOT_ADMISSION",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "4b55f4c7d5e85dad23f1234872a556b3c4797806ed5be9cad0e32ef8c0edfa9a",
+    "accepted_scoped_science": "22ea10c92d5c2970049ca1469b35ae3bf75ed94dc53472930988bcffc1c5349d",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "requirements": ["outcome", "verification"],
+    "parent_sole_plan_and_shared_state_writer": true
+  },
+  "review_pins": {
+    "magnetic_boundary_slab_proof_20261011.json": "20bbcc4523137877d40bbda53094929d10af16a9e9de2b2cba799b413c71194e",
+    "magnetic_boundary_slab_scientist_20261011.py": "558533e6f61cf32e9ec378268555f4f76f6e3da9a09db630ef049124a521a7e6",
+    "magnetic_boundary_delivery_20261011.json": "eaac87cd5188c3831da89469f0abc9db8a5a9724591ee5be26a46d00f46fb4a3",
+    "magnetic_boundary_slab_actual1_20261011_receipt.json": "8520c773e6a4b94e075b0c20a54977053db2e52f9502fbee8e5230da726e253f",
+    "magnetic_boundary_slab_actual1_20261011_executed.zip": "7362b0d77b5ca6bbf77122b08655fae17e6c696bc789ac5fbd64156901b0202d",
+    "magnetic_boundary_actual3_20261011_executed.zip": "ef3030b6305817fbbf8d2565590a9e5a9e7d5605029b16d62fa4073fbe04f814"
+  },
+  "formal_scope_verdict": {
+    "status": "FINITE_N_NEW_MAGNETIC_BOUNDARY_REALIZATION_JUSTIFIABLE_AFTER_EXPLICIT_DOMAIN_CORRECTION",
+    "as_written_proof_unqualified_approval": false,
+    "new_boundary_law_domain": true,
+    "original_periodic_reducing_sector": false,
+    "original_campaign_adoption": false,
+    "precise_result": "A finite open-x/AP-yz graph with both tangential scalar U1 boundary connections removed from quantum coordinates, interior-only U1 gauge, all-site SU4 gauge, fullPhi and canonical matter admits a semibounded closed form and Friedrichs Hamiltonian. Its fixed noninteger boundary Wilson face cannot be changed by allowed dynamic-coordinate translations or endpoint gauges. The original proof's assertion that every native linear-Phi hop preserves the entire closed form domain is false. Core preservation and relative form boundedness, not that false assertion, justify the Hamiltonian.",
+    "no_ground_assumed_for_structure": true,
+    "ground_energy_phase_stiffness_pole_and_IR_atom": "OPEN"
+  },
+  "load_bearing_findings": [
+    {
+      "id": "F1",
+      "severity": "HIGH_SCOPE_DOMAIN_OVERCLAIM_NOT_FATAL_TO_FRIEDRICHS",
+      "owner": "magnetic_boundary_slab_proof_20261011.json quantum_form_and_Gauss.domain",
+      "trigger": "A vector in the closed quartic-Phi form domain with a finite fourth moment but infinite sixth moment is multiplied by a nonzero degree1 native Phi endpoint coefficient.",
+      "actual": "Its image need not remain in the closed quartic-Phi form domain. Smooth compact-supported core vectors are preserved, but closure cannot extend this invariance automatically.",
+      "exact_witness": "At one site's d=60 real Phi coordinates, r=||Phi||, use a smooth tail psi(r)=r^(-65/2) for r>=1, patched smoothly near the origin, and compact smooth functions in other real variables. The radial norm integrand is r^59*r^-65=r^-6, integral1/5. The quartic-form radial integrand is r^63*r^-65=r^-2, integral1. The gradient term has tail r^-8 and is finite. A nonzero degree1 multiplier on an angular patch gives its quartic-form radial integrand r^65*r^-65=1, integral infinity. Native positive alignment adds at most quadratic growth along this ray and does not invalidate membership. The finite charge-sector HC is bounded at fixed N. The Phi norm is SU4 invariant; a smooth equivariant angular/fibre packet supported where the native coefficient is nonzero gives the same tail obstruction after gauge completion.",
+      "exact_runtime_binding": "magnetic_boundary_review_actual1_20261011_receipt.json control.closed_form_invariance_counterexample asserts radial exponents0:-6,4:-2,6:0; independent consumer exits naturally0.",
+      "consequence": "Do not apply native hopping as a D(h)->D(h) map without additional mixed/sixth-moment estimates. Do not use this false assertion for spectral insertion or ground domain arguments.",
+      "smallest_correction": "Withdraw whole-form-domain preservation for unbounded Phi multipliers. Retain preservation of the smooth compact equivariant core and the relative form bound0 needed for closed forms. Allowed fullE translations and bounded smooth phase multipliers remain separate valid domain statements. Parent owns correction artifact; original proof stays immutable."
+    },
+    {
+      "id": "F2",
+      "severity": "MEDIUM_PHYSICAL_OPERATOR_SCOPE",
+      "owner": "magnetic_boundary_slab_scientist_20261011.py lines324-361 and proof actual_operator_discriminator.CAR_loop",
+      "trigger": "Treating a fixed colour0 rank-one CAR channel product as an all-site SU4-invariant physical observable.",
+      "actual": "The old computation evaluates a nonzero component of the full native operator. A colour projector is not independently invariant under arbitrary local SU4. Endpoint covariance of the full matrix law does not make that selected component an invariant observable.",
+      "correction_and_completion": "Use the product of full colour-summed oriented native hopping terms, retaining Phi/link transformations and CAR endpoint charges. Each such complete hop is gauge covariant before matter contraction and invariant after contraction. The new consumer sums all16 colour entries at each step; a legal diagonal pointwise Phi0 probe, with other Phi_mu=0 and SU4 identity on the loop, Pauli-blocks the other colours. On a full all65-species 2V canonical mask with Ref4, four complete oriented hops return the exact original mask with nonzero endpoint product for every charged species0..63 and neutral64. Charged Peierls ratio is exp(2pi i/16), neutral1. This is an operator-coefficient/nonvanishing witness, not a physical ground matrix element. No Phi freeze is adopted in the law.",
+      "consequence": "The scalar pinned U1 Wilson face is already an SU4-scalar gauge-invariant boundary datum. The native loop completion strengthens compatibility with all-site SU4 but supplies no spectrum or tension."
+    },
+    {
+      "id": "F3",
+      "severity": "LOAD_BEARING_QUOTIENT_NOT_L2_SUBSPACE",
+      "owner": "proof quantum_form_and_Gauss.Hilbert/domain",
+      "trigger": "Reading 'restrict by interior U1 gauge' as a nonzero invariant subspace of L2(R^M) rather than an explicitly reduced physical quotient.",
+      "actual": "D_I has full row rank, so interior real gauge orbits are noncompact of positive dimension. A strictly equivariant L2 wavefunction on the unreduced Lebesgue space has constant norm along every such orbit and must vanish. Pinned boundary scalar values likewise cannot be imposed as delta-function L2 vectors of the periodic Hilbert space.",
+      "smallest_precise_interpretation": "Use quotient coordinates eta=Q_I theta, Hilbert L2(ker D_I) with finite matter fibres, and reconstruct longitudinal gauge-equivariance as exp(i lambda.rho_I), not a normalizable factor. Then impose compact all-site SU4 invariance. At N4 there are176 existing edges,64 pinned scalar edges,112 dynamic scalar coordinates,32 independent interior gauge directions and80 reduced scalar coordinates. Proof explicitly says 'physical quotient'; under that interpretation there is no fatal gauge-domain obstruction.",
+      "consequence": "No embedding as an original periodic reducing Hilbert sector, no retained pinned E derivatives, and no claim that invariant averaging of the noncompact gauge group is a bounded projection on original L2."
+    }
+  ],
+  "law_geometry_and_Gauss_review": {
+    "law_assumptions": "Finite even N>=4, a>0 and positive finite chi,Lambda,F. Native onsite and one/two-link endpoint laws retained for existing paths only; AP signs on y,z wraps and no x wrap. All4 traceless Hermitian Phi/site, all15 components each, full SU4 Haar/Casimir on every existing edge, including pinned scalar-boundary edges, canonical charged1+63 and neutral species, Ref at boundary0. No bare electromagnetic B2 or input-dependent admissibility cut.",
+    "atlas": "In2pi units A_z=m*y/N^2 and seam A_y=-m*z/N at y=N-1, A_x=0. Transition g_y(z)=exp(-2pi i m z/N), g_z=1; integer m satisfies charge1 cocycle. A boundary yz plaquette has phase1/N^2 moduloZ for m1, with a compensating integer sheet only at the corner. Both boundary planes have lifted flux2pi. The scalar fixed Wilson face is exp(2pi i/N^2), not a newly invented bookkeeping charge.",
+    "boundary_group_and_reservoir": "Allowed U1 lambda vanish at x0 and xN-1. rho=sum64(n_s-2)+(Nref-4)delta0 is formed first, then restricted to interior rows. Normal edges are dynamic and allow net interior charge to flow to boundary. No periodic neutrality constraint or all-site U1 Gauss is imposed. Boundary charge is a reservoir degree of freedom of the declared law, not an erased equation. Ref lies on the boundary; its U1 contribution vanishes only AFTER interior restriction. The original all-site Gauss law would be false here.",
+    "Dirichlet_invertibility": "For any real lambda on interior sites extend lambda=0 to both boundaries. lambda.L_I.lambda=||D_I^T lambda||^2. Zero forces equal lambda across all dynamic connecting edges, including normal edges incident to boundaries; connectedness then forces lambda=0. Hence L_I=D_I D_I^T>0, with honest inverse and no periodic pseudoinverse/zero-mode removal.",
+    "collective_electric_split": "Q_I=I-D_I^T L_I^-1 D_I is the orthogonal projection to ker D_I. E_full=Q_I Pi+D_I^T L_I^-1 rho_I. HE=64||Q_I Pi||^2+64 rho_I^T L_I^-1 rho_I, one collective HC, once. If Pi is already transverse this is64||Pi||^2+HC64. On the quotient individual E_e means (Q_I e).(-i grad_eta)+(D_I^T L_I^-1 rho_I)_e, not112 independent unconstrained derivatives. Physical hopping changes rho and affine E consistently; projected-Pi-only updates are wrong.",
+    "new_exact_adverse_evidence": "Independent N4 complete32x112 incidence and exact rational inverse reproduce stripe HC=33554432/3 versus separate-species HC=524288/3, ratio64. A single localized native charge transfer, distinct from historical plane products, gives HE64 increment-12503824/1155, transverse increment37936/495 and HC64 increment-37777024/3465, with exact sum equality. Omitted pinned edge, omitted64th collective density, single-species density, unrestricted-A absorption and Pi-only update are rejected at the same intended accept boundaries."
+  },
+  "all_site_SU4_and_Ref_review": {
+    "boundary_SU4": "Boundary pins fix only scalar U1 phases. Arbitrary local SU4 remains allowed at every vertex; boundary tangent links remain quantum SU4 variables and Phi remains adjoint quantum data. Thus there is no colour boundary restriction to a stabilizer group.",
+    "endpoint_proof": "F_x=c0 Phi0_x+i ci Phij_x transforms adjointly and U_path transforms g_x U_path g_y^-1. B=(F_x U_path+U_path F_y)/2 transforms g_x B g_y^-1. Source variation is i h_x B, target variation-i B h_y, and an intermediate two-link vertex variation cancels between the two ordered link factors. Charged/neutral CAR bilinears contract these endpoint transformations. Scalar fixed U1 and AP factors commute with this action. The new consumer checks45 exact identities: both endpoints for all15 generators and all15 intermediate cancellations, with noncommuting probes and ordered noncommuting SU4 links.",
+    "Ref": "The local source operator sum_a c_0,a^dagger Ref_a is invariant when Ref transforms in the same fundamental at vertex0. In wedge4->wedge3 the missing Ref colour is precisely the compensating charge; source sectors with active2V+1 and Ref3 must be retained, rather than asserting a source stays inside the base fixed-number sector. The old Ref computation verifies CAR signs and U1 density cancellation, not a separate numerical all15 Ref derivative calculation; the SU4 cancellation here is the algebraic contraction identity.",
+    "physical_sector_nonzero": "The compact all-site SU4 invariant subspace is nonzero: sitewise all-colour wedge4/wedge0 singlets for each species at half the sites, Ref wedge4, adjoint-radial Phi packets and constant Haar link functions are a legal trial. Interior U1 charge is handled by the affine longitudinal quotient construction. No claim this trial minimizes H."
+  },
+  "dense_core_Friedrichs_and_coercivity_review": {
+    "core": "On the actual quotient use smooth compact-supported eta and fullPhi functions, smooth SU4 functions and finite canonical/source-sector vectors; average over the compact all-site SU4 group. This is a dense physical form core for the closure of the positive differential/potential form. Native finite smooth periodic Peierls multipliers and degree1 Phi coefficients preserve this smooth compact core. Closed-form-domain preservation of degree1 Phi multiplication is explicitly withdrawn by F1.",
+    "finite_N_form_construction": "Let h0 be the closed nonnegative sum of quotient electric kinetic, fullPhi derivatives, SU4 Casimirs, native nonnegative Jordan quartic, alignment and colour face terms, and collective HC64. Each finite-N matter coefficient is uniformly bounded in real connections and compact SU4, and at most linear in fullPhi. Finite-dimensional CAR/source sectors make ||V_matter||<=C_N(1+||Phi||), with actual finite couplings retained symbolically. Pointwise Young gives C_N r<=epsilon c_N r^4+K(epsilon,N); hence the matter form has relative bound0 with respect to h0. The sum is closed and semibounded and defines its unique Friedrichs form Hamiltonian. The fact the multiplier need not map D(h0) into itself does not prevent this construction.",
+    "quartic_constant": "With the usual normalization Tr(Ta Tb)=delta_ab/2, the diagonal mu=nu contributions give4 Tr(Phi_mu^4)>=(Tr Phi_mu^2)^2. Sum over4 mu and V sites gives Jordan sum>=||PhiCart||^4/(16V). Native Lambda/(16a) then gives Lambda/(256aV)||PhiCart||^4, matching the stated lower bound. If a different coordinate normalization is used, this constant must be rescaled; positivity and radial fourth-power domination remain. This is finite-N Phi coercivity, not uniform original-torus ground coercivity.",
+    "translations": "A legal shift changes dynamic real coordinates only. On the quotient its unitary includes the longitudinal density phase. It commutes with fixed gauge constraints/particle numbers and SU4, leaves h0 unchanged and changes matter by another relative-bound0 linear-Phi form. Therefore it preserves the common closed form domain; full operator-domain D(H) preservation is not established. A pure internal gradient translation acts by exp(i lambda.rho_I) and is not simultaneous Gauss symmetry; it can change literal charged hops.",
+    "remaining_domain_obstruction": "No fatal finite-N Friedrichs-domain obstruction remains under the specified quotient and core interpretation. There IS the exact unbounded-multiplier form-domain obstruction F1, and there would be a fatal zero-space obstruction if one instead insisted on literal unreduced-L2 gauge invariance. Neither is permission to change the original periodic law.",
+    "nonclaims": "No confinement/coercivity in all real connection coordinates, no compact resolvent, no normalizable minimizing ground, no all-site periodic Gauss realization, no infinite-volume representation or stationary ground is proved. Positive finite-N form construction is not physical1 phase/ground admission."
+  },
+  "native_loop_and_absorption_review": {
+    "structural_native_loop": "A complete oriented four-hop loop in the full scalar-Peierls law factors its charged exp(2pi i/N^2) from every colour contraction; neutral omits that factor. The independent exact N4 full-colour-summed canonical loop reaches and returns a full canonical mask, not a toy one-particle space. The retained generic all-site Phi/SU4 covariance identity supplies compatibility of the loop completion with the physical group; the nonzero selected pointwise packet is not a ground expectation.",
+    "exact_allowed_translation_obstruction": "Every tangent boundary face cochain is entirely on pinned edges, so its restriction to dynamic coordinates is0. Any allowed fullE translation leaves the loop phase exactly unchanged. The unrestricted torus shift-A has nonzero pinned tangent components and is rejected at the actual consumer accept boundary; removing one pin is itself rejected. Interior-only-A can trivialize some interior path factors but cannot change a boundary face. Any endpoint gauge telescopes around the closed loop, including gauges larger than the permitted interior group; noninteger face curvature1/N^2 cannot be cancelled.",
+    "strict_unitary_scope": "This rules out absorption by the allowed interior fullE translations and endpoint gauges. It does NOT prove inequivalence under every unitary, unequal spectra/spectral infima, positive magnetic energy/tension/stiffness, bulk response, a ground phase, or an atom/pole. A fixed nontrivial Wilson boundary datum alone cannot pay any of those debts."
+  },
+  "original_torus_archive_only_review": {
+    "source_sha256": "394702df84fdadd6c8c3d1b46130b8d31381d6d756085658b9aedb8cb8d5b35e",
+    "source_location": "magnetic_boundary_actual3_20261011_executed.zip:magnetic_boundary_scientist_20261011.py",
+    "archive_source_only_not_current_helper_backbinding": true,
+    "wrapped_obstruction": "Archived chart_control205-266 explicitly constructs principal-plane-flux crossings under legal real fullE translations. The t*A path has raw plane flux0 throughout and principal flux0->1 at threshold N^2/[2(N^2-1)] with cube defects0. Thus even imposing no cube defects does not make wrapped m a reducing sector of original fullE. A separate single-edge crossing also changes principal1->0 and produces balanced defects.",
+    "unrestricted_absorption": "For every literal torus one/two-link path the archived source proves theta+A equals the translated real cochain, with AP and ordered Phi/SU4 unchanged. The fixed sheet can still label a lift, but the matter scalar phases have been absorbed. With no EM B2 the kinetic and other native terms are unchanged by unrestricted translation, modulo the accepted quotient density phase/form-domain price. This is not disproved by the NEW slab, whose forbidden pinned components are absent original-law restrictions.",
+    "electric_Bloch": "Archived cylinder_control468-515 realizes an electric derivative-character domain with beta1/3, tests its integer-frequency paths and rejects a fractional path. It still admits magnetic background absorption. Its16/9 number is only deck-direction kinetic energy, not full H energy or a ground. It is correctly retained only as method/domain control, not a magnetic outcome.",
+    "historical_rerun": false
+  },
+  "execution_and_diagnostics": {
+    "new_independent_epoch": "magnetic_boundary_review_actual1_20261011",
+    "natural_exit": true,
+    "returncode": 0,
+    "elapsed_seconds": 1.2135869259946048,
+    "stdout": "exact_adverse_controls passed; ground false",
+    "stderr_empty": true,
+    "source_inputs_unchanged_during_execution": true,
+    "executed_zip_sha256": "fdd9ddcf1a445d023a580f67671b33c4f98d49b68898804f2d4b4bdbe55b1c9d",
+    "runtime_source_sha256": "cc9eb7a340c01c065e6ba8942ec6aec97449891bdec733964888bee43071dd63",
+    "actual_original_source_input_hashes": "All actual hashes are embedded in request, receipt, exit and both immutable ZIP manifests; archive-member profile and helper hashes are separately captured in receipt.",
+    "historical_cli_import_rerun_or_original_epoch_mutation": false,
+    "language_tooling": "Actual existing pyright-langserver stdio at substrate-222 pyproject root: documentSymbol, definition resolving slab accept_translation, representative original-source diagnostics empty, server natural exit0. Positive annotated-def structural AST query matched source83-85. LSP device absent and reported; no unnecessary reinstall.",
+    "selected_final_diagnostic": "One actual final LSP publication on independent consumer found seven tuple-length typing diagnostics, not runtime failures. Original executed source and that diagnostic are frozen in actual1 ZIP. Current source has ONLY postponed tuple annotations broadened to tuple[int,...], matching itertools.product's static type; no executable statement changed. This post-execution annotation correction is NOT backbound to actual1, and was not rechecked. Parent may run a current selected diagnostic if needed; no clean final diagnostic is claimed."
+  },
+  "delivery_boundary": {
+    "writes_only": "magnetic_boundary_review_*",
+    "parent_integrates_shared_plan_README_state_and_corrections": true,
+    "energy_phase_pole_still_unpaid": true,
+    "campaign_complete": false,
+    "science_completion_is_admission": false
+  }
+}

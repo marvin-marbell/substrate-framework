@@ -1,0 +1,60 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave33_20261016_projected.py", line 145, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave33_20261016_projected.py", line 111, in main
+    bs,Es,raw,accepted=chain(seed,3000,table,coeff)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/dispatcher.py", line 422, in _compile_for_args
+    error_rewrite(e, 'typing')
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/dispatcher.py", line 363, in error_rewrite
+    raise e.with_traceback(None)
+numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
+Failed in nopython mode pipeline (step: nopython frontend)
+No implementation of function Function(<built-in function dot>) found for signature:
+ 
+ >>> dot(array(int64, 1d, C), array(int64, 1d, C))
+ 
+There are 4 candidate implementations:
+ - Of which 2 did not match due to:
+ Overload in function 'dot_2': File: numba/np/linalg.py: Line 585.
+   With argument(s): '(array(int64, 1d, C), array(int64, 1d, C))':
+  Rejected as the implementation raised a specific error:
+    NumbaTypeError: Failed in nopython mode pipeline (step: native lowering)
+  unsupported dtype for <BLAS function>()
+  During: lowering "$14call.4 = call $8load_deref.1(a, b, func=$8load_deref.1, args=[Var(a, linalg.py:644), Var(b, linalg.py:644)], kws=(), vararg=None, varkwarg=None, target=None)" at /home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/np/linalg.py (644)
+  During: Pass native_lowering
+  raised from /home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/np/linalg.py:109
+ - Of which 2 did not match due to:
+ Overload in function 'dot_3': File: numba/np/linalg.py: Line 848.
+   With argument(s): '(array(int64, 1d, C), array(int64, 1d, C))':
+  Rejected as the implementation raised a specific error:
+    TypingError: missing a required argument: 'out'
+  raised from /home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/typing/templates.py:791
+
+During: resolving callee type: Function(<built-in function dot>)
+During: typing of call at /home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave33_20261016_projected.py (33)
+During: typing of call at /home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave33_20261016_projected.py (34)
+During: typing of call at /home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave33_20261016_projected.py (61)
+
+File "rich_review_wave33_20261016_projected.py", line 33:
+def measure(bits,E,table,coeff):
+    <source elided>
+    for v in range(8):D+=((bits>>(2*v))&1)*((bits>>(2*v+1))&1)
+    guide=psi**2+.2**2*np.exp(-.9*D-.3*np.dot(E,E))
+    ^
+
+During: Pass nopython_type_inference
+During: resolving callee type: type(CPUDispatcher(<function measure at 0x7aed1e60af20>))
+During: typing of call at /home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave33_20261016_projected.py (97)
+During: typing of call at /home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave33_20261016_projected.py (102)
+During: typing of call at /home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave33_20261016_projected.py (78)
+
+File "rich_review_wave33_20261016_projected.py", line 78:
+def chain(seed,n,table,coeff):
+    <source elided>
+    E=np.zeros(24,np.int64)
+    weight=measure(bits,E,table,coeff)[0]
+    ^
+
+During: Pass nopython_type_inference

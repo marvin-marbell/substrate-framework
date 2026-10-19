@@ -1,0 +1,79 @@
+{
+  "kind": "JOINED_ACTUAL_CANONICAL_THERMAL_MOMENT_RESPONSE_COMPOSITION_NOT_UNIFORM_IR",
+  "source_sha256": "92d06f6b510e280a89065eda4d04be690841f9a338e70fbf6cf5ce53f9d3e44b",
+  "request_sha256": "c1a1523042c81a0a58731667d787e1f804a6925feddf42df33060b853f97e111",
+  "input_sha256": {
+    "magnetic_thermal_parent_joined_bounds_20261011.py": "92d06f6b510e280a89065eda4d04be690841f9a338e70fbf6cf5ce53f9d3e44b",
+    "magnetic_thermal_actual2_20261011_preexecution.zip": "a6da402d4032a601c1085ed338f112a9cf8babd92a5bcb795cc067c878b04377",
+    "magnetic_thermal_actual2_20261011_executed.zip": "b966237324d51713582706ce5c8d2f256f484ac0fa26079967001921d03021d3",
+    "magnetic_thermal_actual2_20261011_receipt.json": "3757896c3f77f6b52b9788512c2677bef40afcd9704bbcdfc2a2c088069322dc",
+    "boundary_bulk_actual2_20261011_preexecution.zip": "e9317720899bee44b1f0965ceeb939d238e1b140c610696ffbb5e3ed1ad4edaa",
+    "boundary_bulk_actual2_20261011_executed.zip": "a31857fbf333a8632a016628ac8755ed754e720c95f61f6d24f5415b64a7866e",
+    "boundary_bulk_actual2_20261011_receipt.json": "2c128d11384f95b4b0fa60b0ec0dbd82d85f5b361cc81b127fa9bec8863fd202",
+    "boundary_bulk_delivery_20261011.json": "aa1903afb2938cc851e139ce3fea1ea91e2a77754a155562597736ff4648a64d",
+    "magnetic_thermal_delivery_20261011.json": "b4bb92305abfe70ea5dc8876ba8a6c76e9911e7ef1b172a76d95d1fc89fbb96c",
+    "boundary_bulk_proof_20261011.json": "6cd70df508a7cdcc2cb9042ac75346dab943671f8936745929bd0aea70b30b5f",
+    "magnetic_thermal_proof_20261011.json": "8249907cb059c3eb1375ee91d402bbff47353620831b9e5898ebabe6bdcefa52"
+  },
+  "original_archive_members": {
+    "thermal": 23,
+    "bulk": 16
+  },
+  "boundary_coefficients_exact": {
+    "CJ": "15475017073321605/1099511627776",
+    "CK": "17636744894459443/1099511627776",
+    "wrong_role_CJ": "15475017073321605/35184372088832"
+  },
+  "derived_conditional_response": {
+    "premise": "Actual same finiteN fixed-beta all-character physical state with Cbeta=<sum|z|^4>/V upper from bulk heat/entropy theorem, subject to its independent review.",
+    "HS_convention": "r_x^2=Tr sum Phi_mu^2=|z_x|^2/2",
+    "n_boundary": "2N^2",
+    "J_squared_upper": "(CJ^2/2)*(2N^2)^(3/2)*sqrt(N^3*Cbeta)",
+    "contact_absolute_upper": "(CK/sqrt(2))*(2N^2)^(3/4)*(N^3*Cbeta)^(1/4)",
+    "chi_upper": "beta*J_squared_upper; global connected mean, complete degenerate blocks",
+    "Fsecond_enclosure": "[-contact_absolute_upper-beta*J_squared_upper,+contact_absolute_upper]",
+    "derivation": "Pointwise four-norm Holder, then concavity/Jensen for actual thermal expectation; no independent-copy/selected-site assumption.",
+    "J_squared_per_boundary_area_scaling": "O(N^(5/2)) at fixed beta,Cbeta; no N-uniform IR/stiffness claim",
+    "numeric_native_partition_or_response": false
+  },
+  "adverse_concentration": [
+    {
+      "N": 4,
+      "V": 64,
+      "boundary_sites": 32,
+      "sum_z4_exact": "64",
+      "saturating_boundary_linear_sum_fourth_exact": "524288",
+      "wrong_selected_site_bound_fourth_exact": "262144",
+      "ratio_exact": "2",
+      "selected_site_from_average_rejected": true,
+      "witness_is_native_thermal_state": false
+    },
+    {
+      "N": 6,
+      "V": 216,
+      "boundary_sites": 72,
+      "sum_z4_exact": "216",
+      "saturating_boundary_linear_sum_fourth_exact": "20155392",
+      "wrong_selected_site_bound_fourth_exact": "6718464",
+      "ratio_exact": "3",
+      "selected_site_from_average_rejected": true,
+      "witness_is_native_thermal_state": false
+    },
+    {
+      "N": 8,
+      "V": 512,
+      "boundary_sites": 128,
+      "sum_z4_exact": "512",
+      "saturating_boundary_linear_sum_fourth_exact": "268435456",
+      "wrong_selected_site_bound_fourth_exact": "67108864",
+      "ratio_exact": "4",
+      "selected_site_from_average_rejected": true,
+      "witness_is_native_thermal_state": false
+    }
+  ],
+  "new_pressure_sign_paid": false,
+  "boundary_to_periodic_state_bridge_paid": false,
+  "fullphysical_ground_phase_stiffness_photon_admitted": false,
+  "old_producer_solver_root_checker_rerun": false,
+  "campaign_complete": false
+}

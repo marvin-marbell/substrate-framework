@@ -1,0 +1,1812 @@
+{
+  "root": "/home/administrator/substrate-222",
+  "server": "/home/administrator/.local/bin/pyright-langserver",
+  "before_runtime": [
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Pyright language server 1.1.414 starting"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Server root directory: file:///home/administrator/.local/lib/node_modules/pyright/dist"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Starting service instance \"substrate-222\""
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "capabilities": {
+          "textDocumentSync": 2,
+          "definitionProvider": {
+            "workDoneProgress": true
+          },
+          "declarationProvider": {
+            "workDoneProgress": true
+          },
+          "typeDefinitionProvider": {
+            "workDoneProgress": true
+          },
+          "referencesProvider": {
+            "workDoneProgress": true
+          },
+          "documentSymbolProvider": {
+            "workDoneProgress": true
+          },
+          "workspaceSymbolProvider": {
+            "workDoneProgress": true
+          },
+          "hoverProvider": {
+            "workDoneProgress": true
+          },
+          "documentHighlightProvider": {
+            "workDoneProgress": true
+          },
+          "renameProvider": {
+            "prepareProvider": true,
+            "workDoneProgress": true
+          },
+          "completionProvider": {
+            "triggerCharacters": [
+              ".",
+              "[",
+              "\"",
+              "'"
+            ],
+            "resolveProvider": true,
+            "workDoneProgress": true,
+            "completionItem": {
+              "labelDetailsSupport": true
+            }
+          },
+          "signatureHelpProvider": {
+            "triggerCharacters": [
+              "(",
+              ",",
+              ")"
+            ],
+            "workDoneProgress": true
+          },
+          "codeActionProvider": {
+            "codeActionKinds": [
+              "quickfix",
+              "source.organizeImports"
+            ],
+            "workDoneProgress": true
+          },
+          "executeCommandProvider": {
+            "commands": [],
+            "workDoneProgress": true
+          },
+          "callHierarchyProvider": true,
+          "workspace": {
+            "workspaceFolders": {
+              "supported": true,
+              "changeNotifications": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 0,
+      "method": "workspace/configuration",
+      "params": {
+        "items": [
+          {
+            "scopeUri": "file:///home/administrator/substrate-222",
+            "section": "python"
+          }
+        ]
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "workspace/configuration",
+      "params": {
+        "items": [
+          {
+            "scopeUri": "file:///home/administrator/substrate-222",
+            "section": "pyright"
+          }
+        ]
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Loading pyproject.toml file at /home/administrator/substrate-222/pyproject.toml"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Setting pythonPath for service \"substrate-222\": \"/home/administrator/substrate-framework/.venv/bin/python\""
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "No include entries specified; assuming /home/administrator/substrate-222"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Auto-excluding **/node_modules"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Auto-excluding **/__pycache__"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Auto-excluding **/.*"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Auto-excluding **/__editable__.*"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Assuming Python version 3.12.3.final.0"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": [
+        {
+          "name": "IMPORT_EPOCH_UNIX",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 17,
+                "character": 0
+              },
+              "end": {
+                "line": 17,
+                "character": 17
+              }
+            }
+          }
+        },
+        {
+          "name": "ROOT",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 18,
+                "character": 0
+              },
+              "end": {
+                "line": 18,
+                "character": 4
+              }
+            }
+          }
+        },
+        {
+          "name": "PLAN",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 19,
+                "character": 0
+              },
+              "end": {
+                "line": 19,
+                "character": 4
+              }
+            }
+          }
+        },
+        {
+          "name": "PLAN_BYTES_AT_IMPORT",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 20,
+                "character": 0
+              },
+              "end": {
+                "line": 20,
+                "character": 20
+              }
+            }
+          }
+        },
+        {
+          "name": "SOURCE_BYTES_AT_IMPORT",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 21,
+                "character": 0
+              },
+              "end": {
+                "line": 21,
+                "character": 22
+              }
+            }
+          }
+        },
+        {
+          "name": "module",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 22,
+                "character": 4
+              },
+              "end": {
+                "line": 22,
+                "character": 10
+              }
+            }
+          }
+        },
+        {
+          "name": "filename",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 23,
+                "character": 4
+              },
+              "end": {
+                "line": 23,
+                "character": 12
+              }
+            }
+          }
+        },
+        {
+          "name": "path",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 25,
+                "character": 8
+              },
+              "end": {
+                "line": 25,
+                "character": 12
+              }
+            }
+          }
+        },
+        {
+          "name": "PINNED",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 29,
+                "character": 0
+              },
+              "end": {
+                "line": 29,
+                "character": 6
+              }
+            }
+          }
+        },
+        {
+          "name": "INPUT_BYTES_AT_IMPORT",
+          "kind": 14,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 37,
+                "character": 0
+              },
+              "end": {
+                "line": 37,
+                "character": 21
+              }
+            }
+          }
+        },
+        {
+          "name": "digest",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 39,
+                "character": 0
+              },
+              "end": {
+                "line": 40,
+                "character": 43
+              }
+            }
+          }
+        },
+        {
+          "name": "data",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 39,
+                "character": 11
+              },
+              "end": {
+                "line": 39,
+                "character": 22
+              }
+            }
+          },
+          "containerName": "digest"
+        },
+        {
+          "name": "file_hash",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 0
+              },
+              "end": {
+                "line": 47,
+                "character": 24
+              }
+            }
+          }
+        },
+        {
+          "name": "path",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 42,
+                "character": 14
+              },
+              "end": {
+                "line": 42,
+                "character": 24
+              }
+            }
+          },
+          "containerName": "file_hash"
+        },
+        {
+          "name": "h",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 43,
+                "character": 4
+              },
+              "end": {
+                "line": 43,
+                "character": 5
+              }
+            }
+          },
+          "containerName": "file_hash"
+        },
+        {
+          "name": "stream",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 44,
+                "character": 28
+              },
+              "end": {
+                "line": 44,
+                "character": 34
+              }
+            }
+          },
+          "containerName": "file_hash"
+        },
+        {
+          "name": "chunk",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 45,
+                "character": 12
+              },
+              "end": {
+                "line": 45,
+                "character": 17
+              }
+            }
+          },
+          "containerName": "file_hash"
+        },
+        {
+          "name": "descriptor_hash",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 49,
+                "character": 0
+              },
+              "end": {
+                "line": 50,
+                "character": 61
+              }
+            }
+          }
+        },
+        {
+          "name": "value",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 49,
+                "character": 20
+              },
+              "end": {
+                "line": 49,
+                "character": 41
+              }
+            }
+          },
+          "containerName": "descriptor_hash"
+        },
+        {
+          "name": "check_inputs",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 52,
+                "character": 0
+              },
+              "end": {
+                "line": 55,
+                "character": 62
+              }
+            }
+          }
+        },
+        {
+          "name": "name",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 53,
+                "character": 8
+              },
+              "end": {
+                "line": 53,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "check_inputs"
+        },
+        {
+          "name": "expected",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 53,
+                "character": 14
+              },
+              "end": {
+                "line": 53,
+                "character": 22
+              }
+            }
+          },
+          "containerName": "check_inputs"
+        },
+        {
+          "name": "load_spectrum",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 57,
+                "character": 0
+              },
+              "end": {
+                "line": 112,
+                "character": 107
+              }
+            }
+          }
+        },
+        {
+          "name": "capsule_path",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 57,
+                "character": 18
+              },
+              "end": {
+                "line": 57,
+                "character": 36
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "capsule",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 60,
+                "character": 4
+              },
+              "end": {
+                "line": 60,
+                "character": 11
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "descriptor",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 61,
+                "character": 4
+              },
+              "end": {
+                "line": 61,
+                "character": 14
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "nodes",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 68,
+                "character": 10
+              },
+              "end": {
+                "line": 68,
+                "character": 15
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "metric",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 68,
+                "character": 23
+              },
+              "end": {
+                "line": 68,
+                "character": 29
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "name",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 75,
+                "character": 8
+              },
+              "end": {
+                "line": 75,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "expected",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 75,
+                "character": 14
+              },
+              "end": {
+                "line": 75,
+                "character": 22
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "physical",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 85,
+                "character": 4
+              },
+              "end": {
+                "line": 85,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "blocks",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 86,
+                "character": 4
+              },
+              "end": {
+                "line": 86,
+                "character": 10
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "record",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 87,
+                "character": 8
+              },
+              "end": {
+                "line": 87,
+                "character": 14
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "sign",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 88,
+                "character": 8
+              },
+              "end": {
+                "line": 88,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "sector",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 89,
+                "character": 8
+              },
+              "end": {
+                "line": 89,
+                "character": 14
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "path",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 92,
+                "character": 8
+              },
+              "end": {
+                "line": 92,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "shape",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 93,
+                "character": 8
+              },
+              "end": {
+                "line": 93,
+                "character": 13
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "dimension",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 94,
+                "character": 8
+              },
+              "end": {
+                "line": 94,
+                "character": 17
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "q",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 101,
+                "character": 8
+              },
+              "end": {
+                "line": 101,
+                "character": 9
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "vectors",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 104,
+                "character": 8
+              },
+              "end": {
+                "line": 104,
+                "character": 15
+              }
+            }
+          },
+          "containerName": "load_spectrum"
+        },
+        {
+          "name": "canonical_physical_descriptor",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 114,
+                "character": 0
+              },
+              "end": {
+                "line": 132,
+                "character": 194
+              }
+            }
+          }
+        },
+        {
+          "name": "physical",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 114,
+                "character": 34
+              },
+              "end": {
+                "line": 114,
+                "character": 57
+              }
+            }
+          },
+          "containerName": "canonical_physical_descriptor"
+        },
+        {
+          "name": "states",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 116,
+                "character": 4
+              },
+              "end": {
+                "line": 116,
+                "character": 10
+              }
+            }
+          },
+          "containerName": "canonical_physical_descriptor"
+        },
+        {
+          "name": "rows",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 116,
+                "character": 12
+              },
+              "end": {
+                "line": 116,
+                "character": 16
+              }
+            }
+          },
+          "containerName": "canonical_physical_descriptor"
+        },
+        {
+          "name": "index",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 119,
+                "character": 8
+              },
+              "end": {
+                "line": 119,
+                "character": 13
+              }
+            }
+          },
+          "containerName": "canonical_physical_descriptor"
+        },
+        {
+          "name": "state",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 119,
+                "character": 14
+              },
+              "end": {
+                "line": 119,
+                "character": 19
+              }
+            }
+          },
+          "containerName": "canonical_physical_descriptor"
+        },
+        {
+          "name": "row",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 122,
+                "character": 8
+              },
+              "end": {
+                "line": 122,
+                "character": 11
+              }
+            }
+          },
+          "containerName": "canonical_physical_descriptor"
+        },
+        {
+          "name": "flux",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 122,
+                "character": 19
+              },
+              "end": {
+                "line": 122,
+                "character": 23
+              }
+            }
+          },
+          "containerName": "canonical_physical_descriptor"
+        },
+        {
+          "name": "electric",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 122,
+                "character": 24
+              },
+              "end": {
+                "line": 122,
+                "character": 32
+              }
+            }
+          },
+          "containerName": "canonical_physical_descriptor"
+        },
+        {
+          "name": "basis_description",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 135,
+                "character": 0
+              },
+              "end": {
+                "line": 139,
+                "character": 113
+              }
+            }
+          }
+        },
+        {
+          "name": "sector",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 135,
+                "character": 22
+              },
+              "end": {
+                "line": 135,
+                "character": 44
+              }
+            }
+          },
+          "containerName": "basis_description"
+        },
+        {
+          "name": "physics_descriptor",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 141,
+                "character": 0
+              },
+              "end": {
+                "line": 151,
+                "character": 92
+              }
+            }
+          }
+        },
+        {
+          "name": "nodes",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 141,
+                "character": 23
+              },
+              "end": {
+                "line": 141,
+                "character": 40
+              }
+            }
+          },
+          "containerName": "physics_descriptor"
+        },
+        {
+          "name": "plan_sha",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 141,
+                "character": 42
+              },
+              "end": {
+                "line": 141,
+                "character": 55
+              }
+            }
+          },
+          "containerName": "physics_descriptor"
+        },
+        {
+          "name": "run",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 153,
+                "character": 0
+              },
+              "end": {
+                "line": 193,
+                "character": 112
+              }
+            }
+          }
+        },
+        {
+          "name": "scratch",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 153,
+                "character": 8
+              },
+              "end": {
+                "line": 153,
+                "character": 21
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "gamma",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 156,
+                "character": 4
+              },
+              "end": {
+                "line": 156,
+                "character": 9
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "embedding",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 156,
+                "character": 11
+              },
+              "end": {
+                "line": 156,
+                "character": 20
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "nodes",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 156,
+                "character": 22
+              },
+              "end": {
+                "line": 156,
+                "character": 27
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "heat",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 156,
+                "character": 29
+              },
+              "end": {
+                "line": 156,
+                "character": 33
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "Hphi",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 156,
+                "character": 35
+              },
+              "end": {
+                "line": 156,
+                "character": 39
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "metric",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 156,
+                "character": 41
+              },
+              "end": {
+                "line": 156,
+                "character": 47
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "physical",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 157,
+                "character": 4
+              },
+              "end": {
+                "line": 157,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "blocks",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 158,
+                "character": 4
+              },
+              "end": {
+                "line": 158,
+                "character": 10
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "sign",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 159,
+                "character": 8
+              },
+              "end": {
+                "line": 159,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "sector",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 160,
+                "character": 8
+              },
+              "end": {
+                "line": 160,
+                "character": 14
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "path",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 161,
+                "character": 8
+              },
+              "end": {
+                "line": 161,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "factor",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 165,
+                "character": 8
+              },
+              "end": {
+                "line": 165,
+                "character": 14
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "haar",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 165,
+                "character": 16
+              },
+              "end": {
+                "line": 165,
+                "character": 20
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "diagnostics",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 165,
+                "character": 22
+              },
+              "end": {
+                "line": 165,
+                "character": 33
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "q",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 168,
+                "character": 8
+              },
+              "end": {
+                "line": 168,
+                "character": 9
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "abi",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 168,
+                "character": 11
+              },
+              "end": {
+                "line": 168,
+                "character": 14
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "generated",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 172,
+                "character": 8
+              },
+              "end": {
+                "line": 172,
+                "character": 17
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "dimension",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 178,
+                "character": 4
+              },
+              "end": {
+                "line": 178,
+                "character": 13
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "descriptor",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 181,
+                "character": 4
+              },
+              "end": {
+                "line": 181,
+                "character": 14
+              }
+            }
+          },
+          "containerName": "run"
+        },
+        {
+          "name": "main",
+          "kind": 12,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 195,
+                "character": 0
+              },
+              "end": {
+                "line": 223,
+                "character": 64
+              }
+            }
+          }
+        },
+        {
+          "name": "parser",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 196,
+                "character": 4
+              },
+              "end": {
+                "line": 196,
+                "character": 10
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "args",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 200,
+                "character": 4
+              },
+              "end": {
+                "line": 200,
+                "character": 8
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "start",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 203,
+                "character": 4
+              },
+              "end": {
+                "line": 203,
+                "character": 9
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "result",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 205,
+                "character": 8
+              },
+              "end": {
+                "line": 205,
+                "character": 14
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "spectrum",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 208,
+                "character": 4
+              },
+              "end": {
+                "line": 208,
+                "character": 12
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "controls",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 208,
+                "character": 14
+              },
+              "end": {
+                "line": 208,
+                "character": 22
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "probe",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 209,
+                "character": 4
+              },
+              "end": {
+                "line": 209,
+                "character": 9
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "wave",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 213,
+                "character": 4
+              },
+              "end": {
+                "line": 213,
+                "character": 8
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "recovered",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 214,
+                "character": 4
+              },
+              "end": {
+                "line": 214,
+                "character": 13
+              }
+            }
+          },
+          "containerName": "main"
+        },
+        {
+          "name": "defect",
+          "kind": 13,
+          "location": {
+            "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+            "range": {
+              "start": {
+                "line": 215,
+                "character": 4
+              },
+              "end": {
+                "line": 215,
+                "character": 10
+              }
+            }
+          },
+          "containerName": "main"
+        }
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": [
+        {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+          "range": {
+            "start": {
+              "line": 57,
+              "character": 4
+            },
+            "end": {
+              "line": 57,
+              "character": 17
+            }
+          }
+        },
+        {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+          "range": {
+            "start": {
+              "line": 208,
+              "character": 25
+            },
+            "end": {
+              "line": 208,
+              "character": 38
+            }
+          }
+        }
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 1,
+        "message": "Enumeration of workspace source files is taking longer than 10 seconds.\nThis may be because:\n* You have opened your home directory or entire hard drive as a workspace\n* Your workspace contains a very large number of directories and files\n* Your workspace contains a symlink to a directory with many files\n* Your workspace is remote, and file enumeration is slow\nTo reduce this time, open a workspace directory with fewer files or add a pyrightconfig.json configuration file with an \"exclude\" section to exclude subdirectories from your workspace. For more details, refer to https://github.com/microsoft/pyright/blob/main/docs/configuration.md."
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "Found 2196 source files"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "[FG] Long operation: checking: file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py (5841ms)"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "window/logMessage",
+      "params": {
+        "type": 3,
+        "message": "[FG] Long operation: analyzing: file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py (5841ms)"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_collective_cut3_charged.py",
+        "version": 1,
+        "diagnostics": []
+      }
+    }
+  ],
+  "AST_positive": "base.streamed_factor matched frozen cut2 lines110,141",
+  "exact_cut3_dimensions": {
+    "physical_rows": 11488,
+    "dimension": 34464,
+    "blocks": [
+      20010,
+      14454
+    ]
+  }
+}

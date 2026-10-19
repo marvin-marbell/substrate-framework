@@ -1,0 +1,101 @@
+{
+  "kind": "INDEPENDENT_PARENT_RADIAL_COROLLARY_ADDENDUM_EXPLICIT_NEW_ANALYTIC_EPOCH_CORRECTION_NOT_ORIGINAL_RETAG",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "11c9171134619d7fd92c3acb040ba42d3b4d36ec42819ec809ba2bbdcf8229a4",
+    "accepted_scoped_science": "2f0bfe8e2ca9c558be5ad3eab0e06e6773692b7b573886a0d4dcead3d2118ea6",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe"
+  },
+  "parent_corollary_pins": {
+    "neutral_body_parent_ground_radial_window_20261012.py": {
+      "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/neutral_body_parent_ground_radial_window_20261012.py",
+      "sha256": "990964e15285317414875d9557f24aae229df2618f50ce01699aaffaa8eca485"
+    },
+    "history_operator_reset_parent_ground_radial_window_actual1_20261012_receipt.json": {
+      "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/history_operator_reset_parent_ground_radial_window_actual1_20261012_receipt.json",
+      "sha256": "878fc7f7a3ea098e0f9799ce0ebab842300a225c96de4144ec3acc75d44b6252"
+    },
+    "history_operator_reset_parent_ground_radial_window_actual1_20261012_request.json": {
+      "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/history_operator_reset_parent_ground_radial_window_actual1_20261012_request.json",
+      "sha256": "32a55787dc88a4cf41dea4c97457ce7d50ab3f1a0c47873758f8ce157b2519df"
+    },
+    "history_operator_reset_parent_ground_radial_window_actual1_20261012_exit.json": {
+      "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/history_operator_reset_parent_ground_radial_window_actual1_20261012_exit.json",
+      "sha256": "b87eda2853f30bf7793c6a21c0619ca467de92d6b05b6d420c6e82c0e58194f3"
+    }
+  },
+  "original_independent_review_preserved": {
+    "contract_sha256": "8a74e4413b8bb6a8de63ad55f685f0ec2fede2b7568ae14e9acc5adf7af96840",
+    "target_proof_sha256": "ebf08371a0652d0122b6ebd7a3a18e637d25592194b592b0013fdca03bbba4bb",
+    "target_interface_sha256": "8953df655368289684994a74cbf68cd93a9067f93d6a1ba3433b2ac25beb4c50",
+    "final_measure_clarified_proof_sha256": "25bc3bc52f4015be12ea8c4f7b0a939ae98af7fc434cb81c9f0a0d80ec130f32",
+    "mutated": false
+  },
+  "premise": {
+    "quantum_source_interface": "connected_quantum_sea_interface_20261012.json",
+    "sha256": "b63d1a814d7071e8b6de7ff40e8766fd0834066cd5d694bdc66ffe1278242616",
+    "upper": "Eglob/V<-21Lambda ONLY after independent source/fullH upper admission",
+    "source_upper_pending_parent_acceptance": true,
+    "ground_realization": "Inherited globally minimizing Bloch family, normalized physical Gauss/sewn-cover Phi marginal, translation averaging",
+    "moments": "<s_x^2><2^14",
+    "lattice": "every evenN>=4"
+  },
+  "observed_parent_execution": {
+    "returncode": 0,
+    "natural_exit": true,
+    "elapsed_seconds": 0.8386320310237352,
+    "pins_unchanged": true,
+    "reviewer_reran_parent_cli": false
+  },
+  "frozen_parent_derivation_verdict": "As-written Phi0 derivation is NOT sound; its numerical Phi0 floor/window can be recovered by the explicit corrected proof below. Natural0 arithmetic assertions do not test the claimedJordan coefficient.",
+  "load_bearing_findings": [
+    {
+      "target": "receipt Phi0_static_component.derivation / source comments64-66 and result90",
+      "defect": "J>=64sum_mu x_mu^2 is false when x_mu=Tr(Phi_mu^2). Correct constant is4.",
+      "exact_native_counterexample": {
+        "Phi0": "diag(1,1,-1,-1)/2",
+        "Phi1_Phi2_Phi3": "zero",
+        "x0": "1",
+        "orderedJordan_J": "4",
+        "wrong_asserted_lower": "64"
+      },
+      "derivation": "Diagonal ordered term=4Tr{Phi_mu,Phi_mu}^2=16TrPhi_mu^4>=4(TrPhi_mu^2)^2. 64 applies instead to scalarClifford amplitude fourth powers when x_mu=4amplitude_mu^2."
+    },
+    {
+      "target": "receipt Phi0_static_component.derivation / parent proposed inequality",
+      "defect": "51sqrt(<x0>)>13/2 implies x0>169/10404, not169/2601. Repaired proof gives51sqrt(<x0>)>13."
+    }
+  ],
+  "corrected_component_proof": [
+    "Keep x_mu,x=Tr(Phi_mu,x^2)>=0. All cross-ordered anticommutator-square terms are nonnegative; retain only diagonals to obtainJ>=4sum_x,sum_mu x_mu,x^2. Averaging/integrating gives<J>/V>=4sum_mu <x_mu>^2. For spatial totalt=sum_i <x_i>, spatial diagonalJordan>=4t^2/3.",
+    "Split actual neutralh=h0+hspatial. h0 includes onsite and ALL length1c0Phi0 endpoint hops; hspatial includes ALL length1 i*ci Phi_i endpoint hops. Both are Hermitian and trace0. At each configuration canonicalKyFan subadditivity givesK_2V(h)<=K_2V(h0)+K_2V(hspatial). For any trace0 Hermitian4Vmatrixa, K_2V(a)<=.5Tr|a|<=sqrt(VTra^2). This has NO extra factor2.",
+    "Native trace-square bounds separately giveTrh0^2<=A0sum_x x0,x, andTrhspatial^2<=Ai sum_x,sum_i xi,x, with A0=m^2+6c0^2,Ai=2ci^2. Exact endpoint average Hilbert-Schmidt bound uses unitarySU4 links andactualAP signs. ThusK/V<=sqrt(A0*x0bar)+sqrt(Ai*tbar); integrated concavity supplies the same bound at the actual-family means. This is also obtainable from the joint bound sqrt(A0*x0bar+Ai*tbar) followed by sqrt(a+b)<=sqrt(a)+sqrt(b).",
+    "Drop nonnegativeQ,Falignment/colour, temporalJordan. Keep charged native expectation>=-Dch sqrt(<s>), withsqrt(<s>)<12 fromM<2^14. HenceEglob/(LambdaV)>=-sqrt(A0)*sqrt(<x0>)+4t^2/3-sqrt(Ai*t)-12Dch/Lambda.",
+    "For t>=0 minimizef(t)=4t^2/3-sqrt(Ai*t). Stationary t^(3/2)=3sqrt(Ai)/16; exactminimum=-(3/2)(3Ai^2/128)^(1/3)>-14 because3Ai^2/128<(28/3)^3. This reproduces the saved numeric spatial constant only after BOTH normalization repairs:Jordan64->4 and splitKyFan2sqrt->sqrt.",
+    "Use12Dch/Lambda<1/2 andsqrt(A0)<51/2. If the independently admitted upperEglob/(LambdaV)<-21 holds, then (51/2)sqrt(<x0>)>13/2, equivalently51sqrt(<x0>)>13, and<x0>>169/2601.",
+    "Since0<=x0<=s, <x0^2><2^14. Foralpha=1/64, Cauchy gives<x0><=alpha+sqrt(M P(x0>=alpha)), soP(x0>=1/64)>(169/2601-1/64)^2/2^14. MarkovP(x0>2^20)<2^14/2^40=2^-26. Subtracting gives the positive static probabilitylower474383/3546913701888 for1/64<=x0<=2^20. No independence or fieldprojector form invariance is asserted."
+  ],
+  "corrected_component_numbers": {
+    "mean_floor": "169/2601",
+    "probability_window_floor": "474383/3546913701888",
+    "upper_tail_bound": "2^-26",
+    "spatial_minimum": "-(3/2)*(3Ai^2/128)^(1/3)>-14"
+  },
+  "original_total_s_corollary": {
+    "verdict": "Sound unchanged, conditional on admitted newupper",
+    "mean_floor": "441/676",
+    "window": "1/4<=s<=2^16",
+    "probability_floor": "45423/7487094784"
+  },
+  "integration_action": "Preserve the frozen parentactual1 source/receipt. Publish a separate explicit corrected analytic epoch usingJ>=4sumx_mu^2 andKsplit<=sqrt(A0x0)+sqrt(Ait). The saved Phi0 output numbers survive the repaired proof; do not label the as-written derivation correct.",
+  "no_claim": [
+    "Only translation-averaged per-fixed-site static marginal weight; not simultaneouspatch occupancy.",
+    "Neither total-s norPhi0 probability implies Clifford matrices, signed loopGram, sharp fieldprojector form preservation, wholeP0 excitation, commoncone, gap or phase.",
+    "Quantumupper is an independent conditional antecedent, not quantumtrial=ground.",
+    "No fabricated quotient normalizer, noncompact gauge-orbit Born probability, SOURCE/law adoption or originalproducer rerun."
+  ],
+  "new_or_original_CLI_rerun": false,
+  "source_edits": false,
+  "scientific_admission": false,
+  "campaign_complete": false
+}

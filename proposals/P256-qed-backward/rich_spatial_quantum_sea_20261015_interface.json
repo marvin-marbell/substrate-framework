@@ -1,0 +1,33 @@
+{
+  "kind":"COMPLETED_SPATIAL_SEA_VARIATIONAL_CONSUMER_INTERFACE",
+  "owner":"SpatialQuantumSeaCandidate",
+  "prefix":"rich_spatial_quantum_sea_20261015_",
+  "python":"/home/administrator/substrate-framework/.venv/bin/python",
+  "root":"/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "launch":"python rich_spatial_quantum_sea_20261015_capture.py <NEWprefix>",
+  "input":"<NEWprefix>_input.json; all physical parameters, spatial packet, boson regulator, variational ranks, frequencies and propagation times explicit",
+  "output":["<NEWprefix>_result.json","<NEWprefix>_result.npz","<NEWprefix>_exit.json","<NEWprefix>_capsule.zip","<NEWprefix>_stdout.txt","<NEWprefix>_stderr.txt"],
+  "pure_helpers":{
+    "geometry(config)":"Actual 3^3 geometry and ordered-frame h components; recomputes 108-mode reference and occupied 54-mode sea. No inherited state.",
+    "fields(config)":"Five-coordinate quantum DVR, canonical electric-volume inertias, same-law Peierls coefficient/current/contact arrays and scalar potential.",
+    "configurations(geo,field,config,rank)":"Actual determinant lists in N=54,55,53, current-generated single/double pair directions and source-relevant charged extensions.",
+    "sector(masks,geo,field,config)":"Same projected H with exact CAR Slater-Condon matrix elements, exact identity Gram/whitener, quantum boson kinetic and own ground state.",
+    "source_operator(source,target,packet,create)":"Actual rectangular 108-mode CAR source; combine with identity on the FULL common boson family. Raw projection losses must remain visible.",
+    "leakage(sector,geo,field,state)":"Exact coherent omitted-determinant action of original one-body H at selected quantum nodes, with coefficient screening at 1e-11. Absolute residual has energy units, is not a gap/error bound.",
+    "lanczos(h,vector,shift,steps)":"Reorthogonalized finite spectral quadrature with original unnormalized vector norm. Complete degenerate spectral weights are not single-eigenvector probabilities."
+  },
+  "array_semantics":{
+    "state_order":"fermionic determinant outer, tensor boson node inner; fields order phi,xcos,xsin,ycos,ysin",
+    "orbitals":"108x108 unitary, real-space four-component rows and reference eigenmode columns. Keep cross-kx/ky coherences when forming local densities.",
+    "masks":"Decimal-string 108-bit CAR occupation masks; N=54,55,53 are ACTUAL electron counts, not excitation labels.",
+    "charged_initial":"Normalized retained projection of cdagger(f)|neutral_ground>. Source norm loss is recorded, not hidden.",
+    "charged_kicked":"Exact exp(i kick_strength Q_xcos) charged_initial. No second projection or normalization, no body-conditioning operation.",
+    "baseline_states/kicked_states":"Paired real-time states of exactly SAME projected H and baseline preparation, at specified times. Site receiver means are inclusive number-density observables, not squared overlaps with a source.",
+    "charge_excess":"Actual local density minus the untouched neutral ground density. Sum is one in charged trajectories; local excess need not be positive.",
+    "field_purity":"Tr rho_field^2 of full reduced five-coordinate density; finite-basis entanglement, not classical stochastic field purity.",
+    "current_retarded/field_retarded":"All four common-q sin/cos polarization profiles; commutator spectra use BOTH signs. Contact expectations are separately supplied.",
+    "source_G":"Raw-norm addition/removal Lanczos spectra of same neutral state and same H family, G_R addition denominator z-Delta+, removal z+Delta-. Finite Krylov quadrature, not complete full-CAR diagonalization."
+  },
+  "review_boundary":"NEW actual calculations and source/input-bound natural-exit capsules are scientist evidence. Independent future Wave15 should audit; these files are NOT silently added to Wave14 or older frozen reviews.",
+  "scientific_limits":"Conditional ordered-frame 3D lepton-sector variational model with supplied scalar potential and no bare transverse magnetic restoring term. Omitted pairs, severe boson regulator, frozen matrix orientation, zero nonuniform longitudinal coupling, spin/bundle inputs and absent Lorentz/bulk/strong-sector closure stay explicit. Variational gaps are not rigorous bounds."
+}

@@ -1,0 +1,92 @@
+{
+  "kind": "PHYSICAL_SINGLET_CIRCUIT_FINAL_EPOCH4_DELIVERY_PENDING_PARENT_REVIEW",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "bookkeeping_revision": "50a7ca510b20a2aed9d93afb81792843619906c411476d94715b314608e776e2",
+    "accepted_scientific_revision_retained": "909367f513e90e70209a1bf9dff3635f40b08f1a00add291fecc531a7887c06d",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "parent_sole_plan_and_docs_writer": true
+  },
+  "source": {
+    "path": "physical_singlet_circuit_source_20261011.py",
+    "sha256": "dea3025ae8509cd6669ac26df9fcb1a5d7b416aee0642778d86f2be7cb8aca03",
+    "meaning": "Literal exact fullPhi/SU4/U1 gauge-covariant finite-CAR operator construction with complete finite-epsilon exponential and analytic D(H) action bounds. Dense256 neutral and actual4900 two-species charged controls are numerical witnesses; all64 lattice state is NOT numerically materialized or falsely described as a dense N4 simulation."
+  },
+  "artifacts": {
+    "physical_singlet_circuit_epoch4_proof_20261011.json": "56d7a2fbd1bac380ff714db20e66f68a5fb2e07788dcf2701a13741e1898c038",
+    "physical_singlet_circuit_epoch4_receipt_20261011.json": "4d2f71d193393b5230aac39ad2bb8ab69a8f10a2fea91f2bb71b722886c8fca6",
+    "physical_singlet_circuit_epoch4_controls_20261011.npz": "86883291efae5554f619833aad90929643f0c9f7ee0a8e4e1c05d0033ffd538a",
+    "physical_singlet_circuit_epoch4_preexecution_20261011.zip": "02401c7fe7c54f08430a5ab725e83c5368d919db70e29d0604595f4c4002bf12",
+    "physical_singlet_circuit_epoch4_executed_20261011.zip": "97d7b0d840aae46d4471bab4a17cfd912b16268ea590ef48d648ee4f480fb801",
+    "physical_singlet_circuit_epoch4_natural_execution_20261011.zip": "7b6de5f839758d7fdf52a88009a3b294e7907f1e37ce21ca4fbc95d1a228a2cf",
+    "physical_singlet_circuit_epoch4_exit_20261011.json": "83dcf846c81d0c1aeedb366e42be7ed76ab6eb8528229f0ae19c58f3d062ac7e",
+    "physical_singlet_circuit_epoch4_selected_pyright_20261011.json": "11c09d31ae3cd33002194a755130c2824d1dafda5d4e0aa4425d671b6b8793c1"
+  },
+  "execution": {
+    "command": ["/home/administrator/substrate-framework/.venv/bin/python", "physical_singlet_circuit_source_20261011.py"],
+    "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+    "natural_exit": true,
+    "returncode": 0,
+    "elapsed_seconds": 2.3668764759931946,
+    "own_and_loaded_input_sources_unchanged": true,
+    "final_selected_pyright": {"version": "1.1.414", "filesAnalyzed": 3, "errorCount": 0, "warningCount": 0, "returncode": 0},
+    "earlier_epochs_preserved": ["epoch1 syntax failure natural1", "epoch2 successful controls but superseded fourth-moment explanatory bound", "epoch3 successful corrected Wick bound but superseded frozen-vs-fullPhi onsite labelling"]
+  },
+  "analytic_result": {
+    "eta_trial": "2^-4200",
+    "neutral_dimensionless_alpha": "2^-20",
+    "neutral_physical_epsilon": "2^-6112",
+    "charged_dimensionless_delta": "2^-100",
+    "charged_physical_epsilon": "2^2000",
+    "N_uniform_total_same_H_energy_upper_per_site": "less than -2^6070 for every even N>=4",
+    "authoritative_baseline_lower": "exact nonnegative paired-source and Sharp energies, not their variational uppers",
+    "finite_N_consumers": [4, 6],
+    "neutral_improved": false,
+    "all64_charged": "active1+aux63, each canonical2V; special active+aux and31auxpairs/site; fullrho generator, not a fixed-reference transport projector",
+    "complete_H_action": "Analytic D(H) polynomial Gaussian jet bounds for all field/Pi/Hc/Haar/matter/Jordan/alignment and one/two-link action; no full-H numerical variance computed."
+  },
+  "clarified_boundaries": {
+    "epsilon_c_meaning": "epsilon_c=2^2000 is exclusively a VARIATIONAL SOURCE SHAPE multiplying the quartic circuit generator; physical hopping/couplings remain exactly1 and unchanged.",
+    "domain": "Only D(H) is established by the displayed first/second polynomial jets and complete-H L2 bounds. D(H^2) would require a separate complete fourth-jet/action-domain argument and is NOT claimed.",
+    "variance": "No numerical full-H norm or variance computed. An analytic norm upper is not reported as variance or stationarity.",
+    "charged_only_descent": "NOT claimed at the final finite source step. The charged tangent has negative matter variation; charged Phi kinetic and electric prices may outweigh that charged gain. Overall strict descent is neutral-driven and prices their possibly positive contribution.",
+    "separate_per_site_bounds": {
+      "neutral_matter": "upper less than -2^6072",
+      "all64_charged_matter_absolute": "upper 2^24 sqrteta=2^-2076",
+      "full_HE_plus_HC_including_packet": "upper 2^30",
+      "Phi_base": "60chi/eta",
+      "shared_Phi_circuit_and_cross": "upper 2^30 chi/eta; epsilon_c scaling explicitly included via delta_c=epsilon_c sqrteta",
+      "Haar_base_and_cross": "upper (27/4)chi t",
+      "shared_Haar_circuit": "upper 2^30 chi",
+      "all_remaining_positive_Jordan_alignment_colour_potentials": "separately priced in immutable proof uniform_prices; largest alignment upper less than2^6043"
+    }
+  },
+  "strict_physical_charged_leakage_argument": [
+    "On a matched edge at initial rho0, copies have single-copy endpoint RDM=.5I, independent across the two sites. Hhop for one copy has squared norm .5 Tr(T*T). Different copied hops have mutually different per-copy endpoint occupation defects, so the all64 squared norm is32 Tr(T*T), not a coherent4096 multiplier.",
+    "C Psi=2Hhop Psi gives squared tangent128 Tr(T*T)>0 on an open fullPhi/colour set. For fixed positive epsilon, scale those Phi coordinates sufficiently small: projection of exp(-epsilon C)Psi into n1/n3 sectors has nonzero linear term and a bounded O(epsilon²||C||²) remainder. This proves actual finite-epsilon leakage is nonzero on an open set, hence has strictly positive integrated probability under the radial Gaussian and positive Haar-colour density.",
+    "No floating computation at eta2^-4200 is used to detect this leakage. Diagnostic actual4900 controls resolve charges -4 through+4, including finite-step sectors absent from a one-PH tangent. The proof uses the entire exponential, never truncates its PH tower."
+  ],
+  "observed_controls": {
+    "charged_diagnostic_Hhop_energy_NOT_complete_charged_energy": -3.2167308111001445,
+    "neutral_fullCAR_diagnostic_energy": -0.13738265562954127,
+    "charged_norm": 1.0000000000000002,
+    "fullrho_wrong_finite_state_gap": 0.005024535668194747,
+    "actual_mass_difference_action_norm": 3.779562011241122,
+    "wrong_equal_roles_action_norm": 6.696967700439196e-15,
+    "omitted_Phi_derivative_action_gap": 8.955322408146435e-05,
+    "U1_Gauss_jet_error": 1.4850835958634874e-18,
+    "SU4_covariance_error": 1.0931892067028527e-14,
+    "maximum_reported_second_jet_error": 3.1059221753903186e-06
+  },
+  "interpretation": [
+    "Original wedge2 paired singlet is explicitly reused, not new invention and not cancellation of a different sea's fluctuations.",
+    "Pointwise shared norm1 is exact; full field derivative and colour cross terms are priced, not declared absent. Native beta0 is a compact fibre only; normalized full-dimensional smooth original-cover packets have actual N4/N6 cycle-metric bounds.",
+    "This is a source-level strict energetic milestone. A valid nonstationary trial does not imply a ground, spectral positivity at a ground, a bulk phase, a pole or commoncone.",
+    "Parent independent overshoot controls supersede any monotonic-step extrapolation: finite negative matter or finite negative total energy alone does not certify stationarity."
+  ],
+  "tooling_scope": {"actual_LSP_symbols": 193, "actual_LSP_definition": true, "positive_AST": "Python function structural query on literal primitive design supplier", "LSP_device_unavailable": "xd://lsp absent; actual subprocess Pyright JSON-RPC used", "diagnostics": "Final selected CLI Pyright exercised; no claim of retained LSP publishDiagnostics evidence"},
+  "next_physical_decision": "Parent review full source and inequalities, then stationary physicalPhi/Gauss ground and same-ground insertion domains before spectral/phase/pole joins.",
+  "parent_integration_pending": true,
+  "campaign_complete": false
+}

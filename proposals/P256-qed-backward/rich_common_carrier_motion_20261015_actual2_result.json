@@ -1,0 +1,431 @@
+{
+  "parameters": {
+    "native_body": "rich_spatial_colour_charge_20261015_construct1_body.pkl",
+    "native_body_sha256": "ea2eafd5eb43769673e1a84b78a5a07a5dfe75734bf8e088bd0d382995f06f57",
+    "vertex_separation": 1.0,
+    "path_height": 0.6,
+    "path_quadrature": 4,
+    "orientation_azimuth_points": 8,
+    "orientation_polar_points": 6,
+    "orientation_inertia": 1.0,
+    "matrix_metric": 1.0,
+    "radial_basis": 3,
+    "radial_scale": 0.6,
+    "radial_quadrature": 18,
+    "scalar_quartic": 0.2,
+    "scalar_quadratic": 1.0,
+    "scalar_coupling": 0.65,
+    "electric": 1.8,
+    "plaquette": 0.25,
+    "vector_velocity": 0.6,
+    "em_width": 1.0,
+    "epsilon": 1.0,
+    "charge_sigma": 0.25,
+    "em_cut": 1,
+    "em_basis_scale": 1.0,
+    "consumer": "rich_common_carrier_motion_20261015_consume.py",
+    "time": 0.25,
+    "krylov_steps": 20,
+    "fine_steps": 32,
+    "deadline_seconds": 10800,
+    "single_decision_control": true,
+    "scope": "Corrected creator-first CAR convention; fresh same-material CAR36 H/reference, K20/32 state+Green resolution, both signed branches, single bridge-off physical discriminator. Rejected actual1 states unused."
+  },
+  "kind": "PREPARED_OCCUPIED_MOTION_FIRST_DISCRIMINATOR",
+  "stages": [
+    {
+      "stage": "NEW_CAR36_BODY_AVAILABLE",
+      "elapsed_seconds": 25.88677560898941
+    },
+    {
+      "stage": "CORRECTED_CAR_SOURCE_BRIGHT_BEFORE_EVOLUTION",
+      "elapsed_seconds": 26.692310126964003
+    },
+    {
+      "stage": "full_lepton_PHYSICAL_MOTION",
+      "elapsed_seconds": 433.26222348294687
+    },
+    {
+      "stage": "full_antilepton_PHYSICAL_MOTION",
+      "elapsed_seconds": 684.8408501179656
+    },
+    {
+      "stage": "bridge_off_lepton_PHYSICAL_MOTION",
+      "elapsed_seconds": 1055.644165008911
+    },
+    {
+      "stage": "FIRST_DISCRIMINATOR_DELIVERED",
+      "elapsed_seconds": 1055.6676619409118
+    },
+    {
+      "stage": "NATURAL_COMPLETION",
+      "elapsed_seconds": 1055.668722461909
+    }
+  ],
+  "body_dimensions": {
+    "neutral": 6632,
+    "lepton": 5388,
+    "antilepton": 5388
+  },
+  "prepared_reference": {
+    "norm": 1.0000000000000002,
+    "J0_projection_loss": 1.1881675331091424e-15,
+    "meaning": "New bare occupied CAR32 N16 sea times two occupied negative-dimer orbitals in full extra CAR4, own radial ground and auxiliary EM basis vacuum; NOT stationary whole-H vacuum."
+  },
+  "branches": {
+    "full_lepton": {
+      "dimension": 101322,
+      "factorization": {
+        "factor_groups": 1924,
+        "stored_multiplicity_nonzeros": 3572382,
+        "angular_nonzeros": 228865,
+        "sparse_roundoff": {
+          "conversions": 1924,
+          "removed_entries": 0,
+          "max_removed_abs": 0.0,
+          "removed_Frobenius_sum": 0.0,
+          "max_removed_relative_Frobenius": 0.0,
+          "max_Hermiticity_drift_Frobenius": 0.0,
+          "epsilon_multiplier": 8.0,
+          "threshold": "8 epsilon_machine max(rows,cols) max_abs_operand; NO absolute/unit floor"
+        },
+        "projection_action_relative_error": 4.63879293617886e-16,
+        "construction": "Exact multiplicity x sparse angular-channel x radial tensor factors, existing scale-relative roundoff ledger; no collapsed CSR, duplicated byte-key arrays or state/direction deletion."
+      },
+      "source_raw_retained_norms_squared": [
+        0.4874023681706718,
+        0.4874023681706716,
+        0.48740236817067223,
+        0.48740236817067206
+      ],
+      "green_source0_to_sites": [
+        [
+          0.3949139381311687,
+          -0.06462942793024777
+        ],
+        [
+          0.36850717723637216,
+          -0.06777865197054327
+        ],
+        [
+          0.00014114409315488415,
+          -0.10472739501446948
+        ],
+        [
+          -0.002616919242794417,
+          -0.007579340317416183
+        ]
+      ],
+      "rho_material_charge": [
+        -0.49763164652540376,
+        -0.4549806047775571,
+        -0.040114510825296094,
+        -0.007273237871743503
+      ],
+      "neutral_rho_material_charge": [
+        1.0321604682061997e-16,
+        -1.1362438767648082e-16,
+        -1.630640067418198e-16,
+        -6.288372600415923e-18
+      ],
+      "signed_excess_charge": [
+        -0.49763164652540387,
+        -0.454980604777557,
+        -0.040114510825295935,
+        -0.007273237871743497
+      ],
+      "total_charge": -1.0000000000000004,
+      "LEFT_z": 0.4348340397743256,
+      "LEFT_z_t0": 0.5000000000000001,
+      "matrix_r2": 6.992169583486698,
+      "colour_loop_B": 0.18168639923194604,
+      "coarse_fine_state_L2": 1.3971316478803995e-05,
+      "coarse_fine_green_max": 4.712813640101672e-07,
+      "coarse": {
+        "dimension": 20,
+        "last_residual": 29.156299043530954,
+        "last_exponential_coefficient": 5.222839168047212e-05,
+        "endpoint_Schrodinger_defect": 0.0010631214134810768,
+        "norm": 0.6981420830824281
+      },
+      "fine": {
+        "dimension": 32,
+        "last_residual": 31.766623592188733,
+        "last_exponential_coefficient": 3.225989882822424e-11,
+        "endpoint_Schrodinger_defect": 7.15447673159261e-10,
+        "norm": 0.6981420830824283
+      }
+    },
+    "full_antilepton": {
+      "dimension": 101322,
+      "factorization": {
+        "factor_groups": 1924,
+        "stored_multiplicity_nonzeros": 3572382,
+        "angular_nonzeros": 228865,
+        "sparse_roundoff": {
+          "conversions": 1924,
+          "removed_entries": 0,
+          "max_removed_abs": 0.0,
+          "removed_Frobenius_sum": 0.0,
+          "max_removed_relative_Frobenius": 0.0,
+          "max_Hermiticity_drift_Frobenius": 0.0,
+          "epsilon_multiplier": 8.0,
+          "threshold": "8 epsilon_machine max(rows,cols) max_abs_operand; NO absolute/unit floor"
+        },
+        "projection_action_relative_error": 4.684249511767313e-16,
+        "construction": "Exact multiplicity x sparse angular-channel x radial tensor factors, existing scale-relative roundoff ledger; no collapsed CSR, duplicated byte-key arrays or state/direction deletion."
+      },
+      "source_raw_retained_norms_squared": [
+        0.48740236817067256,
+        0.48740236817067284,
+        0.48740236817067206,
+        0.48740236817067206
+      ],
+      "green_source0_to_sites": [
+        [
+          0.3949139381311688,
+          0.0646294279302494
+        ],
+        [
+          -0.3685071772363725,
+          -0.06777865197054456
+        ],
+        [
+          0.0001411440931546455,
+          0.1047273950144697
+        ],
+        [
+          0.002616919242794417,
+          -0.007579340317416161
+        ]
+      ],
+      "rho_material_charge": [
+        0.4976316465254032,
+        0.45498060477755703,
+        0.04011451082529625,
+        0.007273237871743527
+      ],
+      "neutral_rho_material_charge": [
+        1.0321604682061997e-16,
+        -1.1362438767648082e-16,
+        -1.630640067418198e-16,
+        -6.288372600415923e-18
+      ],
+      "signed_excess_charge": [
+        0.4976316465254031,
+        0.45498060477755714,
+        0.04011451082529641,
+        0.007273237871743533
+      ],
+      "total_charge": 1.0,
+      "LEFT_z": 0.43483403977432566,
+      "LEFT_z_t0": 0.5000000000000002,
+      "matrix_r2": 6.992169583486683,
+      "colour_loop_B": 0.18168639923194574,
+      "coarse_fine_state_L2": 1.3971316478670851e-05,
+      "coarse_fine_green_max": 4.712813639902691e-07,
+      "coarse": {
+        "dimension": 20,
+        "last_residual": 29.156299043420805,
+        "last_exponential_coefficient": 5.222839168019128e-05,
+        "endpoint_Schrodinger_defect": 0.0010631214134713446,
+        "norm": 0.6981420830824304
+      },
+      "fine": {
+        "dimension": 32,
+        "last_residual": 31.766623592226914,
+        "last_exponential_coefficient": 3.225989698112039e-11,
+        "endpoint_Schrodinger_defect": 7.154476321957601e-10,
+        "norm": 0.6981420830824288
+      }
+    },
+    "bridge_off_lepton": {
+      "dimension": 101322,
+      "factorization": {
+        "factor_groups": 1792,
+        "stored_multiplicity_nonzeros": 3375030,
+        "angular_nonzeros": 209831,
+        "sparse_roundoff": {
+          "conversions": 1792,
+          "removed_entries": 0,
+          "max_removed_abs": 0.0,
+          "removed_Frobenius_sum": 0.0,
+          "max_removed_relative_Frobenius": 0.0,
+          "max_Hermiticity_drift_Frobenius": 0.0,
+          "epsilon_multiplier": 8.0,
+          "threshold": "8 epsilon_machine max(rows,cols) max_abs_operand; NO absolute/unit floor"
+        },
+        "projection_action_relative_error": 4.536601120053905e-16,
+        "construction": "Exact multiplicity x sparse angular-channel x radial tensor factors, existing scale-relative roundoff ledger; no collapsed CSR, duplicated byte-key arrays or state/direction deletion."
+      },
+      "source_raw_retained_norms_squared": [
+        0.4874023681706718,
+        0.4874023681706716,
+        0.48740236817067223,
+        0.48740236817067206
+      ],
+      "green_source0_to_sites": [
+        [
+          0.414841096901566,
+          -0.07003835931884633
+        ],
+        [
+          0.41481299899826884,
+          -0.07004379515934923
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_material_charge": [
+        -0.4999966774270111,
+        -0.5000033225729893,
+        0.0030009179977889887,
+        -0.0030009179977889887
+      ],
+      "neutral_rho_material_charge": [
+        1.6046192152785443e-16,
+        -1.6046192152785443e-16,
+        -1.3877787807814438e-17,
+        1.3877787807814438e-17
+      ],
+      "signed_excess_charge": [
+        -0.49999667742701126,
+        -0.5000033225729892,
+        0.0030009179977890025,
+        -0.0030009179977890025
+      ],
+      "total_charge": -1.0000000000000004,
+      "LEFT_z": 0.44594915141842123,
+      "LEFT_z_t0": 0.5000000000000001,
+      "matrix_r2": 6.977746427449193,
+      "colour_loop_B": 0.18277713369346918,
+      "coarse_fine_state_L2": 7.334247926882746e-06,
+      "coarse_fine_green_max": 1.1470223598030356e-07,
+      "coarse": {
+        "dimension": 20,
+        "last_residual": 28.57256123984119,
+        "last_exponential_coefficient": 2.787665709380728e-05,
+        "endpoint_Schrodinger_defect": 0.0005560753996380903,
+        "norm": 0.6981420830824278
+      },
+      "fine": {
+        "dimension": 32,
+        "last_residual": 29.164790764978665,
+        "last_exponential_coefficient": 1.533300683238854e-11,
+        "endpoint_Schrodinger_defect": 3.1219792464513913e-10,
+        "norm": 0.698142083082427
+      }
+    }
+  },
+  "source_covariance_before_evolution": {
+    "lepton": {
+      "raising_Frobenius": 1.7557922356057997e-13,
+      "new_cell_source_norm_squared": 0.48740236817067206
+    },
+    "antilepton": {
+      "raising_Frobenius": 1.7557922356057997e-13,
+      "new_cell_source_norm_squared": 0.48740236817067206
+    }
+  },
+  "full_reference": {
+    "dimension": 72069,
+    "factorization": {
+      "factor_groups": 1462,
+      "stored_multiplicity_nonzeros": 4417214,
+      "angular_nonzeros": 94728,
+      "sparse_roundoff": {
+        "conversions": 1462,
+        "removed_entries": 0,
+        "max_removed_abs": 0.0,
+        "removed_Frobenius_sum": 0.0,
+        "max_removed_relative_Frobenius": 0.0,
+        "max_Hermiticity_drift_Frobenius": 0.0,
+        "epsilon_multiplier": 8.0,
+        "threshold": "8 epsilon_machine max(rows,cols) max_abs_operand; NO absolute/unit floor"
+      },
+      "projection_action_relative_error": 7.4007989095128e-16,
+      "construction": "Exact multiplicity x sparse angular-channel x radial tensor factors, existing scale-relative roundoff ledger; no collapsed CSR, duplicated byte-key arrays or state/direction deletion."
+    },
+    "coarse_fine_state_L2": 2.336748666306341e-06,
+    "coarse": {
+      "dimension": 20,
+      "last_residual": 26.751374668962413,
+      "last_exponential_coefficient": 6.6866323917730335e-06,
+      "endpoint_Schrodinger_defect": 0.0001788766083859407,
+      "norm": 0.9999999999999981
+    },
+    "fine": {
+      "dimension": 32,
+      "last_residual": 28.285259402854503,
+      "last_exponential_coefficient": 1.3569918536004219e-12,
+      "endpoint_Schrodinger_defect": 3.83828665866483e-11,
+      "norm": 0.9999999999999991
+    }
+  },
+  "bridge_off_reference": {
+    "dimension": 72069,
+    "factorization": {
+      "factor_groups": 1304,
+      "stored_multiplicity_nonzeros": 4143066,
+      "angular_nonzeros": 85864,
+      "sparse_roundoff": {
+        "conversions": 1304,
+        "removed_entries": 0,
+        "max_removed_abs": 0.0,
+        "removed_Frobenius_sum": 0.0,
+        "max_removed_relative_Frobenius": 0.0,
+        "max_Hermiticity_drift_Frobenius": 0.0,
+        "epsilon_multiplier": 8.0,
+        "threshold": "8 epsilon_machine max(rows,cols) max_abs_operand; NO absolute/unit floor"
+      },
+      "projection_action_relative_error": 7.222812799007647e-16,
+      "construction": "Exact multiplicity x sparse angular-channel x radial tensor factors, existing scale-relative roundoff ledger; no collapsed CSR, duplicated byte-key arrays or state/direction deletion."
+    },
+    "coarse_fine_state_L2": 8.226253173685994e-07,
+    "coarse": {
+      "dimension": 20,
+      "last_residual": 27.02261204195909,
+      "last_exponential_coefficient": 2.349060975120782e-06,
+      "endpoint_Schrodinger_defect": 6.347776339359502e-05,
+      "norm": 0.9999999999999997
+    },
+    "fine": {
+      "dimension": 32,
+      "last_residual": 23.740959242860654,
+      "last_exponential_coefficient": 2.1378204082085696e-13,
+      "endpoint_Schrodinger_defect": 5.0753907179835385e-12,
+      "norm": 1.0000000000000013
+    }
+  },
+  "first_discriminator": {
+    "lepton": {
+      "new_cell_green_absolute": [
+        0.10472749012638354,
+        0.0080183954735669
+      ],
+      "new_cell_signed_excess_sum": -0.047387748697039433,
+      "bridge_off_new_cell_green_absolute": [
+        0.0,
+        0.0
+      ],
+      "bridge_off_new_cell_signed_excess_sum": 0.0
+    },
+    "antilepton": {
+      "new_cell_green_absolute": [
+        0.10472749012638376,
+        0.00801839547356688
+      ],
+      "new_cell_signed_excess_sum": 0.04738774869703994
+    }
+  },
+  "resource": {
+    "elapsed_seconds": 1055.6686816409929,
+    "peak_RSS_KiB": 1553100
+  }
+}

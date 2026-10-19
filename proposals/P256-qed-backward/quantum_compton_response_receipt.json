@@ -1,0 +1,2618 @@
+{
+  "schema": 1,
+  "scope": "finite open planar full interacting same-N matter-only Peierls two-source response",
+  "not_claimed": [
+    "asymptotic continuum Compton differential rate",
+    "propagating-photon S matrix",
+    "total external compact-background response",
+    "infinite electric cutoff convergence"
+  ],
+  "source_sha256": "f10eac4d5753e10389a62efb6426caec518bfaf08322d9f02c4045ff5b09f551",
+  "supplier_sources": {
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459"
+  },
+  "source_ownership": "Actual SpinorPlaquette terms/PauliCode.element/compact shifts; W fixed",
+  "intermediate_scope": "complete raw same-N Gauss complement plus analytic ground-doublet poles",
+  "edge_geometry": [
+    {
+      "source": [
+        0,
+        0
+      ],
+      "target": [
+        1,
+        0
+      ]
+    },
+    {
+      "source": [
+        1,
+        0
+      ],
+      "target": [
+        1,
+        1
+      ]
+    },
+    {
+      "source": [
+        1,
+        1
+      ],
+      "target": [
+        0,
+        1
+      ]
+    },
+    {
+      "source": [
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "N": 7,
+      "R": 1,
+      "boundary_charge": -1,
+      "full_raw_Gauss_dimension": 18348,
+      "raw_occupation_masks": 10844,
+      "raw_domain_sha256": "279e379aad8047055c1c0cc02723735b164acd9d5175b4b86bb0188a7a828116",
+      "cell_occupation_range": [
+        0,
+        4
+      ],
+      "raw_cutoff_shell_states": 17484,
+      "ground_cutoff_shell_probability": {
+        "frobenius_norm": 0.04754036203867763,
+        "singular_values": [
+          0.03361611237761248,
+          0.03361611237761247
+        ],
+        "eigenvalues": [
+          [
+            0.03361611237761247,
+            -1.734723475976807e-18
+          ],
+          [
+            0.03361611237761247,
+            0.0
+          ]
+        ],
+        "trace": [
+          0.06723222475522495,
+          0.0
+        ]
+      },
+      "parameters": {
+        "K": 0.25,
+        "UE": 0.6,
+        "Delta": 1.2,
+        "m": 0.8,
+        "r": 0.04,
+        "v": 0.08
+      },
+      "spectrum": {
+        "resolved_ground_energies": [
+          -5.898828586210377,
+          -5.8988285862103735
+        ],
+        "ground_eigen_residuals": [
+          3.6287510822484697e-14,
+          3.9000445996106125e-14
+        ],
+        "ground_multiplicity": 2,
+        "gap_above_ground_multiplet": 0.3024281306489458,
+        "first_complement_energy": -5.596400455561471,
+        "first_complement_eigen_residual": 2.8767313210840423e-14,
+        "complement_ground_leakage": 1.918984333561359e-16,
+        "deflation_energy_penalty": 17.409999999999993,
+        "deflated_ritz_energy": -5.596400455561476,
+        "T_partner_self_overlap": 1.172419144044436e-16,
+        "T_partner_eigen_residual": 2.750267426562757e-14
+      },
+      "frequency": 0.06955847004925754,
+      "measured_gap_fraction": 0.23,
+      "actual_T_squared_residual": 0.0,
+      "actual_T_symmetry_residual": 3.9968028886505635e-15,
+      "peierls_hop_matrix_entries_before_CSR_sum": 257504,
+      "derivative_hermiticity_residual": 0.0,
+      "Ward": {
+        "chi": [
+          0.0,
+          0.37,
+          -0.23,
+          0.61
+        ],
+        "edge_gradient": [
+          0.37,
+          -0.6,
+          0.84,
+          -0.61
+        ],
+        "operator_identities": {
+          "gradient_curl": 0.0,
+          "J_minus_i_density_commutator": 1.734723475976807e-17,
+          "C_plus_density_double_commutator": 2.2551405187698492e-17,
+          "density_magnetic_commutator": 0.0
+        },
+        "ground_current": {
+          "frobenius_norm": 1.5178014879841951e-16,
+          "singular_values": [
+            1.0744513450942459e-16,
+            1.0720427528565276e-16
+          ],
+          "eigenvalues": [
+            [
+              -1.0728351312139028e-16,
+              -3.409979626219879e-19
+            ],
+            [
+              1.073647488749878e-16,
+              -3.2307586802538036e-19
+            ]
+          ],
+          "trace": [
+            8.123575359760774e-20,
+            -6.640738306473715e-19
+          ]
+        },
+        "contact": {
+          "frobenius_norm": 0.014397478788703151,
+          "singular_values": [
+            0.01018055488348148,
+            0.010180554883481477
+          ],
+          "eigenvalues": [
+            [
+              0.010180554883481477,
+              -7.148825725928286e-20
+            ],
+            [
+              0.010180554883481482,
+              0.0
+            ]
+          ],
+          "trace": [
+            0.020361109766962957,
+            7.488962393810091e-20
+          ]
+        },
+        "complete_pair": {
+          "frobenius_norm": 0.014397478788703441,
+          "singular_values": [
+            0.010180554883481683,
+            0.010180554883481682
+          ],
+          "eigenvalues": [
+            [
+              0.010180554883481682,
+              0.0
+            ],
+            [
+              0.010180554883481683,
+              2.2896359355467806e-19
+            ]
+          ],
+          "trace": [
+            0.020361109766963363,
+            2.2270349067887675e-19
+          ]
+        },
+        "contact_minus_pair": {
+          "frobenius_norm": 2.882846461767737e-16,
+          "singular_values": [
+            2.0644017064315495e-16,
+            2.0122249666996158e-16
+          ],
+          "eigenvalues": [
+            [
+              -2.0634362502116642e-16,
+              -2.9254241177868884e-19
+            ],
+            [
+              -2.013163918333833e-16,
+              1.4472854503791327e-19
+            ]
+          ],
+          "trace": [
+            -4.0766001685454967e-16,
+            -1.4781386674077583e-19
+          ]
+        },
+        "exact_density_resolvent_solution_residual": 1.3920127973111393e-14,
+        "adverse_controls": {
+          "missing_contact_Ward_norm": 0.014397478788703441,
+          "frozen_to_ground_intermediates_Ward_norm": 0.014397478788703151,
+          "frozen_ground_pole_numerator_norm": 1.6289738233596725e-32,
+          "frozen_ground_pair_static_continuation_norm": 0.0,
+          "missing_contact_breaks_Ward": true,
+          "frozen_to_ground_breaks_Ward": true
+        },
+        "current_sum_identities": {
+          "total_weight": {
+            "frobenius_norm": 0.01327553310202614,
+            "singular_values": [
+              0.009387219480309166,
+              0.009387219480309164
+            ],
+            "eigenvalues": [
+              [
+                0.009387219480309163,
+                0.0
+              ],
+              [
+                0.009387219480309166,
+                0.0
+              ]
+            ],
+            "trace": [
+              0.018774438960618332,
+              0.0
+            ]
+          },
+          "ground_weight": {
+            "frobenius_norm": 1.628981095587337e-32,
+            "singular_values": [
+              1.1544456929748345e-32,
+              1.1492756639522021e-32
+            ],
+            "eigenvalues": [
+              [
+                1.1492756639522024e-32,
+                0.0
+              ],
+              [
+                1.1544456929748343e-32,
+                0.0
+              ]
+            ],
+            "trace": [
+              2.3037213569270367e-32,
+              0.0
+            ]
+          },
+          "complete_complement_weight": {
+            "frobenius_norm": 0.01327553310202614,
+            "singular_values": [
+              0.009387219480309166,
+              0.009387219480309164
+            ],
+            "eigenvalues": [
+              [
+                0.009387219480309163,
+                0.0
+              ],
+              [
+                0.009387219480309166,
+                0.0
+              ]
+            ],
+            "trace": [
+              0.018774438960618332,
+              0.0
+            ]
+          },
+          "equal_time_closure_residual": 7.739157786958524e-19,
+          "energy_weighted_moment": {
+            "frobenius_norm": 0.027028821499580788,
+            "singular_values": [
+              0.019112262969834325,
+              0.01911226296983432
+            ],
+            "eigenvalues": [
+              [
+                0.01911226296983432,
+                2.506357256035674e-20
+              ],
+              [
+                0.019112262969834336,
+                -8.673617379884035e-19
+              ]
+            ],
+            "trace": [
+              0.038224525939668644,
+              4.708642918896855e-20
+            ]
+          },
+          "half_double_commutator": {
+            "frobenius_norm": 0.027028821499581128,
+            "singular_values": [
+              0.01911226296983457,
+              0.019112262969834558
+            ],
+            "eigenvalues": [
+              [
+                0.01911226296983456,
+                0.0
+              ],
+              [
+                0.01911226296983457,
+                1.6024142826377252e-20
+              ]
+            ],
+            "trace": [
+              0.03822452593966913,
+              -3.339162696754062e-20
+            ]
+          },
+          "energy_sum_residual": 3.414566551295946e-16
+        }
+      },
+      "nonforward": {
+        "incoming_momentum": [
+          0.65,
+          0.2
+        ],
+        "outgoing_momentum": [
+          -0.25,
+          0.55
+        ],
+        "incoming_edge_amplitudes": [
+          [
+            -0.2738103966704814,
+            -0.09225979876219122
+          ],
+          [
+            0.6981678896541113,
+            0.6504107344483937
+          ],
+          [
+            0.25002322596282,
+            0.14481847351643715
+          ],
+          [
+            -0.9494198802537841,
+            -0.09525973235667115
+          ]
+        ],
+        "outgoing_edge_amplitudes": [
+          [
+            -0.9009130835873673,
+            0.11320435656049305
+          ],
+          [
+            -0.40847930616045164,
+            -0.010214110682406234
+          ],
+          [
+            0.8272209674359583,
+            0.3743862731958682
+          ],
+          [
+            0.39325366232751585,
+            0.11095597633454697
+          ]
+        ],
+        "contact": {
+          "frobenius_norm": 0.0017734974590813215,
+          "singular_values": [
+            0.0012540520797335144,
+            0.0012540520797335135
+          ],
+          "eigenvalues": [
+            [
+              -0.001248556673900865,
+              -0.000117272548968465
+            ],
+            [
+              -0.0012485566739008644,
+              -0.00011727254896846473
+            ]
+          ],
+          "trace": [
+            -0.0024971133478017297,
+            -0.0002345450979369297
+          ]
+        },
+        "complete_complement_pair": {
+          "frobenius_norm": 0.001803087460860524,
+          "singular_values": [
+            0.0012757516884186017,
+            0.0012741985798962183
+          ],
+          "eigenvalues": [
+            [
+              -0.0012723721075278086,
+              -9.279865563765105e-05
+            ],
+            [
+              -0.0012708711304609962,
+              -9.202494645653637e-05
+            ]
+          ],
+          "trace": [
+            -0.0025432432379888046,
+            -0.00018482360209418747
+          ]
+        },
+        "analytic_ground_doublet_Born": {
+          "frobenius_norm": 1.461199633465595e-20,
+          "singular_values": [
+            1.3587067704776446e-20,
+            5.376060646032544e-21
+          ],
+          "eigenvalues": [
+            [
+              -8.536675428002241e-21,
+              -4.1191755060318998e-22
+            ],
+            [
+              8.536721880637927e-21,
+              4.1191755060319016e-22
+            ]
+          ],
+          "trace": [
+            4.645263568311965e-26,
+            0.0
+          ]
+        },
+        "full_kernel": {
+          "frobenius_norm": 4.79741882451568e-05,
+          "singular_values": [
+            3.414888480766865e-05,
+            3.36953469217089e-05
+          ],
+          "eigenvalues": [
+            [
+              2.2314456560131095e-05,
+              -2.524760251192855e-05
+            ],
+            [
+              2.3815433626944005e-05,
+              -2.4473893330813695e-05
+            ]
+          ],
+          "trace": [
+            4.61298901870751e-05,
+            -4.972149584274224e-05
+          ]
+        },
+        "recomputed_doublet_covariance_residual": 9.863523602598594e-17,
+        "doublet_unitary_norm_residual": 1.9312351197398048e-17
+      },
+      "tolerance_convergence": {
+        "static_Ward_kernel_change": 7.599099622886657e-18,
+        "nonforward_kernel_change": 3.4137252947629147e-12
+      },
+      "resolvents": [
+        {
+          "requested_relative_tolerance": 1e-08,
+          "solves": [
+            {
+              "frequency": 0.0,
+              "column": 0,
+              "iterations": 33,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187818,
+              "absolute_residual": 7.380064228761048e-10,
+              "relative_residual": 7.617135047345732e-09,
+              "ground_leakage": 2.952065329179153e-17
+            },
+            {
+              "frequency": 0.0,
+              "column": 1,
+              "iterations": 33,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187815,
+              "absolute_residual": 7.380063658822747e-10,
+              "relative_residual": 7.617134459099227e-09,
+              "ground_leakage": 2.0498567764273823e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 0,
+              "iterations": 33,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187818,
+              "absolute_residual": 7.380064228761048e-10,
+              "relative_residual": 7.617135047345732e-09,
+              "ground_leakage": 2.952065329179153e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 1,
+              "iterations": 33,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187815,
+              "absolute_residual": 7.380063658822747e-10,
+              "relative_residual": 7.617134459099227e-09,
+              "ground_leakage": 2.0498567764273823e-17
+            },
+            {
+              "frequency": 0.06955847004925754,
+              "column": 0,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.10688004877412834,
+              "absolute_residual": 7.485526145845078e-10,
+              "relative_residual": 7.003670218811731e-09,
+              "ground_leakage": 2.988248647777413e-17
+            },
+            {
+              "frequency": 0.06955847004925754,
+              "column": 1,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.10687879999096273,
+              "absolute_residual": 7.499744754510776e-10,
+              "relative_residual": 7.017055538745689e-09,
+              "ground_leakage": 3.3985124929718004e-17
+            },
+            {
+              "frequency": -0.06955847004925754,
+              "column": 0,
+              "iterations": 32,
+              "cg_status": 0,
+              "rhs_norm": 0.10672741285255316,
+              "absolute_residual": 7.864482617994918e-10,
+              "relative_residual": 7.368755981052324e-09,
+              "ground_leakage": 2.328327505240347e-17
+            },
+            {
+              "frequency": -0.06955847004925754,
+              "column": 1,
+              "iterations": 32,
+              "cg_status": 0,
+              "rhs_norm": 0.10673035022528249,
+              "absolute_residual": 7.977700599414209e-10,
+              "relative_residual": 7.474631707452635e-09,
+              "ground_leakage": 2.809218412734196e-17
+            }
+          ]
+        },
+        {
+          "requested_relative_tolerance": 2e-11,
+          "solves": [
+            {
+              "frequency": 0.0,
+              "column": 0,
+              "iterations": 45,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187818,
+              "absolute_residual": 1.1820048735843254e-12,
+              "relative_residual": 1.2199745787611007e-11,
+              "ground_leakage": 4.0744108008590795e-17
+            },
+            {
+              "frequency": 0.0,
+              "column": 1,
+              "iterations": 45,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187815,
+              "absolute_residual": 1.1820037783652544e-12,
+              "relative_residual": 1.2199734483601572e-11,
+              "ground_leakage": 2.082367153378915e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 0,
+              "iterations": 45,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187818,
+              "absolute_residual": 1.1820048735843254e-12,
+              "relative_residual": 1.2199745787611007e-11,
+              "ground_leakage": 4.0744108008590795e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 1,
+              "iterations": 45,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187815,
+              "absolute_residual": 1.1820037783652544e-12,
+              "relative_residual": 1.2199734483601572e-11,
+              "ground_leakage": 2.082367153378915e-17
+            },
+            {
+              "frequency": 0.06955847004925754,
+              "column": 0,
+              "iterations": 47,
+              "cg_status": 0,
+              "rhs_norm": 0.10688004877412834,
+              "absolute_residual": 1.2648563587541623e-12,
+              "relative_residual": 1.1834354243486617e-11,
+              "ground_leakage": 3.549512084763681e-17
+            },
+            {
+              "frequency": 0.06955847004925754,
+              "column": 1,
+              "iterations": 47,
+              "cg_status": 0,
+              "rhs_norm": 0.10687879999096273,
+              "absolute_residual": 1.2565203763916142e-12,
+              "relative_residual": 1.175649779467828e-11,
+              "ground_leakage": 3.447947064229387e-17
+            },
+            {
+              "frequency": -0.06955847004925754,
+              "column": 0,
+              "iterations": 43,
+              "cg_status": 0,
+              "rhs_norm": 0.10672741285255316,
+              "absolute_residual": 1.857648319705241e-12,
+              "relative_residual": 1.740554062030561e-11,
+              "ground_leakage": 2.91444826358692e-17
+            },
+            {
+              "frequency": -0.06955847004925754,
+              "column": 1,
+              "iterations": 43,
+              "cg_status": 0,
+              "rhs_norm": 0.10673035022528249,
+              "absolute_residual": 1.9085899146075245e-12,
+              "relative_residual": 1.7882354087463812e-11,
+              "ground_leakage": 2.8809025330596577e-17
+            }
+          ]
+        }
+      ],
+      "rotated_frame_resolvents": [
+        {
+          "frequency": 0.06955847004925754,
+          "column": 0,
+          "iterations": 47,
+          "cg_status": 0,
+          "rhs_norm": 0.10688043212210477,
+          "absolute_residual": 1.2666320355119609e-12,
+          "relative_residual": 1.1850925472166003e-11,
+          "ground_leakage": 2.1671021400090944e-17
+        },
+        {
+          "frequency": 0.06955847004925754,
+          "column": 1,
+          "iterations": 47,
+          "cg_status": 0,
+          "rhs_norm": 0.10687841663713213,
+          "absolute_residual": 1.2531879447174643e-12,
+          "relative_residual": 1.1725360312664631e-11,
+          "ground_leakage": 2.2760988733008318e-17
+        },
+        {
+          "frequency": -0.06955847004925754,
+          "column": 0,
+          "iterations": 43,
+          "cg_status": 0,
+          "rhs_norm": 0.106726511122955,
+          "absolute_residual": 1.8277143928756067e-12,
+          "relative_residual": 1.7125214472437647e-11,
+          "ground_leakage": 2.1144699899922167e-17
+        },
+        {
+          "frequency": -0.06955847004925754,
+          "column": 1,
+          "iterations": 43,
+          "cg_status": 0,
+          "rhs_norm": 0.10673125192244559,
+          "absolute_residual": 1.9167831114711206e-12,
+          "relative_residual": 1.795896775261212e-11,
+          "ground_leakage": 1.65202424483525e-17
+        }
+      ]
+    },
+    {
+      "N": 9,
+      "R": 1,
+      "boundary_charge": 1,
+      "full_raw_Gauss_dimension": 18348,
+      "raw_occupation_masks": 10844,
+      "raw_domain_sha256": "2dcd1d29d2c34c3448f237900fa65d2f6485b308d95561d5e677a8284c16b9b3",
+      "cell_occupation_range": [
+        0,
+        4
+      ],
+      "raw_cutoff_shell_states": 17484,
+      "ground_cutoff_shell_probability": {
+        "frobenius_norm": 0.0475403620386755,
+        "singular_values": [
+          0.033616112377610974,
+          0.03361611237761097
+        ],
+        "eigenvalues": [
+          [
+            0.03361611237761097,
+            0.0
+          ],
+          [
+            0.033616112377610974,
+            0.0
+          ]
+        ],
+        "trace": [
+          0.06723222475522193,
+          0.0
+        ]
+      },
+      "parameters": {
+        "K": 0.25,
+        "UE": 0.6,
+        "Delta": 1.2,
+        "m": 0.8,
+        "r": 0.04,
+        "v": 0.08
+      },
+      "spectrum": {
+        "resolved_ground_energies": [
+          -5.898828586210324,
+          -5.898828586210347
+        ],
+        "ground_eigen_residuals": [
+          8.196139940834678e-14,
+          5.950142945599788e-14
+        ],
+        "ground_multiplicity": 2,
+        "gap_above_ground_multiplet": 0.30242813064892893,
+        "first_complement_energy": -5.596400455561476,
+        "first_complement_eigen_residual": 9.513821160851737e-14,
+        "complement_ground_leakage": 1.953245503074955e-15,
+        "deflation_energy_penalty": 17.409999999999993,
+        "deflated_ritz_energy": -5.596400455561481,
+        "T_partner_self_overlap": 2.0018892218328795e-16,
+        "T_partner_eigen_residual": 1.6036616199215642e-14
+      },
+      "frequency": 0.06955847004925365,
+      "measured_gap_fraction": 0.23,
+      "actual_T_squared_residual": 0.0,
+      "actual_T_symmetry_residual": 2.6645352591003757e-15,
+      "peierls_hop_matrix_entries_before_CSR_sum": 257504,
+      "derivative_hermiticity_residual": 0.0,
+      "Ward": {
+        "chi": [
+          0.0,
+          0.37,
+          -0.23,
+          0.61
+        ],
+        "edge_gradient": [
+          0.37,
+          -0.6,
+          0.84,
+          -0.61
+        ],
+        "operator_identities": {
+          "gradient_curl": 0.0,
+          "J_minus_i_density_commutator": 3.122502256758253e-17,
+          "C_plus_density_double_commutator": 2.949029909160572e-17,
+          "density_magnetic_commutator": 0.0
+        },
+        "ground_current": {
+          "frobenius_norm": 3.536923369009212e-17,
+          "singular_values": [
+            2.5133928150770847e-17,
+            2.4885102923963087e-17
+          ],
+          "eigenvalues": [
+            [
+              -2.511534577232165e-17,
+              -1.8587652801093376e-19
+            ],
+            [
+              2.4898055351571313e-17,
+              -4.87779362852252e-19
+            ]
+          ],
+          "trace": [
+            -2.1729042075032973e-19,
+            -6.736558908631857e-19
+          ]
+        },
+        "contact": {
+          "frobenius_norm": 0.014397478788702931,
+          "singular_values": [
+            0.010180554883481328,
+            0.010180554883481319
+          ],
+          "eigenvalues": [
+            [
+              0.010180554883481319,
+              9.739555404444369e-20
+            ],
+            [
+              0.010180554883481331,
+              0.0
+            ]
+          ],
+          "trace": [
+            0.02036110976696265,
+            1.2978132938711983e-19
+          ]
+        },
+        "complete_pair": {
+          "frobenius_norm": 0.014397478788704047,
+          "singular_values": [
+            0.010180554883482115,
+            0.010180554883482107
+          ],
+          "eigenvalues": [
+            [
+              0.010180554883482108,
+              0.0
+            ],
+            [
+              0.010180554883482115,
+              2.6556468129892443e-19
+            ]
+          ],
+          "trace": [
+            0.020361109766964224,
+            1.8164224507174445e-19
+          ]
+        },
+        "contact_minus_pair": {
+          "frobenius_norm": 1.1138523033838178e-15,
+          "singular_values": [
+            7.962475217830579e-16,
+            7.788817867993674e-16
+          ],
+          "eigenvalues": [
+            [
+              -7.96230909328305e-16,
+              -1.799545540034243e-19
+            ],
+            [
+              -7.78898006858636e-16,
+              1.2809363831870536e-19
+            ]
+          ],
+          "trace": [
+            -1.5751289161869408e-15,
+            -5.1860915684624623e-20
+          ]
+        },
+        "exact_density_resolvent_solution_residual": 1.2775707612967725e-14,
+        "adverse_controls": {
+          "missing_contact_Ward_norm": 0.014397478788704047,
+          "frozen_to_ground_intermediates_Ward_norm": 0.014397478788702931,
+          "frozen_ground_pole_numerator_norm": 8.845988506132629e-34,
+          "frozen_ground_pair_static_continuation_norm": 0.0,
+          "missing_contact_breaks_Ward": true,
+          "frozen_to_ground_breaks_Ward": true
+        },
+        "current_sum_identities": {
+          "total_weight": {
+            "frobenius_norm": 0.013275533102026116,
+            "singular_values": [
+              0.009387219480309154,
+              0.009387219480309144
+            ],
+            "eigenvalues": [
+              [
+                0.009387219480309144,
+                0.0
+              ],
+              [
+                0.009387219480309154,
+                0.0
+              ]
+            ],
+            "trace": [
+              0.018774438960618298,
+              0.0
+            ]
+          },
+          "ground_weight": {
+            "frobenius_norm": 8.84622122173993e-34,
+            "singular_values": [
+              6.31714344288111e-34,
+              6.1926834753623615e-34
+            ],
+            "eigenvalues": [
+              [
+                6.192683475362361e-34,
+                0.0
+              ],
+              [
+                6.31714344288111e-34,
+                0.0
+              ]
+            ],
+            "trace": [
+              1.2509826918243474e-33,
+              0.0
+            ]
+          },
+          "complete_complement_weight": {
+            "frobenius_norm": 0.013275533102026116,
+            "singular_values": [
+              0.009387219480309152,
+              0.009387219480309144
+            ],
+            "eigenvalues": [
+              [
+                0.009387219480309144,
+                0.0
+              ],
+              [
+                0.009387219480309154,
+                0.0
+              ]
+            ],
+            "trace": [
+              0.018774438960618298,
+              0.0
+            ]
+          },
+          "equal_time_closure_residual": 9.296224280805513e-20,
+          "energy_weighted_moment": {
+            "frobenius_norm": 0.02702882149958002,
+            "singular_values": [
+              0.01911226296983379,
+              0.019112262969833767
+            ],
+            "eigenvalues": [
+              [
+                0.019112262969833763,
+                5.861070948305733e-20
+              ],
+              [
+                0.019112262969833795,
+                0.0
+              ]
+            ],
+            "trace": [
+              0.03822452593966756,
+              3.65938085548559e-19
+            ]
+          },
+          "half_double_commutator": {
+            "frobenius_norm": 0.02702882149958109,
+            "singular_values": [
+              0.019112262969834565,
+              0.019112262969834513
+            ],
+            "eigenvalues": [
+              [
+                0.01911226296983451,
+                8.673617379884035e-19
+              ],
+              [
+                0.019112262969834565,
+                2.4322418731509226e-19
+              ]
+            ],
+            "trace": [
+              0.038224525939669074,
+              2.232130339362094e-19
+            ]
+          },
+          "energy_sum_residual": 1.0715285599692847e-15
+        }
+      },
+      "nonforward": {
+        "incoming_momentum": [
+          0.65,
+          0.2
+        ],
+        "outgoing_momentum": [
+          -0.25,
+          0.55
+        ],
+        "incoming_edge_amplitudes": [
+          [
+            -0.2738103966704814,
+            -0.09225979876219122
+          ],
+          [
+            0.6981678896541113,
+            0.6504107344483937
+          ],
+          [
+            0.25002322596282,
+            0.14481847351643715
+          ],
+          [
+            -0.9494198802537841,
+            -0.09525973235667115
+          ]
+        ],
+        "outgoing_edge_amplitudes": [
+          [
+            -0.9009130835873673,
+            0.11320435656049305
+          ],
+          [
+            -0.40847930616045164,
+            -0.010214110682406234
+          ],
+          [
+            0.8272209674359583,
+            0.3743862731958682
+          ],
+          [
+            0.39325366232751585,
+            0.11095597633454697
+          ]
+        ],
+        "contact": {
+          "frobenius_norm": 0.001773497459081198,
+          "singular_values": [
+            0.001254052079733427,
+            0.0012540520797334263
+          ],
+          "eigenvalues": [
+            [
+              -0.0012485566739007736,
+              -0.00011727254896849551
+            ],
+            [
+              -0.0012485566739007731,
+              -0.0001172725489684952
+            ]
+          ],
+          "trace": [
+            -0.0024971133478015484,
+            -0.0002345450979369909
+          ]
+        },
+        "complete_complement_pair": {
+          "frobenius_norm": 0.0018030874608606295,
+          "singular_values": [
+            0.0012757516884186887,
+            0.00127419857989628
+          ],
+          "eigenvalues": [
+            [
+              -0.0012723721075279006,
+              -9.279865563758437e-05
+            ],
+            [
+              -0.0012708711304610623,
+              -9.202494645648118e-05
+            ]
+          ],
+          "trace": [
+            -0.0025432432379889633,
+            -0.00018482360209406547
+          ]
+        },
+        "analytic_ground_doublet_Born": {
+          "frobenius_norm": 5.1131155692552256e-20,
+          "singular_values": [
+            3.6794074740775566e-20,
+            3.5504804554119716e-20
+          ],
+          "eigenvalues": [
+            [
+              -3.4353509207619306e-20,
+              -1.1233997822710378e-20
+            ],
+            [
+              3.435350920761931e-20,
+              1.1234009435869298e-20
+            ]
+          ],
+          "trace": [
+            0.0,
+            1.1613158920779913e-26
+          ]
+        },
+        "full_kernel": {
+          "frobenius_norm": 4.797418824541541e-05,
+          "singular_values": [
+            3.4148884807866066e-05,
+            3.369534692187703e-05
+          ],
+          "eigenvalues": [
+            [
+              2.2314456560287972e-05,
+              -2.524760251201426e-05
+            ],
+            [
+              2.381543362712691e-05,
+              -2.4473893330911185e-05
+            ]
+          ],
+          "trace": [
+            4.612989018741489e-05,
+            -4.972149584292544e-05
+          ]
+        },
+        "recomputed_doublet_covariance_residual": 1.528146851685609e-16,
+        "doublet_unitary_norm_residual": 1.911583955363505e-17
+      },
+      "tolerance_convergence": {
+        "static_Ward_kernel_change": 1.2281473228174946e-17,
+        "nonforward_kernel_change": 3.4125574701323542e-12
+      },
+      "resolvents": [
+        {
+          "requested_relative_tolerance": 1e-08,
+          "solves": [
+            {
+              "frequency": 0.0,
+              "column": 0,
+              "iterations": 33,
+              "cg_status": 0,
+              "rhs_norm": 0.096887664231878,
+              "absolute_residual": 7.379918625826629e-10,
+              "relative_residual": 7.616984767188233e-09,
+              "ground_leakage": 4.801802823821613e-17
+            },
+            {
+              "frequency": 0.0,
+              "column": 1,
+              "iterations": 33,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187813,
+              "absolute_residual": 7.379918973975359e-10,
+              "relative_residual": 7.616985126520582e-09,
+              "ground_leakage": 1.8465779030870585e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 0,
+              "iterations": 33,
+              "cg_status": 0,
+              "rhs_norm": 0.096887664231878,
+              "absolute_residual": 7.379918625826629e-10,
+              "relative_residual": 7.616984767188233e-09,
+              "ground_leakage": 4.801802823821613e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 1,
+              "iterations": 33,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187813,
+              "absolute_residual": 7.379918973975359e-10,
+              "relative_residual": 7.616985126520582e-09,
+              "ground_leakage": 1.8465779030870585e-17
+            },
+            {
+              "frequency": 0.06955847004925365,
+              "column": 0,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.10687830971371626,
+              "absolute_residual": 7.540177731755343e-10,
+              "relative_residual": 7.0549185816583625e-09,
+              "ground_leakage": 3.689656341050409e-17
+            },
+            {
+              "frequency": 0.06955847004925365,
+              "column": 1,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.10688053904339717,
+              "absolute_residual": 7.494669199908232e-10,
+              "relative_residual": 7.012192553468633e-09,
+              "ground_leakage": 1.1230215512060095e-17
+            },
+            {
+              "frequency": -0.06955847004925365,
+              "column": 0,
+              "iterations": 32,
+              "cg_status": 0,
+              "rhs_norm": 0.1067315034180379,
+              "absolute_residual": 8.013242584308415e-10,
+              "relative_residual": 7.507851316328554e-09,
+              "ground_leakage": 2.2535466828493412e-17
+            },
+            {
+              "frequency": -0.06955847004925365,
+              "column": 1,
+              "iterations": 32,
+              "cg_status": 0,
+              "rhs_norm": 0.10672625961559849,
+              "absolute_residual": 7.807768397089211e-10,
+              "relative_residual": 7.3156957108877e-09,
+              "ground_leakage": 2.6480899792394248e-17
+            }
+          ]
+        },
+        {
+          "requested_relative_tolerance": 2e-11,
+          "solves": [
+            {
+              "frequency": 0.0,
+              "column": 0,
+              "iterations": 45,
+              "cg_status": 0,
+              "rhs_norm": 0.096887664231878,
+              "absolute_residual": 1.182004161915989e-12,
+              "relative_residual": 1.2199738442317466e-11,
+              "ground_leakage": 3.98977349751649e-17
+            },
+            {
+              "frequency": 0.0,
+              "column": 1,
+              "iterations": 45,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187813,
+              "absolute_residual": 1.182004710114682e-12,
+              "relative_residual": 1.2199744100403002e-11,
+              "ground_leakage": 1.2188542044004455e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 0,
+              "iterations": 45,
+              "cg_status": 0,
+              "rhs_norm": 0.096887664231878,
+              "absolute_residual": 1.182004161915989e-12,
+              "relative_residual": 1.2199738442317466e-11,
+              "ground_leakage": 3.98977349751649e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 1,
+              "iterations": 45,
+              "cg_status": 0,
+              "rhs_norm": 0.09688766423187813,
+              "absolute_residual": 1.182004710114682e-12,
+              "relative_residual": 1.2199744100403002e-11,
+              "ground_leakage": 1.2188542044004455e-17
+            },
+            {
+              "frequency": 0.06955847004925365,
+              "column": 0,
+              "iterations": 47,
+              "cg_status": 0,
+              "rhs_norm": 0.10687830971371626,
+              "absolute_residual": 1.2521937989783519e-12,
+              "relative_residual": 1.1716070382591869e-11,
+              "ground_leakage": 3.6015757036640863e-17
+            },
+            {
+              "frequency": 0.06955847004925365,
+              "column": 1,
+              "iterations": 47,
+              "cg_status": 0,
+              "rhs_norm": 0.10688053904339717,
+              "absolute_residual": 1.2670643751224538e-12,
+              "relative_residual": 1.1854958689981739e-11,
+              "ground_leakage": 1.2729134430100419e-17
+            },
+            {
+              "frequency": -0.06955847004925365,
+              "column": 0,
+              "iterations": 43,
+              "cg_status": 0,
+              "rhs_norm": 0.1067315034180379,
+              "absolute_residual": 1.9186414246727636e-12,
+              "relative_residual": 1.7976336538219403e-11,
+              "ground_leakage": 4.327303920290063e-17
+            },
+            {
+              "frequency": -0.06955847004925365,
+              "column": 1,
+              "iterations": 43,
+              "cg_status": 0,
+              "rhs_norm": 0.10672625961559849,
+              "absolute_residual": 1.8172990926095441e-12,
+              "relative_residual": 1.7027665910479808e-11,
+              "ground_leakage": 2.7660748896031124e-17
+            }
+          ]
+        }
+      ],
+      "rotated_frame_resolvents": [
+        {
+          "frequency": 0.06955847004925365,
+          "column": 0,
+          "iterations": 47,
+          "cg_status": 0,
+          "rhs_norm": 0.10688076420189795,
+          "absolute_residual": 1.2678570103554118e-12,
+          "relative_residual": 1.1862349785976714e-11,
+          "ground_leakage": 3.3815774027971426e-17
+        },
+        {
+          "frequency": 0.06955847004925365,
+          "column": 1,
+          "iterations": 47,
+          "cg_status": 0,
+          "rhs_norm": 0.1068780845500448,
+          "absolute_residual": 1.2499887563644346e-12,
+          "relative_residual": 1.1695463683007318e-11,
+          "ground_leakage": 4.8343018321526303e-17
+        },
+        {
+          "frequency": -0.06955847004925365,
+          "column": 0,
+          "iterations": 43,
+          "cg_status": 0,
+          "rhs_norm": 0.10672572998007704,
+          "absolute_residual": 1.7910655960896233e-12,
+          "relative_residual": 1.6781947487489374e-11,
+          "ground_leakage": 6.379307265060185e-17
+        },
+        {
+          "frequency": -0.06955847004925365,
+          "column": 1,
+          "iterations": 43,
+          "cg_status": 0,
+          "rhs_norm": 0.10673203302491005,
+          "absolute_residual": 1.9220865867824394e-12,
+          "relative_residual": 1.8008525953345666e-11,
+          "ground_leakage": 5.312724389486694e-18
+        }
+      ]
+    },
+    {
+      "N": 7,
+      "R": 2,
+      "boundary_charge": -1,
+      "full_raw_Gauss_dimension": 41212,
+      "raw_occupation_masks": 11440,
+      "raw_domain_sha256": "6a0eaeeba9fd1193311e40104a947b585d25d65013b5f5801212245044c95205",
+      "cell_occupation_range": [
+        0,
+        4
+      ],
+      "raw_cutoff_shell_states": 22864,
+      "ground_cutoff_shell_probability": {
+        "frobenius_norm": 0.00014440254834368441,
+        "singular_values": [
+          0.00010210802115443753,
+          0.0001021080211544375
+        ],
+        "eigenvalues": [
+          [
+            0.0001021080211544375,
+            0.0
+          ],
+          [
+            0.00010210802115443751,
+            0.0
+          ]
+        ],
+        "trace": [
+          0.00020421604230887503,
+          0.0
+        ]
+      },
+      "parameters": {
+        "K": 0.25,
+        "UE": 0.6,
+        "Delta": 1.2,
+        "m": 0.8,
+        "r": 0.04,
+        "v": 0.08
+      },
+      "spectrum": {
+        "resolved_ground_energies": [
+          -5.899149843737248,
+          -5.899149843737229
+        ],
+        "ground_eigen_residuals": [
+          9.389437051652433e-12,
+          9.389512074179367e-12
+        ],
+        "ground_multiplicity": 2,
+        "gap_above_ground_multiplet": 0.293664285583251,
+        "first_complement_energy": -5.605485558154021,
+        "first_complement_eigen_residual": 3.154755122292695e-11,
+        "complement_ground_leakage": 5.8822976881197325e-15,
+        "deflation_energy_penalty": 24.60999999999999,
+        "deflated_ritz_energy": -5.605485558154035,
+        "T_partner_self_overlap": 2.0737656179412143e-17,
+        "T_partner_eigen_residual": 9.389429767269721e-12
+      },
+      "frequency": 0.06754278568414773,
+      "measured_gap_fraction": 0.23,
+      "actual_T_squared_residual": 0.0,
+      "actual_T_symmetry_residual": 1.4210854715202004e-14,
+      "peierls_hop_matrix_entries_before_CSR_sum": 641408,
+      "derivative_hermiticity_residual": 0.0,
+      "Ward": {
+        "chi": [
+          0.0,
+          0.37,
+          -0.23,
+          0.61
+        ],
+        "edge_gradient": [
+          0.37,
+          -0.6,
+          0.84,
+          -0.61
+        ],
+        "operator_identities": {
+          "gradient_curl": 0.0,
+          "J_minus_i_density_commutator": 1.734723475976807e-17,
+          "C_plus_density_double_commutator": 2.2551405187698492e-17,
+          "density_magnetic_commutator": 0.0
+        },
+        "ground_current": {
+          "frobenius_norm": 4.937291126902089e-14,
+          "singular_values": [
+            3.491249138024856e-14,
+            3.4911349340904583e-14
+          ],
+          "eigenvalues": [
+            [
+              -3.4911888111021085e-14,
+              -7.970773791769479e-19
+            ],
+            [
+              3.49119525916756e-14,
+              5.762588802997045e-20
+            ]
+          ],
+          "trace": [
+            6.448065452837211e-20,
+            -7.394514911468787e-19
+          ]
+        },
+        "contact": {
+          "frobenius_norm": 0.014655055829928964,
+          "singular_values": [
+            0.01036268935601022,
+            0.010362689356010217
+          ],
+          "eigenvalues": [
+            [
+              0.01036268935601022,
+              0.0
+            ],
+            [
+              0.010362689356010221,
+              0.0
+            ]
+          ],
+          "trace": [
+            0.02072537871202044,
+            1.295054646528334e-20
+          ]
+        },
+        "complete_pair": {
+          "frobenius_norm": 0.014655055829913327,
+          "singular_values": [
+            0.010362689355999162,
+            0.010362689355999159
+          ],
+          "eigenvalues": [
+            [
+              0.010362689355999159,
+              0.0
+            ],
+            [
+              0.010362689355999162,
+              -4.9557838064123856e-20
+            ]
+          ],
+          "trace": [
+            0.02072537871199832,
+            4.386900679886698e-20
+          ]
+        },
+        "contact_minus_pair": {
+          "frobenius_norm": 1.5638366359079132e-14,
+          "singular_values": [
+            1.1059288148941537e-14,
+            1.105670149816206e-14
+          ],
+          "eigenvalues": [
+            [
+              1.1056934719543078e-14,
+              1.4098097655562502e-19
+            ],
+            [
+              1.1059054875685242e-14,
+              -1.71899436888654e-19
+            ]
+          ],
+          "trace": [
+            2.2115989595228314e-14,
+            -3.091846033358364e-20
+          ]
+        },
+        "exact_density_resolvent_solution_residual": 8.131034592518515e-12,
+        "adverse_controls": {
+          "missing_contact_Ward_norm": 0.014655055829913327,
+          "frozen_to_ground_intermediates_Ward_norm": 0.014655055829928964,
+          "frozen_ground_pole_numerator_norm": 1.723703145508064e-27,
+          "frozen_ground_pair_static_continuation_norm": 0.0,
+          "missing_contact_breaks_Ward": true,
+          "frozen_to_ground_breaks_Ward": true
+        },
+        "current_sum_identities": {
+          "total_weight": {
+            "frobenius_norm": 0.01341619803373271,
+            "singular_values": [
+              0.009486684607394026,
+              0.009486684607394023
+            ],
+            "eigenvalues": [
+              [
+                0.009486684607394024,
+                0.0
+              ],
+              [
+                0.009486684607394026,
+                0.0
+              ]
+            ],
+            "trace": [
+              0.01897336921478805,
+              0.0
+            ]
+          },
+          "ground_weight": {
+            "frobenius_norm": 1.7237031473466794e-27,
+            "singular_values": [
+              1.21888205437593e-27,
+              1.2188023128026794e-27
+            ],
+            "eigenvalues": [
+              [
+                1.2188023128026798e-27,
+                -1.685263388881179e-49
+              ],
+              [
+                1.21888205437593e-27,
+                1.6852633889014038e-49
+              ]
+            ],
+            "trace": [
+              2.4376843671786095e-27,
+              0.0
+            ]
+          },
+          "complete_complement_weight": {
+            "frobenius_norm": 0.01341619803373271,
+            "singular_values": [
+              0.009486684607394026,
+              0.009486684607394023
+            ],
+            "eigenvalues": [
+              [
+                0.009486684607394024,
+                0.0
+              ],
+              [
+                0.009486684607394026,
+                0.0
+              ]
+            ],
+            "trace": [
+              0.01897336921478805,
+              0.0
+            ]
+          },
+          "equal_time_closure_residual": 5.0730402174643975e-19,
+          "energy_weighted_moment": {
+            "frobenius_norm": 0.02721769210744644,
+            "singular_values": [
+              0.019245814657422953,
+              0.019245814657422946
+            ],
+            "eigenvalues": [
+              [
+                0.01924581465742295,
+                0.0
+              ],
+              [
+                0.019245814657422953,
+                -2.168404344971009e-18
+              ]
+            ],
+            "trace": [
+              0.0384916293148459,
+              3.285845736396191e-20
+            ]
+          },
+          "half_double_commutator": {
+            "frobenius_norm": 0.027217692107445637,
+            "singular_values": [
+              0.019245814657422387,
+              0.019245814657422384
+            ],
+            "eigenvalues": [
+              [
+                0.019245814657422384,
+                0.0
+              ],
+              [
+                0.019245814657422387,
+                -5.079921644371574e-20
+              ]
+            ],
+            "trace": [
+              0.03849162931484477,
+              -1.0774786158221261e-19
+            ]
+          },
+          "energy_sum_residual": 8.022245971368973e-16
+        }
+      },
+      "nonforward": {
+        "incoming_momentum": [
+          0.65,
+          0.2
+        ],
+        "outgoing_momentum": [
+          -0.25,
+          0.55
+        ],
+        "incoming_edge_amplitudes": [
+          [
+            -0.2738103966704814,
+            -0.09225979876219122
+          ],
+          [
+            0.6981678896541113,
+            0.6504107344483937
+          ],
+          [
+            0.25002322596282,
+            0.14481847351643715
+          ],
+          [
+            -0.9494198802537841,
+            -0.09525973235667115
+          ]
+        ],
+        "outgoing_edge_amplitudes": [
+          [
+            -0.9009130835873673,
+            0.11320435656049305
+          ],
+          [
+            -0.40847930616045164,
+            -0.010214110682406234
+          ],
+          [
+            0.8272209674359583,
+            0.3743862731958682
+          ],
+          [
+            0.39325366232751585,
+            0.11095597633454697
+          ]
+        ],
+        "contact": {
+          "frobenius_norm": 0.0018119359961860987,
+          "singular_values": [
+            0.0012812322299791928,
+            0.0012812322299791921
+          ],
+          "eigenvalues": [
+            [
+              -0.0012768122399505724,
+              -0.00010633217316437108
+            ],
+            [
+              -0.0012768122399505716,
+              -0.00010633217316437153
+            ]
+          ],
+          "trace": [
+            -0.002553624479901144,
+            -0.00021266434632874275
+          ]
+        },
+        "complete_complement_pair": {
+          "frobenius_norm": 0.0018430148402265548,
+          "singular_values": [
+            0.0013040262269890994,
+            0.0013023898420288322
+          ],
+          "eigenvalues": [
+            [
+              -0.0013015171064689394,
+              -8.085556408896012e-05
+            ],
+            [
+              -0.0012999278079900908,
+              -8.004370452424838e-05
+            ]
+          ],
+          "trace": [
+            -0.0026014449144590307,
+            -0.00016089926861320844
+          ]
+        },
+        "analytic_ground_doublet_Born": {
+          "frobenius_norm": 4.8266111359173715e-18,
+          "singular_values": [
+            3.648001546070126e-18,
+            3.1604208228069177e-18
+          ],
+          "eigenvalues": [
+            [
+              -3.379100795758718e-18,
+              -3.330130602275249e-19
+            ],
+            [
+              3.379100843597641e-18,
+              3.3301306022752473e-19
+            ]
+          ],
+          "trace": [
+            4.7838925193905857e-26,
+            0.0
+          ]
+        },
+        "full_kernel": {
+          "frobenius_norm": 4.984777937786262e-05,
+          "singular_values": [
+            3.548785763710928e-05,
+            3.500590049166469e-05
+          ],
+          "eigenvalues": [
+            [
+              2.3115568039518304e-05,
+              -2.628846864012298e-05
+            ],
+            [
+              2.4704866518368505e-05,
+              -2.5476609075411307e-05
+            ]
+          ],
+          "trace": [
+            4.782043455788681e-05,
+            -5.17650777155343e-05
+          ]
+        },
+        "recomputed_doublet_covariance_residual": 1.072888742018724e-16,
+        "doublet_unitary_norm_residual": 1.111307226797642e-18
+      },
+      "tolerance_convergence": {
+        "static_Ward_kernel_change": 6.890478431492317e-19,
+        "nonforward_kernel_change": 2.010140696063148e-12
+      },
+      "resolvents": [
+        {
+          "requested_relative_tolerance": 1e-08,
+          "solves": [
+            {
+              "frequency": 0.0,
+              "column": 0,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353299,
+              "absolute_residual": 9.738836076228993e-10,
+              "relative_residual": 9.998844737581647e-09,
+              "ground_leakage": 1.8066547581905908e-17
+            },
+            {
+              "frequency": 0.0,
+              "column": 1,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353308,
+              "absolute_residual": 9.73883607605147e-10,
+              "relative_residual": 9.998844737399374e-09,
+              "ground_leakage": 2.5830130852884034e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 0,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353299,
+              "absolute_residual": 9.738836076228993e-10,
+              "relative_residual": 9.998844737581647e-09,
+              "ground_leakage": 1.8066547581905908e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 1,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353308,
+              "absolute_residual": 9.73883607605147e-10,
+              "relative_residual": 9.998844737399374e-09,
+              "ground_leakage": 2.5830130852884034e-17
+            },
+            {
+              "frequency": 0.06754278568414773,
+              "column": 0,
+              "iterations": 42,
+              "cg_status": 0,
+              "rhs_norm": 0.107451045744443,
+              "absolute_residual": 7.345052781474133e-10,
+              "relative_residual": 6.8357201464035015e-09,
+              "ground_leakage": 4.0432231751036385e-17
+            },
+            {
+              "frequency": 0.06754278568414773,
+              "column": 1,
+              "iterations": 42,
+              "cg_status": 0,
+              "rhs_norm": 0.10745395754023322,
+              "absolute_residual": 7.396046299888973e-10,
+              "relative_residual": 6.882991068169569e-09,
+              "ground_leakage": 3.455693199097714e-17
+            },
+            {
+              "frequency": -0.06754278568414773,
+              "column": 0,
+              "iterations": 36,
+              "cg_status": 0,
+              "rhs_norm": 0.10730451557317763,
+              "absolute_residual": 1.0235458963393817e-09,
+              "relative_residual": 9.538702922910658e-09,
+              "ground_leakage": 8.105240884102665e-17
+            },
+            {
+              "frequency": -0.06754278568414773,
+              "column": 1,
+              "iterations": 36,
+              "cg_status": 0,
+              "rhs_norm": 0.10729766647830552,
+              "absolute_residual": 1.0015608210788093e-09,
+              "relative_residual": 9.334413822329627e-09,
+              "ground_leakage": 9.314435576334113e-17
+            }
+          ]
+        },
+        {
+          "requested_relative_tolerance": 2e-11,
+          "solves": [
+            {
+              "frequency": 0.0,
+              "column": 0,
+              "iterations": 49,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353299,
+              "absolute_residual": 1.861284188629909e-12,
+              "relative_residual": 1.9109769862593677e-11,
+              "ground_leakage": 2.256049741853913e-17
+            },
+            {
+              "frequency": 0.0,
+              "column": 1,
+              "iterations": 49,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353308,
+              "absolute_residual": 1.8612843035853836e-12,
+              "relative_residual": 1.9109771042839363e-11,
+              "ground_leakage": 2.8616939632396056e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 0,
+              "iterations": 49,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353299,
+              "absolute_residual": 1.861284188629909e-12,
+              "relative_residual": 1.9109769862593677e-11,
+              "ground_leakage": 2.256049741853913e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 1,
+              "iterations": 49,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353308,
+              "absolute_residual": 1.8612843035853836e-12,
+              "relative_residual": 1.9109771042839363e-11,
+              "ground_leakage": 2.8616939632396056e-17
+            },
+            {
+              "frequency": 0.06754278568414773,
+              "column": 0,
+              "iterations": 53,
+              "cg_status": 0,
+              "rhs_norm": 0.107451045744443,
+              "absolute_residual": 1.3688642420568093e-12,
+              "relative_residual": 1.2739422241757031e-11,
+              "ground_leakage": 4.495860267234825e-17
+            },
+            {
+              "frequency": 0.06754278568414773,
+              "column": 1,
+              "iterations": 53,
+              "cg_status": 0,
+              "rhs_norm": 0.10745395754023322,
+              "absolute_residual": 1.38983132726229e-12,
+              "relative_residual": 1.2934203253909056e-11,
+              "ground_leakage": 3.791986117284456e-17
+            },
+            {
+              "frequency": -0.06754278568414773,
+              "column": 0,
+              "iterations": 48,
+              "cg_status": 0,
+              "rhs_norm": 0.10730451557317763,
+              "absolute_residual": 1.5016082519425698e-12,
+              "relative_residual": 1.399389619273319e-11,
+              "ground_leakage": 6.110703138723132e-17
+            },
+            {
+              "frequency": -0.06754278568414773,
+              "column": 1,
+              "iterations": 48,
+              "cg_status": 0,
+              "rhs_norm": 0.10729766647830552,
+              "absolute_residual": 1.5089471734673651e-12,
+              "relative_residual": 1.4063187234108755e-11,
+              "ground_leakage": 7.107368658399333e-17
+            }
+          ]
+        }
+      ],
+      "rotated_frame_resolvents": [
+        {
+          "frequency": 0.06754278568414773,
+          "column": 0,
+          "iterations": 53,
+          "cg_status": 0,
+          "rhs_norm": 0.10745392677226881,
+          "absolute_residual": 1.3866595738393453e-12,
+          "relative_residual": 1.2904689623657454e-11,
+          "ground_leakage": 5.043046106999666e-17
+        },
+        {
+          "frequency": 0.06754278568414773,
+          "column": 1,
+          "iterations": 53,
+          "cg_status": 0,
+          "rhs_norm": 0.10745107651323224,
+          "absolute_residual": 1.37987814286074e-12,
+          "relative_residual": 1.2841920133678815e-11,
+          "ground_leakage": 3.238822231353876e-17
+        },
+        {
+          "frequency": -0.06754278568414773,
+          "column": 0,
+          "iterations": 48,
+          "cg_status": 0,
+          "rhs_norm": 0.10729773885363741,
+          "absolute_residual": 1.5129769792810954e-12,
+          "relative_residual": 1.4100734977695247e-11,
+          "ground_leakage": 2.612195627446109e-17
+        },
+        {
+          "frequency": -0.06754278568414773,
+          "column": 1,
+          "iterations": 48,
+          "cg_status": 0,
+          "rhs_norm": 0.10730444320241671,
+          "absolute_residual": 1.4951985323318392e-12,
+          "relative_residual": 1.3934171668095141e-11,
+          "ground_leakage": 3.221416575936669e-17
+        }
+      ]
+    },
+    {
+      "N": 9,
+      "R": 2,
+      "boundary_charge": 1,
+      "full_raw_Gauss_dimension": 41212,
+      "raw_occupation_masks": 11440,
+      "raw_domain_sha256": "7675177489a79fb7c49a8573da8064896a6270f707fa870f501a7df1695beab9",
+      "cell_occupation_range": [
+        0,
+        4
+      ],
+      "raw_cutoff_shell_states": 22864,
+      "ground_cutoff_shell_probability": {
+        "frobenius_norm": 0.00014440254833653275,
+        "singular_values": [
+          0.00010210802114938054,
+          0.00010210802114938047
+        ],
+        "eigenvalues": [
+          [
+            0.0001021080211493805,
+            0.0
+          ],
+          [
+            0.00010210802114938054,
+            0.0
+          ]
+        ],
+        "trace": [
+          0.00020421604229876102,
+          0.0
+        ]
+      },
+      "parameters": {
+        "K": 0.25,
+        "UE": 0.6,
+        "Delta": 1.2,
+        "m": 0.8,
+        "r": 0.04,
+        "v": 0.08
+      },
+      "spectrum": {
+        "resolved_ground_energies": [
+          -5.89914984373711,
+          -5.899149843737056
+        ],
+        "ground_eigen_residuals": [
+          1.5678365558534545e-11,
+          1.567900640427825e-11
+        ],
+        "ground_multiplicity": 2,
+        "gap_above_ground_multiplet": 0.2936642855832412,
+        "first_complement_energy": -5.605485558154017,
+        "first_complement_eigen_residual": 2.3279302438151412e-11,
+        "complement_ground_leakage": 1.6331081232010697e-15,
+        "deflation_energy_penalty": 24.60999999999999,
+        "deflated_ritz_energy": -5.605485558154012,
+        "T_partner_self_overlap": 6.495536820377867e-17,
+        "T_partner_eigen_residual": 1.5677568491093627e-11
+      },
+      "frequency": 0.06754278568414548,
+      "measured_gap_fraction": 0.23,
+      "actual_T_squared_residual": 0.0,
+      "actual_T_symmetry_residual": 8.881784197001252e-15,
+      "peierls_hop_matrix_entries_before_CSR_sum": 641408,
+      "derivative_hermiticity_residual": 0.0,
+      "Ward": {
+        "chi": [
+          0.0,
+          0.37,
+          -0.23,
+          0.61
+        ],
+        "edge_gradient": [
+          0.37,
+          -0.6,
+          0.84,
+          -0.61
+        ],
+        "operator_identities": {
+          "gradient_curl": 0.0,
+          "J_minus_i_density_commutator": 3.122502256758253e-17,
+          "C_plus_density_double_commutator": 2.949029909160572e-17,
+          "density_magnetic_commutator": 0.0
+        },
+        "ground_current": {
+          "frobenius_norm": 4.1134332144325144e-14,
+          "singular_values": [
+            2.908686673887649e-14,
+            2.9085863650139436e-14
+          ],
+          "eigenvalues": [
+            [
+              -2.9086242586144365e-14,
+              -4.186911722292858e-19
+            ],
+            [
+              2.9086487788036514e-14,
+              -4.63314764528505e-19
+            ]
+          ],
+          "trace": [
+            2.452018921491756e-19,
+            -8.820059367578892e-19
+          ]
+        },
+        "contact": {
+          "frobenius_norm": 0.01465505582990162,
+          "singular_values": [
+            0.010362689355990882,
+            0.01036268935599088
+          ],
+          "eigenvalues": [
+            [
+              0.01036268935599088,
+              0.0
+            ],
+            [
+              0.010362689355990882,
+              5.106074768895028e-20
+            ]
+          ],
+          "trace": [
+            0.020725378711981764,
+            -2.6401181771991804e-20
+          ]
+        },
+        "complete_pair": {
+          "frobenius_norm": 0.014655055829915017,
+          "singular_values": [
+            0.01036268935600036,
+            0.010362689356000352
+          ],
+          "eigenvalues": [
+            [
+              0.010362689356000352,
+              0.0
+            ],
+            [
+              0.010362689356000362,
+              -1.1436896417190797e-20
+            ]
+          ],
+          "trace": [
+            0.02072537871200071,
+            -1.6025883783072735e-19
+          ]
+        },
+        "contact_minus_pair": {
+          "frobenius_norm": 1.3398534324186572e-14,
+          "singular_values": [
+            9.480479764408754e-15,
+            9.467905020279927e-15
+          ],
+          "eigenvalues": [
+            [
+              -9.480283666688695e-15,
+              4.093290713555499e-20
+            ],
+            [
+              -9.468100861405975e-15,
+              9.292474892317749e-20
+            ]
+          ],
+          "trace": [
+            -1.8948384528094664e-14,
+            1.3385765605873554e-19
+          ]
+        },
+        "exact_density_resolvent_solution_residual": 1.3981752507089962e-11,
+        "adverse_controls": {
+          "missing_contact_Ward_norm": 0.014655055829915017,
+          "frozen_to_ground_intermediates_Ward_norm": 0.01465505582990162,
+          "frozen_ground_pole_numerator_norm": 1.1964482063334462e-27,
+          "frozen_ground_pair_static_continuation_norm": 0.0,
+          "missing_contact_breaks_Ward": true,
+          "frozen_to_ground_breaks_Ward": true
+        },
+        "current_sum_identities": {
+          "total_weight": {
+            "frobenius_norm": 0.013416198033732082,
+            "singular_values": [
+              0.009486684607393586,
+              0.009486684607393577
+            ],
+            "eigenvalues": [
+              [
+                0.009486684607393572,
+                0.0
+              ],
+              [
+                0.009486684607393586,
+                0.0
+              ]
+            ],
+            "trace": [
+              0.01897336921478716,
+              0.0
+            ]
+          },
+          "ground_weight": {
+            "frobenius_norm": 1.1964482076713808e-27,
+            "singular_values": [
+              8.46045816685159e-28,
+              8.459874642745021e-28
+            ],
+            "eigenvalues": [
+              [
+                8.459874642745026e-28,
+                1.6397987599193545e-49
+              ],
+              [
+                8.460458166851592e-28,
+                -1.6397987599236328e-49
+              ]
+            ],
+            "trace": [
+              1.6920332809596613e-27,
+              0.0
+            ]
+          },
+          "complete_complement_weight": {
+            "frobenius_norm": 0.013416198033732077,
+            "singular_values": [
+              0.009486684607393582,
+              0.009486684607393573
+            ],
+            "eigenvalues": [
+              [
+                0.009486684607393573,
+                8.673617379884035e-19
+              ],
+              [
+                0.009486684607393582,
+                0.0
+              ]
+            ],
+            "trace": [
+              0.018973369214787157,
+              0.0
+            ]
+          },
+          "equal_time_closure_residual": 3.9262595089142825e-18,
+          "energy_weighted_moment": {
+            "frobenius_norm": 0.027217692107443098,
+            "singular_values": [
+              0.01924581465742059,
+              0.01924581465742059
+            ],
+            "eigenvalues": [
+              [
+                0.01924581465742059,
+                -4.8631835217764884e-20
+              ],
+              [
+                0.019245814657420594,
+                0.0
+              ]
+            ],
+            "trace": [
+              0.03849162931484118,
+              1.7782245424994528e-19
+            ]
+          },
+          "half_double_commutator": {
+            "frobenius_norm": 0.027217692107444964,
+            "singular_values": [
+              0.01924581465742193,
+              0.019245814657421888
+            ],
+            "eigenvalues": [
+              [
+                0.019245814657421888,
+                0.0
+              ],
+              [
+                0.01924581465742193,
+                1.5248909156292555e-19
+              ]
+            ],
+            "trace": [
+              0.03849162931484382,
+              3.578164127042071e-19
+            ]
+          },
+          "energy_sum_residual": 1.8671476655029253e-15
+        }
+      },
+      "nonforward": {
+        "incoming_momentum": [
+          0.65,
+          0.2
+        ],
+        "outgoing_momentum": [
+          -0.25,
+          0.55
+        ],
+        "incoming_edge_amplitudes": [
+          [
+            -0.2738103966704814,
+            -0.09225979876219122
+          ],
+          [
+            0.6981678896541113,
+            0.6504107344483937
+          ],
+          [
+            0.25002322596282,
+            0.14481847351643715
+          ],
+          [
+            -0.9494198802537841,
+            -0.09525973235667115
+          ]
+        ],
+        "outgoing_edge_amplitudes": [
+          [
+            -0.9009130835873673,
+            0.11320435656049305
+          ],
+          [
+            -0.40847930616045164,
+            -0.010214110682406234
+          ],
+          [
+            0.8272209674359583,
+            0.3743862731958682
+          ],
+          [
+            0.39325366232751585,
+            0.11095597633454697
+          ]
+        ],
+        "contact": {
+          "frobenius_norm": 0.0018119359961753804,
+          "singular_values": [
+            0.001281232229971614,
+            0.0012812322299716136
+          ],
+          "eigenvalues": [
+            [
+              -0.0012768122399431955,
+              -0.0001063321731616249
+            ],
+            [
+              -0.0012768122399431953,
+              -0.00010633217316162469
+            ]
+          ],
+          "trace": [
+            -0.002553624479886391,
+            -0.00021266434632324967
+          ]
+        },
+        "complete_complement_pair": {
+          "frobenius_norm": 0.0018430148402209191,
+          "singular_values": [
+            0.0013040262269847806,
+            0.0013023898420251815
+          ],
+          "eigenvalues": [
+            [
+              -0.0013015171064645558,
+              -8.085556408987987e-05
+            ],
+            [
+              -0.0012999278079865234,
+              -8.004370452278258e-05
+            ]
+          ],
+          "trace": [
+            -0.0026014449144510787,
+            -0.00016089926861266232
+          ]
+        },
+        "analytic_ground_doublet_Born": {
+          "frobenius_norm": 6.524660264652787e-18,
+          "singular_values": [
+            5.382429410652075e-18,
+            3.687905260237379e-18
+          ],
+          "eigenvalues": [
+            [
+              -4.416526177071733e-18,
+              -5.86673532776203e-19
+            ],
+            [
+              4.416526272749585e-18,
+              5.866735447359343e-19
+            ]
+          ],
+          "trace": [
+            9.567785038781171e-26,
+            1.195973127440234e-26
+          ]
+        },
+        "full_kernel": {
+          "frobenius_norm": 4.9847779378562385e-05,
+          "singular_values": [
+            3.548785763655971e-05,
+            3.500590049321828e-05
+          ],
+          "eigenvalues": [
+            [
+              2.3115568043327353e-05,
+              -2.6288468638842444e-05
+            ],
+            [
+              2.4704866521360002e-05,
+              -2.547660907174491e-05
+            ]
+          ],
+          "trace": [
+            4.782043456468736e-05,
+            -5.176507771058736e-05
+          ]
+        },
+        "recomputed_doublet_covariance_residual": 5.559043497594682e-17,
+        "doublet_unitary_norm_residual": 6.776263578034403e-21
+      },
+      "tolerance_convergence": {
+        "static_Ward_kernel_change": 4.960030615177041e-18,
+        "nonforward_kernel_change": 1.9918670727165223e-12
+      },
+      "resolvents": [
+        {
+          "requested_relative_tolerance": 1e-08,
+          "solves": [
+            {
+              "frequency": 0.0,
+              "column": 0,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.0973996129735308,
+              "absolute_residual": 9.734853585583116e-10,
+              "relative_residual": 9.994755921903558e-09,
+              "ground_leakage": 3.119111108122593e-17
+            },
+            {
+              "frequency": 0.0,
+              "column": 1,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353082,
+              "absolute_residual": 9.734853583983396e-10,
+              "relative_residual": 9.994755920261127e-09,
+              "ground_leakage": 1.0781492878202335e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 0,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.0973996129735308,
+              "absolute_residual": 9.734853585583116e-10,
+              "relative_residual": 9.994755921903558e-09,
+              "ground_leakage": 3.119111108122593e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 1,
+              "iterations": 37,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353082,
+              "absolute_residual": 9.734853583983396e-10,
+              "relative_residual": 9.994755920261127e-09,
+              "ground_leakage": 1.0781492878202335e-17
+            },
+            {
+              "frequency": 0.06754278568414548,
+              "column": 0,
+              "iterations": 42,
+              "cg_status": 0,
+              "rhs_norm": 0.10745326210357233,
+              "absolute_residual": 7.426608185744155e-10,
+              "relative_residual": 6.9114776418660765e-09,
+              "ground_leakage": 3.663225007120754e-17
+            },
+            {
+              "frequency": 0.06754278568414548,
+              "column": 1,
+              "iterations": 42,
+              "cg_status": 0,
+              "rhs_norm": 0.10745174119543453,
+              "absolute_residual": 7.353445948807774e-10,
+              "relative_residual": 6.843487008212586e-09,
+              "ground_leakage": 4.2424866580622674e-17
+            },
+            {
+              "frequency": -0.06754278568414548,
+              "column": 0,
+              "iterations": 36,
+              "cg_status": 0,
+              "rhs_norm": 0.10729930233356005,
+              "absolute_residual": 1.0100951480346951e-09,
+              "relative_residual": 9.413809093507659e-09,
+              "ground_leakage": 2.10614783177138e-17
+            },
+            {
+              "frequency": -0.06754278568414548,
+              "column": 1,
+              "iterations": 36,
+              "cg_status": 0,
+              "rhs_norm": 0.10730287979739078,
+              "absolute_residual": 1.0207153364915828e-09,
+              "relative_residual": 9.512469175281193e-09,
+              "ground_leakage": 2.4207275128245334e-17
+            }
+          ]
+        },
+        {
+          "requested_relative_tolerance": 2e-11,
+          "solves": [
+            {
+              "frequency": 0.0,
+              "column": 0,
+              "iterations": 49,
+              "cg_status": 0,
+              "rhs_norm": 0.0973996129735308,
+              "absolute_residual": 1.8614408300813352e-12,
+              "relative_residual": 1.9111378097438622e-11,
+              "ground_leakage": 3.1103099921274546e-17
+            },
+            {
+              "frequency": 0.0,
+              "column": 1,
+              "iterations": 49,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353082,
+              "absolute_residual": 1.8614409100758074e-12,
+              "relative_residual": 1.9111378918740365e-11,
+              "ground_leakage": 2.7729697313306772e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 0,
+              "iterations": 49,
+              "cg_status": 0,
+              "rhs_norm": 0.0973996129735308,
+              "absolute_residual": 1.8614408300813352e-12,
+              "relative_residual": 1.9111378097438622e-11,
+              "ground_leakage": 3.1103099921274546e-17
+            },
+            {
+              "frequency": -0.0,
+              "column": 1,
+              "iterations": 49,
+              "cg_status": 0,
+              "rhs_norm": 0.09739961297353082,
+              "absolute_residual": 1.8614409100758074e-12,
+              "relative_residual": 1.9111378918740365e-11,
+              "ground_leakage": 2.7729697313306772e-17
+            },
+            {
+              "frequency": 0.06754278568414548,
+              "column": 0,
+              "iterations": 53,
+              "cg_status": 0,
+              "rhs_norm": 0.10745326210357233,
+              "absolute_residual": 1.3837013990633145e-12,
+              "relative_residual": 1.2877239573514193e-11,
+              "ground_leakage": 3.9232200577349205e-17
+            },
+            {
+              "frequency": 0.06754278568414548,
+              "column": 1,
+              "iterations": 53,
+              "cg_status": 0,
+              "rhs_norm": 0.10745174119543453,
+              "absolute_residual": 1.3916268478160822e-12,
+              "relative_residual": 1.2951180058450374e-11,
+              "ground_leakage": 5.058719637558395e-17
+            },
+            {
+              "frequency": -0.06754278568414548,
+              "column": 0,
+              "iterations": 48,
+              "cg_status": 0,
+              "rhs_norm": 0.10729930233356005,
+              "absolute_residual": 1.4994690001075847e-12,
+              "relative_residual": 1.3974638860616292e-11,
+              "ground_leakage": 2.941902729768943e-17
+            },
+            {
+              "frequency": -0.06754278568414548,
+              "column": 1,
+              "iterations": 48,
+              "cg_status": 0,
+              "rhs_norm": 0.10730287979739078,
+              "absolute_residual": 1.5182166881342366e-12,
+              "relative_residual": 1.4148890421216394e-11,
+              "ground_leakage": 1.9096787084608226e-17
+            }
+          ]
+        }
+      ],
+      "rotated_frame_resolvents": [
+        {
+          "frequency": 0.06754278568414548,
+          "column": 0,
+          "iterations": 53,
+          "cg_status": 0,
+          "rhs_norm": 0.10745336935519884,
+          "absolute_residual": 1.3924235823626598e-12,
+          "relative_residual": 1.2958398519453139e-11,
+          "ground_leakage": 3.2982914822080676e-17
+        },
+        {
+          "frequency": 0.06754278568414548,
+          "column": 1,
+          "iterations": 53,
+          "cg_status": 0,
+          "rhs_norm": 0.10745163394218318,
+          "absolute_residual": 1.3819871424039809e-12,
+          "relative_residual": 1.286148094451119e-11,
+          "ground_leakage": 6.512436575671266e-17
+        },
+        {
+          "frequency": -0.06754278568414548,
+          "column": 0,
+          "iterations": 48,
+          "cg_status": 0,
+          "rhs_norm": 0.10729905005101928,
+          "absolute_residual": 1.5016917389813644e-12,
+          "relative_residual": 1.3995387081873789e-11,
+          "ground_leakage": 7.96366310144416e-17
+        },
+        {
+          "frequency": -0.06754278568414548,
+          "column": 1,
+          "iterations": 48,
+          "cg_status": 0,
+          "rhs_norm": 0.10730313207092743,
+          "absolute_residual": 1.5161403149304972e-12,
+          "relative_residual": 1.4129506619884382e-11,
+          "ground_leakage": 1.9293331115901808e-17
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,505 @@
+{
+  "model": "Two-cell actual continuous SU4 Gauss + compact U1 two-path EFT",
+  "parameters": {
+    "cutoffs": [
+      "minimal"
+    ],
+    "R": [
+      1
+    ],
+    "numbers": [
+      3,
+      4,
+      5
+    ],
+    "lambdas": [
+      1.0
+    ],
+    "inertias": [
+      2.0
+    ],
+    "heavy_sign": -1,
+    "alignment": 0.0,
+    "ue4": 0.3,
+    "ue1": 0.4,
+    "magnetic": 0.7,
+    "stiffness": 2.0,
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.3,
+    "heavy_m": null,
+    "heavy_r": null,
+    "heavy_v": null,
+    "levels": 8,
+    "max_ground_rank": 32,
+    "tol": 1e-10,
+    "photon_steps": 12,
+    "resolvent_tol": 1e-09,
+    "identity_tol": 2e-06,
+    "gap_fraction": 0.2,
+    "maxiter": 6000,
+    "seed": 222,
+    "operators_only": true
+  },
+  "hypotheses": [
+    "Fundamental simultaneous adjoint orbit declared EFT, not full60 field quantum phase",
+    "Two parallel EM paths; colour U and U dagger tied by explicit flat-colour-loop EFT constraint",
+    "One colour canonical momentum; all native physical states retained for every independent ell",
+    "Primitive Pauli fullCAR/code and neutral boundary marker unchanged",
+    "One colour bond has exact continuous Haar alignment Lambda*Jpref*W/8; Jpref=0 omits it"
+  ],
+  "source_interpretation": "PRIMARY independent finite external light-matter sources; quantum magnetic potential stays dynamical and source-independent. Optional apply magnetic_background explicitly chooses additional external curl.",
+  "excluded_claims": [
+    "3D photon",
+    "Lorentz invariance",
+    "on-shell S matrix",
+    "recoil scattering",
+    "full phase",
+    "canonical QED"
+  ],
+  "selected_frame_real": [
+    [
+      [
+        0.0,
+        0.0,
+        0.6483983251503319,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.6483983251503319
+      ],
+      [
+        0.6483983251503319,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.6483983251503319,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.23863957694084134,
+        0.0,
+        0.0
+      ],
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.0,
+        -0.23863957694084134
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        -0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.23863957694084134,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        -0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        -0.0,
+        0.23863957694084134
+      ]
+    ]
+  ],
+  "selected_frame_imaginary": [
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        -0.23863957694084134,
+        0.0,
+        0.0
+      ],
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.23863957694084134
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  ],
+  "selected_gram": [
+    0.42042038805775556,
+    0.05694884768250374,
+    0.05694884768250374,
+    0.05694884768250374
+  ],
+  "links": [
+    {
+      "cutoff": [
+        "1",
+        "4",
+        "bar4"
+      ],
+      "dimension": 33,
+      "dimensions": {
+        "1": 1,
+        "4": 4,
+        "bar4": 4
+      },
+      "casimirs": {
+        "1": 0.0,
+        "4": 1.875,
+        "bar4": 1.875,
+        "6": 2.4999999999999996,
+        "10": 4.5,
+        "bar10": 4.5,
+        "15": 4.0
+      },
+      "lie_residual": 3.8718637878417907e-16,
+      "hermiticity_residual": 0.0,
+      "electric_lie_residual": 3.925231146709438e-16,
+      "casimir_residual": 3.076740298213702e-15,
+      "cg_intertwiner_residual": 2.7194799110210365e-16,
+      "cg_isometry_residual": 8.222140951789457e-16,
+      "centre_residual": 5.684383067706609e-15,
+      "multiplication_commutator_residual": 0.0,
+      "adjoint_commutator_residual": 0.0,
+      "left_right_residual": 0.0,
+      "compressed_unitarity_defect": 5.5,
+      "haar_inner_product": "exact Schur delta_rr delta_ac delta_bd; no quadrature",
+      "alignment_J": 0.0,
+      "alignment_scope": "omitted, no compressed PUP product"
+    }
+  ],
+  "alignments": [],
+  "runs": [
+    {
+      "cutoff": "minimal",
+      "R": 1,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "NH": 4,
+      "NL": 3,
+      "charge": -1,
+      "dimension": 392160,
+      "base_dimension": 130720,
+      "boundary_rep": "4",
+      "boundary_dimension": 4,
+      "Jpref": 0.0,
+      "alignment_coefficient": 0.0,
+      "tensor_shapes": {
+        "1": [
+          1320,
+          1,
+          1,
+          4,
+          3
+        ],
+        "4": [
+          640,
+          4,
+          4,
+          4,
+          3
+        ],
+        "bar4": [
+          1320,
+          4,
+          4,
+          4,
+          3
+        ]
+      },
+      "operators": {
+        "hermiticity": 4.9506741726839365e-17,
+        "pure_gradient_covariance": 1.2751240295102075e-15,
+        "current_derivative": 6.544887338977614e-11,
+        "contact_derivative": 1.3033702353473692e-08,
+        "density_current_Ward": 1.0032061239253197e-15,
+        "density_contact_Ward": 4.8636744100207585e-15,
+        "orientation_matches_individual_ell_slots": 0.0,
+        "formal_S_identity_old_hop": 4.3827004895380515e-18,
+        "full_Lie_Gauss_square_residual": 9.067589113778142e-16,
+        "angular_Gauss_positive_square_expectation": 3.4470459892524214,
+        "heavy_source_current_norm": 0.0,
+        "wrong_Gauss_defect": 1.1055709681267916,
+        "wrong_heavy_EM_defect": 0.3923983230539796,
+        "wrapping_defect": 0.41279564152042963,
+        "no_loop_wrapping": true,
+        "heavy_EM_neutral": true,
+        "complete_old_domain_each_ell": true
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "R": 1,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "NH": 4,
+      "NL": 4,
+      "charge": 0,
+      "dimension": 122172,
+      "base_dimension": 40724,
+      "boundary_rep": "1",
+      "boundary_dimension": 1,
+      "Jpref": 0.0,
+      "alignment_coefficient": 0.0,
+      "tensor_shapes": {
+        "1": [
+          1812,
+          1,
+          1,
+          1,
+          3
+        ],
+        "4": [
+          1216,
+          4,
+          4,
+          1,
+          3
+        ],
+        "bar4": [
+          1216,
+          4,
+          4,
+          1,
+          3
+        ]
+      },
+      "operators": {
+        "hermiticity": 6.288372600415926e-17,
+        "pure_gradient_covariance": 1.0075328404188101e-15,
+        "current_derivative": 6.995513605445095e-11,
+        "contact_derivative": 1.16262754273098e-08,
+        "density_current_Ward": 1.5060788298592712e-15,
+        "density_contact_Ward": 7.576122329871544e-15,
+        "orientation_matches_individual_ell_slots": 0.0,
+        "formal_S_identity_old_hop": 4.572840636851039e-18,
+        "full_Lie_Gauss_square_residual": 7.368496258020871e-16,
+        "angular_Gauss_positive_square_expectation": 3.0235697913403254,
+        "heavy_source_current_norm": 0.0,
+        "wrong_Gauss_defect": 1.0074476903984775,
+        "wrong_heavy_EM_defect": 0.36359093107640644,
+        "wrapping_defect": 0.4127790873630104,
+        "no_loop_wrapping": true,
+        "heavy_EM_neutral": true,
+        "complete_old_domain_each_ell": true
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "R": 1,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "NH": 4,
+      "NL": 5,
+      "charge": 1,
+      "dimension": 392160,
+      "base_dimension": 130720,
+      "boundary_rep": "bar4",
+      "boundary_dimension": 4,
+      "Jpref": 0.0,
+      "alignment_coefficient": 0.0,
+      "tensor_shapes": {
+        "1": [
+          1320,
+          1,
+          1,
+          4,
+          3
+        ],
+        "4": [
+          1320,
+          4,
+          4,
+          4,
+          3
+        ],
+        "bar4": [
+          640,
+          4,
+          4,
+          4,
+          3
+        ]
+      },
+      "operators": {
+        "hermiticity": 1.3140333526676018e-17,
+        "pure_gradient_covariance": 1.2992731077785284e-15,
+        "current_derivative": 6.545642120156773e-11,
+        "contact_derivative": 1.2995774323127856e-08,
+        "density_current_Ward": 2.7724060039441128e-15,
+        "density_contact_Ward": 1.4291622605252015e-14,
+        "orientation_matches_individual_ell_slots": 0.0,
+        "formal_S_identity_old_hop": 4.380466710545658e-18,
+        "full_Lie_Gauss_square_residual": 9.062954678200485e-16,
+        "angular_Gauss_positive_square_expectation": 3.4461054291452937,
+        "heavy_source_current_norm": 0.0,
+        "wrong_Gauss_defect": 1.1062986680258917,
+        "wrong_heavy_EM_defect": 0.39361692323931124,
+        "wrapping_defect": 0.4128037129750453,
+        "no_loop_wrapping": true,
+        "heavy_EM_neutral": true,
+        "complete_old_domain_each_ell": true
+      }
+    }
+  ],
+  "charged_differences": [],
+  "source_sha256": {
+    "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+    "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+    "exact_haar_alignment.py": "62649d08f722eb3abedc3a759a650b99b374dfba58a84951cebdc1c9630c656f",
+    "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "quantum_su4_gauss.py": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+    "quantum_su4_photon.py": "792f487debd75707cfd2990e42afb87fb3d6712edcde5c1290d6f06d10feb6ea",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286"
+  }
+}

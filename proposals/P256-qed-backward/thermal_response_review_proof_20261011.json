@@ -1,0 +1,115 @@
+{
+  "kind": "INDEPENDENT_REVISION_BOUND_THERMAL_RESPONSE_MATHEMATICAL_REVIEW_NOT_ADMISSION",
+  "verdict": "VALID_AT_DECLARED_FINITE_N_POSITIVE_BETA_SCOPE_WITH_NATIVE_HEAT_DOMAIN_PREMISES; NO_MATERIAL_TARGET_DEFECT_FOUND",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "df7d591da9b2d430c19e2f155e5f09fa73a8c0279518e36743e369252b9a3cf5",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "contract_sha256": "cbccd8d39c1c6b0e4eb6e467e48d4a378389b84300d36d6f7b7a8cca6153f579",
+    "accepted_science_unchanged": "c8dc7a8e10cc6da564e0b3e01dabe9b60765e43bfa7b32ddcacc84063d36861b",
+    "work_item_id": "induced-photon",
+    "requirement_ids": ["outcome", "verification"],
+    "parent_only_plan_state_writer": true
+  },
+  "original_target": {
+    "proof": "magnetic_thermal_proof_20261011.json",
+    "proof_sha256": "8249907cb059c3eb1375ee91d402bbff47353620831b9e5898ebabe6bdcefa52",
+    "sections": ["literal_standing_boundary_source", "canonical_response_and_positive_thermal_spectrum", "zero_temperature"],
+    "source": "magnetic_thermal_scientist_20261011.py",
+    "source_sha256": "b158b99fbcaff1f96b95a880ac382d6b9ef813836ee3899a42c4b121abc5244d",
+    "source_ranges": ["189-306", "309-350", "384-473"],
+    "receipt_sha256": "3757896c3f77f6b52b9788512c2677bef40afcd9704bbcdfc2a2c088069322dc",
+    "executed_sha256": "b966237324d51713582706ce5c8d2f256f484ac0fa26079967001921d03021d3",
+    "original_archive_match": "New control hash-verifies all11 frozen thermal pins plus native profile and endpoint/slab sources; compares8 original executed members byte-for-byte; original archived natural exit0 retained.",
+    "no_target_edits_or_old_entrypoint_reruns": true
+  },
+  "native_source_review": {
+    "classification": "EXACT_OPERATOR_ALGEBRA_AND_FROZEN_NATIVE_FINITE_CONTROLS_NOT_NATIVE_THERMAL_EVALUATION",
+    "geometry": "NEW even N>=4 open-x slab, AP-yz, both fixed tangential U1 boundaries m1; all quantum fullPhi/SU4 and charged active1+aux63, neutral canonical2V, Ref4, HEHC64 unchanged. N4/6/8 original controls are not periodic adoption.",
+    "source": "a_z=cos(2pi*y/N) on x=0,N-1 z edges, all others0. Radian amplitude1 fixed at every N. Atlas increment is alpha*a_z/(2pi), not alpha*a_z, alpha/N or alpha/q.",
+    "flux": "Sum_y,z[cos(q(y+1))-cos(qy)]=0 separately on both boundaries by telescoping; nonzero curvature persists. It is not a flat-gauge translation or an m change.",
+    "ordering": "Native coefficient is APseam*(F_x U_1...U_length + U_1...U_length F_y)/2. Source phase is scalar; differentiate without commuting F across ordered SU4 matrices. Forward and true adjoint CAR transfers preserve each independent species number2V and Ref4.",
+    "jets": "eta=length*cos(qy) for z paths on either boundary; all other eta0. J=sum i*eta*T-i*eta*Tdagger; K=-sum eta²*(T+Tdagger). For two links at y0, coefficients2i and-4. Neutral/onsite/Phi/SU4/HE/collectiveHC direct jets0, but all remain in the actual interacting Gibbs state.",
+    "original_executed_scope": "512 individual charged canonical jet channels per N: both boundaries, y0/y1, one/two links, all64 roles; zAP seam and ordered noncommuting SU4/fullPhi point probes. Source cochain/path eta is checked over every existing native path. A pointwise algebra probe is not frozen-field thermodynamics or a full-spectrum computation.",
+    "bound_constants": "Independent exact Fraction arithmetic from the pinned native profile reproduces every original MJ_N and MK_N in N4/6/8. Global norm bounds use |cos|<=1 and are deliberately conservative. J and K are matrix-valued multiplication operators, pointwise linear in Phi; therefore J²<=MJ_N²*r_Cart² pointwise, not an unjustified square of a noncommuting abstract form inequality."
+  },
+  "analytic_trace_review": {
+    "classification": "ANALYTIC_DERIVATION_CONDITIONAL_ON_ACTUAL_CLOSED_FORM_AND_HEAT_COMPARISON",
+    "premises": "Common closed physical affine-glued form domain, positive finite-beta heat trace and uniform-b quartic domination X=H+C>=c*r_Cart^4 and uniform strip bounds. The finiteN heat reviewer reported no invalidation of these actual-law premises; no new domain for unwrapped Theta is asserted.",
+    "argument": "Scalar Peierls phases are entire and bounded in each fixed complex-alpha strip; Phi-linear perturbations are form-relative-bound0 uniformly in b. From r^4<=cX, operator-monotone square root gives r²<=sqrt(c)X^(1/2), hence rX^(-1/4) bounded. Semigroup smoothing then gives a single-insertion t^(-1/4) endpoint estimate; one/two time-ordered insertions have integrable simplex singularities. Keep a remaining positive heat-time factor in a trace ideal and dominate b integration by the smaller-time finite heat upper. This justifies finite-beta twice trace differentiation; it does not justify beta-infinity derivative interchange.",
+    "uncentred_normalization": "Z=integral db Tr e^(-beta H_b), F=-logZ/beta per primitive deck cell. Any numerical scalar spectral shift must be restored inside b integration before differentiation. Spatial pressure p=logZ/(beta V) has psecond=-Fsecond/V."
+  },
+  "canonical_kubo_review": {
+    "classification": "EXACT_QUANTUM_IDENTITY_ON_THE_NAMED_THERMAL_MOMENT_DOMAIN",
+    "identity": "Fprime=omega(J), Fsecond=omega(K)-chi, chi=integral_0^beta omega(deltaJ(tau)deltaJ)dtau, deltaJ=J-omega(J)I with ONE globally integrated mean.",
+    "all_character_variance": "Set w_b=Z_b/Z and j_b=omega_b(J). Then chi_global=integral w_b chi_b db + beta*Var_w(j_b). Subtracting j_b independently in each fibre deletes the second term; this is an actual classical current variance, not gauge noise or a normalization freedom.",
+    "spectral_measure": "p_n(b)=exp(-beta E_n(b))/Z. mu(domega)=integral db sum_nm p_n |deltaJ_nm|² delta_(E_m-E_n)(domega) is positive on the SIGNED frequency line. Reverse weights obey mu(-domega)=exp(-beta omega)mu(domega) for omega>0. g_beta(omega)=(1-exp(-beta omega))/omega is positive for either sign, with g_beta(0)=beta. Thermal GNS Liouvillian is not a nonnegative ground generator.",
+    "whole_zero_block": "Every eigenspace contributes beta*p_E*||P_E deltaJ P_E||_HS²; include degenerate offdiagonal matrices, diagonal variances and the integrated between-fibre variance. Keeping just one vector, block trace/mean, or positive-frequency-only spectrum is incorrect. Contact omega(K) is independent and cannot be dropped.",
+    "quantum_inequality_proof": "For E_m!=E_n, spectral coefficient (p_n-p_m)/(E_m-E_n)=beta*L(p_n,p_m), where L is the logarithmic mean. L<= (p_n+p_m)/2; at zero gap coefficient=beta*p_n. Summing Hermitian deltaJ matrix squares and integrating b gives 0<=chi<=beta*omega(deltaJ²)<=beta*omega(J²)<=beta*MJ_N²*R2_N. This is a quantum inequality, not the generally false equality chi=beta*Var(J) when [H,J]!=0.",
+    "native_actual_guard": "Fsecond lies in[-MK_N sqrt(R2_N)-beta MJ_N² R2_N,+MK_N sqrt(R2_N)]. Both magnitudes are positive finite expressions at every finiteN,beta>0; the interval contains0. No native magnetic sign, stiffness or pole follows. No N-uniform local bound or beta-infinity response is paid."
+  },
+  "zero_temperature_review": {
+    "classification": "CONDITIONAL_SELECTION_THEOREM_AND_EXACT_DEGENERACY_COUNTEREXAMPLE; RESPONSE_OPEN",
+    "selection": "At fixed finiteN, compact character torus, continuous compact-resolvent form family and uniform heat domination give the Laplace principle F_beta->min_b infspec H_b. Continuous low-energy bands supply positive-measure near-minimum packets; no selected b0 or ordinary normal full-cover Gibbs density is produced. Limiting mixtures may depend on degeneracy/flat minima/Laplace weights, and need not be unique.",
+    "counterexample": "H_alpha=diag(alpha,-alpha,2), J=diag(1,-1,0), K=0. For |alpha| small E0=-|alpha|. At alpha0, Fsecond=-2beta/(2+exp(-2beta)); P0JP0 nonscalar and QJP0=0. Thus the WHOLE zero block can diverge linearly beta and ground energy can cusp even without excited transitions.",
+    "limit_warning": "Character minimizer switching or ground degeneracy prevents automatic alpha derivative/beta limit exchange. Ground/current domains and actual selected ground characterization remain open; no ground response sign is inherited from finite-beta positivity."
+  },
+  "independent_execution": {
+    "classification": "FINITE_BINARY64_CONTROL_WITH_ANALYTIC_CONTINUOUS_ALL_B_IDENTITY_NOT_NATIVE_SPECTRUM",
+    "capsule": "thermal_response_review_actual1_20261011_capsule.json",
+    "returncode": 0,
+    "natural_exit": true,
+    "elapsed_seconds": 0.7358408180007245,
+    "source_inputs_unchanged": true,
+    "source_sha256": "4ff27759e192ef217e35d694c69a7679db36a8a906d7ac369b2e152fb2e00316",
+    "request_sha256": "588883f0a7305b25fcccf5707f9d14518e07483795e568091989838715138a2e",
+    "receipt_sha256": "34f77964ef22698baafe7514f2c8ff6213ed5fa5a4e0594f296c8a7c0bcb6a0b",
+    "preexecution_sha256": "2edef06704676f3313a1e7a822a9d633cb70179b51b8a5551f3ff222eab0e1f6",
+    "executed_sha256": "2bca2f5adde12bc3170d26c482c875a65748b82feafcce9598e13864071b5138",
+    "model": "Two canonical one-of-two CAR species with collective density interaction, noncommuting quantum field qubit, exact degenerate ancilla, and a continuous all-b cosine scalar energy/current. Matrix16; beta .5/1/2. Entire b integral is the exact modified-Bessel I0 identity evaluated binary64, not a selected-fibre sum.",
+    "beta1_observations": {
+      "noncommuting_HJ_norm": 8.897017727555927,
+      "contact": 2.0134861715472274,
+      "chi_global": 2.240459822014861,
+      "beta_equal_time_variance": 2.9191835409785662,
+      "quantum_cap_slack": 0.6787237189637052,
+      "Fsecond": -0.22697365046763363,
+      "direct_Richardson_error": 7.350653419280206e-11,
+      "lost_per_fibre_subtraction_variance": 0.17407365046763146,
+      "missed_degenerate_offdiagonal_block": 0.0529,
+      "missed_whole_zero_block": 0.22697365046763146,
+      "omitted_contact_error": 2.0134861715472274,
+      "wrong_radian_as_atlas_response_error": 8.733586907879065,
+      "negative_frequency_mass": 0.3326402549149649,
+      "KMS_pair_error": 2.7755575615628914e-17
+    },
+    "finite_control_limits": "No interval-rounding attestation, native thermal eigenvalues, actual fullPhi/SU4 canonical heat evaluation, magnetic sign, or quantum ground conclusion. New toy eigensolver only; no old solver/checker rerun. Direct free-energy difference is a numerical control, not an analytic proof."
+  },
+  "parent_joined_endpoint_review": {
+    "receipt_sha256": "08226e0753ecaa335df83687550a9061a066f2d7101775c7f909ce28dd919b5c",
+    "source_sha256": "92d06f6b510e280a89065eda4d04be690841f9a338e70fbf6cf5ce53f9d3e44b",
+    "classification": "EXACT_ENDPOINT_SUM_AND_HOLDER_DERIVATION_CONDITIONAL_ON_BULK_THERMAL_MOMENT",
+    "CJ": "15475017073321605/1099511627776",
+    "CK": "17636744894459443/1099511627776",
+    "coefficient_derivation": "CJ=8 sum chargedload(|c0|+|ci|)*length over z rows; CK substitutes length². Endpoint average contributes1/2 and each boundary site occurs once incoming/once outgoing. Independent exact rational calculation reproduces both and MJ_N=CJ*2N², MK_N=CK*2N².",
+    "metric": "For local HS radius r_x, r_x=|z_x|/sqrt2 under Tr(TaTb)=delta_ab/2. ||J||<=CJ sum_boundary r_x and ||K||<=CK sum_boundary r_x.",
+    "holder": "Pointwise (sum_boundary |z_x|)^4<=nb³ sum_boundary |z_x|⁴, nb=2N². Thermal Jensen and actual averaged moment sum_x omega(|z_x|⁴)<=V Cbeta give omega(J²)<=CJ²/2 *nb^(3/2)*sqrt(V Cbeta); |omega(K)|<=CK/sqrt2 *nb^(3/4)*(V Cbeta)^(1/4). Same logarithmic-mean chi<=beta omega(J²) and whole-zero-block semantics apply.",
+    "scope": "Guard straddles0. At fixed beta,Cbeta, J² cap per boundary area grows N^(5/2). Averaged moment is not a selected-boundary-site bound; no N-uniform IR or stiffness claim. Bulk Cbeta premise remains subject to its assigned independent review; parent receipt read-only, no rerun."
+  },
+  "findings": [],
+  "adverse_case_corrections": [
+    {"trigger": "Subtract each fibre mean before b integration", "consequence": "Lose beta times thermally weighted classical fibre-current variance", "correction": "Subtract global omega(J); retain beta Var_w(j_b)"},
+    {"trigger": "Delete omega0, retain only a ground vector or replace degenerate matrix block by its mean", "consequence": "Miss beta-weighted within-degeneracy and between-fibre fluctuations; potentially miss cusp/divergence", "correction": "Retain whole P_E deltaJ P_E blocks and all character weights"},
+    {"trigger": "Use atlas cycles as radians or unit one-link eta for two links", "consequence": "Current and contact acquire wrong source scale; response scales quadratically", "correction": "Atlas increment alpha*a/(2pi), eta=length*cos(qy), with K factor eta²"},
+    {"trigger": "Infer native sign or phase from toy negative response or broad finite-beta guard", "consequence": "Promote a method certificate to unpaid physical photon/ground/stiffness", "correction": "Keep native exact unevaluated guard separate from finite toy numbers and open ground/IR obligations"}
+  ],
+  "language_intelligence": {
+    "xd_lsp": "Unavailable mounted device; used actual direct pyright-langserver stdio instead",
+    "root_marker": "/home/administrator/substrate-222/pyproject.toml",
+    "LSP_probe": "initialize actual root, didOpen original source, documentSymbol including standing_cochain/native_current_contact/thermal_matrix, publishDiagnostics",
+    "AST_probe": "Python standard ast parser positively located four scoped original FunctionDef nodes before new edits; ast-grep first multiline pattern returned no match and was not treated as success",
+    "representative_original_diagnostics": "8 Pyright diagnostics observed on unchanged original target; not suppressed or repaired in review. Parent owns final selected-source diagnostics.",
+    "checks_not_run": ["old producer/main/checker", "build", "lint", "formatters", "repository tests", "postedit Pyright"]
+  },
+  "delivery_boundary": "Review and new independent controls only. Targets/shared plan/state/docs untouched; no scientific adoption, full physical ground, phase, stiffness, atom, pole, sharp photon, commoncone or campaign closure. Parent Marvin integrates."
+}

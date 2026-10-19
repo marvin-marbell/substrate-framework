@@ -1,0 +1,24 @@
+{
+  "scope": "FORCE_TO_SOURCE_WEIGHTING_HOLD_NOT_ACTUAL_ZPE_NUMERIC_COUNTEREXAMPLE",
+  "current_plan_revision": "92c5eb8e5cd492763b25ab20238d14440c757d50f9ae5207b29f3342362bb8da",
+  "actual_project_probe": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "-c",
+      "import json, numpy as np, hashlib, mpmath as mp\nfrom pathlib import Path\nfrom fractions import Fraction as F\nimport induced_phi_nonuniform_gauss_quantum as q\nmp.mp.dps=90\nr=Path('.')\nraw=(r/'induced_phi_complex_matter_jet_certificate_receipt.json').read_bytes(); j=json.loads(raw)\nqp=next(json.loads(v['bytes_utf8']) for k,v in j['input_capsule'].items() if k.endswith('gauss_quantum_final_actual_receipt.json'))\nrow=next(x for x in qp['actual_full_field_covariance']['all64q_covariance_enclosures'] if x['q_integer']==[0,0,0])\nc=q.decode(row['slow_covariance_divided_2power_minus6144'])\nmaxcov=float(np.linalg.eigvalsh(c)[-1]); sd=np.sqrt(maxcov)\nk=F(qp['actual_full_field_covariance']['certified_q0_slow_positive_lower']['lower'])\nkm=mp.mpf(k.numerator)/k.denominator\ntoycov=mp.sqrt(8/km)/2; toy_sd=mp.sqrt(toycov)\nif not toy_sd>1: raise ArithmeticError('Unit-scaled-STD wrong control was blind')\np=F(j['full_physical_Gaussian_jet_consumer']['primitive_input_bounds']['corrector_L2']['upper'])\ntrc=F(j['full_physical_Gaussian_jet_consumer']['primitive_input_bounds']['full_trace_covariance']['upper'])\nzlow=1-24*trc*2**40-4*p\nif not zlow>F(1,2): raise ArithmeticError('Actual compact source normalization price not licensed')\nprint(json.dumps({'p1_p2_p3_root_binding':'captured N4 only, not IR N262144 or centre_flux eight-site','current_box_g0':.2891743455929134206718894314871,'current_box_gs':.1047521929030907870234854476432,'observed_N4_leading_slow_covariance_scaled_max':maxcov,'observed_N4_leading_slow_std_scaled_max':float(sd),'literal_2power_minus3072_is_STD':False,'abstract_legal_single_mode_G8_Krootlower_std':str(mp.nstr(toy_sd,35)),'single_mode_wrong_unit_std_inequality_rejected':True,'actual_ZPE_price_numerical_violation_claim':False,'source_corrector_bound_less_than_one_ninth':p<F(1,9),'rational_compact_normalizer_lower_above_half':True,'jet_sha256':hashlib.sha256(raw).hexdigest(),'no_root_or_original_producer_rerun':True},indent=2))\n"
+    ],
+    "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+    "natural_returncode": 0,
+    "wall_seconds": 72.38038235199929,
+    "stdout": "{\n  \"p1_p2_p3_root_binding\": \"captured N4 only, not IR N262144 or centre_flux eight-site\",\n  \"current_box_g0\": 0.28917434559291344,\n  \"current_box_gs\": 0.10475219290309079,\n  \"observed_N4_leading_slow_covariance_scaled_max\": 2.131916106879628,\n  \"observed_N4_leading_slow_std_scaled_max\": 1.4601082517675283,\n  \"literal_2power_minus3072_is_STD\": false,\n  \"abstract_legal_single_mode_G8_Krootlower_std\": \"1.7363711216763947468136803733511242\",\n  \"single_mode_wrong_unit_std_inequality_rejected\": true,\n  \"actual_ZPE_price_numerical_violation_claim\": false,\n  \"source_corrector_bound_less_than_one_ninth\": true,\n  \"rational_compact_normalizer_lower_above_half\": true,\n  \"jet_sha256\": \"613204e675fe443ca88e17dca1df850d828443d6d879868242ebc97635c62771\",\n  \"no_root_or_original_producer_rerun\": true\n}\n",
+    "stderr": ""
+  },
+  "finding": "2^-3072 is the slowGaussian STD SCALE, not its covariance coefficient; actualcaptured N4 leading Covscaled max2.13191610688/STD1.46010825177. Existingforce consumer multiplies gradient bounds byscale alone and has no derived unitvariance cap. Legal scalarG8/K=rootlower control STD1.73637 rejects that missinghypothesis. No actualN4ZPE upper numerical violation claimed: those force derivative prices are loose. Derivative/Riesz proof separate; action price composition held for explicitvariance/corrector/normalizer reprice.",
+  "original_epoch": {
+    "force_producer_sha256": "8b5abe06e2ffe5e12aa355d2e50a88530a4ac3d33647bcdf40f8b35102f91d3f",
+    "force_receipt_sha256": "1fbf69d6c1bf9c2b4cd1f086d87d34542446aec479e6153ff455102030792b24",
+    "jet_sha256": "613204e675fe443ca88e17dca1df850d828443d6d879868242ebc97635c62771"
+  },
+  "root_binding": "CapturedN4 g0=.28917434559/gs=.10475219290 from da199806 with quantum0f143f66, matterb20c715c, root4691ffaa, full5b97862f. IR N262144 .290180/.102933 and centre_flux 8site32orbit are historicalotherlaw/finitevolume leads, not selectable bysmallerbound.",
+  "next": "Parentreprice actualrootGaussian covariance fromPH90Schur, correctedP andprovednormalizerbound; preserveoriginalepoch and executechangedCLI."
+}

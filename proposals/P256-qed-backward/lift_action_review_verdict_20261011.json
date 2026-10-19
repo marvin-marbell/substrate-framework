@@ -1,0 +1,149 @@
+{
+  "kind": "INDEPENDENT_PINNED_PHYSICAL_LIFT_ACTION_DOMAIN_AND_STATIONARITY_REVIEW",
+  "owner": "PhysicalLiftActionProofReview",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "dc9242dc91e41c0707a90bc266c5d5656b4f460e82c740cfcdb26350725bdfe8",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "accepted_scoped_science_distinct": "c66121a88fb191d0f878c16e6fc6a5611e2d1260c4927d1d022d57149106137b",
+    "plan_action": "Bound shared plan in this session; no shared plan writes or independent governor. Parent owns integration and amendments."
+  },
+  "bindings": {
+    "physical_ground_lift_source_20261011.py": "31b1c270bf341f75f2364580cd6f646f1d66fda54d93e9b3b227b6ab3985763e",
+    "physical_ground_lift_actual3_20261011_proof.json": "b5db95dd2c56822c32d8975232a7ca60d946a5c62a482164aeb4afb51fa07b17",
+    "physical_ground_lift_actual3_20261011_receipt.json": "f1b88bd99a958e7c63d9e3b8deace96a8e453bfaca88123f4480aa3b72758326",
+    "physical_ground_lift_domain_supplement_20261011.json": "ad4b7399dfdf22c09b1d6f5abf6163c29bdfb479c16c4d6724f8f9e59acc0d58",
+    "physical_ground_lift_actual3_20261011_natural_exit.json": "2bd90fe94474dbfb078e1e71a2bec6af51b7d18b7bc7f14751eed3accb636fe9",
+    "lift_action_review_control_20261011.py": "ab7c9b0f7e39c3d9fdb0ea0c548a05af506f35b1f48828750fb30b674f9f0540",
+    "lift_action_review_attempt2_20261011_capsule.json": "8368c1022a075aaaecfe1c966a6708ba574604c1fe789bb40602bc6570022164",
+    "lift_action_review_attempt1_20261011_capsule.json": "78de4010d2c4164ef0766c50ef3c3fc2ed6e6c6e13884ba741b8cd92a504bbc1",
+    "supplier_hashes": "All 23 source/input SHA256 bindings in actual3 natural_exit are independently matched in the new capsule, including immutable x, binary Phi NPZ, exact configuration receipt, rotation_band, local_orbital_stability, frozen profiles, primitive and bridge. Actual3 receipt equals proof.controls exactly."
+  },
+  "verdict": {
+    "D_H": "CONDITIONALLY VALID for the mathematical normalized scalar-times-fullCAR section, under exact source/isometry/Gauss suppliers and the stated ambient smooth-core selfadjoint realization (or its reducing physical restriction). Bounded second weak derivatives and complete action in L2 suffice. The numerical native controls do not alone certify a domain statement.",
+    "complete_norm_bound": "CONDITIONALLY VALID at finite N4: ||H Psi|| <= 2^1048833. Exact term-exponent arithmetic is correct. A displayed scalar/frame cap inference in the supplement is incomplete as written; the independent tighter derivative derivation below repairs it without changing this exponent or the target. All primitive terms and reached CAR sectors are retained. This is not a measured variance or stationary residual.",
+    "stationarity": "THIS COMPACT TRIAL IS NONSTATIONARY PROVIDED the physical eigen-equation is the restriction of the specified analytic strongly elliptic ambient finite-CAR matrix equation, and the original-cover Bloch decomposition intertwines that same realization. Analytic regularity plus an open Phi exterior proves this, also for exactg. The pinned artifacts declare rather than independently construct the operator-domain/reducing-subspace/Bloch premises; therefore no unconditional original-physical-realization stationarity verdict is issued.",
+    "unconditional_reachable_result": "The pinned compact source has a positive finite mathematical scalar normalizer, regular support chart, zero-extension without second-order boundary distributions, and an explicit complete finite-N differential action bound on the declared law. Native bounded controls discriminate dropped Phi/Haar joins, beta cross, role averaging, ordered links and an intercell exterior projection.",
+    "not_approval_by_controls": true,
+    "scientific_admission_or_ground": false
+  },
+  "findings": [
+    {
+      "id": "ACTION-F1",
+      "classification": "REPAIRABLE_PROOF_INFERENCE_GAP_NOT_A_COUNTEREXAMPLE_TO_THE_BOUND",
+      "location": "physical_ground_lift_domain_supplement_20261011.json:14 (ad4b7399...), with physical_ground_lift_actual3_20261011_proof.json:336-337,344-355 and physical_ground_lift_source_20261011.py:354-363 (31b1c270...).",
+      "invalid_premise": "The sole displayed scalar first/second absolute bound 2^240 and independent frame caps 2^40/2^90 do not by themselves imply a joined second bound with exponent 240: 2 f' U' could be bounded only by 2^281 from those coarse inequalities.",
+      "trigger": "Using the stated individual caps literally in f''U+2f'U'+fU'' to justify the N4 per-derivative exponent.",
+      "consequence": "An unsupported exponent inference unless a sharper scalar first cap or a joint cap is supplied. This is not evidence the actual source exceeds the target bound.",
+      "smallest_correction": "Insert ||z'||<2^40, ||z''||<2^90, ||z||<=R, then |s'|<=2^65, |s''|<2^130, |b'|<=2^67 and |b''|<2^134 for b=(1-s)^4. Consequently ||(bU)''||<2^135<2^240. This review supplies the missing derivation; no target edit was made.",
+      "status": "Repaired independently at the mathematical-source scope; parent owns any target supplement correction."
+    },
+    {
+      "id": "ACTION-P2",
+      "classification": "EXPLICIT_UNRESOLVED_REALIZATION_PREMISE_NOT_A_DISPROOF_OF_CONDITIONAL_NONSTATIONARITY",
+      "location": "physical_ground_lift_domain_supplement_20261011.json:25-27 (ad4b7399...), especially 'ambient differential equation is unchanged'; physical_ground_lift_actual3_20261011_proof.json:363; physical_ground_lift_source_20261011.py:374.",
+      "invalid_premise_if_promoted": "A projected/reduced physical eigen-equation or mere Gauss equivariance does not automatically supply an ambient analytic elliptic matrix eigen-equation. A singular gauge-fixed metric, compression to matching/harmonic sectors, or another original-cover Hamiltonian cannot be substituted.",
+      "trigger": "Promoting the compact-trial rejection to the actual physical operator without retaining the declared smooth-core, reducing-subspace and original-cover-intertwiner assumptions.",
+      "consequence": "Analytic continuation need not apply to that substituted operator. Native action/source-binding controls cannot establish the missing operator identification.",
+      "smallest_correction": "Keep the conclusion conditional on H_phys being a reducing restriction of the specified analytic ambient selfadjoint H and on the original-cover unitary direct integral. For a proved reducing restriction the argument below is valid; no global no-go follows.",
+      "status": "Conditional premise retained; no identified counterexample to the declared analytic ambient law."
+    }
+  ],
+  "haar_normalizer_derivation": {
+    "metric": "Use Hermitian generators T_a with Tr(T_a T_b)=delta_ab/2. For A=sum q_a T_a, the bi-invariant tangent norm is |q|^2=2Tr(A^2). Haar is the corresponding Riemannian volume divided by total volume; the exponential Jacobian at zero is 1 in these coordinates.",
+    "diameter": "For U in SU4 choose eigenangles initially in [-pi,pi], whose sum is 2pi k, |k|<=2. Shift |k| angles by appropriate 2pi to make the sum zero; conservatively every angle has absolute value <=4pi. The traceless Hermitian logarithm then has length <=sqrt(2*4*(4pi)^2)=sqrt(128)pi<36. Any two group points differ by such a logarithm, so diameter<36. New rational control uses pi<22/7 and 128*(22/7)^2=61952/49<1296.",
+    "bishop": "The bi-invariant compact-group metric has nonnegative Ricci curvature. Bishop comparison gives Vol(SU4)<=Vol(B15(36)) <=72^15<2^93, using a cube containing the Euclidean ball. This is an upper for total Riemannian volume, not an assumed Haar chart density.",
+    "jacobian": "On |q_a|<2^-74, |q|<sqrt(15)*2^-74<2^-72; ||A||op<=|q|/sqrt(2). Thus ||ad A||<=2||A||op<2^-71, even smaller than the supplement's 2^-60. The nonzero exponential singular-value factors are sinc(lambda/2); for |lambda|<2^-60, sinc(lambda/2)>=1-lambda^2/24. A product of at most 15 such factors is >1/2. Hence normalized Haar exponential density >2^-94, and the weaker >2^-100 is valid.",
+    "positive_box": "Choose per block 120 original Cartesian coefficients and 15 matching-link exponential coefficients in a centered box of side 2^-74, halfwidth 2^-75. The aggregate body first derivative cap 2^40 gives body displacement/R <=135*2^40*2^-75/2^-24=135/2048<1/8. This small cube is in the regular centre chart and s<1/4; the derivative bound can be bootstrapped along each segment from the centre. This is a Cartesian x Haar measure box, not a quotient volume or an orbit-dimension surrogate. The chosen side is a narrower subset of the Lie box used for the density lower.",
+    "Z": "There are M=V/2 disjoint blocks. A block volume is (2^-74)^135=2^-9990, Haar density >=2^-100, and b^2 >=1/16 (indeed b>1/4 on s<1/4). Thus Z>=2^-10094M>0. Nonmatching colour links integrate to Haar mass 1; normalized theta, beta, pointwise charged matter, neutral singlets and Ref4 introduce no scalar loss. Every field is unitarily equivalent on support to a matrix within R of its centre. It lies in the declared original Cart cube [-32,32]^(60V), giving Z<=2^360V<infinity since b<=1. For N4, lower exponent=-323008 and sqrt(supportvolume/Z)<=2^173024, well below the used 2^1048576=2^(16384V)."
+  },
+  "chart_derivatives_and_zeroextension": {
+    "support_chart": "With centre s0=1210903848802971/2251799813685248 and r0=728804995067477/2251799813685248, A has the stated ordered spectrum and exact minimum gap 150521544446014778757457172423/633825300114114700748351602688>1/8; the phase-tree magnitudes are >=r0>1/8. On s_X<1, each body matrix differs from its centre body by <=R. Polynomial perturbation of A is <=16R and Weyl reduces a gap by at most 32R; this still leaves >1/16, independently verified as rational arithmetic. Spectral projector perturbation costs an additional inverse gap for comparing B entries in the perturbed ordered eigenframe: even the loose edge loss 2^14 R=1/1024 leaves r0-1/1024>1/16. The displayed polynomial perturbation alone is not the tree estimate; this projector step supplies it. Thus support closure stays away from both spectral and tree degeneracies; setting the source to zero at an excluded chart cannot introduce a nonzero support seam there.",
+    "local_frame": "For a single original Cart derivative, field directions have Tr(B_a B_b)=4delta_ab and op norm<=2. On the actual tube the four field op norms are <1, so the literal A',B',A'',B'' bounds <16 are conservative despite native probes using the different Tr(T_aT_b)=delta_ab/2 Haar basis. With gap>1/16, the spectral_jet first-column formula gives ||W'||<2^12. Its second numerator contains A''W+2A'W'-2e'W', and the -||W'_j||^2 W_j normalization term is necessary; complete second cap <2^30 follows. For body B norm<8, first/second tree-entry bounds <2^17/<2^35 suffice. Normalized tree phases z*/|z| give derivative caps <2^22/<2^46 per edge, with all three-edge Leibniz cross terms. Their product and determinant fourth-root logarithmic derivatives leave total W' <2^30 and W''<2^70. Branch changes are common Z4; cancellation on the total block particle number, not separately at a fluctuating vertex, is a source/Gauss supplier condition.",
+    "full_fibre": "For a matching block of 256 charged particles, a unitary exterior action has first cap L||w'|| and second cap L||w''||+L(L-1)||w'||^2, not L times a single-particle second jet alone. These are <2^40 and <2^90 with L=256. Neutral parity wedge4/wedge0 and Ref4 are constant local singlets. The same conservative caps accommodate a full 512-mode local CAR derivative estimate, so no reached-sector matter bound relies on matching/harmonic projection. Frame and source-isometry admission remain separately reviewed.",
+    "scalar": "Let z be the aggregate eight-matrix body displacement, s=||z||^2/R^2 and b=(1-s)^4_+. On support ||z||<=R, ||Dz||<2^40, ||D^2z||<2^90. Then Ds=2Re<z,Dz>/R^2 and D^2s=2(||Dz||^2+Re<z,D^2z>)/R^2. For R=2^-24, |Ds|<=2^65 and |D^2s|<2^130. Db=-4(1-s)^3 Ds, D^2b=12(1-s)^2(Ds)^2-4(1-s)^3 D^2s, giving |Db|<=2^67 and |D^2b|<2^134. A unit Hamiltonian Cart coordinate touches one matching factor; a matching Haar tangent also touches one factor; unmatched Haar tangents touch none. Other scalar factors are <=1. No boundary estimate of b'/b or b''/b is used.",
+    "normalized_join": "Z is a constant of the state, not a function differentiated at a sampled configuration. D Psi=Z^-1/2[(Df)U+f(DU)]y and D^2 Psi=Z^-1/2[(D^2f)U+2(Df)(DU)+f(D^2U)]y, including every scalar/frame and particle/species cross. The preceding bounds give ||D^2(fU)||<2^135, hence the advertised weaker 2^240 absolute joint cap. Integrating over Cartesian support and normalized compact/packet factors gives each normalized complete second-jet L2 norm <=2^(16384V+240). This is an operator bound for every normalized input y in the admitted source fibre, not a cap inferred just from sampled x.",
+    "boundary": "At s=1, b, Db and D^2b vanish; the support chart is regular in a neighbourhood. Zero extension is C2 and its distributional second derivatives equal the displayed ordinary interior derivatives and zero exterior. In particular there are no delta or delta-prime terms from the support boundary. The physical block section is smooth across its cancelled frame branches, conditional on the source supplier. At chart degeneracies there is an open zero neighbourhood. Mollifying on the ambient smooth core converges in the first-H graph under the bounded compact-field coefficients; for the original cover use the declared normalized smooth beta packet/Schwartz coordinate envelope. This proves the conditional D(H) inclusion without asserting D(H^2)."
+  },
+  "complete_primitive_pricing": {
+    "Phi": "-4chi sum_(60V) D_i^2 Psi, chi=2^-4096; f''U+2f'U'+fU'' are all retained. Each coordinate is in the original Tr(B_aB_b)=4 Cart normalization. The number of coordinates and coefficient yield exponent -4096+ceil(log2(4*60V))+16384V+240.",
+    "Haar": "-(3chi/20) sum_(15*3V) X_a^2 Psi on normalized Haar. The full scalar/frame Haar product rule is retained. Left-invariant fields have zero Haar divergence, so their squares already constitute the bi-invariant Laplacian; no omitted coordinate Jacobian derivative is needed when written this way. Replacing 3/20 by 1 is a valid conservative upper. Unmatched links have zero differential action on this source but remain arbitrary Haar multipliers in matter and Wilson loops.",
+    "full_E_once": "Full electric is 64 sum_e (E0_e+(Bcycle beta)_e)^2, not an added independent HC plus another longitudinal square. The matching phase is exp(i theta rho_r), with rho_r=sum_64(n_s,r-2), |rho_r|<=128. Its square includes every active/auxiliary/species cross and the background. At the actual cycle-packet width w=1/(64dTrG), |Bbeta|^2<=dTrG*w^2 and 64|Bbeta|^2<=1/(64dTrG). At N4, d=129, TrG=738, w=1/6092928. The operator action includes 128 sum_e (Bbeta)_e E0_e as well as the native second action and the beta square. Even packet symmetry can cancel an integrated expectation cross, not the action cross. No theta derivative acts on the beta packet. The resulting electric per-edge action is far below the loose 2^(16384V+240) used in the exponent table. No bare U1 magnetic term from another law is introduced.",
+    "all_species": "Exact frozen profiles are obtained from unchanged RotationBand.couplings -> scalar_paths -> rational binary extraction; active count1 and auxiliary count63 keep distinct onsite masses. Both have three length1 and three length2 positive paths, with each adjoint retained. The two-link colour Wilson is ordered through its actual intermediate link and the U1 phase is the sum along the same physical path; endpoint Phi, not an invented midpoint, supplies the coefficient. Neutral uses improved=False, three nearest paths and physical scale -Lambda, with Lambda=2^8192. Neutral canonical number is 2V, charged number is 2V for EACH of 64 species. Each CAR bilinear has norm<=1 in the complete Fock space, independent of occupation sector or loop phase.",
+    "explicit_matter_triangle": "On support take the conservative |Phi_mu,ij|<4. A path t=(F_x U+U F_y)/2 has ||t||op<=4 sum_mu|c_mu|; entrywise l1<=16*4 sum_mu(|Re c_mu|+|Im c_mu|). Include the adjoint factor2 and every positive path/site, and onsite <=16*4|onsite|. The independent exact-rational charged 1+63 per-site upper is 855444290449274477/1099511627776 <2^30; neutral per-site upper before Lambda is 913738143146967/137438953472 <2^30. Therefore the charged/neutral total action caps 2^30V and 2^30Lambda V hold in all reached number sectors. Onsite signs and -Lambda cannot be dropped in energy or graph transfer even though absolute norm triangles forget the sign.",
+    "Jordan": "Gram entries Tr(Phi_mu Phi_nu)/4 have absolute value<=16 under the conservative field op bound4, so their squared Frobenius sum<=4096. The unchanged quartic normalization 1/a=64 at a=1/64 gives <=2^18Lambda V; small original normalization factors or a fixed preferred Gram term are far inside the declared 2^30Lambda V envelope. This is a support multiplier cap, not a bound on the unbounded ambient Jordan operator.",
+    "alignment_colour": "For an endpoint pair, each four-by-four difference has HS norm<=16, and four Phi matrices give squared total<=1024. There are 3V positive nearest links; the unchanged .2F/8 normalization is conservatively below F, yielding <2^12 FV, inside 2^30FV. Each ordered plaquette satisfies 0<=4-ReTr U_face<=8; 3V faces and the unchanged .7F prefactor give <24FV<2^30FV. Here F=Lambda^(5/4)=2^10240. Their full Haar support, including loops and centre histories, is retained rather than approximated by U=I.",
+    "Ref": "The fixed Ref4 filled local singlet has no fluctuating charge after its declared offset and no separate dynamical Ref hopping term in the reviewed first-H law. It is retained in the source and Gauss fibre. Traceless colour generators annihilate wedge4. This is not permission to replace Ref4 by a rank2 projector or to import a different law with reference penalties.",
+    "unmatched_exterior": "Intercell charged and neutral hops have zero or special expectations only for some occupation patterns, not zero complete action. They can leave matching-block, spin and harmonic sectors and are bounded by full CAR triangles, including one/two paths and all ordered loop products. They do not translate Cartesian fields, so there is no coordinate-support tail generated by a hop. Differential action vanishes on the open field exterior and at the boundary as established above. No compression PHP is substituted for H when pricing action."
+  },
+  "N4_rational_exponent_arithmetic": {
+    "V": 64,
+    "M": 32,
+    "Cart_count": 3840,
+    "colour_tangent_count": 2880,
+    "electric_edges": 192,
+    "normalizer_ratio_exponent_used": 1048576,
+    "Phi": 1044734,
+    "Haar": 1044732,
+    "full_E64": 1048830,
+    "neutral": 8228,
+    "charged": 36,
+    "Jordan": 8228,
+    "alignment": 10276,
+    "colour": 10276,
+    "sum": "Eight positive norm uppers are <=8*2^1048830=2^1048833. The exact integer ceil_log2 arithmetic reproduces every pinned exponent. For declared E only the generic bound ||(H-E)Psi||<=2^1048833+|E| follows. No stationarity, energy improvement or variance value follows from this enormous upper."
+  },
+  "exact_g_and_graph_transfer": {
+    "normalizer": "Let x be the mathematical unit normalization of the immutable binary coefficients, P0 the accepted selected local ground projection, and eta=274877906944/2204801412260314559041. Accepted infidelity implies ||P0 x||^2>=1-eta>0, so g=P0x/||P0x|| is defined and 1-eta<=||P0x||<=1. No assumption ||P0x||=1 and no extra division by a mass ratio is used. The computed numpy normalization is a binary control, not a proof of exact unity; mathematical source normalization uses the exact positive coefficient norm and the exact integral Z.",
+    "phase_and_error": "Choose phase so <g,x>=||P0x||>0. Then ||g-x||^2=2(1-||P0x||)<=2eta, hence epsg<=sqrt(2)*sqrt(eta), not eta itself. This square-root loss is applied once.",
+    "full_lift": "The exact source isometry yields the same scalar Z for normalized g and x. Telescope the M=32 matching factors: ||tensor g-tensor x||<=32epsg, so ||Psi_g-Psi_x||<=32epsg. The complete differential/multiplier action defines a bounded graph map on this finite source fibre with norm <=2^1048833 from the uniform derivative and fullCAR operator estimates, independent of y. Therefore ||H(Psi_g-Psi_x)||<=2^1048833*32epsg. The same bound already contains -Lambda neutral and the boundary action; neither Lambda nor another sqrtinfidelity factor is omitted or applied a second time. This is not a small physical H residual or a near-stationarity theorem.",
+    "source_binding_boundary": "Gauss and all-n native source isometry are separate reviews. Parent's new physical_lift_parent_native_binding_actual2 receipt ac8c85eb9e07 is parent-reported in the live message as full8mode matching + exact16CAR/SO5/rho/source embedding with wrong phase control and a nonzero stored-x component. It is not re-executed here and not treated as evidence for Z, D(H), the action norm, stationarity, exactg component intervals or physical ground. The prior frame-binding parent actual2 is also a full4x4/wrong-cross-spin control, not a ground."
+  },
+  "analytic_stationarity_audit": {
+    "full_matrix_equation": "For fixed finite N and beta, first assume the admitted H_beta acts on the full finite canonical CAR fibre (all spatial occupations/spins/roles, neutral and Ref) over M=R^(60V) x SU4^(3V) x T^(3V), possibly in a flat quasiperiodic Bloch line bundle. Its principal symbol is [4chi|xi_Phi|^2+(3chi/20)|xi_SU4|^2+64|xi_theta|^2] I_fibre. It is locally strongly elliptic because chi=2^-4096>0; smallness is no degeneracy. Beta is a constant lower-order analytic connection. Polynomial Jordan/alignment and linear Phi matter with ordered analytic Wilson/cosine entries are analytic matrix coefficients. Canonical fibre dimension is huge but finite, and full h includes all intercell/reached sectors.",
+    "system_not_components_first": "Apply analytic regularity to L=H_beta-E as an elliptic SYSTEM. It is invalid to assume each component has an analytic right-hand side merely because a scalar kinetic operator is elliptic: the unknown components are coupled through matrix matter. A valid systems theorem is Costabel-Dauge-Nicaise, Analytic Regularity for Linear Elliptic Systems in Polygons and Polyhedra, Proposition2.1, https://arxiv.org/pdf/1002.1772 (interior case: choose nested coordinate balls away from the boundary, so boundary hypotheses are vacuous). It states Cauchy-type estimates for an N-by-N second-order elliptic system with analytic coefficients in any dimension n>=2. Put Lu=0; the estimate |u|_k/k!<=A^(k+1)||u||_H1 and local Sobolev embedding imply real analyticity. The scalar theorem1.1 in Casselman, https://personal.math.ubc.ca/~cass/research/pdf/Analytic.pdf, is corroborating background, not the sole justification for this matrix application. The ambient finite-CAR system meets the interior hypotheses conditional on the operator equation being the actual one.",
+    "Gauss_realization": "If the smooth-core H is gauge invariant and the admitted selfadjoint realization commutes with the joint compact gauge action, its physical invariant/equivariant subspace is reducing. An eigenvector in the reducing restriction then satisfies the same ambient distributional equation, and the preceding system regularity applies before taking a quotient. This is the precise needed implication, not a proof supplied by finite Gauss residuals. A singular gauge-fixed quotient metric or a merely compressed PH matching Hamiltonian cannot be used to invoke this ambient theorem. The pinned supplier assumptions leave construction of this realization/intertwiner conditional; the Gauss review is separate.",
+    "connectedness_and_exterior": "The Cartesian space, SU4 and every circle factor are connected analytic manifolds, hence so is their finite product. A Bloch line bundle does not change local analyticity or the unique continuation of an analytic section; vanishing propagates through overlapping analytic trivializations. The trial vanishes on an open set of sufficiently large |Phi| but has a nonzero norm since Z>0 and the admitted fibre pointnorm is1. A solution of the full analytic system must be an analytic section, so vanishing on that open exterior forces vanishing on the entire connected component, a contradiction. It does not require the trial itself to be analytic; indeed the compact bump is not globally analytic.",
+    "original_cover": "Under the declared unitary Bloch/direct-integral identification, a global eigen-equation at E gives (H_beta-E)Psi_beta=0 for almost every beta in the selfadjoint fibre domains. The normalized even packet is nonzero on a positive-measure beta set. Its beta regularity need not be analytic: fix beta and apply the preceding Phi/colour/theta argument. Every such nonzero compact-Phi fibre is excluded as an eigenvector. Alternatively, on the original connected real cover with the same analytic ambient local operator, the compact Phi exterior yields the same contradiction directly. These routes do not identify beta0 as an original-cover L2 ground or assume the cycle Gram matrix is identity.",
+    "limited_conclusion": "Conditional on the exact ambient realization/reducing restriction/Bloch identification, neither this normalized x preparation nor the identical exactg compact preparation is stationary. No variance lower is quantified. The argument does not forbid noncompact-tail grounds, does not prove a phase or physical-spin response, does not extend to other Hamiltonians, and is not a global interacting no-go."
+  },
+  "independent_exercised_controls": {
+    "natural_exit": 0,
+    "elapsed_seconds": 3.9751404960115906,
+    "source_unchanged": true,
+    "input_pins_matched_at_execution_start": true,
+    "input_postrun_hash_audit": "Not separately performed; the new program is read-only on all target/input files. No measured post-run input-stability claim is made.",
+    "native70_Phi_product_relative_error": 2.958504504243913e-24,
+    "native70_Phi_scalar_frame_cross_norm": 423100786.6799827,
+    "native70_wrong_omit_frame_action_gap": 423100785.75714153,
+    "native70_Haar_product_relative_error": 7.911966343727712e-25,
+    "native70_Haar_scalar_frame_cross_norm": 23865673.1964993,
+    "native70_E_beta_join_error": 0.0,
+    "native70_wrong_drop_beta_cross_gap": 0.7905694150420949,
+    "wrong_ordered_two_Wilson_gap": 0.03784817836208766,
+    "native70_distinct_role_action_gap": 12.243691467664718,
+    "native924_three_site_intercell_exterior_action_norm": 0.6439213663213729,
+    "boundary": "Own path s=t^2 at t=0,.5,1-2^-10,1,1+2^-10,1.5 compares value/first/second to the independently differentiated (1-t^2)^4_+. At and outside t=1 all three are zero; interior maximum analytic-jet error 4.45e-15. This finite crossing corroborates, but does not replace, the distributional derivation.",
+    "scope": "Native70 one-species full canonical wedge4 matrices and native924 three-site canonical six-particle CAR control. The sparse three-site seed is a bounded falsifier of projecting away intercell occupation defects, not the all64 g source. The electric beta=1/1024 in the bounded control is an independent algebraic stress value, not the actual original-cover packet width. No physical chi underflowed into a claimed finite fullH action: displayed derivative diagnostics are explicitly unscaled. Exact rational upper arithmetic, not native fullfield numerics, verifies the N4 exponent table.",
+    "failed_attempt": "Attempt1 natural exit1 in2.4091s is preserved with full source/stdout/stderr/hashes. It rejected reordered floating product sums on absolute equality. Attempt2 repairs this control's equality criterion to a relative1e-14 tolerance without weakening nonzero omission predicates or changing a target. All subsequent controls were actually reached in attempt2."
+  },
+  "language_and_verification_boundary": {
+    "LSP": "OMP xd://lsp is unavailable and was reported. Installed /home/administrator/.local/bin/pyright-langserver was driven through native JSON-RPC at root /home/administrator/substrate-222 with pyproject.toml marker. Initial unopened-document attempt returned no symbols and is recorded; didOpen repair returned291 symbols, and an exact spectral_jet call definition resolved to source line54. Native server exits0. No claim of LSP diagnostics was made.",
+    "AST": "Standard Python ast gave positive target function declarations before editing and positive owned-control declarations during its new scientific execution; parser/runtime versions are in the capsule. This is not a syntax-only substitute for the observed LSP request.",
+    "not_run": "No historical main/eigensolver/root/checker; no target/plan edits; no nested delegation; no tests/build/lint/formatters/final checker. Parent owns final current-source diagnostic including lift_action_review_control_20261011.py."
+  },
+  "open_and_nonclaims": [
+    "D(H^2)",
+    "full-H numerical variance or a variance lower",
+    "stationary physical ground",
+    "energy minimization or full-H energy benefit",
+    "N-uniform phase, stiffness, pole or IR atom",
+    "full physicalPhi/lattice ground",
+    "normalized physical1 phase",
+    "commoncone",
+    "originalSOURCE closure",
+    "campaign completion"
+  ]
+}

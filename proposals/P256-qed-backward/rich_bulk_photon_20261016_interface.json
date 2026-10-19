@@ -1,0 +1,15 @@
+{
+ "module":"rich_bulk_photon_20261016_state", "input":"rich_bulk_photon_20261016_input.json",
+ "geometry":"POSITIONS[64,3],ARCS[192,3]=(tail,head,mu),INCIDENCE tail+1/head-1,LOOPS 192plaquettes+48length4windings",
+ "constraint":"INCIDENCE@E+occupations.sum(axis=0)-1=0; Nup=Ndown=32; E in -1,0,1",
+ "state":"delta_G * interleavedCARparity * det F[up,down] * exp(-g*D-a*sum E²-b*sum_e(E_e-E_NEXT[e])²)",
+ "kernel":"kernel(delta=.8,family='singlet'|'antiferromagnetic'|'af_dimer')->F,G,metadata. Singlet BCS all64momenta, full20mode xi0 shell f1. Initial AF=Pup F_BCS Pdown+.08Qup F_BCS Qdown has poor sampled overlap; retained. Material af_dimer=(Pup+.08Qup)T_x fullrank; oriented noncubic fixedSz0 STATE, not singletvacuum or newH. Pup/Pdown complete occupied projectors of h±stagger1, no arbitrary degenerate eigenvector pairing.",
+ "amplitude":"physical_amplitude(occupations[2,64],E[192],F,g=.45,a=.15,b=.08) -> canonical real scalar; invalid physical inputs return0",
+ "sources":"sources(q)->coeff[2,192],density[64],polarizations[2,3]; c[e]=p_mu exp(iq midpoint)/sqrt64; F=cE/16, J=-i[H,cE]. H F=F H+iJ/16",
+ "guide":"envelope²*(detF²+.2²detG²+1e-24); floor provides strictly positive guide, not a new state coefficient; exact nodes included in absolute Hpsi² estimator",
+ "evaluate":"evaluate(up[32],down[32],E,F,G,g,a,b,epsilon,floor,coeff,density)->(v[psi,F1,F2,J1,J2,rho],Hpsi,contact[2,2],guideweight,stableinverse,Hbasis[F1,F2,rho]); labelled particle frame: multiply all v,Hpsi,Hbasis by parity(up,down) to recover canonical CAR coefficients",
+ "spectral":"Joint plus/minus F and rho source-space generalized Ritz, exact all-neighbor H images; independent J vectors projected only for measured leakage/weights, never forced into F span. Not TDVP/full dynamics.",
+ "inverse":"One32x32 inverse per configuration, row/column dot ratios per legal hop; ill-conditioned SVD ratio<=1e-11 uses direct neighbor determinants, never drops node-H2",
+ "cutoffs":"No paircount restriction, no frozen field, no basis enumeration, no Gaussian charge integer; only original Ecap1 and finite V64. Finite MC need not observe all0..32doublons.",
+ "provenance":"New source. Frozen ancestor methods/lessons only; no ancestor evolved arrays, producer CLI or modifications."
+}

@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_canonical_photon.py",
+    "--output",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_canonical_photon_actual_receipt.json"
+  ],
+  "exit_code": 1,
+  "natural_exit": true,
+  "timeout_used": false,
+  "source_input_before_sha256": {
+    "joined_phi_u1_stationary_canonical_photon.py": "2eb41c975eb68cd973b0079b2d6138256095f9bdba68166e1051f2221385390d",
+    "joined_phi_u1_stationary_canonical_photon_natural_exit.py": "a370ea4f5d25e48485e37b64bd98439d0b1dfd960e94f98569e03ab205e58819",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_root_actual_receipt.json": "4691ffaa9cd81902942cbc228fc47fafff14518be6b5df2e84d08c29c7da4756",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json": "5b97862fc7fca21b8797d549d7d4dfdde58b101e8c46c7a7cfb6531a669c4354",
+    "induced_phi_nonuniform_fermionic_source_unitary_resumed_actual_receipt.json": "da1998065d6622c4ac780409c29ae10711e01b5c5143edf620557fe15234e9e6"
+  },
+  "source_input_after_sha256": {
+    "joined_phi_u1_stationary_canonical_photon.py": "2eb41c975eb68cd973b0079b2d6138256095f9bdba68166e1051f2221385390d",
+    "joined_phi_u1_stationary_canonical_photon_natural_exit.py": "a370ea4f5d25e48485e37b64bd98439d0b1dfd960e94f98569e03ab205e58819",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_root_actual_receipt.json": "4691ffaa9cd81902942cbc228fc47fafff14518be6b5df2e84d08c29c7da4756",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json": "5b97862fc7fca21b8797d549d7d4dfdde58b101e8c46c7a7cfb6531a669c4354",
+    "induced_phi_nonuniform_fermionic_source_unitary_resumed_actual_receipt.json": "da1998065d6622c4ac780409c29ae10711e01b5c5143edf620557fe15234e9e6"
+  },
+  "unchanged": {
+    "joined_phi_u1_stationary_canonical_photon.py": true,
+    "joined_phi_u1_stationary_canonical_photon_natural_exit.py": true,
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_root_actual_receipt.json": true,
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json": true,
+    "induced_phi_nonuniform_fermionic_source_unitary_resumed_actual_receipt.json": true
+  },
+  "immutable_execution_archive_sha256": "28039cf9103cbe463f59136506c819edd07bed3f1eb51cc65e673af3473ae602",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "b5f99f332b34e9b672e5ff9a8abfbc3c98b67325c4787cd129473a7fc53e57fd",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_canonical_photon.py\", line 229, in <module>\n    with threadpool_limits(limits=1):r=run(args.output)\n                                       ^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_canonical_photon.py\", line 200, in run\n    m=transfer(profile,native,paths,tau,direction);cv=canonical(m,[128,129]);v=cv[128];log=logarithmic(v);alllogs.append(log)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_canonical_photon.py\", line 94, in transfer\n    h,dh,ddh=native_h(profile,native,path['fields'],path['links'],path['theta'],direction,probe,omit)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_stationary_canonical_photon.py\", line 85, in native_h\n    w=float(np.sum(direction[p['edges']]));phase=np.exp(1j*(np.sum(theta[p['edges']])+probe*w))\n                   ~~~~~~~~~^^^^^^^^^^^^\nIndexError: too many indices for array: array is 1-dimensional, but 2 were indexed\n",
+  "runtime_executable": "/home/administrator/substrate-framework/.venv/bin/python"
+}

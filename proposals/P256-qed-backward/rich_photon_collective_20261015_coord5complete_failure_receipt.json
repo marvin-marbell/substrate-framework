@@ -1,0 +1,14 @@
+{
+  "kind":"COMPLETED_EIGENVECTORS_PRESERVED_AFTER_METADATA_ONLY_SERIALIZATION_FAILURE",
+  "mode":"coord5complete","returncode":1,"scientific_consumer_completion":false,
+  "capture_wall_seconds":1431.7870383262634,"source_input_changed":[],"peak_RSS":"UNKNOWN: resource metadata existed only in unpersisted result object before JSON failure",
+  "capsule":{"file":"rich_photon_collective_20261015_coord5complete_capsule.zip","sha256":"4eae8b26c08a0ffb075dcb38f24f2c754c7f100eb61b25e786a5c0a25fbfa2ff","bytes":1544540289},
+  "first_cause":"Blocksolver and combined17-vector physical RayleighRitz completed; np.savez_compressed returned BEFORE json.dumps failed on complex-valued LOBPCG history/backend energy metadata. NoOOM,not failedphysicalmode search,not sourceclosure failure.",
+  "preserved_vectors":"rich_photon_collective_20261015_coord5complete_vectors.npz",
+  "source_fix":"Complex backend energies/history now serialize explicit real+imag components,not defaultstr or discardedphase. Heavy eigenproblem intentionally NOT rerun just to validate serialization; original executed failedsource remains exact in its capsule.",
+  "recovery":"New coord5grouprecover consumer loads completed17vectors and recomputes actual SAMEH eigenresiduals,Q/current residues and fullsourceweightclosure. NATURAL0,capture180.41840648651123s,science175.5918342510704s,peak2811680KiB; unchangedinputs. No eigenproblemreplay,physicalparameterchange or sourcefilterprep.",
+  "recovery_capsule":{"file":"rich_photon_collective_20261015_coord5grouprecover_capsule.zip","sha256":"4e103c5c60b12836fa075787196ec09233fa2a5e2543b26ccfe8ea55cfe87024","bytes":900360813},
+  "recovered_physical_result":"Fourbright modes perband recovered as TWO physicalpolarization doublets with weakcos/sin split from finitecoordinate-domain C5loss: .453824090267/.453824431172 and .483671540409/.483671894070. Brightresidual<=1.84e-9,sourceatomweightclosure relative<=7.89e-7,orthogonalitydefect5.80e-14. Only these brightgroups complete; dark/uppercurrenttails remainraw/unresolved.",
+  "unknown":"Original blocksolver lambda/residual history was lost with JSON failure and is UNKNOWN,notzero orfabricated.",
+  "governor":"issue222-rich-backward-candidates-20261014@7b55612f4a129ce64c3f0ea19ef7364e9791a5a12557b5ea596d48b22f410451","work_item":"photon-candidate"
+}

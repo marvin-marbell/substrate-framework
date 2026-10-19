@@ -1,0 +1,70 @@
+{
+  "helper_consumer": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "-c",
+      "import json,numpy as np;from rich_spinor_rot_20261014_model import Parameters,build,current;from rich_spinor_rot_20261014_spin_current import spin_current;m=build(Parameters(coupling=.45));q=np.array([.43,-.37,.61]);ep=np.array([.2,.7,.3]);j=current(m,q,ep);s=m['spin'][2];js=spin_current(m,q,ep,2);print(json.dumps({'spin_flux_norm':float(np.linalg.norm(js)),'direct_anticommutator_error':float(np.linalg.norm(js-(s@j+j@s)/2)),'physical_spin_torque_norm':float(np.linalg.norm(1j*(m['H']@s-s@m['H']))),'scope':'Charged-spin flux source, NOT conserved-spin Ward current'}))"
+    ],
+    "natural_exit": 0,
+    "wall_seconds": 0.7915172576904297,
+    "stdout": "{\"spin_flux_norm\": 8.104355275884739, \"direct_anticommutator_error\": 0.0, \"physical_spin_torque_norm\": 9.33380951166243, \"scope\": \"Charged-spin flux source, NOT conserved-spin Ward current\"}\n",
+    "stderr": ""
+  },
+  "selected_final_diagnostics": {
+    "command": [
+      "/home/administrator/.local/bin/pyright",
+      "--pythonpath",
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "--outputjson",
+      "rich_spinor_rot_20261014_spin_current.py",
+      "rich_spinor_rot_20261014_probe.py",
+      "rich_spinor_rot_20261014_enrich.py"
+    ],
+    "natural_exit": 0,
+    "stdout": {
+      "version": "1.1.414",
+      "time": "1791970041037",
+      "generalDiagnostics": [],
+      "summary": {
+        "filesAnalyzed": 3,
+        "errorCount": 0,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 15.285
+      }
+    },
+    "stderr": ""
+  },
+  "receipt_hashes": {
+    "2": {
+      "source": {
+        "rich_spinor_rot_20261014_model.py": true,
+        "rich_spinor_rot_20261014_probe.py": true,
+        "rich_spinor_rot_20261014_capture.py": false,
+        "rich_spinor_rot_20261014_calculate.py": true
+      },
+      "outputs": {
+        "rich_spinor_rot_20261014_actual2_stdout.txt": true,
+        "rich_spinor_rot_20261014_actual2_stderr.txt": true,
+        "rich_spinor_rot_20261014_actual2_result.json": true,
+        "rich_spinor_rot_20261014_actual2_states.npz": true
+      }
+    },
+    "3": {
+      "source": {
+        "rich_spinor_rot_20261014_model.py": true,
+        "rich_spinor_rot_20261014_enrich.py": true,
+        "rich_spinor_rot_20261014_capture.py": true,
+        "rich_spinor_rot_20261014_calculate.py": true,
+        "rich_spinor_rot_20261014_probe.py": true
+      },
+      "outputs": {
+        "rich_spinor_rot_20261014_actual3_stdout.txt": true,
+        "rich_spinor_rot_20261014_actual3_stderr.txt": true,
+        "rich_spinor_rot_20261014_actual3_result.json": true,
+        "rich_spinor_rot_20261014_actual3_states.npz": true
+      }
+    }
+  },
+  "current_helper_hash": "4eb6010387d30187c199a0512edafa5151260b0eefcd275409bef561c4d84c1a"
+}

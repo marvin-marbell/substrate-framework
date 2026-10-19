@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "project_root": "/home/administrator/substrate-222",
+  "project_marker": "pyproject.toml",
+  "actual_server": "/home/administrator/.local/bin/pyright-langserver --stdio",
+  "server_info": null,
+  "symbol_count": 175,
+  "definition": [
+    {
+      "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/electric_history_consumer_20261011.py",
+      "range": {
+        "start": {
+          "line": 23,
+          "character": 4
+        },
+        "end": {
+          "line": 23,
+          "character": 10
+        }
+      }
+    }
+  ],
+  "diagnostics": {
+    "jsonrpc": "2.0",
+    "id": 4,
+    "result": {
+      "kind": "full",
+      "resultId": "3",
+      "items": [
+        {
+          "range": {
+            "start": {
+              "line": 106,
+              "character": 46
+            },
+            "end": {
+              "line": 106,
+              "character": 50
+            }
+          },
+          "message": "Cannot access attribute \"real\" for class \"ndarray[_AnyShape, dtype[Any]]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"ndarray[_AnyShape, dtype[Any]]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Any]]\" is not assignable to \"None\"",
+          "severity": 1,
+          "code": "reportAttributeAccessIssue",
+          "source": "Pyright",
+          "codeDescription": {
+            "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+          }
+        }
+      ]
+    }
+  },
+  "natural_server_exit": 0,
+  "positive_AST": {
+    "tool": "xd://ast_grep",
+    "pattern": "def digest($$$ARGS) -> $RET: $$$BODY",
+    "source": "/home/administrator/substrate-222/proposals/P256-qed-backward/electric_history_consumer_20261011.py",
+    "line": 24,
+    "matched": true
+  },
+  "new_source_verification": "Parent-owned; no tests/build/lint/formatter/projectwide checks run",
+  "server_version": "pyright 1.1.414"
+}

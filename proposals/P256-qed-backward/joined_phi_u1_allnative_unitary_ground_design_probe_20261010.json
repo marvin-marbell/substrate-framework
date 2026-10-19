@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "-c",
+    "import json\nfrom pathlib import Path\nfrom fractions import Fraction as F\nimport mpmath as m\nm.iv.dps=110\np=Path.cwd();sea=json.loads((p/'joined_phi_u1_stationary_phi_sea_envelope_typed_checked_receipt_20261010.json').read_bytes());root=json.loads((p/'induced_phi_uniform_selfconsistent_full_normal_quantum_final_root_actual_receipt.json').read_bytes());trial=json.loads((p/'joined_phi_u1_stationary_full_phi_fiber_borel_checked_receipt_20261010.json').read_bytes())['new_ground_directed_trial']\ndef ex(v):v=F(v);return m.iv.mpf(v.numerator)/m.iv.mpf(v.denominator)\ndef ep(v,i):s,n,e,_=v._mpi_[i];return (-1)**s*F(n)*F(2)**e\ng0=m.iv.mpf([ex(root['parameters']['g0']['lower']),ex(root['parameters']['g0']['upper'])]);gs=m.iv.mpf([ex(root['parameters']['gs']['lower']),ex(root['parameters']['gs']['upper'])]);r0=m.iv.sqrt(g0)\nprofiles=sea['actual_profiles'][1:];scalar=[r0*ex(F(q['onsite'])+2*sum(abs(F(a['c0'])) for a in q['paths'] if a['length']==2)) for q in profiles]\nC=max(ep(v,1) for v in scalar);ci=[sum(abs(F(a['ci'])) for a in q['paths']) for q in profiles];assert ci[0]==ci[1] and all(F(a['ci'])==0 for q in profiles for a in q['paths'] if a['length']==2)\nL2=ep(4*ex(ci[0]*ci[0])*gs,1);eta=F(1,128);coefficient=-2*eta+(64+2*C)*eta*eta+F(4,3)*L2*eta**3;assert coefficient<0\nupper=coefficient*F(trial['sigma2']['lower'])\nprint(json.dumps(dict(stage='ANALYTIC_ARITHMETIC_DESIGN_PROBE_ONLY_NOT_YET_PROVED_OR_ADOPTED',eta_exact=str(eta),charged_flavours=64,scalar_c0_onsite_two_link_cap=float(C),ci_oneparticle_op_squared_cap=float(L2),suggested_energy_lowering_upper=float(upper),hypotheses_to_prove=['Full E Duhamel derivative with integer native increments','Clifford trace gives EXACT density mean2 and electric Berry mean0 in NEW ansatz, not generic ground','Joint all64 electric variance <=64 eta\u00b2sigma\u00b2','Bipartite/Clifford trace annihilates nearest c0 expectation; two-link stays priced','Sine cubic and onsite+two-link cosine bounds','Actual allN4 finite controls and nonzero Berry wrong-state control'],not_ground_or_pole=True)))\n"
+  ],
+  "exit_code": 1,
+  "natural_exit": true,
+  "elapsed_seconds": 0.15283972999895923,
+  "stdout_utf8": "",
+  "stderr_utf8": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nKeyError: 'parameters'\n",
+  "captured_plan_revision": "f96d866956bda33f2f0961f983ce706dde41228effdc2d6d4976f0f3f89a04ef"
+}

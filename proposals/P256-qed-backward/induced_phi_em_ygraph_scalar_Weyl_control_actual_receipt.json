@@ -1,0 +1,54 @@
+{
+  "input_descriptor": {
+    "mean_sha256": "30a4182e252463319caea5235176a0e5e87018a740ca0a95d76f1487796b4d78",
+    "actual_size": 2,
+    "actual_a": "1/64",
+    "UEphys": 1,
+    "charged_flavours_total": 64,
+    "active_mass": "1/5",
+    "auxiliary_mass": 2,
+    "Ref4NET0": true,
+    "Phi_control_radius": "0.01",
+    "physical_displacement": "ALLactualverticesuniformnormalradialPhi scaling; linksactual222seamsunchanged; realEMTheta0. N2two-linkwrapsretainedliterally, no distinct-edge bound invoked.",
+    "probe_sha256": "ae1b151e33e00c1f2bd0211791780fe99114e550a5d5267e97edfc6d5575f94a"
+  },
+  "input_sha256": "7ccbbd98f0cdbc486d1025833a3b57e3b452f48e8be24c62a9e2298b04de85b2",
+  "normal_Cart_orthogonality_error": 0.0,
+  "actual_profiles": [
+    {
+      "load": 1,
+      "physical_particles_per_flavour": 16,
+      "original_ground_energy": -347.5055276668309,
+      "actual_scalar_sea_energy_change": -1.587487532317084,
+      "fixed_particle_CAR_operator_difference_norm": 1.587487532317153,
+      "actual_CAR_difference_minus_scalar_sea_norm": 3.1749750646342365,
+      "wrong_single_matter_bound_defect": 1.5874875323170836
+    },
+    {
+      "load": 63,
+      "physical_particles_per_flavour": 16,
+      "original_ground_energy": -356.6733198658957,
+      "actual_scalar_sea_energy_change": -1.6293681778211067,
+      "fixed_particle_CAR_operator_difference_norm": 1.629368177821124,
+      "actual_CAR_difference_minus_scalar_sea_norm": 3.2587363556422306,
+      "wrong_single_matter_bound_defect": 1.6293681778211067
+    }
+  ],
+  "actual_all64_scalar_sea_subtracted_residual_norm": 208.47536547009474,
+  "actual_all64_unsubtracted_matter_difference_norm": 104.23768273504797,
+  "wrong_omitted_scalar_sea_price_defect": 104.23768273504677,
+  "ratio_actual_residual_to_single_matter": 1.9999999999999885,
+  "scientific_conclusion": "InTHISliteralphysicalnativeCARcontrol, fixedhalf-filledspectrumis symmetricandradialPhi scalesh. E_light(Phi) shiftsnegativegroundenergy. ThusHmatter(Phi)-Hmatter(C)-[E_light(Phi)-E_light(C)]I hasEXACTnorm2||deltaHmatter||; factor2Weylsubtractionprice isnecessaryforUNIFORMchi residual, notanincidentalextra. DoesnotcertifyPhi-fibreoperatorbound/globaltimekernel atmacroN; onlydiscriminatesscalarcomparatorbookkeeping.",
+  "source_snapshot_utf8": "from pathlib import Path\nfrom fractions import Fraction as F\nimport hashlib,json,sys,time\nROOT=Path('/home/administrator/substrate-222/proposals/P256-qed-backward');sys.path.insert(0,str(ROOT));SELF=Path(__file__).read_bytes()\nimport numpy as np\nfrom induced_phi_em_macro_preparation import build_native\nfrom induced_phi_ir_c_full_action import coordinates,orbit\nstarted=time.monotonic();raw=(ROOT/'induced_phi_ir_mean_certificate_normal_transfer_final_receipt.json').read_bytes();mean=json.loads(raw);native=build_native(mean,2);V=native['V'];frame=native['frame'];phi_radius=.01\ncart=coordinates(frame);rho=np.linalg.norm(cart);relative=phi_radius/(np.sqrt(V)*rho);direction=cart/rho\nnormal_error=float(np.linalg.norm(orbit(frame).T@direction.reshape(-1)))\nif normal_error>1e-12:raise ArithmeticError('Radial Cart displacement not normal')\nrows=[];actual=0.;one_matter=0.\nfor p in native['Pprofiles']:\n h=p['hcentre'];ev=np.linalg.eigvalsh(h);rank=2*V;E0=float(np.sum(ev[:rank]));hchanged=(1+relative)*h;changed=np.linalg.eigvalsh(hchanged);dE=float(np.sum(changed[:rank]))-E0\n de=np.linalg.eigvalsh(hchanged-h);low=float(np.sum(de[:rank]));high=float(np.sum(de[-rank:]));op=max(abs(low),abs(high));res=max(abs(low-dE),abs(high-dE));load=p['load']\n if abs(np.trace(h))>1e-9 or abs(low+high)>1e-9 or abs(res-2*op)>1e-8 or res<=1.9*op:raise ArithmeticError('Literal CAR scalar-sea subtraction control failed')\n rows.append(dict(load=load,physical_particles_per_flavour=rank,original_ground_energy=E0,actual_scalar_sea_energy_change=dE,fixed_particle_CAR_operator_difference_norm=op,actual_CAR_difference_minus_scalar_sea_norm=res,wrong_single_matter_bound_defect=res-op))\n actual+=load*res;one_matter+=load*op\nfailure=dict(source_sha256_captured_after_failure='16c224547354ccbc73506395eaeb7d8626bb4e31bc588ec996b46745682bcb57',observed_natural_returncode=1,observed_error=\"KeyError: 'native' atline14\",repair='Actualbuild_native Pprofiles aretheprofilesdirectly: usep[hcentre], no nativewrapper. No failedsource rerun.')\nprobe=SELF.decode();desc=dict(mean_sha256=hashlib.sha256(raw).hexdigest(),actual_size=2,actual_a='1/64',UEphys=1,charged_flavours_total=64,active_mass='1/5',auxiliary_mass=2,Ref4NET0=True,Phi_control_radius=str(phi_radius),physical_displacement='ALLactualverticesuniformnormalradialPhi scaling; linksactual222seamsunchanged; realEMTheta0. N2two-linkwrapsretainedliterally, no distinct-edge bound invoked.',probe_sha256=hashlib.sha256(SELF).hexdigest())\nreport=dict(input_descriptor=desc,input_sha256=hashlib.sha256(json.dumps(desc,sort_keys=True).encode()).hexdigest(),normal_Cart_orthogonality_error=normal_error,actual_profiles=rows,actual_all64_scalar_sea_subtracted_residual_norm=actual,actual_all64_unsubtracted_matter_difference_norm=one_matter,wrong_omitted_scalar_sea_price_defect=actual-one_matter,ratio_actual_residual_to_single_matter=actual/one_matter,scientific_conclusion='InTHISliteralphysicalnativeCARcontrol, fixedhalf-filledspectrumis symmetricandradialPhi scalesh. E_light(Phi) shiftsnegativegroundenergy. ThusHmatter(Phi)-Hmatter(C)-[E_light(Phi)-E_light(C)]I hasEXACTnorm2||deltaHmatter||; factor2Weylsubtractionprice isnecessaryforUNIFORMchi residual, notanincidentalextra. DoesnotcertifyPhi-fibreoperatorbound/globaltimekernel atmacroN; onlydiscriminatesscalarcomparatorbookkeeping.',source_snapshot_utf8=probe,runtime=dict(executable=sys.executable,python=sys.version),elapsed_seconds=time.monotonic()-started)\nreport['prior_failed_probe_epoch']=failure\npath=ROOT/'induced_phi_em_ygraph_scalar_Weyl_control_actual_receipt.json';path.write_text(json.dumps(report,indent=2)+'\\n');print(json.dumps({k:report[k] for k in ('input_sha256','normal_Cart_orthogonality_error','actual_profiles','ratio_actual_residual_to_single_matter','wrong_omitted_scalar_sea_price_defect')},indent=2))\n",
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "elapsed_seconds": 0.09341229917481542,
+  "prior_failed_probe_epoch": {
+    "source_sha256_captured_after_failure": "16c224547354ccbc73506395eaeb7d8626bb4e31bc588ec996b46745682bcb57",
+    "observed_natural_returncode": 1,
+    "observed_error": "KeyError: 'native' atline14",
+    "repair": "Actualbuild_native Pprofiles aretheprofilesdirectly: usep[hcentre], no nativewrapper. No failedsource rerun."
+  }
+}

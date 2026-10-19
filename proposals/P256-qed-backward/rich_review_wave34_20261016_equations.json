@@ -1,0 +1,15 @@
+{
+  "kind": "FULL_H_GRADED_CUMULANT_WITH_ABSOLUTE_TIME_NEUTRAL",
+  "source": "A_v,o,a=F_N B_v,o,a, F_N=exp[-.35(H_N-E_original)] Hermitian, including actual Wilson boundary tree; no source-span projection",
+  "four": "G4_ab=<U6(T)Omega|Brecv,a^dag F_N U_N(T-t2) O2 U_N(t2-t1) O1 U_N(t1) F_N Bsrc,b|Omega>",
+  "indices": "Full 4x4 spin/root-orbital matrix for each N=7,5 branch, receiver1 != source0; actual LEFT spin matrices (-sigmax,-sigmay,+sigmaz)/2",
+  "cumulant": "C4=G4-G_AS*G_21-G_AS1*m2-G_AS2*m1+2*G_AS*m1*m2",
+  "graded_partitions": "All 15 set partitions, induced operator order preserved; two odd endpoints, even field legs. Only 1234,14|23,124|3,134|2,14|2|3 survive. Others have an odd-charge block whose exact mean is ZERO by fixed-number orthogonality, not an assumed vanishing field mean. No fermion permutation sign in surviving terms because only even legs separate endpoints.",
+  "neutral": "m1,m2,G21 computed with actual U6 at absolute times; original var .009748 and same-extra-tau matched var ~.009819 are nonstationary. No ground-state phase or stationary Lehmann assumption.",
+  "field": "E_T=(E0+E1+E2)/sqrt3 along unique incidence-null cycle, J_T=sum J_e/sqrt3; [Gauss,E_T]=[Gauss,J_T]=0 within literal physical space; one cycle is NOT two polarizations.",
+  "current": "For H(theta) with each forward hop multiplied exp(-i theta/sqrt3), Hprime=-J_T, Hsecond=K=sum(a_e+a_e^dag)/3; dot E_T=-J_T. K is actual contact, separately connected as G_ASK-G_AS*<K(t2)>. Not conflated with E/J cumulant.",
+  "controls": "All controls freeze SAME full-H prepared source; path_cut deletes complete gauge-dressed transports on edges0,2, vector_off deletes only vector component. No bare hop without U; no re-grounding. Pulse exp(+i .31 E_T) is actual physical electric-cycle unitary and injects current/work, not zero-current intervention.",
+  "equal_time": "T=t1=t2=0 is initial cloud only. New finite .12/.26/.42 chains are distinct full-H dynamics, not attribution of every connected amplitude to newly emitted radiation.",
+  "regulators": "Triangle CAR12, fixed N5/6/7 complete sectors, Ecap2, radial3/site, material10=l0+l1. Every virtual basis state of these sectors retained in H actions, not an external on-shell particle truncation. No regulator convergence claimed.",
+  "scope": "Finite conditional process only; no massshell crosssection, two photons, Nature electron/positron, continuous stability, continuum or Lorentz claim."
+}

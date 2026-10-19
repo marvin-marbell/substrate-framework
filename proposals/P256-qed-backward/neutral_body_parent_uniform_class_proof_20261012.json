@@ -1,0 +1,57 @@
+{
+  "kind": "EXACT_UNIFORM_UNTWISTED_MATRIX_CLASS_REDUCTION_AND_CERTIFIED_NORM_MINIMUM_NOT_GLOBAL_BODY",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "3fc02d01a95d53a814f2cd560e1eaedaf8f2d248db7e7054a138e2d9fdaf2d97",
+    "accepted_scoped_science": "03e7a09a0dd929f32f3522cf9d7d30b76fe3f5d7c985576fc7cf8fdf2c8c6cc8",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "requirement_ids": [
+      "outcome",
+      "verification"
+    ]
+  },
+  "bound_receipt": {
+    "path": "history_operator_reset_parent_neutral_uniform_class_actual2_20261012_receipt.json",
+    "sha256": "b1db7c7909c9de90ed0246bc74d1447801d9ba497fc25fda0336e1e00a1d1b52"
+  },
+  "scope": "constant traceless Hermitian four-matrix bodies; identity links; untwisted AP grid. Reduction all even N>=4; exact minimizer enclosures and certified interiority ONLY N4/6/8.",
+  "derivation": [
+    "Native neutral h(k)=M(k)Phi0+sum_i D_i(k)Phi_i. Set x_mu=Tr(Phi_mu^2)/4>=0. Complete canonical2V KyFan <= Tr h_positive = (1/2)Tr|h_total| because Tr h_total=0. This is an upper, not a generic canonical occupation identity.",
+    "Reflect each AP momentum component k_i -> -k_i. M and D_i^2 unchanged while each D_i changes sign. In each eight-reflection group, cross traces cancel: mean Tr h(k)^2=4[M^2 x0+sum_i D_i^2 xi]. Schatten Cauchy Tr|h|<=2sqrt(Tr h^2), then concavity of sqrt imply reflection mean Tr|h|<=4sqrt(M^2x0+sum D_i^2xi).",
+    "Ordered Jordan per site=4sum_mu,nu Tr{Phi_mu,Phi_nu}^2 >=16sum_mu Tr Phi_mu^4 >=64sum_mu x_mu^2. Cross terms nonnegative; diagonal Schatten inequality uses matrix dimension4.",
+    "For Phi_mu=sqrt(x_mu)Gamma_mu with four anticommuting traceless Hermitian Clifford matrices, Phi_mu^2=x_mu I, all off-diagonal anticommutators vanish and h(k)^2=(M^2x0+sum D_i^2xi)I. Spectrum +/-epsilon twice yields exactly2V positive states. Clifford matrices simultaneously saturate Jordan and the complete canonical bound. Thus inf over all uniform matrices equals min_{x>=0} f(x)=64sum x_mu^2-2mean_k sqrt(M^2x0+sum D_i^2xi).",
+    "f is coercive and128-strongly convex on the nonnegative orthant, with Hessian 128I plus a PSD sum in the differentiable interior. The unique minimizer here refers to its norm-square vector, not a unique matrix frame/orbit. Spatial S3 symmetry implies x1=x2=x3.",
+    "At any positive rational candidate x, strong convexity gives f(x)-f*<=||grad f(x)||^2/256 and distance(x,x*)^2<=||grad f(x)||^2/128^2 even if the constrained minimizer were on the boundary. Exact384-bit outward rational intervals on sqrt/AP trig and gradients enclose these quantities; the FLOAT optimizer is not rerun and provides only candidate binary-rational inputs.",
+    "NONZERO COEFFICIENTS ALONE DO NOT PROVE INTERIORITY: the original receipt supporting sentence is withdrawn. For N4/6/8 the exact distance-square bound is strictly below min_mu x_mu^2, independently establishing interiority. No untested all-N interior assertion is used."
+  ],
+  "interiority_controls": [
+    {
+      "N": 4,
+      "distance2_upper_exact": "35473820483633546505038491498595953208064693380000936310538608066286340737691726660851569321361492167555632213178634157841801786832940034003135399787264877798139770266107005444869044287078422495913028757416631193645830785849/406983302788077043095694079023514269845261128071039316430435657456301100941017582490321789603976702315852655675868728054558642679084433903830771243428395388555612645234009677640568743036609742720273743660637609984234054445646756670603264",
+      "nearest_boundary_distance2_exact": "1155591128454525050629763223247947115603077265430085216190310961/105312291668557186697918027683670432318895095400549111254310977536",
+      "interiority_certified_from_distance_not_nonzero_coefficients_alone": true
+    },
+    {
+      "N": 6,
+      "distance2_upper_exact": "9347375654488740243398377908650961070252186695559388157522454211603857315422937218834620564745275764083192984685413224971321604334856676490271524042140952305666449743172119462062645939110142818329396557324071748483182560427/4635794183320440069011890368877217229956177536934182213715431160713179727906278400553821634707797124816509156057942230496457039266446129935822378694676566222766275287118641484374603338651382850673118111384450276226666026419945087701090304",
+      "nearest_boundary_distance2_exact": "1119483372921164392548475283903096713742812779754760830107389281/105312291668557186697918027683670432318895095400549111254310977536",
+      "interiority_certified_from_distance_not_nonzero_coefficients_alone": true
+    },
+    {
+      "N": 8,
+      "distance2_upper_exact": "82341830746687555504588142116915737276013904392026268338031908782668095673981576405658024159033728916174984678427777561432831903045186989875643875653343262494559760933094674003017050305274478900380054592394803392550186801059/26046931378436930758124421057504913270096712196546516251547882077203270460225125279380594534654508948214569963255598595491753131461403769845169359579417304867559209294976619368996399554343023534097519594280807038990979484521392426918608896",
+      "nearest_boundary_distance2_exact": "1116418949487424043696473222208849891299912364437074756781640625/105312291668557186697918027683670432318895095400549111254310977536",
+      "interiority_certified_from_distance_not_nonzero_coefficients_alone": true
+    }
+  ],
+  "supporting_sentence_correction": {
+    "target_field": "strong_convexity",
+    "withdrawn": "Unique minimizer is interior because each coefficient has nonzero AP weight",
+    "replacement": "Unique norm minimizer; N4/6/8 interior follows from exact distance versus boundary. No all-N interior conclusion from nonzero weights."
+  },
+  "inhomogeneous_or_holonomy_selection": false,
+  "quantum_BO_error_or_originating_ground_support": false,
+  "phase_stiffness_IR_atom_or_campaign_complete": false
+}

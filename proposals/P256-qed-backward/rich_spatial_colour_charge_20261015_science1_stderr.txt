@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_calculate.py", line 163, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_charge_20261015_calculate.py", line 78, in main
+    ward_one=1j*(h[name].one@charge0.one-charge0.one@h[name].one)+sum(j.one for j in routes)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_base.py", line 856, in __sub__
+    return self._sub_sparse(other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_compressed.py", line 261, in _sub_sparse
+    return self._binopt(other, '_minus_')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_compressed.py", line 1221, in _binopt
+    data = np.empty(maxnnz, dtype=upcast(self.dtype, other.dtype))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 566. MiB for an array with shape (37105536,) and data type complex128

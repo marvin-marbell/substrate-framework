@@ -1,0 +1,314 @@
+{
+  "kind": "EXACT_PROJECTION_ORDER_SOURCE_CALIBRATION_SAME_NEW_H_AND_STATES",
+  "states_input": "rich_rotcov_gauge_20261015_actual4_result.npz",
+  "parameters": {
+    "geometry_cut": 2,
+    "supplier_cut": 1,
+    "field_cut": 1,
+    "radial_quadrature": 8,
+    "length": 0.65,
+    "field_scale": 1.5,
+    "field_width": 1.45,
+    "epsilon": 0.3,
+    "charge": 1.2,
+    "mass": 1.4,
+    "reduced_mass": 1.1,
+    "rotating_mass": 1.7,
+    "binding": 2.0,
+    "radii": [
+      0.7,
+      1.0
+    ],
+    "preferred_radius": 0.85,
+    "shape_mass": 5.0,
+    "shape_binding": 2.0,
+    "supplier_lengths": [
+      0.65,
+      1.05
+    ],
+    "supplier_masses": [
+      1.0,
+      1.4
+    ],
+    "supplier_binding": [
+      5.60204474633241,
+      0.587644902029444
+    ],
+    "ion_charge": 2.0,
+    "coulomb_softening": 0.3,
+    "correlation": 1.0,
+    "supplier_coupling": 0.0,
+    "gauge_coupling": 1.0,
+    "displacement": 0.25,
+    "boost": 0.2,
+    "kick": 0.35,
+    "times": [
+      0.0,
+      0.5,
+      1.5,
+      3.0
+    ]
+  },
+  "formula": "P i[H,D_a]P=-P e{p+e AP,grad chi_a}/(2m)P. Coordinate Coulomb, electric and body pieces commute chi before projection. i[PHP,PDP] differs by retained/complement cross terms; it is NOT the complete physical covariant source.",
+  "unchanged": "No H, coupling, kinetic, state, source B, field preparation, contact or pole changes. Only physical source observable is assembled with products BEFORE projection.",
+  "projected_full_vs_direct_operator": [
+    0.0,
+    0.0,
+    0.0,
+    1.7091783619732145e-13,
+    1.7316383866418046e-13,
+    5.541517672185339e-13
+  ],
+  "projected_full_vs_direct_ground": [
+    0.0,
+    0.0,
+    0.0,
+    1.2811934154007652e-15,
+    1.2961394663978882e-15,
+    4.075208917840398e-15
+  ],
+  "old_compressed_commutator_vs_direct_ground": [
+    0.0,
+    0.0,
+    0.0,
+    0.22828940586071253,
+    0.22828940586071259,
+    0.2282894058607083
+  ],
+  "complement_operator": [
+    0.0,
+    0.0,
+    0.0,
+    34.27110645373784,
+    34.27110645373784,
+    34.27110645373838
+  ],
+  "complement_ground": [
+    0.0,
+    0.0,
+    0.0,
+    0.2282894058607134,
+    0.22828940586071345,
+    0.22828940586071028
+  ],
+  "corrected_physical_electric_Heisenberg_source_ground": [
+    0.15754865886792546,
+    0.15754865886792543,
+    0.1575486588679255,
+    0.33209169421715884,
+    0.332091694217159,
+    0.3320916942171568
+  ],
+  "signed_virtual_semantics": "All13440 neutral virtuals already saved. Complete covariant current equals direct original-A current as operator to measured precision, so physical corrected Lehmann strengths/signed sums are the DIRECT columns0:6, not old matrix-commutator columns6:12.",
+  "all_retained_direct_current_gram_real": [
+    [
+      0.005616925502661999,
+      -1.6449762647844662e-19,
+      -1.9894631123798084e-18,
+      -7.552627891099756e-18,
+      6.832569523122665e-17,
+      -1.9061444065811035e-17
+    ],
+    [
+      -1.6449762647844662e-19,
+      0.005616925502661999,
+      1.4303012491296492e-20,
+      -6.76817271557441e-17,
+      -6.849709999413742e-19,
+      -1.8750117304388214e-17
+    ],
+    [
+      -1.9894631123798084e-18,
+      1.4303012491296492e-20,
+      0.005616925502662031,
+      -1.9380469608632123e-17,
+      1.819616113752609e-17,
+      1.9829091696413703e-17
+    ],
+    [
+      -7.552627891099756e-18,
+      -6.76817271557441e-17,
+      -1.9380469608632123e-17,
+      0.37524551025904695,
+      2.7105054312132613e-19,
+      3.184814793391029e-17
+    ],
+    [
+      6.832569523122675e-17,
+      -6.84970999941369e-19,
+      1.8196161137526104e-17,
+      -1.6040583253238435e-18,
+      0.37524551025904684,
+      -2.173699016799662e-19
+    ],
+    [
+      -1.9061444065811038e-17,
+      -1.8750117304388217e-17,
+      1.9829091696413644e-17,
+      3.184814793391029e-17,
+      -2.173699016799662e-19,
+      0.3752455102590482
+    ]
+  ],
+  "pure_gradient_operator_control": {
+    "projected_full_covariant_minus_direct": [
+      6.5279467610025875e-15,
+      1.1473330453659373e-15,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "physical_direct_current_norm": [
+      195.34921035329666,
+      195.34921035329666,
+      195.3492103533051
+    ],
+    "full_product_dipole_norm": [
+      191.07346841757774,
+      191.07346841757774,
+      191.07346841757362
+    ],
+    "static_AP_coupling": 0.0,
+    "old_compressed_commutator_defect": [
+      146.44377600643512,
+      146.4437760064351,
+      146.4437760064388,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "interpretation": "Static AP=0 and dynamic physical current remains nonzero. The former1.12684 ground discrepancy was also a compression-commutator witness, not proof of physical source failure."
+  },
+  "sparse_roundoff": {
+    "conversions": 183,
+    "removed_entries": 1716,
+    "max_removed_abs": 6.98662392009476e-17,
+    "removed_Frobenius_sum": 9.942556452467165e-16,
+    "max_removed_relative_Frobenius": 3.0877787162954756e-16,
+    "max_Hermiticity_drift_Frobenius": 8.679403423922636e-18,
+    "epsilon_multiplier": 8.0,
+    "threshold": "8 epsilon_machine max(rows,cols) max_abs_operand; NO absolute/unit floor"
+  },
+  "constant_sparse_roundoff": {
+    "conversions": 129,
+    "removed_entries": 244,
+    "max_removed_abs": 1.4025683176827162e-16,
+    "removed_Frobenius_sum": 6.600575339582046e-16,
+    "max_removed_relative_Frobenius": 7.630787188811112e-17,
+    "max_Hermiticity_drift_Frobenius": 0.0,
+    "epsilon_multiplier": 8.0,
+    "threshold": "8 epsilon_machine max(rows,cols) max_abs_operand; NO absolute/unit floor"
+  },
+  "samples": [
+    {
+      "time": 0.0,
+      "projected_full_covariant_current_excess": [
+        8.75460537347476e-18,
+        -1.6496634931066436e-17,
+        4.163336342344337e-17,
+        -1.0408340855860843e-17,
+        2.0816681711721685e-17,
+        1.234851151476545e-17
+      ],
+      "direct_original_current_excess": [
+        8.75460537347476e-18,
+        -1.6496634931066436e-17,
+        4.163336342344337e-17,
+        -1.0408340855860843e-17,
+        2.7755575615628914e-17,
+        1.2565351949262995e-17
+      ],
+      "full_covariant_minus_direct_state_norm": [
+        0.0,
+        0.0,
+        0.0,
+        1.281520345283578e-15,
+        1.294387837222955e-15,
+        4.075134218648972e-15
+      ]
+    },
+    {
+      "time": 0.5,
+      "projected_full_covariant_current_excess": [
+        0.0003125046633578555,
+        0.020230081640736662,
+        0.00014442007127490886,
+        0.04332459985572127,
+        -0.0007936414704708336,
+        -0.004210672983674732
+      ],
+      "direct_original_current_excess": [
+        0.0003125046633578555,
+        0.020230081640736662,
+        0.00014442007127490886,
+        0.043324599855721325,
+        -0.0007936414704708371,
+        -0.004210672983674741
+      ],
+      "full_covariant_minus_direct_state_norm": [
+        0.0,
+        0.0,
+        0.0,
+        1.2831405630993166e-15,
+        1.2957066011741113e-15,
+        4.082333644597523e-15
+      ]
+    },
+    {
+      "time": 1.5,
+      "projected_full_covariant_current_excess": [
+        0.003449081373825791,
+        0.05080232068040584,
+        0.0013709924522081196,
+        0.0021168017756717367,
+        -0.006433759834724419,
+        0.010409493308298847
+      ],
+      "direct_original_current_excess": [
+        0.003449081373825791,
+        0.05080232068040584,
+        0.0013709924522081196,
+        0.002116801775671702,
+        -0.006433759834724412,
+        0.01040949330829885
+      ],
+      "full_covariant_minus_direct_state_norm": [
+        0.0,
+        0.0,
+        0.0,
+        1.2807967912520735e-15,
+        1.297099850987792e-15,
+        4.076300600400125e-15
+      ]
+    },
+    {
+      "time": 3.0,
+      "projected_full_covariant_current_excess": [
+        0.009717521339856384,
+        0.05578511120906168,
+        0.005499915306847118,
+        -0.004767045945568427,
+        0.008469412556862232,
+        -0.01770412856646521
+      ],
+      "direct_original_current_excess": [
+        0.009717521339856384,
+        0.05578511120906168,
+        0.005499915306847118,
+        -0.004767045945568378,
+        0.008469412556862229,
+        -0.017704128566465187
+      ],
+      "full_covariant_minus_direct_state_norm": [
+        0.0,
+        0.0,
+        0.0,
+        1.2785752314698489e-15,
+        1.302366078489294e-15,
+        4.07838412365749e-15
+      ]
+    }
+  ],
+  "judgment": "Withdraw .2282894 as physical/direct-vs-complete-covariant failure: it is the omitted complement from commuting after compression. Finite field CCR/Heisenberg defects, bare gaps and lack of regulator/continuum photon proof remain separate, unchanged limitations. This source correction does not prove all gauge physics or Nature."
+}

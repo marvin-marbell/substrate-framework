@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_common_quantum_em_20261016_loopsea_prepare.py", line 25, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_common_quantum_em_20261016_loopsea_prepare.py", line 18, in main
+    storage=neutral_blocks(data,coupling);save(out+'_neutral_raw_blocks.pkl',{'blocks':storage,'labels':labels});counts=np.asarray([row['counts']for row in labels]);coo=old.c0.tocoo();same=np.all(counts[coo.row]==counts[coo.col],axis=1);static=sparse.coo_matrix((coo.data[same],(coo.row[same],coo.col[same])),shape=coo.shape).tocsr();vector=old.c0-static;scalar_hop=old.cphi;scalar,rotor=model.field_and_rotor(parameters);gram=body_metric(storage,len(labels));half,inverse,metric=metric_powers(gram,labels)
+                                                                                                                                                                         ^^^^^^
+AttributeError: 'csr_matrix' object has no attribute 'c0'

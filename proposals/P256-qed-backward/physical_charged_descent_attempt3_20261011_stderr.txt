@@ -1,0 +1,17 @@
+/home/administrator/substrate-222/proposals/P256-qed-backward/physical_charged_descent_20261011.py:213: FutureWarning: Input has data type int64, but the output has been cast to float64.  In the future, the output data type will match the input. To avoid this warning, set the `dtype` parameter to `None` to have the output dtype match the input, or set it to the desired output data type.
+  density = diags(2*rho*rho)
+/home/administrator/substrate-222/proposals/P256-qed-backward/physical_charged_descent_20261011.py:226: FutureWarning: Input has data type int64, but the output has been cast to float64.  In the future, the output data type will match the input. To avoid this warning, set the `dtype` parameter to `None` to have the output dtype match the input, or set it to the desired output data type.
+  wrong_d = kron(diags(2*single_rho**2),ident)+kron(ident,diags(2*single_rho**2))
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_charged_descent_20261011.py", line 374, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_charged_descent_20261011.py", line 360, in main
+    proof.update(request=request,rational_increment=increment,absolute_source_budget=absolute_source_budget(nc,request,increment),observed_controls=measured)
+                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_charged_descent_20261011.py", line 191, in absolute_source_budget
+    'charged_after_energy_upper_per_site_exact':str(after_upper),
+                                                ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/fractions.py", line 415, in __str__
+    return '%s/%s' % (self._numerator, self._denominator)
+                      ^^^^^^^^^^^^^^^
+ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit

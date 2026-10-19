@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_complete_groups.py", line 67, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_complete_groups.py", line 64, in run
+    np.savez_compressed(ROOT/(PREFIX+mode+'_vectors.npz'),energies=energies,vectors=vectors);(ROOT/(PREFIX+mode+'_data.json')).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(dict(mode=mode,source_closure=evidence,missing_residual=missing_residual,wall_seconds=result['wall_seconds'],peak_RSS_KiB=result['peak_RSS_KiB'])),flush=True)
+                                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type complex is not JSON serializable

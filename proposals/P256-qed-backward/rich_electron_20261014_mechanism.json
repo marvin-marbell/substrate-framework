@@ -1,0 +1,49 @@
+{
+  "candidate_id": "spinful-dimer-ring-quantum-Peierls-cavity-20261014",
+  "law": {
+    "Hamiltonian": "H_N(theta,b)=omega*a†a - sum_(l=0..3,s) t_l [exp(i*(theta/4+g*Q)) c†_(l+1 mod4,s)c_(l,s)+h.c.] - b*S_z",
+    "hopping": "t_even=1,t_odd=0.65",
+    "field": "Q=(a+a†)/sqrt(2), a finite 7-level oscillator; exp(i*g*Q) is calculated exactly in that finite space, not a polynomial truncation",
+    "units": "hbar=|electron charge|=site spacing=1, energy in t_even; theta is dimensionless loop flux; k_cell=0,pi with physical site-wavevector k_site=k_cell/2",
+    "reference": "normalized lowest exact N=4 state Omega; chemical potential zero at particle-hole symmetric filling",
+    "charged_states": "all N=3,5 configurations; added electron electric charge -1, missing electron +1 relative to reference. N4 dim70*7=490; N3/N5 dim56*7=392",
+    "finite_model_definition": "Finite oscillator defines the current candidate exactly. It is not asserted to approximate an infinite oscillator at a measured error; canonical [Q,P]=i is not exact at cutoff. No mandatory cutoff refinement is claimed.",
+    "gauge_scope": "Single global loop flux degree with gauge-fixed matter orbitals, not local Gauss-law-complete 3D electromagnetism. Pair number is band excitation count, not literal relativistic positron number."
+  },
+  "constructive_path": [
+    "Finite material orbital hopping with alternating bond strengths opens valence/conduction gap; no matched electron mass inserted. At g=0 the charged threshold is |t_even-t_odd|=0.35.",
+    "Fill four negative-band spin orbitals. Keep every N4 CAR configuration rather than fixing the valence occupancy; hopping with Q creates conduction electrons and corresponding valence holes while preserving total charge.",
+    "The same link exponential that transports charge entangles it with a dynamical electric/flux oscillator. Feedback is retained because Q remains an operator in all charged and sea eigensystems, not a frozen sampled phase.",
+    "Add or remove a normalized local/momentum CAR source on that interacting reference state. Calculate all addition and removal transition amplitudes, including both spins and orbitals. Their exact finite Lehmann matrices produce causal retarded G, rather than assuming a QED propagator.",
+    "Physical rotation generators S_i=1/2 sum c† sigma_i c commute with spin-independent law. A spinup charged source has S_z=1/2 and S²=3/4. A declared primitive -b*S_z field precesses a transverse spin packet while charge/field motion continue; gyromagnetic conversion b/B remains unexplained.",
+    "Measure field-dependent charged energy, twist curvature, sideband weight and packet current against identical g=0 source/sea geometry. This decides whether dressing can be discarded: observed G and transport differ."
+  ],
+  "derivation": {
+    "source": "Mode index=2*site+spin. c/c† Fock signs are (-1)^(occupied lower modes). Sector-source matrices preserve the same ordering; boson index is fast. Fourier c†_(orbital,spin)(k)=sum_cell exp(i*k*cell)c†_(2cell+orbital,spin)/sqrt(2). Addition source weight is <Omega|cc†|Omega>; normalize only the actual packet, not canonical G.",
+    "retarded_G": "G_ab(z)=sum_n conj(v_na)v_nb/(z-(E5_n-E4_0)) + sum_m conj(w_mb)w_ma/(z+(E3_m-E4_0)); v_na=<5n|c†_a|Omega>,w_ma=<3m|c_a|Omega>. z=omega_probe+i*eta,eta>0. This retains negative-frequency removal poles and all finite pair dressing channels.",
+    "current_contact": "For bond term T_l=-t_l exp(i*(theta/4+gQ)) sum_s c†next c, J_l=-i(T_l-T_l†),C_l=-(T_l+T_l†). J_theta=sum_l J_l/4,C_theta=sum_l C_l/16. J_l is number current into destination by dot n_next=i[H,n_next]; electric charge current is -J_l. Physical link EM vector potential has phase phi=q integral Aphys, q=-1, so signs must be converted before external joins.",
+    "arbitrary_vertex": "For external dimensionless bond phase deformation phi_l += s*u_l, current(u)=sum_l u_l J_l,contact(u,v)=sum_l u_l v_l C_l. Both use the literal same H and dressed state; the bare mixed bond derivative vanishes, but interacting response need not.",
+    "self_energy": "Choose any concrete charged source subspace P and complement R=1-P inside full N5 cavity sector. Exact Feshbach projected resolvent is [z-PHP-PHR(z-RHR)^(-1)RHP]^(-1). The last term is finite source-subspace self-energy supplied by this hopping/cavity law, not a fitted QED self-energy. Lehmann computation evaluates full equivalent resolvent directly. No infinite-volume pole or ground-state theorem is used.",
+    "mass": "The dimerized valley at k_site=pi/2 is probed by k_site shift theta/4. Finite-ring dispersion curvature is d²(E5_0-E4_0)/dk_site²=16*d²(E5_0-E4_0)/dtheta²; inverse is a finite inertial band mass, not relativistic rest/pole mass. Numerical symmetric theta ±0.08 is a declared finite difference.",
+    "exchange": "Fermionic exchange comes from imposed CAR microscopic modes and odd charged-sector Fock parity, not from an emergent topology derivation. This is an honest microscopic candidate input.",
+    "spin_response": "H0 commutes with Sx,Sy,Sz. H_B=-b Sz gives <Sx>=cos(bt)/2,<Sy>=-sin(bt)/2 for initial Sx=+1/2. Full H_B diagonalization, not a separately rotated mock state, produced the reported precession."
+  },
+  "what_is_not_explained": [
+    "Origin of microscopic CAR modes and physical spin SU2, rather than using them as candidate input.",
+    "Values of strong/weak hopping, omega, g and physical scale conversion to electron mass and charge.",
+    "Physical magnetic moment from the same EM law: primitive spin field b is an independent response probe, not derived Pauli g=2.",
+    "Primitive harmonic restoring force; no induced Maxwell magnetic term was obtained here.",
+    "3D polarization, longitudinal Gauss constraint, Lorentz propagation, actual relativistic electron-positron sector and continuum limit.",
+    "Any proton identification: charge-conjugate hole is not proton."
+  ],
+  "evidence": {
+    "calculation": "rich_electron_20261014_calculate.py",
+    "model": "rich_electron_20261014_model.py",
+    "response": "rich_electron_20261014_spectral.npz and pure spectral_data/retarded_green API",
+    "observations": "rich_electron_20261014_result.json",
+    "source_exit_binding": "rich_electron_20261014_actual2_exit.json",
+    "self_contained_capture": "rich_electron_20261014_actual2_executed.zip",
+    "earlier_run_preserved": "rich_electron_20261014_actual1_executed.zip",
+    "verification_boundary": "NEW scientific calculations executed with natural exits; no tests/build/lint/formatters run. Independent reviewer owns later diagnostics and smoke."
+  }
+}

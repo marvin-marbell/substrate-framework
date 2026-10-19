@@ -1,0 +1,1381 @@
+{
+  "governing_plan_revision": "1124ce49865f8f7cc5f912ef9569edc52ad3227fb532fd78d5637658c923b990",
+  "source_hashes": {
+    "covariant_prepared_gauss_state.py": "2a0ecfb2341fceb7866d5062cf33d1da71b2fafa4b148829d21d14f0650fe307",
+    "covariant_root_transfer.py": "6911f0283dc0f84f4cc05202deb67dcd3266d5c64ca1a05e149f1567451e0f9c",
+    "covariant_canonical_gauss_boundary_kernel.py": "741fbc1f196061cb7f0e2c479770e992304ac2de90492f002ef4cbd931315d50",
+    "covariant_actual_source_envelope_join.py": "c812bf649bc2308d37558b93fe86fb870a0a3fd8e80d3c9f86de58f90ab376c7",
+    "covariant_physical_statistical_source_envelope.py": "e678699d6200250330cf56ee250103f5f4e6a53690b10ea496702ab3ec638467",
+    "covariant_physical_mf_vacuum_winding.py": "e8818b6d9e677fe54c15a3357addaa07284dea50cf816eb79e1f2647091c9af3",
+    "covariant_actual_source_band_consumer.py": "a0cdd4eae60a9ea08d893aa885f6e5b42d9eb72b4261b82e6542032f0aa93111"
+  },
+  "selected_original_capsule_sha256": "ae1c756921a90752bf580d4c149d8c4c258224f291303dcc969245f9d543db1b",
+  "original_input_sha256": "38183b2acb35877031078c3da3f20811d8b4b2c8114d16ec2bb325ac416c90b5",
+  "all9_exact_MF_reference_tuples": [
+    {
+      "a": 0.02,
+      "m": 0.7,
+      "am": "0.014",
+      "kappa": "0.124560970567777857579908964576",
+      "spatial_size": 16777216,
+      "time_slices": 1048576,
+      "onebody_T_gap": "0.014",
+      "neutral_pair_T_gap": "0.028",
+      "stable_projector_gap_from_one": "0.0139024557371380965232771678078",
+      "stable_unstable_spectral_gap": "0.0280009146756304418308694283708",
+      "canonical_neutral_number": "9444732965739290427392",
+      "canonical_charged_numbers": [
+        "9444732965739290427391",
+        "9444732965739290427393"
+      ],
+      "SF_charged_common_neutral_norm_upper": "0.993024442933235104904797031756",
+      "SF_charged_common_neutral_log_norm_upper": "-0.007",
+      "SF_charged_uniform_ratio_to_local_neutral_upper": "0.993024442933235104904797031756",
+      "neutral_normalization": "ONE Wsf(theta=0), not an own-charged maximum; all theta use Wsf(theta)/Wsf(0)<=exp(epsilon).",
+      "winding": {
+        "L": 16777216,
+        "V": "4722366482869645213696",
+        "eta": "0.000110144210456971439792920325192",
+        "etaL": "1847.91320998606855123681956653",
+        "log_vacuum_twist_error_upper": "3.49856155974473472140817817515e-779",
+        "log10_vacuum_twist_error_upper": -778.4561104799561,
+        "uniform_over_all_twists": true,
+        "all_eight_statistical_torons": true,
+        "Poisson_proof": "Sum_p g((2pi n+theta)/L)=V sum_k g_hat(Lk) exp(i k.theta). The theta-minus-zero difference is <=32V[((1+r)/(1-r))^3-1]=32V(6r+2r^3)/(1-r)^3<=256V r/(1-r)^3. No toron window or selected coset is used.",
+        "analytic_certificate": {
+          "am": 0.013999999999999999,
+          "delta": 0.014098458938492344,
+          "eta": 0.00011014421045697144,
+          "discriminant_factor_relative_perturbation_upper": 0.0634765625,
+          "g_absolute_upper": 16,
+          "Fourier_coefficient_upper": "16 exp(-eta |n|_1)",
+          "proof": [
+            "For real x, B0=1+delta+t, t=sum(1-cos x) in [0,6], s0=sin x. Dminus0=(delta+t)^2+||s0||2^2>=delta^2; Dplus0=(2+delta+t)^2+||s0||2^2>4.",
+            "For |Im z_j|<=eta, |cos z_j-cos x_j| and |sin z_j-sin x_j|<=eta exp(eta), by integration along the vertical segment. Thus the complex Euclidean perturbation of vplus/minus=(B0+/-1,s0) has norm<=sqrt(12) eta exp(eta)<4eta, since eta<=expm1(.03)/128<.001.",
+            "|Dplus/minus(z)-Dplus/minus(x)|<=2||v||2||dv||2+||dv||2^2. Dividing by Dreal and using sqrt(Dreal)>=delta gives <=8eta/delta+16(eta/delta)^2=0.0634765625<1. Both factors remain in the right half-plane. Their separate principal square roots multiply to the positive physical discriminant root; no zero or branch crossing in the entire polytube.",
+            "Re B>=exp(am)-3eta exp(eta)>1. For A=B^2+1+s2, real A0>=2; |dB|<3.01eta, ||ds||<1.74eta, B0<7.04, ||s0||<=sqrt(3), imply |dA|<50eta<.05. Hence Re A>1.95. Both D factors have argument magnitude<asin(.064), so Re sqrt(Dminus)sqrt(Dplus)>0. Therefore C=(A+sqrtD)/2 has Re C>.975 and g=Log C is single-valued periodic holomorphic.",
+            "|B|<8, |s2|<4; |A|<69, |Dminus|<85, |Dplus|<85 give |C|<77. Re C>.975 yields |log|C||<log77 and |arg C|<pi/2, hence |g|<6<16. Cauchy contour displacement coordinate by coordinate yields |g_hat(n)|<=16 exp(-eta |n|1)."
+          ],
+          "physical_branch": "g=Log[(B^2+1+s2+sqrt(Dminus)*sqrt(Dplus))/2]=log B+E; E>=am for real p"
+        }
+      },
+      "clock_thermal_prices": [
+        {
+          "power": 1048576,
+          "small_regime": true,
+          "log10_x": -12706.991199006216,
+          "canonical_neutral_excited_trace_log10_upper": -12706.690169010551,
+          "charged_excited_relative_trace_log10_upper": -12706.690169010551,
+          "charged_total_trace_common_neutral_log10_upper": -6353.495599503108
+        },
+        {
+          "power": 1048577,
+          "small_regime": true,
+          "log10_x": -12707.00335925171,
+          "canonical_neutral_excited_trace_log10_upper": -12706.702329256046,
+          "charged_excited_relative_trace_log10_upper": -12706.702329256046,
+          "charged_total_trace_common_neutral_log10_upper": -6353.501679625855
+        },
+        {
+          "power": 1048578,
+          "small_regime": true,
+          "log10_x": -12707.015519497203,
+          "canonical_neutral_excited_trace_log10_upper": -12706.714489501539,
+          "charged_excited_relative_trace_log10_upper": -12706.714489501539,
+          "charged_total_trace_common_neutral_log10_upper": -6353.5077597486015
+        }
+      ],
+      "canonical_thermal_proof": "At N=2V, j holes and j stable particles cost >=2am*j per whole T. Relative trace <=sum_{j=1}^{2V} binom(2V,j)^2 exp(-2am*j*p). With x=(2V)^2 exp(-2am*p)<=1/2, binom(n,j)<=n^j/j!, and sum x^j/(j!)^2<=x/(1-x)<=2x. For N=2V+/-1, binom(n,j)binom(n,j+1)<=n*n^(2j)/(j!(j+1)!), giving total <=n exp(-am*p)(1+2x). Multiplicity n is retained.",
+      "SF_identity": "T has reciprocal eigenvalues exp(+/-E), each twice; sqrt(T) has exp(+/-E/2). sqrt(det Bplus)=product_p B(p). Neutral maximum=product_p B exp(E). Charged maxima add or remove one mode, so each/Wsf(theta)<=exp(-min_p E/2)<=exp(-am/2).",
+      "gap_proof": "cosh E=(B+B^-1+s2/B)/2 >=(exp(am)+exp(-am))/2 since B>=exp(am)>1. Static p=0 gives E=am exactly.",
+      "connection_onebody_norm_upper": "0.00102176053259743520928818196537",
+      "connection_canonical_norm_upper": "9650255385314331176.45302357752",
+      "Gaussian_toron_connection_operator_price_log10": -58.72473115426777,
+      "connection_proof": "Physical chiral T=[[B^-1,-F/B],[-Fdag/B,B+Fdag F/B]]. For scalar links, ||F||<=sqrt3<2, |dtheta B|<=1/L, ||dtheta F||<=1/L. Block differentiation gives ||dtheta T||<16/L<=240/L. Stable/unstable Sylvester separation is exp(am)-exp(-am), not .019 uniformly. Kato generator [dP,P] has norm <=480/(L crossgap); dGamma on N<=2V+1 costs N times this. Gaussian three-toron heat price 8 connection/sqrt(beta L) is a conditional reference comparison.",
+      "scope": "Exact frozen-mean-Clifford/freeBloch spectral identities and toron reference bounds ONLY. No interacting Slater, Root interacting gap, RN-Loewner, weighted BKS, separate character positivity, Pe or receiver admission.",
+      "actual_Grams": null,
+      "microscopic_fullpacket_admission_proved": false
+    },
+    {
+      "a": 0.02,
+      "m": 1.0,
+      "am": "0.02",
+      "kappa": "0.124371880338876840825189336193",
+      "spatial_size": 16777216,
+      "time_slices": 1048576,
+      "onebody_T_gap": "0.02",
+      "neutral_pair_T_gap": "0.04",
+      "stable_projector_gap_from_one": "0.0198013266932446977791858957747",
+      "stable_unstable_spectral_gap": "0.0400026667200005079393298162578",
+      "canonical_neutral_number": "9444732965739290427392",
+      "canonical_charged_numbers": [
+        "9444732965739290427391",
+        "9444732965739290427393"
+      ],
+      "SF_charged_common_neutral_norm_upper": "0.99004983374916805357390597718",
+      "SF_charged_common_neutral_log_norm_upper": "-0.01",
+      "SF_charged_uniform_ratio_to_local_neutral_upper": "0.99004983374916805357390597718",
+      "neutral_normalization": "ONE Wsf(theta=0), not an own-charged maximum; all theta use Wsf(theta)/Wsf(0)<=exp(epsilon).",
+      "winding": {
+        "L": 16777216,
+        "V": "4722366482869645213696",
+        "eta": "0.000157822968959029766876124378775",
+        "etaL": "2647.83003998693754931038394557",
+        "log_vacuum_twist_error_upper": "1.39451846479172459059067670197e-1126",
+        "log10_vacuum_twist_error_upper": -1125.8555757308752,
+        "uniform_over_all_twists": true,
+        "all_eight_statistical_torons": true,
+        "Poisson_proof": "Sum_p g((2pi n+theta)/L)=V sum_k g_hat(Lk) exp(i k.theta). The theta-minus-zero difference is <=32V[((1+r)/(1-r))^3-1]=32V(6r+2r^3)/(1-r)^3<=256V r/(1-r)^3. No toron window or selected coset is used.",
+        "analytic_certificate": {
+          "am": 0.02,
+          "delta": 0.02020134002675581,
+          "eta": 0.00015782296895902977,
+          "discriminant_factor_relative_perturbation_upper": 0.0634765625,
+          "g_absolute_upper": 16,
+          "Fourier_coefficient_upper": "16 exp(-eta |n|_1)",
+          "proof": [
+            "For real x, B0=1+delta+t, t=sum(1-cos x) in [0,6], s0=sin x. Dminus0=(delta+t)^2+||s0||2^2>=delta^2; Dplus0=(2+delta+t)^2+||s0||2^2>4.",
+            "For |Im z_j|<=eta, |cos z_j-cos x_j| and |sin z_j-sin x_j|<=eta exp(eta), by integration along the vertical segment. Thus the complex Euclidean perturbation of vplus/minus=(B0+/-1,s0) has norm<=sqrt(12) eta exp(eta)<4eta, since eta<=expm1(.03)/128<.001.",
+            "|Dplus/minus(z)-Dplus/minus(x)|<=2||v||2||dv||2+||dv||2^2. Dividing by Dreal and using sqrt(Dreal)>=delta gives <=8eta/delta+16(eta/delta)^2=0.0634765625<1. Both factors remain in the right half-plane. Their separate principal square roots multiply to the positive physical discriminant root; no zero or branch crossing in the entire polytube.",
+            "Re B>=exp(am)-3eta exp(eta)>1. For A=B^2+1+s2, real A0>=2; |dB|<3.01eta, ||ds||<1.74eta, B0<7.04, ||s0||<=sqrt(3), imply |dA|<50eta<.05. Hence Re A>1.95. Both D factors have argument magnitude<asin(.064), so Re sqrt(Dminus)sqrt(Dplus)>0. Therefore C=(A+sqrtD)/2 has Re C>.975 and g=Log C is single-valued periodic holomorphic.",
+            "|B|<8, |s2|<4; |A|<69, |Dminus|<85, |Dplus|<85 give |C|<77. Re C>.975 yields |log|C||<log77 and |arg C|<pi/2, hence |g|<6<16. Cauchy contour displacement coordinate by coordinate yields |g_hat(n)|<=16 exp(-eta |n|1)."
+          ],
+          "physical_branch": "g=Log[(B^2+1+s2+sqrt(Dminus)*sqrt(Dplus))/2]=log B+E; E>=am for real p"
+        }
+      },
+      "clock_thermal_prices": [
+        {
+          "power": 1048576,
+          "small_regime": true,
+          "log10_x": -18171.680446880426,
+          "canonical_neutral_excited_trace_log10_upper": -18171.379416884763,
+          "charged_excited_relative_trace_log10_upper": -18171.379416884763,
+          "charged_total_trace_common_neutral_log10_upper": -9085.840223440213
+        },
+        {
+          "power": 1048577,
+          "small_regime": true,
+          "log10_x": -18171.6978186597,
+          "canonical_neutral_excited_trace_log10_upper": -18171.39678866404,
+          "charged_excited_relative_trace_log10_upper": -18171.39678866404,
+          "charged_total_trace_common_neutral_log10_upper": -9085.84890932985
+        },
+        {
+          "power": 1048578,
+          "small_regime": true,
+          "log10_x": -18171.71519043898,
+          "canonical_neutral_excited_trace_log10_upper": -18171.414160443313,
+          "charged_excited_relative_trace_log10_upper": -18171.414160443313,
+          "charged_total_trace_common_neutral_log10_upper": -9085.85759521949
+        }
+      ],
+      "canonical_thermal_proof": "At N=2V, j holes and j stable particles cost >=2am*j per whole T. Relative trace <=sum_{j=1}^{2V} binom(2V,j)^2 exp(-2am*j*p). With x=(2V)^2 exp(-2am*p)<=1/2, binom(n,j)<=n^j/j!, and sum x^j/(j!)^2<=x/(1-x)<=2x. For N=2V+/-1, binom(n,j)binom(n,j+1)<=n*n^(2j)/(j!(j+1)!), giving total <=n exp(-am*p)(1+2x). Multiplicity n is retained.",
+      "SF_identity": "T has reciprocal eigenvalues exp(+/-E), each twice; sqrt(T) has exp(+/-E/2). sqrt(det Bplus)=product_p B(p). Neutral maximum=product_p B exp(E). Charged maxima add or remove one mode, so each/Wsf(theta)<=exp(-min_p E/2)<=exp(-am/2).",
+      "gap_proof": "cosh E=(B+B^-1+s2/B)/2 >=(exp(am)+exp(-am))/2 since B>=exp(am)>1. Static p=0 gives E=am exactly.",
+      "connection_onebody_norm_upper": "0.000715208055814013409296515285951",
+      "connection_canonical_norm_upper": "6754949102108918824.99249395273",
+      "Gaussian_toron_connection_operator_price_log10": -58.87964787997256,
+      "connection_proof": "Physical chiral T=[[B^-1,-F/B],[-Fdag/B,B+Fdag F/B]]. For scalar links, ||F||<=sqrt3<2, |dtheta B|<=1/L, ||dtheta F||<=1/L. Block differentiation gives ||dtheta T||<16/L<=240/L. Stable/unstable Sylvester separation is exp(am)-exp(-am), not .019 uniformly. Kato generator [dP,P] has norm <=480/(L crossgap); dGamma on N<=2V+1 costs N times this. Gaussian three-toron heat price 8 connection/sqrt(beta L) is a conditional reference comparison.",
+      "scope": "Exact frozen-mean-Clifford/freeBloch spectral identities and toron reference bounds ONLY. No interacting Slater, Root interacting gap, RN-Loewner, weighted BKS, separate character positivity, Pe or receiver admission.",
+      "actual_Grams": null,
+      "microscopic_fullpacket_admission_proved": false
+    },
+    {
+      "a": 0.02,
+      "m": 1.4,
+      "am": "0.028",
+      "kappa": "0.124118889793670325867431112448",
+      "spatial_size": 16777216,
+      "time_slices": 1048576,
+      "onebody_T_gap": "0.028",
+      "neutral_pair_T_gap": "0.056",
+      "stable_projector_gap_from_one": "0.0276116331987531090717807277137",
+      "stable_unstable_spectral_gap": "0.056007317620178154395014304174",
+      "canonical_neutral_number": "9444732965739290427392",
+      "canonical_charged_numbers": [
+        "9444732965739290427391",
+        "9444732965739290427393"
+      ],
+      "SF_charged_common_neutral_norm_upper": "0.986097544262861903476722832192",
+      "SF_charged_common_neutral_log_norm_upper": "-0.014",
+      "SF_charged_uniform_ratio_to_local_neutral_upper": "0.986097544262861903476722832192",
+      "neutral_normalization": "ONE Wsf(theta=0), not an own-charged maximum; all theta use Wsf(theta)/Wsf(0)<=exp(epsilon).",
+      "winding": {
+        "L": 16777216,
+        "V": "4722366482869645213696",
+        "eta": "0.000221841284542383142484738462469",
+        "etaL": "3721.87914848502313622523388835",
+        "log_vacuum_twist_error_upper": "4.90708019173004296006705314451e-1593",
+        "log10_vacuum_twist_error_upper": -1592.3091768447007,
+        "uniform_over_all_twists": true,
+        "all_eight_statistical_torons": true,
+        "Poisson_proof": "Sum_p g((2pi n+theta)/L)=V sum_k g_hat(Lk) exp(i k.theta). The theta-minus-zero difference is <=32V[((1+r)/(1-r))^3-1]=32V(6r+2r^3)/(1-r)^3<=256V r/(1-r)^3. No toron window or selected coset is used.",
+        "analytic_certificate": {
+          "am": 0.027999999999999997,
+          "delta": 0.02839568442142504,
+          "eta": 0.00022184128454238314,
+          "discriminant_factor_relative_perturbation_upper": 0.0634765625,
+          "g_absolute_upper": 16,
+          "Fourier_coefficient_upper": "16 exp(-eta |n|_1)",
+          "proof": [
+            "For real x, B0=1+delta+t, t=sum(1-cos x) in [0,6], s0=sin x. Dminus0=(delta+t)^2+||s0||2^2>=delta^2; Dplus0=(2+delta+t)^2+||s0||2^2>4.",
+            "For |Im z_j|<=eta, |cos z_j-cos x_j| and |sin z_j-sin x_j|<=eta exp(eta), by integration along the vertical segment. Thus the complex Euclidean perturbation of vplus/minus=(B0+/-1,s0) has norm<=sqrt(12) eta exp(eta)<4eta, since eta<=expm1(.03)/128<.001.",
+            "|Dplus/minus(z)-Dplus/minus(x)|<=2||v||2||dv||2+||dv||2^2. Dividing by Dreal and using sqrt(Dreal)>=delta gives <=8eta/delta+16(eta/delta)^2=0.0634765625<1. Both factors remain in the right half-plane. Their separate principal square roots multiply to the positive physical discriminant root; no zero or branch crossing in the entire polytube.",
+            "Re B>=exp(am)-3eta exp(eta)>1. For A=B^2+1+s2, real A0>=2; |dB|<3.01eta, ||ds||<1.74eta, B0<7.04, ||s0||<=sqrt(3), imply |dA|<50eta<.05. Hence Re A>1.95. Both D factors have argument magnitude<asin(.064), so Re sqrt(Dminus)sqrt(Dplus)>0. Therefore C=(A+sqrtD)/2 has Re C>.975 and g=Log C is single-valued periodic holomorphic.",
+            "|B|<8, |s2|<4; |A|<69, |Dminus|<85, |Dplus|<85 give |C|<77. Re C>.975 yields |log|C||<log77 and |arg C|<pi/2, hence |g|<6<16. Cauchy contour displacement coordinate by coordinate yields |g_hat(n)|<=16 exp(-eta |n|1)."
+          ],
+          "physical_branch": "g=Log[(B^2+1+s2+sqrt(Dminus)*sqrt(Dplus))/2]=log B+E; E>=am for real p"
+        }
+      },
+      "clock_thermal_prices": [
+        {
+          "power": 1048576,
+          "small_regime": true,
+          "log10_x": -25457.932777379374,
+          "canonical_neutral_excited_trace_log10_upper": -25457.631747383708,
+          "charged_excited_relative_trace_log10_upper": -25457.631747383708,
+          "charged_total_trace_common_neutral_log10_upper": -12728.966388689687
+        },
+        {
+          "power": 1048577,
+          "small_regime": true,
+          "log10_x": -25457.95709787036,
+          "canonical_neutral_excited_trace_log10_upper": -25457.656067874697,
+          "charged_excited_relative_trace_log10_upper": -25457.656067874697,
+          "charged_total_trace_common_neutral_log10_upper": -12728.97854893518
+        },
+        {
+          "power": 1048578,
+          "small_regime": true,
+          "log10_x": -25457.981418361345,
+          "canonical_neutral_excited_trace_log10_upper": -25457.680388365683,
+          "charged_excited_relative_trace_log10_upper": -25457.680388365683,
+          "charged_total_trace_common_neutral_log10_upper": -12728.990709180673
+        }
+      ],
+      "canonical_thermal_proof": "At N=2V, j holes and j stable particles cost >=2am*j per whole T. Relative trace <=sum_{j=1}^{2V} binom(2V,j)^2 exp(-2am*j*p). With x=(2V)^2 exp(-2am*p)<=1/2, binom(n,j)<=n^j/j!, and sum x^j/(j!)^2<=x/(1-x)<=2x. For N=2V+/-1, binom(n,j)binom(n,j+1)<=n*n^(2j)/(j!(j+1)!), giving total <=n exp(-am*p)(1+2x). Multiplicity n is retained.",
+      "SF_identity": "T has reciprocal eigenvalues exp(+/-E), each twice; sqrt(T) has exp(+/-E/2). sqrt(det Bplus)=product_p B(p). Neutral maximum=product_p B exp(E). Charged maxima add or remove one mode, so each/Wsf(theta)<=exp(-min_p E/2)<=exp(-am/2).",
+      "gap_proof": "cosh E=(B+B^-1+s2/B)/2 >=(exp(am)+exp(-am))/2 since B>=exp(am)>1. Static p=0 gives E=am exactly.",
+      "connection_onebody_norm_upper": "0.000510830204121039520585949152502",
+      "connection_canonical_norm_upper": "4824654868757312690.07580681352",
+      "Gaussian_toron_connection_operator_price_log10": -59.02580370940073,
+      "connection_proof": "Physical chiral T=[[B^-1,-F/B],[-Fdag/B,B+Fdag F/B]]. For scalar links, ||F||<=sqrt3<2, |dtheta B|<=1/L, ||dtheta F||<=1/L. Block differentiation gives ||dtheta T||<16/L<=240/L. Stable/unstable Sylvester separation is exp(am)-exp(-am), not .019 uniformly. Kato generator [dP,P] has norm <=480/(L crossgap); dGamma on N<=2V+1 costs N times this. Gaussian three-toron heat price 8 connection/sqrt(beta L) is a conditional reference comparison.",
+      "scope": "Exact frozen-mean-Clifford/freeBloch spectral identities and toron reference bounds ONLY. No interacting Slater, Root interacting gap, RN-Loewner, weighted BKS, separate character positivity, Pe or receiver admission.",
+      "actual_Grams": null,
+      "microscopic_fullpacket_admission_proved": false
+    },
+    {
+      "a": 0.01,
+      "m": 0.7,
+      "am": "0.007",
+      "kappa": "0.124780867412763002393139152248",
+      "spatial_size": 16777216,
+      "time_slices": 1048576,
+      "onebody_T_gap": "0.007",
+      "neutral_pair_T_gap": "0.014",
+      "stable_projector_gap_from_one": "0.00697555706676489509520296824399",
+      "stable_unstable_spectral_gap": "0.0140001143336134503268030001853",
+      "canonical_neutral_number": "9444732965739290427392",
+      "canonical_charged_numbers": [
+        "9444732965739290427391",
+        "9444732965739290427393"
+      ],
+      "SF_charged_common_neutral_norm_upper": "0.996506117860414896562287352989",
+      "SF_charged_common_neutral_log_norm_upper": "-0.0035",
+      "SF_charged_uniform_ratio_to_local_neutral_upper": "0.996506117860414896562287352989",
+      "neutral_normalization": "ONE Wsf(theta=0), not an own-charged maximum; all theta use Wsf(theta)/Wsf(0)<=exp(epsilon).",
+      "winding": {
+        "L": 16777216,
+        "V": "4722366482869645213696",
+        "eta": "0.0000548793536472543298794958958944",
+        "etaL": "920.722770080373699323556616535",
+        "log_vacuum_twist_error_upper": "1.65036971116042953240681682626e-376",
+        "log10_vacuum_twist_error_upper": -375.7824187554643,
+        "uniform_over_all_twists": true,
+        "all_eight_statistical_torons": true,
+        "Poisson_proof": "Sum_p g((2pi n+theta)/L)=V sum_k g_hat(Lk) exp(i k.theta). The theta-minus-zero difference is <=32V[((1+r)/(1-r))^3-1]=32V(6r+2r^3)/(1-r)^3<=256V r/(1-r)^3. No toron window or selected coset is used.",
+        "analytic_certificate": {
+          "am": 0.006999999999999999,
+          "delta": 0.007024557266848554,
+          "eta": 5.487935364725433e-05,
+          "discriminant_factor_relative_perturbation_upper": 0.0634765625,
+          "g_absolute_upper": 16,
+          "Fourier_coefficient_upper": "16 exp(-eta |n|_1)",
+          "proof": [
+            "For real x, B0=1+delta+t, t=sum(1-cos x) in [0,6], s0=sin x. Dminus0=(delta+t)^2+||s0||2^2>=delta^2; Dplus0=(2+delta+t)^2+||s0||2^2>4.",
+            "For |Im z_j|<=eta, |cos z_j-cos x_j| and |sin z_j-sin x_j|<=eta exp(eta), by integration along the vertical segment. Thus the complex Euclidean perturbation of vplus/minus=(B0+/-1,s0) has norm<=sqrt(12) eta exp(eta)<4eta, since eta<=expm1(.03)/128<.001.",
+            "|Dplus/minus(z)-Dplus/minus(x)|<=2||v||2||dv||2+||dv||2^2. Dividing by Dreal and using sqrt(Dreal)>=delta gives <=8eta/delta+16(eta/delta)^2=0.0634765625<1. Both factors remain in the right half-plane. Their separate principal square roots multiply to the positive physical discriminant root; no zero or branch crossing in the entire polytube.",
+            "Re B>=exp(am)-3eta exp(eta)>1. For A=B^2+1+s2, real A0>=2; |dB|<3.01eta, ||ds||<1.74eta, B0<7.04, ||s0||<=sqrt(3), imply |dA|<50eta<.05. Hence Re A>1.95. Both D factors have argument magnitude<asin(.064), so Re sqrt(Dminus)sqrt(Dplus)>0. Therefore C=(A+sqrtD)/2 has Re C>.975 and g=Log C is single-valued periodic holomorphic.",
+            "|B|<8, |s2|<4; |A|<69, |Dminus|<85, |Dplus|<85 give |C|<77. Re C>.975 yields |log|C||<log77 and |arg C|<pi/2, hence |g|<6<16. Cauchy contour displacement coordinate by coordinate yields |g_hat(n)|<=16 exp(-eta |n|1)."
+          ],
+          "physical_branch": "g=Log[(B^2+1+s2+sqrt(Dminus)*sqrt(Dplus))/2]=log B+E; E>=am for real p"
+        }
+      },
+      "clock_thermal_prices": [
+        {
+          "power": 1048576,
+          "small_regime": true,
+          "log10_x": -6331.520409819637,
+          "canonical_neutral_excited_trace_log10_upper": -6331.219379823973,
+          "charged_excited_relative_trace_log10_upper": -6331.219379823973,
+          "charged_total_trace_common_neutral_log10_upper": -3165.7602049098186
+        },
+        {
+          "power": 1048577,
+          "small_regime": true,
+          "log10_x": -6331.526489942384,
+          "canonical_neutral_excited_trace_log10_upper": -6331.22545994672,
+          "charged_excited_relative_trace_log10_upper": -6331.22545994672,
+          "charged_total_trace_common_neutral_log10_upper": -3165.763244971192
+        },
+        {
+          "power": 1048578,
+          "small_regime": true,
+          "log10_x": -6331.532570065131,
+          "canonical_neutral_excited_trace_log10_upper": -6331.231540069467,
+          "charged_excited_relative_trace_log10_upper": -6331.231540069467,
+          "charged_total_trace_common_neutral_log10_upper": -3165.7662850325655
+        }
+      ],
+      "canonical_thermal_proof": "At N=2V, j holes and j stable particles cost >=2am*j per whole T. Relative trace <=sum_{j=1}^{2V} binom(2V,j)^2 exp(-2am*j*p). With x=(2V)^2 exp(-2am*p)<=1/2, binom(n,j)<=n^j/j!, and sum x^j/(j!)^2<=x/(1-x)<=2x. For N=2V+/-1, binom(n,j)binom(n,j+1)<=n*n^(2j)/(j!(j+1)!), giving total <=n exp(-am*p)(1+2x). Multiplicity n is retained.",
+      "SF_identity": "T has reciprocal eigenvalues exp(+/-E), each twice; sqrt(T) has exp(+/-E/2). sqrt(det Bplus)=product_p B(p). Neutral maximum=product_p B exp(E). Charged maxima add or remove one mode, so each/Wsf(theta)<=exp(-min_p E/2)<=exp(-am/2).",
+      "gap_proof": "cosh E=(B+B^-1+s2/B)/2 >=(exp(am)+exp(-am))/2 since B>=exp(am)>1. Static p=0 gives E=am exactly.",
+      "connection_onebody_norm_upper": "0.00204357113166540528004662833139",
+      "connection_canonical_norm_upper": "19300983635073401173.8783614839",
+      "Gaussian_toron_connection_operator_price_log10": -58.42369051847588,
+      "connection_proof": "Physical chiral T=[[B^-1,-F/B],[-Fdag/B,B+Fdag F/B]]. For scalar links, ||F||<=sqrt3<2, |dtheta B|<=1/L, ||dtheta F||<=1/L. Block differentiation gives ||dtheta T||<16/L<=240/L. Stable/unstable Sylvester separation is exp(am)-exp(-am), not .019 uniformly. Kato generator [dP,P] has norm <=480/(L crossgap); dGamma on N<=2V+1 costs N times this. Gaussian three-toron heat price 8 connection/sqrt(beta L) is a conditional reference comparison.",
+      "scope": "Exact frozen-mean-Clifford/freeBloch spectral identities and toron reference bounds ONLY. No interacting Slater, Root interacting gap, RN-Loewner, weighted BKS, separate character positivity, Pe or receiver admission.",
+      "actual_Grams": null,
+      "microscopic_fullpacket_admission_proved": false
+    },
+    {
+      "a": 0.01,
+      "m": 1.0,
+      "am": "0.01",
+      "kappa": "0.124686719409190214508860891142",
+      "spatial_size": 16777216,
+      "time_slices": 1048576,
+      "onebody_T_gap": "0.01",
+      "neutral_pair_T_gap": "0.02",
+      "stable_projector_gap_from_one": "0.00995016625083194642609402281996",
+      "stable_unstable_spectral_gap": "0.0200003333350000039682594797228",
+      "canonical_neutral_number": "9444732965739290427392",
+      "canonical_charged_numbers": [
+        "9444732965739290427391",
+        "9444732965739290427393"
+      ],
+      "SF_charged_common_neutral_norm_upper": "0.995012479192682313352564246233",
+      "SF_charged_common_neutral_log_norm_upper": "-0.005",
+      "SF_charged_uniform_ratio_to_local_neutral_upper": "0.995012479192682313352564246233",
+      "neutral_normalization": "ONE Wsf(theta=0), not an own-charged maximum; all theta use Wsf(theta)/Wsf(0)<=exp(epsilon).",
+      "winding": {
+        "L": 16777216,
+        "V": "4722366482869645213696",
+        "eta": "0.0000785169303450629495481676320536",
+        "etaL": "1317.29550005607563816671076717",
+        "log_vacuum_twist_error_upper": "9.73269116714212642365189881583e-549",
+        "log10_vacuum_twist_error_upper": -548.0117670572199,
+        "uniform_over_all_twists": true,
+        "all_eight_statistical_torons": true,
+        "Poisson_proof": "Sum_p g((2pi n+theta)/L)=V sum_k g_hat(Lk) exp(i k.theta). The theta-minus-zero difference is <=32V[((1+r)/(1-r))^3-1]=32V(6r+2r^3)/(1-r)^3<=256V r/(1-r)^3. No toron window or selected coset is used.",
+        "analytic_certificate": {
+          "am": 0.01,
+          "delta": 0.010050167084168058,
+          "eta": 7.851693034506296e-05,
+          "discriminant_factor_relative_perturbation_upper": 0.0634765625,
+          "g_absolute_upper": 16,
+          "Fourier_coefficient_upper": "16 exp(-eta |n|_1)",
+          "proof": [
+            "For real x, B0=1+delta+t, t=sum(1-cos x) in [0,6], s0=sin x. Dminus0=(delta+t)^2+||s0||2^2>=delta^2; Dplus0=(2+delta+t)^2+||s0||2^2>4.",
+            "For |Im z_j|<=eta, |cos z_j-cos x_j| and |sin z_j-sin x_j|<=eta exp(eta), by integration along the vertical segment. Thus the complex Euclidean perturbation of vplus/minus=(B0+/-1,s0) has norm<=sqrt(12) eta exp(eta)<4eta, since eta<=expm1(.03)/128<.001.",
+            "|Dplus/minus(z)-Dplus/minus(x)|<=2||v||2||dv||2+||dv||2^2. Dividing by Dreal and using sqrt(Dreal)>=delta gives <=8eta/delta+16(eta/delta)^2=0.0634765625<1. Both factors remain in the right half-plane. Their separate principal square roots multiply to the positive physical discriminant root; no zero or branch crossing in the entire polytube.",
+            "Re B>=exp(am)-3eta exp(eta)>1. For A=B^2+1+s2, real A0>=2; |dB|<3.01eta, ||ds||<1.74eta, B0<7.04, ||s0||<=sqrt(3), imply |dA|<50eta<.05. Hence Re A>1.95. Both D factors have argument magnitude<asin(.064), so Re sqrt(Dminus)sqrt(Dplus)>0. Therefore C=(A+sqrtD)/2 has Re C>.975 and g=Log C is single-valued periodic holomorphic.",
+            "|B|<8, |s2|<4; |A|<69, |Dminus|<85, |Dplus|<85 give |C|<77. Re C>.975 yields |log|C||<log77 and |arg C|<pi/2, hence |g|<6<16. Cauchy contour displacement coordinate by coordinate yields |g_hat(n)|<=16 exp(-eta |n|1)."
+          ],
+          "physical_branch": "g=Log[(B^2+1+s2+sqrt(Dminus)*sqrt(Dplus))/2]=log B+E; E>=am for real p"
+        }
+      },
+      "clock_thermal_prices": [
+        {
+          "power": 1048576,
+          "small_regime": true,
+          "log10_x": -9063.865033756743,
+          "canonical_neutral_excited_trace_log10_upper": -9063.56400376108,
+          "charged_excited_relative_trace_log10_upper": -9063.56400376108,
+          "charged_total_trace_common_neutral_log10_upper": -4531.932516878372
+        },
+        {
+          "power": 1048577,
+          "small_regime": true,
+          "log10_x": -9063.87371964638,
+          "canonical_neutral_excited_trace_log10_upper": -9063.572689650717,
+          "charged_excited_relative_trace_log10_upper": -9063.572689650717,
+          "charged_total_trace_common_neutral_log10_upper": -4531.93685982319
+        },
+        {
+          "power": 1048578,
+          "small_regime": true,
+          "log10_x": -9063.882405536018,
+          "canonical_neutral_excited_trace_log10_upper": -9063.581375540354,
+          "charged_excited_relative_trace_log10_upper": -9063.581375540354,
+          "charged_total_trace_common_neutral_log10_upper": -4531.941202768009
+        }
+      ],
+      "canonical_thermal_proof": "At N=2V, j holes and j stable particles cost >=2am*j per whole T. Relative trace <=sum_{j=1}^{2V} binom(2V,j)^2 exp(-2am*j*p). With x=(2V)^2 exp(-2am*p)<=1/2, binom(n,j)<=n^j/j!, and sum x^j/(j!)^2<=x/(1-x)<=2x. For N=2V+/-1, binom(n,j)binom(n,j+1)<=n*n^(2j)/(j!(j+1)!), giving total <=n exp(-am*p)(1+2x). Multiplicity n is retained.",
+      "SF_identity": "T has reciprocal eigenvalues exp(+/-E), each twice; sqrt(T) has exp(+/-E/2). sqrt(det Bplus)=product_p B(p). Neutral maximum=product_p B exp(E). Charged maxima add or remove one mode, so each/Wsf(theta)<=exp(-min_p E/2)<=exp(-am/2).",
+      "gap_proof": "cosh E=(B+B^-1+s2/B)/2 >=(exp(am)+exp(-am))/2 since B>=exp(am)>1. Static p=0 gives E=am exactly.",
+      "connection_onebody_norm_upper": "0.00143048763302961691980489632194",
+      "connection_canonical_norm_upper": "13510573704757191557.4059320963",
+      "Gaussian_toron_connection_operator_price_log10": -58.57859616994639,
+      "connection_proof": "Physical chiral T=[[B^-1,-F/B],[-Fdag/B,B+Fdag F/B]]. For scalar links, ||F||<=sqrt3<2, |dtheta B|<=1/L, ||dtheta F||<=1/L. Block differentiation gives ||dtheta T||<16/L<=240/L. Stable/unstable Sylvester separation is exp(am)-exp(-am), not .019 uniformly. Kato generator [dP,P] has norm <=480/(L crossgap); dGamma on N<=2V+1 costs N times this. Gaussian three-toron heat price 8 connection/sqrt(beta L) is a conditional reference comparison.",
+      "scope": "Exact frozen-mean-Clifford/freeBloch spectral identities and toron reference bounds ONLY. No interacting Slater, Root interacting gap, RN-Loewner, weighted BKS, separate character positivity, Pe or receiver admission.",
+      "actual_Grams": null,
+      "microscopic_fullpacket_admission_proved": false
+    },
+    {
+      "a": 0.01,
+      "m": 1.4,
+      "am": "0.014",
+      "kappa": "0.124560970567777857579908964576",
+      "spatial_size": 16777216,
+      "time_slices": 1048576,
+      "onebody_T_gap": "0.014",
+      "neutral_pair_T_gap": "0.028",
+      "stable_projector_gap_from_one": "0.0139024557371380965232771678078",
+      "stable_unstable_spectral_gap": "0.0280009146756304418308694283708",
+      "canonical_neutral_number": "9444732965739290427392",
+      "canonical_charged_numbers": [
+        "9444732965739290427391",
+        "9444732965739290427393"
+      ],
+      "SF_charged_common_neutral_norm_upper": "0.993024442933235104904797031756",
+      "SF_charged_common_neutral_log_norm_upper": "-0.007",
+      "SF_charged_uniform_ratio_to_local_neutral_upper": "0.993024442933235104904797031756",
+      "neutral_normalization": "ONE Wsf(theta=0), not an own-charged maximum; all theta use Wsf(theta)/Wsf(0)<=exp(epsilon).",
+      "winding": {
+        "L": 16777216,
+        "V": "4722366482869645213696",
+        "eta": "0.000110144210456971439792920325192",
+        "etaL": "1847.91320998606855123681956653",
+        "log_vacuum_twist_error_upper": "3.49856155974473472140817817515e-779",
+        "log10_vacuum_twist_error_upper": -778.4561104799561,
+        "uniform_over_all_twists": true,
+        "all_eight_statistical_torons": true,
+        "Poisson_proof": "Sum_p g((2pi n+theta)/L)=V sum_k g_hat(Lk) exp(i k.theta). The theta-minus-zero difference is <=32V[((1+r)/(1-r))^3-1]=32V(6r+2r^3)/(1-r)^3<=256V r/(1-r)^3. No toron window or selected coset is used.",
+        "analytic_certificate": {
+          "am": 0.013999999999999999,
+          "delta": 0.014098458938492344,
+          "eta": 0.00011014421045697144,
+          "discriminant_factor_relative_perturbation_upper": 0.0634765625,
+          "g_absolute_upper": 16,
+          "Fourier_coefficient_upper": "16 exp(-eta |n|_1)",
+          "proof": [
+            "For real x, B0=1+delta+t, t=sum(1-cos x) in [0,6], s0=sin x. Dminus0=(delta+t)^2+||s0||2^2>=delta^2; Dplus0=(2+delta+t)^2+||s0||2^2>4.",
+            "For |Im z_j|<=eta, |cos z_j-cos x_j| and |sin z_j-sin x_j|<=eta exp(eta), by integration along the vertical segment. Thus the complex Euclidean perturbation of vplus/minus=(B0+/-1,s0) has norm<=sqrt(12) eta exp(eta)<4eta, since eta<=expm1(.03)/128<.001.",
+            "|Dplus/minus(z)-Dplus/minus(x)|<=2||v||2||dv||2+||dv||2^2. Dividing by Dreal and using sqrt(Dreal)>=delta gives <=8eta/delta+16(eta/delta)^2=0.0634765625<1. Both factors remain in the right half-plane. Their separate principal square roots multiply to the positive physical discriminant root; no zero or branch crossing in the entire polytube.",
+            "Re B>=exp(am)-3eta exp(eta)>1. For A=B^2+1+s2, real A0>=2; |dB|<3.01eta, ||ds||<1.74eta, B0<7.04, ||s0||<=sqrt(3), imply |dA|<50eta<.05. Hence Re A>1.95. Both D factors have argument magnitude<asin(.064), so Re sqrt(Dminus)sqrt(Dplus)>0. Therefore C=(A+sqrtD)/2 has Re C>.975 and g=Log C is single-valued periodic holomorphic.",
+            "|B|<8, |s2|<4; |A|<69, |Dminus|<85, |Dplus|<85 give |C|<77. Re C>.975 yields |log|C||<log77 and |arg C|<pi/2, hence |g|<6<16. Cauchy contour displacement coordinate by coordinate yields |g_hat(n)|<=16 exp(-eta |n|1)."
+          ],
+          "physical_branch": "g=Log[(B^2+1+s2+sqrt(Dminus)*sqrt(Dplus))/2]=log B+E; E>=am for real p"
+        }
+      },
+      "clock_thermal_prices": [
+        {
+          "power": 1048576,
+          "small_regime": true,
+          "log10_x": -12706.991199006216,
+          "canonical_neutral_excited_trace_log10_upper": -12706.690169010551,
+          "charged_excited_relative_trace_log10_upper": -12706.690169010551,
+          "charged_total_trace_common_neutral_log10_upper": -6353.495599503108
+        },
+        {
+          "power": 1048577,
+          "small_regime": true,
+          "log10_x": -12707.00335925171,
+          "canonical_neutral_excited_trace_log10_upper": -12706.702329256046,
+          "charged_excited_relative_trace_log10_upper": -12706.702329256046,
+          "charged_total_trace_common_neutral_log10_upper": -6353.501679625855
+        },
+        {
+          "power": 1048578,
+          "small_regime": true,
+          "log10_x": -12707.015519497203,
+          "canonical_neutral_excited_trace_log10_upper": -12706.714489501539,
+          "charged_excited_relative_trace_log10_upper": -12706.714489501539,
+          "charged_total_trace_common_neutral_log10_upper": -6353.5077597486015
+        }
+      ],
+      "canonical_thermal_proof": "At N=2V, j holes and j stable particles cost >=2am*j per whole T. Relative trace <=sum_{j=1}^{2V} binom(2V,j)^2 exp(-2am*j*p). With x=(2V)^2 exp(-2am*p)<=1/2, binom(n,j)<=n^j/j!, and sum x^j/(j!)^2<=x/(1-x)<=2x. For N=2V+/-1, binom(n,j)binom(n,j+1)<=n*n^(2j)/(j!(j+1)!), giving total <=n exp(-am*p)(1+2x). Multiplicity n is retained.",
+      "SF_identity": "T has reciprocal eigenvalues exp(+/-E), each twice; sqrt(T) has exp(+/-E/2). sqrt(det Bplus)=product_p B(p). Neutral maximum=product_p B exp(E). Charged maxima add or remove one mode, so each/Wsf(theta)<=exp(-min_p E/2)<=exp(-am/2).",
+      "gap_proof": "cosh E=(B+B^-1+s2/B)/2 >=(exp(am)+exp(-am))/2 since B>=exp(am)>1. Static p=0 gives E=am exactly.",
+      "connection_onebody_norm_upper": "0.00102176053259743520928818196537",
+      "connection_canonical_norm_upper": "9650255385314331176.45302357752",
+      "Gaussian_toron_connection_operator_price_log10": -58.72473115426777,
+      "connection_proof": "Physical chiral T=[[B^-1,-F/B],[-Fdag/B,B+Fdag F/B]]. For scalar links, ||F||<=sqrt3<2, |dtheta B|<=1/L, ||dtheta F||<=1/L. Block differentiation gives ||dtheta T||<16/L<=240/L. Stable/unstable Sylvester separation is exp(am)-exp(-am), not .019 uniformly. Kato generator [dP,P] has norm <=480/(L crossgap); dGamma on N<=2V+1 costs N times this. Gaussian three-toron heat price 8 connection/sqrt(beta L) is a conditional reference comparison.",
+      "scope": "Exact frozen-mean-Clifford/freeBloch spectral identities and toron reference bounds ONLY. No interacting Slater, Root interacting gap, RN-Loewner, weighted BKS, separate character positivity, Pe or receiver admission.",
+      "actual_Grams": null,
+      "microscopic_fullpacket_admission_proved": false
+    },
+    {
+      "a": 0.005,
+      "m": 0.7,
+      "am": "0.0035",
+      "kappa": "0.124890529324910588102477661579",
+      "spatial_size": 16777216,
+      "time_slices": 1048576,
+      "onebody_T_gap": "0.0035",
+      "neutral_pair_T_gap": "0.007",
+      "stable_projector_gap_from_one": "0.00349388213958510343771264701142",
+      "stable_unstable_spectral_gap": "0.00700001429167542031505314713578",
+      "canonical_neutral_number": "9444732965739290427392",
+      "canonical_charged_numbers": [
+        "9444732965739290427391",
+        "9444732965739290427393"
+      ],
+      "SF_charged_common_neutral_norm_upper": "0.998251530357161484357916800328",
+      "SF_charged_common_neutral_log_norm_upper": "-0.00175",
+      "SF_charged_uniform_ratio_to_local_neutral_upper": "0.998251530357161484357916800328",
+      "neutral_normalization": "ONE Wsf(theta=0), not an own-charged maximum; all theta use Wsf(theta)/Wsf(0)<=exp(epsilon).",
+      "winding": {
+        "L": 16777216,
+        "V": "4722366482869645213696",
+        "eta": "0.0000273916574382055974682659942463",
+        "etaL": "459.555753438781961134151730925",
+        "log_vacuum_twist_error_upper": "3.16134437725140013936717071282e-176",
+        "log10_vacuum_twist_error_upper": -175.50012819223585,
+        "uniform_over_all_twists": true,
+        "all_eight_statistical_torons": true,
+        "Poisson_proof": "Sum_p g((2pi n+theta)/L)=V sum_k g_hat(Lk) exp(i k.theta). The theta-minus-zero difference is <=32V[((1+r)/(1-r))^3-1]=32V(6r+2r^3)/(1-r)^3<=256V r/(1-r)^3. No toron window or selected coset is used.",
+        "analytic_certificate": {
+          "am": 0.0034999999999999996,
+          "delta": 0.0035061321520903164,
+          "eta": 2.7391657438205597e-05,
+          "discriminant_factor_relative_perturbation_upper": 0.0634765625,
+          "g_absolute_upper": 16,
+          "Fourier_coefficient_upper": "16 exp(-eta |n|_1)",
+          "proof": [
+            "For real x, B0=1+delta+t, t=sum(1-cos x) in [0,6], s0=sin x. Dminus0=(delta+t)^2+||s0||2^2>=delta^2; Dplus0=(2+delta+t)^2+||s0||2^2>4.",
+            "For |Im z_j|<=eta, |cos z_j-cos x_j| and |sin z_j-sin x_j|<=eta exp(eta), by integration along the vertical segment. Thus the complex Euclidean perturbation of vplus/minus=(B0+/-1,s0) has norm<=sqrt(12) eta exp(eta)<4eta, since eta<=expm1(.03)/128<.001.",
+            "|Dplus/minus(z)-Dplus/minus(x)|<=2||v||2||dv||2+||dv||2^2. Dividing by Dreal and using sqrt(Dreal)>=delta gives <=8eta/delta+16(eta/delta)^2=0.0634765625<1. Both factors remain in the right half-plane. Their separate principal square roots multiply to the positive physical discriminant root; no zero or branch crossing in the entire polytube.",
+            "Re B>=exp(am)-3eta exp(eta)>1. For A=B^2+1+s2, real A0>=2; |dB|<3.01eta, ||ds||<1.74eta, B0<7.04, ||s0||<=sqrt(3), imply |dA|<50eta<.05. Hence Re A>1.95. Both D factors have argument magnitude<asin(.064), so Re sqrt(Dminus)sqrt(Dplus)>0. Therefore C=(A+sqrtD)/2 has Re C>.975 and g=Log C is single-valued periodic holomorphic.",
+            "|B|<8, |s2|<4; |A|<69, |Dminus|<85, |Dplus|<85 give |C|<77. Re C>.975 yields |log|C||<log77 and |arg C|<pi/2, hence |g|<6<16. Cauchy contour displacement coordinate by coordinate yields |g_hat(n)|<=16 exp(-eta |n|1)."
+          ],
+          "physical_branch": "g=Log[(B^2+1+s2+sqrt(Dminus)*sqrt(Dplus))/2]=log B+E; E>=am for real p"
+        }
+      },
+      "clock_thermal_prices": [
+        {
+          "power": 1048576,
+          "small_regime": true,
+          "log10_x": -3143.785015226348,
+          "canonical_neutral_excited_trace_log10_upper": -3143.483985230684,
+          "charged_excited_relative_trace_log10_upper": -3143.483985230684,
+          "charged_total_trace_common_neutral_log10_upper": -1571.892507613174
+        },
+        {
+          "power": 1048577,
+          "small_regime": true,
+          "log10_x": -3143.7880552877214,
+          "canonical_neutral_excited_trace_log10_upper": -3143.4870252920573,
+          "charged_excited_relative_trace_log10_upper": -3143.4870252920573,
+          "charged_total_trace_common_neutral_log10_upper": -1571.8940276438607
+        },
+        {
+          "power": 1048578,
+          "small_regime": true,
+          "log10_x": -3143.7910953490946,
+          "canonical_neutral_excited_trace_log10_upper": -3143.4900653534305,
+          "charged_excited_relative_trace_log10_upper": -3143.4900653534305,
+          "charged_total_trace_common_neutral_log10_upper": -1571.8955476745473
+        }
+      ],
+      "canonical_thermal_proof": "At N=2V, j holes and j stable particles cost >=2am*j per whole T. Relative trace <=sum_{j=1}^{2V} binom(2V,j)^2 exp(-2am*j*p). With x=(2V)^2 exp(-2am*p)<=1/2, binom(n,j)<=n^j/j!, and sum x^j/(j!)^2<=x/(1-x)<=2x. For N=2V+/-1, binom(n,j)binom(n,j+1)<=n*n^(2j)/(j!(j+1)!), giving total <=n exp(-am*p)(1+2x). Multiplicity n is retained.",
+      "SF_identity": "T has reciprocal eigenvalues exp(+/-E), each twice; sqrt(T) has exp(+/-E/2). sqrt(det Bplus)=product_p B(p). Neutral maximum=product_p B exp(E). Charged maxima add or remove one mode, so each/Wsf(theta)<=exp(-min_p E/2)<=exp(-am/2).",
+      "gap_proof": "cosh E=(B+B^-1+s2/B)/2 >=(exp(am)+exp(-am))/2 since B>=exp(am)>1. Static p=0 gives E=am exactly.",
+      "connection_onebody_norm_upper": "0.00408716729710272875448847496103",
+      "connection_canonical_norm_upper": "38602203707437694916.8724601285",
+      "Gaussian_toron_connection_operator_price_log10": -58.122657862763624,
+      "connection_proof": "Physical chiral T=[[B^-1,-F/B],[-Fdag/B,B+Fdag F/B]]. For scalar links, ||F||<=sqrt3<2, |dtheta B|<=1/L, ||dtheta F||<=1/L. Block differentiation gives ||dtheta T||<16/L<=240/L. Stable/unstable Sylvester separation is exp(am)-exp(-am), not .019 uniformly. Kato generator [dP,P] has norm <=480/(L crossgap); dGamma on N<=2V+1 costs N times this. Gaussian three-toron heat price 8 connection/sqrt(beta L) is a conditional reference comparison.",
+      "scope": "Exact frozen-mean-Clifford/freeBloch spectral identities and toron reference bounds ONLY. No interacting Slater, Root interacting gap, RN-Loewner, weighted BKS, separate character positivity, Pe or receiver admission.",
+      "actual_Grams": null,
+      "microscopic_fullpacket_admission_proved": false
+    },
+    {
+      "a": 0.005,
+      "m": 1.0,
+      "am": "0.005",
+      "kappa": "0.124843554769389164425034671103",
+      "spatial_size": 16777216,
+      "time_slices": 1048576,
+      "onebody_T_gap": "0.005",
+      "neutral_pair_T_gap": "0.01",
+      "stable_projector_gap_from_one": "0.0049875208073176866474357537675",
+      "stable_unstable_spectral_gap": "0.0100000416667187500310019948916",
+      "canonical_neutral_number": "9444732965739290427392",
+      "canonical_charged_numbers": [
+        "9444732965739290427391",
+        "9444732965739290427393"
+      ],
+      "SF_charged_common_neutral_norm_upper": "0.997503122397460124036879804389",
+      "SF_charged_common_neutral_log_norm_upper": "-0.0025",
+      "SF_charged_uniform_ratio_to_local_neutral_upper": "0.997503122397460124036879804389",
+      "neutral_normalization": "ONE Wsf(theta=0), not an own-charged maximum; all theta use Wsf(theta)/Wsf(0)<=exp(epsilon).",
+      "winding": {
+        "L": 16777216,
+        "V": "4722366482869645213696",
+        "eta": "0.0000391603192140708076841112587818",
+        "etaL": "657.001134083416179810794356614",
+        "log_vacuum_twist_error_upper": "5.62901643297491280023175299737e-262",
+        "log10_vacuum_twist_error_upper": -261.2495674834876,
+        "uniform_over_all_twists": true,
+        "all_eight_statistical_torons": true,
+        "Poisson_proof": "Sum_p g((2pi n+theta)/L)=V sum_k g_hat(Lk) exp(i k.theta). The theta-minus-zero difference is <=32V[((1+r)/(1-r))^3-1]=32V(6r+2r^3)/(1-r)^3<=256V r/(1-r)^3. No toron window or selected coset is used.",
+        "analytic_certificate": {
+          "am": 0.005,
+          "delta": 0.005012520859401064,
+          "eta": 3.916031921407081e-05,
+          "discriminant_factor_relative_perturbation_upper": 0.0634765625,
+          "g_absolute_upper": 16,
+          "Fourier_coefficient_upper": "16 exp(-eta |n|_1)",
+          "proof": [
+            "For real x, B0=1+delta+t, t=sum(1-cos x) in [0,6], s0=sin x. Dminus0=(delta+t)^2+||s0||2^2>=delta^2; Dplus0=(2+delta+t)^2+||s0||2^2>4.",
+            "For |Im z_j|<=eta, |cos z_j-cos x_j| and |sin z_j-sin x_j|<=eta exp(eta), by integration along the vertical segment. Thus the complex Euclidean perturbation of vplus/minus=(B0+/-1,s0) has norm<=sqrt(12) eta exp(eta)<4eta, since eta<=expm1(.03)/128<.001.",
+            "|Dplus/minus(z)-Dplus/minus(x)|<=2||v||2||dv||2+||dv||2^2. Dividing by Dreal and using sqrt(Dreal)>=delta gives <=8eta/delta+16(eta/delta)^2=0.0634765625<1. Both factors remain in the right half-plane. Their separate principal square roots multiply to the positive physical discriminant root; no zero or branch crossing in the entire polytube.",
+            "Re B>=exp(am)-3eta exp(eta)>1. For A=B^2+1+s2, real A0>=2; |dB|<3.01eta, ||ds||<1.74eta, B0<7.04, ||s0||<=sqrt(3), imply |dA|<50eta<.05. Hence Re A>1.95. Both D factors have argument magnitude<asin(.064), so Re sqrt(Dminus)sqrt(Dplus)>0. Therefore C=(A+sqrtD)/2 has Re C>.975 and g=Log C is single-valued periodic holomorphic.",
+            "|B|<8, |s2|<4; |A|<69, |Dminus|<85, |Dplus|<85 give |C|<77. Re C>.975 yields |log|C||<log77 and |arg C|<pi/2, hence |g|<6<16. Cauchy contour displacement coordinate by coordinate yields |g_hat(n)|<=16 exp(-eta |n|1)."
+          ],
+          "physical_branch": "g=Log[(B^2+1+s2+sqrt(Dminus)*sqrt(Dplus))/2]=log B+E; E>=am for real p"
+        }
+      },
+      "clock_thermal_prices": [
+        {
+          "power": 1048576,
+          "small_regime": true,
+          "log10_x": -4509.9573271949,
+          "canonical_neutral_excited_trace_log10_upper": -4509.656297199237,
+          "charged_excited_relative_trace_log10_upper": -4509.656297199237,
+          "charged_total_trace_common_neutral_log10_upper": -2254.97866359745
+        },
+        {
+          "power": 1048577,
+          "small_regime": true,
+          "log10_x": -4509.96167013972,
+          "canonical_neutral_excited_trace_log10_upper": -4509.660640144056,
+          "charged_excited_relative_trace_log10_upper": -4509.660640144056,
+          "charged_total_trace_common_neutral_log10_upper": -2254.98083506986
+        },
+        {
+          "power": 1048578,
+          "small_regime": true,
+          "log10_x": -4509.966013084539,
+          "canonical_neutral_excited_trace_log10_upper": -4509.664983088875,
+          "charged_excited_relative_trace_log10_upper": -4509.664983088875,
+          "charged_total_trace_common_neutral_log10_upper": -2254.9830065422693
+        }
+      ],
+      "canonical_thermal_proof": "At N=2V, j holes and j stable particles cost >=2am*j per whole T. Relative trace <=sum_{j=1}^{2V} binom(2V,j)^2 exp(-2am*j*p). With x=(2V)^2 exp(-2am*p)<=1/2, binom(n,j)<=n^j/j!, and sum x^j/(j!)^2<=x/(1-x)<=2x. For N=2V+/-1, binom(n,j)binom(n,j+1)<=n*n^(2j)/(j!(j+1)!), giving total <=n exp(-am*p)(1+2x). Multiplicity n is retained.",
+      "SF_identity": "T has reciprocal eigenvalues exp(+/-E), each twice; sqrt(T) has exp(+/-E/2). sqrt(det Bplus)=product_p B(p). Neutral maximum=product_p B exp(E). Charged maxima add or remove one mode, so each/Wsf(theta)<=exp(-min_p E/2)<=exp(-am/2).",
+      "gap_proof": "cosh E=(B+B^-1+s2/B)/2 >=(exp(am)+exp(-am))/2 since B>=exp(am)>1. Static p=0 gives E=am exactly.",
+      "connection_onebody_norm_upper": "0.00286101102832456420634024488192",
+      "connection_canonical_norm_upper": "27021485174560678344.7869263433",
+      "Gaussian_toron_connection_operator_price_log10": -58.277560745624,
+      "connection_proof": "Physical chiral T=[[B^-1,-F/B],[-Fdag/B,B+Fdag F/B]]. For scalar links, ||F||<=sqrt3<2, |dtheta B|<=1/L, ||dtheta F||<=1/L. Block differentiation gives ||dtheta T||<16/L<=240/L. Stable/unstable Sylvester separation is exp(am)-exp(-am), not .019 uniformly. Kato generator [dP,P] has norm <=480/(L crossgap); dGamma on N<=2V+1 costs N times this. Gaussian three-toron heat price 8 connection/sqrt(beta L) is a conditional reference comparison.",
+      "scope": "Exact frozen-mean-Clifford/freeBloch spectral identities and toron reference bounds ONLY. No interacting Slater, Root interacting gap, RN-Loewner, weighted BKS, separate character positivity, Pe or receiver admission.",
+      "actual_Grams": null,
+      "microscopic_fullpacket_admission_proved": false
+    },
+    {
+      "a": 0.005,
+      "m": 1.4,
+      "am": "0.007",
+      "kappa": "0.124780867412763002393139152248",
+      "spatial_size": 16777216,
+      "time_slices": 1048576,
+      "onebody_T_gap": "0.007",
+      "neutral_pair_T_gap": "0.014",
+      "stable_projector_gap_from_one": "0.00697555706676489509520296824399",
+      "stable_unstable_spectral_gap": "0.0140001143336134503268030001853",
+      "canonical_neutral_number": "9444732965739290427392",
+      "canonical_charged_numbers": [
+        "9444732965739290427391",
+        "9444732965739290427393"
+      ],
+      "SF_charged_common_neutral_norm_upper": "0.996506117860414896562287352989",
+      "SF_charged_common_neutral_log_norm_upper": "-0.0035",
+      "SF_charged_uniform_ratio_to_local_neutral_upper": "0.996506117860414896562287352989",
+      "neutral_normalization": "ONE Wsf(theta=0), not an own-charged maximum; all theta use Wsf(theta)/Wsf(0)<=exp(epsilon).",
+      "winding": {
+        "L": 16777216,
+        "V": "4722366482869645213696",
+        "eta": "0.0000548793536472543298794958958944",
+        "etaL": "920.722770080373699323556616535",
+        "log_vacuum_twist_error_upper": "1.65036971116042953240681682626e-376",
+        "log10_vacuum_twist_error_upper": -375.7824187554643,
+        "uniform_over_all_twists": true,
+        "all_eight_statistical_torons": true,
+        "Poisson_proof": "Sum_p g((2pi n+theta)/L)=V sum_k g_hat(Lk) exp(i k.theta). The theta-minus-zero difference is <=32V[((1+r)/(1-r))^3-1]=32V(6r+2r^3)/(1-r)^3<=256V r/(1-r)^3. No toron window or selected coset is used.",
+        "analytic_certificate": {
+          "am": 0.006999999999999999,
+          "delta": 0.007024557266848554,
+          "eta": 5.487935364725433e-05,
+          "discriminant_factor_relative_perturbation_upper": 0.0634765625,
+          "g_absolute_upper": 16,
+          "Fourier_coefficient_upper": "16 exp(-eta |n|_1)",
+          "proof": [
+            "For real x, B0=1+delta+t, t=sum(1-cos x) in [0,6], s0=sin x. Dminus0=(delta+t)^2+||s0||2^2>=delta^2; Dplus0=(2+delta+t)^2+||s0||2^2>4.",
+            "For |Im z_j|<=eta, |cos z_j-cos x_j| and |sin z_j-sin x_j|<=eta exp(eta), by integration along the vertical segment. Thus the complex Euclidean perturbation of vplus/minus=(B0+/-1,s0) has norm<=sqrt(12) eta exp(eta)<4eta, since eta<=expm1(.03)/128<.001.",
+            "|Dplus/minus(z)-Dplus/minus(x)|<=2||v||2||dv||2+||dv||2^2. Dividing by Dreal and using sqrt(Dreal)>=delta gives <=8eta/delta+16(eta/delta)^2=0.0634765625<1. Both factors remain in the right half-plane. Their separate principal square roots multiply to the positive physical discriminant root; no zero or branch crossing in the entire polytube.",
+            "Re B>=exp(am)-3eta exp(eta)>1. For A=B^2+1+s2, real A0>=2; |dB|<3.01eta, ||ds||<1.74eta, B0<7.04, ||s0||<=sqrt(3), imply |dA|<50eta<.05. Hence Re A>1.95. Both D factors have argument magnitude<asin(.064), so Re sqrt(Dminus)sqrt(Dplus)>0. Therefore C=(A+sqrtD)/2 has Re C>.975 and g=Log C is single-valued periodic holomorphic.",
+            "|B|<8, |s2|<4; |A|<69, |Dminus|<85, |Dplus|<85 give |C|<77. Re C>.975 yields |log|C||<log77 and |arg C|<pi/2, hence |g|<6<16. Cauchy contour displacement coordinate by coordinate yields |g_hat(n)|<=16 exp(-eta |n|1)."
+          ],
+          "physical_branch": "g=Log[(B^2+1+s2+sqrt(Dminus)*sqrt(Dplus))/2]=log B+E; E>=am for real p"
+        }
+      },
+      "clock_thermal_prices": [
+        {
+          "power": 1048576,
+          "small_regime": true,
+          "log10_x": -6331.520409819637,
+          "canonical_neutral_excited_trace_log10_upper": -6331.219379823973,
+          "charged_excited_relative_trace_log10_upper": -6331.219379823973,
+          "charged_total_trace_common_neutral_log10_upper": -3165.7602049098186
+        },
+        {
+          "power": 1048577,
+          "small_regime": true,
+          "log10_x": -6331.526489942384,
+          "canonical_neutral_excited_trace_log10_upper": -6331.22545994672,
+          "charged_excited_relative_trace_log10_upper": -6331.22545994672,
+          "charged_total_trace_common_neutral_log10_upper": -3165.763244971192
+        },
+        {
+          "power": 1048578,
+          "small_regime": true,
+          "log10_x": -6331.532570065131,
+          "canonical_neutral_excited_trace_log10_upper": -6331.231540069467,
+          "charged_excited_relative_trace_log10_upper": -6331.231540069467,
+          "charged_total_trace_common_neutral_log10_upper": -3165.7662850325655
+        }
+      ],
+      "canonical_thermal_proof": "At N=2V, j holes and j stable particles cost >=2am*j per whole T. Relative trace <=sum_{j=1}^{2V} binom(2V,j)^2 exp(-2am*j*p). With x=(2V)^2 exp(-2am*p)<=1/2, binom(n,j)<=n^j/j!, and sum x^j/(j!)^2<=x/(1-x)<=2x. For N=2V+/-1, binom(n,j)binom(n,j+1)<=n*n^(2j)/(j!(j+1)!), giving total <=n exp(-am*p)(1+2x). Multiplicity n is retained.",
+      "SF_identity": "T has reciprocal eigenvalues exp(+/-E), each twice; sqrt(T) has exp(+/-E/2). sqrt(det Bplus)=product_p B(p). Neutral maximum=product_p B exp(E). Charged maxima add or remove one mode, so each/Wsf(theta)<=exp(-min_p E/2)<=exp(-am/2).",
+      "gap_proof": "cosh E=(B+B^-1+s2/B)/2 >=(exp(am)+exp(-am))/2 since B>=exp(am)>1. Static p=0 gives E=am exactly.",
+      "connection_onebody_norm_upper": "0.00204357113166540528004662833139",
+      "connection_canonical_norm_upper": "19300983635073401173.8783614839",
+      "Gaussian_toron_connection_operator_price_log10": -58.42369051847588,
+      "connection_proof": "Physical chiral T=[[B^-1,-F/B],[-Fdag/B,B+Fdag F/B]]. For scalar links, ||F||<=sqrt3<2, |dtheta B|<=1/L, ||dtheta F||<=1/L. Block differentiation gives ||dtheta T||<16/L<=240/L. Stable/unstable Sylvester separation is exp(am)-exp(-am), not .019 uniformly. Kato generator [dP,P] has norm <=480/(L crossgap); dGamma on N<=2V+1 costs N times this. Gaussian three-toron heat price 8 connection/sqrt(beta L) is a conditional reference comparison.",
+      "scope": "Exact frozen-mean-Clifford/freeBloch spectral identities and toron reference bounds ONLY. No interacting Slater, Root interacting gap, RN-Loewner, weighted BKS, separate character positivity, Pe or receiver admission.",
+      "actual_Grams": null,
+      "microscopic_fullpacket_admission_proved": false
+    }
+  ],
+  "actual_standalone_statistical_envelope": {
+    "M_exact": "8854437155380584775680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014167099448608935641088",
+    "species_exact": "625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+    "volume_exact": "4722366482869645213696",
+    "epsilon": "1/16",
+    "edge_exponent_log10": -1772.1512809425262,
+    "tau_log10": -1772.1512809425262,
+    "common_scalar": "c=cosh(epsilon/M)^M",
+    "common_scalar_log": "2.205814966808073799657089845519900942842e-1774",
+    "common_scalar_minus_one_log10": -1773.656430920846,
+    "common_scalar_slab_log": "2.312964634635742792549232641855875651042e-1768",
+    "common_scalar_slab_minus_one_log10": -1767.6358310075666,
+    "common_scalar_removed_exactly_once": true,
+    "dual_face_adjacency_degree": 12,
+    "rooted_animal_constant": 48,
+    "macro_minimum_connected_closed_component": 6,
+    "polymer_exponent": "1.339438349158915994784121345670321436858e-8852",
+    "closed_relative_upper_log10": -8851.873077271033,
+    "closed_Nt_plus2_relative_upper_log10": -8845.852476529404,
+    "flat_to_nonflat_exponential_norm_log10_upper": -886.6505570574722,
+    "formula": "P exp(epsilon Dstat) P=c sum_{S cubic-closed} tau^|S| P Z_S P; terms violating full local species/Ref constraints vanish additionally.",
+    "support": "ONLY spatial anchor edges of EVERY species; no onsite, nearest-species-tree or reference edges.",
+    "projection_proof": "The Z_e commute and square to I, so the product expansion is exact. A term anticommutes a local cycle iff its primal edge mask meets that cycle oddly; P Z_S P=0 in that case. Species cubic closure is necessary. Extra constraints remove terms, never add terms. Each retained compression has norm <=1. No separate-character positivity is used.",
+    "animal_proof": "Dual faces are adjacent when sharing a dual edge. Each face has four edges, each incident to at most three other faces: degree12. A rooted size-k animal has a deterministic ordered spanning tree; plane-tree shapes <=4^(k-1), and each tree step <=12 choices. Hence <=48^(k-1)<=48^k. Root every connected component at its least face. Relax disjointness and closure to independent polymers: product(1+tau^size)<=exp(sum tau^size)<=exp[M sum_{k>=6}(48tau)^k]. This bounds the nonempty-subset norm by exp[M(48tau)^6/(1-48tau)]-1.",
+    "minimum_size_proof": "A cubic cocycle is a Z2 closed dual cubical surface. For a component with k<6<=L, every fundamental adjacency loop has length<=k<L and cannot wind a periodic coordinate. Thus the entire closed component has a consistent finite lift to Z^3. Its primal cocycle is a finite vertex cut delta A, choosing the finite side (Z^3 has one end). Every nonempty finite A has at least two boundary edges in each axis: take an occupied coordinate line and its two extreme vertices. Hence the cut has at least6 edges/faces. The six faces of a dual cube attain equality. Noncontractible sheets have area>=L^2 and remain retained.",
+    "ordering": "W_C Tf0half exp(epsilon Dstat) Tf0half W_C, W_C=exp(-C/2). Statistical cycles commute every primitive A/B and hence full even matter, canonical projectors, SF/positive roots, integer sources and field/Haar/Gauss factors. Individual Z_e do NOT commute spatial hops or separated sources.",
+    "sectors": "P imposes only local statistical flatness. ALL8 common statistical torons, all Fock occupations and all Phi/SU4/U1 sectors retained.",
+    "actual_macro_Grams": null,
+    "microscopic_source_admission_proved": false
+  },
+  "actual_nonflat_full_source_normalization": {
+    "K_exact": "43540218972058128870277120000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000302231454903657293676544",
+    "Etrial_exact": "425012983458268069232641",
+    "Delta_exact": "174160875888232515481108480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002908977753447701451636996",
+    "colour_trial_exact": "1",
+    "diagonal_ratio_log_e_integer": "-87080437944116257740554240000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001879501860182118795051267",
+    "diagonal_ratio_log_e_fraction": "1/8",
+    "diagonal_ratio_log10_upper": "-3.7818553680848241884779961435044884629411501050146e+1774",
+    "offblock_ratio_log_e_integer": "-425012983458268069232769",
+    "offblock_ratio_log10_upper": "-184580793453163870371343.76069650548748155627924966",
+    "offblock_cancellation_identity": "2K+Etrial-Delta/2=-Etrial-128",
+    "trial": "Actual neutral fixedN2/site/species Gauss trial: even-box wedge2 SU4 Wilson dimers, Ref4/0, constant compact-U1 Haar, actual radial ground and colour chart. rho=0, canonical N_s=2V. NOT the original Root ground or filled momentum sea.",
+    "trial_norm_proof": "The positive matter factor has log-norm ledger K and inverse bound on the finite matter fibre ONLY. The neutral trial lies in bareHaar range: ||PHaar Tfhalf trial||^2 >= |<trial,Tfhalf trial>|^2 >=exp(-K). Field Jensen costs Etrial. Including the statistical factor gives lambda_neutral>=exp(-K-Etrial-epsilon). Haar itself has a nullspace; no global Tmin exists.",
+    "diagonal_proof": "Every nonflat endpoint has W_C<=exp(-Delta/2). Thus ||QTQ||<=exp(K+epsilon-Delta), divided by the actual neutral trial lambda gives exp(2K+Etrial+2epsilon-Delta). Q contains ALL nonflat occupations/fields, not a charged low-energy subset.",
+    "offblock_proof": "Cycle preservation gives [Tf0half,P]=0. Unique nonzero spatial-edge syndromes imply P Dstat^2 P=P/M. Thus ||Q exp(epsilon Dstat)P||<=epsilon exp(epsilon)/sqrt(M). ONE nonflat endpoint contributes exp(-Delta/2), and ||Tf0half||^2<=exp(K). Divide by the SAME neutral trial lower bound: epsilon/sqrt(M) exp(2K+Etrial+2epsilon-Delta/2). No charged range/halfstep is assumed contractive.",
+    "full_Phi_scope": "Uniform Root chart/field norm and neutral trial ledger. Damped chart-cross Dbar is a SEPARATE perturbation, not included in standalone exp(epsilon Dstat). Outside Phi/colour endpoints are still penalized by the same exact C.",
+    "induced_field_scope": "No Maxwell replacement, induced Gaussian field state, source/toron Gram, weighted BKS or interacting Slater admission supplied.",
+    "actual_macro_Grams": null,
+    "microscopic_source_admission_proved": false
+  },
+  "actual_wholepacket_statistical_source_operator": {
+    "all8_beam_rows": [
+      {
+        "statistical_toron": [
+          0,
+          0,
+          0
+        ],
+        "momenta": [
+          [
+            -3.7450702829239286e-07,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            3.7450702829239286e-07,
+            0.0,
+            0.0
+          ]
+        ],
+        "energies": [
+          0.010000000007012242,
+          0.009999999999999894,
+          0.010000000007012242
+        ],
+        "exp_E_half": [
+          1.0050125208629248,
+          1.005012520859401,
+          1.0050125208629248
+        ],
+        "coefficient_Frobenius_sum_squared_uniform_upper": 1.0100501670912507,
+        "projector_idempotence_error": 4.2089733660766064e-16
+      },
+      {
+        "statistical_toron": [
+          0,
+          0,
+          1
+        ],
+        "momenta": [
+          [
+            -3.7450702829239286e-07,
+            0.0,
+            1.8725351414619643e-07
+          ],
+          [
+            0.0,
+            0.0,
+            1.8725351414619643e-07
+          ],
+          [
+            3.7450702829239286e-07,
+            0.0,
+            1.8725351414619643e-07
+          ]
+        ],
+        "energies": [
+          0.010000000008765332,
+          0.01000000000175298,
+          0.010000000008765332
+        ],
+        "exp_E_half": [
+          1.0050125208638057,
+          1.005012520860282,
+          1.0050125208638057
+        ],
+        "coefficient_Frobenius_sum_squared_uniform_upper": 1.0100501670930215,
+        "projector_idempotence_error": 5.986865674467016e-16
+      },
+      {
+        "statistical_toron": [
+          0,
+          1,
+          0
+        ],
+        "momenta": [
+          [
+            -3.7450702829239286e-07,
+            1.8725351414619643e-07,
+            0.0
+          ],
+          [
+            0.0,
+            1.8725351414619643e-07,
+            0.0
+          ],
+          [
+            3.7450702829239286e-07,
+            1.8725351414619643e-07,
+            0.0
+          ]
+        ],
+        "energies": [
+          0.010000000008765332,
+          0.01000000000175298,
+          0.010000000008765332
+        ],
+        "exp_E_half": [
+          1.0050125208638057,
+          1.005012520860282,
+          1.0050125208638057
+        ],
+        "coefficient_Frobenius_sum_squared_uniform_upper": 1.0100501670930215,
+        "projector_idempotence_error": 9.41625016841827e-16
+      },
+      {
+        "statistical_toron": [
+          0,
+          1,
+          1
+        ],
+        "momenta": [
+          [
+            -3.7450702829239286e-07,
+            1.8725351414619643e-07,
+            1.8725351414619643e-07
+          ],
+          [
+            0.0,
+            1.8725351414619643e-07,
+            1.8725351414619643e-07
+          ],
+          [
+            3.7450702829239286e-07,
+            1.8725351414619643e-07,
+            1.8725351414619643e-07
+          ]
+        ],
+        "energies": [
+          0.010000000010518418,
+          0.010000000003506067,
+          0.010000000010518418
+        ],
+        "exp_E_half": [
+          1.0050125208646867,
+          1.0050125208611629,
+          1.0050125208646867
+        ],
+        "coefficient_Frobenius_sum_squared_uniform_upper": 1.0100501670947921,
+        "projector_idempotence_error": 5.26573390945799e-16
+      },
+      {
+        "statistical_toron": [
+          1,
+          0,
+          0
+        ],
+        "momenta": [
+          [
+            -1.8725351414619643e-07,
+            0.0,
+            0.0
+          ],
+          [
+            1.8725351414619643e-07,
+            0.0,
+            0.0
+          ],
+          [
+            5.617605424385893e-07,
+            0.0,
+            0.0
+          ]
+        ],
+        "energies": [
+          0.01000000000175298,
+          0.01000000000175298,
+          0.01000000001577746
+        ],
+        "exp_E_half": [
+          1.005012520860282,
+          1.005012520860282,
+          1.0050125208673293
+        ],
+        "coefficient_Frobenius_sum_squared_uniform_upper": 1.010050167100104,
+        "projector_idempotence_error": 3.0687362088305724e-16
+      },
+      {
+        "statistical_toron": [
+          1,
+          0,
+          1
+        ],
+        "momenta": [
+          [
+            -1.8725351414619643e-07,
+            0.0,
+            1.8725351414619643e-07
+          ],
+          [
+            1.8725351414619643e-07,
+            0.0,
+            1.8725351414619643e-07
+          ],
+          [
+            5.617605424385893e-07,
+            0.0,
+            1.8725351414619643e-07
+          ]
+        ],
+        "energies": [
+          0.010000000003506067,
+          0.010000000003506067,
+          0.010000000017530767
+        ],
+        "exp_E_half": [
+          1.0050125208611629,
+          1.0050125208611629,
+          1.0050125208682104
+        ],
+        "coefficient_Frobenius_sum_squared_uniform_upper": 1.0100501671018751,
+        "projector_idempotence_error": 3.506370624368418e-16
+      },
+      {
+        "statistical_toron": [
+          1,
+          1,
+          0
+        ],
+        "momenta": [
+          [
+            -1.8725351414619643e-07,
+            1.8725351414619643e-07,
+            0.0
+          ],
+          [
+            1.8725351414619643e-07,
+            1.8725351414619643e-07,
+            0.0
+          ],
+          [
+            5.617605424385893e-07,
+            1.8725351414619643e-07,
+            0.0
+          ]
+        ],
+        "energies": [
+          0.010000000003506067,
+          0.010000000003506067,
+          0.010000000017530767
+        ],
+        "exp_E_half": [
+          1.0050125208611629,
+          1.0050125208611629,
+          1.0050125208682104
+        ],
+        "coefficient_Frobenius_sum_squared_uniform_upper": 1.0100501671018751,
+        "projector_idempotence_error": 5.421332113801337e-16
+      },
+      {
+        "statistical_toron": [
+          1,
+          1,
+          1
+        ],
+        "momenta": [
+          [
+            -1.8725351414619643e-07,
+            1.8725351414619643e-07,
+            1.8725351414619643e-07
+          ],
+          [
+            1.8725351414619643e-07,
+            1.8725351414619643e-07,
+            1.8725351414619643e-07
+          ],
+          [
+            5.617605424385893e-07,
+            1.8725351414619643e-07,
+            1.8725351414619643e-07
+          ]
+        ],
+        "energies": [
+          0.010000000005259156,
+          0.010000000005259156,
+          0.010000000019283636
+        ],
+        "exp_E_half": [
+          1.0050125208620437,
+          1.0050125208620437,
+          1.0050125208690912
+        ],
+        "coefficient_Frobenius_sum_squared_uniform_upper": 1.0100501671036455,
+        "projector_idempotence_error": 5.490692443555338e-16
+      }
+    ],
+    "canonical_projector_before_integer_paths": true,
+    "original_source_preserved": true,
+    "integer_path_length_upper": 25165824,
+    "amplitude_scope": "Uniform over ALL complex three-beam coefficients with sum|a_k|^2=1. No Source2a f_k is replaced or asserted pinned.",
+    "amplitude_authority": "Source2a1773 explicitly specifies beam l2 norm1 and Ee<.011. exp(-offset^2/4) appears in Photon978-980 as a reference packet; used only by native illustrative smoke.",
+    "whole_coherent_nuclear_sum_upper": 138127869094.50446,
+    "source_Dstat_commutator_norm_log10_upper": -1752.105038497234,
+    "source_exponential_commutator_norm_log10_upper": -1753.2820150747712,
+    "single_path_only_exponential_log10_upper": -1764.4222963867521,
+    "sqrt_volume_nuclear_price_log10": 11.140281311981008,
+    "exact_source": "Spre=sum_x,alpha,beta C_x[alpha,beta] a_alpha^dag(x; SAME integer SU4/U1/primitive path to Ref0) r_beta. C_x=1/sqrt(2V) sum_{3 beams} a_k exp(Ee(k)/2) exp(ik.(x-carrier)) P_el(k), carrier=(L/4,0,0). Transport P_el covariantly BEFORE the integer path. Ref4->3 and bodycharge1 unchanged.",
+    "coefficient_proof": "For each toron the three Fourier characters are orthogonal. P_el has rank2, so sum_x||C_x||F^2=sum_k|a_k|^2 exp(Ee(k)) exactly, <=exp(max_k Ee(k)) for EVERY complex l2-normalized three-beam coefficient vector. Unitary Phi/SU4/U1 transport common to all beams at x preserves Frobenius/nuclear norm. ||C_x||nuc<=2||C_x||F; Cauchy gives sum_x||C_x||nuc<=2sqrt(V)exp(max_k Ee(k)/2). SVD at each x expresses the actual source into rank1 even primitive transfers of norm<=1. This is a WHOLE coherent source bound uniform over the original unknown coefficients; no factorization of its interacting Gram.",
+    "commutator_proof": "Z_e commutes coefficient field matrices, local canonical projectors, onsite CAR and SU4/U1 link-coordinate multipliers. It anticommutes path_A precisely on its spatial X support. Therefore ||[Dstat,Spre]||<=2/M sum_x ell_x||C_x||nuc<=2ell_max nuclear_sum_cap/M. Duhamel gives ||[exp(epsilon Dstat),Spre]||<=epsilon exp(epsilon)||[Dstat,Spre]||. Never divide by an unproved ||Spre|| lower bound.",
+    "filledRef4_chart_CAR_norm_squared_upper": 1.0100501671036455,
+    "filledRef4_chart_CAR_scope": "Uniform over all l2-normalized three-beam coefficients: exact bare source norm cap on transported chart; not charged halfstep or Pe retention, not macro Gram1.",
+    "fullPhi_outside_global_source_cap": 8,
+    "fullPhi_outside_exponential_commutator_upper": 17.03191134268575,
+    "fullPhi_outside_scope": "Source2a outside extension has global normcap8. Without an outside coefficient/parallel-path ledger only trivial ||[exp(epsilon Dstat),S]||<=16exp(epsilon) is claimed outside. Chart nuclear-price dilution is NOT silently applied to arbitrary fullPhi source extensions. Actual outside-state weight and inserted Grams remain separate.",
+    "induced_field_scope": "Integer induced-U1 paths remain literal unitaries. No Gaussian reference source/field measure substituted for the physical kernel.",
+    "actual_macro_Grams": null,
+    "microscopic_source_admission_proved": false
+  },
+  "actual_physical_full_chart_source_operator": {
+    "original_operator": "S_pre=sum_k f_k exp(-ipxL/4)exp(Eelectron(k)/2) a_plus^dag(k;integerSU4/U1Refstrings) r(0); a_plus usescanonicalT1 stablelambda<1, notgamma0plus. CovariantP_x(k)=V(Phi_x)P_el(k)Vdag beforeWilsonpath. Pe Tch\u00bd S_pre rho_ph S_pre\u2020 Tch\u00bd Pe/actualretainedGram.",
+    "exact_Dminus_physical_pullback": true,
+    "source_Pel_before_integer_Wilson_path": true,
+    "continuous_normal_and_colour_support": {
+      "sigma": "1e-2000",
+      "r": "1e-2100"
+    },
+    "literal_SU4_colour_path_difference_upper_log10": -1990.793008871025,
+    "all_parameter_tuples": [
+      {
+        "a": 0.02,
+        "m": 0.7,
+        "am": "0.014",
+        "physical_band_separation": "0.028000914675630441831",
+        "onebody_deltaT_upper_log10": -1995.8586864868441,
+        "reference_band_projector_upper_log10": -1994.0048287093828,
+        "full_chart_source_operator_difference_upper_log10": -1990.7899675512324
+      },
+      {
+        "a": 0.02,
+        "m": 1.0,
+        "am": "0.02",
+        "physical_band_separation": "0.040002666720000507939",
+        "onebody_deltaT_upper_log10": -1995.8583925527619,
+        "reference_band_projector_upper_log10": -1994.1594515010052,
+        "full_chart_source_operator_difference_upper_log10": -1990.7901629645978
+      },
+      {
+        "a": 0.02,
+        "m": 1.4,
+        "am": "0.028",
+        "physical_band_separation": "0.056007317620178154395",
+        "onebody_deltaT_upper_log10": -1995.8579981998055,
+        "reference_band_projector_upper_log10": -1994.305212977477,
+        "full_chart_source_operator_difference_upper_log10": -1990.790293293094
+      },
+      {
+        "a": 0.01,
+        "m": 0.7,
+        "am": "0.007",
+        "physical_band_separation": "0.014000114333613450327",
+        "onebody_deltaT_upper_log10": -1995.8590274374737,
+        "reference_band_projector_upper_log10": -1993.7041290242205,
+        "full_chart_source_operator_difference_upper_log10": -1990.7893168207968
+      },
+      {
+        "a": 0.01,
+        "m": 1.0,
+        "am": "0.01",
+        "physical_band_separation": "0.020000333335000003968",
+        "onebody_deltaT_upper_log10": -1995.8588815752091,
+        "reference_band_projector_upper_log10": -1993.8588888134263,
+        "full_chart_source_operator_difference_upper_log10": -1990.789707140828
+      },
+      {
+        "a": 0.01,
+        "m": 1.4,
+        "am": "0.014",
+        "physical_band_separation": "0.028000914675630441831",
+        "onebody_deltaT_upper_log10": -1995.8586864868441,
+        "reference_band_projector_upper_log10": -1994.0048287093828,
+        "full_chart_source_operator_difference_upper_log10": -1990.7899675512324
+      },
+      {
+        "a": 0.005,
+        "m": 0.7,
+        "am": "0.0035",
+        "physical_band_separation": "0.0070000142916754203151",
+        "onebody_deltaT_upper_log10": -1995.8591971196067,
+        "reference_band_projector_upper_log10": -1993.4032660506414,
+        "full_chart_source_operator_difference_upper_log10": -1990.788018288319
+      },
+      {
+        "a": 0.005,
+        "m": 1.0,
+        "am": "0.005",
+        "physical_band_separation": "0.010000041666718750031",
+        "onebody_deltaT_upper_log10": -1995.8591244632914,
+        "reference_band_projector_upper_log10": -1993.5580962771865,
+        "full_chart_source_operator_difference_upper_log10": -1990.7887969411963
+      },
+      {
+        "a": 0.005,
+        "m": 1.4,
+        "am": "0.007",
+        "physical_band_separation": "0.014000114333613450327",
+        "onebody_deltaT_upper_log10": -1995.8590274374737,
+        "reference_band_projector_upper_log10": -1993.7041290242205,
+        "full_chart_source_operator_difference_upper_log10": -1990.7893168207968
+      }
+    ],
+    "worst_source_operator_difference_log10": -1990.788018288319,
+    "original_filledRef4_CAR_squared_cap": 1.0110607224447195,
+    "normal_source_scope": "The prescribed free Pel(k) is exactly transported by Q; it is not replaced by a new interacting projector. The Davis-Kahan rows are a conservative onebody departure envelope if comparing the same declared canonical band under normal/colour perturbations; no .019 universal gap.",
+    "coefficient_proof": "U/V matrices are left/right unitaries independent of beam k BEFORE Wilson path. Frobenius/Parseval on all sites preserves original whole coherent source; path telescoping costs96 L sigma. The projector departure bound costs sqrt6 exp(.011/2) for any l2-normalized3 beams. No Gram1 asserted.",
+    "global_outside_source_normcap": 8,
+    "actual_full_macro_source_Gram": null,
+    "macro_admission": false
+  },
+  "actual_species_resolved_physical_Phi_projective": {
+    "active_charge": "1",
+    "auxiliary_charge": 1,
+    "electromagnetic_derivative_order": 0,
+    "physical_component_connection_law": "physical-components-Dminus-20261008",
+    "operator_theorem_scope": "NEW physical Dminus pullback law; native framed kinetic/positive kernel verified separately. This coefficient ledger is analytic, not a numerical simulation of the huge family and not old-epoch theorem promotion.",
+    "coupling_constant_log10": 13.158122809876096,
+    "actual_active_kappa": 0.1248905293249106,
+    "actual_active_normalized_B_margin": 0.25065682405053646,
+    "active_coupling_constant_log10": 9.096023702602004,
+    "projective_step_colour_log10": -594.6976777971663,
+    "projective_step_normal_log10": -1094.6976777971663,
+    "projective_slab_colour_log10": -588.6770778838868,
+    "projective_slab_normal_log10": -1088.6770778838868,
+    "projective_slab_density_trace_error_log10": -587.4729579012308,
+    "projective_local_coordinate_budget": "On45normal/site use sup|Y_a|<=r and ||G_a||<=2: coordinate projective sum<=90Vr (NOT sqrt45 operator sum). On15Lie/link, R=8sigma gives sum sup|X_a|||G_a||<=240sigma; exponential series gives ||deltaU||pi<=480sigma. Three links/site: deltaB_pi<=500kappaVr+1440Vsigma, deltaF_pi<=360kappaVr+1440Vsigma, including the kappa||Y||\u00b2 term for tiny r. Baseline Bmin>=1/(8kappa); relative Cholesky E_pi<=2^18 V(kappa\u00b2r+kappasigma)<1/2 per species. General active margin uses2kappa/(1-6kappa) and its stated inverse-margin multiplier, not8kappa>1 winding or accretive-D claims.",
+    "projective_resolvent_proof": "In C(Y,X) tensor_pi B(A,Fock,centre), E=T0^-1/2 deltaT T0^-1/2. The sqrt difference timesT0^-1/2 is integral t^1/2(T0+t)^-1 T0^1/2 E sum_j[-T0/(T0+t) E]^j (T0+t)^-1 /pi. Neumann converges absolutely for||E||pi<1/2. Splitting t atlambda_min/max gives integral<=[3+logcondT0], hence ||r-I||pi<=2eta_pi[3+logcondT0]. No global Fock condition number or exponential-monotonicity step.",
+    "projective_exterior_species_proof": "Each onebody r=I+sum f_alpha D_alpha has exterior/Fock projective norm <=(1+zeta_s)^(4V)-1 by antisymmetric tensor expansion; common coefficient words are grouped across occupation blocks, so no2^(4V) factor. Species multiplication costs product_s(1+zeta_s)^(4V), i.e weightedSUM NF*kappa_aux\u00b2 / NF*kappa_aux versus the ONE active kappa. Scalar detB prefactor uses its own absolutely convergent logdet Neumann expansion. Coordinate-l1 V BEFORE exterior4V is paid byV\u00b2. Displayed2^24(1+logkappa+ln64)^2 exceeds these coefficients; noNF\u00b2.",
+    "physical_projective_tensor_frame": "NEW physical-component Dminus law is pulled back by the actual Q=Gamma(V) physical-bundle isometry INCLUDING centre-character descent, not separate spin x colour. Dphys=d-(dQ)Qdag gives Qdag Dphys Q=d exactly. Haar/Gauss, canonical/source ranges, kinetic, matter potential, radial Pphi and source halfsteps use the SAME Q. Only in this consistent pullback does scalar radial heat N act on45normal/site and15Lie/link identically for every character and K0=N tensor Kf0. Kf0 retains compactU1 Haar, centre penalties and SAME statistical defects/all8 torons. These budgets are rerun for this NEW Hamiltonian, not inherited from bd4d/931.",
+    "projective_Schatten_bridge": "For R-I=sum f_alpha tensor D_alpha with sum||f||||D||<=delta_series, X=Nhalf R Kf0half and X0=Nhalf Kf0half give ||X-X0||_(2p)<=delta_series||K0||_p^1/2 by Holder/tensor norms. Thus ||Knew-K0||_p<=(2delta+delta\u00b2)||K0||_p. Atp=Nt, telescope gives trace-norm power difference<=Nt epsilon(1+epsilon)^(Nt-1)TrK0^Nt; reverse Schatten triangle gives TrKnew^Nt>=(1-epsilon)^NtTrK0^Nt. Normalized density error<=2Nt epsilon(1+epsilon)^(Nt-1)/(1-epsilon)^Nt. With delta_series<=colour+normal<=2max and the verified tiny p epsilon, epsilon<=6max and the displayed16Nt max bound conservatively includes both budgets. This is not inferred from supnorm alone.",
+    "projective_postsource_rule": "Apply ACTUAL bounded CP filters with retained Gram g>0: normalized density error<=2||F||\u00b2 delta_rho/g before taking honest square-root state/observable price. Pphi, toron conditioning, photon clipping, charged source halfsteps/current must use their OWN actual positive Gram. FixedN2 bare norm1 is not g; no automatic full physical-source admission.",
+    "prepared_boundary_purifier_proof": "For evenNt,m=Nt/2 andp=Nt+1, Xi=Knewhalf Pphi Knew^m. BKS/Ando positive-square-root Schatten inequality plusHolder gives ||(Knewhalf-K0half)Pphi Knew^m||HS<=sqrt(epsilon)(1+epsilon)^m sqrtTrK0^p. Power telescope gives the second term m epsilon(1+epsilon)^(m-1)sqrtTrK0^p. Pphi commutes K0=N tensor Kf0, so ||Xi0||HS\u00b2=TrK0^p*gphi_p: no global Tmin or matter trace ratio. Normalized canonical purifier difference<=2h/sqrt(gphi_p), h=sqrt(epsilon)(1+epsilon)^m+m epsilon(1+epsilon)^(m-1); reduced-state trace error<=4h/sqrt(gphi_p). Actual source/charged CP filters AFTER this still pay their actual retained Gram.",
+    "prepared_ground_filter_proof": "Pphi means ONLY continuous radial grounds, tensorIDENTITY on ALL centre/flat/nonflat statistical sectors retained in Kf0; it does NOT select unique flat colourcentre. Normal k\u00b2 has stronglyconvex -logdensity Hessian>=sigma^-2+4sigma\u00b2/R4. Colour exponential-ball Haar Jacobian J has -logJ convex on the tiny Lieball (positive even-power trace series ofadX); k\u00b2J obeys same bound. Caffarelli Gaussian-to-target contraction on convex Dirichlet balls gives weighted Dirichlet minmax eigenlevel>=OUlevel, not merely spectral GAP. Conservatively each coordinatelevel>=Omega n; total90V product trace<=prod_i(1-exp(-pOmega_i))^-1. Within chart gphi_p>=prod_i(1-exp(-pOmega_i))>=1-90V exp(-pOmega_min), withOmega_min>=1 andp=Nt+1 actual1,048,577. For full chartDIRECTSUMoutside reference divide by1+TrTout^p/TrTchart^p, bounded by the explicit outside heat/Haar/primitive-entropy proof. Dampedcross corrections are paid separately. Any ADDITIONAL flatcentre/toron filter needs its OWN retained Gram; no automatic AlphaQ or mattertrace equality acrosscentres.",
+    "prepared_boundary_purifier_error_log10": -295.8436889202633,
+    "prepared_boundary_density_trace_error_log10": -295.54265892459927,
+    "prepared_boundary_Gram_lower_used": 0.25,
+    "prepared_boundary_trace_powers": [
+      1048577,
+      1048578
+    ],
+    "prepared_boundary_constant_proof": "Let d be the SUM of normal and colour projective step budgets, conservatively <=2max. Transfer Schatten epsilon<=3d<=6max; the actual Outside supplier verifies the dampedcross relative contribution<=max and radial fullsector gphi>=1/4. Thus total epsilon<=8max. In the verified p sqrt(epsilon)<<1 regime h<=2sqrt(epsilon), normalized purifier<=8sqrt(epsilon)<=32sqrt(max), density<=64sqrt(max). The old4sqrt(max) display omitted these constants and is not reused. Charged/photon/toron Grams remain separate.",
+    "prepared_boundary_Nt_plus2_proof": "For the additional NEUTRAL boundary halfstep Xi=K Pphi K^m andp=Nt+2, Holder/telescope gives h<=(m+1)epsilon(1+epsilon)^m and the SAME retained radial Gram gphi,p>=1/4. The verified p sqrt(epsilon)<<1 makes this smaller than the common32sqrt(max) purifier budget. This is NOT a replacement of an actual CHARGED halfstep/source kernel by neutral K; actual charged CP filters still need their own Gram.",
+    "actual_scalar_angular_heat_operator_norm_upper": 1.4715177646857693,
+    "actual_scalar_angular_Friedrichs_proof": "Physical normal-coordinate generator is lambdaR tensorAdS with operatornorm<=2; colourLie generatorAdS hasnorm<=1. Both preserve their ground measures and compact balls. Unique Gaussian-to-target Caffarelli contraction is equivariant under these rotations (normal radial; colour HaarJ isAd-invariant). Dirichlet minmax therefore compares eigenlevels WITHIN each angular-weight sector. Gaussian polynomial degree n has |m|<=2n and conservative level>=Omega n; summing independent blocks gives commuting Hphi>=|Lscalar|/2 withOmega>=1. Thus ||Lscalar exp(-Hphi/2)||<=sup_E2E exp(-E/2)=4/e, independentNF/dimension; Lscalar Pphi=0 and Qphi N Qphi<=e^-1. This is the declared product-coordinate Friedrichs chart law, not a claim about the original Cartesian Phi kinetic.",
+    "normal_charge_moment_log10": 948.7958800173442,
+    "colour_charge_moment_log10": 1348.7958800173442,
+    "full_step_relative_root_colour_log10": -616.371837484973,
+    "full_step_relative_root_normal_log10": -1116.371837484973,
+    "full_slab_colour_operator_log10": -610.3512375716934,
+    "full_slab_normal_operator_log10": -1110.3512375716932,
+    "full_slab_reference_ground_normal_operator_log10": -1209.5246313148054,
+    "direct_relative_transfer_proof": "Bactual>=(1-6kappa)/(2kappa)-kappa||Y||; baseline kappa<=1/8 gives1/(8kappa), while kappa<=7/48 gives the renewed1/(16kappa) bound. Use2kappa/(1-6kappa) for general margin, including actual negativebare active mass. Ldelta/Dnew whitening bounds relative transfer order; \u0393 exterior preserves it incldetB. Logmonotonicity is valid; exponential monotonicity is NOT. Active8kappa>1 hopping/accretive arguments are not restored.",
+    "relative_square_root_proof": "For D=sqrtA-sqrtB, sqrtA D+D sqrtB=A-B. If ||B^-1/2(A-B)B^-1/2||<=eta<1/2, the Sylvester integral split at inverse sqrtlambda_max/min gives ||D B^-1/2||<=2eta[2+log(sqrtcondB)+eta]. Onebody cond<=256/kappa\u00b2, so ONLY logkappa enters. sqrtGamma(T1)=Gamma(sqrtT1); telescoping exterior factors and the scalar detB gives uniform R=Tf_new^1/2 Tf0^-1/2 with ||R-I|| bounded above. The displayed very conservative constant absorbs64sigma link width, dimensions and nEM<=2 chain derivatives.",
+    "Haar_bridge": "For fixedPhi, Knew=R K0 Rdag with the SAME bareP_Haar. Thus compressedA=P_Haar Tf P_Haar retains relative Loewner on its common nonzero range; Knew range is the actual nearidentity image of ranK0, not an assumed source invariant. No global Tmin or exponential operator monotonicity. With normalheat Nhalf outside, Knew=Nhalf R Kf0 Rdag Nhalf. Ideal Tf0 ignoresY/X, centre currents permute identical packets, so [N,Kf0]=0 and ||N||=1 with ground1: ||Knew-K0||/||Kf0||<=2deltaR+deltaR\u00b2. Field/source thermal normalizations and postselection still require their actual bounded kernel/Gram proof.",
+    "low_energy_normal_escape": "Qphi K0 Qphi<=exp(-Omega)||Kf0||. For ACTUAL lowenergy projector P_E with P_E Knew P_E>=exp(-Ecut)||Kf0||, Ecut<Omega, X=Qphi P_E solves AX-XB=-Qphi deltaK P_E. Ordered Sylvester integral gives ||Qphi P_E||<=(2deltaR+deltaR\u00b2)/(exp(-Ecut)-exp(-Omega)) WITHOUT sqrt(dimension), valid for any coherent/mixed source in P_E and all real-time evolution. Shellprob<=2p_reference+2||Qphi P_E||\u00b2. Actual source energywindow/Gram/highenergyweight still must be proved.",
+    "charge_semantics": "Every n-th EM derivative of active Peierls U^Q contributesQ^n; auxiliaries staycharge1. Normal moment=Naux*kappa_aux\u00b2+kappa_active\u00b2 Q^n; colour moment=Naux*kappa_aux+kappa_active Q^n. Bare sourceunitary norm unchanged; source/dressing flux derivative and selfenergy prices are separate.",
+    "scope": "Actual microscopic chart coefficient/relative-root bounds. No automatic unconditional full-state, physical-alpha, normalized projected source or all-orders amplitude admission."
+  },
+  "actual_NF_kappa400_canonical_mixed_boundary": {
+    "auxiliary_count_exact": "625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "spatial_volume_exact": "4722366482869645213696",
+    "actual_auxiliary_kappa": "1e-400",
+    "canonical_number_per_flavour": "9444732965739290427392",
+    "endpoint_collective_log10_upper": -300.31554035555354,
+    "singular_weight_collective_log10_upper": -615.0805205029782,
+    "full_canonical_kernel_relative_operator_error_log10_upper": -300.0145103598896,
+    "allNF_canonical_excitation_trace_log_upper": -1927183339.545083,
+    "excitation_Schatten_Nt_relative_log10_upper": -798.1921100428681,
+    "allNF_slab_static_kappa6_log10_upper": -606.651679381862,
+    "constants": {
+      "onebody_graph_norm_over_kappa2": 32,
+      "graph_to_mixed_singular_endpoint_constant": 1048576,
+      "canonical_tensor_kernel_constant": 281474976710656,
+      "mixed_sameN_next_singular_ratio_over_kappa2": 64,
+      "analytic_scaled_Riesz_radius": "1/64",
+      "analytic_log_kernel_bound_over_V": 1048576
+    },
+    "exact_full_operator": "At every pair of literal compact link fields, use detBpref Gamma_N(sqrtT1(Aprime)sqrtT1(A)), N=2V for EACH auxiliary. This keeps every canonical occupation. The instantaneous Omega(A) is only its exact static comparison vector.",
+    "kernel_bound": "After true canonical phase alignment, ||Kfull(Aprime,A)-K_Omega(Aprime,A)||op <= [2C sqrt(Naux V)kappa\u00b3 +2expm1(C Naux V kappa6)+128kappa\u00b2] K_Omega(Aprime,A), C=2^48. K_Omega is the ACTUAL positive occupied-minor Gram, not a guessed G.",
+    "uniform_gap_proof": "Bmin=(1-6k)/(2k), ||F||<=3. Minmax gives stable T1<=Bmin^-1 and unstable T1>=Bmin. Offblock<=3/Bmin, so the separated invariant top graph has ||X||<=2(3/Bmin)/(Bmin-Bmin^-1)<=32k\u00b2 at k<1/64. The canonical pair gap is>=2log Bmin.",
+    "mixed_singular_proof": "In the two instantaneous eigenframes hprime h has blocks Duprime Ruu Du, Duprime Rus Ds, Dsprime Rsu Du, Dsprime Rss Ds. ||Rsu||<=2||X||/(1-||X||\u00b2), Ds/Du<=4k. Thus mixed top singular graph endpoints are O(k\u00b3), its log singular determinant correction O(V k6), and the next canonical singular ratio<=64k\u00b2. The 2^20 endpoint bound follows by the separated-block Sylvester/tan-angle estimate; 2^48 absorbs its square, both endpoints, the 2V trace and phase alignment.",
+    "collective_proof": "Canonical dominant vectors are actual Slaters of the mixed onebody SVD; tensor alignment is a product of their cosines, so vector distance<=sqrt(Naux) times a single-flavour distance, while log singular weight adds Naux. The largest discarded tensor singular ratio is the single-flavour next ratio, not Naux times it. These are operator decomposition identities, never Gaussian-after-interacting-U.",
+    "exact_phase_proof": "In gamma5-aligned chirality J T1 J^-1=T1^-1 makes X=Xdag. U(X)=[X;I](1+X\u00b2)^-1/2 has strictly positive determinant overlap because ||Xprime X||<1 and the characteristic polynomial is real. Thus the comparison kernel is both PSD and pointwise nonnegative in its TRUE background-covariant phase gauge.",
+    "static_remainder_proof": "At complex |k|=1/64, ||2kT1-diag(0,I)||<=6|k|+64|k|\u00b2/(1-6|k|)<1/8. The radius1/2 Riesz contour separates the two bands, and graph/determinant logarithms are analytic with norm<=2^20 V. Bipartite even L removes odd closed words; the explicit fourth-order spatial/temporal Wilson traces give beta=16Naux k4. Cauchy bounds all remaining k6 terms by 2^20 V(64k)^6/(1-64k). The exact common vacuum constant is retained, not independently shifted in charged sectors.",
+    "Schatten_proof": "For EVEN p=Nt the dominant-minus-comparison kernel has pointwise rank<=2, so |Tr E1...Ep|<=2 product||Ei||; integrate against the TRUE positive K_Omega cyclic measure. It is not an assertion that the integral operator has rank2. Excitation cyclic Holder uses sum_j binomial(2V,j)^2 r^(jp); all flavours give <=exp[Naux(2V)^2 r^p]-1. No Fock-dimension bound substitutes for the thermal prices. Odd p+1 requires interpolation and the ACTUAL reference trace ratio, not a silently identical Nt denominator.",
+    "Gauss_scope": "The U1 graph frame transforms with Gamma(g) times the exact background2/site character. Full SU4/centre and statistical sectors must be transported through the existing Root physical bundle; this sublemma never projects them away.",
+    "scope": "Uniform frozen-Clifford auxiliary positive bare-Haar boundary kernel sublemma. Its scalar reference trace and actual active/source/photon toron-conditioned halfsteps remain separate obligations.",
+    "microscopic_fullpacket_admission_proved": false
+  },
+  "actual_real_integer_Gauss_and_transformed_source": {
+    "canonical_background_per_site": 2,
+    "Ref_hole_or_particle_integer_charge": 1,
+    "Coulomb_transfer_error_log10_upper": -114.56967027004654,
+    "all_active_Floquet_heat_shift_operator_error_log10_upper": -55.433050281841226,
+    "actual_three_dimensional_harmonic_mass": "1.6777216e+157",
+    "integer_Gauss_path_length_upper": "25165824.0",
+    "active_Ref_charge_l1_upper": "9444732965739290427394",
+    "coexact_integer_string_kernel_error_log10_upper": -20.322969165874163,
+    "temporal_gradient_active_frame_kernel_error_log10_upper": -19.322969165874163,
+    "combined_string_and_gradient_kernel_error_log10_upper": -19.281576480715938,
+    "exact_projection": "Normalized local Haar gives delta_divE,rho with LITERAL integer E and rho, including the body+1/Refhole-1 or adjoint source. It fixes the longitudinal character; it does not leave V-1 independent free longitudinal thermal modes.",
+    "auxiliary_intertwiner": "The normalized actual Omega_aux(A) transforms as Gamma(g) times exp(-2i sum chi). Its tensor isometry pulls the PHYSICAL gauge-average P_Gauss back to the active+Ref background Gauss projector. The distinct rank-null ELECTRIC P_Haar stays in Jdag h_aux P_Haar h_aux J, whose full-field kernel is sqrt(lambda_prime lambda)<Omega(Aprime)|Omega(A)>. Gauge-average endpoints still require joint integration. Collective auxiliary density fluctuations remain in that actual occupied-minor electric kernel; they are NOT replaced by a bare product sea of fixed onsite occupations.",
+    "canonical_reference": "In the ground-comparison frame only, all occupied auxiliary/active lower labels are filled and carry their exact background character. Canonical excitations and both charged sectors remain in the full trace with their actual occupation weights. They are not dropped from the microscopic state.",
+    "Coulomb_proof": "Gaussian Hodge decomposition gives Hlong=rhoT Laplacianplus rho/(2beta). For one active4-spin species and literal Ref4->3 or Ref0->1, sum rho=0, ||rho||\u00b2<=4V+5<=8V, so Hlong<=4V/(beta qmin\u00b2). The stated8V bound pays both reflected sides. Complementary auxiliary occupations keep the positive Gauss contraction; no small-Coulomb claim is made for their huge collective charges.",
+    "Floquet_proof": "Keep every integer cycle. Active+Ref charges give each dipole shift |kappa_j|<=2V+1<4V. Poisson heat writes h_kappa as phase-weighted periodic Gaussian images. |exp(-i kappa dot Delta)-1|<=4V |Delta|1 and |Delta|1 h_t<=8/sqrt(beta L) h_2t, so the stated32V price bounds the ACTUAL shift versus zero reference. No Floquet coset is declared identical or fixed to zero.",
+    "transverse_string_proof": "Choose the SAME literal source paths from each site to Ref0. Epath(rho)=sum_x rho_x path(x,0) is an integer Gauss solution and ||Epath||1<=(2V+2)3L/2 for all active canonical occupations and Ref4->3 or Ref0->1 in the ground-auxiliary comparison. Its transverse Gaussian heat retains exp[-i Epath,T dot Delta A_T]. With both coexact endpoints inside delta, the actual diagonal Fock phase differs from identity by <=2delta||Epath||1. This is a kernel error, not Coulomb alone and not a declaration that Wilson strings equal1. Auxiliary excited occupations have no such small charge bound and retain their full canonical thermal contraction.",
+    "temporal_gradient_frame_proof": "Strip the exact integer large-gauge seam intertwiner first, retaining its background character and Floquet image. On the scalar temporal comparison block |Delta A_e|<=4delta, the two coexact endpoints differ by<=2delta and their harmonic increment is<=4delta. The relative pure-gauge gradient therefore has edge increment<=10delta. Fix only its irrelevant constant at Ref0; a shortest path gives |Delta chi_x|<=15Ldelta. The ACTUAL mean-band frame contributes Gamma_N[W(theta_prime)dag g_rel W(theta)] rather than Gamma_N(g_rel). Removing its local-gauge commutator costs<=2N max|Delta chi|, N<=2V+1, in addition to the separately retained global theta Kato connection. Long temporal increments stay in the positive scalar remainder; this comparison split is no new preparation gate.",
+    "reflected_phase_scope": "Sandwich the phase errors between the real canonical halfsteps. EVEN-loop cyclic Fock Holder uses the full Dgap occupation trace and the positive scalar heat loop. It never replaces an interacting density by a Slater or infers matrix Loewner order from a scalar action ratio. Joining these prices to a conditioned Nt+1/Nt+2 norm theorem is still required.",
+    "thermal_trace_proof": "The shifted rotor trace Z(kappa)<=Z(0) follows from Poisson dual cos<=1. For noncommuting canonical matter/charge factors use cyclic Fock Schatten Holder and the same positive scalar heat loop, not factorization of an interacting density. Every longitudinal character contributes a contraction, not a free longitudinal partition function. Canonical excitation counts retain binomial(2V,j)^2, with charged2V multiplicity.",
+    "scope": "Physical integer-Gauss Gaussian comparison sublemma. The actual Wilson-to-Gaussian kernel, full SU4/Root/statistical join and filtered Nt+1/Nt+2 source moments still require their own bounds.",
+    "microscopic_fullpacket_admission_proved": false
+  },
+  "actual_positive_Coulomb_Gaussian_scalar_block": {
+    "coexact_chart_radius": "1e-50",
+    "local_kernel_log_ratio_upper": "6.0446290980731458735e-27",
+    "normalized_positive_kernel_operator_error_log10_upper": -26.218630342545485,
+    "compact_outside_block_log_upper": -1.0957462008155346e+35,
+    "temporal_long_increment_log_upper": -7.8125e+47,
+    "Nt_local_kernel_log_ratio_upper": "6.3382530011411470075e-21",
+    "reference_normalization": "One EXACT common vacuum constant and Haar/Hodge Jacobian; neither kernel is independently rescaled.",
+    "actual_positive_Wilson_reference": "KW=c M_W C_beta M_W, with M_W=exp[-beta sum_spatial_faces(1-cos F)/2] and C_beta(Aprime,A)=exp[-beta sum_spatial_links(1-cos(Aprime-A))]. Positive integer Fourier coefficients I_n(beta)>0 prove C_beta PSD. KG is the genuine Gaussian heat/potential sandwich on coexact real coordinates and periodic harmonic/gradient coordinates.",
+    "local_kernel_proof": "In the zero-flux Coulomb chart |Acoexact|infty<=delta, keep ALL flat holonomies and gauge gradients. Split only the temporal kernel into increments |Delta A|infty<=4delta and its long-jump remainder; this is a comparison decomposition, not a state/source gate. |F|<=4delta and 0<=x\u00b2/2-(1-cos x)<=x4/24 give |log(KW/KG)|<=128V beta delta4, with the SAME prefactor. Periodic Gaussian-image tails are paid in the long-jump price.",
+    "compact_Hodge_proof": "If magnetic action S<1/(256L), principal face curvatures have no monopole (a2pi cube requires order1 action) and no nonzero flux period (a2pi period costs at least8/L over all parallel planes). Then dF=0 and all periods vanish. Real Fourier Hodge gives ||Acoexact||2<=||F||2/qmin, with ||F||\u00b2<=pi\u00b2 S/2. Thus leaving delta implies S>=qmin\u00b2 delta\u00b2/16; larger-action/topological sectors obey the same weaker threshold. Every flat holonomy remains.",
+    "actual_operator_proof": "For the INSIDE scalar kernel, |EWG(Aprime,A)|<=expm1(price) KG(Aprime,A). Weighted Schur with the actual positive Gaussian ground function gives the operator norm; EVEN Schatten loop integration gives Tr|EWG|^p<=expm1(price)^p Tr KG^p. This is kernel-level domination, NOT an assertion KW-KG is Loewner-positive and NOT scalar action RN lifted through matter insertions.",
+    "outside_block_proof": "KW and KG have positive sandwich form. QKQ is bounded by its magnetic barrier and free electric heat; normalized heat/vacuum/Hodge entropy is <=256V(1+log beta), since beta>=L4. Integer Gaussian heat trace is <=1+sqrt(2pi beta/p). Normalized Wilson trace for p>=1 is <=e^beta/I0(beta)<=6sqrt(beta), by the actual central |theta|<=beta^-1/2 integral; no false quadratic lower bound at arbitrarily high integer n is assumed. Photon ground energy is<3V and finite Hodge determinants cost O(V log L). PSD block Cauchy bounds PKQ by sqrt(PKP QKQ), in operator and Schatten norms. The stated8sqrt(outside) pays both kernels and both cross blocks. A long temporal increment costs beta delta\u00b2/128 with the same entropy price.",
+    "projection_scope": "Physical gauge averaging and actual Root/centre/statistical intertwiners must be applied to this positive scalar comparison; rank-null bare electric P_Haar was already retained in its auxiliary compression. Noncommuting active canonical/source factors are not scalar densities and need their separate reflected bounds.",
+    "scope": "Finite-volume positive scalar compact-Wilson/Gaussian kernel sublemma with explicit outside and long-increment payment, not microscopic photon/source admission or all-time coordinate confinement.",
+    "microscopic_fullpacket_admission_proved": false
+  },
+  "actual_full125_reference_photon_polynomial_heat_bound": {
+    "actual_packet_modes": 125,
+    "both_Fourier_orientations": true,
+    "Emin": 0.0049992839084508885,
+    "Emax": 0.0050007820393876655,
+    "bound_B_Ghalf_squared_over_lambda_G": 1195.1777108788554,
+    "actual_reference_complex_second_moment": 1.010050233634122,
+    "actual_reference_complex_fourth_moment": 2.040402948928689,
+    "formula": "16 exp(2Emax+Emin)/(e Emin)",
+    "proof": "Reference Mehler Hermite multiplication: sup n exp(-Emin n)<=1/(e Emin), sup(n+1)exp(-Emin n)<=exp(Emin)/(e Emin); coherent normalized packet coefficient l2 norms and BOTH Fourier orientations cost at most16 exp(2Emax). Bclip=rho(B)B with ||rho||<=1 preserves ||Bclip Ghalf||<=||B Ghalf||. These are reference Gaussian modes, NOT global microscopic CCR.",
+    "lift_requirement": "An actual field-kernel CAR norm majorant by the SAME positive G is required before applying this weighted heat bound to microscopic K. Scalar action/determinant ratios alone do not supply it.",
+    "no_global_B_operator_cap_used": true
+  },
+  "remaining_operator_contracts": [
+    "The scalar Coulomb/Gaussian coefficient price is NOT yet a physical all-species field-kernel CAR norm domination by G times genuine MF/normal/statistical reference.",
+    "FullPhi projective relative Schatten/power bounds retain the actual same-Q internal operator; no multiplication by unknown normalized source Gram.",
+    "Gaussian weighted photon heat bound may be lifted only AFTER the SAME positive G/CAR kernel bound; no weighted BKS or scalar-to-Loewner lift.",
+    "Original Pe interior witness needs actual full-reference source outlier and K-null parts, not merely reference energy cut or native cone.",
+    "The same microscopic U_N(t) receiver consumer is a separate owner; no macro U backend invented"
+  ],
+  "actual_macro_M0": null,
+  "actual_macro_M1": null,
+  "actual_macro_Pe_Gram": null,
+  "actual_macro_normalized_photon_Gram": null,
+  "original_source_and_Pe_unchanged": true,
+  "macro_source_admitted": false,
+  "elapsed_seconds": 0.30616687214933336
+}

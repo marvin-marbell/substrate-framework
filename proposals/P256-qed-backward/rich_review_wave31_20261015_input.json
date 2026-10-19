@@ -1,0 +1,21 @@
+{
+ "kind":"INDEPENDENT_WAVE31_NEW_SOURCE_TRAJECTORY_INPUT",
+ "plan":"issue222-rich-backward-candidates-20261014",
+ "captured_revision":"bd23d6006c2771cb845301f4a9e0f86db236342bb4b4ac8b66e8c37006c2c324",
+ "parameters":{"electric_cap":2,"electric_inertia":16.0,"charge_cost":0.35,"radial_nodes":[0.55,1.0,1.45],"radial_mass":2.0,"radial_stiffness":3.0,"radial_centre":1.0,"material_inertia":4.0,"root_coupling":1.0,"hopping":1.0,"vector_hopping":0.65},
+ "reference_file":"rich_local_frame_carrier_20261015_neutral_reference.npz",
+ "reference_key":"psi",
+ "expected_reference_SHA256":"03f91b9c729741281816e9f0f050df6761c041d3bd770d4332a604ff0279d1c3",
+ "expected_model_SHA256":"0d41504e8e1780e9775bb224af81f207af8efd4e2e2354f88d5a3ce1d5801f61",
+ "expected_neutral_basis_SHA256":"e47a1057f254e6cb1b49d040ca887adac0ecd53cad79877652521d00fc80b4d3",
+ "source_spin_axis":[0.48,-0.64,0.6],
+ "source_orbital":0,
+ "phase":0.19,
+ "times":[0.0,0.325,0.65],
+ "variants":["full","path_cut","vector_off"],
+ "krylov_dimension":40,
+ "comparison_dimension":28,
+ "field_pulse_alpha":0.37,
+ "bound_inputs":["rich_local_frame_carrier_20261015_model.py","rich_local_frame_carrier_20261015_interface.json","rich_local_frame_carrier_20261015_equations.json","rich_local_frame_carrier_20261015_neutral_reference.npz","rich_local_frame_carrier_20261015_prepare.py","rich_local_frame_carrier_20261015_input.json","rich_frame_holonomy_20261014_model.py","rich_frame_gauss_20261014_model.py","rich_frame_gauss_join_20261015_model.py"],
+ "declaration":"Shared NEW owning prepared neutral INPUT, not independent ground solve. Its full-H nonstationarity requires absolute-time neutral propagation under every actual variant. No old evolved data borrowed. Finite fullCAR12+local3radial+material10+Gauss-cap2 space, no positive-band or one-pair reduction."
+}

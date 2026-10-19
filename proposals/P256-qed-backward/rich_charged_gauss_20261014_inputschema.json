@@ -1,0 +1,27 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Anchored compact charged Gauss scientific request",
+  "type":"object","additionalProperties":false,
+  "properties":{
+    "cutoff":{"type":"integer","minimum":1,"description":"Exact finite electric domain |Eedge|<=cutoff+.5; actual4"},
+    "anchor":{"type":"integer","minimum":0,"maximum":3,"description":"Explicit opposite static charge/reservoir endpoint; no isolated unbalanced closed-ring charge"},
+    "parameters":{"type":"object","additionalProperties":false,"properties":{
+      "hopping":{"type":"number"},"repulsion":{"type":"number"},"electric_inertia":{"type":"number","exclusiveMinimum":0},
+      "link_charge":{"const":1},"particles_per_loop":{"const":2},"sites_per_loop":{"const":4}
+    },"description":"Literal original local electric/Hubbard parameters; particles_per_loop is neutral reference N2, not imposed charged particle count"},
+    "frequencies":{"type":"array","items":{"type":"number"},"description":"Retarded Gneutral,Gcharged,D_EEcharged and current-response samples, including negative removal-frequency region"},
+    "eta":{"type":"number","exclusiveMinimum":0,"description":"Positive causal spectral resolution; not substrate-derived damping"},
+    "max_receivers":{"type":"integer","minimum":1,"description":"Select first k positive-gap coupled receivers per nonforward probe; every intermediate remains in complete eigenspace"},
+    "probes":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["qin","qout","omega"],"properties":{
+      "qin":{"$ref":"#/$defs/vector3"},"qout":{"$ref":"#/$defs/vector3"},"omega":{"type":"number","exclusiveMinimum":0}
+    }},"description":"Source and receiver lattice-transverse profiles via actual supplier embedding; two external polarizations, not fabricated free-photon modes"}
+  },
+  "$defs":{"vector3":{"type":"array","minItems":3,"maxItems":3,"items":{"type":"number"}}},
+  "basis_semantics":"(CAR_bits,twice_actual_electric_fields); E3 half-integer and recursive exact Gauss; source simultaneously changes CAR particle number and explicit anchor countercharge with integer Wilson flux shifts",
+  "initial_state_semantics":"Gneutral exact N2 ground; Gcharged,field,current,scattering all exact same chosen maximalSz N3 ground state_id; source N±1 receivers exact same completed local law",
+  "pole_semantics":"Addition Eplus-Eref; removal Eref-Eminus; denominator always z-storedpole. No sign flip at evaluator and no chemical potential invented.",
+  "receiver_semantics":"Actual N3 same-statefamily joint matter/flux eigenvectors with omegaout=omegain-(Ef-Eg); anchor absorbs momentum, not free COM recoil",
+  "source_units":"Unit coefficient integer compact Wilson/CAR; source profile as dimensionless oriented number-link phase; source spectral cutoff loss not renormalized",
+  "current_units":"J=-dH/dphase, C=d²H/dphase², e=a=hbar=t=1; number-current J corresponds to electric electron current -J",
+  "output_encoding":"Complex arrays encoded object real/imag nested arrays; full source/eigenbasis data NPZ, receipt binds exact source/input/output hashes and natural exit; capsule includes original imported law sources"
+}

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_spatial_linked_source.py", line 200, in <module>
+    r=run(args.output)
+      ^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_spatial_linked_source.py", line 191, in run
+    with threadpool_limits(limits=1):cases=[run_case(data,N) for N in (4,6)]
+                                            ^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_spatial_linked_source.py", line 179, in run_case
+    assert abs(loop)>1e-12 and abs(wrong_corr)>1e-12
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

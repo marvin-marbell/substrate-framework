@@ -1,0 +1,72 @@
+{
+  "actual_failure": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py",
+      "--output",
+      "joined_phi_u1_matrix_jordan_supplier_receipt_20261010.json"
+    ],
+    "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+    "exit_code": 1,
+    "natural_exit": true,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py\", line 433, in <module>\n    result = run(args.comparison,args.output)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py\", line 389, in run\n    full,arrays = full_comparison(snapshot,physical,data)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py\", line 379, in full_comparison\n    'principal_physical_comparison':principal_comparison(byq[(0,0,0)],physical['D90'])},arrays\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py\", line 317, in principal_comparison\n    raise ArithmeticError('Physical unit/mixing/newCov principal control failed')\nArithmeticError: Physical unit/mixing/newCov principal control failed\n",
+    "source_before": {
+      "joined_phi_u1_matrix_jordan_supplier.py": "9df754b13e31cd1d516b50f961e8ba5470e5ce0369be5723fd91afd2bd1b8857",
+      "joined_phi_u1_matrix_jordan_supplier_natural_exit.py": "0e223c9f11a35613dedd7d511d3075e7a1112d44130e7b571d8c378b5e4187e2"
+    },
+    "source_after": {
+      "joined_phi_u1_matrix_jordan_supplier.py": "9df754b13e31cd1d516b50f961e8ba5470e5ce0369be5723fd91afd2bd1b8857",
+      "joined_phi_u1_matrix_jordan_supplier_natural_exit.py": "0e223c9f11a35613dedd7d511d3075e7a1112d44130e7b571d8c378b5e4187e2"
+    },
+    "elapsed_seconds": 63.13505527599773,
+    "runtime_python": "/home/administrator/substrate-framework/.venv/bin/python",
+    "execution_archive": {
+      "path": "joined_phi_u1_matrix_jordan_supplier_execution_bytes_20261010.zip",
+      "sha256": "4650ebdfb735524d2773c0f810d90ab5ca7eef6ed5597be01283348b6d9fd065"
+    }
+  },
+  "discriminating_probe": {
+    "exit_code": 0,
+    "command_code": "import ijson,numpy as np,json\nfrom pathlib import Path\np=Path(\"/home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_nonuniform_field_car_final_common_epoch_actual_receipt.json\")\nwith p.open(\"rb\") as f: row=next(ijson.items(f,\"actual_ALL64_q.item\",use_float=True))\ns=row[\"actual_static_spectral_supplier\"]\ndef decode(x):return np.asarray(x[\"real\"])+1j*np.asarray(x[\"imag\"])\na=decode(s[\"K_Lambda\"]);i,j=np.unravel_index(np.argmax(abs(a[10:45,45:])),(35,45));i+=10;j+=45\nout={\"q\":row[\"q_integer\"],\"indices\":[int(i),int(j)],\"coefficients\":{}}\nfor name in (\"K_Lambda5over4\",\"K_Lambda\",\"K_unit\"):\n m=decode(s[name]);b=m[np.ix_([i,j],[i,j])]\n out[\"coefficients\"][name]={\"diag_imag\":b.diagonal().imag.tolist(),\"Hermitian_defect\":float(np.max(abs(b-b.conj().T)))}\nprint(json.dumps(out))\n",
+    "stdout": "{\"q\": [0, 0, 0], \"indices\": [19, 73], \"coefficients\": {\"K_Lambda5over4\": {\"diag_imag\": [0.0, 0.0], \"Hermitian_defect\": 0.0}, \"K_Lambda\": {\"diag_imag\": [0.0, 2.760876070847234e-18], \"Hermitian_defect\": 5.521752141694468e-18}, \"K_unit\": {\"diag_imag\": [0.0, 2.7971481521947152e-15], \"Hermitian_defect\": 5.5942963043894304e-15}}}\n",
+    "stderr": ""
+  },
+  "prior_pyright": {
+    "command": [
+      "/home/administrator/.local/bin/pyright",
+      "--project",
+      "/tmp/joined_phi_u1_matrix_jordan_supplier_pyright_20261010.json",
+      "--pythonpath",
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "--outputjson",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier_natural_exit.py"
+    ],
+    "external_config": {
+      "include": [
+        "../home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py",
+        "../home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier_natural_exit.py"
+      ],
+      "extraPaths": [
+        "/home/administrator/substrate-222/proposals/P256-qed-backward"
+      ],
+      "typeCheckingMode": "basic",
+      "pythonVersion": "3.12"
+    },
+    "config_sha256": "8e430ea01a2a12330c944a237308b61684cc8d2ee3a36373aee6bbadfed0e297",
+    "exact_target_files": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier_natural_exit.py"
+    ],
+    "source_sha256": {
+      "joined_phi_u1_matrix_jordan_supplier.py": "9df754b13e31cd1d516b50f961e8ba5470e5ce0369be5723fd91afd2bd1b8857",
+      "joined_phi_u1_matrix_jordan_supplier_natural_exit.py": "0e223c9f11a35613dedd7d511d3075e7a1112d44130e7b571d8c378b5e4187e2"
+    },
+    "exit_code": 1,
+    "natural_exit": true,
+    "stdout": "{\n    \"version\": \"1.1.414\",\n    \"time\": \"1791646507077\",\n    \"generalDiagnostics\": [\n        {\n            \"file\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py\",\n            \"severity\": \"error\",\n            \"message\": \"Cannot access attribute \\\"real\\\" for class \\\"ndarray[_AnyShape, dtype[Any]]\\\"\\n\u00a0\u00a0No overloads for \\\"__get__\\\" match the provided arguments\\n\u00a0\u00a0Argument of type \\\"ndarray[_AnyShape, dtype[Any]]\\\" cannot be assigned to parameter \\\"obj\\\" of type \\\"None\\\" in function \\\"__get__\\\"\\n\u00a0\u00a0\u00a0\u00a0\\\"ndarray[_AnyShape, dtype[Any]]\\\" is not assignable to \\\"None\\\"\",\n            \"range\": {\n                \"start\": {\n                    \"line\": 56,\n                    \"character\": 26\n                },\n                \"end\": {\n                    \"line\": 56,\n                    \"character\": 30\n                }\n            },\n            \"rule\": \"reportAttributeAccessIssue\"\n        },\n        {\n            \"file\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py\",\n            \"severity\": \"error\",\n            \"message\": \"Cannot access attribute \\\"imag\\\" for class \\\"ndarray[_AnyShape, dtype[Any]]\\\"\\n\u00a0\u00a0No overloads for \\\"__get__\\\" match the provided arguments\\n\u00a0\u00a0Argument of type \\\"ndarray[_AnyShape, dtype[Any]]\\\" cannot be assigned to parameter \\\"obj\\\" of type \\\"None\\\" in function \\\"__get__\\\"\\n\u00a0\u00a0\u00a0\u00a0\\\"ndarray[_AnyShape, dtype[Any]]\\\" is not assignable to \\\"None\\\"\",\n            \"range\": {\n                \"start\": {\n                    \"line\": 56,\n                    \"character\": 55\n                },\n                \"end\": {\n                    \"line\": 56,\n                    \"character\": 59\n                }\n            },\n            \"rule\": \"reportAttributeAccessIssue\"\n        },\n        {\n            \"file\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_matrix_jordan_supplier.py\",\n            \"severity\": \"error\",\n            \"message\": \"Argument of type \\\"ndarray[_AnyShape, dtype[Any]]\\\" cannot be assigned to parameter \\\"allow_pickle\\\" of type \\\"bool\\\" in function \\\"savez_compressed\\\"\\n\u00a0\u00a0\\\"ndarray[_AnyShape, dtype[Any]]\\\" is not assignable to \\\"bool\\\"\",\n            \"range\": {\n                \"start\": {\n                    \"line\": 402,\n                    \"character\": 64\n                },\n                \"end\": {\n                    \"line\": 402,\n                    \"character\": 70\n                }\n            },\n            \"rule\": \"reportArgumentType\"\n        }\n    ],\n    \"summary\": {\n        \"filesAnalyzed\": 2,\n        \"errorCount\": 3,\n        \"warningCount\": 0,\n        \"informationCount\": 0,\n        \"timeInSec\": 13.509\n    }\n}\n\n",
+    "stderr": "",
+    "prior_invalid_invocation": "Pyright rejects --outputjson with --stats, exit4 before checking; corrected by removing --stats."
+  }
+}

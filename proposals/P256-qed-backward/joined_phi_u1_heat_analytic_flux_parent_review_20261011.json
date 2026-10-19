@@ -1,0 +1,106 @@
+{
+  "kind": "REVISION_BOUND_PARENT_HEAT_ANALYTIC_FLUX_SCIENTIFIC_REVIEW",
+  "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+  "captured_bookkeeping_revision": "d3fea754307de78766549c11f0203dab462562147578c568dd89443db3d221e5",
+  "accepted_prior_scoped_science": "09fba2e1e86dc1f15f08e797760118b6cd91aa01c1f8567cba541f706e11afa1",
+  "template": "general",
+  "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "work_item": "induced-photon",
+  "review_owner": "Marvin",
+  "status": "VALID_AT_EXPLICIT_CONDITIONAL_SCOPES_NOT_CAMPAIGN_COMPLETE",
+  "independent_frozen_review": {
+    "file": "heat_flux_review_verdict_20261011.json",
+    "sha256": "92b500b8eca8c896a82fccf10e6d010279792aefc724bfb88ed334eea386683d",
+    "verdict": "CONDITIONAL",
+    "load_bearing_target_errors": []
+  },
+  "scope_verdicts": {
+    "whole_charged_matrix_heat": "VALID_CONDITIONAL: labelled reducing 1/3 CAR sectors, full charged floor, rigorous residual/formation/Rayleigh shift and sqrt-infidelity; global floor-Hermite divided differences and complex Loewner polarization, no spectral crop.",
+    "original_cube_laplace": "VALID_CONDITIONAL_ENCLOSURE_WITH_FAILED_SIGN: all24/both/1+63, opposite2PH, correct transpose and full16spin trace; finite cube and infinite tail safely priced but too broad.",
+    "exact_particle_hole": "VALID_ALGEBRA_CONDITIONAL_G: full128-replica unitary maps rho to -rho and preserves all-n harmonic metric. Unique g gives Gminus=J2 Gplus.T J2; not imposed on s.",
+    "whole_time_signed_coefficient": "VALID_CONDITIONAL_POSITIVE_REAL_PART: exact all-time factorial/rational-rate integral, actual native PSD-Gram edge norms (not scaled unitaries), all15 nonempty error subsets, global operator remainder, generalized Schatten Holder and exact-g transfer. Signed 4x4 trace and all96 order/role/orientation rows retained.",
+    "selected_energy_dependence_and_Schur": "VALID_SCOPED: C0 lower > C64 upper with exact separation; z is positive resolvent-energy shift. All proper square subsets leave frozen product-g/closed-flow P_S. Schur fourth-order term is -C, independently discriminated with exact finite P2/Q3 control. No full all-path Feshbach operator or magnetic Hamiltonian assembled."
+  },
+  "parent_inline_derivations": [
+    "For f(x)=exp(-tx), the second divided difference f[x,a,a] decreases with x on x>=b>0; hence L<=G_s<=L+dV globally. Error relative to midpoint is bounded by d||V||/2, not entrywise sign.",
+    "Exact P(t)=exp(-at)(C_a0+t C_a1)+exp(-bt)C_b0. Durations are sums of tau_j. Every expanded monomial integrates over ALL tau_j>=0 as product factorial(m_j)/gamma_j^(m_j+1); all gamma positive. Signed coefficients and full native matrix order retained.",
+    "P=G+E. Trace difference is sum of all nonempty error subsets, each bounded by product e and h and a valid Schatten Holder cap from any two S2 factors among eight heat/edge factors. Exact scalar functions remain nonnegative despite signed exponential coefficients; integration is rational before outward scaling.",
+    "Pinned rawN>=1 ensures eta(1+sqrt(rawN)) >=2eta, a conservative price for the normalized source-to-g transfer. Do NOT identify rawN with ||normalized s||^2 or claim this holds for arbitrary different inputs.",
+    "P_S is a frozen reference projection, not physical interacting ground block. Feshbach outer minus survives fourth-order Neumann expansion; energy-dependence disjoint intervals do not imply zero stiffness or no photon."
+  ],
+  "observed_consumers": {
+    "ABI": {
+      "receipt": "charged_cell_heat_flux_parent_actual2_20261011_receipt.json",
+      "sha256": "b79a6ef97684ce19bba6a9b951d34ba25f8ae1971731e20225e826ee0bfd15e8",
+      "natural_exit": true,
+      "complex_wrong_transpose_norm": 1.4142135623730951,
+      "negative_offdiagonal_Loewner_remainder": "-0.002913053173598645"
+    },
+    "Feshbach": {
+      "receipt": "analytic_flux_feshbach_parent_actual1_20261011_receipt.json",
+      "sha256": "7a5775e844408173dbbce049272c610d69dfacdd16f8ab2abd6e4e9738a58bce",
+      "natural_exit": true,
+      "exact_C0_minus_C64_real_lower": "230770892819168898334351982453/1267650600228229401496703205376",
+      "finite_control_not_native_spectrum": true
+    },
+    "integrated": {
+      "receipt": "charged_heat_analytic_flux_parent_actual3_20261011_receipt.json",
+      "sha256": "b61a8d701ef410ad29b9c272213cd3edb1ff15498228fcd9783b1a9992b0d52a",
+      "natural_exit": true,
+      "elapsed_seconds": 3.4449056560115423,
+      "original_archive_member_reads": 346,
+      "source_inputs_unchanged": true
+    }
+  },
+  "epoch_transfer": {
+    "original_targets_and_verdicts_retained": true,
+    "new_typed_heat": "charged_cell_heat_typed3_20261011",
+    "new_typed_analytic": "analytic_flux_time_typed4_20261011",
+    "new_typed_review": "heat_flux_review_typed4_20261011",
+    "new_typed_particlehole": "heat_flux_review_particlehole_typed3_20261011",
+    "mathematical_payloads_exactly_unchanged": true,
+    "frozen_review_live_source_differences_recorded": [
+      "charged_cell_heat_scientist_20261011.py",
+      "charged_cell_heat_helper_20261011.py",
+      "charged_cell_heat_execute_20261011.py",
+      "charged_cell_heat_helper_20261011.py"
+    ],
+    "failed_epochs_preserved": [
+      "analytic actual1 scaled-unitary assumption",
+      "analytic actual2 exact-integer JSON display cap",
+      "review original epoch1 wording correction",
+      "particle-hole original epoch1 serialization failure",
+      "parent integration attempt1 prose-as-zero incidental assertion",
+      "checker12 attempt1 29errors",
+      "checkerchanged8 attempt2 4errors"
+    ],
+    "no_old_source_output_rebinding": true
+  },
+  "checker": {
+    "file": "charged_heat_analytic_final_revision_bound_coverage_20261011.json",
+    "sha256": "5d0df7a58b7e4f8c25f25173dfb211fdc822edd78280847a5470aef48926fa90",
+    "current_source_files": 12,
+    "single_twelve_file_green_run": false,
+    "explanation": "Exact current SHA per-source clean diagnostics from scopes12/8/2/1. Failed aggregate29/4 errors and natural exits remain. This is not a fictitious single12 green."
+  },
+  "conditions": [
+    "Inherited frozen canonical g, whole charged floor, source caps and exact microscopic profiles.",
+    "Correctly-rounded binary64 historical operation model conditional, not machine attestation.",
+    "Incoming zero flux, four distinct elementary edges, all native1+63 labels and two insertions per vertex.",
+    "No fullPhi/lattice ground or uniform physical1 interacting state adopted."
+  ],
+  "still_open": [
+    "physicalPhi/lattice ground",
+    "normalized N-uniform physical1 connected linked phase",
+    "stiffness",
+    "gap-closing massless IR atom/sharp sameground photon",
+    "commoncone",
+    "originalSOURCE"
+  ],
+  "active_owners": [
+    "SharedStarDynamicKernel"
+  ],
+  "cap": 4,
+  "no_nested_fanout": true,
+  "campaign_complete": false
+}

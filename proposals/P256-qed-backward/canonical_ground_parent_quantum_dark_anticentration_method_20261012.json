@@ -1,0 +1,12 @@
+{
+  "kind": "POSTEXECUTION_EXACT_QUANTUM_METHOD_NOT_NATIVE_GROUND_OR_PREEXECUTION_BACKFILL",
+  "source_code": "import json,sympy as s\nx=s.symbols('x',real=True);chi=s.symbols('chi',positive=True);w=s.symbols('w',positive=True)\nphi=s.exp(-x*x/(2*s.sqrt(chi)))/(s.pi*s.sqrt(chi))**s.Rational(1,4)\nnorm=s.integrate(phi**2,(x,-s.oo,s.oo));K=s.integrate(chi*s.diff(phi,x)**2,(x,-s.oo,s.oo));G=s.integrate(x*x*phi**2,(x,-s.oo,s.oo))\nassert norm==1 and s.simplify(K-s.sqrt(chi)/2)==0 and s.simplify(G-s.sqrt(chi)/2)==0\nassert s.simplify(-chi*s.diff(phi,x,2)+x*x*phi-s.sqrt(chi)*phi)==0\nodd=x*phi\nassert s.integrate(phi*odd,(x,-s.oo,s.oo))==0\nassert s.simplify(-chi*s.diff(odd,x,2)+x*x*odd-3*s.sqrt(chi)*odd)==0\nassert s.simplify(G-chi/(4*K))==0\n# Q is a CONSTANT internal projector. With Q mass w, total kinetic cap B gives\n# ||x Q psi||\u00b2 >=chi*w\u00b2/(4B); deleting w\u00b2 is false for a mostly-P state.\nwrong=s.simplify(w*G-chi/(4*K)); assert wrong.subs(w,s.Rational(1,4))<0\nprint(json.dumps({'kind':'EXACT_QUANTUM_DARK_POINT_ANTICONCENTRATION_METHOD_NOT_NATIVE','zero_point_loop':'x=0','ground_loop_norm2':str(G),'ground_kinetic':str(K),'allvector_constant_Q_lower':'chi*w_Q^2/(4 B_total)','whole_ground_removal':'odd x*phi orthogonal to BOTH degenerate internal ground channels','source_excitation_energy':str(2*s.sqrt(chi)),'wrong_deleted_Q_mass_rejected':True,'field_dependent_Q_derivative_shortcut_allowed':False,'native_ground_or_phase':False},sort_keys=True))\n",
+  "stdout": "{\"allvector_constant_Q_lower\": \"chi*w_Q^2/(4 B_total)\", \"field_dependent_Q_derivative_shortcut_allowed\": false, \"ground_kinetic\": \"sqrt(chi)/2\", \"ground_loop_norm2\": \"sqrt(chi)/2\", \"kind\": \"EXACT_QUANTUM_DARK_POINT_ANTICONCENTRATION_METHOD_NOT_NATIVE\", \"native_ground_or_phase\": false, \"source_excitation_energy\": \"2*sqrt(chi)\", \"whole_ground_removal\": \"odd x*phi orthogonal to BOTH degenerate internal ground channels\", \"wrong_deleted_Q_mass_rejected\": true, \"zero_point_loop\": \"x=0\"}\n",
+  "stderr": "",
+  "natural_returncode": 0,
+  "postexecution": true,
+  "preexecution_backfill": false,
+  "parent_scope": "Constant internal Q only; local loop xQ vanishes at a point but oscillator quantum ground has nonzero wholeP0-removed source at gapped energy. No native all64 loop lower or photon.",
+  "scientific_admission": false,
+  "campaign_complete": false
+}

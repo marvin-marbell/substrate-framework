@@ -1,0 +1,97 @@
+{
+  "kind": "ACTUAL47_OPERATOR_API_AND_OWN_PERSISTENCE_SMOKE_NOT_TRANSPORT_ACCEPTANCE",
+  "scope": "all",
+  "compiled_operator_input": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_local_frame_spatial_carrier_20261016_model.pkl",
+    "sha256": "cc6eb96a1d442b19ee3c4719370a3b6b257e75eb6ea956c7ab836f9ce432b803",
+    "model_signature": "ef583eaed75747e066a4415778b1285fabc163d1b96f4b5a02e4ac60bc3b098d",
+    "term_count": 3529,
+    "parameters": {
+      "field_cap": 1,
+      "gmax": 2.0,
+      "material_max": 2,
+      "hopping": 0.45,
+      "internal": 0.35,
+      "radial_mass": 2.0,
+      "material_inertia": 6.0,
+      "electric_inertia": 3.0,
+      "charge_shell_radius": 0.08,
+      "boundary_radius": 20.0,
+      "nangle": 24,
+      "nbeta": 16
+    }
+  },
+  "nonzero_actual_paths_current_image_norm2": 0.049951343205218435,
+  "nonzero_apply_svd_eps": 3.37108562489594e-30,
+  "derivative_only_operator_cache_roundtrip_error": 5.377642775528092e-17,
+  "source_raw_norm2": 0.9995685991087238,
+  "source_quality": {
+    "exact_regulated_source_norm2": 0.9995685991087238,
+    "retained_source_norm2": 0.9995685991087205,
+    "svd_eps": 0.0,
+    "meaning": "Tuple strength is exact finite-regulator raw Bpsi norm\u00b2; normalized returned MPS approximates compressed source. Restore sqrt(retained_source_norm2) for its unnormalized amplitudes, not sqrt(raw) if compression lost norm. Neither is a Born probability."
+  },
+  "raw_state_norm2": 4.000000000000008,
+  "restored_state_norm2": 4.0000000000000036,
+  "raw_state_roundtrip_overlap": [
+    0.9999999999999993,
+    8.326672684688662e-17
+  ],
+  "scalar_centering_phase_error": 3.2625495577292578e-15,
+  "physical_stage_cache_roundtrip_error": 2.775557561562889e-17,
+  "physical_stage_ledger": {
+    "dt": 0.02,
+    "steps": 1,
+    "chi_cap": 16,
+    "stage_count": 4,
+    "svd_eps_sum": 2.910216563946895e-31,
+    "svd_eps_max": 1.4738924587744237e-31,
+    "log_restored_raw_norm_factor": 0.6931471805599475,
+    "restored_centering_phase_exponent": 0.07400000000000001,
+    "raw_norm2": 4.000000000000022,
+    "ledger_index": 1,
+    "normalization_and_phase_restored": true,
+    "method": "Exact operator SUM; approximate symmetric group/RK2 dynamics plus MPS compression, not exponential or convergence proof"
+  },
+  "restored_physical_stage_ledger": {
+    "dt": 0.02,
+    "steps": 1,
+    "chi_cap": 16,
+    "stage_count": 4,
+    "svd_eps_sum": 2.910216563946895e-31,
+    "svd_eps_max": 1.4738924587744237e-31,
+    "log_restored_raw_norm_factor": 0.6931471805599475,
+    "restored_centering_phase_exponent": 0.07400000000000001,
+    "raw_norm2": 4.000000000000022,
+    "ledger_index": 2,
+    "normalization_and_phase_restored": true,
+    "method": "Exact operator SUM; approximate symmetric group/RK2 dynamics plus MPS compression, not exponential or convergence proof"
+  },
+  "meaning": "Nonzero current/source positivecontrol and own rawtensor/centering-phase persistence. Scope all additionally tests exact-zero derivative and exp(0)=identity; positive scope does not exercise/claim zero ABI. No zero source normalization; no charged finite-time motion or field feedback inferred. Actual field-decoupled body H retains moving R.",
+  "zero_matrix_element": [
+    0.0,
+    0.0
+  ],
+  "zero_image_norm2": 0.0,
+  "zero_apply_method": "Exact native apply_naively, no zero SVD/canonicalization/normalization",
+  "zero_apply_return": "None",
+  "zero_exponential_overlap": [
+    1.0,
+    0.0
+  ],
+  "zero_exponential_ledger": {
+    "dt": 0.017,
+    "steps": 1,
+    "chi_cap": 16,
+    "stage_count": 0,
+    "svd_eps_sum": 0.0,
+    "svd_eps_max": 0.0,
+    "log_restored_raw_norm_factor": 0.0,
+    "restored_centering_phase_exponent": 0.0,
+    "raw_norm2": 4.000000000000004,
+    "ledger_index": 0,
+    "normalization_and_phase_restored": true,
+    "method": "Exact operator SUM; approximate symmetric group/RK2 dynamics plus MPS compression, not exponential or convergence proof"
+  },
+  "exponential_representation": "Existing PhysicalOperatorSum(empty Hamiltonian); native zero-MPO current tested separately. Native MPO has no evolve by design."
+}

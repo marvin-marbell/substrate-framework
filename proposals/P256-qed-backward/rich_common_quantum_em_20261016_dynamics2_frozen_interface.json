@@ -1,0 +1,62 @@
+{
+  "kind":"FROZEN_FIRST_LAW_DYNAMICS2_RECIPROCAL_REVIEW_INTERFACE_NOT_LOOP_RICH_SUCCESSOR",
+  "owner":"CommonColourLeptonRoot","reviewer":"SpatialLocalReview49",
+  "root":"/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "python":"/home/administrator/substrate-framework/.venv/bin/python",
+  "review_contract":"local://issue222-common-reciprocal-field-review-contract-20261016.json#47B2",
+  "frozen_complete_capsule":"rich_common_quantum_em_20261016_dynamics2_capsule.zip",
+  "frozen_capsule_sha256":"0f7a9680dda75670423fcf40b59dd25d1ba060361a14894c59ccc95a60a75e7d",
+  "authoritative_frozen_source_input_bundle":"rich_common_quantum_em_20261016_dynamics2_source_inputs.zip",
+  "input_hash_manifest":"rich_common_quantum_em_20261016_dynamics2_before.json",
+  "natural_receipt":"rich_common_quantum_em_20261016_dynamics2_exit.json",
+  "source_hashes":{
+    "rich_common_quantum_em_20261016_operator.py":"8f00207a2c19435de3b065d78685467412eb3b1c2de9251d5a18818fc94f87d9",
+    "rich_common_quantum_em_20261016_dynamics.py":"4a3ced2b81f4592653df8c47b023f199a0a2567d0e30c5a6d8d6c30a5976a6d5",
+    "rich_common_quantum_em_20261016_dynamics2_run.json":"df4f9118c0237895ce940f7247f5a874fcb50cc7408559188a5033d5f2b2ebd4",
+    "rich_common_quantum_em_20261016_source1_source_orth.npz":"ee7f5c5f8e730b4df060b89aa8fbf71e95d82e39e099ead0bcbc7fa3750790fc",
+    "rich_common_quantum_em_20261016_source1_source_full_CAR_gram_orth.npz":"5029f4e6471079f86e1fc17eacaae68a921ad3b471969f3bf63ff3289065b3ab"
+  },
+  "scope":"Only FIRST common CAR64 Gauss-reduced material charge-link law. Do NOT import your47 Model, old48 CAR8 or Common loop-rich body4407 successor. Current general interface contains a SEPARATE successor section; this frozen interface and zipped source are authoritative for review. Author states/results below are SECONDARY comparison, not primary proof; choose fresh own native Gauss-valid states.",
+  "native_operator_entry":{
+    "module":"rich_common_quantum_em_20261016_operator.py",
+    "construct":"from rich_common_quantum_em_20261016_operator import Model; model=Model(PREFIX); H=model.hamiltonian()",
+    "neutral_prefix":"rich_common_quantum_em_20261016_neutral_prepare2",
+    "pair_prefix":"rich_common_quantum_em_20261016_joint_prepare1",
+    "files_per_prefix":["_body.json","_geometry.json","_static.npz","_vector.npz","_scalar_hop.npz","_scalar.npz","_inversehalf.npz","_chord_vector.npz","_chord_scalar.npz"],
+    "all_files_already_in_frozen_source_input_bundle":true,
+    "layout":"C-order flat(body,Phi7,flux85). Actual positive G is count-block orthonormalized; Euclidean norm is physical native norm. Neutral body258/full153510; pair body5318/full3164210. No reconstruction of old1328blocks/producers needed.",
+    "fresh_state_Gauss":"ANY vector in these native total-Q0 blocks is Gauss-physical via implicit lift exp(i Nint.chi), with longitudinal Eint=D^T Lplus Nint. A reduced transverse m0 packet does NOT mean full electricfield0: include that charge-dependent longitudinal flux. Native counts/physical model.q and geometry D/t reconstruct G=0 basiswise. Fresh N36 block state is a bounded sector consumer, not automatically the author's canonical B/L source preparation.",
+    "Hamiltonian":"Phi7+quantumR10+full-before-target colour electric/plaquette+derived longitudinal charge energy+transverse electric-generator kinetic+ALL scalar/vector quark/white hops carrying quantum n t_e.a phases. Inputs g=.65,v=.6,I_E1; no supplied Maxwell B² or photon bath. Both source species in ONE occupied CAR64 Fock space.",
+    "cuts":"Fundamental selected-matrix matter law, not unprojected full CAR64/all-Dirac-pair closure. Phi7,R10,PW19; only2of21 spatial cycle profiles; signed85flux cut |m_a|<=6, m_y+m_z even. Severe/explicit. Source/Gauss/spatial/lab claims must stay scoped."
+  },
+  "exact_source_and_receiver_API":{
+    "finite_white_source":"Htheta=model.hamiltonian(theta=.3,pulse_species='white',pulse_edge=2)",
+    "quark_current_at_actual_white_source_phase":"model.observer('current',theta=.3,species='quark',edge=0,source_species='white',source_edge=2)",
+    "white_current":"model.observer('current',theta=.3,species='white',edge=2,source_species='white',source_edge=2)",
+    "contact":"kind='contact' gives physical source/receiver Hsecond; current=-Hfirst. The phase belongs to ACTUAL white sourcebond2, NOT a fictitious quark receiver pulsebond0.",
+    "control":"Pass decoupled=True to BOTH hamiltonian and observer. Transverse link U only becomes identity; ALL hopping, Phi/R/PW, derived longitudinal charge energy and free transverse generator kinetic remain active. Do NOT borrow full-U current observer for controlled H.",
+    "physical_vs_selective":"Physical charges q=n/3 normalize these species-resolved current legs. White-only phase is a selective diagnostic, NOT a universal labEM vector potential. The quantum connection itself couples universally to ALL charged roots in BOTH scalar/vector terms.",
+    "field_kick":"K_a=exp(i beta*m_a), beta=.3 integer-angle units; multiply psi(body,Phi,m) by exp(i beta*model.flux[m,a]). These are real field DOFs, not two labels of oneflux.",
+    "field_force":"model.observer('force',axis=a,theta=theta,source_species='white',source_edge=2)=i[H,m_a]=-partialH/partiala_a. Native physical transverse generator is m_a/3. Thus d(m_a/3)/dt=sum_e t_ea J_Q,e. It is NOT photon number or an unlabelled oscillator momentum.",
+    "physical_edge_flux":"E_Q=(D^T Lplus Nint+t Gt^-1 m)/3; D E_Q=Qsite=Nint/3. Integers are Qint=(2,-1,0,-3); bare kinetic H_T=(my²+mz²)/16, Gt=8I. This is a chosen Cartan-cover finite-mode metric law, NOT independent integer edge rotors.",
+    "current_Ward":"dQsite/dt=D_matter J_Q from ACTUAL phase derivatives after metric/Noether/body selections, not relabelling i[HP,QP] as J. Control has zero transverse-coordinate derivative but may retain rich white->quark response through Phi/R/colour/finite-space channels.",
+    "control_expected_semantics":"Fieldkick->matter density/current response vanishes in transverse-identity H (K commutes with factorized control H and matter observers). Field's own loop phase can still change under a fieldkick; do NOT claim all field observables vanish. Active white source cannot change transverse reduced density in this control, but longitudinal E follows changing site charge."
+  },
+  "canonical_pair_source_optional":{
+    "entry":"rich_common_quantum_em_20261016_dynamics.py:prepare_pair(neutralModel,pairModel,reference,sourcePrefix,out)",
+    "source_prefix":"rich_common_quantum_em_20261016_source1",
+    "operator":"Complete Bdag0 W_path Ldag2, L FIRST. Original epsilon-colour uud half-triplet UP B and charged DOWN-WHITE UP L. Source grade+4,N36,Q0,J1M1, not C partners/proton identity. Wilson2->0->1->2->0 gives chi phase+3chi0-3chi2 and transverse shift(-3,-3).",
+    "raw_data":"source1_source_orth.npz, source1_source_full_CAR_gram_orth.npz are in dynamics2 source/input bundle. Full raw CAR output blocks and local dictionary are in source1_full_CAR_source_blocks.zip / source1_source_primitive.pkl (shared FS; source1_capsule.zip provenance).",
+    "order":"Full CAR word BEFORE final target projection; never Gauss-project individual B/L charged factors. Body projector commutes with W; reduced final Gauss lift includes longitudinal dressing. Direct projected U^n shift, not powers of PUP.",
+    "norm":"Full raw source Gram, body-retained before flux and flux-retained raw strengths separate; raw strengths NOT probabilities. One final conditional normalization by retained strength; no later renormalization/clamping.",
+    "closed_Gauss":"No isolated charged rhoB/rhoL controls or transplanted four-sector subtraction. Charged sectors would need actual boundary flux."
+  },
+  "time_and_contrast":{
+    "evolution":"hbar1, exp(-i t H), times0,.1,.25,.5,1. White theta.3 held ON through t1. Separate field-generator kicks at t0 then same no-classical-source H. Each H has its OWN same-age baseline; controlled H starts with identical preparation, not a falsely claimed control ground.",
+    "whole_PAIR_response":"<O>PAIR,perturbed(t)-<O>PAIR,baseline(t). Author whole-pair fieldy t1 deltaJ(q,w)=(-.01759014235,+.01402908473), z=(-.01053284376,+.01366632260). Secondary reports only.",
+    "added_source_response":"[PAIR perturbed-PAIR own same-age baseline]-[NEUTRAL perturbed-NEUTRAL own same-age baseline], separately conditionally normalized source preparation. NOT a connected B/L four-sector cumulant or two-particle S matrix/scattering proof.",
+    "author_secondary_results":"dynamics2_result.json and matched-clock checkpoints/states in frozen capsule. Parent-reported t1 double contrasts are interpretation/comparison data, NEVER constants for primary assertions."
+  },
+  "secondary_physics_synthesis":"rich_common_quantum_em_20261016_pair_synthesis.txt",
+  "nonclaims":"No stable electron/B/proton/mass/lifetime/binding, photon modes/linear dispersion, Nature/QCD, full-H primitive closure or derived charge/spin/gauging. q/profiles/current are MATERIAL; lab rotating-charge-density minimal coupling/full field spatial Noether/freeCOM omitted, not silently promoted. Compact-quark masks are not added-particle position/capture probabilities. No review gate on separate live loop-rich quantum construction."
+}

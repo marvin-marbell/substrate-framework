@@ -1,0 +1,217 @@
+{
+  "command": [
+    "env",
+    "OPENBLAS_NUM_THREADS=4",
+    "OMP_NUM_THREADS=4",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "covariant_native_charged_site_gf.py",
+    "--output",
+    "covariant_native_charged_site_gf_cut2_UE1_capsule_20261008.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "actual_cli_exit_code": 0,
+  "natural_exit_observed": true,
+  "tool_job": "bg_1134",
+  "tool_completion": "completed, final four stdout records and no stderr reported",
+  "runtime_seconds": 1210.74854306411,
+  "tool_wall_seconds": 1216.66,
+  "capsule": {
+    "path": "covariant_native_charged_site_gf_cut2_UE1_capsule_20261008.json",
+    "sha256": "40792c2a85776ec550e4ddddff848f2cc877907a1f1c5f710b05a189729779ec",
+    "size_bytes": 31004865
+  },
+  "own_source_at_IMPORT": "a43c9077618304b48744429f1504cde0e272c909d6fabd88e1c00309d9888d34",
+  "frozen_native_source_at_IMPORT": "3a53c515002dda7c9ed7fb3667574dac94976ad717d0a5f14b681d107416187b",
+  "all_imported_repo_sources_at_IMPORT": {
+    "covariant_native_charged_site_gf.py": "a43c9077618304b48744429f1504cde0e272c909d6fabd88e1c00309d9888d34",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "covariant_induced_photon.py": "f022ff8823013e4a47974899efec187af17588b49a94d3af52eba3d731d8c6be",
+    "covariant_native_haar_range_jets.py": "353874cf87ab8f46d2dfee015383187ef5de564dc2aa9f964ae7128212ff026c",
+    "covariant_photon_energy_control.py": "b21d956242d16b68632bf52835b0db5847b0dbc3aa96a8aa5838a431d0673e06",
+    "covariant_source_band_halfstep_control.py": "6aeec85361f3839ce29d163c07e8229a4459cd53e1f141c02910d5d4bf7fd89b",
+    "covariant_native_source_gram_moments.py": "17f4595c82b27e8f4d93098d393952a29b1b4c05458f5e7ccfe7df55c22c5194",
+    "covariant_native_closed_auxiliary_loop.py": "c6e5eda6241ba7929da2f1e203930c9b5af59807883bffa0f6b9b7cac867a0d2",
+    "covariant_native_electric_heat_comparison.py": "3a53c515002dda7c9ed7fb3667574dac94976ad717d0a5f14b681d107416187b"
+  },
+  "input_descriptor_sha256": "4abbe0a9e461b65be4b5bfd1d918cea74e3027d4c62e43111d7966e631c02f29",
+  "plan_sha256_at_IMPORT": "7650a3636f3d39a74243a986afb1683be8fae895c3f5afb77720b05330363a51",
+  "runtime_packages": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.39"
+  },
+  "stdout": {
+    "path": "covariant_native_charged_site_gf_cut2_UE1_20261008.stdout",
+    "sha256": "78dda59a98a7128ed8166e52af5c068ba7ce5b1b5a79ad9a4d69431df943cd0a",
+    "size_bytes": 1094
+  },
+  "stderr": {
+    "path": "covariant_native_charged_site_gf_cut2_UE1_20261008.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_bytes": 0
+  },
+  "language_intelligence": {
+    "server": "pyright-langserver --stdio",
+    "version": "1.1.414",
+    "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+    "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+    "actual_symbols_exercised": [
+      "prepare_spectrum",
+      "raw_addition_gf"
+    ],
+    "actual_references_exercised": [
+      "prepare_spectrum",
+      "raw_addition_gf"
+    ],
+    "positive_AST": "ast-grep prepare_spectrum identifier; Python ast actual functions and einsum calls",
+    "final_pushdiagnostics": {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/covariant_native_charged_site_gf.py",
+        "version": 4,
+        "diagnostics": []
+      }
+    },
+    "source_sha256": "a43c9077618304b48744429f1504cde0e272c909d6fabd88e1c00309d9888d34"
+  },
+  "serialized_consumer_verification": {
+    "actual_exit_code": 0,
+    "actual_stdout": "{\"actual_serialized_GF_consumer_checks\": [{\"preparation\": \"raw_addition\", \"all_levels\": 3852, \"site_matrix_shape\": [3852, 4, 4], \"amplitude_shape\": [4, 4, 3852], \"minimum_actual_eigenvalue\": -1.3602195074222163e-16, \"maximum_reconstruction_defect\": 0.0, \"real_time_maximum_defects\": [0.0, 0.0, 0.0, 0.0]}, {\"preparation\": \"wholehalf_prepared\", \"all_levels\": 3852, \"site_matrix_shape\": [3852, 4, 4], \"amplitude_shape\": [4, 4, 3852], \"minimum_actual_eigenvalue\": -1.6739549297112037e-18, \"maximum_reconstruction_defect\": 0.0, \"real_time_maximum_defects\": [0.0, 0.0, 0.0, 0.0]}], \"source_and_input_hashes_verified\": true, \"boundary_norm_identity_verified\": true, \"photon_mean\": 3.9903773506116433, \"no_level_dropped\": true}\n",
+    "actual_stderr": "",
+    "result": {
+      "actual_serialized_GF_consumer_checks": [
+        {
+          "preparation": "raw_addition",
+          "all_levels": 3852,
+          "site_matrix_shape": [
+            3852,
+            4,
+            4
+          ],
+          "amplitude_shape": [
+            4,
+            4,
+            3852
+          ],
+          "minimum_actual_eigenvalue": -1.3602195074222163e-16,
+          "maximum_reconstruction_defect": 0.0,
+          "real_time_maximum_defects": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "preparation": "wholehalf_prepared",
+          "all_levels": 3852,
+          "site_matrix_shape": [
+            3852,
+            4,
+            4
+          ],
+          "amplitude_shape": [
+            4,
+            4,
+            3852
+          ],
+          "minimum_actual_eigenvalue": -1.6739549297112037e-18,
+          "maximum_reconstruction_defect": 0.0,
+          "real_time_maximum_defects": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "source_and_input_hashes_verified": true,
+      "boundary_norm_identity_verified": true,
+      "photon_mean": 3.9903773506116433,
+      "no_level_dropped": true
+    }
+  },
+  "summary": {
+    "ranks": [
+      5034,
+      3852
+    ],
+    "common_neutral_lambdaN": 22180424388.59449,
+    "all_levels": 3852,
+    "raw_site_energy_means": [
+      1.7254212028428397,
+      2.722710059311437,
+      3.719498746035022,
+      2.7226165801684314
+    ],
+    "wholehalf_site_energy_means": [
+      1.7130493109152753,
+      2.699663511845553,
+      3.6844263107208017,
+      2.6995704407827317
+    ],
+    "raw_site_norms": [
+      0.9999911288347746,
+      0.999991128350468,
+      0.9999864559517998,
+      0.9999864564964723
+    ],
+    "wholehalf_site_norms": [
+      0.17938106678092564,
+      0.06640128557527301,
+      0.024603998450187438,
+      0.06640709167322878
+    ],
+    "Knull_after_source_projection": [
+      1.468024568673053e-30,
+      2.423616601725211e-30,
+      1.4702458769850198e-29,
+      2.346819638542772e-30
+    ],
+    "exact_source_boundary_losses_from_Omega_cut2": [
+      1.115433713267338e-13,
+      4.644318793885809e-10,
+      5.251123522981015e-10,
+      1.2817280219178813e-13
+    ],
+    "photon_baseline": 3.9903773506116433,
+    "lowest_12_actual_energies": [
+      1.7058285264937365,
+      2.714844173976413,
+      2.730765636126732,
+      3.709765217978763,
+      3.737903748522032,
+      3.9900008731466428,
+      4.0341086866443625,
+      4.709156610538421,
+      4.721366610122476,
+      4.998980295650801,
+      5.014903709573175,
+      5.0431469850573425
+    ]
+  },
+  "scope": "UE1/Ecut2 native primitiveE, active8 modes N4/5 (70/56 CAR states), auxiliary4 modes N2 (all6 CAR states), Phi3 one-coordinate, selected2D Clifford into all Ref4 holes, ONE Gauss, STATIC Ref site0. ADDITION-only dipole GF; N3 removal absent. Raw and wholehalf GF exported separately. All full factors/all charged levels retained; delta input filter mixes sites. Exact source boundary loss from Omega_cut2 is NOT ground-cutoff error bound. No cone/velocity/mass/source/quarter fitting or branch transplant; commoncone OPEN.",
+  "modified_existing_files": false,
+  "docs_tests_formatters_created_or_run": false,
+  "superseded_runs": [
+    {
+      "job": "bg_1119",
+      "state": "cancelled before completion",
+      "reason": "Resolve source typing diagnostics before freezing final source"
+    },
+    {
+      "job": "bg_1123",
+      "state": "cancelled before completion",
+      "reason": "Parent specified separate raw addition GF alongside prepared GF"
+    },
+    {
+      "job": "bg_1126",
+      "state": "cancelled before completion",
+      "reason": "Parent specified explicit source-boundary semantics and direct leakage calculation"
+    }
+  ]
+}

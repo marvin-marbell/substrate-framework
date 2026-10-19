@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/smoothed_boundary_parent_integration_20261011.py", line 168, in <module>
+    run(args.request, args.output)
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/smoothed_boundary_parent_integration_20261011.py", line 146, in run
+    epochs = [verify_epoch(prefix) for prefix in request['epochs']]
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/smoothed_boundary_parent_integration_20261011.py", line 41, in verify_epoch
+    assert sha(pre.read(member)) == pin, (prefix, member)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/zipfile/__init__.py", line 1580, in read
+    with self.open(name, "r", pwd) as fp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/zipfile/__init__.py", line 1617, in open
+    zinfo = self.getinfo(name)
+            ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/zipfile/__init__.py", line 1545, in getinfo
+    raise KeyError(
+KeyError: "There is no item named 'canonical_ground_review_proof_20261011.json' in the archive"

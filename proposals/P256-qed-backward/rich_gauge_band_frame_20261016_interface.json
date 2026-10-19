@@ -1,0 +1,14 @@
+{
+  "kind":"NEW_CENTRAL_SEWING_BAND_FRAME_TREE_WILSON_MATERIAL_LAW",
+  "plan":"issue222-rich-backward-candidates-20261014@b048dbe91b0250f9525e9a07b6d76b95a8080f2f57c071873cad15f8a8fd0e4f",
+  "template":"general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "work_item":"electron-candidate",
+  "module":"rich_gauge_band_frame_20261016_model.py",
+  "construction":"Primitive charged scalar CAR8 on 2x2x2 microsites; Gamma from signed cube edges, beta staggered parity. Quantum g SU2, R SO3, positive cone r. Physical LEFT (g,R)->(hg,hR); c scalars; central sewing psi(-g)=(-1)^N psi(g), no full RIGHT constraint and no extra assigned spin tensor.",
+  "law":"H=HE+(negative half-line radial Laplacian+3/(8 M r^2)+V(r))+Lg^2/(2 M r^2)+LR^2/(2 I_R)+lambda r cdag beta c+sum_i,a,ell v_a O(g)_(ell,i) O(R)_(ell,a) cdag Gamma_i c; v_a=-2cos(k_a). Every bilinear uses unitary tree Wilson parallel transport. Physical J=Lg+LR, source B_mu=sum_s Dband(g)_(mu,s) W_(boundary<-s) cdag_s.",
+  "finite_EM":"NEW explicit finite tree-Wilson interaction law, NOT original full cube gauge hopping. Seven spanning cube edges plus outward boundary link at site0; all eight full integer rotors, no E cut. Gauss solves uniquely E_tree(n), E_boundary=N-4. Ions b_s=(1-beta_s)/2 integer. FullFock256, source sectors N3/4/5 kept without band/sea projection. Tree has no independent loop photon modes; spatial Wilson bilinear interactions may follow multi-edge paths.",
+  "operators":"geometry()->Gamma,beta,S; angular(js) gives complete Peter-Weyl blocks, coordinate matrices, physical LEFT derivatives; Model(number,parameters) exposes H,J,E,r,force, currents, source_from(reference,component,create). Inputs and outputs will be separate; pure module imports do not execute producer.",
+  "cuts":"neutral g j=0,1; charged g j=1/2,3/2; material R l=0,1 complete m,n blocks; positive radial uniform interior nodes with Friedrichs Dirichlet ghosts. Explicit angular/radial Galerkin regulator, no angular convergence claim.",
+  "comparison_to_rotor41":"Same exact bilateral integer rotor algebra U|m>=|m+1>; tree Gauss solution allows finite exact charge sectors without truncating U. This finite tree law/state is NOT Rotor41 periodic64 interacting state or a bulk photon result.",
+  "consumer":"Independent reviewer may construct fresh state from pure declared Model; original raw state inputs will be captured as npz separately. Addition/removal opposite charges, not positron claim; no C symmetry asserted for asymmetric ions/tree."
+}

@@ -1,0 +1,126 @@
+{
+  "kind": "LOCAL_BODY_LEADING_ALL_FIELD_N_UNIFORM_LOWER_AND_ACTUAL_FAMILY_FLATNESS_INTERFACE_NOT_RIGIDITY",
+  "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+  "captured_revision": "2f0bfe8e2ca9c558be5ad3eab0e06e6773692b7b573886a0d4dcead3d2118ea6",
+  "contract_sha256": "adb0bba26fd5dee8e86ff0bd5ab96acb0df27359b9ac7049c89162ec127dbf11",
+  "template_id": "general",
+  "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "work_item_id": "induced-photon",
+  "requirement_ids": [
+    "outcome",
+    "verification"
+  ],
+  "artifacts": {
+    "local_body_leading_control_20261012.py": {
+      "path": "local_body_leading_control_20261012.py",
+      "sha256": "e61485150400637349936840cd3b2b6d86b3d4404cfc48c00f098da7e8f781e3"
+    },
+    "local_body_leading_proof_20261012.json": {
+      "path": "local_body_leading_proof_20261012.json",
+      "sha256": "ebf08371a0652d0122b6ebd7a3a18e637d25592194b592b0013fdca03bbba4bb"
+    },
+    "local_body_leading_actual2_20261012_request.json": {
+      "path": "local_body_leading_actual2_20261012_request.json",
+      "sha256": "3810263262d2ad60c3abd239fddf6c3071a9b77cc710ec1e8929c686fd14d107"
+    },
+    "local_body_leading_actual2_20261012_receipt.json": {
+      "path": "local_body_leading_actual2_20261012_receipt.json",
+      "sha256": "ef12eb34df9dd7311ccf57a288276915f67eb52ddd7a9763775f5ce7e1893b8e"
+    },
+    "local_body_leading_actual2_20261012_exit.json": {
+      "path": "local_body_leading_actual2_20261012_exit.json",
+      "sha256": "abd0d288b707e3aeae945f1ef9ff17c41d84911fa2fc03e1e29638bf19727d43"
+    },
+    "local_body_leading_actual2_20261012_preexecution.zip": {
+      "path": "local_body_leading_actual2_20261012_preexecution.zip",
+      "sha256": "e5079f44efc95e0d453412b8ef80c21db30cb5f3cfa6d40e95e89d798a6bf5e0"
+    },
+    "local_body_leading_actual2_20261012_executed.zip": {
+      "path": "local_body_leading_actual2_20261012_executed.zip",
+      "sha256": "14df46fc3afe9eb61c2c6573e0813ba6e3ebe595ac078ca4587f8defab8b7781"
+    },
+    "local_body_leading_actual1_20261012_exit.json": {
+      "path": "local_body_leading_actual1_20261012_exit.json",
+      "sha256": "9a090c613ba59444df947976d398c903920e3a4790c874e6e8c030c3f1ddd6b0"
+    },
+    "local_body_leading_actual1_20261012_preexecution.zip": {
+      "path": "local_body_leading_actual1_20261012_preexecution.zip",
+      "sha256": "ca54ae62179cb682f57d4577ad0b58ea493c68020aeb84ffc57183055e5e1fec"
+    },
+    "local_body_leading_actual1_20261012_executed.zip": {
+      "path": "local_body_leading_actual1_20261012_executed.zip",
+      "sha256": "6dd226545ab72c107fe35be4a441090e5f27d56a667b0a2e0b3c87a0b1f95db0"
+    },
+    "local_body_leading_language_preflight_20261012.json": {
+      "path": "local_body_leading_language_preflight_20261012.json",
+      "sha256": "eb49f4a66384b5604fc470c116ed9b5bdbe2d2e0b13b06bbe78180fc4f9a4351"
+    }
+  },
+  "native_exit": {
+    "actual1": 1,
+    "actual1_failure": "Exact SymPy determinant expression required canonical simplification; preserved full bytes and natural failure.",
+    "actual2": 0,
+    "natural_exit": true,
+    "stderr_empty": true,
+    "executed_source_inputs_identical_before": true
+  },
+  "inequality_1": {
+    "range": "all evenN>=4,1<=R<=N/2,L>0; arbitrary native fields/SU4 links/canonical occupations",
+    "statement": "(J-K_top2V(h))/V >= [sum_B |B|J(B_B)-K_top2V(directsum h_B(constant B_B,I,open))]/V-E_RL",
+    "errors": "E_RL=(1024L^3+D)sqrt(48R^4<A/V>)+4bL sqrt(1728R^5<C/V>)+12bL/R+D<M>/L^3",
+    "occupations": "Complete GLOBAL2V across all box levels; no fixed2|B| and no positive-only prescription",
+    "first_gate": {
+      "R": 4096,
+      "L": 4294967296,
+      "field_error_upper": "356811923176489970264571492363287522238833623/11505236063118821809467553221049758295155052665230762065499525194094891251552061640493342548634082305351687288311769174890162545204122663839542235560926343960177145179191391057683342054479750023644997308933440369205641643669917624414330439074612943178454432683813523087356623740062701843509462805095950344781824",
+      "curvature_error_upper": "7566047373982433/669692879491417075592765655662501131600878007315958504652343992731469406953085076558248986759809911329746670573470716765741965803557696277249036098418660925245910485926514436588817162816398196367372136384565404686473871329212422972447846496629816432160699779855408885478776864478289024177325354254336",
+      "tail_error_upper": "913738143146967/21267647932558653966460912964485513216",
+      "boundary_error": "22698142121947299/134217728",
+      "close_minus21_comparison": false,
+      "reason": "All-field tail-safe capped box boundary price exceeds21; no claimed uniform-body minimization or Clifford rigidity."
+    }
+  },
+  "inequality_2": {
+    "range": "all evenN>=4,1<=R<N,ANY one common real mu",
+    "statement": "<H>/V >= <Q>/V +Lambda[<J>/V-2mu-(R^-3/V)sum_z<Tr(h_Bz-mu)_+>] +F<W> -(12Lambda b/R+D_ch)sqrt(<s>)",
+    "representation": "Actual reduced density matrices on every translated R-cube, exact discrete IMS overlap1-1/R; all fields, all ordered Jordan, native curved links remain",
+    "fullH": "Q exact nonnegative Phi4chi/Haar3chi/20/shared64E^2; active1+aux63 charged length1/2 full canonical corrections D_ch retained; fullRef/Gauss/noncompactU1 unchanged",
+    "D_ch_exact": "855444290449274477/35184372088832",
+    "evaluated_boundary_error": "68094426365841897/144115188075855872",
+    "price_applies": "R4096 forN>=8192; smallerN useR<=N/2 and144b/R, not same small price"
+  },
+  "actual_family_support": {
+    "authority": "Inherited translating minimizing-character originating family and coercivity, not a computed state or point-source gate",
+    "moments": "<s_x^2><2^14; <A/V><40*2^-2035; <C/V><(10/7)*2^-2035",
+    "local_patch": "ForR-box: P(max s>L^2)<=R^3M/L^4; P(mean tree-transport deviation squared>epsilon^2)<=48R^4<a>/epsilon^2; P(mean residual linkHS squared>epsilon^2)<=1728R^5<c>/epsilon^2",
+    "executed_parameters": "R=2^12,L=2^32,epsilon^2=2^-200",
+    "executed_failures_upper": "cutoff2^-78; each field/curvature<2^-1700",
+    "paid": "Probabilistic boundedness/local approximate covariant constancy/contractible flatness of ACTUAL FAMILY under inherited moments",
+    "not_paid": "Clifford/radial nonzero body window, canonical patch minimizer identification, centre/holonomy selection, rigidity, full quantum source=ground, spectral gap/phase/atom"
+  },
+  "independent_exact_controls": {
+    "sites": 4,
+    "AP_edge_retained": true,
+    "gauge_covariance_exact": true,
+    "pure_gauge_face_identity": true,
+    "curved_face_cost": "18432/4225",
+    "face_HS_square": "36864/4225",
+    "cut_rank": 8,
+    "ordered_Jordan": "172/27",
+    "commuting_cross_excess": "32/9",
+    "IMS_onsite_and_half_edges_identity": true
+  },
+  "canonical_adverse": {
+    "complete_top4": "45790349211289515/2251799813685248",
+    "wrong_two_each": "19624435376266935/1125899906842624",
+    "wrong_positive_only": "58873306128800805/2251799813685248",
+    "dual_exact": "45790349211289515/2251799813685248",
+    "particles": 4,
+    "dimension": 8
+  },
+  "integration_debt": "Distinct IMS lower is exact and boundary price<1, but untruncated native patch positive-part functional remains unminimized. Parent must not replace it by the periodic uniform identity-link norm theorem, the component-23.576 lower, or source<-21 upper. Neither route proves ground-family rigidity.",
+  "law_changed": false,
+  "scientific_admission": false,
+  "campaign_complete": false,
+  "checks": "Required new scientific exact-control CLI executed; no tests/build/lint/formatter/old producer/optimizer/eigensolver/checker rerun. Parent should run final diagnostics for new Python and validate interface integration."
+}

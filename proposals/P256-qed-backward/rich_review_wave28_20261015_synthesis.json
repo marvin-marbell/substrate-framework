@@ -1,0 +1,792 @@
+{
+  "kind": "INDEPENDENT_SAME_I16_CHARGED_FIELD_OPERATION_AND_COMPLETE_CONNECTED_CORRELATION",
+  "governor": {
+    "plan_id": "issue222-rich-backward-candidates-20261014",
+    "revision": "4d18ee8ff095f433b789364da88823e1ed4264e7f184b84e6706edb863c4cbfc",
+    "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "independent-review",
+    "requirements": [
+      "outcome",
+      "verification"
+    ],
+    "parent_sole_plan_writer": true
+  },
+  "law_id": "open-gauss-cube-qlink3-I16-t1-U4-20261015",
+  "input_binding": {
+    "model": "rich_open_gauss_carrier_20261015_model.py",
+    "model_SHA256": "621fd5b76f9caa06accd9f99c5504c42e2ea50aac7471618c8038029f28eb214",
+    "reference": "rich_open_gauss_carrier_20261015_neutral_reference.npz",
+    "reference_SHA256": "53a7a4f73fc41692b3f933993cfa2f586c83793c5d39af20a3371b2f6d01f4bd",
+    "basis_hash": {
+      "neutral": "a42641b65502c9c82de94f58aa70490925d828cac873604f769092600cb7a599",
+      "addition": "7bfd5c02af842905bdd201f45140bce71c844f2c66a40b8fbd88ae2a30aaa369"
+    },
+    "dimensions": {
+      "neutral": 195380,
+      "addition": 141391
+    },
+    "reference_scope": {
+      "energy": -6.392057043848836,
+      "residual": 4.231936421659232e-13,
+      "declared_shared_input_not_independent_solve": true
+    }
+  },
+  "verdict": "Retain an observed scoped finite same-H charged/field interaction: disjoint pure-field intervention changes own-t0 charge motion and remote field energy, while actual path cut defeats charge transport. Complete and connected correlators remain unamputated amplitudes, never event probabilities or on-shell scattering. Exact cut regional conservation does not imply all correlations vanish.",
+  "preparation": "Fresh normalized B_source\u2020\u03a9, primitive up addition at anchor0; pure-field exp[-i0.8 ImW_right] on opposite right yz face. Identical charged input in full/cut arms. No evolved ancestor arrays read.",
+  "raw_source_weight": 0.5000000000000024,
+  "operational": {
+    "full": {
+      "initial_matter_density_difference_max": 1.1535911115245767e-16,
+      "initial_physical_Q_right": [
+        -0.10049204769459309,
+        -0.10049204769459265
+      ],
+      "initial_EL": [
+        0.019650595619004233,
+        0.01965059561900434
+      ],
+      "endpoint_physical_Q_right": [
+        -0.4973860422785716,
+        -0.49567776814781417
+      ],
+      "own_t0_changes": {
+        "rho_right": [
+          0.3968939945839785,
+          0.39518572045322153
+        ],
+        "physical_Q_right": [
+          -0.3968939945839785,
+          -0.39518572045322153
+        ],
+        "EL": [
+          0.028583082623772727,
+          0.02975533771665405
+        ],
+        "ER": [
+          0.02292148984120438,
+          0.0065175187923223535
+        ],
+        "H": [
+          1.3589129821411916e-13,
+          3.68594044175552e-14
+        ],
+        "own_HR": [
+          0.8327182767908412,
+          0.755811920811521
+        ]
+      },
+      "pulse_minus_unpulsed_change": {
+        "rho_right": -0.0017082741307569704,
+        "physical_Q_right": 0.0017082741307569704,
+        "EL": 0.0011722550928813212,
+        "ER": -0.016403971048882027,
+        "H": -9.903189379656396e-14,
+        "own_HR": -0.07690635597932016
+      },
+      "endpoint_flux_current": [
+        [
+          -0.01434768289651576,
+          -0.014347682896512498,
+          -0.014347682896512344,
+          0.005238806612085081,
+          0.005238806612085102,
+          0.005238806612085974,
+          0.0052388066120840765,
+          0.026043234046000636,
+          0.005238806612085951,
+          0.005238806612084077,
+          0.026043234046000657,
+          0.0260432340459981
+        ],
+        [
+          -0.01995431376892155,
+          -0.009197697396732256,
+          -0.018984762583276357,
+          0.008021710529059053,
+          -0.000617561597530213,
+          -0.0072710058707882224,
+          -0.004042082978586084,
+          0.026945515877144,
+          0.042239864515562255,
+          -0.025290823378650608,
+          0.07194676958664364,
+          -0.029420628010890057
+        ]
+      ],
+      "endpoint_physical_charge_current": [
+        [
+          0.01434768289651576,
+          0.014347682896512498,
+          0.014347682896512344,
+          -0.005238806612085081,
+          -0.005238806612085102,
+          -0.005238806612085974,
+          -0.0052388066120840765,
+          -0.026043234046000636,
+          -0.005238806612085951,
+          -0.005238806612084077,
+          -0.026043234046000657,
+          -0.0260432340459981
+        ],
+        [
+          0.01995431376892155,
+          0.009197697396732256,
+          0.018984762583276357,
+          -0.008021710529059053,
+          0.000617561597530213,
+          0.0072710058707882224,
+          0.004042082978586084,
+          -0.026945515877144,
+          -0.042239864515562255,
+          0.025290823378650608,
+          -0.07194676958664364,
+          0.029420628010890057
+        ]
+      ],
+      "endpoint_right_electric_power": [
+        0.008033501332135385,
+        0.004820382377202493
+      ],
+      "preparation_work": 0.22406634560522587
+    },
+    "cut": {
+      "initial_matter_density_difference_max": 1.1535911115245767e-16,
+      "initial_physical_Q_right": [
+        -0.10049204769459309,
+        -0.10049204769459265
+      ],
+      "initial_EL": [
+        0.019650595619004233,
+        0.01965059561900434
+      ],
+      "endpoint_physical_Q_right": [
+        -0.10049204769459306,
+        -0.10049204769459258
+      ],
+      "own_t0_changes": {
+        "rho_right": [
+          -2.7755575615628914e-17,
+          -6.938893903907228e-17
+        ],
+        "physical_Q_right": [
+          2.7755575615628914e-17,
+          6.938893903907228e-17
+        ],
+        "EL": [
+          0.043558045368474435,
+          0.04355804536847452
+        ],
+        "ER": [
+          0.01725799983692001,
+          0.005471294792770635
+        ],
+        "H": [
+          8.104628079763643e-15,
+          -2.1094237467877974e-15
+        ],
+        "own_HR": [
+          -4.929390229335695e-14,
+          -2.9753977059954195e-14
+        ]
+      },
+      "pulse_minus_unpulsed_change": {
+        "rho_right": -4.163336342344337e-17,
+        "physical_Q_right": 4.163336342344337e-17,
+        "EL": 8.326672684688674e-17,
+        "ER": -0.011786705044149373,
+        "H": -1.021405182655144e-14,
+        "own_HR": 1.9539925233402755e-14
+      },
+      "endpoint_flux_current": [
+        [
+          0.06068981627342694,
+          0.06068981627342791,
+          0.0,
+          0.14610269656104174,
+          0.0,
+          0.14610269656104444,
+          0.0,
+          0.0,
+          0.005377169606611364,
+          0.005377169606611469,
+          0.012044403920875751,
+          0.012044403920876152
+        ],
+        [
+          0.0606898162734274,
+          0.060689816273428385,
+          0.0,
+          0.14610269656104322,
+          0.0,
+          0.14610269656104574,
+          0.0,
+          0.0,
+          0.022450298457056015,
+          -0.015235432331199715,
+          0.02876329198237576,
+          -0.008922438805879793
+        ]
+      ],
+      "endpoint_physical_charge_current": [
+        [
+          -0.06068981627342694,
+          -0.06068981627342791,
+          -0.0,
+          -0.14610269656104174,
+          -0.0,
+          -0.14610269656104444,
+          -0.0,
+          -0.0,
+          -0.005377169606611364,
+          -0.005377169606611469,
+          -0.012044403920875751,
+          -0.012044403920876152
+        ],
+        [
+          -0.0606898162734274,
+          -0.060689816273428385,
+          -0.0,
+          -0.14610269656104322,
+          -0.0,
+          -0.14610269656104574,
+          -0.0,
+          -0.0,
+          -0.022450298457056015,
+          0.015235432331199715,
+          -0.02876329198237576,
+          0.008922438805879793
+        ]
+      ],
+      "endpoint_right_electric_power": [
+        -0.0029360164767730035,
+        -0.0006113211158308507
+      ],
+      "preparation_work": 0.22406634560511307
+    }
+  },
+  "connected": {
+    "full": {
+      "complete": [
+        3.238122288106869e-05,
+        0.0006578625592134861
+      ],
+      "connected": [
+        -0.0005753916977985557,
+        0.0011249881411240087
+      ],
+      "subtraction": [
+        0.0006077729206796244,
+        -0.0004671255819105226
+      ],
+      "BBdag": [
+        0.04386444861559331,
+        -0.10086837131016885
+      ],
+      "BJBdag": [
+        0.050405102606971834,
+        0.0005069845906663026
+      ],
+      "BFBdag": [
+        0.000774709117062781,
+        -0.00017216784029213728
+      ],
+      "background_F": [
+        1.8657154326580123e-18,
+        0.0
+      ],
+      "background_J": [
+        -3.470712000623422e-17,
+        -3.1244836438385317e-17
+      ],
+      "background_JF": [
+        0.006098087350621922,
+        0.00337354194397074
+      ],
+      "times": [
+        0.0,
+        0.6,
+        1.3,
+        2.4
+      ],
+      "field_edge": 8,
+      "field_edge_endpoints": [
+        4,
+        5
+      ],
+      "physical_current_edge": 2,
+      "current_edge_endpoints": [
+        0,
+        4
+      ],
+      "operator": "B_4(t3) [-J_bridge(t2)] [E_right_edge(t1)/16] B_0\u2020(0)",
+      "cumulant": "raw-GJ*f-GF*j-G*JF+2*G*j*f; all charge-allowed disconnected partitions retained",
+      "source": "raw positive-frequency addition B\u2020 from declared \u03a9; noncanonical Wilson strengths retained",
+      "meaning": "Complete ordered unamputated field-times-charge-current amplitude, no -i or timeordering; not probability, irreducible vertex or on-shell scattering",
+      "cut_semantics": "Actual cut active-edge current: bridge J=0. Neutral \u03a9 evolved with cut H on both sides; cut BBdag need not vanish.",
+      "numerical_resolution": {
+        "alternate": {
+          "complete": [
+            3.238122288104901e-05,
+            0.0006578625592134759
+          ],
+          "connected": [
+            -0.0005753916977985849,
+            0.0011249881411239798
+          ],
+          "subtraction": [
+            0.0006077729206796339,
+            -0.000467125581910504
+          ],
+          "BBdag": [
+            0.043864448615595804,
+            -0.100868371310167
+          ],
+          "BJBdag": [
+            0.05040510260697189,
+            0.0005069845906679853
+          ],
+          "BFBdag": [
+            0.000774709117062777,
+            -0.00017216784029213696
+          ],
+          "background_F": [
+            3.112533723543087e-18,
+            0.0
+          ],
+          "background_J": [
+            1.733094881427782e-17,
+            -4.685700630337875e-17
+          ],
+          "background_JF": [
+            0.006098087350621933,
+            0.003373541943970741
+          ],
+          "times": [
+            0.0,
+            0.6,
+            1.3,
+            2.4
+          ],
+          "field_edge": 8,
+          "field_edge_endpoints": [
+            4,
+            5
+          ],
+          "physical_current_edge": 2,
+          "current_edge_endpoints": [
+            0,
+            4
+          ],
+          "operator": "B_4(t3) [-J_bridge(t2)] [E_right_edge(t1)/16] B_0\u2020(0)",
+          "cumulant": "raw-GJ*f-GF*j-G*JF+2*G*j*f; all charge-allowed disconnected partitions retained",
+          "source": "raw positive-frequency addition B\u2020 from declared \u03a9; noncanonical Wilson strengths retained",
+          "meaning": "Complete ordered unamputated field-times-charge-current amplitude, no -i or timeordering; not probability, irreducible vertex or on-shell scattering",
+          "cut_semantics": "Actual cut active-edge current: bridge J=0. Neutral \u03a9 evolved with cut H on both sides; cut BBdag need not vanish."
+        },
+        "complete_abs_difference": 2.2160798014115203e-17,
+        "connected_abs_difference": 4.1093407800002e-17
+      }
+    },
+    "cut": {
+      "complete": [
+        0.0,
+        0.0
+      ],
+      "connected": [
+        0.0,
+        0.0
+      ],
+      "subtraction": [
+        0.0,
+        0.0
+      ],
+      "BBdag": [
+        0.04189887106795452,
+        -0.003148320646157178
+      ],
+      "BJBdag": [
+        0.0,
+        0.0
+      ],
+      "BFBdag": [
+        0.0004387255374671751,
+        4.776326389661087e-05
+      ],
+      "background_F": [
+        -1.6042436014481155e-18,
+        0.0
+      ],
+      "background_J": [
+        0.0,
+        0.0
+      ],
+      "background_JF": [
+        0.0,
+        0.0
+      ],
+      "times": [
+        0.0,
+        0.6,
+        1.3,
+        2.4
+      ],
+      "field_edge": 8,
+      "field_edge_endpoints": [
+        4,
+        5
+      ],
+      "physical_current_edge": 2,
+      "current_edge_endpoints": [
+        0,
+        4
+      ],
+      "operator": "B_4(t3) [-J_bridge(t2)] [E_right_edge(t1)/16] B_0\u2020(0)",
+      "cumulant": "raw-GJ*f-GF*j-G*JF+2*G*j*f; all charge-allowed disconnected partitions retained",
+      "source": "raw positive-frequency addition B\u2020 from declared \u03a9; noncanonical Wilson strengths retained",
+      "meaning": "Complete ordered unamputated field-times-charge-current amplitude, no -i or timeordering; not probability, irreducible vertex or on-shell scattering",
+      "cut_semantics": "Actual cut active-edge current: bridge J=0. Neutral \u03a9 evolved with cut H on both sides; cut BBdag need not vanish.",
+      "numerical_resolution": {
+        "alternate": {
+          "complete": [
+            0.0,
+            0.0
+          ],
+          "connected": [
+            0.0,
+            0.0
+          ],
+          "subtraction": [
+            0.0,
+            0.0
+          ],
+          "BBdag": [
+            0.04189887106795481,
+            -0.0031483206461576296
+          ],
+          "BJBdag": [
+            0.0,
+            0.0
+          ],
+          "BFBdag": [
+            0.00043872553746717694,
+            4.776326389660464e-05
+          ],
+          "background_F": [
+            2.389000933928292e-19,
+            0.0
+          ],
+          "background_J": [
+            0.0,
+            0.0
+          ],
+          "background_JF": [
+            0.0,
+            0.0
+          ],
+          "times": [
+            0.0,
+            0.6,
+            1.3,
+            2.4
+          ],
+          "field_edge": 8,
+          "field_edge_endpoints": [
+            4,
+            5
+          ],
+          "physical_current_edge": 2,
+          "current_edge_endpoints": [
+            0,
+            4
+          ],
+          "operator": "B_4(t3) [-J_bridge(t2)] [E_right_edge(t1)/16] B_0\u2020(0)",
+          "cumulant": "raw-GJ*f-GF*j-G*JF+2*G*j*f; all charge-allowed disconnected partitions retained",
+          "source": "raw positive-frequency addition B\u2020 from declared \u03a9; noncanonical Wilson strengths retained",
+          "meaning": "Complete ordered unamputated field-times-charge-current amplitude, no -i or timeordering; not probability, irreducible vertex or on-shell scattering",
+          "cut_semantics": "Actual cut active-edge current: bridge J=0. Neutral \u03a9 evolved with cut H on both sides; cut BBdag need not vanish."
+        },
+        "complete_abs_difference": 0.0,
+        "connected_abs_difference": 0.0
+      }
+    }
+  },
+  "correlation_times": [
+    0.0,
+    0.6,
+    1.3,
+    2.4
+  ],
+  "selected_correlation_scope": "One selected ordered complete B_4(t3) [-J_xbridge(t2)] [E_right_edge(t1)/16] B_0\u2020(0) and full charge-allowed cumulant. Positive-frequency addition; no -i or timeordering. Actual two-sided neutral/charged cut evolution.",
+  "first_circulation_null": {
+    "full": {
+      "complete": [
+        2.781825605372573e-17,
+        -1.2192192242778399e-17
+      ],
+      "connected": [
+        2.1391467891806037e-17,
+        -8.687610598505858e-19
+      ],
+      "subtraction": [
+        6.4267881619196936e-18,
+        -1.1323431182927813e-17
+      ],
+      "BBdag": [
+        0.04386444861559331,
+        -0.10086837131016885
+      ],
+      "BJBdag": [
+        0.050405102606971834,
+        0.0005069845906663026
+      ],
+      "BFBdag": [
+        1.1375652481625254e-16,
+        -1.0857607131084523e-16
+      ],
+      "background_JF": [
+        1.1805768641619052e-16,
+        1.3611029117150706e-17
+      ],
+      "background_F": [
+        -2.4755317371987288e-18,
+        -2.168404344971009e-19
+      ],
+      "background_J": [
+        -3.470712000623422e-17,
+        -3.1244836438385317e-17
+      ],
+      "charged_chain_norms": [
+        0.7071067811865475,
+        0.6762078637182796,
+        0.04597397600902959,
+        0.04397121893957987
+      ],
+      "neutral_bra_norm": 1.0000000000000255,
+      "physical_current_edge": 2,
+      "signed_branch": "positive-frequency addition; raw B_sink(t3) jQ(t2) F(t1) B_source\u2020(0); no -i, time-ordering or amputation",
+      "cumulant": "C4=raw-GJ*f-GF*j-G*JF+2*G*j*f; all other partitions vanish by conserved total charge. Field and current means use absolute-time neutral evolution under this variant.",
+      "probe_units": "F=sum face_orientation*E/16; jQ=-J on first +x bridge. Raw fourpoint and cumulant have field times charge-current units; B strengths not normalized."
+    },
+    "cut": {
+      "complete": [
+        0.0,
+        0.0
+      ],
+      "connected": [
+        0.0,
+        0.0
+      ],
+      "subtraction": [
+        0.0,
+        0.0
+      ],
+      "BBdag": [
+        0.04189887106795452,
+        -0.003148320646157178
+      ],
+      "BJBdag": [
+        0.0,
+        0.0
+      ],
+      "BFBdag": [
+        -1.1926223897340549e-18,
+        8.234515500027406e-17
+      ],
+      "background_JF": [
+        0.0,
+        0.0
+      ],
+      "background_F": [
+        -7.40660329339772e-18,
+        -2.710505431213761e-20
+      ],
+      "background_J": [
+        0.0,
+        0.0
+      ],
+      "charged_chain_norms": [
+        0.7071067811865468,
+        0.0,
+        0.050458660588180854,
+        0.0
+      ],
+      "neutral_bra_norm": 1.0000000000000007,
+      "physical_current_edge": 2,
+      "signed_branch": "positive-frequency addition; raw B_sink(t3) jQ(t2) F(t1) B_source\u2020(0); no -i, time-ordering or amputation",
+      "cumulant": "C4=raw-GJ*f-GF*j-G*JF+2*G*j*f; all other partitions vanish by conserved total charge. Field and current means use absolute-time neutral evolution under this variant.",
+      "probe_units": "F=sum face_orientation*E/16; jQ=-J on first +x bridge. Raw fourpoint and cumulant have field times charge-current units; B strengths not normalized."
+    },
+    "selection": {
+      "reason": "First measured circulation fourpoint was reflection-null (~2e-17): y\u2194z flips right circulation while source0,sink4,first x bridge remain fixed. That null is retained, not a no-interaction result. This selected actual one-edge E/16 probe breaks that measurement symmetry without changing H, \u03a9, source, times or operational pulse.",
+      "initial_circulation_result": "rich_review_wave28_20261015_result.json",
+      "selection_before_new_evolution": true,
+      "no_borrowed_outputs": true,
+      "scope": "One selected one-edge complete correlator; no profile catalogue or rerun of operational experiment"
+    }
+  },
+  "selected_numerical_method": {
+    "degree": 190,
+    "enclosures": [
+      [
+        -18.96875,
+        35.15625
+      ],
+      [
+        -24.0,
+        40.125
+      ],
+      [
+        -11.96875,
+        28.40625
+      ],
+      [
+        -16.0,
+        32.375
+      ]
+    ],
+    "max_Bessel_tail_500_terms": 3.0605303234947216e-55
+  },
+  "signs_and_units": "Incidence +tail -head; incidence E+rho=0; rho=n-1=-Qphysical. dotE=J; dotrho=-incidence J; jQ=-J; dotF=J/16; dotHE_edge={E,J}/32. H(theta)=e^(i theta E)H e^(-i theta E): first derivative -J, second contact.",
+  "exact_boundary_identities": {
+    "full": {
+      "gauss": 0.0,
+      "flux_current": 0.0,
+      "electric_power": 0.0,
+      "contact": 0.0,
+      "physical_charge_continuity": 0.0,
+      "pulse_matter_commutator": 0.0,
+      "pulse_left_field_energy_commutator": 0.0,
+      "regional_charge_commutator": 1.0
+    },
+    "cut": {
+      "gauss": 0.0,
+      "flux_current": 0.0,
+      "electric_power": 0.0,
+      "contact": 0.0,
+      "physical_charge_continuity": 0.0,
+      "pulse_matter_commutator": 0.0,
+      "pulse_left_field_energy_commutator": 0.0,
+      "regional_charge_commutator": 0.0
+    }
+  },
+  "numerical_resolution": {
+    "full": {
+      "endpoint_l2_difference": [
+        4.8672820530486335e-15,
+        4.446081805878608e-15
+      ],
+      "correlation_complete_abs_difference": 1.0565436361070955e-17,
+      "correlation_connected_abs_difference": 1.1225724131892195e-17,
+      "max_norm_drift": 6.195044477408373e-14,
+      "max_energy_drift": 1.3589129821411916e-13
+    },
+    "cut": {
+      "endpoint_l2_difference": [
+        1.0215780896170137e-14,
+        9.910080214695701e-15
+      ],
+      "correlation_complete_abs_difference": 0.0,
+      "correlation_connected_abs_difference": 0.0,
+      "max_norm_drift": 2.8199664825478976e-14,
+      "max_energy_drift": 2.1316282072803006e-14
+    },
+    "method": {
+      "degree": 190,
+      "enclosures": [
+        [
+          -18.96875,
+          35.15625
+        ],
+        [
+          -24.0,
+          40.125
+        ],
+        [
+          -11.96875,
+          28.40625
+        ],
+        [
+          -16.0,
+          32.375
+        ]
+      ],
+      "max_Bessel_tail_500_terms": 3.490788482049274e-51,
+      "interpretation": "Taylor expm_multiply against independent Chebyshev entire-block enclosures; finite numerical estimate excludes roundoff. No producer evolution repeated."
+    }
+  },
+  "independent_raw_review": {
+    "artifact": "rich_review_wave28_20261015_raw_review.json",
+    "conclusion": "Frozen source/current/Gauss meanings support scoped mechanism, not physical spin. Authoritative neutral effective controls are control_correction_result.json. Carrier archived control endpoint currents still need FULL-H-diagnostic qualification; not used as own-control motion here."
+  },
+  "execution": {
+    "operational": {
+      "command": [
+        "/home/administrator/substrate-framework/.venv/bin/python",
+        "rich_review_wave28_20261015_consume.py"
+      ],
+      "returncode": 0,
+      "natural_exit": true,
+      "elapsed_seconds": 154.35111097595654,
+      "input_SHA256": {
+        "rich_review_wave28_20261015_input.json": "606e90aa022e51dbc0f53939fb879c8a596cf39e6d195ef5fd66ba43c33624cf",
+        "rich_review_wave28_20261015_consume.py": "188ca01db583417c70ddfc4c59338f2ad3289b794624d8cd832824f60218d2c0",
+        "rich_review_wave28_20261015_capture.py": "d2101b3aa6b570bfa7739b31181ea8c6fc6ea34d3236839ce0960a772c86d71d",
+        "rich_open_gauss_carrier_20261015_model.py": "621fd5b76f9caa06accd9f99c5504c42e2ea50aac7471618c8038029f28eb214",
+        "rich_open_gauss_carrier_20261015_neutral_reference.npz": "53a7a4f73fc41692b3f933993cfa2f586c83793c5d39af20a3371b2f6d01f4bd",
+        "rich_photon_fullq_20261014_model.py": "f3af36d79727738822ed2d19b04bf6905c90de0110265717570e7868828dbf02",
+        "rich_photon_20261014_loop.py": "a6674ba9e4eab0cd66bef1bd0143d4c6d36a823297fe7bab3f960c60df0b0948"
+      },
+      "sources_and_inputs_unchanged": true
+    },
+    "selected_correlation": {
+      "command": [
+        "/home/administrator/substrate-framework/.venv/bin/python",
+        "rich_review_wave28_20261015_selected.py",
+        "--worker"
+      ],
+      "returncode": 0,
+      "natural_exit": true,
+      "elapsed_seconds": 163.09752307401504,
+      "input_SHA256": {
+        "rich_review_wave28_20261015_selected.py": "1124b1a4c5646de0528b5781acab51c0d8fbac41db6f1723112830944b4e7a77",
+        "rich_review_wave28_20261015_consume.py": "188ca01db583417c70ddfc4c59338f2ad3289b794624d8cd832824f60218d2c0",
+        "rich_review_wave28_20261015_input.json": "606e90aa022e51dbc0f53939fb879c8a596cf39e6d195ef5fd66ba43c33624cf",
+        "rich_open_gauss_carrier_20261015_model.py": "621fd5b76f9caa06accd9f99c5504c42e2ea50aac7471618c8038029f28eb214",
+        "rich_open_gauss_carrier_20261015_neutral_reference.npz": "53a7a4f73fc41692b3f933993cfa2f586c83793c5d39af20a3371b2f6d01f4bd",
+        "rich_photon_fullq_20261014_model.py": "f3af36d79727738822ed2d19b04bf6905c90de0110265717570e7868828dbf02",
+        "rich_photon_20261014_loop.py": "a6674ba9e4eab0cd66bef1bd0143d4c6d36a823297fe7bab3f960c60df0b0948"
+      },
+      "sources_and_inputs_unchanged": true
+    }
+  },
+  "diagnostics": {
+    "returncode": 0,
+    "summary": {
+      "filesAnalyzed": 5,
+      "errorCount": 0,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 21.806
+    },
+    "errors_by_file": {},
+    "rooted_LSP_exit": 0,
+    "scope": "Five stable new sources only. Rooted installed actual Pyright JSON-RPC; native LSP device unavailable. Frozen helpers not relabelled clean."
+  },
+  "limits": "One complete finite microscopic addition block. No physical Noether spin, event probability, on-shell Compton, photons, irreducible vertex, global ground or Nature conclusion. Cut \u03a9 evolved on both sides; full-H stationary eigenphase never substituted. Cut current/contact/power masked at primitive active-edge boundary.",
+  "artifacts": {
+    "input": "rich_review_wave28_20261015_input.json",
+    "result": "rich_review_wave28_20261015_result.json",
+    "first_result": "rich_review_wave28_20261015_first_result.json",
+    "source": "rich_review_wave28_20261015_consume.py",
+    "states": "rich_review_wave28_20261015_states.npz",
+    "exit": "rich_review_wave28_20261015_exit.json",
+    "selected_source": "rich_review_wave28_20261015_selected.py",
+    "selected_result": "rich_review_wave28_20261015_selected_result.json",
+    "selected_exit": "rich_review_wave28_20261015_selected_exit.json",
+    "raw_review": "rich_review_wave28_20261015_raw_review.json",
+    "language": "rich_review_wave28_20261015_language_final.json",
+    "manifest": "rich_review_wave28_20261015_manifest.json",
+    "capsule": "rich_review_wave28_20261015_delivery_capsule.zip",
+    "receipt": "rich_review_wave28_20261015_delivery_receipt.json"
+  }
+}

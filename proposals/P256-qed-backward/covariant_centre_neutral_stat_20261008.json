@@ -1,0 +1,128 @@
+{
+  "source_bytes": "import hashlib,itertools,json,math,os,sys,tempfile,time\nfrom pathlib import Path\nfor key in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[key]='1'\nimport numpy as np\nfrom scipy.linalg import expm\nstarted=time.monotonic();source=Path(__file__).read_bytes();input_path=Path(sys.argv[1]);raw=input_path.read_bytes();cap=json.loads(raw)\nexpected='bd4d5e1d0e9fcfadef72cc9dba2cc4f7e6efacc6a577ee331fcd5b82574e5e49';assert cap['capsule']['source_sha256']==expected\nwith tempfile.TemporaryDirectory(prefix='centre-stat-frozen-') as directory:\n    replay=Path(directory)\n    for name,text in cap['capsule']['source_bytes_at_IMPORT'].items():\n        assert Path(name).name==name and hashlib.sha256(text.encode()).hexdigest()==cap['capsule']['source_sha256_at_IMPORT'][name]\n        (replay/name).write_text(text)\n    sys.path.insert(0,str(replay))\n    import covariant_root_transfer as root\n    from covariant_induced_photon import Parameters,phi_frame\n    model=root.BosonicEdgeModel(8,((0,1),(0,2),(0,3),(0,4),(4,5),(4,6),(4,7),(1,5)))\n    masks=sum((np.rint(np.diag(model.n(i)).real).astype(int)*(1<<i) for i in range(4)),np.zeros(model.dimension,dtype=int))\n    Xstar=root.tensor_pauli(['X' if edge in ((0,1),(0,2),(0,3)) else 'I' for edge in model.edges])\n    matrixunits={}\n    for i,j in itertools.product(range(4),repeat=2):\n        one=np.zeros((4,4),complex);one[i,j]=1;matrixunits[i,j]=root.native_lift(model,one)\n    graph={m:[] for m in range(16)};pattern_error=0.\n    for i,j in itertools.product(range(4),repeat=2):\n        actual=Xstar@matrixunits[i,j].conj()@Xstar\n        target=(model.identity if i==j else 0)-matrixunits[j,i]\n        pattern_error=max(pattern_error,float(np.linalg.norm((abs(actual)>1e-10).astype(int)-(abs(target)>1e-10).astype(int))))\n        for row,col in np.argwhere(abs(actual)>1e-10):\n            ratio=target[row,col]/actual[row,col]\n            graph[int(masks[col])].append((int(masks[row]),ratio))\n    assert pattern_error==0\n    phase={};consistency=0.\n    for seed in range(16):\n        if seed in phase:continue\n        phase[seed]=1.+0j;queue=[seed]\n        while queue:\n            old=queue.pop()\n            for new,ratio in graph[old]:\n                desired=ratio*phase[old]\n                if new in phase:consistency=max(consistency,abs(phase[new]-desired))\n                else:phase[new]=desired;queue.append(new)\n    assert consistency<1e-12\n    C0=np.diag([phase[int(m)] for m in masks])@Xstar\n    PH_error=max(float(np.linalg.norm(C0@matrixunits[i,j].conj()@C0.conj().T-((model.identity if i==j else 0)-matrixunits[j,i]))) for i,j in matrixunits)\n    gamma,_=phi_frame(Parameters());_,basis=np.linalg.eigh(gamma[0]);frame=np.column_stack((basis[:,2:],basis[:,:2]))\n    Rb=frame.conj().T@(-1j*gamma[1]@gamma[2]@gamma[3])@frame\n    values,vectors=np.linalg.eigh(Rb);minus=vectors[:,values<0];Pminus=minus@minus.conj().T\n    GR=expm(1j*math.pi*root.native_lift(model,Pminus));C=GR@C0\n    active=sum((model.n(i) for i in range(4)),np.zeros_like(model.identity))\n    reference=sum((model.n(i) for i in range(4,8)),np.zeros_like(model.identity))\n    N_error=float(np.linalg.norm(C@active.conj()@C.conj().T-(4*model.identity-active)))\n    Ref_error=float(np.linalg.norm(C@reference.conj()@C.conj().T-reference))\n    external=[]\n    for edge_index,edge in enumerate(model.edges):\n        if edge in ((0,1),(0,2),(0,3)):continue\n        word=['I']*len(model.edges);word[edge_index]='Z';Z=root.tensor_pauli(word)\n        external.append(dict(edge=edge,actual_C_Z_Cdag_error=float(np.linalg.norm(C@Z.conj()@C.conj().T-Z))))\n    S=model.stabilizers[0];S_error=float(np.linalg.norm(C@S.conj()@C.conj().T-S));S_flip=float(np.linalg.norm(C@S.conj()@C.conj().T+S))\n    assert PH_error<1e-11 and N_error<1e-11 and Ref_error<1e-11 and max(row['actual_C_Z_Cdag_error'] for row in external)<1e-11\n    result=dict(source_bytes=source.decode(),source_sha256=hashlib.sha256(source).hexdigest(),\n        input=dict(path=str(input_path),sha256=hashlib.sha256(raw).hexdigest(),frozen_root_sha256=expected),\n        runtime=dict(executable=sys.executable,python=sys.version,numpy=np.__version__),native_full_dimension=model.dimension,\n        primitive_onsite_PH_antiCAR_matrixunit_error=PH_error,onsite_phase_consistency_error=consistency,\n        actual_phase_table={str(k):dict(real=v.real,imag=v.imag) for k,v in phase.items()},\n        active_number_complement_error=N_error,Ref_number_fixed_error=Ref_error,all_external_Z_controls=external,\n        actual_statistical_stabilizer_C_invariance_error=S_error,actual_statistical_stabilizer_C_flip_error=S_flip,\n        support_proof='C0=occupation-diagonal phase times X on the three onsite star edges, followed by coefficient conjugation. Gamma(R) uses actual onsite even matrix units. All X/Y support is onsite; external incident factors are Z. Therefore EVERY spatial Z_e commutes with its unitary part and coefficient K fixes real Z_e. The native root chord and reference edges are explicitly checked.',\n        connection_and_centre='For written D=Q^-1 dQ, C_D=Q^-1 Cstar Q gives D C_D=C_D D by trivialization. Four-mode PH gives centre phase z^-(4-N)z^-N=z^-4=1 per species. This is ideal pure-gauge connection descent; full outside law is not certified.',\n        scope='Actual primitive 8-edge/256-dimensional Ref4 neutral representation and Dstat edge algebra. Do not infer all lattice statistical stabilizers from only one native cycle; its exact phase outcome is reported, not hidden. No new state, projection or physical Hamiltonian modification.',\n        elapsed_seconds=time.monotonic()-started)\n    Path(sys.argv[2]).write_text(json.dumps(result,indent=2)+'\\n')\n    print(json.dumps(dict(output=sys.argv[2],source_sha256=result['source_sha256'],PH_error=PH_error,\n        external_Z_error=max(row['actual_C_Z_Cdag_error'] for row in external),S_preserved_error=S_error,S_flipped_error=S_flip,\n        elapsed_seconds=result['elapsed_seconds'])))\n    print('Natural exit: actual onsite primitive antiCAR, Ref4 and spatial Dstat conjugation')\n",
+  "source_sha256": "d777763fc87e48d6d587f7b3f603f5b8815c41d04efad662d6edd69ef91511a8",
+  "input": {
+    "path": "proposals/P256-qed-backward/covariant_root_transfer_capsule_bd4d5e1d.json",
+    "sha256": "f89f85c6f63f52d011d059fdc4476d416b550fafe360066d4b0615c143688b9d",
+    "frozen_root_sha256": "bd4d5e1d0e9fcfadef72cc9dba2cc4f7e6efacc6a577ee331fcd5b82574e5e49"
+  },
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3"
+  },
+  "native_full_dimension": 256,
+  "primitive_onsite_PH_antiCAR_matrixunit_error": 0.0,
+  "onsite_phase_consistency_error": 0.0,
+  "actual_phase_table": {
+    "0": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "1": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "2": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "4": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "8": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "3": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "6": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "10": {
+      "real": -1.0,
+      "imag": -0.0
+    },
+    "5": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "9": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "12": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "7": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "14": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "13": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "11": {
+      "real": -1.0,
+      "imag": 0.0
+    },
+    "15": {
+      "real": 1.0,
+      "imag": 0.0
+    }
+  },
+  "active_number_complement_error": 1.5439667322111937e-14,
+  "Ref_number_fixed_error": 1.9266749530975202e-14,
+  "all_external_Z_controls": [
+    {
+      "edge": [
+        0,
+        4
+      ],
+      "actual_C_Z_Cdag_error": 8.73907614922558e-15
+    },
+    {
+      "edge": [
+        1,
+        5
+      ],
+      "actual_C_Z_Cdag_error": 8.73907614922558e-15
+    },
+    {
+      "edge": [
+        4,
+        5
+      ],
+      "actual_C_Z_Cdag_error": 8.73907614922558e-15
+    },
+    {
+      "edge": [
+        4,
+        6
+      ],
+      "actual_C_Z_Cdag_error": 8.73907614922558e-15
+    },
+    {
+      "edge": [
+        4,
+        7
+      ],
+      "actual_C_Z_Cdag_error": 8.73907614922558e-15
+    }
+  ],
+  "actual_statistical_stabilizer_C_invariance_error": 8.73907614922558e-15,
+  "actual_statistical_stabilizer_C_flip_error": 32.0,
+  "support_proof": "C0=occupation-diagonal phase times X on the three onsite star edges, followed by coefficient conjugation. Gamma(R) uses actual onsite even matrix units. All X/Y support is onsite; external incident factors are Z. Therefore EVERY spatial Z_e commutes with its unitary part and coefficient K fixes real Z_e. The native root chord and reference edges are explicitly checked.",
+  "connection_and_centre": "For written D=Q^-1 dQ, C_D=Q^-1 Cstar Q gives D C_D=C_D D by trivialization. Four-mode PH gives centre phase z^-(4-N)z^-N=z^-4=1 per species. This is ideal pure-gauge connection descent; full outside law is not certified.",
+  "scope": "Actual primitive 8-edge/256-dimensional Ref4 neutral representation and Dstat edge algebra. Do not infer all lattice statistical stabilizers from only one native cycle; its exact phase outcome is reported, not hidden. No new state, projection or physical Hamiltonian modification.",
+  "elapsed_seconds": 5.2564228749834
+}

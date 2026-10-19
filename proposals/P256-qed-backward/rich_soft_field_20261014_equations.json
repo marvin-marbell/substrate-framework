@@ -1,0 +1,30 @@
+{
+  "law": "periodic-cubic-curl-electric-two-correlated-loops-joint-20261014",
+  "primitive_inputs": ["Quantum canonical field commutators", "Spinful CAR matter with unit charge", "Hubbard U=3, hopping t=1, bridge t_bridge=0.35", "Primitive electric coefficient g=10", "Periodic cubic geometry 64x4x4 lattice cells", "Finite noncompact single-mode amplitude projection and explicit Dirichlet cutoff"],
+  "geometry": {
+    "difference": "D_a f(r)=f(r+e_a)-f(r), periodic. Dual cochain placement uses divergence sum D_a E_a and curl components C(m)=(D_y m_z-D_z m_y,D_z m_x-D_x m_z,D_x m_y-D_y m_x). D C=0 exactly.",
+    "profiles": "m_z(r)=sqrt(2/V)cos(2pi n x/Lx) M_z and m_y(r)=sqrt(2/V)cos(2pi n x/Lx) M_y. Each normalized profile has sum f²=1. These are two independent orthogonal face-cochain polarization directions, not two overlapping loops relabelled.",
+    "metric": "C†C restricted to these two real cosine modes is lambda I2, lambda=4 sin²(pi n/Lx). Orthogonality and norms are evaluated on actual link arrays, not assumed.",
+    "canonical": "Let Phi be the normalized modal flux conjugate to M: [Phi,M]=i, H_E=g² lambda M²/2. A physical selected antinode plaquette flux is phi=f0 Phi, f0=sqrt(2/V), so P_phi=M/f0 and H_E=g² lambda f0² P_phi²/2. The factor lambda*2/V is derived from geometry and canonical transformation; no rotor inertia tuned with n.",
+    "limits": "Only cosine Fourier mode retained. Sine partner, all other q, longitudinal field and charge Gauss constraints are not jointly retained. Compact Fourier coordinates are NOT assigned independent compact rotors. The chosen coordinate is noncompact with numerical amplitude box, and its matter Hamiltonian is periodic but its field boundary is not a large-gauge quotient."
+  },
+  "matter": {
+    "sites": "Two square cycles (0,1,2,3) and (4,5,6,7), plus bridge (0,4). All 64 Nup=Ndown=1 configurations on the eight sites are retained; doubly occupied states included.",
+    "embedding_first": "xy squares at z=0 and z=1, spanning x,y=0,1; bridge along z. Flux couples to m_z cosine mode at x=0.",
+    "embedding_second": "Rotated xz squares at y=2 and y=3, spanning x,z=0,1; bridge along y. Distinct matter clusters couple to m_y mode. No shared orbitals or imposed cross-cluster interaction.",
+    "Hamiltonian": "H_m(phi)=U sum n_up n_down + sum_e[T_e exp(i s_e phi)+h.c.], with s_e=1 only on oriented closing edges (3,0),(7,4). T contains -t c†_dest c_origin with global CAR signs. Concentrating each plaquette flux on its closing edge is a legitimate finite graph gauge; bridge gauge phases vanish in this embedding.",
+    "sewing": "Closing-edge gauge gives H_m(phi+2pi)=H_m(phi). Matter CAR signs are from the global 16-orbital bit basis; no independently joined ring Fock signs. This does not compactify the projected field coordinate."
+  },
+  "joint_quantum": "H=H_E tensor I + integral dphi |phi><phi| tensor H_m(phi), discretized with Dirichlet central-difference kinetic energy. No ring curvature or oscillator frequency appears in H. Matter remains quantum for every retained amplitude and electric state; reduced-matter purity and [J,E]g measure actual feedback. TwoLeg exact root is H_total=H_xy tensor I+I tensor H_xz on distinct quantum matter clusters. Product factorization is exact for this selected law, not a common-matter full bulk photon phase.",
+  "operators": {
+    "flux": "F=sin(phi), Q=phi",
+    "current": "J=dH_m/dphi=i sum coupled [T exp(i phi)-h.c.]",
+    "contact": "K=d²H_m/dphi²=-sum coupled [T exp(i phi)+h.c.]",
+    "density": "rho=n0-n1 (actual site charge imbalance, no longitudinal Gauss assertion)",
+    "electric": "Normalized spatial electric-leg operator E_leg=g f0 sqrt(lambda) P_phi; physical full link profile is g f0 C(m_unit) P_phi",
+    "response": "chi_ab(z)=<g|Oa (z+E0-H)^-1 Ob|g>-<g|Ob (z-E0+H)^-1 Oa|g>, connected sources. Direct sparse full-H resolvents, not reported 16-state spectrum truncation.",
+    "consumer": "Unitary physical quantum-current insertion exp(-i amplitude J)|g>, followed by same full-H evolution. Observe matter/electric energy exchange, field,current,density and norm."
+  },
+  "wrong_cases": ["Bare E with matter Hilbert removed", "Charge-zero with all matter states retained", "Actual two closing edges cut (no magnetic loop)", "Dirichlet width pi,2pi,3pi at approximately fixed mesh spacing", "Change actual bridge 0.35 to0.9", "Increase transverse volume fourfold with same number of inducing loops: exposes sparse-density normalization, not photon speed fit"],
+  "scientific_boundary": "Finite projected full-quantum induction candidate. No imported Maxwell B², no charged rest mass identification, no propagating multiquanta packet or thermodynamic homogeneous photon claim, no full nonlinear compact parent-law or charged Gauss/source state."
+}

@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_common_frame_orbit_20261015_calculate.py", line 142, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_common_frame_orbit_20261015_calculate.py", line 60, in main
+    ref=min(reference_candidates,key=lambda x:x['energy']);J0=ref['J'];matrix,e0,vec0,v0=neutral_spectra[J0];ground=v0@vec0[:,0];energy=float(e0[0]);field0,material0=j_operators(model,'neutral')
+                                                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_common_frame_orbit_20261015_calculate.py", line 29, in j_operators
+    s=model['sectors'][name];field=[observable(model,name,matter=a) for a in s['frame']['left']];material=[observable(model,name,orientation=a) for a in model['rotor']['L']]
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_common_frame_orbit_20261015_model.py", line 121, in observable
+    return FormOperator(s,s,model['rotor'],model['radial'],[] if field_kind else [(matter,orientation,power)],field)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_common_frame_orbit_20261015_model.py", line 51, in __init__
+    cols=np.flatnonzero(source['spin']['j']==k);block=matrix[rows][:,cols].tocsr()
+                                                      ~~~~~~^^^^^^
+TypeError: 'dia_matrix' object is not subscriptable

@@ -1,0 +1,33 @@
+{
+  "kind":"EXACT_WITNESSES_FOR_EXECUTED_CHARGED_HEAT_ADVERSE_ASSERTIONS",
+  "execution":"charged_cell_heat_actual1_20261011_receipt.json controls",
+  "observed_residual_control":{
+    "state":"s=(1,0), normalized",
+    "operator":"H=[[0,r],[r,1]], r=1/131072",
+    "source_Rayleigh":"0",
+    "exact_residual":"||(H-Es)s||=r=1/131072",
+    "exact_centered_second_moment":"r^2=1/17179869184",
+    "inadmissible_observed_cap":"5679/100000000000",
+    "executed_rational_assertion":"5679/100000000000 < r < 1/65536",
+    "consequence":"Replacing certified residual by observation yields second-moment upper (5679/100000000000)^2 < exact residual squared, excluding this admissible residual. Source formation1/262144 is already included in the binding cap; it is not replaced by a measured float.",
+    "scope":"Synthetic exact witness rejecting generic cap substitution, not rerun of historical residual producer. Actual-source heat moments use the rigorous1/65536 cap."
+  },
+  "source_ground_control":{
+    "ground":"g=(1,0)",
+    "source":"s=(4/5,3/5)",
+    "overlap":"4/5",
+    "squared_infidelity":"9/25",
+    "phase_aligned_distance_squared":"2/5",
+    "executed_assertion":"2/5 > 2*(9/25)^2 and 2/5 <= 2*(9/25)",
+    "consequence":"Using squared infidelity directly as vector-distance parameter instead of sqrt(2I) rejects the true source-ground distance. Actual charged heat pays sqrt(2I), then2eta exp(-bt)."
+  },
+  "external_control":{
+    "actual_exact_witness":"One supported matter spectral atom10 plus shared external64, t=1/64",
+    "correct_heat":"exp(-74/64)",
+    "wrong_external_omission":"exp(-10/64)",
+    "executed_assertion":"outward correct upper < outward omitted-external lower",
+    "scope":"Synthetic discriminating heat witness; external energy is flux owner's once-shared64, not part of the individual cell kernel."
+  },
+  "actual_native_controls":"For BOTH actual profiles, each p0..3 and both orientations, exact full16CAR affine commutator; wrong half-affine sign and q2,3 crop fail on neutral V source slots. Signed number3 hole-frame D/R identity and unsigned-CAR rejection executed.",
+  "high_energy_control":"At b=2,a=5,t=1/16,x=1000000, tangent lies below actual heat while global floor-Hermite majorant lies above, with exact outward exponent brackets. Analytic all-spectrum proof, not this isolated sample, authorizes the enclosure."
+}

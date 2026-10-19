@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_current_retarded_higher.py", line 316, in <module>
+    with threadpool_limits(limits=1):result=run(args.output,args.term_cap,args.seed_cap)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_current_retarded_higher.py", line 290, in run
+    prices=rooted_prices(data,geo);tails=budget(prices,higher,signal)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_current_retarded_higher.py", line 109, in rooted_prices
+    q2=[F(geo['gram'][r,r],geo['den']) for r in range(len(bs[0]))]
+          ~~~^^^^^^^^
+KeyError: 'gram'

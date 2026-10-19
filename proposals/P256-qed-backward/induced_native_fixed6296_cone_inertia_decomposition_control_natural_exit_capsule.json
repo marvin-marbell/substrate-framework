@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/induced_native_fixed6296_cone_inertia_decomposition_control.py",
+    "--output",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/induced_native_fixed6296_cone_inertia_decomposition_control_receipt.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "observed_returncode": 0,
+  "natural_exit": true,
+  "source_sha256": "65696e779cff76b12c3eb0639cff1daa1c0fa1339424b796f1f21dc3038398b2",
+  "receipt_sha256": "201f8e8bd88c744b946ef3cf1981930dc3ca179dfb99cfc04a87498f525c3158",
+  "input_sha256": "9f4b82e8e5cba007b9dc1878ad8446c5d5b8ec2562762fe19ecf3f74744c7bd3",
+  "stdout": "{\n  \"actual_saved_coefficients\": {\n    \"epsilon_total\": 33.43696501830234,\n    \"epsilon_bare_primitive_electric\": 0.5,\n    \"epsilon_induced_from_saved_link_trace\": 32.93696501830234,\n    \"kappa_static\": 0.6177773813264895,\n    \"matter_linear_current_PROXY\": 0.14100245798012695,\n    \"photon_speed_IR_conditional\": 0.13592601237405916,\n    \"ratio_semantics\": \"photon speed / matter linear-current proxy, NOT squared-speed ratio\"\n  },\n  \"observed_decomposition\": {\n    \"actual_speed_ratio\": 0.9639974672868237,\n    \"actual_speed_ratio_deficit_percent\": -3.6002532713176327,\n    \"response_only_speed_ratio_DIAGNOSTIC_not_adopted\": 0.9712868948428139,\n    \"response_only_deficit_percent_DIAGNOSTIC\": -2.871310515718606,\n    \"bare_electric_multiplicative_speed_factor\": 0.9924950829721945,\n    \"pure_bare_explanation_predicted_ratio\": 0.9924950829721945,\n    \"pure_bare_prediction_minus_actual_ratio\": 0.028497615685370792,\n    \"factorization_absolute_defect\": 1.1102230246251565e-16,\n    \"epsilon_for_matching_current_proxy\": 31.072674568788436,\n    \"induced_electric_excess_relative_to_current_proxy\": 1.864290449513902\n  },\n  \"conclusion\": \"Primitive electric inertia contributes but cannot alone explain the recorded cone-proxy deficit: the unchanged induced electric/static response still fails the matter-current proxy relation. This separates one explanation, not a unique physical cause.\"\n}\n",
+  "stderr": "",
+  "derived_monotonic_implication": "At fixed positive kappa and induced epsilon, every nonnegative primitive bare-electric epsilon gives speed/current-proxy ratio <= .9712868948428139 <1. Thus changing only admissible primitive electric inertia cannot close this operator-proxy equality; not a physical dressed-pole or global no-go claim.",
+  "project_Pyright_CLI": {
+    "command": "pyright --pythonpath /home/administrator/substrate-framework/.venv/bin/python --outputjson proposals/P256-qed-backward/induced_native_fixed6296_cone_inertia_decomposition_control.py",
+    "cwd": "/home/administrator/substrate-222",
+    "version": "1.1.414",
+    "observed_returncode": 0,
+    "filesAnalyzed": 1,
+    "errors": 0,
+    "warnings": 0
+  },
+  "scope": "NEW arithmetic/control on actual saved fixed6296 coefficients; no original response, quadrature/finite-q refinement, electric deletion, covariance feedback/adoption, source/receiver/velocity fit or physical common-cone certification."
+}

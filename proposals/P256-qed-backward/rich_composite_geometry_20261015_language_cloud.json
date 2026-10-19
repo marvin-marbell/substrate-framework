@@ -1,0 +1,120 @@
+{
+  "kind": "ACTUAL_SCOPED_LANGUAGE_DELTAS_FOR_DRESSED_PROBE_AND_NEW_W",
+  "root": "/home/administrator/substrate-222",
+  "configuration": {
+    "pythonPath": "/home/administrator/substrate-framework/.venv/bin/python",
+    "analysis": {
+      "diagnosticMode": "openFilesOnly",
+      "typeCheckingMode": "basic",
+      "extraPaths": [
+        "/home/administrator/substrate-222/proposals/P256-qed-backward"
+      ],
+      "autoSearchPaths": true
+    }
+  },
+  "modules": {
+    "cloud_probe": {
+      "source_SHA256": "6a0055c69961e1dbd42331502973a4f9d1653afb14651637a1b1ff54d1a3edd3",
+      "actual_document_version": 1,
+      "positive_AST_LocalElectric": 1,
+      "actual_symbols": 156,
+      "diagnostics": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_geometry_20261015_cloud_probe.py",
+        "version": 1,
+        "diagnostics": [
+          {
+            "range": {
+              "start": {
+                "line": 127,
+                "character": 66
+              },
+              "end": {
+                "line": 127,
+                "character": 71
+              }
+            },
+            "message": "Cannot access attribute \"local\" for class \"Primitives\"\n\u00a0\u00a0Attribute \"local\" is unknown",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 154,
+                "character": 126
+              },
+              "end": {
+                "line": 154,
+                "character": 131
+              }
+            },
+            "message": "Cannot access attribute \"local\" for class \"Primitives\"\n\u00a0\u00a0Attribute \"local\" is unknown",
+            "severity": 1,
+            "code": "reportAttributeAccessIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportAttributeAccessIssue"
+            }
+          }
+        ]
+      },
+      "actual_scientific_natural_exit": 0
+    },
+    "cloud_variational": {
+      "source_SHA256": "b4428190297904cdaffb4955d97f0d3472c603023c694795dd8b172467f45f24",
+      "actual_document_version": 2,
+      "positive_AST_assemble": 1,
+      "actual_symbols_before_local_source_refinement": 253,
+      "diagnostics": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_geometry_20261015_cloud_variational.py",
+        "version": 2,
+        "diagnostics": [
+          {
+            "range": {
+              "start": {
+                "line": 110,
+                "character": 39
+              },
+              "end": {
+                "line": 110,
+                "character": 47
+              }
+            },
+            "message": "Argument of type \"_Array[tuple[int, int], Incomplete]\" cannot be assigned to parameter \"allow_pickle\" of type \"bool\" in function \"savez\"\n\u00a0\u00a0\"ndarray[tuple[int, int], dtype[Incomplete]]\" is not assignable to \"bool\"",
+            "severity": 1,
+            "code": "reportArgumentType",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 242,
+                "character": 35
+              },
+              "end": {
+                "line": 242,
+                "character": 43
+              }
+            },
+            "message": "Argument of type \"NDArray[float64]\" cannot be assigned to parameter \"allow_pickle\" of type \"bool\" in function \"savez\"\n\u00a0\u00a0\"ndarray[_AnyShape, dtype[float64]]\" is not assignable to \"bool\"",
+            "severity": 1,
+            "code": "reportArgumentType",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+            }
+          }
+        ]
+      },
+      "scientific_status": "Running; no result fabricated"
+    }
+  },
+  "interpretation": "Actual final delivered notifications retained. Probe has2 dynamic factory/base-Primitives.local typing findings despite actual tensor dispatch and natural0 scientific run; W has2 NumPy variadic-savez mapping findings. Created-file watched notifications repaired the initial stale missing-sibling import cache. No suppressions or clean-typecheck claim; no build/test/lint/formatter run. Combined with language_scoped30 and language_leading1 covers33 current owned Python modules."
+}

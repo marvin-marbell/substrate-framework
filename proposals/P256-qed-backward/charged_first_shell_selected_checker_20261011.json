@@ -1,0 +1,81 @@
+{
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--project",
+    "/home/administrator/charged_first_shell_pyright_scope_20261011.json",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--outputjson",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_first_shell_consumer_20261011.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_first_shell_execute_20261011.py"
+  ],
+  "returncode": 1,
+  "natural_exit": true,
+  "selected_files": [
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_first_shell_consumer_20261011.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_first_shell_execute_20261011.py"
+  ],
+  "source_sha256": {
+    "charged_first_shell_consumer_20261011.py": "e9419dab2c508a8a2c944c2466851a7ff72bb3c09cec07d826957b772a167124",
+    "charged_first_shell_execute_20261011.py": "0024b47197e3cc3adb85f9a6a91fc8b80386a020a6a2e551acbe805b36652453"
+  },
+  "config": {
+    "include": [
+      "substrate-222/proposals/P256-qed-backward/charged_first_shell_consumer_20261011.py",
+      "substrate-222/proposals/P256-qed-backward/charged_first_shell_execute_20261011.py"
+    ],
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward"
+    ],
+    "venvPath": "/home/administrator/substrate-framework",
+    "venv": ".venv",
+    "typeCheckingMode": "basic"
+  },
+  "stdout": {
+    "version": "1.1.414",
+    "time": "1791681763374",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_first_shell_consumer_20261011.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"real\" for class \"NDArray[Incomplete]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Incomplete]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Incomplete]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 191,
+            "character": 38
+          },
+          "end": {
+            "line": 191,
+            "character": 42
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_first_shell_consumer_20261011.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"imag\" for class \"NDArray[Incomplete]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Incomplete]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Incomplete]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 191,
+            "character": 75
+          },
+          "end": {
+            "line": 191,
+            "character": 79
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 2,
+      "errorCount": 2,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 6.652
+    }
+  },
+  "stderr": "",
+  "scope": "Final selected checker ONCE; no old checker"
+}

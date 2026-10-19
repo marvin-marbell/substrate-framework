@@ -1,0 +1,100 @@
+{
+  "kind": "FINAL_FOUR_EXPLICIT_REVIEW22_SOURCE_SCOPE",
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--pythonpath",
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "--outputjson",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave22_20261015_probe.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave22_20261015_capture.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave22_20261015_sources.py",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave22_20261015_sources_capture.py"
+  ],
+  "root": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "source_sha256": {
+    "rich_review_wave22_20261015_probe.py": "f5168fbf3a8439cf638dec974a76f11290d9f875accf993e84cfdc44c21e085b",
+    "rich_review_wave22_20261015_capture.py": "1d403bc60a62a7addb7f5c4448587b9c811746429b392cc7c8aa07ca839c3bff",
+    "rich_review_wave22_20261015_sources.py": "035865704b9ed4f7538e62bef7be0ad9f6e6785cf92215f596df30bb5f534248",
+    "rich_review_wave22_20261015_sources_capture.py": "ffde45cf75afde0d8c09c46c3695706e778e803c7d2dded008dedc51893b2bd3"
+  },
+  "returncode": 1,
+  "stdout": {
+    "version": "1.1.414",
+    "time": "1792062315129",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave22_20261015_probe.py",
+        "severity": "error",
+        "message": "Argument of type \"int\" cannot be assigned to parameter \"x\" of type \"ndarray[_AnyShape, dtype[Any]]\" in function \"norm2\"\n\u00a0\u00a0\"int\" is not assignable to \"ndarray[_AnyShape, dtype[Any]]\"",
+        "range": {
+          "start": {
+            "line": 144,
+            "character": 73
+          },
+          "end": {
+            "line": 144,
+            "character": 79
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave22_20261015_probe.py",
+        "severity": "error",
+        "message": "Argument of type \"int\" cannot be assigned to parameter \"h\" of type \"ndarray[_AnyShape, dtype[Any]]\" in function \"own_onebody\"\n\u00a0\u00a0\"int\" is not assignable to \"ndarray[_AnyShape, dtype[Any]]\"",
+        "range": {
+          "start": {
+            "line": 337,
+            "character": 41
+          },
+          "end": {
+            "line": 337,
+            "character": 42
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave22_20261015_probe.py",
+        "severity": "error",
+        "message": "\"__getitem__\" method not defined on type \"int\"",
+        "range": {
+          "start": {
+            "line": 340,
+            "character": 22
+          },
+          "end": {
+            "line": 340,
+            "character": 23
+          }
+        },
+        "rule": "reportIndexIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave22_20261015_probe.py",
+        "severity": "error",
+        "message": "\"__getitem__\" method not defined on type \"int\"",
+        "range": {
+          "start": {
+            "line": 340,
+            "character": 59
+          },
+          "end": {
+            "line": 340,
+            "character": 60
+          }
+        },
+        "rule": "reportIndexIssue"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 4,
+      "errorCount": 4,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 20.237
+    }
+  },
+  "stderr": "",
+  "scope": "Only4newreview sources selected; original model/calculate15errors neither fixed nor rechecked, not projectclean. Actual runtime independent consumers naturally completed separately."
+}

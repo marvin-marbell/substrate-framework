@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "covariant_native_haar_range_jets.py",
+    "--output",
+    "covariant_native_haar_range_jets_capsule_20261008.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "natural_exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/covariant_native_haar_range_jets.py\", line 357, in <module>\n    main()\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/covariant_native_haar_range_jets.py\", line 350, in main\n    started=time.monotonic();result=run();result['runtime_seconds']=time.monotonic()-started\n                                    ^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/covariant_native_haar_range_jets.py\", line 334, in run\n    supplier_runtime_seconds=supplier['runtime_seconds'],input_packet_modes=125,\n                             ~~~~~~~~^^^^^^^^^^^^^^^^^^^\nKeyError: 'runtime_seconds'\n",
+  "observed_elapsed_wall_seconds": 2550.606301490916,
+  "reason": "Consumer read nonexistent supplier.runtime_seconds after physical calculation; actual supplier contract is runtime.elapsed_seconds. Corrected before final rerun.",
+  "scientific_result_admitted": false
+}

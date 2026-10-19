@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_integrated_consumer.py", line 213, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_integrated_consumer.py", line 158, in run
+    J=[source_operator(m,a) for a in (0,4)];contact=source_operator(m,0,4)
+                                                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave49_20261016_integrated_storage.py", line 99, in source_operator
+    m.terms=selected;operator=m.lab_source(mode,other)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_local_frame_spatial_carrier_20261016_model.py", line 401, in lab_source
+    cache[rf]=self.register(self.rfsite,op)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_local_frame_spatial_carrier_20261016_model.py", line 152, in register
+    name='X'+str(len(self.ops[i]));self.sites[i].add_op(name,A,need_JW=False,permute_dense=True);self.ops[i][key]=name
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/networks/site.py", line 384, in add_op
+    if other_op.conj().transpose() == op:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/tenpy/linalg/np_conserved.py", line 2087, in transpose
+    cp.itranspose(axes)
+KeyboardInterrupt

@@ -1,0 +1,78 @@
+{
+  "kind": "ACTUAL_PHI_SUBLATTICE_Z_SYMMETRY_DISCRIMINATOR_NOT_CHARGE_CONJUGATION",
+  "parameters": {
+    "geometry": "tetrahedron",
+    "scalar_points": 7,
+    "scalar_extent": 4.0,
+    "scalar_metric": 1.0,
+    "scalar_quartic": 0.2,
+    "scalar_quadratic": 1.0,
+    "scalar_coupling": 0.65,
+    "electric": 1.8,
+    "plaquette": 0.25,
+    "vector_velocity": 0.6,
+    "orientation_azimuth_points": 8,
+    "orientation_polar_points": 6,
+    "neutral_family": "correlated_local_singlet_ONEHOP_full_colour_loop_images_SEVERE_paircut",
+    "charged_family": "all_Wilson_tree_uud_sources_full_spinhalf_both_copies_and_threehalf",
+    "scalar_volume_ratio": 2.0,
+    "vertex_mass_density": 3.0,
+    "eigen_tolerance": 1e-10,
+    "low_eigenstates": 12,
+    "times": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "density_kick": 0.35,
+    "field_kick": 0.3
+  },
+  "law": "Hhop=gPhi(F0+F0dag)+i v sum_ia R_i_a(Fi-Fidag), v=.6. Scalar hops are Phi-odd, vector hops Phi-EVEN. All quark AND white hops flip total fermion N_{0,2}; electric/Hphi/rigid/plaquette preserve it. Therefore Z H Z-H=-2 Hvector, not0 unless that actual term vanishes.",
+  "domain": "ACTUAL own1806-state neutralJ0/Phi7/R10/PW19 model, no two-level reduction. Neutral family is a direct sum of material counts tensor ALL7Phi coordinates, so it is Z-invariant; a nonzero compressed defect is a genuine counterexample to full primitive Z symmetry, not an arbitrary noncommuting projection.",
+  "actual_dimension": 1806,
+  "Z_squared_minus_I_Frobenius": 0.0,
+  "full_H_Frobenius": 1694.0966873013542,
+  "Z_H_Z_minus_H_Frobenius": 34.58554611394783,
+  "Phi_even_count_odd_C0_component_Frobenius": 17.29277305697392,
+  "defect_plus_twice_even_hopping_Frobenius": 4.442338761025482e-13,
+  "scalar_Cphi_bipartite_anticommutator_Frobenius": 0.0,
+  "Phi_Hamiltonian_reflection_defect_Frobenius": 2.7640763135386654e-14,
+  "actual_Omega": {
+    "raw_norm2": 0.9999999999999697,
+    "normalized_Z_expectation_real": 0.7206933785115219,
+    "normalized_Z_expectation_imag": 3.326544883690279e-18,
+    "distance_to_Zplus_norm2": 0.558613242976936,
+    "distance_to_Zminus_norm2": 3.4413867570230714
+  },
+  "actual_H_Z_commutator_on_Omega_norm": 5.5848536163004745,
+  "sources": {
+    "0": {
+      "raw_norm2": 0.8559520132147802,
+      "normalized_Z_expectation_real": -0.7333308605440928,
+      "normalized_Z_expectation_imag": 3.2752556029883885e-18,
+      "distance_to_Zplus_norm2": 3.4666617210881974,
+      "distance_to_Zminus_norm2": 0.5333382789118515,
+      "Z_source_intertwining_norm2_error": 0.0,
+      "expected_creation_sign": -1,
+      "meaning": "Actual RAW canonical source on dressedOmega, all finalPhi/R/PW kept; no native charged projection or assumption that Omega is a Phi-parity eigenstate."
+    },
+    "1": {
+      "raw_norm2": 0.8559145601271964,
+      "normalized_Z_expectation_real": 0.7333452820183944,
+      "normalized_Z_expectation_imag": -1.1172837711425751e-18,
+      "distance_to_Zplus_norm2": 0.5333094359632456,
+      "distance_to_Zminus_norm2": 3.466690564036827,
+      "Z_source_intertwining_norm2_error": 0.0,
+      "expected_creation_sign": 1,
+      "meaning": "Actual RAW canonical source on dressedOmega, all finalPhi/R/PW kept; no native charged projection or assumption that Omega is a Phi-parity eigenstate."
+    }
+  },
+  "decision": "If observed defect is nonzero, withdraw the proposed simple Z-conservation explanation for this law. Physical particle-hole C symmetry/antiB is a DIFFERENT operator and is not falsified by this test. No assertion of another parity/5hop mechanism, Dirac doublet, binding, mobility no-go or rigid field-return gate.",
+  "resource": {
+    "peak_RSS_KiB": 188232,
+    "elapsed_seconds": 6.082582235336304
+  }
+}

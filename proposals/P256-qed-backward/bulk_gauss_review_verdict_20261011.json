@@ -1,0 +1,92 @@
+{
+  "kind": "INDEPENDENT_BOUNDARY_BULK_GAUSS_REVIEW_NOT_SCIENTIFIC_ADOPTION",
+  "binding": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "df7d591da9b2d430c19e2f155e5f09fa73a8c0279518e36743e369252b9a3cf5",
+    "accepted_scoped_science_unchanged": "c8dc7a8e10cc6da564e0b3e01dabe9b60765e43bfa7b32ddcacc84063d36861b",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "requirement_ids": ["outcome", "verification"],
+    "contract_sha256": "cbccd8d39c1c6b0e4eb6e467e48d4a378389b84300d36d6f7b7a8cca6153f579",
+    "proof_sha256": "6cd70df508a7cdcc2cb9042ac75346dab943671f8936745929bd0aea70b30b5f",
+    "scientist_sha256": "6a0135cc49346c9025d114425a6f702025a868094814fc9f074a3beef6d5f7b2"
+  },
+  "overall_verdict": "VALID finite graph algebra, primitive dual normalization, exact native Coulomb/Gauss obstruction, and explicitly CONDITIONAL state/dynamics bridge. Affine sentence needs convention qualification; a forward reduced-wave PLUS interpretation is INVALID, but the actual full-electric translation operator has PLUS and is valid. No executed wrong-gluing implementation was found. No actual native state, covariance, ground phase or photon identity is established.",
+  "evidence": {
+    "new_source": "bulk_gauss_review_control_20261011.py",
+    "new_source_sha256": "bc84ce03784f75dda7ce887fb9aa14e153513caecfb990dbb8a92ffde1da848a",
+    "request": "bulk_gauss_review_exact_20261011_request.json",
+    "request_sha256": "9876876ec802e9e491d98b74a73932fcd670b3b5f610d62328ffc99d147d4a0b",
+    "receipt": "bulk_gauss_review_exact_20261011_receipt.json",
+    "receipt_sha256": "ec901c01e5396dcf0ddfa056981fc25ab0c44588feb14dc8a3796e4785076dc6",
+    "capsule": "bulk_gauss_review_exact_20261011_capsule.json",
+    "preexecution_zip": "bulk_gauss_review_exact_20261011_preexecution.zip",
+    "preexecution_sha256": "8d39b42fc83ea1bb4940a74d231d5ffda0d0adb9fae3fc5b21cd1206f8665046",
+    "executed_zip": "bulk_gauss_review_exact_20261011_executed.zip",
+    "executed_sha256": "0667519035808e5daed842126d734dc5708d948ca5933a48920ade6c2878db86",
+    "natural_exit": true,
+    "returncode": 0,
+    "source_inputs_unchanged": true,
+    "elapsed_seconds": 1.4259479999891482,
+    "old_execution": "Read-only pin/ZIP verification: all8 frozen bulk members match; old pre/executed ZIP hashes and archived source/outputs match; archived exit0 natural_exit true. No old entrypoint was run.",
+    "new_control_scope": "Independently built native dynamic graph; exact SymPy integer/rational determinant and affine phases; Fraction Dirichlet/periodic stripe Poisson; symbolic polynomial DtN recurrence/energy; exact finite wholeP0 coalescence and pressure/state controls. No import of frozen scientific source.",
+    "diagnostics": "Before new source creation, actual direct pyright-langserver initialization/document symbols/definition requests/diagnostics exercised at substrate-222 root, with project Python configuration; mounted xd://lsp absent and reported. Positive ast_grep sparse.csc_matrix call query plus Python standard AST parse exercised. Existing target diagnostics are archived in request; missing imports were resolved by proper Python configuration, remaining existing NumPy typing diagnostics are not scientific findings. No build/lint/tests/formatters or post-edit diagnostic suite run. Parent owns selected final diagnostics."
+  },
+  "common_algebra": {
+    "status": "VALID finite local representation/algebra identification, not H/time/state intertwining",
+    "reason": "On an interior contractible patch, theta_common=theta_slab+A_slab gives identical scalar path functions; native ordered SU4 and fullPhi coefficients are unchanged, AP seams avoided, and all species retain fixed2V particle count. For a sufficiently small patch any finite occupation pattern extends to the canonical exterior; parity-even CAR relations remain local. Closed compact flow k has D_I k=D_torus k=0, hence k.E_full=k.Pi and identical Weyl/Wilson factors. None of this identifies global physical Gauss Hilbert spaces or states.",
+    "limits": "Bounded invariant Phi cutoffs are essential. Ref4->3 boundary legs, fixed boundary loops, pinned E and raw fractional/unwrapped flux are not common interior insertions. Neutral transport means gauge-complete charged endpoint CAR, not a charged bare CAR insertion. A local closed Weyl is blind to its own affine longitudinal phase, not to Coulomb influence on time evolution."
+  },
+  "affine_convention": {
+    "status": "SPECIFICATION_AMBIGUITY_WITH_EXACT_CONDITIONAL_FALSIFIER_NOT_NATIVE_IMPLEMENTATION_BUG",
+    "location": "boundary_bulk_proof_20261011.json common_algebra.affine, line8",
+    "trigger": "Interpret 'For primitive deck Qn the wave transition carries exp(+i2pi n.D_I^T L_I^-1 rho_I)' as the forward reduced section equation f(y+2piQn)=chi(n)exp(+i2pi lambda_n.rho)f(y).",
+    "actual_convention_evidence": "The frozen magnetic_thermal_proof primitive_lattice_and_affine_gluing explicitly fixes E=-i partial, full gauge section PLUS, reduced forward gluing MINUS, and native_hop_intertwining with MINUS. magnetic_mechanism_proof actual_discrete_deck gives PLUS for the full-electric translation OPERATOR. boundary_bulk common_operator only compares local path images and closed Weyls; cycles and Gauss controls do not implement an affine wave gluing consumer. Therefore it does not establish that an invalid PLUS gluing was executed.",
+    "derivation": "Let theta=y+D^Tlambda, lambda=L^-1Dtheta. Gauss DE=rho gives Psi(theta)=exp(+i lambda.rho) f(y). T_n=exp(i2pi n.E_full) acts as (T_n f)(y)=exp(+i2pi lambda_n.rho)f(y+2piQn). T_n f=chi(n)f therefore implies f(y+2piQn)=chi(n)exp(-i2pi lambda_n.rho)f(y). For a forward charged hop delta rho=Dk, its Peierls factor on shift is exp(i2pi k.Qn)=exp(-i2pi lambda_n.Dk), because k.n is integer. This equals U_rho'/U_rho only for forward reduced MINUS; PLUS is correct for the full translation or reverse transition.",
+    "exact_native_witness": "N4 terminal normal chord64: h=lambda_n.Dk=146/693, k.Qn=547/693. Correct MINUS differs from hop phase by integer1. Incorrect forward PLUS has residual401/693 turns, so it fails preservation of the same Bloch fibre. Full PLUS translation total is1 turn and is exactly conserved.",
+    "consequence": "Literal forward reduced PLUS would invalidate the claimed native CAR domain preservation, not the saturated lattice/determinant or fullE operator identity. Treating the PLUS operator factor as already wrong would itself be a false finding.",
+    "smallest_correction": "Qualify line8 as the PLUS full-electric translation operator factor, and write the forward reduced wave-gluing equation with MINUS explicitly, including Bloch character. Do not flip the full gauge-section or translation-operator sign. No target bytes were edited."
+  },
+  "primitive_deck_and_heat": {
+    "status": "EXACT_ALGEBRA_AND_DERIVED_INTEGRATED_FREE_HEAT",
+    "derivation": "For D=[T B] with unimodular tree T and X=T^-1B, C=(-X;I) has identity chord rows and is saturated ker_ZD. Its Gram determinant is det(I+X^TX)=det(I+XX^T)=det(DD^T). Orthogonal Q=C G^-1 C^T; C^T Z^M=Z^d therefore QZ^M=C G^-1 Z^d, dual to C Z^d. The primitive radian covolume is (2pi)^d/sqrt(detLI); cycle-only volume is larger by detLI. Integrating every normalized character unfolds reciprocal momenta exactly, giving that covolume times (4pi64beta)^(-d/2). Density holonomy shifts momenta but is not a second CAR-independent character integral.",
+    "exact_native_control": "N4 M112,I32,d80; detLI=detCGram=435403533737610087890625 exactly, not just the old floating log determinants.",
+    "scope": "beta strictly positive, HE64, primitive projected deck, legal affine gluing. Full canonical SU4/Phi/CAR heat inequalities are analytic, not an evaluated native partition function; those estimates are reviewed by the thermal owner. No finite ordinary full-cover trace and no b0 selection.",
+    "volume_bound": "Slab d/V=2-3/N<=2 and integer1<=detLI<=6^I. The torus dimension is2V+1, so its literal d/V is2+1/V, not <=2; the source's <=2 statement follows the Dirichlet/slab spectrum. Read 'torus analogous bounds' as N-uniform bounds, not identical slab constants."
+  },
+  "Coulomb_and_Gauss_price": {
+    "status": "VALID_EXACT_NATIVE_ADVERSE_CONTROLS_NOT_THERMAL_SCREENING",
+    "stripe_derivation": "With N=2m, all64 charged species wedge4 on x<m and wedge0 otherwise, c=128 and each species2V particles, Ref4 and neutral2V remain canonical. The row-constant Dirichlet solution is u_i=c[-i^2/2+i(2m^2-2m+1)/(2(2m-1))] for1<=i<m, with reflected antisymmetry and u0=uN-1=0. Periodic exact edge-difference recursion gives the meanzero solution. Since yz are constant, the3D quadratic forms divided by V reduce to64/N sum rho_i u_i. Summing gives slab64c^2(m-1)(m^2-m+1)/(6(2m-1)), torus64c^2(m^2+2)/12; their difference is -65536N^2/(N-1).",
+    "executed_exact_N": [4,6,8,10,16,32,64],
+    "consequence": "The absolute difference is O(N^4), per-volume O(N), not a uniform O(surface) operator price. Both energies/V grow O(N^2). This is a legal native occupation/form-family obstruction to an unrestricted operator comparison, not evidence the actual Gibbs measure samples that state with significant probability and not a no-go for screened state-dependent bridges.",
+    "local_update": "deltaHC=64[2rho.G.Dk+(Dk).G.(Dk)] contains arbitrary collective background correlations; finite support of k alone does not control its mixed term. FullE already contains this single HC contribution. Separate species HC would omit cross species terms.",
+    "DtN": "Independent polynomial recurrence verifies energy=2(1-u1) identically in lambda for N4/6/8; native exact lambda2,1,2-sqrt2 gives centre1/3,1/5,(63+40sqrt2)/769. gamma_N=2asinh(sin(pi/N)); N gamma_N->2pi and (N-1)gamma_N/2->pi, whereas the actual central-site numerator cosh(gamma_N/2)->1. Thus centre->sech(pi)>0. Fixed q nonzero modulo2pi gives gamma>0 and exponential interior decay. q0 is excluded from this fixed-nonzero decay claim.",
+    "DtN_normalization": "The quoted identity is per separated scalar mode amplitude, normal edges plus interior tangential energy; multiply by the yz mode norm when forming full3D total. Boundary tangential fixed-data energy is not dynamically included. This is longitudinal Gauss reservoir energy, not the magnetic J,K source response or a stiffness."
+  },
+  "domains": {
+    "bulk_target_status": "VALID_NARROWING",
+    "reason": "The target common_algebra.domains correctly distinguishes compact smooth equivariant core from closed form domain, preserves bounded cutoff/Weyl insertions at form level without claiming D(H) invariance, and prices unbounded temporal derivatives independently. Bounded insertion spectral measures only need an actual selfadjoint realization and stationary state; commutator/contact formulas require their additional domains.",
+    "inherited_contrary_sentence": {
+      "location": "Pinned magnetic_boundary_slab_proof_20261011.json quantum_form_and_Gauss.domain, SHA20bbcc4523137877d40bbda53094929d10af16a9e9de2b2cba799b413c71194e",
+      "trigger": "Use its statement that degree1 native Phi hopping preserves the entire closed form domain rather than the corrected bulk core statement.",
+      "analytic_witness": "At one site in R60 let f(z)=(1+|z|^2)^(-33/2) with smooth finite-form factors elsewhere. Quartic form integral behaves as integral r^(59+4-66)dr=integral r^-3dr and is finite; gradient kinetic is finite. Multiplication by a nonzero linear Phi component makes the quartic integral behave on a positive angular region as integral r^(59+4+2-66)dr=integral r^-1dr, divergent. Gauge-invariant radial input and legal singlet occupation factors can be chosen; a nonzero native linear hopping coefficient supplies the same radial growth. Smooth compact core remains preserved.",
+      "consequence": "That inherited entire-form-domain invariance is not a valid premise for native temporal identities. This is an analytic domain witness, not an executed native Gibbs example.",
+      "correction": "Keep the bulk narrowing; amend the precursor assertion to core preservation/form-relative bound0, with separate insertion-domain conditions. Outside worker target-edit permissions; no edits made."
+    }
+  },
+  "state_and_temporal_bridge": {
+    "status": "VALID_AS_A_SUFFICIENT_CONDITIONAL_CRITERION_OPEN_NATIVE_HYPOTHESES",
+    "criterion": "After constructing a legal common enlarged physical representation, put H_s=H0+sDeltaH with full collective Coulomb, removed/added degrees, boundary chart and all native terms counted once. Where differentiated Gibbs heat/forms and imaginary-time connected insertions are defined, d_s omega_s(A) is minus the connected Duhamel integral. The stated integral of absolute connected covariance gives |omega_slab(A)-omega_torus(A)|<=epsilon_N(A). It does not construct that representation, prove differentiability, or make its bound small. Mixed time words additionally require common dynamics and locally vanishing dynamical influence/resolvent passage.",
+    "pressure": "Even exact pressure/partition equality cannot select the state: independent finite control Hplus=-alphaZ and Hminus=+alphaZ has the same partition2cosh(betaalpha), but Z expectations +/-tanh(betaalpha). The archived Ising case is read, not rerun; it addresses the same invalid inference for boundary-selected phases, not the native law.",
+    "averages": "A bound on sum_x omega(|z_x|^4)/V controls spatially averaged cutoffs only. Arithmetic hotspot S_centre=V, others0 leaves average1 and selected centre diverging. This arithmetic falsifier is not a constructed target Gibbs measure. Selected-centre tightness, unwrapping and screening cannot be inferred without more spatial information.",
+    "compactness": "A countably generated norm-separable bounded core permits a diagonal subsequence of local state values and norm extension. The unrestricted real-parameter Weyl algebra is nonseparable in norm; use weak-star subnets and keep regularity unpaid. Merely choosing a rational Weyl core does not prove Stone-generator continuity.",
+    "thermal_measure": "At finite beta a stationary thermal GNS Liouvillian has signed frequencies; positive-definite matrix time functions produce positive matrix measures on R, not ground measures on [0,infinity). For Hdiag(0,1), A=X, the directly derived measure is [delta+1+exp(-beta)delta-1]/[1+exp(-beta)], satisfying detailed balance. Common state plus common dynamics and continuity at t0 are the actual Bochner/Levy bridge; equality of equal-time covariance or pressure alone is insufficient.",
+    "wholeP0": "Exact independent control H_epsilon=diag(0,epsilon,2epsilon), Omega=e0, A=e1e0* gives finite wholeQ spectral mass1 at epsilon. Its weak limit is delta0. The limiting H is zero with entire P0=I3, so the limiting wholeQ measure is0. Even norm convergence of finite H and selected ground vector does not commute with ground-block deletion. Near-zero control and convergence/selection of the entire limiting ground projection must be paid; no scalar subtraction or deleting only the chosen vacuum suffices.",
+    "ordered_limits": "N->infinity at fixedbeta, beta->infinity, global Bloch minimization/packets, selected spatial point versus interior average, fixedq versus q_N, and wholeP0 removal are distinct. Do not reinterpret finite thermal signed measures as a stationary physical minimizing ground or IR atom."
+  },
+  "physical_finish_line": {
+    "first_unpaid": "A native N-uniform ground/IR mechanism controlling connected boundary influence, collective charge/Gauss reservoir screening, magnetic defect/unwrapping and limiting entire-ground-removed covariance in the same dynamical representation.",
+    "not_delivered": ["actual fullphysical minimizing ground", "slab-periodic state identity", "common native temporal covariance", "ground phase selection", "magnetic stiffness", "IR atom", "photon pole/commoncone", "original periodic adoption", "campaign closure"],
+    "scientific_adoption": false
+  }
+}

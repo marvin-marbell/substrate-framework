@@ -1,0 +1,33 @@
+{
+  "kind": "SAME_FULL_ROTOR_FINITE_TRANSFER_FIELD_RESPONSE",
+  "plan_id": "issue222-rich-backward-candidates-20261014",
+  "captured_plan_revision": "673b0253d8fdda68dcb25d751a1b8f757476f04a8c4c749e92387deca47cd627",
+  "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+  "work_item": "photon-candidate",
+  "frozen_rotor41_capsule_sha256": "36d97496914d742caf5f73631ff87edc31c0e3c0cb937bc4f9fb40dfd03e8106",
+  "pure_module": "rich_collective_photon_response_20261016_model.py",
+  "functions": {
+    "path_data": "(theta[M,192],alpha[64],HS[M,64],arcs,D,beta,I=16,U=4,stabilized=False) -> full positive PH/Gauss transfer weight and interval data",
+    "interval_response": "(theta,alpha,HS,data,pos,arcs,D,beta,qvalues=(pi/2,pi),I=16,stabilized=False,derivative_step=.008,compare_step=False) -> source/current/contact/electric finite-M arrays",
+    "stable_hs_slice": "(HS,data,l,rng) -> exact local-HS conditional slice with stabilized cyclic Green; same target law",
+    "interval_vertices": "(theta_l,arcs,V,dt,f,need_same=False,spectral=None) -> (T_f,T_fconjugate,T_ffconjugate,T_ff optional,contact_only_T_ffconjugate); all first/second Frechet interval insertions"
+  },
+  "array_meanings": {
+    "source_hessian": "[qpol,n], FULL partition W''/W response, not irreducible; n0 is an ensemble static-shift Ward diagnostic, not electric zero-frequency inversion",
+    "logdet_hessian": "[qpol,n], paired conditional logdet second derivative; missing conditional-mean feedback if used alone",
+    "source_one": "[qpol,n], conditional full paired W'/W; empirical means should be symmetry-compatible, not forcibly zeroed",
+    "interval_contact": "[qpol], -source-contact-Hessian/dt; exact source-contact interval derivative, not substituted point-current contact",
+    "interval_current_matsubara": "[qpol,n], (source_hessian-contact_Hessian)/dt^2; includes full connected interval virtual response and annealed feedback",
+    "EE_matsubara": "[qpol,n], sum_lag exp(+2pi i n lag/M) EE(lag). n!=0=-source_hessian/(4sin^2(pi n/M)); n0 independently inserted from compact kinetic kernels",
+    "EE_tau": "[qpol,lag], complex fft(EE_matsubara)/M; imaginary parts retained",
+    "qminus_EE_matsubara": "Same actual paired insertions exchanged (q,n)<->(-q,-n); q-minus from all independently evaluated temporal n, not a second independent chain",
+    "direct_EE_matsubara": "Independent, high-variance direct kinetic-bond electric insertions, all n including exact same-bond contact",
+    "D_E": "dt*EE_matsubara, electric-source susceptibility; no pole fit or Maxwell completion",
+    "D_B": "dt*sum_lag exp(+2pi i n lag/M) <sin(F_xpol)_q(lag) sin(F_xpol)_-q(0)> from same new paths; no magnetic energy term added",
+    "derivative_step_difference": "Cold-only selected h/2 minus h source-Hessian derivative differences; unexercised entries are zero with explicit step_comparison_exercised mask",
+    "max_source_matrix_condition": "Analytic hot branch measured condition; raw cold value0 means unmeasured, replaced by null in final response summary",
+    "compact_temporal_winding": "Per-link integer gauge-representative winding diagnostic; not itself a gauge-invariant transverse flux-sector certificate"
+  },
+  "new_sampling": "Own new angle/HS/holonomy initial inputs and full determinant/kinetic sampling. No ancestor producer CLI and no old evolved/raw arrays used as new physics. The analysis consumes only this prefix's newly produced paths.",
+  "physical_scope": "Original same-charge law, Gauss-only original totalN64 mixture. Finite beta/M and finite chains. No photon pole, speed, Lorentz, groundstate, material mass, equilibrium or continuum certification."
+}

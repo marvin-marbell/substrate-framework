@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "-c",
+    "import itertools,json,zipfile,numpy as np\nfrom pathlib import Path\np=Path.cwd()\nr=json.loads((p/'joined_phi_u1_nonlocal_signal_interval_certificate_typed_verified_receipt_20261010.json').read_text())\nwith zipfile.ZipFile(p/r['immutable_inputs']['path']) as z: d=json.loads(z.read('actual_full_Q_AP_Coulomb_geometry.json'))\ng=np.array(d['Clifford_real'])+1j*np.array(d['Clifford_imaginary'])\nfound=[]\nfor bits in itertools.product((0,1),repeat=4):\n u=np.eye(4,dtype=complex)\n for i,b in enumerate(bits):\n  if b:u=u@g[i]\n if all(np.array_equal(u@g[i].conj()@u.conj().T,(1 if i==0 else -1)*g[i]) for i in range(4)):\n  found.append(dict(word=bits,unitary=np.array_equal(u@u.conj().T,np.eye(4)),Kramers=np.array_equal(u@u.conj(),-np.eye(4))))\nprint(json.dumps(dict(exact_integer_Clifford_time_reversal=found,all_gamma_entries_gaussian_integer=bool(np.all(np.isin(g.real,[-1,0,1])) and np.all(np.isin(g.imag,[-1,0,1]))))))\n"
+  ],
+  "natural_exit_code": 0,
+  "stdout": "{\"exact_integer_Clifford_time_reversal\": [{\"word\": [0, 1, 0, 1], \"unitary\": true, \"Kramers\": true}], \"all_gamma_entries_gaussian_integer\": true}\n",
+  "stderr": "",
+  "input_receipt_sha256": "6faff3a4576d6de88617ce08c21321cf8f68761ce63355f85d188e2087ff266b",
+  "scope": "Exact Gaussian-integer spin intertwiner control only; full body/state time-reversal and improved dynamic remainder not yet certified."
+}

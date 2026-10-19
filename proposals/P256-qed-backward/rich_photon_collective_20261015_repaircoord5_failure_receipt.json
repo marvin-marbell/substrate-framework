@@ -1,0 +1,11 @@
+{
+  "kind":"PRESERVED_STRICT_NUMERICAL_INDICATOR_FLOOR_FAILURE_NOT_PHYSICAL_CANDIDATE_FAILURE",
+  "mode":"repaircoord5","returncode":1,"scientific_completion":false,
+  "capture_wall_seconds":3173.671959400177,"source_input_changed":[],"peak_RSS":"UNKNOWN: failure preceded scientific resource report",
+  "capsule":{"file":"rich_photon_collective_20261015_repaircoord5_capsule.zip","sha256":"db7dcf90cfaf3b87ffda663919b7fa5e96c2399baae1202a9501c1595a8eaf14","bytes":291150940},
+  "actual_failed_step":{"duration":0.00006103515625,"directions":28,"endpoint_residual":2.9834264193655387e-18,"integrated_residual_estimate":1.9663278335196217e-22,"quadrature_error":2.732912356929141e-23,"reorthogonalization_correction_allowance":2.3804301245262057e-15,"local_indicator":2.3804303484881124e-15},
+  "first_cause":"The conservative recurrence-roundoff allowance has a fixed per-unit-time numerical floor. Halvingdt AND proportionaltolerance cannot improve that ratio; the strict2e-12 peroriginalfine-step threshold was below it. Actual truncation indicators were tiny. This is NOT new physical dynamicsfailure,not license to suppressguard/normalizeerrors away.",
+  "preserved_completed_coarse_anchor":{"file":"rich_photon_collective_20261015_repaircoord5_coarse_state1.npz","time":0.25,"shape":[3281350],"observed_norm":0.9999999999999026,"individual_step_receipts":"UNKNOWN: failure in subsequent fine grid occurred before old checkpoint serialized coarse receipts; notzero"},
+  "corrective_consumer":"repaircoord5b uses EXACT SAME coordinateH,t0,cuts,physicalparameters. Reuses completed coarse t.25 WITHOUTreplay; regenerates onlyunfinishedfine branch and continuesboth to.5. Newfine integratedindicator tolerance2e-10 is explicitly attainable above observed conservativefloatingfloor; independent fullstate/observable temporalcomparison still decidesaccuracy. Checkpoint aftereachgridanchor preserves receipts before nextbranch.",
+  "governor":"issue222-rich-backward-candidates-20261014@7b55612f4a129ce64c3f0ea19ef7364e9791a5a12557b5ea596d48b22f410451","work_item":"photon-candidate"
+}

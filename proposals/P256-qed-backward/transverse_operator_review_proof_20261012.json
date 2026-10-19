@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "owner": "TransverseOperatorProofReview",
+  "kind": "INDEPENDENT_REVISION_BOUND_FULL_TRANSVERSE_OPERATOR_PROOF_REVIEW",
+  "target": {"path": "transverse_ir_bound_proof_20261012.json", "sha256": "4884c75a130e12f96f4d28b5f4c00443bdb54235956b089235ba853e90f4abd9"},
+  "corrected_interface": {"path": "transverse_ir_bound_interface_corrected_20261012.json", "sha256": "bd59258de214267e89a6d69229fbd0052e01aab30c3e2e7233212f9ac1675a0c"},
+  "scalar_dependency": {"path": "closed_beta_inverse_interface_corrected_20261012.json", "sha256": "304f8a53f88c1b00f63a53764667a17b428273c561515cf12468ea8df32af6fe", "status": "CONDITIONAL_UNTIL_INDEPENDENT_SCALAR_REVIEW"},
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_review_revision": "ce2c7b56defad2c2deae54f62e6d80a620f60ca39fd70bebda9fbbf6fc27d0da",
+    "template": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "requirements": ["outcome", "verification"],
+    "scientist_contract_not_rebound": "f1be66ed7f077ea93037ff68d18c72e3cfe0591b31a3c79a107a25a460d59b61",
+    "parent_only_shared_writer": true
+  },
+  "verdict": "ACCEPT_CONDITIONAL_OPERATOR_COMPLETION_AND_IR_UPPER_THEOREM_ONLY",
+  "blocking_internal_findings": [],
+  "premises_not_discovered_by_controls": [
+    "Real closed-h source estimate for ALL form-domain test vectors on the actual globally minimizing compatible Bloch family: |<xi,E_h Omega>| <= ||h|| ||sqrt(L)xi||/16.",
+    "SAME full-word history TOTAL EE kernel identification and whole limiting P0 E_h Omega=0; real inverse bound1/256 transferred without finiteP0=limitingP0.",
+    "Compatible translation averaging and SAME-history U_x Omega=Omega, U_x e_h=e_tau_h, and strong commutation with L; not arbitrary beta or numerical beta0.",
+    "Actual full affine electric source and native fullH remain unchanged; Dh=0 cancels only source longitudinal contraction, never collective HC in H."
+  ],
+  "reviewed_sections": {
+    "premises_and_source_identity": "Accepted conditionally with the four explicit inherited inputs above. No original scalar packet discriminant is claimed novel and no parent nonnative inverse control supplies the native theorem.",
+    "energy_dual_map": "For each real local closed h the form estimate descends to ran sqrt(L), kills its null directions, and has a unique minimal Riesz vector b_h in ker(L)^perp. Testing against spectral intervals away from0 identifies b_h=L^(-1/2)e_h, sqrt(L)b_h=e_h, norm<=||h||/16. Real-linearity follows uniqueness, not a second representation. Complexification retains -2 Im<b_u,b_v>; triangle/Cauchy implies norm^2<=2(||b_u||^2+||b_v||^2)<=||u+iv||^2/128. No complex1/256 without additional structure.",
+    "native_fourier_and_finite_all_q": "Positive incidence D h(x)=sum(h_i(x)-h_i(x-e_i)); centered transform gives i2sin(p_i/2). Uncentered row is1-exp(-ip_i). P_T=I-hatp hatp^T/q^2, Hermitian rank2 off0; p0 rank3 torons and local curl rank0 are distinct. Native edge-center Nyquist gauge signs are retained in conjugate pairs. Electric characters are periodic, fermion AP222 momenta shifted. Finite B_N and compressed measures commute with periodic translations, giving all finite discrete fibres, not a sample-to-all extrapolation. For every even N>=4 and every p, inverse<=P_T/128 and band<=omega P_T/128. qN=2sin(pi/N) by componentwise sin monotonicity on distance to0; the smallest nonzero modes are six axis modes. At omega=kappa qN the bound is kappa qN P_T/128. Analytic family not computed native spectrum.",
+    "infinite_closed_cycle_completion": "In K=kerD in edge l2, a vector orthogonal to every translated plaquette has hatp_j f_i-hatp_i f_j=0 on one common full-measure set (three pairs). Closedness gives hatp dot f=0; off0 the first condition makes f parallel to hatp and the second kills it. p0 singleton is Haar-null, so the orthogonal complement within K is zero. Thus local cycle span is dense, including real density by conjugation. Infinite constant torons are not l2. Uniform B bound, not unbounded raw source bound, extends B and covariance uniquely. Only sqrt(L)1_(0,omega](L)B is a bounded completed source map; total sqrt(L)B may have a proper domain.",
+    "joint_operator_measure_and_a_e_disintegration": "Accepted; the joint-PVM/Radon-Nikodym option supplies the required common-set countable additivity, rather than assuming that independent a.e. decompositions for uncountably many sets share a null set. See constructive argument below. Compressed polarization matrices need not commute. nu_p zero-energy mass vanishes a.e. because integrated nu({0})=0 and positivity. mu_T=epsilon nu_p is locally finite on bounded energy sets, not necessarily a bounded total operator-valued measure. For actual local cycles, spectral calculus sqrt(L)B=e gives exact unweakened source Gram on each bounded positive band; monotone scalar integration recovers local total positive measure.",
+    "physical_residue_rescaled_velocity_measure": "Accepted as a measure pushforward and residue rescaling, not source rescaling. For unit transverse physical cochains, sigma(S)=mu(qS)/q. Inversevelocity integral equals integral_(0,kappa q] mu(d epsilon)/epsilon<=P_T/128. Mass<=kappa P_T/128; moment_j<=kappa^(j+1) P_T/128 for every integer j>=0 by v^(j+1)<=kappa^(j+1). q is native magnitude, p=a k_phys, physical velocity=a*kappa, a=1/64. Measurable transverse frames give2x2 positive measures with trace mass<=2kappa/128 on compact[0,kappa]; bounded mass gives subsequential weak compactness, not a prescribed-ray limit or a unique limit. Uniform sigma((0,eta])<=eta P_T/128 excludes a v0 MASS atom in every weak limit by continuous cutoff and eta down to0. Truncated1/v functions plus lower semicontinuity preserve inversevelocity bound. The limit can vanish; inverse-weight mass may escape to0.",
+    "exact_controls_and_countermodels": "All stated atomic, atomless, massive and zero families are compatible upper-bound countermodels when the original real constraint is retained. Symmetric fibres with inverse<=1/256 pass real1/256; a1/128 fibre requires complementary half-BZ asymmetry or another compatible real Gram. On a measurable half S, inverse<=P_T/128 on S and zero on -S makes real quadratic<=||h||^2/256 because the norms of real Fourier conjugate halves agree. These countermodels do not assert native spectra or native antiunitarity. A continuum extending to v arbitrarily near0 is allowed; c v_n delta_v_n has inverse c and zero weak MASS limit. See own independently executable countercontrols.",
+    "delivery_boundary": "Accepted only within explicit conditional theorem and upper-bound scope. No phase/stiffness, atom, lower residue, positive lower velocity, common cone, native ground, law/source/Cov/root/boundary adoption, whole static-GNS range theorem, bareB2 or photon admission."
+  },
+  "common_set_kernel_construction": [
+    "Choose measurable orthonormal transverse frame off0. K becomes L2(BZ;C2) with finite normalized Haar measure, and translations act as scalar characters.",
+    "Intertwining B tau_x=U_x B extends by spectral calculus to B 1_C(p)=P_U(C)B. Underlying P_U and P_L strongly commute.",
+    "For constant frame sections e_a define the finite joint complex matrix measures M_ab(C,A)=<B e_a,P_U(C)P_L(A)B e_b>. Positivity of every rational complex matrix test and total trace spatial domination <=2 Haar(C)/128 follow from B*B<=I/128.",
+    "Disintegrate this finite positive matrix measure over BZ, or disintegrate its trace and take matrix Radon-Nikodym derivatives. The spaces are standard Borel and fibres finite dimensional. This yields genuine finite positive matrix kernels nu_p(A), countably additive for every Borel A on one common full-measure set. Use a countable rational energy algebra and rational vectors to fix versions and domination there; uniqueness of measure extension supplies all energy sets, not an uncountable intersection of ad hoc null sets.",
+    "The multiplication operator determined by nu_p(A) agrees with B*P_L(A)B by matrix elements of spatial simple sections. Its total is<=I2/128 on that same set; zero-energy mass is zero there. Centered3x3 embedding gives P_T domination and correct boundary gauge.",
+    "Multiply kernel by epsilon to obtain mu_p; its inverse integral is nu_p total and band integral<=omega nu_p total. All thresholds and all bounded Borel energy sets use the same kernel and common set. No fibre value is forced on an arbitrarily selected Haar-null ray, point, curve or p0."
+  ],
+  "boundary_findings": [
+    {"id": "scalar-conditional", "status": "DEPENDENCY_NOT_YET_REVIEWED", "target": "premises_and_source_identity.conditional_input", "consequence": "Cannot unconditionally promote native inverse theorem based on interface ownership or executable controls; parent must compose independent scalar review."},
+    {"id": "finite-infinite-distinction", "status": "CORRECT_BOUNDARY", "consequence": "Every finite momentum is bounded, but infinite fibres only on one common a.e. set; selected rays and finite harmonic torons do not become infinite local source observables."},
+    {"id": "B-not-total", "status": "CORRECT_BOUNDARY", "consequence": "Cycle density gives bounded dual B and bounded positive-energy source bands, not total-source extension. Own diagonal spectral countermodel falsifies the stronger claim."},
+    {"id": "complex-factor-and-real-pair", "status": "CORRECT_BOUNDARY", "consequence": "Exact imaginary-cross factor2 must remain. Pointwise complex1/128 alone does not imply global real1/256; conjugate-pair constraints are additional inherited restrictions, retained by every promoted countermodel."},
+    {"id": "disintegration-not-commuting-compressions", "status": "CORRECT_BOUNDARY", "consequence": "Underlying joint PVM is commuting; compressed effects can fail to commute. Kernel disintegration, not simultaneous diagonalization of compressed matrices, supports the theorem."},
+    {"id": "weak-limit-zero", "status": "CORRECT_BOUNDARY", "consequence": "Nozero MASS atom at velocity0 in sigma weak limits is proved. It excludes neither small positive velocities nor inverse-weight mass escape, and does not provide lower mass, unique limit or an atom."},
+    {"id": "native-control-scope", "status": "FINITE_EXACT_CONTROLS_ONLY", "consequence": "Own N4/6/8 graph, AP and affine/CAR/SU4 factors are exact native factor controls, not fullH, solver or globally minimizing ground computations; arbitrary evenN theorem is analytic."},
+    {"id": "actual2-history", "status": "PRESERVED_CORRECTED_SUCCESSOR", "consequence": "Original actual1 failed epoch is immutable. actual2 corrects the64-independent-copy HC comparator only; sources, interfaces and proof are not rebound or rerun."}
+  ],
+  "verification_protocol": {
+    "own_consumer": "transverse_operator_review_consumer_20261012.py",
+    "own_runner": "transverse_operator_review_execute_20261012.py",
+    "own_epoch": "transverse_operator_review_actual1_20261012",
+    "native_controls": "NEW exact cyclotomic multiplication-table uncentered projector and centered gauge, allN4/6/8 Fourier/AP characters; complete frozen literal profiles; full64 collective rho/Gauss/fullE64, all65 EACH2V+Ref4, all64 charged color4 CAR factors, orderedSU4 two-link/fullmatrixJordan.",
+    "nonnative_controls": "NEW exact atomless/atomic/massive/zero and collapsing-velocity controls; real conjugate halves, imaginary-cross saturation, noncommuting compressed effects, selected-source projection/rescaling, Haar-null singleton versions, unit-vs-plaquette normalization, and unbounded total-source versus bounded dual countermodel.",
+    "forbidden": "No original producer function import/execution, root/solver/eigensolver/checker rerun, target modification, native fullH or ground backend; no worker build/lint/tests/formatters/projectwide checks. Parent owns final selected diagnostics.",
+    "execution_evidence": "Separate immutable request, preexecution ZIP constructed before CLI launch, executed ZIP, natural subprocess exit and before/after pins in capsule. No retroactive preexecution backfill."
+  },
+  "scientific_admission": false,
+  "campaign_complete": false
+}

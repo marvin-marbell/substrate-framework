@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "reviewer": "UniformLimitProofReview",
+  "epoch": "epoch4_20261010",
+  "verdict": "VALID",
+  "advertised_scope": "Existence, along a subsequence/subnet, of a static physical canonical state and positive stationary two-point temporal measures for the specified smooth number-preserving local observable family and native local current, together with a finite positive JOINT Brillouin-torus x nonnegative-excitation-energy plaquette measure and its cyclic spectral realization. This is not a theorem of full infinite-volume automorphism dynamics, timezero-GNS invariance, rescaled/pointwise IR control, a sharp pole, or physical adoption of the NEW law.",
+  "verdict_qualification": "VALID is at this explicit existence/two-point scope, not an endorsement of every stronger incidental sentence about the full static GNS algebra. Two precision caveats below do not obstruct the selected plaquette/current limit.",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "revision": "bfbdb285c81532169a067d4da487d5dada605829a715ccf3c5b4d95de8422f0d",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "requirement": "verification",
+    "plan_bound_and_read": true,
+    "shared_plan_modified": false
+  },
+  "bindings": {
+    "consumer": {"path": "joined_phi_u1_uniform_gauss_limit_consumer.py", "sha256": "37086f9ed5faa3b14dbb3fa9061393c527d61226b5288349bc6be04d07cbfafd"},
+    "actual": {"path": "joined_phi_u1_uniform_gauss_limit_epoch4_20261010_actual.json", "sha256": "3661b8e5f6420da11313ae5d282acdaeba37fb45f9c555f9f6f6484a739f964d"},
+    "capsule": {"path": "joined_phi_u1_uniform_gauss_limit_epoch4_20261010_natural_exit.json", "sha256": "3a1dca1cac324bfde9b4033f19b8d201f23625f852732aa255538d92c893bb47"},
+    "preexecution_archive": {"path": "joined_phi_u1_uniform_gauss_limit_epoch4_20261010_preexecution.zip", "sha256": "7e4809ddc9f31ce18ff88eebb60c70710062a5bf6c8f5c5abc0a3f281ebbe26c"},
+    "executed_archive": {"path": "joined_phi_u1_uniform_gauss_limit_epoch4_20261010_actual_executed_inputs.zip", "sha256": "8af45d28d48ae0ab8302dcea11cdb9356af972a5373ae2568008ff0a99587649"},
+    "captured_profile": {"path": "joined_phi_u1_stationary_flat_holonomy_typed_certified_20261010_receipt.json", "sha256": "1c79b1a74c4236079645ebf9765a48c1c2263ec7b7209e9f103704c98752da94"},
+    "independently_observed": "SHA256 of the five main artifacts was computed. All nine executed archive members were independently hashed against actual.source_input_sha256, and each was byte-equal to its corresponding preexecution member. Mathematical source inspection used the executed archive, not an assumed live epoch."
+  },
+  "execution_evidence": {
+    "review_reran_original_producer_or_checker": false,
+    "review_ran_build_tests_lint_pyright": false,
+    "new_mathematical_probe": null,
+    "captured_scientific_exit_code": 0,
+    "captured_consumer_elapsed_seconds": 0.67119176700362,
+    "captured_subprocess_wall_seconds": 1.4751471930067055,
+    "captured_scientific_stderr": "",
+    "captured_pyright_exit_code": 0,
+    "captured_pyright_scope": "Two named source files; not mathematical verification.",
+    "natural_exit_mechanism": "The preexecution-archived natural_exit.py uses synchronous subprocess.run without a timeout, captures returncode/stdout/stderr, and accepts only scientific returncode 0. Its natural_exit flag alone is not evidence; the capsule's zero returncode, reached CLI output and exact source/archive bindings are the relevant captured evidence.",
+    "consumer_controls_scope": "Exact rational/SymPy arithmetic and finite-coordinate controls at N=4,6,8,12,16; temporal/OS controls use a synthetic positive measure. No interacting ground eigenvector, infinite-volume dynamics, interval enclosure, or spectral pole was computed. The all-even-N conclusion comes from the analytic argument, not extrapolation of those five N values."
+  },
+  "load_bearing_assumptions": [
+    "The specified NEW ordered matrix-Jordan Hamiltonian is the declared law: a=1/64, Lambda=2^8192, chi=2^-4096, F=2^10240, Phi Cartesian kinetic 4chi, Tr(T_A T_B)=delta_AB/2, alignment F/40, colour plaquette 0.7F, HE=HC=64, no bare U1 magnetic term.",
+    "Exactly 65 dynamical canonical species, with each N_s=2V: neutral heavy charge zero at physical scale -Lambda, active charged load 1 and auxiliary charged load 63. Ref4 is inert. These are fixed microscopic data, not inferred from a species count growing with volume.",
+    "Finite physical Hilbert spaces use the Gauss-reduced real transverse cover and its actual deck/Bloch vector-bundle structure. A noncompact real-U1 Gauss condition must not be interpreted as an ordinary normalizable invariant subspace of unreduced Lebesgue L2(R^(3V)); physical reduction/quotient is required. Compact SU4 projection is legitimate.",
+    "The finite closed Friedrichs forms have compact-resolvent Bloch fibres and norm-resolvent/form-continuous beta dependence, as used in actual.proof.real_cover_and_beta. This follows from positive finite-dimensional elliptic kinetics, compact fibre/link variables, quartic Phi confinement, and the local linear-Phi CAR form bound; no stationary root or prior precision job is needed.",
+    "All temporal observables preserve every canonical N_s and the physical Gauss constraints; no fixed-sector ground inequality is transferred to interspecies number-changing observables.",
+    "Infinite-volume conclusions use a consistent quasilocal observable embedding, translation averaging, and a subsequence/subnet. They do not assert uniqueness or convergence of the entire N family."
+  ],
+  "reviewed_transitions": [
+    {
+      "keys": ["family", "Hamiltonian", "local_CAR_bound", "local_coercivity"],
+      "captured_consumer_lines": "39-42",
+      "verdict": "VALID",
+      "reason": "Each literal bond is bounded before summation, so the local CAR allocation is valid on the full Fock space and therefore on each canonical restriction, including N=4 length-two forward/reverse collisions. Local quartic coercivity absorbs B sqrt(s_x) at each site. The remaining nonnegative Phi/Haar/full-electric/geometry terms retain their budgets. No KyFan global-X estimate or volume-uniform norm of Lplus enters this proof."
+    },
+    {
+      "keys": ["normalized_trial", "exact_trial_prices", "electric_identity"],
+      "captured_consumer_lines": "43-45",
+      "verdict": "VALID",
+      "reason": "The filled exterior-four state at every even-parity site and empty odd-parity sites gives exactly 2V particles per species and a colour singlet. Radial Phi and constant normalized-Haar factors preserve SU4 Gauss, and integer edgeflow k_x,0=64 parity_x gives Dk=128 parity_x for the shared all-64-charge source. AP seams change neither phase norms nor the zero offsite trial expectation. The t=1 value 60chi+3000Lambda+12.9F+262144 is the compact beta-zero fibre energy; on the original reduced real cover it is an infimum upper bound approached by normalized packets, not the exact energy of a finite L2 plane wave. No such equality is used. Wick/coercivity arithmetic was parent-verified; this review checked the transitions and physical interpretation rather than rerunning that producer."
+    },
+    {
+      "keys": ["real_cover_and_beta", "uniform_ground_moments"],
+      "captured_consumer_lines": "46-47",
+      "verdict": "VALID",
+      "reason": "A symmetric normalized small-beta packet changes the displayed trial by an arbitrarily small positive electric price and removes the kinetic cross term. The radius may depend on finite N without changing microscopic constants. Compactness and continuity attain a global minimizing fibre betaStar; betaStar need not be zero. Spectral-cluster approximate-ground packets can have TOTAL excess eta_N tending to zero, which is stronger than excess per volume tending to zero. Translation averaging preserves the global minimum even if it permutes fibres. Thus R=e_trial+8192Lambda yields genuinely local uniform moments, not a hidden bound on arbitrary rho^T Lplus rho."
+    },
+    {
+      "keys": ["static_weak_state"],
+      "captured_consumer_lines": "48",
+      "verdict": "VALID_AT_STATED_STATIC_SCOPE",
+      "reason": "Weak-star compactness passes positivity, normalization, physical gauge invariance, per-species number conservation and translation symmetry to a subnet. Bounded continuous truncations and lower semicontinuity pass the advertised moments without Borel beta evaluation. From the electric second-moment estimate, the state-weighted unitary difference bound gives continuity and, by the spectral difference-quotient/Fatou argument, Omega in D(E_e). Regularity extends on the specified regular local generators and their cyclic span; this is not regularity of raw A. Invariant radial Phi affiliation is meaningful; individual raw Phi components require the explicitly distinguished kinematical extension."
+    },
+    {
+      "keys": ["smooth_neutral_domain"],
+      "captured_consumer_lines": "49",
+      "verdict": "VALID_WITH_STANDARD_WEAK_DOMAIN_LEMMA_MADE_EXPLICIT_HERE",
+      "reason": "For a bounded physical multiplication/CAR matrix A with bounded first and second derivatives, A maps the finite form domain into itself. On an invariant smooth core, [K,A]Omega is L2 by the local kinetic moments; [Hmatter,A]Omega is L2 because its norm is bounded by a constant times sum over a fixed support of sqrt(s_x), whose square expectation is controlled by the radial moment. The scalar bosonic potentials commute with A. Hence the weak identity H A Omega = E0 A Omega + [H,A]Omega has an L2 right side, proving A Omega in D(H) for the finite Friedrichs operator, or equivalently permitting direct form-level first-moment evaluation. The displayed c_A bounds the expectation, not the operator norm of [H,A]. For rho-changing dressed hops this identity must be taken in the full physical electric metric before eliminating longitudinal directions; it incorporates HC and does not discard the nonlocal commutator with rho Lplus rho in a reduced-coordinate calculation."
+    },
+    {
+      "keys": ["temporal_alternate_construction"],
+      "captured_consumer_lines": "50",
+      "verdict": "VALID_FOR_THE_SELECTED_OBSERVABLE_CORE",
+      "reason": "Ground spectral measures have support in nonnegative excitation energy. Uniform diagonal first moments yield tail mass <=c_A/L; positivity gives the offdiagonal tail bound |mu_ij|(tail) <=sqrt(mu_ii(tail)mu_jj(tail)). Diagonal extraction with the static equal-time states therefore loses no mass and preserves matrix positivity and the vacuum label. Fourier/Laplace transforms give continuous positive stationary two-point kernels and a positive-energy feature Hilbert space. This construction neither makes the timezero subspace invariant nor defines products of time-evolved quasilocal observables. See the full-static-GNS density caveat below."
+    },
+    {
+      "keys": ["unbounded_local_current"],
+      "captured_consumer_lines": "51",
+      "verdict": "VALID",
+      "reason": "The fixed-edge derivative includes the nearest starting path and both length-two starts for all 1+63 charged copies; neutral charge zero contributes no U1 phase current. Its local CAR bound gives an L2 vector uniformly in N. With T=sum over S of s_x, the cutoff error satisfies ||(J-J_M)Omega||^2 <= C_J^2 E[T 1_(T>M)] <= C_J^2 E[T^2]/M <= C_J^2 |S|^2 (2R/Lambda)/M. For fixed M, J_M is a smooth bounded number-preserving physical observable. The tail estimate sqrt(mu_J([L,infinity))) <=sqrt(c_JM/L)+||(J-J_M)Omega|| proves tightness by taking M first and L second, without assuming a uniform J(H-E0)J moment. Uniform vector approximation also passes mixed covariances and total masses."
+    },
+    {
+      "keys": ["plaquette_joint_measure"],
+      "captured_consumer_lines": "53; numerical coordinate controls 161-220",
+      "verdict": "VALID",
+      "reason": "The integer plaquette circulation is divergence-free, so its gradient lies in the true orthogonal transverse subspace. O_x=sin(b_x.A) is bounded, physical, deck-periodic and canonical-number preserving; it commutes with matter multiplication and HC. The electric Dirichlet identity gives m1local <=64*4=256. Each axis-zero/one edge occurs in two plaquettes, yielding ||grad O_q||^2 <=8. Without inversion symmetry the double commutator bounds the PAIR m1(q)+m1(-q) by 128*8=1024; positivity then bounds each separately. The consumer's random-coordinate and B=0 saturation checks are controls of these derivative identities, not observed interacting-ground spectral masses. No linear Bianchi identity for sinflux is invoked."
+    },
+    {
+      "keys": ["joint_limit_construction"],
+      "captured_consumer_lines": "54",
+      "verdict": "VALID",
+      "reason": "Seam-covariant matter translations implement the same AP law; on the canonical sectors each species has even N_s=2V, so the N-step AP sign is trivial. Translation averaging admits a stationary invariant vacuum in a direct-sum/GNS ground representation even when beta fibres are permuted. The joint measure is V^-1 sum_q delta_q mu_Oq, with total mass omega(O_0^2)<=1 by discrete Fourier orthogonality and first-energy integral <=256 by the local identity. Compact momentum BZ and the 256/L energy tail give a no-lost-mass subsequence. Fixed-separation real-time and Euclidean transforms pass by weak convergence. The vacuum contribution is a positive submeasure of mass |omega(O_0)|^2 at momentum ZERO and excitation energy ZERO, so subtracting it preserves positivity and leaves the first-energy estimate unchanged. The L2(nu) cyclic realization is legitimate even if the connected measure vanishes; positivity is not a nonzero residue claim."
+    }
+  ],
+  "precision_caveats_and_smallest_corrections": [
+    {
+      "severity": "nonblocking_scope_precision",
+      "location": "actual.proof.temporal_alternate_construction; captured consumer line 50",
+      "statement": "The timezero subspace is the static GNS space after quotienting null vectors.",
+      "assessment": "For the chosen observable family this identifies its equal-time Gram/GNS span. Identification with the ENTIRE A0-GNS space additionally requires that family to be GNS-dense. The smooth multiplication domain in line 49 is not shown norm-dense in A0, which line 48 also allows to contain bounded momentum translations and kinetic spectral cutoffs. No invariance of the timezero space is claimed, correctly.",
+      "smallest_correction": "Say 'the timezero subspace is the closed static-GNS span of the chosen observable core'; only identify it with the full static GNS after proving GNS density or extending the form/tightness argument to the other generators.",
+      "impact_on_advertised_limit": "None: the selected plaquette cyclic realization and local-current two-point limit do not require full A0-GNS equality.",
+      "counterexample_status": "No actual-law counterexample found; this is an unsupported stronger identification, not a falsification of the selected limit."
+    },
+    {
+      "severity": "nonblocking_proof_precision",
+      "location": "actual.proof.real_cover_and_beta; captured consumer line 46",
+      "statement": "Every local bounded deck-invariant continuous operator has continuous ground-band matrix elements after spectral cluster projection.",
+      "assessment": "An isolated spectral CLUSTER has a continuous projection and continuous matrix elements in a transported frame. The exact lowest-eigenvalue eigenspace need not have a continuous selection or constant multiplicity at a crossing. The existence argument needs only measurable exact-ground selections, or continuous cluster packets whose energies approach the minimum; both are available here.",
+      "smallest_correction": "Distinguish transported spectral-cluster sections with vanishing total energy excess from exact ground-band sections. Do not assert continuity of an arbitrary chosen exact-ground matrix element through degeneracy.",
+      "impact_on_advertised_limit": "None: one may use any limiting ground functional supplied by cluster packets, followed by translation averaging. No arbitrary Borel point evaluation or prescribed ground-vector selection is needed."
+    },
+    {
+      "severity": "nonblocking_notation",
+      "location": "actual.proof.joint_limit_construction; captured consumer line 54",
+      "smallest_correction": "Write the connected subtraction as |omega(O_0)|^2 delta_(p=0,E=0), where E is EXCITATION energy, rather than delta_(p0,E0); E0 elsewhere denotes the finite-volume ground energy.",
+      "impact_on_advertised_limit": "The mathematically correct subtraction is justified by the invariant zero-excitation vacuum. Literal subtraction at the unshifted ground energy would be wrong, but the surrounding H'=H-E0 construction makes the intended excitation-zero atom clear."
+    },
+    {
+      "severity": "nonblocking_evidence_label",
+      "location": "actual.wrong_cases_assertions_reached; captured consumer lines 346 and 376-379",
+      "assessment": "The Borel-beta entry is a correct explanatory string, not an executable negative-case assertion. The checker validates the 11-entry tag list but does not turn that string into an exercised Borel-evaluation test. Likewise some list entries label analytic controls rather than separate asserted wrong implementations.",
+      "smallest_correction": "Separate executed assertion controls from analytically reviewed exclusions in receipt/checker labels. Preserve the mathematical singleton-null argument, which is valid independently of a runtime assertion.",
+      "impact_on_advertised_limit": "No mathematical impact; this limits what the captured CLI may be claimed to have exercised."
+    }
+  ],
+  "excluded_hidden_premises": {
+    "uniform_Lplus_operator_norm": "Not used; the checkerboard is one explicit source, while the proof explicitly acknowledges N^2 growth for general sources.",
+    "grandcanonical_substitution": "Not used.",
+    "fixed_N_sector_transfer": "Not used outside the each-species-number-preserving algebra.",
+    "normalizable_real_cover_plane_wave": "Not used; compact-fibre equality and original-cover packet upper bound are distinguished.",
+    "raw_A_regular_limit": "Not used; explicitly excluded.",
+    "sinflux_linear_Bianchi": "Not used; explicitly excluded.",
+    "infinite_volume_automorphism": "Not used; explicitly excluded.",
+    "uniform_J_H_J_moment": "Not used; the cutoff/vector-error tightness argument replaces it.",
+    "pole_from_positive_measure_or_energy": "Not used; no nonzero sharp atom/residue/dispersion follows from this result."
+  },
+  "open_but_not_defects_of_this_scope": [
+    "FullPhi ground characterization, betaStar identification, phase/stiffness/defect control.",
+    "Full interacting infinite-volume quasilocal dynamics and multi-time multiplication.",
+    "Pointwise momentum or rescaled-IR tightness, susceptibility and q-uniform connected current bounds.",
+    "Sharp spatial photon pole, nonzero residue, masslessness, common cone, and originalSOURCE adoption.",
+    "Temporal spectral tightness of unbounded E itself would need uniform E-squared tails beyond its bounded second moment; no such theorem is claimed."
+  ],
+  "target_files_modified": false,
+  "actual_law_counterexample_found": false,
+  "delivery_limit": "This review is a source-bound mathematical transition audit. Captured natural execution establishes finite algebraic/coordinate controls, not an experimentally computed infinite-volume ground or a global interval-physics certificate. Parent retains integration and scientific adoption authority."
+}

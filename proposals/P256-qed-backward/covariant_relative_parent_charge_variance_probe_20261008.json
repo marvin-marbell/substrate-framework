@@ -1,0 +1,51 @@
+{
+  "kind": "Parent exact all70 paired canonical charge-variance scaling probe; NOT macro Fourier proof",
+  "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+  "plan_revision_at_execution": "7650a3636f3d39a74243a986afb1683be8fae895c3f5afb77720b05330363a51",
+  "runtime_executable": "/home/administrator/substrate-framework/.venv/bin/python",
+  "actual_exit_code": 0,
+  "runtime_stderr": "",
+  "executed_program": "import json,numpy as np\nfrom scipy.linalg import eigh\nimport covariant_relative_ring_boundary as ring\ns=ring.supplier\ngamma,_=s.phi_frame(s.Parameters())\nstates=s.occupations(8,4)\nrho=np.array([sum(i//4==1 for i in state)-2 for state in states])\nrows=[]\nfor k in [.04,.004,.0004]:\n h,p,T=ring.ring_half(gamma,2,k,.31,0.)\n A=h@h; A/=np.linalg.norm(A,2)\n G=s.exterior(A,states); weights=abs(G)**2; weights/=weights.sum()\n ev,U=eigh(T); v=U[:,-4:]\n psi=np.array([np.linalg.det(v[list(state),:]) for state in states]); ps=abs(psi)**2; ps/=ps.sum()\n rows.append(dict(kappa=k,joint_charge_variance=float((weights.sum(axis=1)*rho**2).sum()),joint_charge_cross=float(np.einsum('ij,i,j',weights,rho,rho)),ground_charge_variance=float((ps*rho**2).sum()),T_eigenvalue_extrema=[float(ev[0]),float(ev[-1])]))\nfor j in range(1,len(rows)):\n for key in ['joint_charge_variance','ground_charge_variance']:\n  rows[j][key+'_decade_exponent']=float(np.log10(rows[j-1][key]/rows[j][key]))\nprint(json.dumps(rows,indent=2))\n",
+  "sources": {
+    "covariant_relative_ring_boundary.py": "a32c71d4583487453758f369f555fd49e0926ef74e8464317c3cbfdc17dbdc45",
+    "covariant_canonical_gauss_boundary_kernel.py": "741fbc1f196061cb7f0e2c479770e992304ac2de90492f002ef4cbd931315d50"
+  },
+  "rows": [
+    {
+      "kappa": 0.04,
+      "joint_charge_variance": 0.0007011201342833034,
+      "joint_charge_cross": 0.0006807011354583113,
+      "ground_charge_variance": 8.42950035115111e-06,
+      "T_eigenvalue_extrema": [
+        0.08703142943350699,
+        11.490101983949785
+      ]
+    },
+    {
+      "kappa": 0.004,
+      "joint_charge_variance": 3.538183298114077e-08,
+      "joint_charge_cross": 3.496065434944928e-08,
+      "ground_charge_variance": 4.167219547717918e-10,
+      "T_eigenvalue_extrema": [
+        0.008065283386782425,
+        123.98820376521032
+      ],
+      "joint_charge_variance_decade_exponent": 4.297012110967172,
+      "ground_charge_variance_decade_exponent": 4.305955451455375
+    },
+    {
+      "kappa": 0.0004,
+      "joint_charge_variance": 3.337167336818081e-12,
+      "joint_charge_cross": 3.297863804553264e-12,
+      "ground_charge_variance": 3.92994488458595e-14,
+      "T_eigenvalue_extrema": [
+        0.0008006481854180902,
+        1248.988030612807
+      ],
+      "joint_charge_variance_decade_exponent": 4.02540234390259,
+      "ground_charge_variance_decade_exponent": 4.025459921964943
+    }
+  ],
+  "meaning": "Actual paired full-Gamma charge variance and separate valence-ground Slater variance scale as kappa^4 in tested two-site theta=.31 reference. Ground is an independent comparator, not substituted for the actual law.",
+  "correction": "The delivered conditional Fourier budget ALREADY uses kappa^4 and NF=10^1750//16 at kappa=1e-400, beta=1e150. Parent stale NF1e1000/kappa2 inference withdrawn; no parameter change justified. Native covariance scaling does not prove the conditional macro minor-arc/cumulant or clockNt bridge."
+}

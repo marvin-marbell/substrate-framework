@@ -1,0 +1,64 @@
+{
+  "command": [
+    "/home/administrator/.local/bin/pyright",
+    "--project",
+    "/tmp/issue222-three-cell-parent-final-lawnbyzo/pyrightconfig.json",
+    "--outputjson",
+    "charged_kernel_review_control_20261011.py",
+    "charged_kernel_review_execute_20261011.py",
+    "ground_flux_cycle_scientist_20261011.py"
+  ],
+  "config": {
+    "include": [
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/charged_kernel_review_control_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/charged_kernel_review_execute_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/ground_flux_cycle_scientist_20261011.py"
+    ],
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward"
+    ],
+    "venvPath": "/home/administrator/substrate-framework",
+    "venv": ".venv",
+    "typeCheckingMode": "basic",
+    "pythonVersion": "3.12"
+  },
+  "source_sha256": {
+    "charged_kernel_review_control_20261011.py": "b14e5068650baf31bb7d99c12a49a85af3dcafdcb263d12fe510a0548b836117",
+    "charged_kernel_review_execute_20261011.py": "b92c0e2953b071253f9954a2cc0df43b9c58257c14fb57fb26ff48f5194fbc81",
+    "ground_flux_cycle_scientist_20261011.py": "b91957b23eb70ea07d021522e94351879e699f1c76372879f4eb88ffe66f3e39"
+  },
+  "returncode": 1,
+  "natural_exit": true,
+  "elapsed_seconds": 12.38556794001488,
+  "stderr": "",
+  "diagnostics": {
+    "version": "1.1.414",
+    "time": "1791707339991",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_kernel_review_control_20261011.py",
+        "severity": "error",
+        "message": "Operator \"-\" not supported for type \"Unknown | MatrixElement | list[Unknown]\"",
+        "range": {
+          "start": {
+            "line": 225,
+            "character": 43
+          },
+          "end": {
+            "line": 225,
+            "character": 50
+          }
+        },
+        "rule": "reportOperatorIssue"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 3,
+      "errorCount": 1,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 11.667
+    }
+  },
+  "unchanged": true
+}

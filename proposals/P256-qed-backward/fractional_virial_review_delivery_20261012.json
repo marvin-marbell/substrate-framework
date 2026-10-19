@@ -1,0 +1,126 @@
+{
+  "kind": "COMPLETED_INDEPENDENT_FRACTIONAL_VIRIAL_SCOPED_REVIEW_DELIVERY",
+  "owner": "FractionalVirialProofReview",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_contract_revision": "32c0cf4122ecc698980c34fb7f2202ba5c3fe29484b5733f5f158f56e332c045",
+    "accepted_scoped_science": "1b17acc8bcc51c39d0d1208975f45e7ecfda24b72705300e6c52954a280ad8b6",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "requirements": [
+      "outcome",
+      "verification"
+    ],
+    "parent_only_plan_writer": true
+  },
+  "formal_verdict": "VALID_PAID_FRACTIONAL_SOURCE_CONDITIONAL_ON_SAME_L_CUTOFF_GRAPH_ENDPOINT; VALID_FINITE_FORM_STATIONARITY; FAILED_UNIFORM_WEIGHTED_KINETIC_GATE; PHYSICAL_IR_OPEN",
+  "artifacts": {
+    "fractional_virial_review_proof_20261012.json": "381aa93b6135424fb3d4064a87d33aa38a7c6e73c19c0f5f9af91525c7cba1d2",
+    "fractional_virial_review_interface_20261012.json": "b79dcc576c03d01caec4cfec387c1a3dc66de39c113bca0ff06820be002625a3",
+    "fractional_virial_review_consumer_20261012.py": "52651f7ccaa5ffb4cf6a4d87361c7eae9e52ba85c96c7f64b606bbdee03647b5",
+    "fractional_virial_review_execute_20261012.py": "afbe9255e1c8426b2015f67ff39335b48d37b740825a457847f760a2df9e8152",
+    "fractional_virial_review_actual3_20261012_capsule.json": "72ede27d97a11dbc047f796a46ad4668b853afae734bb3eab95a8a971f3466f2",
+    "fractional_virial_review_actual3_20261012_receipt.json": "2181ae8bed8ceb861e44ddf14f96339c8dd6dae5c6f32ca131d5087d4ea7a8ce"
+  },
+  "execution": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/fractional_virial_review_consumer_20261012.py",
+      "--request",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/fractional_virial_review_actual3_20261012_request.json",
+      "--output",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/fractional_virial_review_actual3_20261012_receipt.json"
+    ],
+    "returncode": 0,
+    "natural_exit": true,
+    "elapsed_seconds": 3.3655191989964806,
+    "inputs_unchanged": true,
+    "request_sha256": "9f0739b579d159a887efcdde6008dfa1241f66f33be4ddbaff45bf98971ad531"
+  },
+  "preexecution": {
+    "path": "fractional_virial_review_actual3_20261012_preexecution.zip",
+    "sha256": "65cca797839417da8a8538794dce95517138554d3b5bc528af0ba8d4b3cfa209"
+  },
+  "executed": {
+    "path": "fractional_virial_review_actual3_20261012_executed.zip",
+    "sha256": "80431460b3726cd7f771721a18e4af74b7c5c6982704e3d8baef4133bce5b70b"
+  },
+  "failed_epochs": [
+    {
+      "epoch": "actual1",
+      "reason": "Unexpanded complex Gram structural equality",
+      "natural_exit": true,
+      "returncode": 1
+    },
+    {
+      "epoch": "actual2",
+      "reason": "Unexpanded SU4 HS trace structural equality",
+      "natural_exit": true,
+      "returncode": 1
+    }
+  ],
+  "correction_files": [
+    "fractional_virial_review_assertion_correction_20261012.json",
+    "fractional_virial_review_radius_assertion_correction_20261012.json"
+  ],
+  "findings": [
+    {
+      "id": "FV_WEIGHTED_KERNEL_QUADRATIC_ERROR",
+      "severity": "corrected_by_pinned_addendum",
+      "target": "full_loop_graph_proof_20261012.json positiveband_consumer.energy_dependent_kernel",
+      "target_sha256": "d21fd6cc5908f070077bf826d8d8a3f8bc1d9f11e035fda22db8561c263040c9",
+      "trigger": "Using uncut G_s as automatic cutoff weighted-vector norm bound",
+      "consequence": "The two-linear-term bound can fail; scalar x=y=1, errors1 gives actual3 versus bound2.",
+      "smallest_correction": "Consume the pinned spectral_consumer safe bound including K_a K_b M^-2beta, or prove a separate uniform cutoff endpoint G. Do not mutate frozen proof."
+    },
+    {
+      "id": "FV_STRICT_E4_WITNESS_SCOPE",
+      "severity": "counterexample_scope_correction",
+      "target": "full_loop_graph_strict_moment_addendum_20261012.json mixed_fullE_boundary",
+      "target_sha256": "31d369a1df19e86c256c7ffa3c2a331146693b5e3d7cec67f738083374d05887",
+      "trigger": "Describing its E2-only witness as paying all accepted kinetic budgets including E_c4",
+      "consequence": "That witness has divergent E4 and cannot establish nonimplication under the full inherited premises.",
+      "smallest_correction": "Keep original frozen; use the E_n^2=2^(4n)/n^2 single-law witness above and the precise triangle-payment nonpromotion scope."
+    },
+    {
+      "id": "FV_UNIFORM_KINETIC_GATE",
+      "severity": "retained_failed_guard_not_new_no_go",
+      "target": "full_loop_graph_virial_attempt_proof_20261012.json exact_failed_new_gate",
+      "target_sha256": "bbc7939cec524eb6ab8df782c60e2dac68ff992ffa1556a89976cdfbb4919cc2",
+      "trigger": "Dropping the positive RHS weighted kinetic or making an unbounded epsilon limit",
+      "consequence": "No upper radial10 bound follows; no fullgraph/radial16/ground no-go is established either.",
+      "smallest_correction": "Retain fixed-epsilon finite form stationarity and explicitly unpaid uniform K_epsilon. Withdraw the parent upper-inference; preserve the independent fractional successor."
+    }
+  ],
+  "paid_source": "For SAME L and separately paid complete primitive cutoff endpoint: D(L^s),0<s<1/17; corrected complex kernel, wholeP0, Holder real-time and UV source controls",
+  "finite_virial": "Valid finite-N fixed-epsilon physical FORM stationarity and quantum sign; uniform weighted Phi kinetic not paid",
+  "controls_observed": [
+    "Complex Gram with imaginary cross terms and two-dimensional P0",
+    "Missing quadratic weighted-kernel wrong case3>2",
+    "Exact17 dyadic growth and exponents, spectral endpoint countermodel",
+    "E4-compatible joint-moment nonimplication control",
+    "Native60 radius quantum polynomials and Cdiv20125",
+    "Arbitrary-vector-field differential i[H,D] identity and signs",
+    "Full-matrix SU4 radial equivariance",
+    "All65 literal distinct-onsite matter coefficients and B<512lambda",
+    "Three displaced phased Schwartz packets with exact zero virial and nonconstant local energy"
+  ],
+  "limits": [
+    "No native ground/evolution computed",
+    "No native-ground no-go, radial10/16 or full cutoff-free graph promotion",
+    "No endpoint s=1/17, energy form, physical IR/photon/phase/adoption"
+  ],
+  "parent_final_checks": [
+    "Integrate FullPrimitiveGraphReview exact cutoff endpoint verdict with this conditional fractional proof",
+    "Use pinned spectral addendum K2 error correction and E4-compatible moment witness",
+    "Run selected-file diagnostics once in project Python environment; worker did not run post-edit diagnostics/build/lint/testsuite/formatter/Pyright CLI"
+  ],
+  "language_residual": [
+    "Import \"sympy\" could not be resolved"
+  ],
+  "original_targets_modified": false,
+  "shared_plan_or_README_modified": false,
+  "scientific_admission": false,
+  "campaign_complete": false
+}

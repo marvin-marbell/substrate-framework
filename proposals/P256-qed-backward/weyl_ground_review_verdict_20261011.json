@@ -1,0 +1,161 @@
+{
+  "kind": "INDEPENDENT_REVISION_BOUND_WEYL_GROUND_SCIENTIFIC_PROOF_REVIEW_NOT_ADMISSION",
+  "verdict": "CONDITIONAL",
+  "scope": "VALID finite-volume physical closed-form insertion and variational/packet algebra under the accepted full Friedrichs/Gauss realization; CONDITIONAL sharp-character ground and selected temporal spectral realization; INVALID any inference to excitedmass1, regular field, phase, dispersion or pole from these controls alone. No load-bearing false equation found in the original scoped proof.",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "review_revision": "74c9314ae6e7985f85615b94c5b190c8b8b356be00b78722a1ebd7444ef47190",
+    "accepted_scoped_science": "452eb157f253695e4f03bb98d41c71ac660e559a02a019c3502a6f59b9a8babc",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "parent_retains_plan_and_campaign": true
+  },
+  "immutable_targets": {
+    "snapshot": "vacuum_weyl_parent_review_original_targets_20261011.zip",
+    "snapshot_sha256": "8c204449e7ea5d3cef6cbb24de09c824cce66d27709204db9c9e744b09819b44",
+    "stage": "POSTEXECUTION frozen review targets, NOT original runtime preexecution",
+    "fractional_flux_ir_proof_20261011.json": "074c7d6fef2ad7f6362025293ad275fc489a79e14a25d0988187257826085f64",
+    "fractional_flux_ir_delivery_20261011.json": "4bc7dae63dcc4a33705a5ece63233b0bbe2fd8191dc341a6201e77fe5c5db69e",
+    "fractional_flux_ir_consumer.py": "f1dc5aa8baace1f126c148055c855efc20cd7ecddc354e619eebce7f10a22226",
+    "fractional_flux_ir_capsule.py": "a33f7bf7f41a8cb32e9c79797a6e78ec8cdc5bea8662729c3e993f714fdd6fa4",
+    "fractional_flux_ir_actual4_20261011_capsule.json": "a265bb08278cab9ff7207007229b2eaaadc26b1a1ed78ad91fdf9997faf669f6",
+    "original_actual4_preexecution_sha256": "14074c4cc8281a580a846736c8c7c91edd6bcf06905ceafd446657bbc09a833d",
+    "original_actual4_executed_sha256": "9292caafa4db8fad073bb7b17f2ea68354a5852f24fc7d0355a9c516cbc9e3ce",
+    "original_actual4_receipt_sha256": "45905f1356782fb8bb5a97e86fb05b1e44db279552428abb554da00ff9c11113",
+    "live_type_repairs_do_not_rebind_original_science": true
+  },
+  "law_audit": {
+    "verdict": "VALID_AT_DECLARED_NEW_CONTINUATION",
+    "constants": {
+      "a": "1/64", "Lambda": "2^8192", "chi": "2^-4096", "F": "2^10240",
+      "Phi_kinetic": "4chi sum Cart p^2", "Cart_metric": "Tr(T_A T_B)=delta_AB/2",
+      "SU4_Casimir": "(3chi/20) sum E4^2", "HE": 64, "HC": 64,
+      "Jordan": "Lambda/(16a) sum_{x,mu,nu} Tr({Phi_mu,Phi_nu}^2)",
+      "alignment": "F/40 sum ordinary HS endpoint squares", "colour_plaquette": "(7/10)F sum(4-ReTrUface)",
+      "bare_U1_B2": false, "physical_hopping": 1,
+      "charged_species": "active1+aux63, each4V CAR modes and2V particles",
+      "neutral": "charge0,2V particles, physical negative -Lambda sheet", "Ref": "wedge4"
+    },
+    "owners": "Original actual4 preexecution captures the corrected NEW law, the bosonic primitive owner and matrix-Jordan supplier and certified one/two/AP profile receipt. This is not a claim that the old bosonic owner alone already contains the NEW full law or adopts original SOURCE.",
+    "profiles": "Exact onsite and c0/ci rational data for heavy1, active1 and aux63 inspected. Heavy paths are one-link; charged paths one/two-link on all three axes. AP signs are path multipliers. The neutral path has no U1 phase; it still commutes with the boost. No sampled Phi coefficient, coupling underflow or species deletion is used.",
+    "collective_Coulomb": "rho=sum64(n_s-2)+(NRef-4)delta0, DE=rho, E=E_T+D^T Lplus rho. Orthogonality gives64||E||^2=64||E_T||^2+64 rho^T Lplus rho, ONE shared Coulomb energy.",
+    "units": "b,s dimensionless; ||b|| is raw edge Euclidean norm; q_phys=2pi m/(Na), distinct from configuration Bloch beta; c/2 norm1 is not an unscaled physical B. No finite-N observation is an infrared limit."
+  },
+  "proof_review": [
+    {
+      "id": "coordinate-Weyl-form-insertion", "verdict": "VALID_UNDER_ACCEPTED_FORM_REALIZATION",
+      "source": "original proof source_and_form_domain; original consumer symbolic_operator lines51-73",
+      "derivation": "On the physical core E(U_s psi)=U_s(E+s b)psi, since E=-i partialTheta and U_s=exp(i s b.Theta). Db=0 makes it U1-gauge invariant; it is SU4 scalar and preserves every canonical species number. Phi kinetic derivatives and all SU4 left/right invariant derivatives commute because U_s depends only on Theta. Every potential and finite-Fock Phi/link/path multiplier, including its literal U1 exponential, commutes. This applies to the full fluctuating joint wavefunction, not a frozenPhi section.",
+      "closure": "Accepted coercivity/Young absorption makes the positive electric norm controlled by the closed form norm. ||E U_s psi||<=||E psi||+|s| ||b|| ||psi||, and U_-s gives the reverse bound. Other kinetic norms unchanged and potentials/matter forms identical; continuous core closure proves bijection of D(h). No separate D(H) or D(H^2) conclusion follows from form membership.",
+      "independent_domain_adverse": "A circle Fourier vector with coefficients n^-2 lies in H1 (form domain of -partial^2) but not H2 (operator domain). Thus form insertion cannot certify operator-domain membership.",
+      "limitation": "The original symbolic scalar colour derivative is a sanity control, not a coordinate proof of the full Casimir; the full left/right argument is the independence-of-Theta analytic argument. The new independent control includes an arbitrary colour vector-field coefficient."
+    },
+    {
+      "id": "full-electric-energy-and-open-hop", "verdict": "VALID",
+      "derivation": "For normalized finite-form psi, delta h=128s <b.E>+64s^2 B. Since Db=0, <b.E>=<b.E_T>; rho, HC and every other primitive term are unchanged. Incoming electric momentum must be retained; zero incoming momentum is not an operator identity.",
+      "trial": "For every even N, wedge4 on even checkerboard sites and wedge0 on odd sites gives2V particles for all65 species and local SU4 singlets. Ref wedge4 is neutral relative to its baseline. FullPhi radial Gaussian and Haar constant are SU4-invariant with finite derivatives and polynomial moments. A normalized transverse Gaussian times exp(i E_L.Theta) is a physical quotient finite-form trial, NOT an ordinary invariant subspace of unreduced gauge-orbit Lebesgue L2 and NOT a computed ground.",
+      "adverse": "Closed probes cannot detect a missing longitudinal field. A genuine gauge-complete c_xdag B c_y exp(i k.Theta) hop changes rho by Dk and fullE by k. Exact checkerboard E_L=(64/3)parity on each positive edge, incoming(3/8)b, k on the empty-to-full oriented edge gives full increment -8072/3 for N4/6/8. With R_adj=(V-1)/(3V), transverse increment64(5/8-R_adj), HC increment64(-128/3+R_adj), summing exactly to the full value. Pi-only update leaves Gauss residual1 and misses HC. Full law retains the Phi/link/CAR covariance of the hopped output.",
+      "Coulomb_counting": "For aligned all64 charges, shared rho is64 times the single-copy charge. Shared HC divided by sum64 independent HC is64, not1. Finite exact controls do not enclose ground energies."
+    },
+    {
+      "id": "global-min-beta-firstmoment-packet", "verdict": "VALID_VARIATIONAL_IDENTITY_CONDITIONAL_ON_GLOBAL_ENERGY",
+      "derivation": "With E_N=inf over all compatible beta and physical states, legal U_{+s} and U_{-s} on a globally minimizing ground imply0<=+128s m+64s^2 B and0<=-128s m+64s^2 B. For s>0, |m|<=s B/2; taking arbitrarily small s gives m=0. The conclusion does not depend on betaStar=0. A fixed-beta variational minimum alone cannot compare the shifted sectors.",
+      "packet": "For original-Hilbert normalized psi of excess delta, global positivity for every real r gives0<=delta+128r m+64r^2 B. Completing the square at r=-m/B gives m^2<=delta B/64. Consequently h[U_s psi]-E_N<=delta+16|s|sqrt(delta B)+64s^2 B=(sqrt(delta)+8|s|sqrtB)^2. B=0 is trivial. This retains total defect, not defect per volume.",
+      "adverse": "Taking m=1 and r=-1/64 with B=1 produces negative shifted excess for a putative zero-defect state: only a one-sign or fixed-fibre test cannot establish global minimality.",
+      "unpaid": "Actual physical minimizing phase/ground correlations and betaStar identification are not computed; no frozenPhi or stationarity substitute is allowed. Finite fibre compactness/form continuity supports abstract minimizing-energy packets, not a characterization of the ground."
+    },
+    {
+      "id": "original-measure-cluster-packets", "verdict": "VALID_CONSTRUCTION_GIVEN_PINNED_FINITE_FIBRE_CONTINUITY",
+      "antecedents": "The accepted uniform finite-family proof supplies compact-resolvent beta fibres, form/norm-resolvent continuous dependence, original compatible Haar/control measure, measurable core frames and finite spectral clusters. Without continuity and positive-measure sublevel neighbourhoods, inf_beta need not equal original-measure essential inf, and packets near a measure-zero artificial minimum would not be available.",
+      "review": "Choose near-minimum spectral clusters on positive-measure beta neighbourhoods, normalized original-measure amplitudes, then measurable smooth-core sections of vanishing TOTAL excess. Crossings require cluster frames, not an arbitrarily continuous lowest eigenspace. Finite source shifts can be separated by sufficiently small support neighbourhoods. Normalization/null/support arithmetic in the consumer is an illustrative marginal; its trigonometric frame and assigned defect are NOT actual native spectral cluster sections.",
+      "Borel": "Every finite packet expectation of an original-measure a.e.-zero Borel field is zero. Haar translations preserve null sets; a countable chosen source/word family needs only a countable union of such null sets. A weak-star packet limit therefore still annihilates that fixed a.e.-zero element. Concentration does NOT define arbitrary Borel point evaluation at betaStar; the singleton indicator has packet integral0 even though its point value is1. Continuous observables and globally defined L-infinity elements must not be conflated.",
+      "order": "Ground-defect/support limit for fixed finite N and finite source set precedes selected volume limits. Countable diagonal extraction can cover countably many selected words/parameters. An uncountable universal Weyl completion, uniform s limit or arbitrary Borel fibre values are not paid by this argument. Translation averaging should be a ground density/functional mixture, not an unpriced coherent sum of permuted fibre packets."
+    },
+    {
+      "id": "proper-native-character-lattice", "verdict": "VALID_WITH_FULL_E_NOT_PI_ONLY",
+      "derivation": "The conserved native symmetry is T_n=exp(i2pi n.E_full), n integer raw-edge vector. Full hopping translates E by integer k while changing rho by Dk, so T_n commutes with it. Its reduced realization includes exp(i2pi n.D^T Lplus rho). Dropping that density factor replaces the conserved character by a generally wrong projected-Pi character.",
+      "lattice": "On closed gauge-invariant boosts, a shift v is character trivial exactly when n.v is integer for every raw integer n, equivalently v belongs to the saturated integer cycle lattice kerD intersect Z^edges. Gauge-redundant integer gradients have zero pairing with closed v. In orthonormal transverse coordinates the corresponding lattice is Q^T(kerD intersect Z^edges), NOT arbitrary Z^rank or P_T Z^edges without the affine density information.",
+      "coexact": "For distinct translated plaquette c_x/2, differences have some nonzero raw edge coefficient in{+-1/2,+-1}. Multiplication by rational0<|s|<1 leaves that coefficient noninteger; unit raw-edge n detects different conserved fullE characters. This is valid for coexact flows and not merely harmonic windings. The raw flow observation is sufficient precisely with the full native character group above.",
+      "kernel": "Full H and its spectral functions preserve these characters; cross-sector Gram and form kernels vanish. Do not infer orthogonality just from different words if their total shifts coincide, or silently reuse Pi-only symmetries for open CAR paths."
+    },
+    {
+      "id": "spatial-Fourier-gram-budget", "verdict": "VALID_FOR_SELECTED_SHARP_CHARACTER_GROUND_SOURCES",
+      "derivation": "A_s(q)=V^-1/2 sum_x exp(-i q_phys.a(x+face_center))U_s(c_x/2). The character Gram and first-form matrix are diagonal with entries1 and64s^2, under the stated ground antecedent. Coefficient norm squared is V times1/V=1, hence totalm0=1,m1=64s^2 at every finite discrete q, uniformly in V. Mean overlap0 follows from nontrivial characters. A seam-covariant translation-averaged ground functional gives the stated physical translation momentum; face-center is a common phase.",
+      "not_excited_normalization": "These are total and mean-connected moments. They do not price transported ground blocks. A single normalized Fourier-cosine Weyl exponential is not automatically a momentum eigenoperator, whereas the translation Fourier sum is. Winding normalized1/sqrtN has a finite single-source energy budget but no asserted nonlocal thermodynamic observable limit.",
+      "tail": "For positive total measure, mu([R,infinity))<=64s^2/R. This bounds energy tails uniformly, not spatial small-q covariance, massless dispersion, residue or atom isolation. A selected joint momentum-energy measure has disintegration only for almost every momentum; finite-grid values do not specify pointwise infinite-q fibres. Additional spatial regularity/rescaled convergence is required."
+    },
+    {
+      "id": "selected-positive-temporal-passage", "verdict": "CONDITIONAL_VALID_AT_TWO_POINT_SCOPE",
+      "derivation": "At finite N, H-E_N is positive on the original physical Hilbert; for a ground-limit feature vector the positive kernel K(t,u)=<xi,exp(-(t+u)L)xi> has a positive spectral measure. Packet shifted-energy bound supplies a uniform first-moment upper bound. Weak convergence plus lower semicontinuity gives integral epsilon dmu<=liminf moments<=limsup packet bounds=64s^2 B after the selected limits, not equality of every limiting first moment.",
+      "mass": "Unit equal-time Gram and the first-moment tail bound give energy tightness and prevent mass escaping to infinity for the selected diagonal probability measures. For finite families positivity bounds cross tails by diagonal tails. This justifies selected matrix positive kernels/feature spaces, not a full quasilocal dynamics automorphism or entire time-zero crossed-algebra GNS dynamics.",
+      "adverse": "mu_n=(1-1/n)delta0+(1/n)delta_n has mass1 and mean1 but weak limit delta0 with mean0. A limsup budget survives; moment equality does not. Packet nonstationarity must not be presented as an excitation spectrum of a packet vacuum, despite the original positive operator H-E_N.",
+      "unpaid": "A compatible selected crossed-Weyl ground extension, translation selection and kernel convergence for the enlarged specified source family must be explicitly realized or retained as hypotheses. The native-periodic temporal theorem alone does not automatically grant arbitrary fractional insertions, uncountable s, or all multi-time products. Original proof correctly retains this as a conditional edge."
+    },
+    {
+      "id": "whole-P0-boundary", "verdict": "VALID_CORRECTION_INVALID_STRONGER_INFERENCE",
+      "derivation": "P0=1_{0}(L) removes every ground state, including other native characters. For total xi=A_s(q)Omega with norm1 and mean overlap0, excitedmass=1-||P0 xi||^2, not automatically1. m1 remains64s^2 when its finite-ground identity holds because L annihilates the whole ground block. In a volume limit even that m1 is only bounded above."
+    },
+    {
+      "id": "sharp-versus-regular-and-pole", "verdict": "VALID_NONINFERENCE",
+      "derivation": "For changed characters <Omega,U_s Omega>=0 and ||U_s Omega-Omega||^2=2 for every nonzero small s. Strong continuity fails and no Stone generator Theta on Omega follows. Dividing this source by s diverges; nonzero-q A_s(q)/s has totalnorm squared1/s^2. The s->0 energy budget describes sector transport at EVERY q, not epsilon(q)~c|q|.",
+      "regular": "In a different regular strongly differentiable same-ground representation, Q0 U_s Omega=i s Q0(b.Theta)Omega+o(s), hence excitedmass=s^2||Q0 b.Theta Omega||^2+o(s^2). A first-moment equality for the derivative requires convergence in excitation form norm; strong vector convergence alone gives at most lower-semicontinuous form control. Fourier field Gram is not the sharp identity Gram and must be estimated uniformly.",
+      "atom_adverse": "Original uniform density on[0,128s^2] and NEW independent exponential density of mean64s^2 have totalmass1 and firstmoment64s^2 and positive temporal kernels, but no atoms. A tiny average energy or gapless support does not prove an atom or pole.",
+      "parent_method_boundary": "Parent regular-field graph/contact controls are METHODONLY spectral models, not native ground ancestry. Their shared m1,m3, graph equations and external-phase contact allow both an atom and an atomless spectrum. Regularity, insertion, graph/contact and local IR-integrability are necessary interpretation/data constraints here, not sufficient pole mechanisms."
+    }
+  ],
+  "findings": [
+    {
+      "id": "WGR-F1", "severity": "scope-critical-boundary-not-original-contradiction",
+      "trigger": "Treating paid_edge wording or total/mean-connected sharp mass1 as an unconditional normalized excitation theorem",
+      "expected": "Whole transported ground-block price; excitedm0=1-||P0 A_s(q)Omega||^2",
+      "actual_original": "Proof and delivery explicitly retain the unknown and supply a1/2 ground-mass contrary control",
+      "consequence": "No unconditional excitation Rayleigh bound, finite nonzero field residue, or photon admission",
+      "smallest_correction": "Preserve this qualification in parent acceptance/graph labels; no original source correction required"
+    },
+    {
+      "id": "WGR-F2", "severity": "precision",
+      "trigger": "Advertising illustrative packet/cluster controls as a computed native minimizing cluster, or reusing the native temporal theorem without enlarged-source hypotheses",
+      "expected": "Separate exact measure/variational arithmetic from conditional native cluster and crossed-source realization",
+      "actual_original": "Consumer uses cos/sin frame and assigned illustrative defect; proof retains full-ground/kernel/crossed hypotheses",
+      "consequence": "The receipt demonstrates normalization/null/support arithmetic, not actual ground computation or enlarged-algebra existence by numerical observation",
+      "smallest_correction": "Parent may accept the finite-form identities and conditional selected-source theorem only; explicitly list continuity/original measure and countable extraction assumptions"
+    },
+    {
+      "id": "WGR-F3", "severity": "precision",
+      "trigger": "Using some fractional raw edge as the character test while silently replacing fullE by Pi-only or using an arbitrary projected lattice",
+      "expected": "Conserved T_n uses full affine E; closed shift lattice kerD intersect integer raw edges",
+      "actual_original": "Raw-flow separation is correct with pinned full native symmetry, but the proof's short phrase modulo native integer translations relies on that owner",
+      "consequence": "Wrong projected-lattice semantics can erase legitimate coexact character distinctions or falsely conserve open-hop characters",
+      "smallest_correction": "State the fullE dual/saturated-cycle lattice in parent theorem; retain actual affine open-hop adverse control"
+    }
+  ],
+  "independent_control_assignment": {
+    "program": "weyl_ground_review_control_20261011.py",
+    "capsule_program": "weyl_ground_review_execute_20261011.py",
+    "epoch": "weyl_ground_review_actual1_20261011",
+    "controls": "NEW exact SymPy operator/domain/packet/spectral controls and exact Fraction N4/6/8 checkerboard, Gauss, open-hop, full character and Coulomb controls; original source/proof/preexecution/executed/receipt hash binding. No original main/solver/root/checker executed.",
+    "energy_split_basis": "Foster trace identity plus cubic torus edge transitivity gives exact resistance(V-1)/(3V); this is an analytic exact finite structural control, not interval arithmetic or a ground computation.",
+    "whole_ground_adverse": "Exact3-dimensional L=diag(0,0,128s^2), Omega=e0,xi=(e1+e2)/sqrt2: totalmass1,meanconnected1,firstmoment64s^2,wholeP0 excitedmass1/2. This is a positive spectral representation control, NOT native ground or crossed-algebra construction.",
+    "tooling": {
+      "project_root": "/home/administrator/substrate-222",
+      "Python": "/home/administrator/substrate-framework/.venv/bin/python",
+      "actual_LSP": "User-local pyright-langserver stdio initialize/documentSymbol/definition/shutdown exercised before creating code; root pyproject.toml inspected;13 consumer symbols returned and definition resolved to live consumer el declaration. Native xd://lsp device absent and reported.",
+      "positive_AST": "xd://ast_grep annotated Python def pattern matched digest/divergence/gradient/longitudinal/plaquette/symbolic_operator/lattice_control/original_packet_controls/spectral_controls/run",
+      "diagnostics": "Deferred as required; parent checks created Python files once after integration. No selected checker/build/lint/tests/formatter run."
+    }
+  },
+  "remaining_real_obligations": [
+    "Actual full quantum Phi/SU4/U1 globally minimizing physical phase/ground characterization; local frozenPhi ground is not it",
+    "Selected enlarged crossed-Weyl source/temporal realization and translation selection at its stated countable two-point scope",
+    "Whole transported ground-block bound, rather than mean subtraction",
+    "Regular same-ground strong/form field insertion with nonzero N-uniform small-q Gram, OR bounded periodic-source linear overlap",
+    "Same-law induced stiffness/order/phase control and quantitative rescaled momentum-energy spectral isolation/atom mechanism",
+    "Finite nonzero correctly scaled residue, two physical polarizations/commoncone and original SOURCE adoption"
+  ],
+  "physical1_and_pole": "OPEN",
+  "review_admission": false,
+  "sharp_photon": false,
+  "campaign_complete": false,
+  "write_scope": "New weyl_ground_review_* only; no original target/source/helper/README/worldmodel/plan edits"
+}

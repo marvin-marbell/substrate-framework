@@ -1,0 +1,16 @@
+{
+  "plan_id":"issue222-rich-backward-candidates-20261014",
+  "captured_revision":"9391f50740632658dd89f414a8e25e6d510fce4416ca8ddc054f56229fa59f47",
+  "work_item":"photon-candidate",
+  "law":{"L":4,"sites":64,"positive_arcs":192,"Nup":32,"Ndown":32,"ions":1,"t":1,"U":4,"I":16,"Ecap":1,"Fock_dimension":4,"link_dimension":3,"external_H_phase":0,"bare_magnetic_term":false},
+  "delta":0.8,
+  "correlation":[0.45,0.15,0.08],
+  "guide":[0.2,1e-12],
+  "sampling":{"seeds":[9101601,9101619],"n":768,"burn":18000,"thin":160,"blocks":24},
+  "momenta":[[1.5707963267948966,0,0],[1.5707963267948966,1.5707963267948966,0]],
+  "families":["zero_pair","pi_pair","zero_af_dimer","pi_af_dimer"],
+  "state":"delta_G parity detF(up,down) exp[-.45D-.15sumE2-.08sum(E-E_NEXT)^2] exp[i pi codes.E], codes=(0,x,x+y) for pi. Fermionic F from the matching signed orbital h; H itself always unsigned.",
+  "alternative":"After pair, actually run flux-adapted staggered AF occupied-projector oriented x-dimer with .08 complementary projector. This changes order/correlations rather than a numerical tolerance; no stationarity/rotation/singlet claim.",
+  "guide_meaning":"strictly positive envelope2*(detF2+.2^2detG2+1e-24), not a physical coefficient. Phase cancels only from sampling measure, retained on every H neighbor.",
+  "response_meaning":"All virtual nearest-hop Fock/link neighbors, two transverse fields and rho at distinct +/-q; independent current/contact from same H; raw non-Hermitian K and Gdot, frozen-time resolvent only. No stationary Kubo or photon inference."
+}

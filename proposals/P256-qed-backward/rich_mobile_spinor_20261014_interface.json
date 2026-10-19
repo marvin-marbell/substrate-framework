@@ -1,0 +1,24 @@
+{
+  "law": "mobile-angular-contact-comoving-quantum-orientor-v1",
+  "module": "rich_mobile_spinor_20261014_model",
+  "constructor": "build(Parameters()) -> dict; Parameters defaults are physically used actual1 inputs",
+  "dimension": 162,
+  "basis_order": "charged (ell,m) increasing ell then m; spin up/down; neutral (ell,m) increasing ell then m, neutral fastest",
+  "units": {"hbar":1,"spacing":1,"charge":-1,"energy":"input rotor/contact energy","k":"3-vector reciprocal center-lattice momentum, radians per spacing","omega":"energy above declared source reference"},
+  "state_semantics": "One mobile charged molecule with co-moving neutral internal quantum rotor; empty-charge vacuum reference 0. No stationary per-cell rotor bath and no occupied-hole source.",
+  "operators": {
+    "hamiltonian(model,k)": "complex Hermitian 162x162 full-state Bloch H",
+    "spectrum(model,k)": "full orthonormal dense Hermitian eigenvalues/vectors; never assume a degenerate vector frame is a polarized preparation",
+    "vertex(model,kout,kin,epsilon)": "complex 162x162 center charge-current absorption vertex; momentum transfer kout-kin, outgoing emission uses epsilon_out conjugated and negative transfer",
+    "contact(model,kout,kin,qin,epsin,qout,epsout)": "complex 162x162 mixed second derivative, requires physical net kout-kin=qin-qout; epsout conjugation happens inside function",
+    "spin_current(model,kout,kin,epsilon,axis)": "actual physical {S_axis,J}/2, axis=0,1,2",
+    "charged_green(model,k,omega,eta=.01)": "complex 18x18 empty-vacuum charged angular/spin addition G, neutral ell0 source; eta strictly retarded regulator, not derived lifetime",
+    "scattering(model,kin,qin,epsin,qout,epsout,omega,initial=0,final=0,eta=.01,virtual=None)": "dict containing complex amplitude and contact/absorption/emission, actual recoil/outgoing energy, kout; full virtual spectrum unless explicitly supplied diagnostic subset"
+  },
+  "model_arrays": {"spin":"3x162x162 primitive physical S","J":"3x162x162 Lc+Ln+S generators","Ln":"3x162x162 neutral angular momentum","source":"162x18 isometric ell_n=0 charge-addition source","T":"three 162x162 primitive spin-independent full-angular contact tunnel matrices","H0":"162x162 full onsite internal H"},
+  "receiver": "Actual1 final low doublet at actual nonforward kout; higher states remain internal virtual receivers. Low-doublet receive selection is an explicit observable, never a four-state coarse delivered law.",
+  "field_boundary": "External A sources at macrocell links. No intra-shell minimal EM coupling, dynamical photons, D tensor or propagator normalization. The scattering amplitude is a finite-frequency source kernel, not a photon cross-section.",
+  "joining_rule": "Use this entire law/state/source/current together. A field extension must place NEW dynamical degrees of freedom and every gauged link into a common Hamiltonian; do not multiply by another root's D and call it an actual join.",
+  "peer_relation": "InducedSpinMedium's finite Gauss triangle root differs in law, state and geometry. Its flux response is not directly joinable. A useful next shared construction would transport THIS contact-current carrier through a NEW Gauss link field with the SAME full angular/orientor state.",
+  "reproduction": {"python":"/home/administrator/substrate-framework/.venv/bin/python","entry":"rich_mobile_spinor_20261014_capture.py","capsule":"rich_mobile_spinor_20261014_actual1_capsule.zip","receipt":"rich_mobile_spinor_20261014_actual1_exit.json"}
+}

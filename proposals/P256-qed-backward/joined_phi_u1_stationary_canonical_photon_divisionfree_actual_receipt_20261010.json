@@ -1,0 +1,518 @@
+{
+  "kind": "EXACT_CANONICAL_FULLLAW_DYNAMIC_FUNCTIONAL_WITH_FINITE_NATIVE_INTEGRAND_CONTROLS",
+  "proof": {
+    "law": "H=4chi p_x^2+(3chi/20)E_SU4^2+64Pi^2+V4+Va+Vm+64rho Lplus rho+dGamma(-Lambda hneutral)+dGamma(hactive)+sum_63 dGamma(haux). x is3840 Cartesian TrTT=1/2 coordinates,192 fullHaar links and129 cycle coordinates. Lambda=2^8192, chi=2^-4096, V4=Lambda/a sum_x||Gram||F^2, a=1/64, Va=2^10240/40 sum||Phi_x-U Phi_y Udag||HS^2, Vm=(7/10)2^10240 sum_faces(4-ReTr orderedUface). The bosonic2^10240 is NOT charged energy. No bare EM potential.",
+    "canonical": "Background Nneutral=128, Nactive=128, each of63 auxiliaries Naux=128, Ref4. Source Nactive=129, Ref3 is a DISTINCT sector. rho_x=sum_64charged(n_s,x-2)+(NRef-4)delta_x0. Neutral is U1 neutral and has NEGATIVE physical Hamiltonian -Lambda hneutral, not a positive fictitious gap. Ref remains wedge^NRef(C4) with its Gauss representation, not only its scalar charge.",
+    "heat_form": "For arbitrary thermal inverse temperature b>0 and each configuration Bloch beta, use Friedrichs form H_beta from full_phi_fiber. On its smooth compact Cartesian/smooth Haar/Bloch canonical physical core, Vmatter is matrix multiplication linear in Phi; quartic confines it and KLMN closes the sum. Form-Trotter products converge strongly to exp(-b H_beta), with kinetic and full matrix-potential form domains. Trace convergence requires trace-norm domination/heat-kernel estimates, not strong convergence alone; polynomial confinement and ellipticity on the compact factors supply a trace-class semigroup and can be used with confining lower bounds to prove that extra step. Differentiation under a limiting trace additionally needs insertion-weight domination. No finite-path floating control below establishes these analytic convergence estimates.",
+    "full_measure": "At M steps tau=b/M, integrate all CartesianPhi path points against heat kernel with covariance8chi tau I3840, allSU4 links against Haar/Casimir heat kernel generator(3chi/20)Delta, and Theta cycle paths against heat kernel generator64Delta_Theta. Include exp(-tau(V4+Va+Vm)) perpoint. Do not freeze Phi or colour or discard their kinetic measure. Put compact SU4 physical Gauss projector P_G=int dg Gamma(g) into the canonical trace; equivalently close the paths with gauge-twisted endpoints and fermion monodromy R(g) at the trace boundary. U1 longitudinal Gauss is solved by rho and HC; totalrho=0 is mandatory. The numerical native paths are interior integrand controls at identity Gauss boundary, not the integrated Gauss-projected partition function.",
+    "theta_kernel": "Let saturated C192x129 satisfy DC=0, A=C^TQ, Theta=A^T t, t mod2pi. HTheta=64(p_t+beta)^T(A A^T)^-1(p_t+beta)=64(p_t+beta)^T(C^TC)^-1(p_t+beta). On quasi-periodic sections K_tau(Theta,ThetaPrime)=sum_l exp(2pi i beta.l) (256pi tau)^(-129/2) exp(-|Theta-ThetaPrime-2pi A^T l|^2/(256tau)), with Euclidean fundamental-domain measure. Fourier version has eigenvalues64|A^-1(m+beta)|^2 and normalized characters. Theta diffusion covariance128tau, NOT64tau. beta is configuration quasimomentum, not a photon momentum or thermal b. No real-time2V monodromy sign dichotomy is asserted.",
+    "HS": "Exactly exp(-64tau rho Lplus rho)=E_X exp(i X.rho), X meanzero Gaussian on1perp with Cov(X)=128tau Lplus. The SAME scalar X_j at each step drives active and ALL63aux. Split HC from dGamma(h) by form-Trotter, retaining their noncommutation; conditioned onebody T_s,j=diag(exp(i X_j,x)) exp(-tau h_s(Phi_j,U_j,Theta_j)). Scalar background/Ref phase is exp(i sum_j X_j.(-128*1+(NRef-4)delta0)); uniform baseline cancels because X zero-mean, Ref source does not. Physical neutral T_n,j=exp(+tau Lambda hneutral_unscaled), with no X. Neutral128 coefficient stays exact symbolic at the enormous physical Lambda; it is not numerically replaced by exp(-tau hneutral).",
+    "functional": "With monodromy M_s=T_s,M...T_s,1 and Gauss boundary R(g), F=Ref_Gauss_character(g) exp(i sum X.rho_background) [z_n^128]det(I+z_n R(g)M_n) times [z_a^Nactive]det(I+z_a R(g)M_a) times ([z_u^128]det(I+z_u R(g)M_u))^63. Coefficient extraction is PER COPY before power63; [z^8064]det(I+zM_u)^63 sums forbidden transfers of particle number between independent species. Integrate this complex/oscillatory F with the above bosonic measure. No positive HS probability weight for F or determinant sign claim. The Gaussian sampling measure alone is positive.",
+    "finite_hessian": "For external real probe a inserted in ALL literal native U1 ordered phases, differentiate EACH h_s(a) and exponential BEFORE forming monodromy and canonical projection. B_j=-tau h_j, E_jPrime=int_0^1 exp((1-v)B_j) B_jPrime exp(vB_j)dv. E_jSecond=int exp B_j B_jSecond exp B_j +2 int_{0<u<v<1} exp((1-v)B_j)B_jPrime exp((v-u)B_j)B_jPrime exp(uB_j)du dv. First term is contact; second is ordered two-current Duhamel. Leibniz differentiates the finite product including interstep pairs. For C_N=[z^N]det(I+zM), CPrime=[z^N]det R tr(R^-1 zMPrime), CSecond=[z^N]det R[(tr R^-1 zMPrime)^2-tr((R^-1 zMPrime)^2)+tr(R^-1 zMSecond)]. Log Hessian is CSecond/C-(CPrime/C)^2 where C nonzero, then add active+63aux for CONDITIONED logarithm only. After HS/boson/Gauss integration use ZSecond/Z-(ZPrime/Z)^2, including interspecies covariance; E(log Hessian) is NOT log of E(F).",
+    "kinetic_boundary": "If external a modifies the heat/pathkinetic or Gauss boundary as well, their first/second derivatives must join the same product BEFORE coefficient/log. For an edge-flow momentum source H(a)=64|Pi+a v|^2+HC+matter(a), Jkin=128 v.Pi and Kkin=128|v|^2. Source-independent fixed-background path derivative used numerically differentiates matter only, and is labelled so. FullE=QPi+D^T Lplus rho; hence HE+HC=64|E|^2. Resetting incomingPi loses128Pi.Q^Tk; treating copies as independently averaged loses collective cross terms. Gauss projector remains fixed only for gauge-invariant probes/closed conserved-current insertions.",
+    "thermal_spectral": "For gauge-invariant Hermitian J=dH/da and K=d2H/da2 on the physical sector, d2(-log Z)/da2=b <K>_b-int_0^b dt ds <T J(t)J(s)>_b,connected. Z=Tr_phys exp(-bH_beta). Current correlator spectral C_b(t)=Z^-1 sum_nm exp(-bEn) exp(t(En-Em)) J_nm J_mn minus <J>^2. At a minimizing betaStar and compact-resolvent fiber, exp(-b(H-E0))/Tr exp(-b(H-E0)) converges to P0/dimP0. It does NOT select a unique vector within degenerate P0; a chosen vector requires boundary preparation. For 0<t and a nondegenerate ground, C0(t)=sum_m>0 exp(-t(Em-E0)) |J_0m|^2; frequency C0(iw)=sum_m>0 2(Em-E0)|J_0m|^2/((Em-E0)^2+w^2). Degenerate intra-P0 covariance produces a static term and must be separated. These are SAME interacting ground matrix elements, not onebody monodromy eigenvalues.",
+    "next_consumer": "Use this very H_beta/functionally equivalent heat semigroup to extract stationary physical E0,P0 and the projected resolvent kernel P0 J_q (1-P0)(H-E0+z)^-1 J_-q P0, plus P0 K_q,-q P0, retaining Pi/HC, fullPhi/fullHaar, allcanonical copies and every native conserved-alpha coset. Select/characterize betaStar (not assumed0) and ground degeneracy; establish limiting insertion bounds, then locate photon spectral support/poles/residue/dispersion in that SAME state. Finite conditioned transfer Hessians below do not compute any photon pole or characterize the full ground.",
+    "boundaries": "Exact exterior-algebra canonical identity and Gaussian HS identity hold finite matrices; finite floating residuals are not outward certificates. Three sampled fullnative paths are NOT a converged Trotter path integral, stationary ground, positive measure, allPhi limit or photon dispersion. No root solve, oldSOURCE adoption, new clock or Maxwell law. Prior sectorwise-wilson-legendre.md was not found in bounded project/memory search; no theorem from it is presumed.",
+    "regularity_and_meanPi": "The established physical C* state is beta-diagonal periodicTheta/Wilson and compatibleelectric, not automatic regularity of raw noncompactTheta. Sharp original-cover beta packets can fail regularity for position-Weyl shifts; neither rawTheta covariance nor a normalizable real-coverL2 vacuum is inferred. At global minimizing betaStar, for every ground vector Rayleigh comparison under +/-d in H_beta-H_betaStar=128d.Pi+64d^2 gives <Pi>=0; polarization gives P0 Pi_i P0=0. This is a ground mean constraint, NOT Pi=0 operator or vanishing electric fluctuations; HC and Pi must remain in the functional.",
+    "bounded_spectral_consumer": "For a bounded gauge-invariant periodic Wilson-flux Fourier observable F_q, compute from the SAME physical H_betaStar and ground P0 the matrix P0 F_q^dag(1-P0)(H-E0+z)^-1 F_q P0. ElectricPi insertions require their graph-domain bounds. This bounded spectral consumer can establish an emergent lowenergy photon cluster without compactifying the original law, assuming rawTheta regularity or identifying transfer/Ritz/Taylor nodes with a pole. Current/contact kernel additionally needs the unbounded insertion domination described above.",
+    "split_domain": "For fullPhi, never use exp(-tau dGamma(h)) as a bounded free-standing semigroup: h is unbounded linear in Phi. Group V4+Va+Vm+dGamma(matter) into the semibounded matrix-multiplication form W; pointwise scalar exp(-tau Vbosonic) times the fermion transfer is exp(-tau W). Form-Trotter K, HC and W on their common form domain gives the stated strong representation. Oscillatory HS is exact at each finite HC factor, not a justification to interchange fullPhi/HS integration or derivatives absent domination.",
+    "trace_class_and_derivatives": "Set X=||Phi||HS=(sum_x,mu Tr Phi_x,mu^2)^1/2=||x_Cart||/sqrt2 with Tr(TaTb)=delta_ab/2. Gram PSD/SOS and64-site Cauchy give V4>=Lambda X^4/64. Absorbing the finite-CAR linear matter bound B X by Young gives H+C>=K+Lambda X^4/128. Min-max bounds full eigenvalues by this scalar confining elliptic comparison, tensor a FINITE canonical CAR dimension. Its quartic heat trace is finite by Golden-Thompson/free Cartesian heat diagonal integrated against exp(-b Lambda X^4/128), times compact Haar/Theta heat traces. Compact Gauss restriction cannot increase eigenvalue counts. Fixed gauge-invariant periodic phase probes J,K have matrix-multiplication norms<=const X; quartic form control and semigroup smoothing bound their finite-b Duhamel traces without globally bounded Phi/current assumptions. A traced kinetic/W form-Trotter limit or interchanging HS/Gauss/fullPhi limits must still supply trace-norm/insertion domination rather than infer it from strong convergence. The exact spectral identity is defined by the trace-class H itself, independent of that numerical limiting implementation.",
+    "polarization": "The executable arbitrary-direction quadratic form supplies every mixed current/contact Hessian by H(v,w)=(H(v+w,v+w)-H(v,v)-H(w,w))/2. Numerical native controls below exercise one nonzero transverse direction, not the full192x192 Hessian array. No isotropy or polarization degeneracy is presumed.",
+    "coefficient_without_resolvent": "For monodromy jets M,MPrime,MSecond compute normalized exterior coefficients c_k=e_k(M)/binom(n,k) by division-free-in-M normalized Faddeev-LeVerrier: B_0=I, c_k=Tr(M B_(k-1))/n, B_k=(n c_k I-k M B_(k-1))/(n-k). B_k is the kth Newton transform divided by binom(n-1,k). Apply product-jet Leibniz before each trace and update; stop before the unused B_n. No inverse of I+zM, determinant cutoff or skipped contour node occurs. A determinant zero may have nonzero second jet: shared zero-mean HS X=(pi,-pi), h(a)=sin(a)sigma_x gives M(a)=-exp(-sin(a)sigma_x), c_1=-cosh(sin(a)) and c_1Second(0)=-1. Floating recurrence values remain finite controls, not outward interval enclosures."
+  },
+  "law": {
+    "N": 4,
+    "V": 64,
+    "charged_copies": 64,
+    "aux_copies": 63,
+    "canonical_each": 128,
+    "neutral_scale": "-2^8192",
+    "bosonic_stiffness": "2^10240",
+    "chi": "2^-4096",
+    "HE": 64,
+    "HC": 64
+  },
+  "finite_path": {
+    "steps": 3,
+    "tau": 0.0005,
+    "total_thermal_length": 0.0015,
+    "seed": 2221010,
+    "shared_HS_covariance": "128tau Lplus",
+    "realized_paths": [
+      {
+        "X_sum": 3.608224830031759e-16,
+        "Theta_norm": 1.0482789887353539,
+        "Phi_nonuniform": 0.42422498336013975,
+        "colour_noncommuting": 0.0013370677131035768
+      },
+      {
+        "X_sum": 2.220446049250313e-16,
+        "Theta_norm": 2.0119403549772805,
+        "Phi_nonuniform": 0.893354843173505,
+        "colour_noncommuting": 0.004692551453827372
+      },
+      {
+        "X_sum": 0.0,
+        "Theta_norm": 3.1120963087091873,
+        "Phi_nonuniform": 1.2455456448505084,
+        "colour_noncommuting": 0.006526250890582278
+      }
+    ],
+    "canonical_species": [
+      {
+        "role": "active filled charged",
+        "copies": 1,
+        "onebody_dimension": 256,
+        "canonical128_normalized_jets": [
+          [
+            0.29858140934294963,
+            -3.756553737348234e-09
+          ],
+          [
+            -6.545108096238487e-07,
+            -2.842929889487084e-11
+          ],
+          [
+            2.5148131501005882e-06,
+            -5.6020805177234765e-12
+          ]
+        ],
+        "canonical129_normalized_jets": [
+          [
+            0.2986036116574662,
+            -5.591189702212722e-05
+          ],
+          [
+            -6.54526005086166e-07,
+            -8.956909648053775e-10
+          ],
+          [
+            2.5148401685592637e-06,
+            2.559726323547365e-10
+          ]
+        ],
+        "log128_jets": [
+          [
+            -1.2087126552159484,
+            -1.2581338354637707e-08
+          ],
+          [
+            -2.1920681902593676e-06,
+            -9.524214377379478e-11
+          ],
+          [
+            8.42253280571742e-06,
+            -1.8656772666680992e-11
+          ]
+        ],
+        "coefficient_recurrence_vs_eigen": 2.612205631135665e-16,
+        "finite_difference_first_error": 2.335896419779316e-12,
+        "finite_difference_second_error": 3.803638097550231e-09,
+        "primitive_endpoint_assembly_error": 0.0,
+        "ordered_paths": 384,
+        "two_link_paths": 192,
+        "AP_seam_paths": 144,
+        "adverse": {
+          "contact": {
+            "coefficient_difference": 0.0,
+            "second_difference": 6.0045997957212465e-05,
+            "log_Hessian_difference": 0.00020110427534436283
+          },
+          "HC": {
+            "coefficient_difference": 0.7463166309331465,
+            "second_difference": 6.174658884247796e-06,
+            "log_Hessian_difference": 1.0644173411206967e-07
+          },
+          "two": {
+            "coefficient_difference": 3.1637373193457396e-06,
+            "second_difference": 2.5170204268397493e-06,
+            "log_Hessian_difference": 8.429925429834105e-06
+          }
+        }
+      },
+      {
+        "role": "auxiliary filled charged",
+        "copies": 63,
+        "onebody_dimension": 256,
+        "canonical128_normalized_jets": [
+          [
+            0.29939216880647723,
+            -3.9364516832805785e-09
+          ],
+          [
+            -6.562673775108051e-07,
+            -2.8805040089881298e-11
+          ],
+          [
+            2.5215616294322555e-06,
+            -6.049216811932424e-12
+          ]
+        ],
+        "canonical129_normalized_jets": [
+          [
+            0.2994143812308252,
+            -5.605823599116964e-05
+          ],
+          [
+            -6.562829170134047e-07,
+            -8.983202481444605e-10
+          ],
+          [
+            2.5215883232872198e-06,
+            2.562128622485778e-10
+          ]
+        ],
+        "log128_jets": [
+          [
+            -1.206000963629682,
+            -1.314814512007174e-08
+          ],
+          [
+            -2.191999143219501e-06,
+            -9.624055600206134e-11
+          ],
+          [
+            8.422265020982256e-06,
+            -2.0094678149924545e-11
+          ]
+        ],
+        "coefficient_recurrence_vs_eigen": 2.5747093901828604e-15,
+        "finite_difference_first_error": 1.323287305937624e-12,
+        "finite_difference_second_error": 3.387360472855713e-09,
+        "primitive_endpoint_assembly_error": 0.0,
+        "ordered_paths": 384,
+        "two_link_paths": 192,
+        "AP_seam_paths": 144,
+        "adverse": {
+          "contact": {
+            "coefficient_difference": 0.0,
+            "second_difference": 6.020821908024807e-05,
+            "log_Hessian_difference": 0.00020110151618282906
+          },
+          "HC": {
+            "coefficient_difference": 0.7483150456957394,
+            "second_difference": 6.191010783384298e-06,
+            "log_Hessian_difference": 1.0642304875761932e-07
+          },
+          "two": {
+            "coefficient_difference": 3.1722636055799682e-06,
+            "second_difference": 2.5237748969267966e-06,
+            "log_Hessian_difference": 8.429657635674548e-06
+          }
+        }
+      }
+    ],
+    "active_plus63aux_conditioned_log_jets": [
+      [
+        -77.18677336388592,
+        -8.409144809191574e-07
+      ],
+      [
+        -0.00014028801421308792,
+        -6.158397171903659e-09
+      ],
+      [
+        0.0005390252291275995,
+        -1.2846214961119274e-09
+      ]
+    ],
+    "source_Ref3_phase": [
+      0.991354556152292,
+      -0.1312103044585001
+    ],
+    "wrong_Ref_omitted_phase": [
+      1,
+      0
+    ],
+    "source_phase_difference": 0.13149482003263918,
+    "neutral128": "[z^128]det(I+z ordered_product exp(+tau 2^8192 hneutral(Phi,U))) retained exact symbolic; never evaluated with charged tau",
+    "not_ground": true,
+    "not_integrated_Gauss_or_boson": true
+  },
+  "independent_small_CAR_Hermite": {
+    "fullCAR_dimension": 16,
+    "Hermite_nodes_per_step": 24,
+    "steps": 2,
+    "physical_background_and_source": [
+      {
+        "active": 1,
+        "aux": 1,
+        "Ref_shift": 0,
+        "totalcharge_exact_zero": true,
+        "canonical_masks": [
+          5,
+          6,
+          9,
+          10
+        ],
+        "conditional_fullCAR_vs_determinant_max": 3.1563293645398005e-15,
+        "Hermite_shared_HS_vs_exact_HC_split_max": 4.441723444837561e-16,
+        "integrated_CAR_vs_determinant_current_contact_max": 2.074033497652044e-18,
+        "canonical_trace_jets": [
+          [
+            3.1966166297686534,
+            -8.592058196966155e-18
+          ],
+          [
+            2.056386133545846e-24,
+            -2.6991509270519062e-21
+          ],
+          [
+            9.900073522481478e-22,
+            3.1275231688964244e-22
+          ]
+        ],
+        "adverse_omit": {
+          "HC": 0.800917267093014,
+          "contact": 0.00012945139531848036
+        }
+      },
+      {
+        "active": 2,
+        "aux": 1,
+        "Ref_shift": -1,
+        "totalcharge_exact_zero": true,
+        "canonical_masks": [
+          7,
+          11
+        ],
+        "conditional_fullCAR_vs_determinant_max": 1.324147507406233e-15,
+        "Hermite_shared_HS_vs_exact_HC_split_max": 1.3331723830468927e-15,
+        "integrated_CAR_vs_determinant_current_contact_max": 2.2524744974837406e-16,
+        "canonical_trace_jets": [
+          [
+            1.5971627519691793,
+            4.910769971862188e-17
+          ],
+          [
+            1.060340084947013e-22,
+            5.3229056747155e-22
+          ],
+          [
+            -1.4125728139173757e-22,
+            1.7748474389488758e-23
+          ]
+        ],
+        "adverse_omit": {
+          "HC": 0.400770643381823,
+          "contact": 1.7124412866915305e-05,
+          "Ref": 0.16072569723633112
+        }
+      }
+    ],
+    "integrated_CAR_vs_determinant_current_contact_max": 2.2524744974837406e-16,
+    "singular_canonical_boundary": {
+      "scope": "Singular I+zM legitimate shared-HS canonical heat/contact boundary, not a pole",
+      "monodromy": "-exp(-sin(a)sigma_x)",
+      "normalized_wedge1_jets": [
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0
+        ]
+      ],
+      "fullCAR_normalized_jets": [
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0
+        ]
+      ],
+      "coefficient_error": 0.0,
+      "independent_CAR_error": 0.0
+    },
+    "coefficient_before63": "9223372036854775808",
+    "wrong_coefficient_after63": "6034934435761406706427864636568328000",
+    "wrong_after63_ratio": "6.543089026060099e+17",
+    "neutral_negative_sheet_control": {
+      "correct": 1.9988051970268326,
+      "wrong_positive": 2.0012052029788356
+    },
+    "scope": "Independent physical background/source fullCAR4mode/Hermite current/contact/Ref/sharedHS control, not N4 ground"
+  },
+  "Pi_HC_cycle_controls": {
+    "incoming_transverse_Pi_squared": 0.09197968749999998,
+    "correct_HE_delta": 74.82000000000001,
+    "HC_delta": 20.999999999999993,
+    "full_delta": 95.82,
+    "wrong_zero_incoming": 64.0,
+    "kinetic_first": 31.82,
+    "kinetic_contact": 86.00000000000001,
+    "heatkernel_images": [
+      0.1357965291353189,
+      0.008441809958977593
+    ],
+    "heatkernel_Fourier": [
+      0.1357965291353189,
+      0.008441809958977586
+    ],
+    "wrong_diffusion64": [
+      0.1856412939613975,
+      0.002719837168386607
+    ],
+    "heatkernel_image_error": 6.938893903907228e-18,
+    "collective_two_identical_flows": 256.0,
+    "wrong_independent_copies": 128.0,
+    "scope": "ActualN4 fullE HE/HC identity and incomingPi; exact-shape1D cycle kernel numerical phase/diffusion control, not129D integration"
+  },
+  "input_sha256": {
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_root_actual_receipt.json": "4691ffaa9cd81902942cbc228fc47fafff14518be6b5df2e84d08c29c7da4756",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json": "5b97862fc7fca21b8797d549d7d4dfdde58b101e8c46c7a7cfb6531a669c4354",
+    "induced_phi_nonuniform_fermionic_source_unitary_resumed_actual_receipt.json": "da1998065d6622c4ac780409c29ae10711e01b5c5143edf620557fe15234e9e6"
+  },
+  "path_bytes_sha256": "808df26df675a05e1b3a879868979405a6f1bff1b94ebfc357da2d693e949bdc",
+  "source_sha256": {
+    "joined_phi_u1_stationary_canonical_photon.py": "d2f33bdfbaae16c89bbc9d58f9c2bb636546a300e13378a7dfee9cb3276f7289",
+    "joined_phi_u1_stationary_full_phi_fiber.py": "945ad7d3b2143ed077af074511ec641b9ce878109db6c7e2997d9790e86029c6",
+    "induced_phi_nonuniform_field_car.py": "55661707f096422947a816924664de94e8da1d092e278164e4e9be57a26e775c",
+    "induced_phi_uniform_selfconsistent_full_normal_quantum.py": "f63c1590af4fa9922757615b1bfccb788f430760d401d7c66372e8656163251c",
+    "induced_phi_uniform_relative_colour_quantum.py": "8f50cdc7ab6f5860fde58a0d0607ced4afd6549c6b4207d916b1b14839faf01b",
+    "induced_phi_nonuniform_gauss_quantum.py": "2bd70176910108fd695c5490b31ce490da70c860a9a43693758479ec2ccc2c06",
+    "induced_phi_uniform_full_normal_quantum.py": "2832ab998db0bcef0f21fc984a40d63f4e953d36674a63058563a9612260db80",
+    "induced_phi_quantum_oscillator_backreaction.py": "404dfbee04a0f8d0ba449c396881675c5763464f0aa81061b69bffc2e6b3ec4c",
+    "induced_phi_static_backreaction_bound.py": "cd279069774aa40e78d73b807290ab42095870607321ffc75a8e8b4a47a58b45",
+    "induced_phi_pauli_band_volume.py": "00e0c4aa7cbc070449dcaa5b9d8d3b8e1a4f924d44ae41721e59a2e55c472ff4",
+    "induced_phi_pauli_band_response_control.py": "bfb1bdbb72d06c54369b5678e62cbd3f7dd2e71effc9a6d6e5a005ae4a22e768",
+    "induced_phi_pauli_gaussian_ward.py": "1b4bde56877c9da48ee615bb2ef4ed1fe89da1d1a6097f30cddc9b6840f6a560",
+    "induced_reference_electric_graph.py": "a6395a15a6ae26cc2c0afa2a5e39e1a004dc695e792b0774e78ccb3e20db7a3f",
+    "induced_reference_field_following.py": "a00017b203dfb24693302d25f017a1d64f48aca3fcbc4009417eecb0c897ceac",
+    "induced_phi_em_gaussian_variational.py": "986c34d93435be153d1b23600f4ffe01c600655a06da0bf8ab0943d6b10d7ef8",
+    "induced_phi_backreaction.py": "7ef885a77455824ca1e0e296ffaa0c4a0c16a5c8343a59bd5b1470a43cad8148",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+    "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+    "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+    "induced_photon_response.py": "4906bf0bb8c3a80fd20d2b93388878e9975af54bffd7f114ee027d5c3c00e64f",
+    "improved_phi_band.py": "da97aa8d9bcdb578db966533714b05a45d3747cca3f0b9dd253afb79bff76a76",
+    "original_charged_principal.py": "95242f66759648031475b4a47be0cb3f316fc9dafd283d560cb2726d9c4ddc7c",
+    "bulk_flat_holonomy_bound.py": "b9a6f096ac5cede629e18aa15fa615e19165998fa398119e19123683144d30f5",
+    "bulk_quantum_selection.py": "0dcdb45b755cc805186e72d1db70cc32bf392fa1a35c2e42d8dd99ff43b8f24f",
+    "unrestricted_field_minimum.py": "443840b860a0adfb4fd5455ecf9188ddb63b31fae252619568a60ed4a9915301",
+    "centre_flux_sea.py": "b9fd12acd165a0af1003d49dfd34bf45bf481f0723dc393d1c702bb436fda5d1",
+    "full_band_gauss_section.py": "1bb48d986e83c5df3b707ad74337a2f4b0ec6a4495af90ba87b6a8e68eb366cb",
+    "gauss_charge_intertwiner.py": "861008cb7dea64d2b2e0cef513c62de1d55539a1527a5b6fea8b5b879ea956fa",
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "quantum_su4_gauss.py": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+    "full_field_charge_bound.py": "b86f5fe62f2a838f2a5cd84e70c1b3e74e801aef91cd2dda6d4ce123e58541bf",
+    "full_band_packet_bound.py": "9b8e6f0d4c20d875389bd38d76d273be8d431a18cbe0331f9925daa72a8450d9",
+    "full_spatial_gauge_stability.py": "2c1eb9ba04eef7dc851f0af2e6c70d8ae470396bc15e324fcd58d6fe3c89e0bf",
+    "periodic_bulk_frame.py": "b784c7734bc7f35b3b0db5d3e4e4b888d64328647bf9e63e8b70b40b5128c1a8",
+    "bosonic_original_law_join.py": "8e107f1fecb8483200c1520b8afd0032a653c24bae5b81d1ecad36a81d0cdd9e",
+    "noncompact_coulomb_carrier.py": "073b97c04de1d38bc356cc096a5151cd16acf0d6ff38106f407d648a6e65bba6",
+    "noncompact_screened_gauss_dressing.py": "74a5a5155a3f75eb812c8abf80ad5603ccb6945150dbfc01b2c50f2c82773cf2",
+    "noncompact_charged_packet_transport.py": "c9296b17432759d95cfbcb9a352e67ebaebc7bc809cf477d0a35fb9c6cb4974c",
+    "noncompact_maxwell_phase.py": "f9bfef5e64c597b4f3f095834624c1605c74ac263e4045626c156e4f7c4e2710",
+    "original_compact_charge_bound.py": "b980bfb62ed9fa8de18eea39c855cba2833c287118496dbb0a4f08a0c436ccc7",
+    "original_centre_charge.py": "37745e237aad5435162f4b44d99efd336fac9933de03aca8dd48719dfdcb7ae5",
+    "original_normal_gap_bound.py": "9d9f1ec26995b8be6fa5960a184ab11ebca5b782e82e07624a52fdb4724f9bf8",
+    "original_massive_photon_locality.py": "2829890a4a0f8a527ab984aa9bc250b92f78812888c4992c9b041ae3c012fa86",
+    "original_uniform_charge_gap.py": "8483a19b8135e6f96e8f92f3f2c3c5ae51b4b024ee83a1b7f12b089feb7697d8",
+    "noncompact_marked_metric.py": "552d5153f8ca0d484067d0bbf5e9c49ab429f76e46dc1cd0070235d52e415dd8",
+    "noncompact_native_current.py": "83ee632b748d5a5f6b47e8bd72d552ff87a170221cbdc9f97efe8b2a21dfde5b",
+    "noncompact_neutral_supplier.py": "314d4bab4695727c4d47dc0752ae7afc0bf9e6bdfec0855e066014d4b9f0a7ad",
+    "noncompact_finite_packet_spin.py": "4b85d323c7b96ee1a614a3f80ea9b200ae0b9308ddc83640e1be7f2e5bc1af64",
+    "original_physical_rotation_lift.py": "28c84681cb80503def00fece882b5daa1cc3de801ee430db2750e45f39fc7665",
+    "physical_spin_boundary.py": "a67649d1abe0664283310a1dd186a443ecdc40560225d6025d89fe954fc7a655",
+    "bulk_frame_compton.py": "0d869fa925c7946096ab152d7d415437424f41b031d882f75c089f2d4943f284",
+    "photon_matched_compton.py": "3ca0501d1636910c9be90f8a423e592d0c246de3e7286c7a6444268f6caa5c64",
+    "photon_matching.py": "efa046a5976b48b7d34b6d1faaeb78927ff00d4b83011e62b89d518994b5f994",
+    "vacuum_limit.py": "1ab70e9378d48e4cee9ed2c46e917496d4be2686f34cba87c7b82660ef6c3297",
+    "pair_full_field_charge_transfer.py": "b699fad8485d91502f2d6197dcd762fafe7b901af870399156e5f9eb1ab21c47",
+    "pair_full_field_concentration.py": "4a485d5ffd1d1c180c13858f09c3f3e3cdcd54242297f12897e4dc66336f5d25",
+    "pair_global_field_bound.py": "f419c53c881c6d66175a551e6ee2f074521c8fb726fffc17e5ae82eb9ef533f3",
+    "noncompact_wilson_photon_envelope.py": "4b9f10c87d9dfb055a2a718e25cfad23ffc4261d6b8ad48a211b1ddf412957ca",
+    "noncompact_centre_source_energy.py": "8cfde5230cac1c1458143fb4b033bd6f54244d971a99d0b5fe1a67d059cdfb19",
+    "noncompact_physical_rotation_join.py": "b950319832910770f6ec2777b01ce8abaa6606d2be5de999f5dea82940c23bd6",
+    "noncompact_mechanical_pulse.py": "5f6b980cd3a4e712d666ee3197e8a9d25936691dc4b148b8c6d27aafe0e28b25",
+    "noncompact_frame_pulse_transfer.py": "368875f9ce5816456d8ad43735320d402d3f1f861688479281d7779b2013812f",
+    "bosonic_frame_torque.py": "d6565ce84fddeac23dd76e2eb909e12bf02c51c183d20eaa1c54e276de66a77e",
+    "original_total_angular_transfer.py": "0f3ea2d1f7cc0918a03190b5c0babd0996d2d1a6d2985dbc25c6d9409be8718a",
+    "original_intrinsic_angular_transfer.py": "c678d2092f29ab3652b6a4579e895f7db0bc7b8ec71e601e47249ccda14d044f",
+    "original_slow_kinetic_bo.py": "8ca4f73a2c8f412a1dab42af9a81e44ef714742799f8bfcf398847f12a0fc8d1",
+    "noncompact_native_metric_admission.py": "12ab7f5aa353cf4a98d272fc85332485ee36f4741529be96bd42002177003ca9",
+    "bulk_global_gram.py": "a078f989b3199c1ceeab274d59ade61e8f96c0352f65aa3be2fd7baf2553e0a5",
+    "noncompact_quantitative_normal_budget.py": "bd66f24c524e95e582a4282a9bd758dff97ffddf4e962056189460b122795854",
+    "induced_photon_mode_frame.py": "7385772fced5cc6bcc98ff76b81f46f168608783a2932c402fe40d1af4ab075e",
+    "induced_compton_transfer.py": "22aee2e714373acad4f7148e436d99b3573bf0532fb845e02ca19b00a0247f3b",
+    "induced_phi_ir_well_transfer.py": "d624514808f6947b6558b3ca7487961f389b7babfc18e2f0ed6d4ec5675edc60",
+    "induced_reference_electric_graph_enclosure.py": "00a212b54455c3c7d4b997383785f1ebe7f53f174a466d9ee6ddbffbf2542e95",
+    "induced_phi_pauli_initial_moment.py": "41d2f6b2a0d28a84e5aa5b1151f420ae725a74fe3defa329b5084d990e2f8845",
+    "induced_phi_pauli_beta_continuation.py": "9a52bdb152fff0b744fc4ff03725738bba186ad03397d0f658c98cc0e18ced34",
+    "induced_phi_pauli_source_metric.py": "06db8f0d341c6acef7e9ce19b086fdf70a5b5844d2ad115786766a315d021352",
+    "induced_phi_em_ygraph_evolving_field_clock.py": "76ad0692682c96986aae3c4ad02e2037d9ec6bdb744ad3a42813afd560ae490d",
+    "induced_phi_em_ygraph_centre_bridge.py": "a63e60ef8affd3e027001a2701952e891cf949c6544ef4ebef1e85c5ea6c2c3c",
+    "induced_phi_em_ygraph_clock_transfer.py": "72a65537162068a576d8969e6e7eae358617519ab3df428e6ab42ae53af32c23",
+    "induced_phi_em_ygraph_full_phi_energy.py": "4e0ac4d8b844855631bafe8f93883b8ebd5cfb3ccf86f52addb384cb42e65540",
+    "induced_phi_em_ygraph_initial_contact.py": "1807820746cea2ce87f092a14e7433114b71a545c29dce1bf4067bd1f06d38f1",
+    "induced_phi_em_ygraph_weak_domain.py": "0d17640e6522670e7ade8cade6dbde2eed975835849bf3c2452587af39bf4772",
+    "induced_phi_em_macro_photon_domain.py": "2a9f3ef2629cc16b1983abab3f9331d8d2514c6604ef199e6623ccbe80586423",
+    "induced_phi_em_macro_squeeze.py": "8ca1f3dc93ff1c9523efb58328b58c9df0d9f2bd7ae854b2e4136f54f295882b",
+    "induced_phi_em_macro_virial.py": "77908875dca6e24d5a8aec53ca37d8fdfc179274183a6ccc4f7e6454379c844c",
+    "induced_phi_em_macro_preparation.py": "a9ec60a853e4ddc27c7009065815444a6104e83e42c765005b7ef9dd89e5f603",
+    "induced_phi_em_sw_preparation.py": "57b62db9e98cafbc803cfde8255644a630396699c476fc890ff2bd9aed446c78",
+    "induced_phi_em_sw_momentum.py": "dc6a00cd1b0ed65179d28e131bebc6c131b3668a6320dd9cd96879d380a913cb",
+    "induced_phi_em_momentum_dressing.py": "01617fd4c72797c26fd8dca6e4e80997d8ee31a62143859eef744bac9593bf15",
+    "induced_phi_em_gain_certificate.py": "9225ca3205943f7e8eefec1fdd17df9b7b0e012ac8c117b6fbd70625805e81d3",
+    "induced_phi_pauli_magnetic_join.py": "b50da99431dfbb3a0a3be45b5bae05fe1c8c2493d9b20394cc92d1efb4c46724",
+    "induced_phi_spin_photon_joined_heat.py": "13ea6c0540a50bea5d502c880a670212b144274ed601c80e8baa596068e7f87d",
+    "induced_phi_spin_shape_full_source.py": "ae43a045406b2e89fe74c957cb16c0186bdb5475fb01585587b5104456c0c3c4",
+    "induced_phi_spin_shape_contact.py": "6120d968ef2e2bb91e64b4fb91b3e022b821a5f533922a9a6f980e597038c5a9",
+    "induced_phi_force_quantum_heat.py": "b235cd760c14adf73e68dc68c91357d58b8fd7a4379d15dccfd1d82b1a1e8099",
+    "induced_phi_quantum_force_source_gram.py": "ad509e7181540f79f589f995f00fb0d0804cf3929cfc8052b6244c19784b101e",
+    "induced_phi_quantum_source_force.py": "fd07c465720d0241e4e34d8bdbec018f24ae5aaf809cb6e0c678d29691b0aeba",
+    "induced_real_em_joined_heat_continuation.py": "428c33096f7df58d980684d751a1e5112818a2cc299546cbe935aae0571d982d",
+    "induced_real_em_photon_heat_receiver.py": "ca6698b2497b86dc7fa4990b62e2048ca5628cb45be1599c6cdd009838b88878",
+    "induced_real_em_coulomb_heat.py": "569ae5b6a08c81d7563704b1b3c4eb6571394b8f8988e5b8a9b1f366a4a9de63",
+    "induced_phi_em_source_translation.py": "17f351e16fd7fc08ded2e8bf1930192a42adc865155d18988f32fed51052c7e1",
+    "induced_phi_em_charged_photon_response.py": "e363dbb15d3c8e061915af1a92b55516d374f66c9bda03f57d2b11b829d5a108",
+    "induced_phi_em_charged_photon_source.py": "5f26c140d27e2b9a16c259880b8504e9b6c1cc4bfe75c24f7d890cf9381510ca",
+    "induced_phi_em_compensated_transition_graph.py": "6ec51626787323ffedf6f17c633de229e84c5abdfff220919d29f1b2d6f2d952",
+    "induced_phi_em_compensated_green_receiver_typed.py": "2515ef32242e4cd7e350a1e6adc22e6acba2bbf9c4aa9ee5db430ad72d1c2fa7",
+    "induced_phi_em_compensated_source_energy.py": "dcc3580baa77bf8bfdc8ef249ec5cbd699b57168b3d6a0911757eec13530ba23",
+    "induced_phi_em_compensated_charged_green.py": "c42d2be614c4b74ab7f8e5689a8706c25cbe838fd60f9223468c79d643d13806",
+    "induced_phi_em_full_current_inserted_response.py": "5c6b12d6e00659d6ba0623812a737f4a88a3b9164ba7f4c3d279315257d40fcc",
+    "induced_phi_em_full_inserted_response.py": "248f2f03d79cf55420a0690bd5228e4fce07ed162dc22c16ebd11354bc86c8d6",
+    "induced_phi_em_full_source_force_clock.py": "e4b38e370f21d43b418c06a50b1e42ceccf9a69efb588420f24cf53fc27e2a2c",
+    "induced_phi_em_ygraph_current_source_retarded.py": "4784df39f865cf4415a02f25eeef8d9d079e9bddf2d5dcb07f3202fe490ced44",
+    "induced_phi_em_ygraph_retarded_transfer.py": "e8c7c8b7a10451bac62f690af5a1a95769b09e1865b0439f0fbed241f1065b8e",
+    "induced_phi_ir_c_full_action.py": "6550aa333c75b1b49b4faded7dbc8b6b8c4526c6b36488e92dfde5507acd73d0",
+    "induced_phi_ir_charge_symmetry.py": "6b2f1a003822204d2d937ddca10572d13f9867b16f2a2eab14cfc7c8d843a903",
+    "induced_phi_pauli_four_link_loop.py": "fb590dfe3c219e1682471d75ae71cb753fc58661c5dba8351b35d3d377807b80",
+    "induced_phi_uniform_quantum_backreaction.py": "0c3d65dce2d22181073cc9bdd373a7ba7c99977f895ffab1a097e7ae070c9da7",
+    "induced_phi_quantum_fast_transfer.py": "8916c7da2d96d3bf10100a7839cc4ba19fed8cb5ec646ea5dee8cccafaa8b0a9",
+    "induced_phi_uniform_global_gauss.py": "d0e8707178a99bd742a9f56c1de50c4d4f69f5a35abe3a0f711c7e1a05a4455c",
+    "induced_phi_full_normal_global_gauss.py": "ab8c54180797378516aed2056192d71ffc2be10e99368bf064acb2a21325d294",
+    "induced_phi_colour_uniform_global_gauss.py": "c65fb72c037bfbf3892aecf989d923fbfbb32c4bc19c6554dbc9ea545550eb9d",
+    "induced_phi_nonuniform_local_gauss.py": "73ca8d12378d4d5ef6371e11270f967d891f6be0a7e85f200c16440736bf72b4",
+    "induced_phi_uniform_fermionic_source_unitary.py": "a592f31ac7d78db94b0bbc17a59924cc09e87cb04ab51049d25b50c87a161196",
+    "induced_phi_full_uniform_fermionic_source_unitary.py": "fb9dc99e3582fbd559ad96a176e427a0a8f3173f70ad13421e15c1879261dd8c",
+    "induced_phi_uniform_colour_stiffness_resolvent.py": "00ac73b3e00e77bfb73a6b5024778ccf8e09c5a74304e0260a80b1a89b122c6f",
+    "induced_phi_full_uniform_colour_fermionic_source_unitary.py": "8bfeec2518978d9a33e300a342c842755e3f766a5f4c83b4847b7dfda297f91f",
+    "induced_phi_nonuniform_fermionic_source_unitary.py": "8c7cd31445476c18e6197b9811d7bc60816a6f89127fdc80649f6097eebd5f70"
+  },
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3"
+  },
+  "elapsed_seconds": 73.0140961589932,
+  "source_inputs_unchanged": true
+}

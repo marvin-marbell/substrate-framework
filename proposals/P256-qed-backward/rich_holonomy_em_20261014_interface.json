@@ -1,0 +1,30 @@
+{
+  "candidate":"two-local-positive-frames-spatial-EM-fullFock-v2",
+  "governor":{"plan_id":"issue222-rich-backward-candidates-20261014","captured_revision":"a501cf6c1963589733de24fbc2de49af67a7e44b2d3776134e5e9d558d01d024","template":"general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe","parent_sole_plan_writer":true},
+  "module":"rich_holonomy_em_20261014_model.py",
+  "parameter_input":"rich_holonomy_em_20261014_input.json",
+  "API":{
+    "geometry(p)":"Pure actual3D geometry: Gaussian centres/density/E_L, Coulomb kernel, two curl profiles and Gram/normalizer, four routes and mode line integrals, measured broad profile q RMS.",
+    "build(p,frame=None,external=(0,0),induction=1,theta=None,spatial_external=(0,0,0))":"Complete sparse common-H model on body256 × field_grid². frame=None calls immutable pure raw_frame encoder. external adds classical source in SAME two spatial profiles; spatial_external is genuine uniform 3D link source, including scalar straight link. induction scales quantum Q in nonlinear link phase only; it is NOT supplier-off. Supplier-off control must set hop=0 retaining Hilbert space, mass, scalar_hop, frame metric and Coulomb.",
+    "sector(model,N)":"Whole-H indices for N0..8; no charged momentum truncation or extra off-grid virtual sea.",
+    "evolve(H,psi,t)":"Sparse exact finite-H exponential action, no low-state projection.",
+    "expectation(operator,psi)":"Real expectation of physical Hermitian receiver.",
+    "matter_at(model,[Q0,Q1])":"Dense256 matter operator at classical profile coordinates, complete material scalar/frame paths/Coulomb; occupied curvature diagnostic, never replacement field law.",
+    "spatial_current(model,k=(0,0,0))":"Three complex Fourier physical current operators J_a(k), all routes, Gaussian-smoothed current with exact straight-segment Fourier integration. J(k)†=J(-k); k in inverse geometry length. Fourier phase exp(-ik·r). At k=0 Jy/Jz integrated current vanish for same-axis endpoints; at finite oblique k both nonzero, actual3D route current not Cartesian scalar relabel."
+  },
+  "basis":"body first, then field: index=((left_state*16+right_state)*nf+field_index). left/right state are old physical16 occupation-bit bases. Field flatten C-order Q0 outer,Q1 inner, n interior points each, Dirichlet ±field_wall. Source order left four internal-channel/spin modes, then right four. Right sources have left Jordan-Wigner parity. No internal mirror channel interpreted as a spatial site.",
+  "returned_objects":{
+    "H,J,K":"H full CSR; J[2] whole-H physical -dH/dexternal; K[2][2] full d²H/dexternal²; all quantum Peierls feedback retained. J frozen at Q=0 is not full current.",
+    "edgeJ,forwards":"Four whole-H particle fluxes left→right and four dense256 forward transfer operators, order straight scalar_hop and three bowed ordered LEFT-frame holonomies. Physical spatial charge current is q times route flux. Internal mass changes mirror channel at same site, not position.",
+    "source,S,S2,N":"Eight whole-H dressed creation sources, three total physical LEFT-frame operators, total S² and total number. Fixed anisotropic route/profile regulator need not conserve total S²; report actual jhalf weight, not representation-only spin claims.",
+    "matter_sources,matter_spin,matter_base":"Dense256 source8/spin3/primitive+mass+Coulomb operator for exact source/receiver construction. S_site metric retained positive; source halfspin follows raw physical frame.",
+    "nums,rho":"Two dense256 site occupancies and 2I-nsite. Physical density q*(nsite-2)*Gaussian. Two fixed ionic charges -2q. Reference N4 neutral, N5 one net -1 charge, N3 +1 hole.",
+    "CF,source_C":"Whole(CF_local⊗CF_local⊗field parity), sitewise C maps charge density negative; source_C=Isite⊗(epsilon_channel⊗epsilon_spin). C:H(external)→H(-external). Actual old canonical full-Fock source preserved, not one-particle signed proxy.",
+    "Q,P,field":"Two whole-H coordinate/central-derivative momentum operators; finite-grid P is not exact continuum CCR. field.kinetic positive primitive electric Dirichlet laplacian ONLY, with no supplied Q restoration.",
+    "frame":"Same immutable local raw_frame dict with P/raw_source/G/left/S; each site separately raw224→physical16. Never treat frame.S16 as total S256."
+  },
+  "consumer":"rich_holonomy_em_20261014_calculate.py run(p) returns (result,states,model). ground_sector(model,N) returns (indices,Hblock,lowest2,ground_fullvector). resolvent(block,z,sources) returns full-space solution/residual; eigenpair2 is solely reference/gap selection, NOT discarded virtual states. N4 reference ground; N3 and N5 exact complete resolvents and all eight source columns.",
+  "event":"Author source D0+(.4+.3i)D7 adds one actual excitation, followed by EXPLICIT totaljhalf initial projection (weight.886657). Author FIELD-only Q kick, same-current kick and undriven source event; full subsequent H allows higherj leakage. Reviewer requested unfiltered source family as independent adverse control. Four-bin spin-sign × field-coordinate-sign receiver is inclusive over every other degree; not outgoing helicity or asymptotic scattering.",
+  "same_candidate_join":"Peers may directly call model build/run and insert their actual field/current source/receiver. Cannot combine this G with another law's D/normalizer or pretend this fixed two-site material is common mobile-frame bulk.",
+  "natural_capsule":"rich_holonomy_em_20261014_actual3_capsule.zip preserves exact v2 model/calculate/capture/input, raw pure helper bytes, states/result/stdout/stderr/exit. Naturalexit0,59.927696s, project Python3.12.3, one-thread numerical runtime. Earlier actual1 failed NumPy contraction and actual2 rejected C site/channel conflation; immutable capsules retained, not successes."
+}

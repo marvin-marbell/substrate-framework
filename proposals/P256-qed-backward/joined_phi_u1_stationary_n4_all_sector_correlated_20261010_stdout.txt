@@ -1,0 +1,116 @@
+{
+  "reference": {
+    "onsite_energy": -160931.76979298383,
+    "HE": 0.0,
+    "HC": 0.0,
+    "all_charged_rho_exactly_zero": true,
+    "reference_H0_gap_enclosure": {
+      "lower": 0.4512822627981392,
+      "upper": 37.384333659310514,
+      "onsite_particle_hole_gap": 37.384333659310514,
+      "electric_gap_lower": 0.4512822627981392,
+      "kind": "H0 Bloch0 gap enclosure, not full interacting gap",
+      "derivation": "For nonzero reciprocal n=C^T p,1<=|n|\u00b2<=lambda_max(C^TC)|p|\u00b2; HE>=64/lambda_max. Any onsite fixedN excitation costs>=2minmass and HC>=0. Upper from onsite same-site PH rho0 or projected single-edge Fourier character with unchanged sea."
+    },
+    "reference_residual": 1145.8665051133719,
+    "residual_squared": 1313010.0475407331,
+    "species": [
+      {
+        "role": "active filled charged",
+        "load": 1,
+        "onsite_mass": 18.692166829655257,
+        "energy": -2392.597354195873,
+        "residual_squared_per_copy": 20515.781992823955,
+        "diagonal_third_moment_per_copy": 2079978.88684217,
+        "actual_interfering_hopping_third_moment_per_copy": -42364.21667027315,
+        "first_excitation_count": 768
+      },
+      {
+        "role": "auxiliary filled charged",
+        "load": 63,
+        "onsite_mass": 19.660115629810015,
+        "energy": -158539.17243878797,
+        "residual_squared_per_copy": 20515.781992823955,
+        "diagonal_third_moment_per_copy": 2119695.3399705305,
+        "actual_interfering_hopping_third_moment_per_copy": -42364.21667027315,
+        "first_excitation_count": 768
+      }
+    ],
+    "two_vector_Ritz_shift": -1096.3712160256505,
+    "two_vector_Ritz_energy": -162028.14100900947,
+    "H_in_reference_residual_basis": [
+      [
+        -160931.76979298383,
+        1145.8665051133719
+      ],
+      [
+        1145.8665051133719,
+        -160830.54476756454
+      ]
+    ],
+    "definition": "ref=all64 onsite negativeGamma0 occupancy2; Bloch0 Pi0; Ref4. r=(Hbody-Eref)ref; span(ref,r) retains all129 electric modes, all1+63 charged copies and native one/two/AP. HC on each PH is64 deltaLplusdelta; Hopping contribution to <r,(H-Eref)r> evaluated with electron and hole CAR signs, including surviving1+1-2 interference. Variational upper bound on fixed-body Bloch0 energy, not fullPhi unless a separate state transfer is proved."
+  },
+  "compressed": [
+    {
+      "dimension": 3600,
+      "Fourier_radius": 1,
+      "source_Ref": 4,
+      "energy_shift": -2.115531776956655,
+      "compressed_gap": 36.67107903225589,
+      "Ritz_residual_inside_compression": 9.663079674466946e-14,
+      "Coulomb_expectation": 0.4343066670765129,
+      "active_aux_Coulomb_cross_expectation": -0.008033151097043459
+    },
+    {
+      "dimension": 10000,
+      "Fourier_radius": 2,
+      "source_Ref": 4,
+      "energy_shift": -2.1189382741380722,
+      "compressed_gap": 36.668546932144245,
+      "Ritz_residual_inside_compression": 2.2109473214208592e-13,
+      "Coulomb_expectation": 0.4365600820768828,
+      "active_aux_Coulomb_cross_expectation": -0.007620476678658108
+    },
+    {
+      "dimension": 19600,
+      "Fourier_radius": 3,
+      "source_Ref": 4,
+      "energy_shift": -2.118938274137888,
+      "compressed_gap": 36.66854693214341,
+      "Ritz_residual_inside_compression": 3.7233983166324216e-13,
+      "Coulomb_expectation": 0.43656008207688224,
+      "active_aux_Coulomb_cross_expectation": -0.007620476678658143
+    },
+    {
+      "dimension": 2700,
+      "Fourier_radius": 1,
+      "source_Ref": 3,
+      "energy_shift": 16.572409872350477,
+      "compressed_gap": 20.06689155240411,
+      "Ritz_residual_inside_compression": 1.3629674274748077e-13,
+      "Coulomb_expectation": 0.46592707400197214,
+      "active_aux_Coulomb_cross_expectation": -0.013994636513194655
+    },
+    {
+      "dimension": 7500,
+      "Fourier_radius": 2,
+      "source_Ref": 3,
+      "energy_shift": 16.568836606737054,
+      "compressed_gap": 20.056541030009658,
+      "Ritz_residual_inside_compression": 3.068913166020888e-13,
+      "Coulomb_expectation": 0.46844948736914677,
+      "active_aux_Coulomb_cross_expectation": -0.013555619385929394
+    },
+    {
+      "dimension": 14700,
+      "Fourier_radius": 3,
+      "source_Ref": 3,
+      "energy_shift": 16.568836585418385,
+      "compressed_gap": 20.056541051328676,
+      "Ritz_residual_inside_compression": 4.1303450298542825e-13,
+      "Coulomb_expectation": 0.4684495088658818,
+      "active_aux_Coulomb_cross_expectation": -0.013555614266184318
+    }
+  ],
+  "elapsed_seconds": 12.03140098899894
+}

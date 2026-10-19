@@ -1,0 +1,38 @@
+{
+  "kind": "GROUND_MAGNETIC_ORDER_CONSUMER_INTERFACE_NOT_IR_ORDER",
+  "proof": {
+    "path": "ground_magnetic_order_proof_20261012.json",
+    "sha256": "fb4042c334947fe04e0a8150433b1fbf0f04bd2a09cd6a129bfd72e222b86607"
+  },
+  "consumer": {
+    "path": "ground_magnetic_order_consumer_20261012.py",
+    "sha256": "5277892f2df4c91bbedaf5e214489a7e57444dffc95bcf47cfee25a8fd3c76d8"
+  },
+  "actual_ground_gate": {
+    "actual_ground_analytic_antecedent": true,
+    "physical_hopping": 1,
+    "m1_pair_exact": 256,
+    "m2_pair_exact": "16384*T + 65536",
+    "wholeP0_covariance_lower": "4/(T + 4)",
+    "positive_band_cutoff": "128*T + 512",
+    "positive_band_mass_lower": "2/(T + 4)",
+    "N4_explicit_lower": "strictly > 2^-8201",
+    "finite_only": true,
+    "reset_physical1_gain_minus_price_nonpositive": true,
+    "IR_lower": false
+  },
+  "construction_boundaries": [
+    "periodic full-H reset has nonnegative exact electric price and no signed defect gain",
+    "irreducible ground paired magnetic energy-form gives finite local wholeP0 lower but block first moment remains constant not q2"
+  ],
+  "P0": "wholeP0",
+  "scope": "finite N4 local paired magnetic covariance lower; finite block constant first moment, not N-uniform low-q order",
+  "needed_ground_kernel": "N-uniform Q0 covariance >= c kappa and gradient budget <= K kappa^2 with controlled carrier/charge/fullPhi correlations",
+  "deck_broken_raw_lift_paid": false,
+  "low_energy_IR_lower_paid": false,
+  "isolated_atom_paid": false,
+  "capsule": {
+    "path": "ground_magnetic_order_actual1_20261012_capsule.json",
+    "sha256": "273e6fc4f704aee51b0c6b369d68c6a7276be5e24359a328468e247ef550af43"
+  }
+}

@@ -1,0 +1,1656 @@
+{
+  "model": "Primitive charged carrier in complete aligned continuous SU4 plus compact U1 EFT",
+  "parameters": {
+    "cutoff": "minimal",
+    "R": [
+      2
+    ],
+    "lambdas": [
+      1.0
+    ],
+    "inertia": 2.0,
+    "heavy_sign": -1,
+    "Jpref": 0.2,
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.3,
+    "stiffness": 2.0,
+    "ue4": 0.3,
+    "ue1": 0.4,
+    "magnetic": 0.7,
+    "levels": 8,
+    "max_ground_rank": 32,
+    "tol": 1e-09,
+    "source_tol": 1e-10,
+    "maxiter": 6000,
+    "seed": 222,
+    "operators_only": false
+  },
+  "source_sha256": {
+    "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+    "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+    "exact_haar_alignment.py": "42883b7bd4eb7c0e725dd6284f376f665c8e6fe0604b492d0f84c5297524d370",
+    "gauss_charge_intertwiner.py": "861008cb7dea64d2b2e0cef513c62de1d55539a1527a5b6fea8b5b879ea956fa",
+    "gauss_photon_charge.py": "b0336874a2aee458aa8e4b621728b3a1d05c23f18f5adeb2bc98b10d630ec9d7",
+    "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "quantum_su4_gauss.py": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+    "quantum_su4_photon.py": "ffadad919f74fe510484530037d4ae11b7860046fa384aa721839d2771d5c0bf",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286",
+    "gauss_photon_charge.md": "92359916ead3d7a8b574c2ea7f4a8910291eab2cfcb0f0298d270d260bd1ce0b"
+  },
+  "link": {
+    "cutoff": [
+      "1",
+      "4",
+      "bar4"
+    ],
+    "dimension": 33,
+    "dimensions": {
+      "1": 1,
+      "4": 4,
+      "bar4": 4
+    },
+    "casimirs": {
+      "1": 0.0,
+      "4": 1.875,
+      "bar4": 1.875,
+      "6": 2.4999999999999996,
+      "10": 4.5,
+      "bar10": 4.5,
+      "15": 4.0
+    },
+    "lie_residual": 3.8718637878417907e-16,
+    "hermiticity_residual": 0.0,
+    "electric_lie_residual": 3.925231146709438e-16,
+    "casimir_residual": 3.076740298213702e-15,
+    "cg_intertwiner_residual": 2.7194799110210365e-16,
+    "cg_isometry_residual": 8.222140951789457e-16,
+    "centre_residual": 5.684383067706609e-15,
+    "multiplication_commutator_residual": 0.0,
+    "adjoint_commutator_residual": 0.0,
+    "left_right_residual": 0.0,
+    "compressed_unitarity_defect": 5.5,
+    "haar_inner_product": "exact Schur delta_rr delta_ac delta_bd; no quadrature",
+    "alignment_J": 0.0,
+    "alignment_scope": "omitted, not factorized compressed U"
+  },
+  "alignment": {
+    "method": "Exact adjoint Peter-Weyl multiplication via Casimir-restricted complete Hom kernels",
+    "cutoff": [
+      "1",
+      "4",
+      "bar4"
+    ],
+    "dimension": 33,
+    "coefficients_p": [
+      [
+        0.0,
+        0.0,
+        1.2967966503006638,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.2967966503006638,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.4772791538816827,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.4772791538816827,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.4772791538816827,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.4772791538816827,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.4772791538816827,
+        0.2755572479721863,
+        -0.38969679729247186
+      ]
+    ],
+    "gram_K": [
+      [
+        0.22779539073001495,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.22779539073001495,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.22779539073001495,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.22779539073001495,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.6816815522310222,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.6816815522310222,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.6816815522310222,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.6816815522310222,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.22779539073001495,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.22779539073001495,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.22779539073001495,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.22779539073001495,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.22779539073001495,
+        0.1315177301581301,
+        -0.18599415768215258
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1315177301581301,
+        0.07593179691000496,
+        -0.10738377700548848
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.18599415768215258,
+        -0.10738377700548848,
+        0.1518635938200099
+      ]
+    ],
+    "constant_sum_p_squared": 4.730135448842134,
+    "hermiticity_residual": 2.8354292908823355e-15,
+    "centre_block_residual": 0.0,
+    "field_reconstruction_residual": 8.777083671441753e-17,
+    "complete_CG_multiplicities_correct": true,
+    "cg_channels": [
+      {
+        "target": "1",
+        "source": "1",
+        "target_dimension": 1,
+        "source_dimension": 1,
+        "multiplicity": 0,
+        "centre_allowed": true,
+        "target_casimir": 0.0,
+        "casimir_eigenspace_dimension": 0,
+        "hom_dimension": 0
+      },
+      {
+        "target": "1",
+        "source": "15",
+        "target_dimension": 1,
+        "source_dimension": 15,
+        "multiplicity": 1,
+        "centre_allowed": true,
+        "target_casimir": 0.0,
+        "casimir_eigenspace_dimension": 1,
+        "hom_dimension": 1,
+        "hom_zero_threshold": 2e-09,
+        "hom_lowest_eigenvalues": [
+          2.1629347515798097e-66
+        ],
+        "hom_first_nonzero": null,
+        "intertwiner_residual": 2.1567505989814843e-16,
+        "isometry_residual": 0.0,
+        "mutual_orthogonality_residual": 0.0
+      },
+      {
+        "target": "1",
+        "source": "4",
+        "target_dimension": 1,
+        "source_dimension": 4,
+        "multiplicity": 0,
+        "centre_allowed": false
+      },
+      {
+        "target": "1",
+        "source": "bar4",
+        "target_dimension": 1,
+        "source_dimension": 4,
+        "multiplicity": 0,
+        "centre_allowed": false
+      },
+      {
+        "target": "15",
+        "source": "1",
+        "target_dimension": 15,
+        "source_dimension": 1,
+        "multiplicity": 1,
+        "centre_allowed": true,
+        "target_casimir": 4.0,
+        "casimir_eigenspace_dimension": 15,
+        "hom_dimension": 225,
+        "hom_zero_threshold": 2.0000000000000067e-08,
+        "hom_lowest_eigenvalues": [
+          3.730349362740526e-14,
+          3.99999999999998,
+          3.9999999999999813,
+          3.9999999999999876,
+          3.9999999999999893,
+          3.99999999999999,
+          3.999999999999991,
+          3.9999999999999925
+        ],
+        "hom_first_nonzero": 3.99999999999998,
+        "intertwiner_residual": 1.0642491626113259e-14,
+        "isometry_residual": 2.8499265697755774e-14,
+        "mutual_orthogonality_residual": 0.0
+      },
+      {
+        "target": "15",
+        "source": "15",
+        "target_dimension": 15,
+        "source_dimension": 15,
+        "multiplicity": 2,
+        "centre_allowed": true,
+        "target_casimir": 4.0,
+        "casimir_eigenspace_dimension": 30,
+        "hom_dimension": 450,
+        "hom_zero_threshold": 2.0000000000000053e-08,
+        "hom_lowest_eigenvalues": [
+          -1.9516799219403846e-15,
+          -1.9516799219403846e-15,
+          3.999999999999977,
+          3.9999999999999787,
+          3.9999999999999822,
+          3.999999999999985,
+          3.999999999999985,
+          3.9999999999999867
+        ],
+        "hom_first_nonzero": 3.999999999999977,
+        "intertwiner_residual": 6.597740509689684e-15,
+        "isometry_residual": 4.945217393174691e-15,
+        "mutual_orthogonality_residual": 4.562194652731652e-15
+      },
+      {
+        "target": "4",
+        "source": "1",
+        "target_dimension": 4,
+        "source_dimension": 1,
+        "multiplicity": 0,
+        "centre_allowed": false
+      },
+      {
+        "target": "4",
+        "source": "4",
+        "target_dimension": 4,
+        "source_dimension": 4,
+        "multiplicity": 1,
+        "centre_allowed": true,
+        "target_casimir": 1.875,
+        "casimir_eigenspace_dimension": 4,
+        "hom_dimension": 16,
+        "hom_zero_threshold": 8.000000000000009e-09,
+        "hom_lowest_eigenvalues": [
+          8.881784197001252e-16,
+          3.9999999999999947,
+          3.9999999999999964,
+          3.9999999999999973,
+          3.9999999999999982,
+          3.999999999999999,
+          3.9999999999999996,
+          3.9999999999999996
+        ],
+        "hom_first_nonzero": 3.9999999999999947,
+        "intertwiner_residual": 1.8793208114541454e-15,
+        "isometry_residual": 5.480938787276195e-16,
+        "mutual_orthogonality_residual": 0.0
+      },
+      {
+        "target": "4",
+        "source": "bar4",
+        "target_dimension": 4,
+        "source_dimension": 4,
+        "multiplicity": 0,
+        "centre_allowed": false
+      },
+      {
+        "target": "bar4",
+        "source": "1",
+        "target_dimension": 4,
+        "source_dimension": 1,
+        "multiplicity": 0,
+        "centre_allowed": false
+      },
+      {
+        "target": "bar4",
+        "source": "4",
+        "target_dimension": 4,
+        "source_dimension": 4,
+        "multiplicity": 0,
+        "centre_allowed": false
+      },
+      {
+        "target": "bar4",
+        "source": "bar4",
+        "target_dimension": 4,
+        "source_dimension": 4,
+        "multiplicity": 1,
+        "centre_allowed": true,
+        "target_casimir": 1.875,
+        "casimir_eigenspace_dimension": 4,
+        "hom_dimension": 16,
+        "hom_zero_threshold": 8.000000000000009e-09,
+        "hom_lowest_eigenvalues": [
+          8.881784197001252e-16,
+          3.9999999999999947,
+          3.9999999999999964,
+          3.9999999999999973,
+          3.9999999999999982,
+          3.999999999999999,
+          3.9999999999999996,
+          3.9999999999999996
+        ],
+        "hom_first_nonzero": 3.9999999999999947,
+        "intertwiner_residual": 1.8793208114541454e-15,
+        "isometry_residual": 5.480938787276195e-16,
+        "mutual_orthogonality_residual": 0.0
+      }
+    ],
+    "tensor_product_casimir_spectra": {
+      "1": [
+        {
+          "eigenvalue": 3.999999999999999,
+          "multiplicity": 15,
+          "maximum": 4.0
+        }
+      ],
+      "15": [
+        {
+          "eigenvalue": 6.040606322941527e-16,
+          "multiplicity": 1,
+          "maximum": 6.040606322941527e-16
+        },
+        {
+          "eigenvalue": 3.999999999999991,
+          "multiplicity": 30,
+          "maximum": 4.000000000000016
+        },
+        {
+          "eigenvalue": 5.999999999999989,
+          "multiplicity": 20,
+          "maximum": 6.000000000000011
+        },
+        {
+          "eigenvalue": 7.999999999999984,
+          "multiplicity": 90,
+          "maximum": 8.00000000000002
+        },
+        {
+          "eigenvalue": 9.999999999999977,
+          "multiplicity": 84,
+          "maximum": 10.00000000000002
+        }
+      ],
+      "4": [
+        {
+          "eigenvalue": 1.874999999999995,
+          "multiplicity": 4,
+          "maximum": 1.8750000000000102
+        },
+        {
+          "eigenvalue": 4.874999999999995,
+          "multiplicity": 20,
+          "maximum": 4.875000000000011
+        },
+        {
+          "eigenvalue": 6.8749999999999885,
+          "multiplicity": 36,
+          "maximum": 6.8750000000000115
+        }
+      ],
+      "bar4": [
+        {
+          "eigenvalue": 1.874999999999995,
+          "multiplicity": 4,
+          "maximum": 1.8750000000000102
+        },
+        {
+          "eigenvalue": 4.874999999999995,
+          "multiplicity": 20,
+          "maximum": 4.875000000000011
+        },
+        {
+          "eigenvalue": 6.8749999999999885,
+          "multiplicity": 36,
+          "maximum": 6.8750000000000115
+        }
+      ]
+    },
+    "known_positive_controls": {
+      "multiplicities": {
+        "15<-15x1": 1,
+        "1<-15x15": 1,
+        "15<-15x15": 2
+      },
+      "adjoint_tensor_1_to_15": 1.4898168795925347e-14,
+      "adjoint_tensor_15_to_1": 2.685229958453485e-16,
+      "antisymmetric_15_span": 9.39048883980719e-15,
+      "symmetric_15_span": 9.780614977068561e-15,
+      "independent_15_isometries": 2.720961312465205e-16,
+      "independent_symmetric_isometry": 8.308727872337646e-16,
+      "independent_15_orthogonality": 5.91699021866877e-17
+    },
+    "representation_controls": {
+      "canonical_trace_residual": 2.220446049250313e-16,
+      "adjoint_exponential_residual": 3.935564335713666e-16,
+      "finite_group_cg_residual": 2.795181850072987e-15,
+      "centre_exponential_residual": 5.684383067706609e-15,
+      "scalar_conjugation_covariance_residual": 1.3903007364892948e-14,
+      "canonical_basis_covariance_residual": 6.0409477697035e-16,
+      "continuous_scalar_expansion_residual": 5.551115123125783e-17,
+      "continuous_sample_W": 0.17751082732015716,
+      "generic_group_coordinates": [
+        -0.173,
+        -0.145,
+        -0.11699999999999999,
+        -0.08899999999999998,
+        -0.060999999999999985,
+        -0.032999999999999974,
+        -0.004999999999999977,
+        0.02300000000000002,
+        0.05100000000000002,
+        0.07900000000000001,
+        0.10700000000000004,
+        0.135,
+        0.16300000000000003,
+        0.191,
+        0.219
+      ]
+    },
+    "eigenvalues": [
+      4.414793085585991,
+      4.414793085585992,
+      4.475538523113993,
+      4.475538523113994,
+      4.475538523113995,
+      4.475538523113996,
+      4.475538523113997,
+      4.475538523113997,
+      4.536283960641998,
+      4.536283960642,
+      4.536283960642,
+      4.536283960642001,
+      4.536283960642002,
+      4.5362839606420025,
+      4.597029398170003,
+      4.597029398170005,
+      4.730135448842134,
+      4.863241499514263,
+      4.863241499514264,
+      4.923986937042264,
+      4.923986937042266,
+      4.923986937042269,
+      4.923986937042269,
+      4.92398693704227,
+      4.92398693704227,
+      4.984732374570269,
+      4.984732374570271,
+      4.984732374570273,
+      4.984732374570273,
+      4.9847323745702745,
+      4.984732374570277,
+      5.045477812098276,
+      5.0454778120982775
+    ],
+    "minimum": 4.414793085585991,
+    "maximum": 5.0454778120982775,
+    "continuum_pointwise_bounds": [
+      0.0,
+      9.460270897684268
+    ],
+    "spectrum_interpretation": "finite Haar Ritz spectrum of multiplication; not an infinite Higgs or charged gap",
+    "minimal_independent_product": {
+      "executed": true,
+      "intermediate_cutoff": "full",
+      "intermediate_dimension": 494,
+      "required_Udagger_intermediates": {
+        "1": [
+          "bar4"
+        ],
+        "4": [
+          "1",
+          "15"
+        ],
+        "bar4": [
+          "6",
+          "bar10"
+        ]
+      },
+      "required_U_intermediates": {
+        "1": [
+          "4"
+        ],
+        "4": [
+          "6",
+          "10"
+        ],
+        "bar4": [
+          "1",
+          "15"
+        ]
+      },
+      "exact_product_agreement_residual": 1.5457241001491353e-14,
+      "complete_intermediate_unitarity_residual": 1.2994827337208943e-15,
+      "naive_minimal_unitarity_defect": 5.5,
+      "naive_minimal_alignment_defect": 0.9230488979761627,
+      "naive_alignment_defect_need_not_be_nonzero_for_zero_or_special_fields": true
+    },
+    "arbitrary_field_control": {
+      "nonClifford": true,
+      "anticommutator_nonscalar_defect": 1.0455876179953218,
+      "coefficients_p": [
+        [
+          -0.026121534759044912,
+          -0.24660832455324913,
+          -0.305284477975388,
+          -0.14402255176426731,
+          0.2601863620674997,
+          0.1771083884553728,
+          0.0574178600350791,
+          0.10071765046042076,
+          0.37055689449325296,
+          -0.07129669160864723,
+          0.043979837019058714,
+          -0.3166071942562703,
+          0.637237379996194,
+          -0.13081980449826405,
+          -0.5834958669476058
+        ],
+        [
+          -0.316439171955651,
+          -0.2553966294648779,
+          0.1316184730032056,
+          0.18418208824201357,
+          -0.3593766501175099,
+          -0.45288068352608124,
+          0.10867034752342813,
+          -0.19032694563777017,
+          -0.17569581796094544,
+          -0.07965503142506263,
+          -1.0439016321207255,
+          -0.09391139818418782,
+          0.5860390665131247,
+          0.6917149704630866,
+          -0.20003006866706943
+        ],
+        [
+          0.18173051174498375,
+          -0.23597263943965072,
+          -0.1236009227894686,
+          -0.5416827283744384,
+          -0.054351971164434625,
+          -0.603302017155094,
+          0.1909517710570384,
+          0.005083273712852703,
+          -0.23414690354800258,
+          -0.06635915406272573,
+          0.4768224403741404,
+          -0.08157514900253007,
+          -0.061161016377855565,
+          0.45194279451426556,
+          0.2327016585442977
+        ],
+        [
+          0.28333379363370964,
+          0.15563168514843306,
+          0.017163307099718403,
+          -0.27471904629588195,
+          -0.3259819140584919,
+          -0.39526664436098763,
+          0.1690870138215271,
+          0.6317791177437219,
+          0.07198613229401456,
+          0.1376875875996499,
+          -0.175357933093208,
+          0.2401756756488546,
+          -0.5748598957449975,
+          -0.2845870850554409,
+          0.2816249305709319
+        ]
+      ],
+      "minimum": 6.23235369718281,
+      "hermiticity_residual": 3.3246406515733032e-15,
+      "minimal_independent_product": {
+        "executed": true,
+        "intermediate_cutoff": "full",
+        "intermediate_dimension": 494,
+        "required_Udagger_intermediates": {
+          "1": [
+            "bar4"
+          ],
+          "4": [
+            "1",
+            "15"
+          ],
+          "bar4": [
+            "6",
+            "bar10"
+          ]
+        },
+        "required_U_intermediates": {
+          "1": [
+            "4"
+          ],
+          "4": [
+            "6",
+            "10"
+          ],
+          "bar4": [
+            "1",
+            "15"
+          ]
+        },
+        "exact_product_agreement_residual": 1.064481240126111e-14,
+        "complete_intermediate_unitarity_residual": 1.2994827337208943e-15,
+        "naive_minimal_unitarity_defect": 5.5,
+        "naive_minimal_alignment_defect": 0.998731566668887,
+        "naive_alignment_defect_need_not_be_nonzero_for_zero_or_special_fields": true
+      }
+    },
+    "zero_field_residual": 0.0,
+    "invalid_fields_rejected": {
+      "nontraceless": true,
+      "nonHermitian": true
+    }
+  },
+  "selected_frame_real": [
+    [
+      [
+        0.0,
+        0.0,
+        0.6483983251503319,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.6483983251503319
+      ],
+      [
+        0.6483983251503319,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.6483983251503319,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.23863957694084134,
+        0.0,
+        0.0
+      ],
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.0,
+        -0.23863957694084134
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        -0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.23863957694084134,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        -0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        -0.0,
+        0.23863957694084134
+      ]
+    ]
+  ],
+  "selected_frame_imaginary": [
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        -0.23863957694084134,
+        0.0,
+        0.0
+      ],
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.23863957694084134
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  ],
+  "selected_gram": [
+    0.42042038805775556,
+    0.05694884768250374,
+    0.05694884768250374,
+    0.05694884768250374
+  ],
+  "runs": [
+    {
+      "cutoff": "minimal",
+      "R": 2,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "Jpref": 0.2,
+      "alignment_coefficient": 0.025,
+      "physical_dimensions": {
+        "3": 653600,
+        "4": 203620,
+        "5": 653600
+      },
+      "tensor_shapes": {
+        "3": {
+          "1": [
+            1320,
+            1,
+            1,
+            4,
+            5
+          ],
+          "4": [
+            640,
+            4,
+            4,
+            4,
+            5
+          ],
+          "bar4": [
+            1320,
+            4,
+            4,
+            4,
+            5
+          ]
+        },
+        "4": {
+          "1": [
+            1812,
+            1,
+            1,
+            1,
+            5
+          ],
+          "4": [
+            1216,
+            4,
+            4,
+            1,
+            5
+          ],
+          "bar4": [
+            1216,
+            4,
+            4,
+            1,
+            5
+          ]
+        },
+        "5": {
+          "1": [
+            1320,
+            1,
+            1,
+            4,
+            5
+          ],
+          "4": [
+            1320,
+            4,
+            4,
+            4,
+            5
+          ],
+          "bar4": [
+            640,
+            4,
+            4,
+            4,
+            5
+          ]
+        }
+      },
+      "neutral_current_contact_Ward": {
+        "hermiticity": 1.9160647057153807e-17,
+        "pure_gradient_covariance": 1.1463325742736943e-15,
+        "current_derivative": 7.359764190139925e-11,
+        "contact_derivative": 1.3527862542817906e-08,
+        "density_current_Ward": 1.7036746032725166e-15,
+        "density_contact_Ward": 8.566076333905852e-15,
+        "orientation_matches_individual_ell_slots": 0.0,
+        "formal_S_identity_old_hop": 4.574537126355607e-18,
+        "full_Lie_Gauss_square_residual": 7.370699710608973e-16,
+        "angular_Gauss_positive_square_expectation": 3.0246943400562096,
+        "heavy_source_current_norm": 0.0,
+        "wrong_Gauss_defect": 1.0073109750970684,
+        "wrong_heavy_EM_defect": 0.504607998648509,
+        "wrapping_defect": 0.3197320656574401,
+        "no_loop_wrapping": true,
+        "heavy_EM_neutral": true,
+        "complete_old_domain_each_ell": true
+      },
+      "intertwiners": [
+        {
+          "charge": -1,
+          "residuals": {
+            "adjoint_pairing": 1.0652251859812338e-17,
+            "full_norm_operator": 9.354121407959801e-16,
+            "primitive_norm_operator": 3.9160510718702927e-14,
+            "primitive_all30_generator_operators": 4.725952219296117e-15,
+            "all30_Gauss_generators": 1.4270034334321312e-16,
+            "Gauss_angular": 1.0819302454391618e-15,
+            "full_heavy": 5.521267770921442e-17,
+            "colour_electric": 5.416142720456313e-17,
+            "exact_Haar_alignment": 1.8994418386145892e-17,
+            "dynamical_magnetic": 1.089918923170208e-16,
+            "EM_boundary_constant_only": 2.916786803674398e-16,
+            "internal_edge_0": 2.674767204606929e-16,
+            "internal_edge_1": 0.0,
+            "neutral_parts_reconstruction": 5.229828104519047e-16,
+            "charged_parts_reconstruction": 7.665900458348762e-16,
+            "neutral_Gauss_square": 8.791250930694154e-16,
+            "charged_Gauss_square": 1.5150352912556012e-15,
+            "path1_current_preserves_other_edge_E0": 1.241326214039272e-18,
+            "path0_current_preserves_other_edge_E1": 0.0
+          },
+          "adverse_operators": {
+            "wrong_boundary_sign": 1.6031267305502948,
+            "omitted_boundary": 0.5807873260372258,
+            "no_ell_shift_wrong_edge_commutator": 0.0073641401104187825,
+            "no_ell_shift_changes_actual_light_H": 0.003692523866215716
+          },
+          "occupation_weight_adverse": {
+            "ordinary_neutral_N_L": 1.9999999999999996,
+            "weighted_neutral_N_L": 1.5000000000000004,
+            "charged_image_N_L": 1.5,
+            "wrong_unweighted_defect": 0.49999999999999956,
+            "witness": "Equal probabilities on native N_R=1,3 at ell=0; exact nonconstant A-dagger-A"
+          },
+          "charged_current_contact_Ward": {
+            "hermiticity": 1.668967169751548e-17,
+            "pure_gradient_covariance": 1.3963352640351632e-15,
+            "current_derivative": 6.813881796851634e-11,
+            "contact_derivative": 1.4936211948157567e-08,
+            "density_current_Ward": 1.1203233732006247e-15,
+            "density_contact_Ward": 5.403514267167972e-15,
+            "orientation_matches_individual_ell_slots": 0.0,
+            "formal_S_identity_old_hop": 4.371991195109647e-18,
+            "full_Lie_Gauss_square_residual": 9.055564567531455e-16,
+            "angular_Gauss_positive_square_expectation": 3.4495747751741543,
+            "heavy_source_current_norm": 0.0,
+            "wrong_Gauss_defect": 1.1047942032866918,
+            "wrong_heavy_EM_defect": 0.5223526244259633,
+            "wrapping_defect": 0.31989267654808895,
+            "no_loop_wrapping": true,
+            "heavy_EM_neutral": true,
+            "complete_old_domain_each_ell": true
+          },
+          "policy": "All five native axes; actual primitive ladders; no colour/boundary/ell merging"
+        },
+        {
+          "charge": 1,
+          "residuals": {
+            "adjoint_pairing": 1.3791119822662919e-17,
+            "full_norm_operator": 9.361474308739856e-16,
+            "primitive_norm_operator": 3.9160510718702927e-14,
+            "primitive_all30_generator_operators": 4.725952219296117e-15,
+            "all30_Gauss_generators": 1.4271093673299267e-16,
+            "Gauss_angular": 1.0792959843752187e-15,
+            "full_heavy": 5.523036593438068e-17,
+            "colour_electric": 5.423225058455723e-17,
+            "exact_Haar_alignment": 1.8989724588498627e-17,
+            "dynamical_magnetic": 1.0914631994961643e-16,
+            "EM_boundary_constant_only": 2.917726109609997e-16,
+            "internal_edge_0": 3.810808034060551e-16,
+            "internal_edge_1": 0.0,
+            "neutral_parts_reconstruction": 5.229828104519047e-16,
+            "charged_parts_reconstruction": 7.704733764313629e-16,
+            "neutral_Gauss_square": 8.791250930694154e-16,
+            "charged_Gauss_square": 1.5173789891707062e-15,
+            "path1_current_preserves_other_edge_E0": 1.241326214039272e-18,
+            "path0_current_preserves_other_edge_E1": 0.0
+          },
+          "adverse_operators": {
+            "wrong_boundary_sign": 1.6464521099849956,
+            "omitted_boundary": 0.6101493805215541,
+            "no_ell_shift_wrong_edge_commutator": 0.0073641401104187825,
+            "no_ell_shift_changes_actual_light_H": 0.003692523866215716
+          },
+          "occupation_weight_adverse": {
+            "ordinary_neutral_N_L": 1.9999999999999996,
+            "weighted_neutral_N_L": 2.500000000000001,
+            "charged_image_N_L": 2.5,
+            "wrong_unweighted_defect": 0.5000000000000004,
+            "witness": "Equal probabilities on native N_R=1,3 at ell=0; exact nonconstant A-dagger-A"
+          },
+          "charged_current_contact_Ward": {
+            "hermiticity": 3.291406376790657e-17,
+            "pure_gradient_covariance": 1.4286212545087926e-15,
+            "current_derivative": 6.814750945414869e-11,
+            "contact_derivative": 1.4913255109836153e-08,
+            "density_current_Ward": 3.0247363213946203e-15,
+            "density_contact_Ward": 1.5515352758140668e-14,
+            "orientation_matches_individual_ell_slots": 0.0,
+            "formal_S_identity_old_hop": 4.3672897339278425e-18,
+            "full_Lie_Gauss_square_residual": 9.049606227144346e-16,
+            "angular_Gauss_positive_square_expectation": 3.4494860030047008,
+            "heavy_source_current_norm": 0.0,
+            "wrong_Gauss_defect": 1.1044356005462577,
+            "wrong_heavy_EM_defect": 0.5234913963459026,
+            "wrapping_defect": 0.3201224794640259,
+            "no_loop_wrapping": true,
+            "heavy_EM_neutral": true,
+            "complete_old_domain_each_ell": true
+          },
+          "policy": "All five native axes; actual primitive ladders; no colour/boundary/ell merging"
+        }
+      ],
+      "neutral_energy": -0.7110828379653767,
+      "neutral_ground": {
+        "energies": [
+          -0.7110828379653767,
+          -0.43514933980109455,
+          -0.4351151573010149,
+          -0.051115256061102475,
+          0.02150950745372673,
+          0.022439467892252773,
+          0.12470468710049211,
+          0.12626367448617398
+        ],
+        "full_H_residuals": [
+          3.3225194717558414e-15,
+          2.4862302332413905e-15,
+          2.9540545655583225e-15,
+          3.103940199186287e-15,
+          2.9301072614922782e-15,
+          3.0844528819964095e-15,
+          2.774690431785454e-12,
+          4.041580554617231e-12
+        ],
+        "residual_limit": 1e-09,
+        "residual_scale": "max(1,abs(E))",
+        "orthogonality": 4.356726809295859e-15,
+        "ground_rank": 1,
+        "measured_complement_gap": 0.27593349816421653,
+        "degeneracy_resolution": 2e-08,
+        "independent_deflated_ground_completion": [
+          {
+            "candidate_energy": -0.4351493398011602,
+            "full_H_residual": 7.233433751706255e-14,
+            "existing_rank": 1
+          }
+        ],
+        "interpretation": "finite same-H Ritz multiplet and measured complement, not infinite gap"
+      },
+      "neutral_source_policy": "First member of completed measured neutral ground frame; no averaging of degenerate creator sources",
+      "charged_trials": [
+        {
+          "charge": -1,
+          "charged_trial_energy": -0.3932802129056193,
+          "charged_trial_Rayleigh_difference": 0.3178026250597574,
+          "actual_norm_squared": 1.999999999999806,
+          "occupation_weight": "N_R",
+          "neutral_ordinary_total_energy": -0.7110828379651137,
+          "neutral_occupation_weighted_total_energy": -0.7110828379650725,
+          "weighted_total_imaginary": -3.4694469519539507e-17,
+          "neutral_reference_energy": -0.7110828379653767,
+          "N_R_probabilities": {
+            "0": 1.861489926325654e-09,
+            "1": 0.0003692436387112879,
+            "2": 0.999261508999598,
+            "3": 0.00036924363871128704,
+            "4": 1.8614899263246792e-09
+          },
+          "N_R_mean": 2.000000000000001,
+          "onsite_right_light": -0.23446328984083098,
+          "full_two_path_light_hopping": -0.002283920557338844,
+          "commutator_numerator_real": 0.23560525011955025,
+          "commutator_numerator_imaginary": -8.673617379884035e-19,
+          "independent_numerator": 0.2356052501195004,
+          "independent_numerator_residual": 4.9849013806602177e-14,
+          "independent_predicted_cost": 0.31780262505976165,
+          "weighted_full_formula_residual": 3.3339997614554494e-13,
+          "full_Rayleigh_formula_residual": 4.218847493575595e-15,
+          "stationarity_residual": 2.799982471543827e-13,
+          "weighted_part_preservation": {
+            "Gauss_angular": {
+              "charged_normalized": 0.4669389341833129,
+              "neutral_occupation_weighted": 0.4669389341832162,
+              "neutral_ordinary": 0.4669389341831923,
+              "weighted_imaginary": 9.540979117873365e-18,
+              "residual": 9.670042583384446e-14
+            },
+            "full_heavy": {
+              "charged_normalized": -0.47172428953180545,
+              "neutral_occupation_weighted": -0.47172428953171014,
+              "neutral_ordinary": -0.4717242895316377,
+              "weighted_imaginary": -5.204170427930927e-18,
+              "residual": 9.531264676273399e-14
+            },
+            "colour_electric": {
+              "charged_normalized": 0.0008473112581765317,
+              "neutral_occupation_weighted": 0.0008473112581764905,
+              "neutral_ordinary": 0.00084731125817641,
+              "weighted_imaginary": -6.352747104407869e-22,
+              "residual": 4.119968256805411e-17
+            },
+            "exact_Haar_alignment": {
+              "charged_normalized": 0.11824770794675858,
+              "neutral_occupation_weighted": 0.11824770794673167,
+              "neutral_ordinary": 0.11824770794672694,
+              "weighted_imaginary": -8.673617379884877e-19,
+              "residual": 2.6909030573331115e-14
+            },
+            "dynamical_magnetic": {
+              "charged_normalized": -0.5056004339878127,
+              "neutral_occupation_weighted": -0.505600433987697,
+              "neutral_ordinary": -0.5056004339876276,
+              "weighted_imaginary": -1.3877787807815803e-17,
+              "residual": 1.1568524046656771e-13
+            }
+          },
+          "interpretation": "Actual normalized A-image variational upper energy; never a lower charged-gap bound"
+        },
+        {
+          "charge": 1,
+          "charged_trial_energy": -0.39328021290561904,
+          "charged_trial_Rayleigh_difference": 0.3178026250597577,
+          "actual_norm_squared": 1.9999999999998117,
+          "occupation_weight": "4-N_R",
+          "neutral_ordinary_total_energy": -0.7110828379651137,
+          "neutral_occupation_weighted_total_energy": -0.7110828379650712,
+          "weighted_total_imaginary": -4.163336342344729e-17,
+          "neutral_reference_energy": -0.7110828379653767,
+          "N_R_probabilities": {
+            "0": 1.861489926325654e-09,
+            "1": 0.0003692436387112879,
+            "2": 0.999261508999598,
+            "3": 0.00036924363871128704,
+            "4": 1.8614899263246792e-09
+          },
+          "N_R_mean": 2.000000000000001,
+          "onsite_right_light": -0.23446328984083098,
+          "full_two_path_light_hopping": -0.002283920557338844,
+          "commutator_numerator_real": 0.2356052501195462,
+          "commutator_numerator_imaginary": -4.336808689942018e-18,
+          "independent_numerator": 0.2356052501195004,
+          "independent_numerator_residual": 4.5796699921322224e-14,
+          "independent_predicted_cost": 0.3178026250597613,
+          "weighted_full_formula_residual": 3.3206770955424526e-13,
+          "full_Rayleigh_formula_residual": 3.608224830031759e-15,
+          "stationarity_residual": 2.737809978725636e-13,
+          "weighted_part_preservation": {
+            "Gauss_angular": {
+              "charged_normalized": 0.46693893418331134,
+              "neutral_occupation_weighted": 0.46693893418321464,
+              "neutral_ordinary": 0.4669389341831923,
+              "weighted_imaginary": 9.107298248879094e-18,
+              "residual": 9.670042555206742e-14
+            },
+            "full_heavy": {
+              "charged_normalized": -0.4717242895318027,
+              "neutral_occupation_weighted": -0.4717242895317092,
+              "neutral_ordinary": -0.4717242895316377,
+              "weighted_imaginary": -5.204170427930911e-18,
+              "residual": 9.348077877403592e-14
+            },
+            "colour_electric": {
+              "charged_normalized": 0.000847311258176528,
+              "neutral_occupation_weighted": 0.0008473112581764844,
+              "neutral_ordinary": 0.00084731125817641,
+              "weighted_imaginary": -1.0587911840679751e-21,
+              "residual": 4.358492735243625e-17
+            },
+            "exact_Haar_alignment": {
+              "charged_normalized": 0.11824770794675796,
+              "neutral_occupation_weighted": 0.11824770794673137,
+              "neutral_ordinary": 0.11824770794672694,
+              "weighted_imaginary": -8.673617379884852e-19,
+              "residual": 2.6589841453919186e-14
+            },
+            "dynamical_magnetic": {
+              "charged_normalized": -0.5056004339878112,
+              "neutral_occupation_weighted": -0.5056004339876953,
+              "neutral_ordinary": -0.5056004339876276,
+              "weighted_imaginary": -2.0816681711723645e-17,
+              "residual": 1.159072863152105e-13
+            }
+          },
+          "interpretation": "Actual normalized A-image variational upper energy; never a lower charged-gap bound"
+        }
+      ],
+      "charged_poles": [
+        {
+          "charge": -1,
+          "full_H_eigen_energy": -0.42633957456507476,
+          "energy_transfer": 0.284743263400302,
+          "positive_transfer_uncertainty": 1.0151056140091607e-09,
+          "full_H_eigen_residual": 1.5105614009160584e-11,
+          "scaled_full_H_eigen_residual": 1.5105614009160584e-11,
+          "residual_limit": 1e-09,
+          "lowest_returned_eigsh_value": -0.4263395745650248,
+          "creator_residue": 1.9290130526635085,
+          "normalized_creator_residue": 0.9645065263318479,
+          "source_activity_threshold": 1e-10,
+          "total_zeroth_spectral_moment": 1.9999999999998064,
+          "total_first_transfer_moment": 0.6356052501194976,
+          "total_second_transfer_moment": 0.26274431853267183,
+          "normalized_first_transfer_moment": 0.3178026250597796,
+          "unseen_zeroth_spectral_weight": 0.07098694733685179,
+          "unseen_normalized_weight": 0.03549347366842933,
+          "unseen_signed_first_transfer_moment": 0.08633177836231165,
+          "directly_projected_unseen_first_transfer_moment": 0.08633177836236276,
+          "zeroth_moment_partition_residual": 5.539457781367219e-13,
+          "first_moment_partition_residual": 5.1111892496180644e-14,
+          "classification": "Residual-confirmed full-H eigenstate pole, not a fixed-image or finite-Krylov projection pole",
+          "search": "eigsh k=1 SA, normalized primitive A image v0, full charged LinearOperator",
+          "limitations": [
+            "No completeness or full charged-ground certificate from this source-initialized search",
+            "One resolved eigenvector; degenerate eigenspace residue need not be exhausted",
+            "Unseen first moment is signed without a separately established full charged spectral gap"
+          ]
+        },
+        {
+          "charge": 1,
+          "full_H_eigen_energy": -0.426339574565097,
+          "energy_transfer": 0.2847432634002797,
+          "positive_transfer_uncertainty": 1.0151055341642846e-09,
+          "full_H_eigen_residual": 1.5105534164284597e-11,
+          "scaled_full_H_eigen_residual": 1.5105534164284597e-11,
+          "residual_limit": 1e-09,
+          "lowest_returned_eigsh_value": -0.42633957456502525,
+          "creator_residue": 1.9290130526635931,
+          "normalized_creator_residue": 0.9645065263318874,
+          "source_activity_threshold": 1e-10,
+          "total_zeroth_spectral_moment": 1.9999999999998117,
+          "total_first_transfer_moment": 0.6356052501194994,
+          "total_second_transfer_moment": 0.2627443185326742,
+          "normalized_first_transfer_moment": 0.31780262505977963,
+          "unseen_zeroth_spectral_weight": 0.07098694733685224,
+          "unseen_normalized_weight": 0.03549347366842946,
+          "unseen_signed_first_transfer_moment": 0.0863317783623323,
+          "directly_projected_unseen_first_transfer_moment": 0.0863317783623628,
+          "zeroth_moment_partition_residual": 6.336597913048081e-13,
+          "first_moment_partition_residual": 3.0503377601576176e-14,
+          "classification": "Residual-confirmed full-H eigenstate pole, not a fixed-image or finite-Krylov projection pole",
+          "search": "eigsh k=1 SA, normalized primitive A image v0, full charged LinearOperator",
+          "limitations": [
+            "No completeness or full charged-ground certificate from this source-initialized search",
+            "One resolved eigenvector; degenerate eigenspace residue need not be exhausted",
+            "Unseen first moment is signed without a separately established full charged spectral gap"
+          ]
+        }
+      ],
+      "parent_fullground_comparison": {
+        "available": true,
+        "receipt": "quantum_su4_photon_aligned_receipt.json",
+        "receipt_sha256": "43ed66ee2726ba6ccad20c0d1d6688d6104c4e45a986fff221472563afc81771",
+        "parent_neutral_energy": -0.7110828379653765,
+        "comparisons": [
+          {
+            "charge": -1,
+            "parent_charged_ground_Ritz_energy": -0.4263395745650221,
+            "parent_full_H_residuals": [
+              3.9412099290542244e-15,
+              2.593597840960628e-15,
+              2.4305889007083463e-15,
+              2.9309468484774837e-15,
+              3.188568796705662e-15,
+              3.732931598984036e-15,
+              4.568463539021757e-15,
+              7.452806281366424e-13
+            ],
+            "parent_ground_rank": 1,
+            "parent_measured_complement_gap": 0.1902467273688908,
+            "pole_minus_parent_ground": -5.268008251846368e-14,
+            "parent_ground_transfer": 0.28474326340035444,
+            "interpretation": "Comparison to separately executed complete-domain parent ground/multiplet receipt, not a new gap certificate"
+          },
+          {
+            "charge": 1,
+            "parent_charged_ground_Ritz_energy": -0.4263395745650235,
+            "parent_full_H_residuals": [
+              3.704469582405585e-15,
+              3.5332593767981365e-15,
+              2.961872864089883e-15,
+              4.998571089643736e-15,
+              8.720915781782752e-15,
+              4.0771087896914354e-15,
+              5.7534284377711425e-15,
+              4.1500927857903265e-13
+            ],
+            "parent_ground_rank": 1,
+            "parent_measured_complement_gap": 0.19024672736889206,
+            "pole_minus_parent_ground": -7.349676423018536e-14,
+            "parent_ground_transfer": 0.284743263400353,
+            "interpretation": "Comparison to separately executed complete-domain parent ground/multiplet receipt, not a new gap certificate"
+          }
+        ]
+      }
+    }
+  ],
+  "source_chart": {
+    "orbital": "uniform_data same RotationBand, n3 quadrature and stiffness, fixed simultaneous orbit",
+    "statistics": "PauliCode primitive rectangular right ladders from BoundaryChargeIntertwiner.components",
+    "Gauss": "PhysicalHamiltonian complete NH4 and NL3/4/5 centre fibres, same continuous HaarLink",
+    "photon": "CompactGaussPhoton complete independent ell=-R..R, two EM paths, dynamical compressed magnetic shift",
+    "alignment": "ExactHaarAlignment continuous P W P, same provider and Lambda*Jpref/8 in all sectors",
+    "energy": "existing residual-enforced solve_ground for neutral, complete charged-H source-initialized eigsh for poles"
+  },
+  "excluded_claims": [
+    "Full charged ground from source-initialized k1",
+    "positive lower charge-gap theorem",
+    "Dirac doublet",
+    "lower emergent mass",
+    "infinite cutoff",
+    "nonlinear60 quantum phase",
+    "3D photon",
+    "Lorentz invariance",
+    "mechanical spin",
+    "S matrix",
+    "canonical QED"
+  ],
+  "source_unchanged_at_completion": true
+}

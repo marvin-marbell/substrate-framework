@@ -1,0 +1,51 @@
+{
+  "kind": "FROZEN_SHARED_STAR_FACTOR_FORMATION_INDEPENDENT_PROOF",
+  "source": {"name": "shared_star_dynamic_scientist_20261011.py", "sha256": "2f02fee85495c4ea6ad6b687add5e0ebf1a9fb975c01205bc82f3c98d3c29fa3", "receipt_sha256": "3f690a820fbc84095804d0470386911dd8a9298c396fb9f2c915da870fdfe789"},
+  "copy_partitions": {
+    "verdict": "VALID",
+    "derivation": "The equality partitions of four insertion copy labels with no singleton are {1234}, {12|34}, {13|24}, {14|23}. A singleton changes a fixed labelled spin-slot number in at least one outer cell; rho and dGamma preserve its copy, so every O/A/B Gram is zero. Within each partition ALL spin indices remain summed before expectation. Allsame active=1 and auxiliary=63. For EACH 2+2 partition ordered active/aux=63, aux/active=63, aux/otheraux=63*62=3906. Total surviving assignments=64+3*(126+3906)=12160; not64^2, not64^4, not scalar64 per CAR hop.",
+    "trigger": "Fixed labelled numbers and permutation symmetry of63 auxiliary physical copies remain part of the frozen source and matching ground contract.",
+    "consequence": "Eleven role representatives exactly cover the four partition classes, including three distinct ordered two-pair contractions. Dropping a class or active/aux orientation is invalid."
+  },
+  "graded_threecell_and_spin": {
+    "verdict": "VALID",
+    "derivation": "Each global CAR word is grouped into increasing cell order with the inversion sign. Each cell source has even total parity (fixed labelled N2); odd local expectation vanishes. Thus surviving local factors are even, the intercell grading in the dagger/product contributes no additional sign beyond the separately grouped bra and ket signs. The coefficient outer product times the THREE local correlated overlaps equals the global signed expectation. Within B, same/different copy slots use a JOINT pair density; no independent-copy replacement is permitted. native.root_terms uses all i,j=0..3 with spin=i//2, mode=i%2 and full physical4x4 matrix, not one-spin or rank/unitarity surrogates.",
+    "trigger": "Cell-factorization is the matching PRODUCT OF CELLS, not a product of copies within a cell.",
+    "consequence": "Vectorized cell grouping is exact algebra. Independent central-copy resetting changes the scientific state and is INVALID, even if some spin-diagonal special case agrees."
+  },
+  "full_action": {
+    "verdict": "VALID",
+    "derivation": "For normal CAR word W, [rho_c,W]=d_c W. With affine shift u_c, H_u W-W H_0=[D,W]+64 sum_c[(d_c+u_c)^2 W+2(d_c+u_c) W rho_c]+64 sum_e k_e^2 W. [dGamma(h),creation_p]=sum_q h_qp creation_q and [dGamma(h),annihilation_p]=-sum_q h_pq annihilation_q. Scalar folds are retained by signed normal ordering. Initially every external site0 root has d+u=0; their product has FIRST electric action exactly zero. The first dGamma commutator can move p0/1 into p2/3, after which d+u is nonzero and B must include TOTAL rho on the source right. No action of H on the compressed W5 range is substituted for full-Fock dGamma.",
+    "trigger": "A contains no rho-memory, as asserted before computing B. B does contain rho; calling action(B) is deliberately rejected rather than pretending unavailable higher-action fields exist.",
+    "consequence": "O,A,B suffice for m0=<O,O>,m1=<O,A>,m2=<A,A>,m3=<A,B>,m4=<B,B>. Electric cancellation beyond the first action is INVALID."
+  },
+  "field_domain": {
+    "verdict": "CONDITIONAL",
+    "derivation": "Each operand is at most four CAR factors, hence at most two nonempty balanced labelled slots per cell in its Gram with another operand; unbalanced slots vanish before density access. A has field power0; B has at most one rho_c per term, and BB needs GG,GR,RG,RR only, each operand power<=1. The archive was extracted from BOTH s and TOTAL rho*s, not rho on the touched slot alone. Pair-density partial traces also suffice when only one slot is touched, because the rho field is already attached before tracing. Each fixed N2 spin slot has |rho_slot|<=1;128 slots give |rho_total|<=128 on the source/g domain. This is a norm on the RIGHT source-domain rho; intermediate charged outputs are not claimed to retain N2 everywhere.",
+    "trigger": "Pinned field archive has the historical selected_pair_gram provenance claimed in the typed3 interface, and g/s have the stipulated labelled fixed-number domain. Byte hashes alone do not prove historical provenance.",
+    "consequence": "Current O/A/B moments require no third-slot or rho^2 operand field. Generic third-action, full physical-exterior action, or arbitrary excited-to-excited operator norm is not covered."
+  },
+  "action_path_caps": {
+    "verdict": "CONDITIONAL",
+    "derivation": "For fourinsertions the dGamma L1 row cap is4 max_role(|m|+|c0|+|d|)<4*29<256. Raw distinct-edge middle flows are(0,0) or(+/-1,+/-1), so external energy<=128 (not repeated-edge256). After one dGamma change only one cell's delta=d+u changes by at most1; after another action the conservative source-domain electric cost64 sum delta^2+128*128 sum|delta| stays below100000 (even allowing all fourinsertions gives sum|delta|<=4, sumdelta^2<=16 and cost<=66560). Thus A raw cap<=384 and B<=384*100000. Normal ordering fourCAR factors produces at most four nonzero fold branches. Formation uses raw=max(1,collapsed O Gram L1)*16; that dominance is checked on ALL actual source components/role representatives in the new consumer, not inferred from a generic cancellation-prone collapsed sum.",
+    "trigger": "Frozen literal components and matrices pass the recorded uncollapsed-to-collapsed dominance calculation. This formula is not safe for a new arbitrarily cancelling source without repeating the raw-path audit.",
+    "consequence": "The stated384 and100000 action caps apply to this O/A/B source, not to K^j s or arbitrary exterior sources."
+  },
+  "formation": {
+    "verdict": "CONDITIONAL",
+    "derivation": "gamma_n=n*2^-53/(1-n*2^-53) controls ABSOLUTE error relative to the UNCOLLAPSED absolute product sum, not relative to a possibly cancelled answer. The new vectorized Gram reduction length is bounded by max_left_terms*max_right_terms; the receipt max2520 gives at most6350400 terms per call, below2^28. Total2.881772e9 pairs is aggregate work, NOT a single accumulation dependency path. Component/role accumulation paths, coefficient materialization, normalordering, compressed local operations and memory multiplication must also be included; beta2500 gamma8192+gamma2^28+128 gamma256 is conservative under the accepted no-underflow binary64 operation model. Pair-cache GG trace formation delta includes exact sourceN versus representedN0. GR/RG/RR require the SAME extraction-model proof for weighted source and rho multiplication, with128 powers; GG trace agreement alone is not sufficient. Three-cell tensor formation has higher-order delta/beta cross terms, smaller than the explicit beta slack for current delta<2e-10. Exact rational intervals decode every float exactly and outward-square-root rational ceilings avoid endpoint-rounding claims.",
+    "trigger": "Correctly rounded binary64/FMA-allowed operation model, operation lengths, no overflow/nonfinite/FTZ/DAZ/underflow, no hidden approximate arithmetic; historical intermediate range and execution provenance cannot be recovered from cache.",
+    "consequence": "Cancellation is allowed and paid by absolute L1 sums. This is NOT an unconditional historical-machine certificate. Dropping these hypotheses or using relative error in the cancelled result is INVALID."
+  },
+  "source_to_g_and_P0": {
+    "verdict": "CONDITIONAL",
+    "derivation": "For phase-aligned onecell infidelity<=I, threecell overlap squared>=(1-I)^3>=1-3I. Squared distance=2-2|overlap|<=2(1-|overlap|^2)<=6I, so eta3=sqrt(6I), NOT6I orI. For bounded polynomial M, |<g,Mg>-<s,Ms>|<=2 eta3 ||M|| on the joined containing domain. O rho powers act on source/g before CAR; operator L1 includes128^powers. This prices exact-g commutator polynomials O,A,B and all five moments. Q0=1-|ggg><ggg| needs true full P0 amplitude, not scalar/harmonic/charge-zero projector. Enclose <g,Og> via the same transfer and formation; subtract an interval for its square from m0; m1..4 need no subtraction because Kg=0. Both neutral polarizations are kept.",
+    "trigger": "Accepted entire frozen canonical256 matching-ground infidelity I=274877906944/2204801412260314559041 and formation assumptions remain conditional, and real selfadjoint neutral source amplitude is used.",
+    "consequence": "m_j are exact-g K^j O g moments ENCLOSED from s, not K^j s or K^j O s observations. First residual1/65536 already includes1/262144 formation; neither it nor the Rayleigh shift controls K residual or a higher action. No such higher-action residual is used in frozen moment_intervals."
+  },
+  "adverse_execution": "NEW star_factor_review_scientist_20261011.py; immutable pre/executed capsules and natural exit recorded separately. Independent entire signed36-mode threecell CAR toy has both spins, two central copies and a correlated totalrho spectator. Literal native O/A/B signed contractions, central reset, rho deletion, third-slot and third-action refusal are independent controls; toy does not certify native grounddata.",
+  "old_abort": "The original actual1 externally aborted3600s attempt remains unmodified and is pinned into review capsules. Natural actual2 exit is distinct and not retroactive validation of actual1.",
+  "overall_math_verdict": "CONDITIONAL_VALID_FOR_FROZEN_SOURCE_DOMAIN_NOT_UNCONDITIONAL_MACHINE_OR_GROUND_PROOF",
+  "nonclaims": ["no sign promotion", "no physical1 promotion", "no sourceg adoption", "no fullPhi or latticeground", "no phase stiffness pole IRatom commoncone", "no generic higher-action residual or allorder operator-bound proof"],
+  "language_tools": {"LSP": "Mounted xd://lsp unavailable. Existing pyright-langserver exercised directly at this root with real frozen documentSymbol response including DynamicKernel/Star/gram_terms; selected diagnostics deliberately left to parent.", "AST": "Positive structural action-function query returned full DynamicKernel.action and standard Python AST resolved gram_terms before new files were written.", "tests_build_lint_formatters": "Not run; assignment only authorizes the new independent scientific consumer."}
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "PARENT_ANALYTIC_COMPLETE_JOIN_DERIVATIVE_REPAIR_NOT_HISTORICAL_EPOCH_REBINDING",
+  "accepted_scoped_science_distinct": "c66121a88fb191d0f878c16e6fc6a5611e2d1260c4927d1d022d57149106137b",
+  "task_governor": "5beb9ff0f9ec95c0c65bf678a02d80e316255bd35170427c3e56f66aaf2926bc",
+  "pinned_source": {
+    "path": "physical_ground_lift_source_20261011.py",
+    "sha256": "31b1c270bf341f75f2364580cd6f646f1d66fda54d93e9b3b227b6ab3985763e"
+  },
+  "original_executed_proof": {
+    "path": "physical_ground_lift_actual3_20261011_proof.json",
+    "sha256": "b5db95dd2c56822c32d8975232a7ca60d946a5c62a482164aeb4afb51fa07b17"
+  },
+  "original_supplement": {
+    "path": "physical_ground_lift_domain_supplement_20261011.json",
+    "sha256": "ad4b7399dfdf22c09b1d6f5abf6163c29bdfb479c16c4d6724f8f9e59acc0d58"
+  },
+  "independent_review": {
+    "path": "lift_action_review_verdict_20261011.json",
+    "sha256": "b05226c645d3d4027788964582787506191404e3d8b9e90263a51ed08cec49ed",
+    "finding": "ACTION-F1"
+  },
+  "original_inference_withdrawn": "Separate scalar2^240 and fibre2^40/2^90 bounds alone do NOT imply joined2^240. This was a derivation gap, not an observed bound violation; original source/epochs preserved.",
+  "sharper_derivation": {
+    "definitions": "z=aggregate eight-matrix body displacement; s=||z||^2/R^2; b=(1-s)_+^4; R=2^-24. On support ||z||<=R, body Dz<2^40,D2z<2^90 and full charged exterior U unitary,U1<2^40,U2<2^90. These are conditional reviewed chart/source bounds, not finite-control extrapolations.",
+    "s_first": "|Ds|<=2R*2^40/R^2=2^65",
+    "s_second": "|D2s|<=2(2^80+R*2^90)/R^2=2^129+2^115<2^130",
+    "b_first": "|Db|<=4|Ds|<=2^67",
+    "b_second": "|D2b|<=12|Ds|^2+4|D2s|<16*2^130=2^134",
+    "complete_join": "||(bU)2||<=|b2|+2|b1| ||U1||+|b| ||U2||<2^134+2^108+2^90<2^135<2^240",
+    "locality": "Every individual Hamiltonian Cart/Haar tangent hits at most one matching scalar bump; other factors<=1. No b1/b or b2/b bound at boundary.",
+    "normalization": "Z constant under field derivatives. Reviewed sqrt(supportvolume/Z)<2^(16384V); actual source normalization integral not chosen1.",
+    "boundary": "b,Db,D2b vanish at s=1; same regular chart/zeroextension and no delta contributions retained."
+  },
+  "repaired_consequence": "Complete normalized second-jet bound2^(16384V+240) remains valid under same source/realization premises; all eight N4 term exponents and ||HPsi||<=2^1048833 unchanged. No numerical variance/stationarity claim.",
+  "stationarity_scope": "Compact trial nonstationary only under the declared analytic elliptic ambient matrix Friedrichs/reducingGauss/Bloch realization; not demonstrated for an alternative/compressed/singular realization and not globalno-go.",
+  "unchanged_hamiltonian_source_and_tolerances": true,
+  "old_epoch_not_rebound": true,
+  "campaign_complete": false
+}

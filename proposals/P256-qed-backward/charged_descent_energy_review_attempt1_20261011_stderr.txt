@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_descent_energy_review_control_20261011.py", line 421, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_descent_energy_review_control_20261011.py", line 404, in main
+    'derivation': derivation, 'rational_profiles': rational, 'fresh_actual_CAR': car_controls(),
+                                                                                 ^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_descent_energy_review_control_20261011.py", line 160, in car_controls
+    hm, gm, gtm, om, wrongm = [matrix(op) for op in (h, g, gt, o, gw)]
+                               ^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_descent_energy_review_control_20261011.py", line 157, in matrix
+    for k, val in operation({mask: Q(1)}).items():
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/charged_descent_energy_review_control_20261011.py", line 109, in <lambda>
+    gw = lambda v: add((1, density(h(v), True)), (-1, h(density(v), True)))
+                                                      ^^^^^^^^^^^^^^^^^^^
+TypeError: car_controls.<locals>.<lambda>() takes 1 positional argument but 2 were given

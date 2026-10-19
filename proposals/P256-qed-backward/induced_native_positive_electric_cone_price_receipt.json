@@ -1,0 +1,111 @@
+{
+  "status": "natural_exit_actual_native_positive_electric_pointRPA_commoncone_obstruction",
+  "assigned_execution_epoch": "03b34911221ba1898315373edaa7c4c3bcac718462e7fe51a842560eb6933f87",
+  "actual_native_config": {
+    "a": 0.015625,
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.4990360130634525,
+    "g0": 0.2901803527975645,
+    "gs": 0.10293343620392745,
+    "flavors": 64,
+    "inertia": 1.0,
+    "orders": [
+      6,
+      8,
+      10
+    ],
+    "q_values": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "omega_values": [
+      0.02,
+      0.04,
+      0.08
+    ],
+    "species": [
+      [
+        1,
+        0.2
+      ],
+      [
+        63,
+        2.0
+      ]
+    ]
+  },
+  "actual_epsilon_total": 33.32436260952692,
+  "actual_epsilon_bare": 0.5,
+  "actual_epsilon_fixed_band_loop": 32.82436260952692,
+  "actual_induced_kappa_without_bare_magneticterm": 0.7818052593731255,
+  "actual_bare_matter_cone_unretagged": 0.16010692744595834,
+  "actual_native_photon_cone_unretagged": 0.15316811516598533,
+  "actual_required_bare_epsilon_for_matching_this_fixed_band": -2.325872357361021,
+  "actual_positive_UE_photon_speed_supremum": 0.15433027961460302,
+  "actual_supremum_ratio_to_bare_matter_cone": 0.9639200631508894,
+  "actual_explicit_positive_UE_family_rows": [
+    {
+      "explicit_new_positive_UE_family_value": 0.1,
+      "epsilon_bare": 5.0,
+      "epsilon_fixed_band_RPA_total": 37.82436260952692,
+      "actual_conditional_photon_speed": 0.14376841495997814,
+      "ratio_to_unretagged_bare_matter_cone": 0.897952494956878
+    },
+    {
+      "explicit_new_positive_UE_family_value": 1.0,
+      "epsilon_bare": 0.5,
+      "epsilon_fixed_band_RPA_total": 33.32436260952692,
+      "actual_conditional_photon_speed": 0.15316811516598533,
+      "ratio_to_unretagged_bare_matter_cone": 0.9566613862956361
+    },
+    {
+      "explicit_new_positive_UE_family_value": 10.0,
+      "epsilon_bare": 0.05,
+      "epsilon_fixed_band_RPA_total": 32.87436260952692,
+      "actual_conditional_photon_speed": 0.15421287124993818,
+      "ratio_to_unretagged_bare_matter_cone": 0.9631867509417442
+    },
+    {
+      "explicit_new_positive_UE_family_value": 100.0,
+      "epsilon_bare": 0.005,
+      "epsilon_fixed_band_RPA_total": 32.829362609526925,
+      "actual_conditional_photon_speed": 0.15431852670927504,
+      "ratio_to_unretagged_bare_matter_cone": 0.9638466565499667
+    },
+    {
+      "explicit_new_positive_UE_family_value": 10000.0,
+      "epsilon_bare": 5e-05,
+      "epsilon_fixed_band_RPA_total": 32.824412609526924,
+      "actual_conditional_photon_speed": 0.15433016207225717,
+      "ratio_to_unretagged_bare_matter_cone": 0.9639193290018571
+    }
+  ],
+  "actual_supplier_convergence": {
+    "epsilon_relative": 3.621457134173056e-09,
+    "kappa_smallest_q_relative": 4.403732933866422e-09,
+    "constant_A_alias_final": 7.46797623740747e-11
+  },
+  "scope": [
+    "ConditionalnumericalPOINT-RPA coefficients from1144, heldactualnativePhi/band/masses/flavours. InfpositiveUEfamily hasbareepsilon->0; kappa andIRtransversematterloop fixedwithinthisdeclaredbranch. ThisisNOTarigorousall-full-theoryparameterbound.",
+    "ApositiveUE canonicelectricHamiltonian hasbareepsilon=1/(2UE)>0. Withno baremagneticterm, cph<=sqrt(kappa/epsilonloop). RequiredbareepsilonisNEGATIVE, sochoosingUEcannotmatchtheUNCHANGEDbarechargedcone inthisactualheld-band/RPAbranch.",
+    "UEfamily entries areEXPLICITdifferentmicroscopicpositiveelectriclaws, notnewsourceadmissions. NoUE ischangedintheactual1144cfg; no cph=cm assignment, hiddencalibration, negativekineticterm or importedmagneticsupplier.",
+    "Dressedchargedvelocity, selfconsistentPhi/matter/nonlinearquantumfeedback oranotherCALCULATEDmagneticsupplier maychangecoefs, butnoneisassumed. No source/pole/eR/commoncone/Comptonclosure; originalALL4Ref3x100kernel/body/beta-curvature return retained."
+  ],
+  "same_interacting_source_return_sha256": "5dddf645ad6124dfc9b11122a4f8aea59e9713773dea49d7ddf42d4a4775388b",
+  "provenance": {
+    "own_sha256": "d74ce9e34b8a86eab48a90de75ab14beff3f4d28660c56e674f541be08597ec4",
+    "own_bytes_utf8": "\"\"\"Conditional1144 point-RPA cone obstruction, not a common-cone solution.\n\nPositive bare electric density adds positive epsilon, no bare magnetic term.\nFixedactualband/mean loop coefficients do not admit a speed match by choosing\nUE. Dressedmatter/mean/othermagneticsuppliers remain required, not fitted.\n\"\"\"\nfrom __future__ import annotations\nimport hashlib,json,math,time\nfrom pathlib import Path\nfrom typing import Any\nP=Path('/home/administrator/substrate-222/proposals/P256-qed-backward')\nBOUND=P/'induced_native_bulk_response_return_receipt.json'\nBOUND_HASH='1144f050940f30397636b02eaab1501d85cf73f89177cb1230f1d6f9ee8c3a5b'\nASSIGNED='03b34911221ba1898315373edaa7c4c3bcac718462e7fe51a842560eb6933f87'\n\n\ndef main()->None:\n    start=time.monotonic();own=Path(__file__).read_bytes();bound=BOUND.read_bytes()\n    if hashlib.sha256(bound).hexdigest()!=BOUND_HASH:raise RuntimeError('Actual native bulk supplier receipt changed')\n    native=json.loads(bound);r=native['actual_native_bulk_response'];cfg=r['config'];bare=1/(2*cfg['inertia']);epsilon=r['epsilon'];loop=epsilon-bare;kappa=r['kappa'];matter=r['charged_cone'];required=kappa/(matter*matter)-loop;maximum=math.sqrt(kappa/loop);rows=[]\n    for UE in (.1,1.,10.,100.,10000.):\n        eps=loop+1/(2*UE);speed=math.sqrt(kappa/eps);rows.append({'explicit_new_positive_UE_family_value':UE,'epsilon_bare':1/(2*UE),'epsilon_fixed_band_RPA_total':eps,'actual_conditional_photon_speed':speed,'ratio_to_unretagged_bare_matter_cone':speed/matter})\n    if min(loop,kappa,matter)<=0 or required>=0 or maximum>=matter or abs(rows[1]['actual_conditional_photon_speed']-r['photon_speed'])>1e-14:raise ArithmeticError('Actual positive-electric cone discriminator unresolved')\n    report={'status':'natural_exit_actual_native_positive_electric_pointRPA_commoncone_obstruction','assigned_execution_epoch':ASSIGNED,'actual_native_config':cfg,'actual_epsilon_total':epsilon,'actual_epsilon_bare':bare,'actual_epsilon_fixed_band_loop':loop,'actual_induced_kappa_without_bare_magneticterm':kappa,'actual_bare_matter_cone_unretagged':matter,'actual_native_photon_cone_unretagged':r['photon_speed'],'actual_required_bare_epsilon_for_matching_this_fixed_band':required,'actual_positive_UE_photon_speed_supremum':maximum,'actual_supremum_ratio_to_bare_matter_cone':maximum/matter,'actual_explicit_positive_UE_family_rows':rows,'actual_supplier_convergence':r['convergence'],'scope':['ConditionalnumericalPOINT-RPA coefficients from1144, heldactualnativePhi/band/masses/flavours. InfpositiveUEfamily hasbareepsilon->0; kappa andIRtransversematterloop fixedwithinthisdeclaredbranch. ThisisNOTarigorousall-full-theoryparameterbound.', 'ApositiveUE canonicelectricHamiltonian hasbareepsilon=1/(2UE)>0. Withno baremagneticterm, cph<=sqrt(kappa/epsilonloop). RequiredbareepsilonisNEGATIVE, sochoosingUEcannotmatchtheUNCHANGEDbarechargedcone inthisactualheld-band/RPAbranch.', 'UEfamily entries areEXPLICITdifferentmicroscopicpositiveelectriclaws, notnewsourceadmissions. NoUE ischangedintheactual1144cfg; no cph=cm assignment, hiddencalibration, negativekineticterm or importedmagneticsupplier.', 'Dressedchargedvelocity, selfconsistentPhi/matter/nonlinearquantumfeedback oranotherCALCULATEDmagneticsupplier maychangecoefs, butnoneisassumed. No source/pole/eR/commoncone/Comptonclosure; originalALL4Ref3x100kernel/body/beta-curvature return retained.'],'same_interacting_source_return_sha256':native['input_sha256']['same_interacting_SOURCE4_curvatures'],'provenance':{'own_sha256':hashlib.sha256(own).hexdigest(),'own_bytes_utf8':own.decode(),'actual_native_bulk_response_receipt_sha256':BOUND_HASH,'actual_native_Phi_mean_sha256':native['actual_native_Phi_mean_sha256'],'actual_native_input_sha256':native['input_sha256']},'elapsed_seconds':time.monotonic()-start}\n    if Path(__file__).read_bytes()!=own or BOUND.read_bytes()!=bound:raise RuntimeError('Actual cone-price inputs changed')\n    out=P/'induced_native_positive_electric_cone_price_receipt.json';out.write_text(json.dumps(report,indent=2,allow_nan=False)+'\\n');print(json.dumps({'epsilonloop':loop,'required_bare_epsilon':required,'supremum_speed':maximum,'bare_matter_speed':matter,'supremum_ratio':maximum/matter,'positive_UE_family':rows},indent=2),flush=True);print('Natural exit',out,hashlib.sha256(out.read_bytes()).hexdigest(),'elapsed',report['elapsed_seconds'],flush=True)\n\n\nif __name__=='__main__':main()\n",
+    "actual_native_bulk_response_receipt_sha256": "1144f050940f30397636b02eaab1501d85cf73f89177cb1230f1d6f9ee8c3a5b",
+    "actual_native_Phi_mean_sha256": "30a4182e252463319caea5235176a0e5e87018a740ca0a95d76f1487796b4d78",
+    "actual_native_input_sha256": {
+      "actual_native_source_constructor": "abb16b5963287e977d1433bb205669ff4a35df9bb7798d2480dd6796af77882f",
+      "actual_existing_bulk_supplier": "4906bf0bb8c3a80fd20d2b93388878e9975af54bffd7f114ee027d5c3c00e64f",
+      "actual_native_volume_response": "457c268ccadf1a232622e5bd6b8c4da78238ed2882fb6044c898936fb138d47f",
+      "same_interacting_SOURCE4_curvatures": "5dddf645ad6124dfc9b11122a4f8aea59e9713773dea49d7ddf42d4a4775388b",
+      "same_interacting_SOURCE4_D4_heat": "6a62624b333e62a3317928be10b143b074344cccf40461fe624feda9a40975ba"
+    }
+  },
+  "elapsed_seconds": 0.005656299879774451
+}

@@ -1,0 +1,20 @@
+/home/administrator/substrate-222/proposals/P256-qed-backward/physical_charged_descent_20261011.py:163: FutureWarning: Input has data type int64, but the output has been cast to float64.  In the future, the output data type will match the input. To avoid this warning, set the `dtype` parameter to `None` to have the output dtype match the input, or set it to the desired output data type.
+  density = diags(2*rho*rho)
+/home/administrator/substrate-222/proposals/P256-qed-backward/physical_charged_descent_20261011.py:176: FutureWarning: Input has data type int64, but the output has been cast to float64.  In the future, the output data type will match the input. To avoid this warning, set the `dtype` parameter to `None` to have the output dtype match the input, or set it to the desired output data type.
+  wrong_d = kron(diags(2*single_rho**2),ident)+kron(ident,diags(2*single_rho**2))
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_charged_descent_20261011.py", line 323, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_charged_descent_20261011.py", line 315, in main
+    unchanged=all((ROOT/n).read_bytes() == raw for n,raw in captured.items())
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_charged_descent_20261011.py", line 315, in <genexpr>
+    unchanged=all((ROOT/n).read_bytes() == raw for n,raw in captured.items())
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1021, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/administrator/substrate-222/proposals/P256-qed-backward/runtime_imports/usr/lib/python3.12/importlib/_bootstrap.py'

@@ -1,0 +1,39 @@
+{
+  "kind": "NEW_FIELD_FRAME_NOETHER_AND_SAME_GEOMETRIC_CURRENT_CONSTRUCTION_NOT_NATIVE_LAW_DERIVATION",
+  "governor": {
+    "plan_id": "issue222-rich-backward-candidates-20261014",
+    "captured_parent_revision": "87bedd8343641b2540426b62d725c656fa893e956a9ec2b56ba08082c518ab3e",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "parent_sole_plan_writer": true,
+    "scope": "FrameGaussCarrier owns rich_frame_gauss_20261014_*; electron-candidate and interaction-candidate construction"
+  },
+  "primitive_configuration": {
+    "fields": "U in SU(2) is the lift of a neutral adjoint triad Phi_i=U^dag sigma_i U. W in SO(3) is a separately marked neutral spatial carrier. Two scalar-under-physical-rotation fermionic colour modes c_alpha carry charge q=-1. Their colour fundamental and CAR are primitive inputs, not primitive physical spin.",
+    "colour": "Right pullback R(g)f(U)=f(Ug). Colour Fock transformation has generator T_a=dGamma(J_a^(1/2)); Gauss G_a=R_a+T_a. Left physical pullback L(g)f(U)=f(g^-1 U) commutes with right Gauss and has generator S_a=-J_a^T on the left m index of D^j_mn(U). The primitive c operators commute with S and with physical W rotation.",
+    "cover": "U and -U have identical adjoint triad; the SU(2) colour centre acts on colour occupation by (-1)^N. The associated-bundle sewing is psi(-U,c)=(-1)^N psi(U,c) after reduction. A physical 2pi LEFT rotation changes U to -U without rotating primitive colour. It is therefore -1 only in odd charge sector. This nontrivial centre sewing is an explicit topological input; an adjoint SO(3) field with trivial sewing cannot produce this source.",
+    "bosonic_neutral": "N=0 has j_U=0 and even centre; its vacuum is a bosonic scalar. W contributes only integer l. N=2 has colour determinant singlet and j_U=0, also even. The full regular U module has j=0,1/2,1,3/2,...; exact Gauss forces j_U=colour total, hence j_U=0,1/2,0 for N=0,1,2. It does not discard allowed excited j_U. The numerical raw U regulator includes j=1 as an adverse nonphysical sector.",
+    "dressed_source": "d_m^dag = sum_(alpha,beta) D^(1/2)_m alpha(U) epsilon_alpha beta c_beta^dag. The unitary epsilon contraction preserves full CAR. Bare c^dag is not Gauss invariant and projects to zero between physical N0/N1. Dressed d^dag maps N0->N1->N2, has unit source Gram in both transitions, changes charge by q, and has half-spin under the proper field-coordinate LEFT derivative.",
+    "spin_meaning": "This establishes field-frame differential Noether halfspin in this chosen associated bundle, not nature's origin of quantum rules, colour fundamental, spin structure, or fermionic exchange. It is more than renaming primitive physical Pauli spin: bare charge has zero physical Noether commutator, and removing the cross metric leaves halfspin but destroys its charge magnetism. The input colour fundamental is still what selects the half-integral representation through Gauss."
+  },
+  "positive_angular_field_kinetic": {
+    "definition": "On SO(3)_W x SU(2)_U use the positive scalar-field Laplace quadratic form Hkin=(L_W+S_U)^2/(2 I_c)+L_W^2/(2 I_r)+S_U^2/(2 I_f), before Gauss. This is a differential kinetic operator, not an installed kappa L dot physical-charge-spin interaction.",
+    "metric": "For each spatial component K=[[I_c^-1+I_r^-1,I_c^-1],[I_c^-1,I_c^-1+I_f^-1]] in momenta (L,S). K is positive for positive inertias. The material Lagrangian is (Omega_W,Omega_U)^T K^-1 (Omega_W,Omega_U)/2. Thus Omega_W=dH/dL=(L+S)/I_c+L/I_r. The cross-angular coefficient I_c^-1 follows from this common/relative field metric; it is not universally fixed or obtained from an original substrate model.",
+    "physical_Noether": "Jmatter=L_W+S_U. Adding vector oscillators gives Jtotal=Jmatter+Ffield. The angular metric and field scalar products commute with Jtotal and with colour Gauss. Full W harmonics l=0,1,2 and ALL M,K are retained numerically; in the unregulated theory l is unbounded. No total physical jhalf sector is chosen as an input ground restriction."
+  },
+  "actual_charge_geometry_and_dressing": {
+    "density": "rho_N(x;W)=qN/6 sum_(a=1..6) Gaussian_sigma(x-W r_a), r_a=(+/- r e_1,+/- r e_2,+/- r e_3). Each Gaussian has coordinate variance sigma^2. This is a collectively occupied rigid charged cloud on a neutral carrier, not six independently occupied electrons and not a self-bound solution.",
+    "Fourier": "rho_N(k;W)=qN exp(-sigma^2 k^2/2) mean_a exp(-ik dot W r_a), with Fourier convention exp(-ik dot x).",
+    "electric": "Supply H_E=epsilon/2 integral E^2 and epsilon div E=rho. Eliminating longitudinal Gauss gives E(k)=-ik rho(k)/(epsilon k^2). Its finite exact energy is N^2 q^2/(8pi epsilon 36) sum_ab K_sigma(|r_a-r_b|), K_sigma(d)=erf(d/(2sigma))/d for d>0 and 1/(sqrt(pi)sigma) for d=0. N->N+1 source shifts this same longitudinal solution; there is no independently reset electric vacuum.",
+    "current": "The actual material velocity is v(x)=Omega_W cross x, with quantum symmetric ordering. j_a(k)=qN/12 sum_points sum_b {Omega_b, exp(-sigma^2 k^2/2-ik dot x_point) [e_b cross (x_point-i sigma^2 k)]_a}. Omega is the kinetic derivative, including the same vector-potential displacement. The implementation projects these actual multipliers by SO(3) Haar quadrature, not by inventing a spin-current formula.",
+    "Ward": "For exp(-ikx), k dot j(k)=-[H,rho(k)]. The full finite-q source calculation verifies this in the same 700-state odd-charge Hamiltonian; angular projection commutes with the Hamiltonian's l blocks. The continuity identity is not a proof of Maxwell/Lorentz dynamics."
+  },
+  "magnetic_minimal_substitution_and_contact": {
+    "geometry": "For A(x)=B cross x/2, a(B)=1/2 integral rho(x) x cross (B cross x) dx = C_N B with C_N=qN(r^2/3+sigma^2). This is the exact second moment of these Gaussian charge positions; it is not S=EM magnetization.",
+    "Hamiltonian": "H(B)=(L+S-C_N B)^2/(2I_c)+(L-C_N B)^2/(2I_r)+S^2/(2I_f)+E_C N^2+Hfield. Both L-containing quadratic forms receive the same charged canonical shift; S alone is not minimally coupled.",
+    "source": "mu=-dH/dB=C_N[(L+S-C_N B)/I_c+(L-C_N B)/I_r]=1/2 integral x cross j(x). Full contact d2H/dB_i dB_j=C_N^2(I_c^-1+I_r^-1)delta_ij. The contact is retained inside the quantum field coupling and external probe, not added later to a different state.",
+    "quantum_consumer": "B=magnetic_amplitude Q with three vector oscillator coordinates Q_a=(b_a+b_a^dag)/sqrt2, Hfield=omega(sum b^dag b+3/2), F_a=-i epsilon_abc b_b^dag b_c. Total occupation <=2 is an SO(3)-invariant regulator. It supplies three local magnetic vector modes and their positive stiffness; these are NOT actual propagating 3D photon modes or a derived Maxwell B^2 law.",
+    "feedback": "The same H determines charged source G(z), field resolvent D_ab(z), magnetic current Gram, spin-resolved finite-q threepoint, energy shifts and contact. G uses neutral reference E0, D/current responses use the odd-charge ground energy Eodd. A pure prepared member of the degenerate odd doublet is used for current/field leg Grams; their imaginary antisymmetric parts depend on this state choice, not on mixed-vacuum averaging."
+  },
+  "scope": "Finite-energy rigid-cloud molecular candidate and actual quantum/current consumer. No COM propagation, inertial electron mass, E=mc2, g=2, actual 3D photons, pair-production/positron sector, self-binding, proton, native-law cutover, or campaign closure is claimed."
+}

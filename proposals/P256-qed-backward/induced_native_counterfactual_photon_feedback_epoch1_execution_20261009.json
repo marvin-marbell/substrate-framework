@@ -1,0 +1,27 @@
+{
+  "producer": "/tmp/induced-native-counterfactual-photon-feedback-epoch1.py",
+  "source_sha256": "6b3c094226638a7b73623eb897d149875e3abd057296765d9b698af88a2d00cb",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/tmp/induced-native-counterfactual-photon-feedback-epoch1.py\", line 106, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/tmp/induced-native-counterfactual-photon-feedback-epoch1.py\", line 94, in main\n    own=Path(__file__).read_bytes();result=compute_epoch();result['provenance']['own_sha256']=hashlib.sha256(own).hexdigest();result['provenance']['own_bytes_utf8']=own.decode()\n                                           ^^^^^^^^^^^^^^^\n  File \"/tmp/induced-native-counterfactual-photon-feedback-epoch1.py\", line 72, in compute_epoch\n    g=r.supplier();native=g.s.primitives.build_native(g.s.primitives.MEAN,4);seed_cov=np.asarray(json.loads(phasebytes)['actual_photon_covariance_Theta_edges']);delta=-record['actual_calculated_common_bare_mass_compensation_NOT_adopted'];raw,observed=counter.counterfactual_profiles(g,b,native,seed_cov,delta);effective=weighted_operator(native,raw,seed_cov);data=full.build(g.s,effective,np.zeros(3*native['V']),ramp,density);groups=sorted({min(tuple(index),tuple((-i)%native['N'] for i in index)) for index in itertools.product(range(native['N']),repeat=3)});static_eig=data['static_eigenvalues'];before=record['actual_after_counterfactual_response']['actual_refilled_native_band_rows'];seedjoins=[abs(o['actual_positive_gap']-p['actual_positive_gap']) for o,p in zip(observed,before,strict=True)];qstatic=[]\n      ^^^^^^^^^^^^\n  File \"/tmp/induced-native-photon-marginal-response.py\", line 28, in supplier\n    b:Any=importlib.util.module_from_spec(sp);sys.modules[sp.name]=b;sp.loader.exec_module(b);return b.supplier()\n                                                                                                     ^^^^^^^^^^^^\n  File \"/tmp/induced-native-photon-marginal-band.py\", line 21, in supplier\n    g:Any=importlib.util.module_from_spec(sp);sys.modules[sp.name]=g;sp.loader.exec_module(g);return g.NativeBulkPhotonGreen(8)\n                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/induced-native-bulk-photon-green.py\", line 81, in __init__\n    core=self.source.load(self.source.CORE,'actual_bulk_Green_core');form=self.source.load(core.FORM_PATH,'actual_bulk_Green_form');self.s=form.load().NeutralEndpointFilter();self.response=self.parent.load(RESPONSE,'actual_bulk_Green_response');self.cfg=self.parent.native_config(self.s,self.response);record=json.loads(self.bound)['actual_native_bulk_response']['config']\n                                                                                                                                           ^^^^^^^^^^^\n  File \"/tmp/induced-endpoint-hamiltonian-form.py\", line 38, in load\n    spec.loader.exec_module(module)\n  File \"<frozen importlib._bootstrap_external>\", line 991, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1128, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1186, in get_data\nFileNotFoundError: [Errno 2] No such file or directory: '/tmp/induced-neutral-endpoint-filter.py'\n",
+  "started_unix": 1791563922.4461029,
+  "ended_unix": 1791563923.220512,
+  "restored_sources": {
+    "/tmp/induced-native-counterfactual-photon-feedback-epoch1.py": "6b3c094226638a7b73623eb897d149875e3abd057296765d9b698af88a2d00cb",
+    "/tmp/induced-native-photon-marginal-counterterm-response.py": "2621267880f9c2566c2963b66cf3d68fa7612c91ae9fba4a2b456416232942c5",
+    "/tmp/induced-native-photon-marginal-response.py": "afbb4a9ffc3a95911f95749a8aafab123025d3737f78be443c6f7029a7489ae8",
+    "/tmp/induced-native-photon-marginal-band.py": "bc6107cf196774069b1594c761b330e3ca82855f09f6a61bb9b1022a7ae329d7",
+    "/tmp/induced-native-bulk-photon-green.py": "3e905f9f4941b19658bf90383236546faafaa269ea80a65d2d828232b8fa2440",
+    "/tmp/induced-native-bulk-response-return.py": "66510e732923b3fc00c8295e3f842f2edf69778947f0ece6f1b092521d721bf5",
+    "/tmp/induced-prepared-photon-current-gram.py": "abb16b5963287e977d1433bb205669ff4a35df9bb7798d2480dd6796af77882f",
+    "/tmp/induced-endpoint-cofactor-insertions.py": "c37b7e9bdf7e2c1c9d205785834c520e852f0f5cf4b5dc9622a06e0253ff5a3a",
+    "/tmp/induced-endpoint-hamiltonian-form.py": "73b3b9cc0323079afa6043608a5bc9a1b4ca70bb3545eafed1e88cb3cc6e9405",
+    "/tmp/induced-native-full45-candidate-photon-state.py": "8c6fe35bfaa9de549e3921811db546527a8d1c20551bd8261bb394278906eebb",
+    "/tmp/induced-native-full45-candidate-photon.py": "c84273ff5596749275fd6e8fa6f2fa65eac7dc6e4b5c00d09d2133447b96bc30",
+    "/tmp/induced-native-photon-green.py": "9806d2ee6d108f64a5887cedc16322326d7e22962d5529dc219856ab1e1f0962",
+    "/tmp/induced-native-full-gaussian-feedback.py": "1553fcaeedad70807f38cff4c5bec95995a7e4b081c5bb00ac45f9e54a83d696",
+    "/tmp/induced-native-longitudinal-rpa-feedback.py": "dbe6290017f468841e890e657111da9517d60c3113a0181e00da03862cd01e25",
+    "/tmp/induced-native-filled-nonlinear-flux.py": "1ba5a83227731eb4485701e8ef66ea4ba624961f8dded720545dd81a07e61447",
+    "/tmp/induced-endpoint-distributed-form.py": "fd435043d4111bf5225dd13bf6b08e7f78e7d3ff31fe6e7246d1fec51424fa06"
+  }
+}

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_frame_field_join_20261015_calculate.py", line 107, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_frame_field_join_20261015_calculate.py", line 54, in main
+    v=fibre(model,name,.5,.5);h,a=compress(law(model,name),v);e,u,r=eigen(h,p['eigenstates'],p['eigen_tolerance']);npz[name+'_energies']=e;npz[name+'_vectors']=u
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_frame_field_join_20261015_model.py", line 81, in compress
+    if vs is None:return factorized(operator,vt)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_common_frame_orbit_20261015_reduce.py", line 48, in factorized
+    angular=factory.kron(matter,factory.csr(angle))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_rotcov_gauge_20261015_sparse.py", line 34, in kron
+    return scipy_kron(self.csr(left),self.csr(right),format=format)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_construct.py", line 903, in kron
+    data = (data.reshape(-1, B.nnz) * B.data).ravel()
+            ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1.10 GiB for an array with shape (2400, 30796) and data type complex128

@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_c_bare_electric_temporal_gauss.py",
+    "--capsule",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_c_bare_electric_temporal_gauss_actual_20261008_capsule.json"
+  ],
+  "returncode": 1,
+  "natural_exit": true,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/physical_c_bare_electric_temporal_gauss.py\", line 155, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/physical_c_bare_electric_temporal_gauss.py\", line 127, in main\n    b=loops.background((4,4,2));endpoints=[endpoint_probe(b,nt) for nt in (1,2,4)];projection=compact_projection(b);centres=centre_probe(b)\n                                                                                                                            ^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/physical_c_bare_electric_temporal_gauss.py\", line 116, in centre_probe\n    colour=b['links'].copy();colour[0,0]*=np.exp(1j*np.pi*centre/2)\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nnumpy._core._exceptions._UFuncOutputCastingError: Cannot cast ufunc 'multiply' output from dtype('complex128') to dtype('float64') with casting rule 'same_kind'\n",
+  "elapsed_seconds": 4.72154974937439,
+  "source_sha256_at_launch": "38d43a0ce35ea91f4ed5505a62689a80943ce64636ac75df2561f0e9c6b91e88",
+  "source_unchanged_until_exit": true,
+  "capsule_sha256": null
+}

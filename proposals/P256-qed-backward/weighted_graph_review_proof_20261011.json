@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "kind": "INDEPENDENT_FINITE_NATIVE_WEIGHTED_GRAPH_DOMAIN_REVIEW_NOT_SCIENTIFIC_ADMISSION",
+  "verdict": "VALID",
+  "verdict_scope": "For each fixed even N>=4 and each compatible actual Bloch character, the original all65 canonical smooth affine U1 realization BEFORE compact colour reduction has closed positive H+c_N and Qtheta forms, equal Friedrichs operator domains, and a common compact-Phi smooth physical graph core after compact SU4^V reduction. Constants in graph/form equivalence may depend on N, theta_min and character. This verdict does not review the subsequent unitary-limit argument or assert an infinite-volume domain.",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_contract_revision": "547b069bb5b683c80912e1dc50a4f3292a2cac96f450a4855c424736bae6fb95",
+    "accepted_scoped_science": "e12065ad4cbcff8723111399bca46eba091f7cbdcff340334c98b91c6e868617",
+    "template": {"id": "general", "revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe"},
+    "work_item": "induced-photon",
+    "requirements": ["outcome", "verification"],
+    "parent_sole_plan_state_docs_integration_writer": true
+  },
+  "revision_binding": {
+    "contract_sha256": "c8a084f6b760f8e2529753df27b42f916d6ecda78b7a18bb0f1ecd3290e2b3cc",
+    "proof": {"path": "weighted_evolution_closure_proof_20261011.json", "sha256": "40a82a3de1ce02ee64b04982b29fb8b78e6ff28aec1c6d954adb3c4b47ae0cbd"},
+    "actual_receipt": {"path": "weighted_evolution_closure_actual1_20261011_receipt.json", "sha256": "cd22b60e462ca4bd2c634651c5e654c41f87cf9021eaaa03fcd705f040ebc6c4"},
+    "actual_capsule": {"path": "weighted_evolution_closure_actual1_20261011_capsule.json", "sha256": "116bd590fa1f487c8f1149a37bc6a4ca73a1ed618d688b159dc5fb5d4662312a"},
+    "target_executed_archive": {"path": "weighted_evolution_closure_actual1_20261011_executed.zip", "sha256": "17f58876d7a02c70aab4ce854719041645cb79074b2a29fe61d61578e7571a6d", "all_8_contract_postexecution_members_hashed": true},
+    "target_pins_verified": 12,
+    "original_bytes_retained": true,
+    "original_sources_imported_or_run": false
+  },
+  "antecedents": [
+    "Exactly the declared periodic/AP Jordan law: a=1/64, lambda=2^8192, chi=2^-4096, F=2^10240; Kphi4chi, KHaar3chi/20, KE64, alignmentF/40, plaquette7F/10. No bare U1 B2, coupling/root/Cov adoption.",
+    "Finite CAR fibre with heavy neutral, actual active charged1, auxiliary charged63, each of65 fixed at2V particles and inert Ref4. Total collective rho=sum64(n_s-2) is zero-sum on this canonical sector. Source connection is operator-valued, never frozen.",
+    "Original real transverse cover has the inherited deck and its actual dual Bloch disintegration. A fixed compatible character is a finite fibre boundary condition, not an original-cover L2 ground or a standard integer orthonormal coordinate lattice.",
+    "Weights are positive fixed site constants. Site Phi kinetic/Jordan/onsite weights agree, link kinetics use tail theta, alignment/hopping endpoint averages and plaquettes four-corner averages. They define Qtheta, not a replacement governing Hamiltonian.",
+    "Only compact SU4^V is averaged as an L2 reducing projection after U1 Gauss has been solved. No invariant projection of unreduced real-edge Lebesgue L2 under noncompact U1 or elliptic argument on the singular colour quotient."
+  ],
+  "independent_analysis": [
+    {
+      "section": "native_law_and_scope + ambient_not_singular_quotient",
+      "verdict": "VALID",
+      "derivation": "The connected periodic incidence D has rankV-1, so ker D has dimension3V-(V-1)=2V+1. L=DD* is invertible on zero-sum sources. Let P_T=I-D*Lplus D and Q be an orthonormal cycle basis. Full electric generators on the affine sector are E_e=(Qp)_e+ell_e(rho), ell=D*Lplus rho, with a character-dependent bounded constant transverse shift if placed in the operator instead of the boundary condition. rho has finitely many canonical occupation eigenvalues, hence ell is bounded at each finite N. Projected integer edge periods are a full-rank lattice because P_T has rational entries; occupation sectors have corresponding affine transition phases. Local smooth flat trivializations suffice; global naive periodicity of every CAR entry is neither assumed nor true. The transverse principal matrix64 Q*Theta Q has lower bound64 theta_min I and upper64 I. Phi and Haar directions have strictly positive coefficients. The product R^(60V) x actual transverse torus x SU4^(3V) with finite CAR bundle is smooth and strongly elliptic before colour reduction."
+    },
+    {
+      "section": "closed_forms",
+      "verdict": "VALID",
+      "derivation": "The original pinned profile entries give B=4[lambda w_heavy+w_active+63w_aux]<512lambda. Each endpoint allocation multiplies by at mostsqrt2, so weighted matter absolute norm is <=1024lambda sum theta r. Independently, r^4/2-1024r+6144=(r-8)^2(r^2+16r+192)/2>=0. Thus the target shift8192lambda W pays the entire matrix matter potential with2048lambda W to spare, leaving Vtheta>=1+(lambda/2)sum theta r^4+weighted alignment+weighted plaquette. Jordan lower/upper bounds lambda r^4 and16lambda r^4 use the four-field positive Gram and HS anticommutator bounds. For finite N, sum theta r^4>=theta_min |q|^4/(4V). Alignment is quadratic in q with bounded compact-link coefficients; colour plaquette bounded; matter linear. Hence c_N(1+|q|^4)I<=Vtheta<=C_N(1+|q|^4)I, and similarly for shifted unweighted H. Closed Sobolev kinetic plus quartic multiplication intersection is complete; scalar quadratic/bounded terms are harmless and matrix matter is infinitesimally form bounded by r<=delta r^4+Cdelta. Cutoff and local bundle smoothing already give form density, independent of evolution. Positive shifted forms are equivalent to the same kinetic-plus-quartic budget, since finite theta_min>0. This proves equality of form domains, not operator domains by fiat."
+    },
+    {
+      "section": "uniform_native_current.native_jets + reducing.fullE",
+      "verdict": "VALID_AT_NATIVE_DERIVATIVE_HYPOTHESIS_SCOPE",
+      "derivation": "A literal charged transfer t obeys delta rho=Dt and delta ell=D*Lplus Dt=t_L. Its transverse multiplier phase has derivative t_T=P_T t. Thus [E_e,T]=t_e T and the induced second anti-Hermitian covariant derivative is delta_e^2 T=-t_e^2 T. This holds for each species transfer inside the once-collective64 rho; it does not produce64 Coulomb copies. Outside the literal path t_T=-t_L, so both first and second COMPLETE covariant jets cancel there, although ordinary phase derivatives do not. Onsite number-preserving matrices commute rho. AP signs are constant modulus1 factors. Ordered length2 SU4 differentiation inserts the actual generator at its position; no commuting-path replacement. ||T_A||op<=1/sqrt2 gives first Haar norm bounds and bounded second insertions by product rule. Alignment derivative is bounded directly by differentiating its cross trace, at mostsqrt2 alpha(sx+sy), so the target4alpha bound is conservative; scalar plaquette first jet <=sqrt2 beta<2beta. Matter is linear in q with bounded ordered compact coefficients, preserving the63 load when summing norms. These verify the local derivative hypotheses used in the current, but this reviewer does not independently certify every C_index allocation or the later unitary theorem."
+    },
+    {
+      "section": "ambient_graph_and_physical_projection.graph_estimate",
+      "verdict": "VALID",
+      "derivation": "Let nabla_d=X_d+iA_d with divergence-free Phi/electric/Haar vector fields relative to Lebesgue x flat torus x Haar volume; A_d is Hermitian and finite-N bounded. Its adjoint is -nabla_d. The derivative of a matrix potential is the induced endomorphism derivative delta_d V=X_d(V)+i[A_d,V], not X_d(V) alone. Write K=-sum k_d nabla_d^2. Two integrations by parts, taking real parts, give 2Re<Ku,Vu>=2sum k_d int(nabla_d u)*V(nabla_d u)-int u*(sum k_d delta_d^2 V)u. No commutation of distinct Haar generators or V with the connection is needed. For Jordan, q derivatives lower polynomial degree and compact derivatives vanish; alignment is quadratic, plaquette bounded, matter linear with bounded smooth compact coefficients and bounded occupation commutators. Therefore ||sum k_d delta_d^2 V||<=C_N(1+|q|^4). Since the minimum matrix eigenvalue of V is >=c_N(1+|q|^4), scalar Young gives, in matrix forms, sum k_d delta_d^2 V <=delta V^2+C_(N,delta)I. V positivity makes the middle integral nonnegative. delta=1/2 gives ||Ku||^2+(1/2)||Vu||^2<=||Qu||^2+C_N||u||^2 on the ambient compact-Phi smooth core, and independently for H+c_N. These are finite-N approximation estimates, not N-uniform propagation coefficients."
+    },
+    {
+      "section": "why_domain_equality_holds",
+      "verdict": "VALID",
+      "derivation": "For u in the Friedrichs operator domain, the form representation gives Qu=f distributionally and finite kinetic form norm. On a bounded radial set the coefficients and V are smooth bounded. Uniform ellipticity, freezing the principal symbol, Fourier H2 estimates, small-chart absorption and first-order interpolation yield local H2 regularity. Choose smooth invariant chi_R(|q|^2/R^2), one on |q|<=R and zero on |q|>=2R. Only Phi derivatives hit it; [K,chi_R]u consists of -2sum k grad chi_R.grad u and -sum k Delta chi_R u, bounded in L2 by C_N(R^-1||grad_q u||+R^-2||u||). Apply the compact-core estimate to local H2 smoothing of chi_R u. Its RHS is uniformly bounded by ||f||, kinetic form norm and ||u||, independent of R. Weak compactness and distributional identification give Ku,Vu in global L2. Conversely membership in D(K) intersect D(V) supplies an L2 form representative, hence membership in the Friedrichs operator domain. Positivity and upper bounds make D(V)=D(|q|^4). Ktheta and unweighted K have equivalent H2 graph norms: coefficients are bounded smooth and independent of unbounded q, compact-factor elliptic estimates combine with Phi Fourier estimates and bounded affine first-order interpolation. Thus D(Qtheta)=D(H)=D(Kambient) intersect D(|q|^4). This is operator quartic domain, not the weaker form domain D(|q|^2)."
+    },
+    {
+      "section": "reducing + common_core_approximation",
+      "verdict": "VALID",
+      "derivation": "The compact colour group acts unitarily by simultaneous Phi conjugation, left/right link action and CAR colour action. Each weighted site Laplacian, link Casimir, fullE square, ordered Jordan, scalar alignment/plaquette and literal matter block is invariant separately. Occupation total and each-species number are colour invariant; Ref4 is inert. Therefore the closed forms are invariant and their resolvents commute the compact Haar projection P. P preserves compact invariant radial support and smoothness. For operator-domain u, the radial commutator and graph tails give chi_R u->u in each H/Q graph norm. For fixed R, chart mollification with a partition of unity respects bundle transition functions and converges H2; V is bounded there. After projecting these smooth approximants by P, contraction and commutation with both operators give simultaneous physical graph convergence. The same smooth compact-Phi physical space is consequently a common H/Q graph core; no prior invariance of smooth core under time evolution is assumed."
+    }
+  ],
+  "findings": [
+    {
+      "id": "GRAPH-COVARIANT-INTERPRETATION-1",
+      "severity": "NONBLOCKING_REQUIRED_INTERPRETATION_ALREADY_PRESENT_IN_TARGET",
+      "trigger": "Read second derivative d^2V as ordinary scalar differentiation of CAR entries, or freeze the occupation connection while differentiating a charged path.",
+      "consequence": "Exterior first/second jets no longer cancel; the matrix integration identity acquires missing occupation commutators. New exact native controls reject this wrong reading at z=2^(-1/4), and the separated IBP mechanism has exact defect3.",
+      "smallest_repair": "Use delta_d V=[nabla_d,V] on the endomorphism bundle, including i[A_d,V], and the actual deck transition phases. No change to target law or original bytes needed.",
+      "target_revision": "40a82a3de1ce02ee64b04982b29fb8b78e6ff28aec1c6d954adb3c4b47ae0cbd"
+    },
+    {
+      "id": "GRAPH-FORM-VERSUS-OPERATOR-1",
+      "severity": "NONBLOCKING_BOUNDARY_PRESERVED_IN_TARGET",
+      "trigger": "Replace the graph estimate by form coercivity or infer D(H)=D(Q) only from equality of form domains.",
+      "consequence": "The unbounded matrix-potential operator need not be L2 on a form vector. Exact method vector(1+q^2)^(-2) has finite kinetic/quartic form norm but infinite quartic operator norm.",
+      "smallest_repair": "Retain the positive matrix second-covariant-derivative IBP estimate plus local H2, radial cutoff and mollification argument. The target supplies this, so no load-bearing failure is found.",
+      "target_revision": "40a82a3de1ce02ee64b04982b29fb8b78e6ff28aec1c6d954adb3c4b47ae0cbd"
+    }
+  ],
+  "new_controls": {
+    "selected_epoch": "weighted_graph_review_actual2_20261011",
+    "receipt_sha256": "88fecfb52eae6e9c04b5d653fcda5e38400db2f3fc4d18fbd3795c7fa3500140",
+    "preexecution_sha256": "c3404bce7a8365ce5e520902a947d5e8dfbf277258fafb2fda2af38ac9bf822e",
+    "executed_sha256": "b4bdc0ba89194e370a5e7dc37fa31c9a1dfaa8945815245566e2312a63d02278",
+    "natural_exit": true,
+    "returncode": 0,
+    "source_input_unchanged": true,
+    "native": "12 exact rational N4 transfers: all three axes, lengths1/2, ordinary and AP seam starts. Explicit canonical active occupation pairs retain128 particles with spectators, all other64 species fixed and fullrho sourced once. Full second jet weighted by native algebraic theta is path-supported. Wrong frozen derivative differs modulo irreducible2z^4-1, not just as a formal free polynomial. Exterior longitudinal tails191 or126 edges cancel covariantly. Fractional inherited deck pairing43/320 rejects naive scalar periodicity on projected coordinate periods.",
+    "method_only": "Exact2component quartic positive matrix IBP Gaussian/Haar control: both sides376493/2592, positive middle3415/72, covariant correction17, ordinary-second defect3. Exact integrability boundary separates quartic form and operator domains. These are not native quantum states or a spectrum calculation.",
+    "retained_correction": "Actual1 natural0 capsule retained, but its free-polynomial nonzero assertion and generic transfer background were insufficient for the stronger exact-native-weight/canonical-pair claim. Actual2 is a new source revision strengthening both; no old capsule or source archive overwritten.",
+    "failures": "No scientific CLI failure. Manual LSP initial buffered transport timeout retained in language evidence; recovered with unbuffered protocol. Positive AST call search recovered from a nonmatching declaration query. Default root Pyright reported unresolved venv imports and original-source typing diagnostics, recorded without modifying original bytes."
+  },
+  "scope_exclusions": [
+    "No claim of new proof of the actual native minimizing family, original-cover L2 vacuum, betaStar=0 or ground numerical construction.",
+    "Uniform B0 for ground word recursion requires the separately inherited translation-averaged minimizing family; not arbitrary untranslated ground vectors. NativeUnitaryLimitReview owns that qualification.",
+    "This finite graph discharge does not alone prove Q-spectral compression, real-unitary convergence/Fatou or Cstar allocations; those are the other independent review slice.",
+    "No full staticGNS, exterior/static-local approximation, dense limiting generator range, actual fullground characterization, phase/stiffness/atom/photon/commoncone/SOURCE."
+  ],
+  "final_checks": "No build/lint/tests/formatter/final selected checker run. Parent owns final selected Python diagnostics and integrated review. Original scientific producers/root/solver/checkers never run.",
+  "scientific_admission": false,
+  "campaign_complete": false
+}

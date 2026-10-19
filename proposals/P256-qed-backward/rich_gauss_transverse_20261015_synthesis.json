@@ -1,0 +1,573 @@
+{
+  "kind": "ACTUAL_EXACT_FULL_BOUNDARY_HODGE_AND_NEW_COLLECTIVE_TWO_FIELD_CONNECTED_PROCESS",
+  "governor": {
+    "plan_id": "issue222-rich-backward-candidates-20261014",
+    "captured_revision": "d81c8b4e48190a7792c594166bb9530320b73475ccba6bd8ae8f1bc2045f0012",
+    "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "interaction-candidate",
+    "parent_sole_plan_writer": true
+  },
+  "law": "open-gauss-cube-qlink3-I16-t1-U4-20261015",
+  "decision": "Retain scoped finite microscopic independent-cycle field/charged-source connected dynamics; do not rename mixed edge vertex or cycle channels photon scattering.",
+  "input": {
+    "model": "rich_open_gauss_carrier_20261015_model.py",
+    "model_SHA256": "621fd5b76f9caa06accd9f99c5504c42e2ea50aac7471618c8038029f28eb214",
+    "reference": "rich_open_gauss_carrier_20261015_neutral_reference.npz",
+    "reference_SHA256": "53a7a4f73fc41692b3f933993cfa2f586c83793c5d39af20a3371b2f6d01f4bd",
+    "scope": "Declared shared stationary Omega input; no independent global ground solve, no borrowed evolved arrays; old I16 cube, not new triangle frame law."
+  },
+  "exact_Hodge": {
+    "incidence_rank": 8,
+    "edge_count": 13,
+    "cycle_rank": 5,
+    "exact_rational_projector_identities": true,
+    "equations": "rich_gauss_transverse_20261015_equations.json",
+    "meaning": "All physical edges including unchanged outward boundary. EL is fixed by density; ET consists of independent graph-cycle coordinates, not statistically independent matter/field states. Hcut changes current-active edges, never graph/projectors."
+  },
+  "first_channel": {
+    "original_edge_complete": [
+      3.2381222881068745e-05,
+      0.0006578625592134861
+    ],
+    "original_edge_connected": [
+      -0.00057539169779855,
+      0.0011249881411240117
+    ],
+    "axis_order": "Rows current [edge,T,L], columns F [edge,T,L]. TT/TL/LT/LL are additive COMPLEX amplitudes, not disjoint probabilities.",
+    "components": {
+      "TT": {
+        "connected": [
+          -0.00022138526378355256,
+          0.0001629918964720186
+        ],
+        "complete": [
+          -0.00010222496789620683,
+          -0.0001365429477974259
+        ],
+        "current": "T",
+        "field": "T"
+      },
+      "TL": {
+        "connected": [
+          -4.2565036078653164e-05,
+          -1.601441053207354e-05
+        ],
+        "complete": [
+          -4.256503607865365e-05,
+          -1.601441053207398e-05
+        ],
+        "current": "T",
+        "field": "L"
+      },
+      "LT": {
+        "connected": [
+          0.00030645709555583267,
+          0.0004026482988308944
+        ],
+        "complete": [
+          0.00030645709555583115,
+          0.00040264829883089045
+        ],
+        "current": "L",
+        "field": "T"
+      },
+      "LL": {
+        "connected": [
+          -0.0006178984934921662,
+          0.0005753623563531649
+        ],
+        "complete": [
+          -0.0001292858686999052,
+          0.0004077716187120927
+        ],
+        "current": "L",
+        "field": "L"
+      }
+    },
+    "independent_field_T_with_full_current": [
+      8.50718317722802e-05,
+      0.0005656401953029229
+    ],
+    "Gauss_density_field_L_with_full_current": [
+      -0.0006604635295708257,
+      0.0005593479458210807
+    ],
+    "full_connected_reconstruction_error": 1.2990533822905339e-17,
+    "full_complete_reconstruction_error": 4.3246791563712396e-18,
+    "raw_observable_retained": "Both F and jQ decomposed; no component discarded and no source-range constraint imposed. Review28 original complex connected edge vertex reconstructed.",
+    "numerical_resolution": {
+      "complete_max_abs_difference": 2.2208949313396884e-17,
+      "connected_max_abs_difference": 4.247859282375352e-17,
+      "endpoint_column_l2_difference": [
+        3.503938066630224e-14,
+        4.9322965425733e-16,
+        5.070693425997381e-16,
+        1.7330978221193713e-16,
+        1.0196925430133593e-14,
+        2.659709182075221e-16,
+        1.8117017610953776e-16,
+        1.541005721350172e-16,
+        7.157509107735384e-15,
+        1.5910331351876755e-16,
+        1.572282975099733e-16,
+        9.053323857326415e-17,
+        7.20930952638494e-15,
+        1.9265394613102465e-16,
+        1.1671673454755696e-16,
+        1.525811414347521e-16
+      ],
+      "neutral_bra_l2_difference": 1.0276887456577469e-13,
+      "alternate_complete": {
+        "real": [
+          [
+            3.238122288104901e-05,
+            0.00020423212765961171,
+            -0.0001718509047785629
+          ],
+          [
+            -0.0001447900039748607,
+            -0.00010222496789620606,
+            -4.256503607865465e-05
+          ],
+          [
+            0.00017717122685591058,
+            0.0003064570955558178,
+            -0.0001292858686999079
+          ]
+        ],
+        "imag": [
+          [
+            0.0006578625592134759,
+            0.00026610535103347506,
+            0.0003917572081799998
+          ],
+          [
+            -0.00015255735832951227,
+            -0.00013654294779742948,
+            -1.601441053208284e-05
+          ],
+          [
+            0.0008104199175429871,
+            0.00040264829883090373,
+            0.0004077716187120838
+          ]
+        ]
+      },
+      "alternate_connected": {
+        "real": [
+          [
+            -0.0005753916977985826,
+            8.507183177225619e-05,
+            -0.0006604635295708363
+          ],
+          [
+            -0.0002639502998622158,
+            -0.0002213852637835609,
+            -4.2565036078654255e-05
+          ],
+          [
+            -0.0003114413979363653,
+            0.00030645709555581906,
+            -0.0006178984934921727
+          ]
+        ],
+        "imag": [
+          [
+            0.0011249881411239844,
+            0.0005656401953029299,
+            0.0005593479458210459
+          ],
+          [
+            0.00014697748593992964,
+            0.00016299189647201216,
+            -1.6014410532082402e-05
+          ],
+          [
+            0.0009780106551840447,
+            0.0004026482988309081,
+            0.0005753623563531421
+          ]
+        ]
+      }
+    },
+    "first_finding": "rich_gauss_transverse_20261015_first_channel.json"
+  },
+  "first_symmetry_null_retained": "Review28 first right-circulation/first-bridge channel reflection-null about2e-17; two same-profile fields is an explicitly new even protocol, not correction or concealment of that null.",
+  "cut_semantics": {
+    "full_edge_connected": [
+      0.0,
+      0.0
+    ],
+    "decomposed_four_connected": {
+      "TT": [
+        0.00012018442253318167,
+        4.0788309022514476e-05
+      ],
+      "TL": [
+        9.953247296917769e-05,
+        -0.00017999727273900355
+      ],
+      "LT": [
+        -0.00012018442253318167,
+        -4.0788309022514476e-05
+      ],
+      "LL": [
+        -9.953247296917769e-05,
+        0.00017999727273900355
+      ]
+    },
+    "reconstruction_error": 0.0,
+    "numerical_resolution": {
+      "complete_max_abs_difference": 3.402737038855564e-18,
+      "connected_max_abs_difference": 4.034922150288489e-18,
+      "endpoint_column_l2_difference": [
+        1.0803036877861913e-14,
+        1.5467807630590648e-16,
+        1.5364589226777364e-16,
+        6.620801919813331e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.265320557327648e-15,
+        7.108392805473192e-17,
+        3.787318306044442e-17,
+        5.3652554462190876e-17,
+        2.265320557327648e-15,
+        7.108392805473192e-17,
+        3.787318306044442e-17,
+        5.3652554462190876e-17
+      ],
+      "neutral_bra_l2_difference": 7.164458944274847e-15,
+      "alternate_complete": {
+        "real": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.00019905991291417353,
+            0.00012045162567798517,
+            7.860828723618825e-05
+          ],
+          [
+            -0.00019905991291417353,
+            -0.00012045162567798517,
+            -7.860828723618825e-05
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0002952079476931653,
+            -2.7407912580474174e-05,
+            -0.00026780003511269173
+          ],
+          [
+            0.0002952079476931653,
+            2.7407912580474174e-05,
+            0.00026780003511269173
+          ]
+        ]
+      },
+      "alternate_connected": {
+        "real": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.00021971689550236276,
+            0.00012018442253318326,
+            9.95324729691791e-05
+          ],
+          [
+            -0.00021971689550236276,
+            -0.00012018442253318326,
+            -9.95324729691791e-05
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0001392089637164893,
+            4.0788309022514246e-05,
+            -0.0001799972727390053
+          ],
+          [
+            0.0001392089637164893,
+            -4.0788309022514246e-05,
+            0.0001799972727390053
+          ]
+        ]
+      }
+    },
+    "meaning": "Actual active bridge current is zero, but nonlocal T/L pieces need not vanish and can cancel. Both neutral bra and disconnected terms evolved with Hcut; never full-H stationary phase shortcut."
+  },
+  "actual_NEW_collective_process": {
+    "operator": "B4(t3) F_leftcycle(t2) F_leftcycle(t1) B0dag(0), F=sum normalized_cycle E/16. New even protocol, not old odd channel.",
+    "profile": [
+      -0.5,
+      0.5,
+      0.0,
+      -0.5,
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "profile_divergence_max": 0.0,
+    "complete": {
+      "real": [
+        [
+          -4.91463651022744e-05
+        ]
+      ],
+      "imag": [
+        [
+          -0.00016552287852453397
+        ]
+      ]
+    },
+    "connected": {
+      "real": [
+        [
+          -5.049309423531819e-06
+        ]
+      ],
+      "imag": [
+        [
+          -0.00010032485786928559
+        ]
+      ]
+    },
+    "subtraction": {
+      "real": [
+        [
+          -4.409705567874258e-05
+        ]
+      ],
+      "imag": [
+        [
+          -6.519802065524838e-05
+        ]
+      ]
+    },
+    "magnitude": 0.000100451842353174,
+    "connected_method_difference": 6.4929052969603e-18,
+    "resolved_nonzero": true,
+    "raw_B0_strength": 0.4999999999999979,
+    "raw_B4_strength": 0.4824746022165699,
+    "neutral_physical_F_strength": 0.0009922617827049674,
+    "charged_physical_F_on_raw_source_strength": 0.000496130891352481,
+    "numerical_resolution": {
+      "complete_max_abs_difference": 7.640548946097516e-18,
+      "connected_max_abs_difference": 6.4929052969603e-18,
+      "endpoint_column_l2_difference": [
+        3.503786319087926e-14,
+        9.551965616958707e-16,
+        1.1680905543217474e-15,
+        6.941610957193825e-17
+      ],
+      "neutral_bra_l2_difference": 1.0276887456577469e-13,
+      "alternate_complete": {
+        "real": [
+          [
+            -4.914636510226768e-05
+          ]
+        ],
+        "imag": [
+          [
+            -0.00016552287852453034
+          ]
+        ]
+      },
+      "alternate_connected": {
+        "real": [
+          [
+            -5.0493094235270485e-06
+          ]
+        ],
+        "imag": [
+          [
+            -0.00010032485786928118
+          ]
+        ]
+      }
+    },
+    "equal_time_complete": {
+      "real": [
+        [
+          -0.00019340595538525112
+        ]
+      ],
+      "imag": [
+        [
+          0.0
+        ]
+      ]
+    },
+    "equal_time_connected": {
+      "real": [
+        [
+          2.6379226867831148e-05
+        ]
+      ],
+      "imag": [
+        [
+          0.0
+        ]
+      ]
+    },
+    "distinct_minus_equal_connected": {
+      "real": [
+        [
+          -3.142853629136297e-05
+        ]
+      ],
+      "imag": [
+        [
+          -0.00010032485786928559
+        ]
+      ]
+    },
+    "field_H_commutator_max": 0.03125,
+    "source_field_commutator_max": 0.0,
+    "sink_field_commutator_max": 0.0,
+    "dressing_interpretation": "Equal-time cumulant retained separately; changing unequal-time amplitude and nonzero [H,F] demonstrate actual H dynamics, not a proof of asymptotic scattering. Source/field commutators are explicitly measured; equal-time reference correlations need not vanish even when they commute.",
+    "same_input_cut_complete": {
+      "real": [
+        [
+          4.712973287969371e-05
+        ]
+      ],
+      "imag": [
+        [
+          -1.6322916608678414e-07
+        ]
+      ]
+    },
+    "same_input_cut_connected": {
+      "real": [
+        [
+          7.833105686975648e-06
+        ]
+      ],
+      "imag": [
+        [
+          2.9067327030702575e-05
+        ]
+      ]
+    },
+    "cut_numerical_resolution": {
+      "complete_max_abs_difference": 3.123703165601137e-19,
+      "connected_max_abs_difference": 5.2864628462308055e-19,
+      "endpoint_column_l2_difference": [
+        1.0802964381602741e-14,
+        3.2567604417928767e-16,
+        4.623722679606215e-16,
+        2.4030574561071778e-17
+      ],
+      "neutral_bra_l2_difference": 7.164458944274847e-15,
+      "alternate_complete": {
+        "real": [
+          [
+            4.7129732879693946e-05
+          ]
+        ],
+        "imag": [
+          [
+            -1.6322916608698743e-07
+          ]
+        ]
+      },
+      "alternate_connected": {
+        "real": [
+          [
+            7.833105686975973e-06
+          ]
+        ],
+        "imag": [
+          [
+            2.9067327030702992e-05
+          ]
+        ]
+      }
+    },
+    "cut_interpretation": "A two-field correlation need not vanish under cut and is not used as a false transport-defeat test.",
+    "mode_scope": "Exact same normalized electric profile as source of observed gap .81420752854. That earlier selected ray carried .24465991185 of source weight, not a complete group; present calculation keeps ALL weight.",
+    "microscopic": "Same diagonal physical E profile in EVERY actual N8/N9 basis; no neutral rank1 ladder transplant. Full generated states, no evolved data imported."
+  },
+  "causal_evidence_scope": "Review28 actual purefield unitary changes physical Qright motion by .00170827413 at t3; true bridge cut defeats regional charge and remote energy transport. Removed bridge-current correlator zero alone is tautological, not this operational defeat. No replay requested.",
+  "numerical_method": {
+    "primary": "SciPy adaptive Taylor expm_multiply; full sparse H and all generated columns",
+    "alternate": "Independent full-block Chebyshev recurrence",
+    "degree": 180,
+    "enclosures": [
+      [
+        -18.96875,
+        35.15625
+      ],
+      [
+        -24.0,
+        40.125
+      ],
+      [
+        -11.96875,
+        28.40625
+      ],
+      [
+        -16.0,
+        32.375
+      ]
+    ],
+    "max_500term_Bessel_tail": 1.4138975769370984e-48
+  },
+  "execution": {
+    "returncode": 0,
+    "natural_exit": true,
+    "elapsed_seconds": 309.18328019604087,
+    "sources_and_inputs_unchanged": true
+  },
+  "language": {
+    "selected_files": [
+      "rich_gauss_transverse_20261015_consume.py",
+      "rich_gauss_transverse_20261015_capture.py",
+      "rich_gauss_transverse_20261015_deliver.py"
+    ],
+    "returncode": 1,
+    "summary": {
+      "filesAnalyzed": 3,
+      "errorCount": 1,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 11.554
+    },
+    "rooted_LSP_exit": 0,
+    "scope": "Once-final three OWNED sources only; actual installed rooted Pyright JSON-RPC symbols/diagnostics on consume; positive AST. No project-wide, frozen ancestor, or helper type-clean claim."
+  },
+  "artifacts": {
+    "result": "rich_gauss_transverse_20261015_result.json",
+    "generated_full_states": "rich_gauss_transverse_20261015_states.npz",
+    "source_input_capsule": "rich_gauss_transverse_20261015_source_capsule.zip",
+    "binding": "rich_gauss_transverse_20261015_start.json",
+    "exit": "rich_gauss_transverse_20261015_exit.json",
+    "interface": "rich_gauss_transverse_20261015_interface.json"
+  },
+  "limits": "Exact finite independent-cycle decomposition, not Maxwell photons/polarizations/helicities, event probabilities, on-shell scattering or irreducible Dyson object. No source-state-law splice; frozen I16 cube, not triangle frame law."
+}

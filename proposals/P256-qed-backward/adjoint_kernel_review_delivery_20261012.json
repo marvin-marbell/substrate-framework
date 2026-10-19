@@ -1,0 +1,73 @@
+{
+  "owner": "AdjointKernelProofReview",
+  "verdict": "VALID_CONDITIONAL_FINITE_N_ADJOINT_AE_EXCLUSION_WITH_PHYSICAL_QUOTIENT_RATIONALE_PAID",
+  "revision": "c65d409ab76891a52043391a5637e80041f453aa60d4a0634ffe87f265d716d6",
+  "snapshot_sha256": "5a7adf2cc6f8721a2fbcf14e7cdf850b0583c5fbab1aeb36cdd58dd48001cb17",
+  "proof": {
+    "path": "adjoint_kernel_review_proof_20261012.json",
+    "sha256": "b352655d076489b9b7725c9b2e4cc4fc7b05044644ee93de029c2a78b295f72a"
+  },
+  "receipt": {
+    "path": "adjoint_kernel_review_actual1_20261012_receipt.json",
+    "sha256": "a0a5298e3f291faaeed0da73f3b70eacb1958853e7cadb54e3f7f4d72daddeba"
+  },
+  "runtime": {
+    "epoch": "adjoint_kernel_review_actual1_20261012",
+    "natural_exit": 0,
+    "inputs_unchanged": true,
+    "preexecution_sha256": "53a4383619711fdad337293fbeb41f2603bc52408a71a247bada13f5a8a0bd51",
+    "executed_sha256": "35dadae808f727a89dabea2ea29b9364818f758dd05d77456d5bba9490d2b0c0"
+  },
+  "independent_observed_controls": {
+    "actual3_native_point": {
+      "A_End16": 255,
+      "joint_B_Bdag_End16": 255,
+      "cross16": 16,
+      "minor_residues": [
+        44103,
+        20659,
+        49481
+      ]
+    },
+    "actual_physical_zero_transverse_point": {
+      "A_End16": 255,
+      "joint_B_Bdag_End16": 255,
+      "cross16": 16,
+      "minor_residues": [
+        22800,
+        58184,
+        42751
+      ]
+    },
+    "independent_End18_block": {
+      "rank": 319,
+      "nullity": 5
+    },
+    "overlap_N": [
+      4,
+      6,
+      8
+    ],
+    "prime": 65537,
+    "i_image": 256,
+    "denominator_count": 169
+  },
+  "finding": "Original ambient-raw-phase analytic nonidentity argument alone does not justify restriction to physical quotient. No native source defect found; direct A_T=0 witness and full physical projection/character/Haar measure argument pay the gap in separately owned proof.",
+  "scope": "For each finite even N>=4, every compatible character, bare all-translated-face Aad joint kernel on sl(M) tensor all common adjoint multiplicities is0 almost everywhere in physical quotient measure. Does not exhaust higher irreps, pay originating weight/wholeP0 response, remove cutoff zero regions or transport finite adjoint projector.",
+  "changed_python": [
+    {
+      "path": "adjoint_kernel_review_consumer_20261012.py",
+      "sha256": "4cf691a647e2f2edbb062a750604fefd38342f8670ac100425b50bacf23a8052"
+    },
+    {
+      "path": "adjoint_kernel_review_execute_20261012.py",
+      "sha256": "f341c1c2b95ee930cd310431d43644194cf56d85febb7163e780296865a14f69"
+    }
+  ],
+  "parent_checks": "Final scoped language diagnostics for these two Python files in scientific venv; no producer replay. Parent-only documentation/plan/integrated acceptance.",
+  "midflight_build_lint_tests_formatters_standalone_checker": false,
+  "originals_modified": false,
+  "shared_plan_modified": false,
+  "scientific_admission": false,
+  "campaign_complete": false
+}

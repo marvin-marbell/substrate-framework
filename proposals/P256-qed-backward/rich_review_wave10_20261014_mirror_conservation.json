@@ -1,0 +1,28 @@
+{
+  "kind":"SOURCE_DERIVED_WAVE10_OPERATOR_INTERPRETATION_CORRECTION_NOT_FULL_CLOSURE_AUDIT",
+  "trigger":"Parent asks whether conserved-mirror reduction is ORIGINAL final ColourSea actual2 before paircut or a changed scalar control. Parent explicitly excludes later full-closure numerical audit/replay from Wave10.",
+  "binding":{"model":"rich_colour_sea_20261014_model.py","final_actual2_model_SHA256":"e2577d799272611efb94855be1b0a42b4b9f93c9ae924db9219f5ade9ad80eaa","frozen_author_capsule":"rich_colour_sea_20261014_actual2_capsule.zip","capsule_SHA256":"04146df6c964eb6cba037ad72b1e091661d4f3a0ee24699ac96c12aac049e1fa","reviewer_numeric_capsule":"rich_review_wave10_20261014_sea_capsule.zip","numeric_snapshot_unchanged":true},
+  "source_witness":{"operators":"Lines152-166 build cplusdagger U cminus and cplusdagger Udagger cminus plus direct mixing. Lines197-211 phase them oppositely, then add adjoint. Scalar multiplies the entire transfer; no Y tensor F_i term appears in law.","paircut":"Lines74-93 count positive/negative occupations in ORIGINAL tauz mirror basis. This is not the rotated integral's occupation basis.","C":"Lines245-260 C-complete the same raw path law; preprojection X_f is C-even, so completion does not add a noncommuting mirror vector."},
+  "exact_original_operator_fact":{
+    "Hermitian_colour_loop_kernel":"W_f(A)=g I+(g r/2)[exp(i q_f A)U+exp(-i q_f A)Udagger]. W_f(A)dagger=W_f(A) on colour x quantumloop, without assuming U unitary.",
+    "original_interaction":"H_int=phi SUM_f c_fdagger[taux tensor W_f(A)]c_f. Pure scalar Hphi and colour-loop electric/plaquette terms have no mirror action.",
+    "conserved_generator":"X_f=SUM_spin,colour(cplus_fdagger cminus_f+cminus_fdagger cplus_f)=N_rotated_plus_f-N_rotated_minus_f, with rotated modes (cplus +/- cminus)/sqrt2.",
+    "commutation":"[X_f,H(A)]=[X_f,J(A)]=[X_f,K(A)]=[X_f,G_a]=0 BEFORE tauz pair projection for every external A. Direct scalar and Hermitian colour-loop route share taux; colour/loop noncommutativity does not change this mirror commutation.",
+    "answer":"Conserved rotated-population closure exploits ORIGINAL final actual2 law, NOT a changed no-loop scalar control. Quantum nonAbelian loop/current response can remain within each conserved mirror sector; physical interband-pair creation is not supplied by these terms.",
+    "unused_vector":"Ordered-frame Y tensor F_i matrices are algebra metadata, not coupled Hamiltonian terms in THIS ColourSea model. A genuinely added noncommuting vector would be a different law. GradedMirrorVector etaD already is noncommuting and is NOT reduced or erased by this calibration."
+  },
+  "derived_projection_counterexample":{
+    "state":"Original filled tauz-negative determinant |Omega>, trivial loop singlet, fixed neutral flavour/spin. For one flavour there are six spin-colour mirror pairs. |psi>=X_f|Omega>/sqrt6 is an allowed one-basis-pair gauge/spin singlet.",
+    "algebra":"X_f^2|Omega>=6|Omega>+2 SUM_(i<j among6) pair_i_dagger pair_j_dagger|Omega>. Fifteen orthogonal two-basis-pair determinants each have coefficient2; fermionic bilinears on distinct pairs commute.",
+    "cut_leakage":"For tauz pair_cut1 projector P, P|psi>=|psi> but ||(I-P)X_f|psi>||^2=4*C(6,2)/6=10. Exact CAR derivation, not an executed numerical probe. Thus P does not preserve original X_f integral, even in allowed Gauss/spin/flavour space.",
+    "consequence":"Projection can generate apparent integral-breaking and phi-sign doublet structure absent from a conserved-sector description. No full-law phase or assertion that a particular full-law field tunnel gap must vanish is proved here; the reported cut-model tiny gap cannot establish it."
+  },
+  "claim_corrections":{
+    "withdraw":"Rich physical interband-pair-creation/pair-feedback interpretation of unrotated paircut count fluctuations.",
+    "retain":"Actual projected occupied-CAR source/charge/C amplitudes, selected positive +/-3 energy differences, physical current/contact derivatives, scalar/colour-loop and basis-population responses, normalized inclusive PVM probabilities. The PVM count axis is tauz BASIS occupation, not physical Dirac pair number.",
+    "phi":"Meanphi~0, bimodality and tiny splitting are projected-model data, not full-original-law tunnelling/vacuum-phase proof.",
+    "separate_control":"Previously labelled scalar-only all-pair control is genuinely a DIFFERENT no-loop law. Do not confuse it with exact rotated-population reduction of ORIGINAL colour-loop law.",
+    "scope":"Later full-pair/source-closure numbers and disconnected-block/global-vacuum questions belong to later review. None are imported as Wave10 verified results. No old producer, new full solver or checker rerun performed."
+  },
+  "delivery":"Wave10 synthesis/equations corrected. Original natural-exit numeric capsules and once-scoped diagnostics remain immutable. Calibrated handoff supersedes pre-question handoff meaning; parent retains plan/graph/scientific ownership."
+}

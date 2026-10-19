@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_nonlocal_signal_interval_certificate.py",
+    "--output",
+    "joined_phi_u1_nonlocal_signal_interval_certificate_actual_receipt.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "natural_exit_code": 1,
+  "natural_exit_observed": true,
+  "timed_out": false,
+  "source_unchanged": true,
+  "source_sha256": "82b0c0b5930d1600c3fa9c732c31adeae426d515ee6d26fbe9e5daed37c3ac36",
+  "driver_sha256": "84a20daaef7c512319ea984f2c9513477232c28d64b99bceeb77a2ca172757af",
+  "receipt_path": "joined_phi_u1_nonlocal_signal_interval_certificate_actual_receipt.json",
+  "receipt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_nonlocal_signal_interval_certificate.py\", line 354, in <module>\n    receipt = run(args.output)\n              ^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_nonlocal_signal_interval_certificate.py\", line 316, in run\n    z.writestr('actual_full_Q_AP_Coulomb_geometry.json',json.dumps(dict(\n                                                        ^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/__init__.py\", line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 200, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\nValueError: Circular reference detected\n",
+  "elapsed_seconds": 15.502703312995436,
+  "runtime_archive": {
+    "path": "joined_phi_u1_nonlocal_signal_interval_certificate_verified_natural_exit_capsule_runtime_bytes.zip",
+    "sha256": "b57274b73bb25fcdfa106e020cc9aa99df74ee37031071aa0e911d448d4bb601"
+  },
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  }
+}

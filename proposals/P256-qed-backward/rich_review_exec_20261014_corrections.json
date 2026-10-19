@@ -1,0 +1,49 @@
+{
+  "kind": "source_bound_physical_findings_for_native_author_relay",
+  "governing_plan": "issue222-rich-backward-candidates-20261014",
+  "parent_sole_plan_writer": true,
+  "findings": [
+    {
+      "owner": "LunaElectron/native charged Hubbard author; parent relay",
+      "source": "rich_electron_20261014_hubbard_charged.py",
+      "source_sha256": "e1ab7d01ec17ddb1fb809565ef85fd1b5fa3ea40901813571089f76ef46f4c36",
+      "location": "lines118,120,131; synthesis peer_api.response",
+      "trigger": "Consumer constructs the advertised retarded G from delivered removal energies.",
+      "actual": "Delivered removal omega is E2-E1 (negative here), but advertised denominator is z+(E2-E1), placing the removal pole at its opposite sign.",
+      "smallest_remedy": "Use G(z)=sum_add w/(z-(E3-E2))+sum_rem w/(z-(E2-E1)); or label positive removal cost E1-E2 and use z+cost. Keep the stored negative pole convention explicit. At chemical potential mu every pole shifts by -mu; canonical charge gap is mu_plus-mu_minus, not the addition threshold alone.",
+      "valid_scope": "This is an interface formula correction, not evidence that the computed coupled eigenenergies or dressing shift vanish. Finite canonical candidate remains useful."
+    },
+    {
+      "owner": "LunaElectron/native charged Hubbard author; parent relay",
+      "source": "rich_electron_20261014_hubbard_charged.py",
+      "source_sha256": "e1ab7d01ec17ddb1fb809565ef85fd1b5fa3ea40901813571089f76ef46f4c36",
+      "location": "lines68,76-77,100-112",
+      "trigger": "Treat constant Fourier CAR source as a smooth observable on the compact flux bundle with the declared large-gauge twisted boundary.",
+      "actual": "The Hamiltonian twist V_N is imposed, but constant cdag_j does not satisfy O(Q+2pi)=V_(N+1) O(Q) V_N^dagger except at anchor site0. Fourier sums therefore require a gauge patch/reference dressing; finite-grid matrix elements are well-defined but not a patch-independent compact charged propagator.",
+      "smallest_remedy": "State the gauge-fixed finite-grid source explicitly, or use anchored O_j(Q)=exp(i j Q/4) cdag_j with its adjoint removal source, recomputing residues. This compensates large-gauge patching without changing the finite coupled Hamiltonian. A subsequent full Gauss join still needs physical charged boundary flux/reference charge.",
+      "valid_scope": "Finite grid/fixed gauge spectra are not erased. Reviewer consumer will calculate both actual original and anchored source responses to show the choice-changing size."
+    },
+    {
+      "owner": "LunaElectron/native charged Hubbard author; parent relay",
+      "source": "rich_electron_20261014_hubbard_charged.py",
+      "source_sha256": "e1ab7d01ec17ddb1fb809565ef85fd1b5fa3ea40901813571089f76ef46f4c36",
+      "location": "lines120,133",
+      "trigger": "Use spin_degeneracy_gap_max=0 as evidence of spin-resolved charged propagation.",
+      "actual": "Each spin row reuses the same sector-wide ea[0]-e0 irrespective of spin/source, so the comparison is identically zero by construction.",
+      "smallest_remedy": "Compare spectral weights grouped over degenerate poles for up/down sources, and evaluate total S2 on source-active charged states or the charged source itself. Keep primitive CAR spin assumption distinct from deriving physical rotation.",
+      "valid_scope": "Underlying spin-independent Hubbard H really has SU2; this finding limits the claimed diagnostic, not that symmetry."
+    },
+    {
+      "owner": "LunaElectron/native charged Hubbard author; parent relay; constructive successor RichInteraction",
+      "source": "rich_electron_20261014_hubbard_charged.py",
+      "source_sha256": "e1ab7d01ec17ddb1fb809565ef85fd1b5fa3ea40901813571089f76ef46f4c36",
+      "location": "lines81-85,114-119",
+      "trigger": "Use raw complex eigsh eigenvector columns as an orthonormal complete or partial spectral frame in degenerate spin/charge multiplets.",
+      "actual": "Reviewer first physical CLI independently observed captured removal weight .555631796897167 larger than exact source norm .5177382931865069; anchored captured1.1073486192006314 exceeds norm .8692764666988355. Natural exit0 and nonnegative individual weights did not prevent double-counting degenerate subspace directions.",
+      "smallest_remedy": "Orthonormalize inside each degenerate energy block before residues, retaining distinct energies; or solve complete finite Hermitian eigenframes with scipy.linalg.eigh. Compute projector-residue sum against exact source Gram matrix. Do not QR across physically different energies.",
+      "executed_constructive_repair": "NEW reviewer complete finite eigh calculation in rich_review_exec_20261014_orthogonal.py retained all256/896/1792 sector states, achieved complete residue-source discrepancy<=8.682e-16 and full CAR spin-matrix error<=1.494e-15, with unchanged addition .245811807972486 and canonical gap1.600126189191866.",
+      "valid_scope": "Raw old weights and first-review charged G are superseded; thresholds and finite dynamical dressing remain useful. Active successor uses full orthonormal dense sectors, so this is not an unresolved blocker for that separate law."
+    }
+  ],
+  "join_decision": "Use compact CoupledMolecule neutral H/current/contact/flux response directly; do not splice its neutral state with the separate charged one-global-flux source or photon Gaussian cubic D. Add boundary-compensated N±1 sectors on the same link topology and recompute G,D/current for the next actual join."
+}

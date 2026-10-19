@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_ground_photon_collective_graph.py",
+    "--output",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_ground_photon_collective_actual_20261010.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "returncode": 1,
+  "natural_exit": true,
+  "elapsed_seconds": 6.661082013000851,
+  "stdout": "",
+  "stderr": "/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_ground_photon_collective_graph.py:51: ComplexWarning: Casting complex values to real discards the imaginary part\n  return [[tuple(sum(F(float(path['coefficients'][m])) * F(float(part(frame[m,i,j]))) for m in range(4)) * int(path['seam']) for part in (np.real, np.imag)) for j in range(4)] for i in range(4)]\nTraceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_ground_photon_collective_graph.py\", line 176, in <module>\n    with threadpool_limits(limits=1):receipt=run(args.output)\n                                             ^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/joined_phi_u1_ground_photon_collective_graph.py\", line 170, in run\n    output.write_text(json.dumps(result,indent=2))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/__init__.py\", line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 202, in encode\n    chunks = list(chunks)\n             ^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 432, in _iterencode\n    yield from _iterencode_dict(o, _current_indent_level)\n  File \"/usr/lib/python3.12/json/encoder.py\", line 406, in _iterencode_dict\n    yield from chunks\n  File \"/usr/lib/python3.12/json/encoder.py\", line 406, in _iterencode_dict\n    yield from chunks\n  File \"/usr/lib/python3.12/json/encoder.py\", line 439, in _iterencode\n    o = _default(o)\n        ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type int64 is not JSON serializable\n",
+  "source_sha256": "223db2d870297887042d61ccd094376fdd9ec617a1dbb5249467cc6257720c9c",
+  "preexecution_archive": "joined_phi_u1_ground_photon_collective_preexecution_epoch_20261010.zip",
+  "preexecution_archive_sha256": "b5cd83ae7e08c21e9eaf944ce517a6268c635208d354e990d91c22dbf022203b"
+}

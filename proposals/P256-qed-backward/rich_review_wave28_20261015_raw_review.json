@@ -1,0 +1,45 @@
+{
+  "kind": "BOUNDED_INDEPENDENT_SOURCE_AND_ARTIFACT_REVIEW_NOT_PRODUCER_REPLAY",
+  "law": "open-gauss-cube-qlink3-I16-t1-U4-20261015",
+  "binding": {
+    "model_SHA256": "621fd5b76f9caa06accd9f99c5504c42e2ea50aac7471618c8038029f28eb214",
+    "reference_SHA256": "53a7a4f73fc41692b3f933993cfa2f586c83793c5d39af20a3371b2f6d01f4bd",
+    "neutral_basis_SHA256": "a42641b65502c9c82de94f58aa70490925d828cac873604f769092600cb7a599",
+    "model_capsule": "df3c2bbaaffc3288adcf3e7f12f84ea7375f8c370939a2dd7a7473ab67dca869",
+    "field_capsule": "a65c7f18a48cb3d5d7db38e0a28202c2c32486b02f72f29b2784ad49f9fc8498"
+  },
+  "inspection": [
+    {
+      "source": "rich_open_gauss_carrier_20261015_model.py:24-95",
+      "finding": "Complete sorted Fock/chord enumeration with tree Gauss solve and all physical link capacity |E|<=1. Charge blocks N7/8/9 use real outward edge E_boundary=8-N. H=sum13 E²/32+2sum8(n-1)²+sum12(T+T†), T=-c_b† U c_a. Finite shared input, not continuum or physical spin."
+    },
+    {
+      "source": "rich_photon_fullq_20261014_model.py:44-72",
+      "finding": "Actual edge orientation is increasing coordinate; incidence +tail,-head. Thus incidence E+rho=0 with rho=n-1=-Qphysical; dotE=J=-i(T-T†), dotrho=-incidence J, and conventional physical charge current is jQ=-J. F=E/16 and electric power={E,J}/32."
+    },
+    {
+      "source": "rich_open_gauss_carrier_20261015_model.py:117-158",
+      "finding": "Wilson CAR source rectangular and raw. Creation raises internal path E and lowers outward boundary; literal CAR parity. Finite ladders are not unitary/canonical. Newly prepared charged states must normalize their actual source strength and use their own t0; preexisting offsite correlations are allowed."
+    },
+    {
+      "source": "rich_open_gauss_carrier_20261015_charged.py:47-80",
+      "finding": "Addition uses positive-frequency exp[-i(H9-E0)t]; removal uses conjugated negative-frequency transposed spatial component. Own-t0 charge changes and same-state QR cut defeat are valid. Its controls call full model.measure; endpoint current and J labels are FULL-H diagnostic probes, not effective cut/off motion. Energy labels explicitly warn only energy/right-owned-energy, leaving current interpretation underqualified. Do not consume these raw control currents as own-H evidence.",
+      "severity": "scoped semantic qualification; no ancestor modification",
+      "smallest_correction": "At any consumer measurement boundary derive active-edge J/contact/power from actual control H; qualify archived carrier control endpoint current fields as full-H diagnostics."
+    },
+    {
+      "source": "rich_gauss_photon_phase_20261015_control_correction_result.json:792-814",
+      "finding": "Effective final corrected field controls mask absent-edge primitive currents, J² and electric/owned power. OFF and cut own flux-motion and I16 power residuals reported exactly zero. OFF delta ER=-8.326672684e-16; cut delta ER=-9.679756996e-16. These are the authoritative corrected projections; no raw control current used here."
+    },
+    {
+      "source": "rich_gauss_photon_phase_20261015_synthesis.json",
+      "finding": "Reported neutral collective and charged work bind identical I16 model/ref bytes. Full joint-H retarded response is reducible, not an irreducible Dyson input. C-even D zero transition is not zero pair content. Gapped finite collective and localized unitary transfer do not imply photons."
+    },
+    {
+      "source": "rich_open_gauss_carrier_20261015_charged_exit.json; rich_gauss_photon_phase_20261015_actual_exit.json",
+      "finding": "Observed stored receipts report code0/natural exit with source+input hashes. Field original consumer hash differs from current corrected consumer by documented active-edge correction; no identity of current source with original run is claimed. Stored producer exits are ancestor evidence, not my independent rerun."
+    }
+  ],
+  "independent_experiment_boundary": "Only frozen model/geometry/CAR imports and declared neutral reference input. No charged_states, spectral_states, actual_states or evolved producer arrays read. No producer or producer checker entrypoint executed. New source, pulse, correlations, controls and resolution are owned Wave28 runtime work. Cut neutral reference is propagated on both sides with its own H, never full-H eigenphase.",
+  "exclusions": ["physical-frame Noether spin", "on-shell scattering", "event probability", "Compton amplitude", "photons", "Nature", "global ground proof", "all-profile catalogue"]
+}

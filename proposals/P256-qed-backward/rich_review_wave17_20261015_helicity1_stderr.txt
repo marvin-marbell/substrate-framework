@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave17_20261015_helicity.py", line 302, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave17_20261015_helicity.py", line 291, in main
+    independently_measured_author_final_states=cached_checks,beforecut_initial_current_calibration=calibration,nonstationary_two_time_response=responses,whole_H_bounded_source_stage=neutral_raw_stage(model),
+                                                                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave17_20261015_helicity.py", line 237, in neutral_raw_stage
+    local_skew.append(max(float(np.linalg.norm(op-op.conj().T)) for op in block['operators'][6]))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave17_20261015_helicity.py", line 237, in <genexpr>
+    local_skew.append(max(float(np.linalg.norm(op-op.conj().T)) for op in block['operators'][6]))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'csr_matrix'

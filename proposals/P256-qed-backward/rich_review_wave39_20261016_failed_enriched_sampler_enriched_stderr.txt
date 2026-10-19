@@ -1,0 +1,63 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave39_20261016_enriched.py", line 49, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave39_20261016_enriched.py", line 17, in main
+    u,d,E,acc,prop=pair.sample(seed,192,14000,160,F,F2,G)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/dispatcher.py", line 441, in _compile_for_args
+    raise e
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/dispatcher.py", line 374, in _compile_for_args
+    return_val = self.compile(tuple(argtypes))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/dispatcher.py", line 919, in compile
+    cres = self._compiler.compile(args, return_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/dispatcher.py", line 80, in compile
+    status, retval = self._compile_cached(args, return_type)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/dispatcher.py", line 94, in _compile_cached
+    retval = self._compile_core(args, return_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/dispatcher.py", line 107, in _compile_core
+    cres = compiler.compile_extra(self.targetdescr.typing_context,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/compiler.py", line 739, in compile_extra
+    return pipeline.compile_extra(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/compiler.py", line 439, in compile_extra
+    return self._compile_bytecode()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/compiler.py", line 505, in _compile_bytecode
+    return self._compile_core()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/compiler.py", line 481, in _compile_core
+    raise e
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/compiler.py", line 473, in _compile_core
+    pm.run(self.state)
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/compiler_machinery.py", line 363, in run
+    raise e
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/compiler_machinery.py", line 356, in run
+    self._runPass(idx, pass_inst, state)
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/compiler_lock.py", line 35, in _acquire_compile_lock
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/compiler_machinery.py", line 311, in _runPass
+    mutated |= check(pss.run_pass, internal_state)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/compiler_machinery.py", line 272, in check
+    mangled = func(compiler_state)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/untyped_passes.py", line 311, in run_pass
+    if guard(self._do_work, state, work_list, block, i,
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/ir_utils.py", line 1466, in guard
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/untyped_passes.py", line 353, in _do_work
+    val = resolve_func_from_module(state.func_ir, to_inline)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/numba/core/ir_utils.py", line 2120, in resolve_func_from_module
+    if not defn:
+           ^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

@@ -1,0 +1,42 @@
+{
+  "input_descriptor": {
+    "mean_sha256": "30a4182e252463319caea5235176a0e5e87018a740ca0a95d76f1487796b4d78",
+    "N": 2,
+    "actual_a": "1/64",
+    "Cart_basis": "TrCartCart/4=I",
+    "colour_generator": "T=Cart/sqrt8,TrTT=I/2",
+    "actual_colour_cometric": "3/5 (chi factored)",
+    "joint_control_radius": ".0004",
+    "actual_dimensions": {
+      "Cart": 480,
+      "colour": 360,
+      "local_gauge": 120,
+      "normal_body": 720
+    },
+    "probe_sha256": "08ea342b7383685e0fb23630a14e4158e38f38105d89472fa2562eff35819731",
+    "scope": "ActualfiniteNative geometry atmeanmidpointCONTROL, genericall45normal+noncommutingallSU4links; notactualmacroC222 evaluation or a replacementpreparedpacket."
+  },
+  "input_sha256": "d3f844558ecb6ba47755219317dd2d588d691e1aa3155078913b43537bbcf4f9",
+  "actual_body_principal_cometric_eigenvalues": [
+    0.6000000000000774,
+    233.77218583170165
+  ],
+  "declared_conservative_M": 16388.0,
+  "actual_affine_charge_cross_operator_norm": 67.3110167401566,
+  "actual_charge_square_operator_norm": 19.435560325252215,
+  "connected_central_seam_geometry_error": 4.336808689942018e-19,
+  "body_Haar_Jacobian": 0.9999999867169131,
+  "body_Haar_Jacobian_zero_twist": 0.9999999867169131,
+  "actual_FP_coarea_identity_max_error": 2.4352197233561135e-21,
+  "wrong_halved_colour_cometric_operator_defect": 0.3000000000896395,
+  "source_total_CAR_particle_number": 1044,
+  "source_total_number_mod4": 0,
+  "wrong_local_Z4_overdivision_factor": 16384,
+  "actual_geometry_proof": "Jphi=[N0,Orbit(Phi)] andlinkleftvel=dexpXi xidot+(eps_x\u2212AdU eps_y). Inverseactualfulljointmap givesbodyprincipal B=Jbody^-1 diag(Icart,3/5Icolour)Jbody^-T; gauge momentumsector isfiniteCARq. Formula usedactualgroupFrechetderivative/Tbasis, NOTflatlinks. Coareaabsdet[N0,O(Phi)]=det(O(C)^TO(Phi))/sqrtdetR0 checked. HaarjacdetdexpXi checked. zcentralseamscancelAdandleftMaurer; sourcephysicalmattertwistsstillremainAP. ConnectedresidualstabilizeronlydiagonalZ4, not4^V; sourceNtotalmod40. Principalrealellipticity>=3/5 follows||Cartmomentum||>=||normalp|| anddexpunitaryadjointaveragecontractive, hence||linkmomentum||>=||xip||. ControldoesnotestablishglobalcomplexchartM1/zerothscalar/affinebounds: thoseanalyticproofsremainseparateparentreview.",
+  "source_snapshot_utf8": "from pathlib import Path\nimport hashlib,json,sys,time\nROOT=Path('/home/administrator/substrate-222/proposals/P256-qed-backward');sys.path.insert(0,str(ROOT));SELF=Path(__file__).read_bytes()\nimport numpy as np\nfrom scipy.linalg import expm,expm_frechet,block_diag\nfrom induced_phi_em_macro_preparation import build_native\nfrom induced_phi_ir_c_full_action import T,coordinates,matrices,orbit\nstarted=time.monotonic();raw=(ROOT/'induced_phi_ir_mean_certificate_normal_transfer_final_receipt.json').read_bytes();mean=json.loads(raw);native=build_native(mean,2);V=native['V'];E=3*V;C=native['frame'];O=orbit(C);u,_,_=np.linalg.svd(O,full_matrices=True);N0=u[:,15:];R=O.T@O\njoint=np.sin(np.arange(90*V)+.3)+.37*np.cos(1.3*np.arange(90*V));joint*=.0004/np.linalg.norm(joint);Y=joint[:45*V].reshape(V,45);Xi=joint[45*V:].reshape(E,15);phi=[C+matrices((N0@v).reshape(4,15)) for v in Y]\nFy=[];Fg=[];det_errors=[]\nfor P in phi:\n op=orbit(P);A=np.hstack((N0,op));inv=np.linalg.inv(A);Fy.append(inv[:45]);Fg.append(inv[45:]);FP=O.T@op\n det_errors.append(abs(abs(np.linalg.det(A))-np.linalg.det(FP)/np.sqrt(np.linalg.det(R))))\nFy=block_diag(*Fy);Fg=block_diag(*Fg)\ndef actual_geometry(twist,colour_cometric):\n G=[];D=np.zeros((15*E,15*V));jac=[];uniterr=0.\n for edge in range(E):\n  x=edge//3;axis=edge%3;site=native['sites'][x].copy();targetsite=site.copy();targetsite[axis]=(site[axis]+1)%2;target=int(np.ravel_multi_index(tuple(targetsite),(2,2,2)))\n  z=np.exp(1j*np.pi*twist[axis]/2) if site[axis]==1 else 1.+0j\n  A=1j*np.einsum('a,aij->ij',Xi[edge],T);U=z*expm(A);basis=[]\n  for ta in T:\n   derivative=z*expm_frechet(A,1j*ta,compute_expm=False);left=-1j*derivative@U.conj().T;basis.append(2*np.einsum('aij,ji->a',T,left).real)\n  J=np.array(basis).T;G.append(np.linalg.inv(J));jac.append(np.linalg.det(J));adj=2*np.einsum('aij,bji->ab',T,np.einsum('ij,bjk,kl->bil',U,T,U.conj().T)).real\n  D[15*edge:15*(edge+1),15*x:15*(x+1)]+=np.eye(15);D[15*edge:15*(edge+1),15*target:15*(target+1)]-=adj\n  uniterr=max(uniterr,float(np.linalg.norm(U.conj().T@U-np.eye(4))))\n G=block_diag(*G);Xp=-G@D@Fg;Bp=np.vstack((Fy,Xp));Bl=np.vstack((np.zeros((45*V,15*E)),G));cov=Bp@Bp.T+colour_cometric*(Bl@Bl.T);charge_cross=Bp@Fg.T;charge_square=Fg@Fg.T\n return cov,charge_cross,charge_square,np.prod(jac),uniterr\nactual,cross,q2,haar,ue=actual_geometry((2,2,2),.6);zero,_,_,haar0,_=actual_geometry((0,0,0),.6);wrong,_,_,_,_=actual_geometry((2,2,2),.3)\nev=np.linalg.eigvalsh(actual);geometry_z_error=float(np.max(abs(actual-zero)));wrong_defect=float(np.linalg.norm(actual-wrong,2));M=4+512/(1/32)\nif ev[0]<.6-1e-10 or ev[-1]>M or geometry_z_error>1e-10 or max(det_errors)>1e-10 or wrong_defect<.2999999 or ue>1e-10:raise ArithmeticError('Actual jointCart/SU4 geometry control failed')\ndesc=dict(mean_sha256=hashlib.sha256(raw).hexdigest(),N=2,actual_a='1/64',Cart_basis='TrCartCart/4=I',colour_generator='T=Cart/sqrt8,TrTT=I/2',actual_colour_cometric='3/5 (chi factored)',joint_control_radius='.0004',actual_dimensions=dict(Cart=60*V,colour=45*V,local_gauge=15*V,normal_body=90*V),probe_sha256=hashlib.sha256(SELF).hexdigest(),scope='ActualfiniteNative geometry atmeanmidpointCONTROL, genericall45normal+noncommutingallSU4links; notactualmacroC222 evaluation or a replacementpreparedpacket.')\nreport=dict(input_descriptor=desc,input_sha256=hashlib.sha256(json.dumps(desc,sort_keys=True).encode()).hexdigest(),actual_body_principal_cometric_eigenvalues=[float(ev[0]),float(ev[-1])],declared_conservative_M=M,actual_affine_charge_cross_operator_norm=float(np.linalg.norm(cross,2)),actual_charge_square_operator_norm=float(np.linalg.norm(q2,2)),connected_central_seam_geometry_error=geometry_z_error,body_Haar_Jacobian=haar,body_Haar_Jacobian_zero_twist=haar0,actual_FP_coarea_identity_max_error=max(det_errors),wrong_halved_colour_cometric_operator_defect=wrong_defect,source_total_CAR_particle_number=130*V+4,source_total_number_mod4=(130*V+4)%4,wrong_local_Z4_overdivision_factor=4**(V-1),actual_geometry_proof='Jphi=[N0,Orbit(Phi)] andlinkleftvel=dexpXi xidot+(eps_x\u2212AdU eps_y). Inverseactualfulljointmap givesbodyprincipal B=Jbody^-1 diag(Icart,3/5Icolour)Jbody^-T; gauge momentumsector isfiniteCARq. Formula usedactualgroupFrechetderivative/Tbasis, NOTflatlinks. Coareaabsdet[N0,O(Phi)]=det(O(C)^TO(Phi))/sqrtdetR0 checked. HaarjacdetdexpXi checked. zcentralseamscancelAdandleftMaurer; sourcephysicalmattertwistsstillremainAP. ConnectedresidualstabilizeronlydiagonalZ4, not4^V; sourceNtotalmod40. Principalrealellipticity>=3/5 follows||Cartmomentum||>=||normalp|| anddexpunitaryadjointaveragecontractive, hence||linkmomentum||>=||xip||. ControldoesnotestablishglobalcomplexchartM1/zerothscalar/affinebounds: thoseanalyticproofsremainseparateparentreview.',source_snapshot_utf8=SELF.decode(),runtime=dict(executable=sys.executable,python=sys.version),elapsed_seconds=time.monotonic()-started)\npath=ROOT/'induced_phi_em_ygraph_joint_geometry_control_actual_receipt.json';path.write_text(json.dumps(report,indent=2)+'\\n');print(json.dumps({k:report[k] for k in ('input_sha256','actual_body_principal_cometric_eigenvalues','actual_affine_charge_cross_operator_norm','actual_charge_square_operator_norm','connected_central_seam_geometry_error','actual_FP_coarea_identity_max_error','wrong_halved_colour_cometric_operator_defect')},indent=2))\n",
+  "runtime": {
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "elapsed_seconds": 9.581797963939607
+}

@@ -1,0 +1,24 @@
+{
+  "N": 6,
+  "a": 0.015625,
+  "eta": 0.2,
+  "variance": 1.0,
+  "literal_full_Href": {
+    "energy": -562521.2674814091,
+    "primitive_electric": 6928.0,
+    "full_real_Gauss_Coulomb": 2464.775047323653,
+    "onsite": -539510.3235184804,
+    "Peierls": -32403.7190102524
+  },
+  "compiled_spectral_Href": -562521.2674814047,
+  "spectral_error": 4.423782229423523e-09,
+  "full_Coulomb_per_V": 11.410995589461356,
+  "projector_chord_Coulomb_per_V_upper": 43.01112371994299,
+  "one_two_link_Gaussian_factors": [
+    0.7159786447233942,
+    0.452123863620253
+  ],
+  "missing_Coulomb_energy_defect": 2464.775047323653,
+  "source_sha256": "a9ec60a853e4ddc27c7009065815444a6104e83e42c765005b7ef9dd89e5f603",
+  "probe_source_bytes_utf8": "import os\nos.environ['OPENBLAS_NUM_THREADS']='1'\nimport sys\nsys.path.insert(0,'/home/administrator/substrate-222/proposals/P256-qed-backward')\nimport hashlib\nimport json\nfrom pathlib import Path\nimport numpy as np\nfrom induced_phi_em_macro_preparation import scalars\nfrom induced_phi_em_gaussian_variational import build_native\nfrom induced_phi_em_sw_preparation import seed_energy\nroot=Path('/home/administrator/substrate-222/proposals/P256-qed-backward')\nmean=json.loads((root/'induced_phi_ir_mean_certificate_normal_transfer_final_receipt.json').read_bytes())\nnative=build_native(mean,6);eta=.2;s=1.;profiles=[];coefs=[]\nfor profile in native['Pprofiles']:\n    onsite=np.kron(np.eye(native['V']),profile['onsite']);h=onsite+eta*(profile['hcentre']-onsite)\n    w,U=np.linalg.eigh(h);O=U[:,:2*native['V']]\n    profiles.append(dict(O=O,load=profile['load'],native=profile));coefs.append(scalars(profile))\nmodel=dict(native=native,profiles=profiles);literal=seed_energy(model,s)\nangles=2*np.pi*(native['sites']+.5)/native['N'];g0=native['g0'];gs=native['gs'];components=np.zeros(3);Cupper=0.\nfor c in coefs:\n    pieces=[np.full(len(angles),float(c['onsite']))];sp={}\n    for l in (1,2):\n        pieces.append(2*float(c['path'][l][0])*np.cos(l*angles).sum(axis=1));sp[l]=-2*float(c['path'][l][1])*np.sin(l*angles)\n    x=pieces[0]+eta*(pieces[1]+pieces[2]);y=eta*(sp[1]+sp[2]);R=np.sqrt(g0*x*x+gs*(y*y).sum(axis=1))\n    components[0]+=-2*c['load']*np.mean(g0*x*pieces[0]/R)\n    for l in (1,2):components[l]+=-2*c['load']*np.mean((g0*x*pieces[l]+gs*(y*sp[l]).sum(axis=1))/R)\n    mmin=np.sqrt(g0)*(float(c['onsite'])-6*eta*sum(abs(float(c['path'][l][0])) for l in (1,2)))\n    A=sum(l*l*(g0*float(c['path'][l][0])**2+gs*float(c['path'][l][1])**2) for l in (1,2))\n    Cupper+=native['UE']/native['a']*c['load']*eta*eta*A/(mmin*mmin)\nfactors=[]\nfor length in (1,2):\n    path=next(p for p in native['Pprofiles'][0]['paths'] if p['length']==length)\n    ell=np.zeros(3*native['V'])\n    for e in path['edges']:ell[e]+=1\n    factors.append(float(np.exp(-s*(ell@native['PT']@ell)/2)))\ncompiled=native['V']*(components[0]+factors[0]*components[1]+factors[1]*components[2])+literal['full_real_Gauss_Coulomb']+literal['primitive_electric']\nrecord=dict(N=6,a=native['a'],eta=eta,variance=s,literal_full_Href=literal,compiled_spectral_Href=float(compiled),spectral_error=float(abs(compiled-literal['energy'])),\n    full_Coulomb_per_V=literal['full_real_Gauss_Coulomb']/native['V'],projector_chord_Coulomb_per_V_upper=float(Cupper),\n    one_two_link_Gaussian_factors=factors,missing_Coulomb_energy_defect=literal['full_real_Gauss_Coulomb'],\n    source_sha256=hashlib.sha256((root/'induced_phi_em_macro_preparation.py').read_bytes()).hexdigest(),probe_source_bytes_utf8=Path(__file__).read_text())\nif record['spectral_error']>1e-7 or record['full_Coulomb_per_V']>record['projector_chord_Coulomb_per_V_upper']:raise ArithmeticError(record)\n(root/'induced_phi_em_macro_preparation_native_control_actual_receipt.json').write_text(json.dumps(record,indent=2)+'\\n')\nprint(json.dumps({key:value for key,value in record.items() if key!='probe_source_bytes_utf8'},indent=2))\n"
+}

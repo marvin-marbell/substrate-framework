@@ -1,0 +1,38 @@
+{
+  "kind": "EXPLICIT_REVIEW_FINDING_WITHDRAWAL_NO_TARGET_CHANGE_NO_SCIENTIFIC_RERUN",
+  "reviewer": "PhysicalLiftGaussProofReview",
+  "original_formal": "lift_gauss_review_formal_20261011.json",
+  "original_formal_sha256": "e59366fa1da7d40be41624637a0ef7ba49cdb402ca9614ec1448f2749afa6206",
+  "withdrawn_finding": "F1",
+  "status": "DISPROVEN_WITHDRAWN",
+  "cause": "Reviewer zero-based list-index interpretation error, identified by parent Main.",
+  "exact_pinned_evidence": {
+    "source": "physical_ground_lift_source_20261011.py",
+    "source_sha256": "31b1c270bf341f75f2364580cd6f646f1d66fda54d93e9b3b227b6ab3985763e",
+    "line287": "rho_mom=[float(np.sum(rho**k*trial.g**2)) for k in [1,2,4]]",
+    "line342": "min(wrong_role,colour_second,rho_mom[1],frozen_wrong)<=0",
+    "receipt": "physical_ground_lift_actual3_20261011_receipt.json",
+    "receipt_sha256": "f1b88bd99a958e7c63d9e3b8deace96a8e453bfaca88123f4480aa3b72758326",
+    "g_rho_moments_1_2_4": [
+      2.9438257387326416e-15,
+      0.6418761341147794,
+      1.3428094749717068
+    ]
+  },
+  "corrected_interpretation": "rho_mom[0] is mean rho; rho_mom[1] is the second moment rho\u00b2=.6418761341147794. The current source correctly gates a nonzero second-moment/Pi witness, not the sign of a near-zero mean.",
+  "invalidated_claims": [
+    "Original F1 invalid premise/trigger/consequence and proposed correction",
+    "Original verdict.nonblocking_findings containing F1",
+    "Original terminal handoff finding recommending change to source gate"
+  ],
+  "smallest_correction": "Correct review text only. No source change or new CLI/scientific execution is warranted.",
+  "unchanged_evidence": [
+    "All original formal/control artifacts preserved byte-for-byte",
+    "Independent native70/frame/Gauss/fullE controls and all-n exact algebra retain their observed outcomes",
+    "Same-h/density centre binding and new parent native component integration remain supported",
+    "Conditional full120 source/Gauss/isometry verdict remains; complete-action/domain cap is still separate-owner scope"
+  ],
+  "target_edits": false,
+  "scientific_reruns": false,
+  "no_active_source_Gauss_findings_after_withdrawal": true
+}

@@ -1,0 +1,115 @@
+{
+  "rows": [
+    {
+      "cutoff": 16,
+      "actual_filter_norm_squared": 0.8922882628103112,
+      "exact_norm_squared": 0.892288262810312,
+      "actual_filtered_Theta_variance": 2.5119999999997296,
+      "exact_filtered_variance": 2.512,
+      "variance_error": 2.7045032879868813e-13,
+      "energy": 6.369426751593103,
+      "exact_energy": 6.369426751592357,
+      "energy_variance": 81.13919428718577,
+      "exact_energy_variance": 81.13919428780072,
+      "responses": [
+        {
+          "t": 0.001,
+          "actual_retarded_Theta_commutator": -0.12799999999990308,
+          "exact_free_response": -0.128,
+          "error": 9.692247004977617e-14
+        },
+        {
+          "t": 0.004,
+          "actual_retarded_Theta_commutator": -0.5119999999992012,
+          "exact_free_response": -0.512,
+          "error": 7.988054662178001e-13
+        },
+        {
+          "t": 0.016,
+          "actual_retarded_Theta_commutator": -2.047999992021942,
+          "exact_free_response": -2.048,
+          "error": 7.978058214064276e-09
+        }
+      ],
+      "wrong_doubled_filter_clock_variance": 3.0239999978880903,
+      "wrong_variance_defect": 0.5119999978880903
+    },
+    {
+      "cutoff": 32,
+      "actual_filter_norm_squared": 0.8922882628103121,
+      "exact_norm_squared": 0.892288262810312,
+      "actual_filtered_Theta_variance": 2.512,
+      "exact_filtered_variance": 2.512,
+      "variance_error": 0.0,
+      "energy": 6.369426751592354,
+      "exact_energy": 6.369426751592357,
+      "energy_variance": 81.13919428780068,
+      "exact_energy_variance": 81.13919428780072,
+      "responses": [
+        {
+          "t": 0.001,
+          "actual_retarded_Theta_commutator": -0.12800000000000003,
+          "exact_free_response": -0.128,
+          "error": 2.7755575615628914e-17
+        },
+        {
+          "t": 0.004,
+          "actual_retarded_Theta_commutator": -0.5120000000000002,
+          "exact_free_response": -0.512,
+          "error": 2.220446049250313e-16
+        },
+        {
+          "t": 0.016,
+          "actual_retarded_Theta_commutator": -2.0479999999999996,
+          "exact_free_response": -2.048,
+          "error": 4.440892098500626e-16
+        }
+      ],
+      "wrong_doubled_filter_clock_variance": 3.024000000000001,
+      "wrong_variance_defect": 0.5120000000000009
+    },
+    {
+      "cutoff": 48,
+      "actual_filter_norm_squared": 0.8922882628103124,
+      "exact_norm_squared": 0.892288262810312,
+      "actual_filtered_Theta_variance": 2.512000000000001,
+      "exact_filtered_variance": 2.512,
+      "variance_error": 8.881784197001252e-16,
+      "energy": 6.369426751592356,
+      "exact_energy": 6.369426751592357,
+      "energy_variance": 81.13919428780069,
+      "exact_energy_variance": 81.13919428780072,
+      "responses": [
+        {
+          "t": 0.001,
+          "actual_retarded_Theta_commutator": -0.12800000000000009,
+          "exact_free_response": -0.128,
+          "error": 8.326672684688674e-17
+        },
+        {
+          "t": 0.004,
+          "actual_retarded_Theta_commutator": -0.5120000000000003,
+          "exact_free_response": -0.512,
+          "error": 3.3306690738754696e-16
+        },
+        {
+          "t": 0.016,
+          "actual_retarded_Theta_commutator": -2.0480000000000014,
+          "exact_free_response": -2.048,
+          "error": 1.3322676295501878e-15
+        }
+      ],
+      "wrong_doubled_filter_clock_variance": 3.024,
+      "wrong_variance_defect": 0.512
+    }
+  ],
+  "beta": 0.016,
+  "S": 2.0,
+  "u": 64.0,
+  "proof": "Purepsi_beta=exp(-beta uPi\u00b2/2)g_S/||...|| hasvarianceS_beta=S+beta*u/2, NOT S+beta*u. Gaussianboundaryweights exp[-(||thetaL||\u00b2+||thetaR||\u00b2)/(4S)] withtotalheatlengthbeta matchcentrevarianceS anddeltaVariance4Sbeta*u/(2S+beta*u); midpointBrownianbridgevariancebeta*u/2 yieldssameS_beta. NormZ=(1+beta*u/(2S))^-M/2 forM independentcoordinates. ActualHermiteGalerkin usescompressionofPi\u00b2 includinglast-stateboundaryterm, nottruncatedPi-square shortcut. Retardedcommutator=-2ut evenfornonstationarypurefilteredGaussian; energyvarianceu\u00b2/(8S_beta\u00b2)>0. Thusnotenergyeigenstationary isnotaretardedresponseadmissiongate.",
+  "scope": "FREE-ONLY canonicalclock positive/adverse control atactualu64/S2/beta.016. ConstantCARsection andnocoupledPeierls here; NOT a replacement/evaluation ofSAMEinteractingYsourcefilter orphotonpole. Cutoffconvergence observed, no projecttest orfullPhi claim.",
+  "scientific_execution_revision": "03b34911221ba1898315373edaa7c4c3bcac718462e7fe51a842560eb6933f87",
+  "formal_contract_read_revision": "7650a3636f3d39a74243a986afb1683be8fae895c3f5afb77720b05330363a51",
+  "script_snapshot": "import os\nfor key in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[key]='1'\nfrom pathlib import Path\nimport json,time\nimport numpy as np\nfrom scipy.linalg import expm\nstart=time.monotonic();S=2.;u=64.;beta=.016;expected=S+beta*u/2;rows=[]\nfor cutoff in (16,32,48):\n a=np.diag(np.sqrt(np.arange(1,cutoff)),1);x=np.sqrt(S)*(a+a.T);p=1j*(a.T-a)/(2*np.sqrt(S));p2=p@p;p2[-1,-1]+=cutoff/(4*S);H=u*p2;initial=np.eye(cutoff)[0];unnormal=expm(-beta*H/2)@initial;norm=np.vdot(unnormal,unnormal).real;psi=unnormal/np.sqrt(norm);variance=np.vdot(psi,x@x@psi).real;energy=np.vdot(psi,H@psi).real;energyvar=np.vdot(psi,H@H@psi).real-energy*energy;responses=[]\n for t in (.001,.004,.016):\n  U=expm(-1j*t*H);xt=U.conj().T@x@U;response=(-1j*np.vdot(psi,(xt@x-x@xt)@psi)).real;responses.append(dict(t=t,actual_retarded_Theta_commutator=float(response),exact_free_response=-2*u*t,error=float(abs(response+2*u*t))))\n wrong=expm(-beta*H)@initial;wrong/=np.linalg.norm(wrong);wrongvar=np.vdot(wrong,x@x@wrong).real\n rows.append(dict(cutoff=cutoff,actual_filter_norm_squared=float(norm),exact_norm_squared=(1+beta*u/(2*S))**-.5,actual_filtered_Theta_variance=float(variance),exact_filtered_variance=expected,variance_error=float(abs(variance-expected)),energy=float(energy),exact_energy=u/(4*expected),energy_variance=float(energyvar),exact_energy_variance=u*u/(8*expected**2),responses=responses,wrong_doubled_filter_clock_variance=float(wrongvar),wrong_variance_defect=float(abs(wrongvar-expected))))\nif rows[-1]['variance_error']>1e-10 or max(r['error'] for r in rows[-1]['responses'])>1e-10:raise ArithmeticError('Actualfree Galerkin clock control failed')\nreport=dict(rows=rows,beta=beta,S=S,u=u,proof='Purepsi_beta=exp(-beta uPi\u00b2/2)g_S/||...|| hasvarianceS_beta=S+beta*u/2, NOT S+beta*u. Gaussianboundaryweights exp[-(||thetaL||\u00b2+||thetaR||\u00b2)/(4S)] withtotalheatlengthbeta matchcentrevarianceS anddeltaVariance4Sbeta*u/(2S+beta*u); midpointBrownianbridgevariancebeta*u/2 yieldssameS_beta. NormZ=(1+beta*u/(2S))^-M/2 forM independentcoordinates. ActualHermiteGalerkin usescompressionofPi\u00b2 includinglast-stateboundaryterm, nottruncatedPi-square shortcut. Retardedcommutator=-2ut evenfornonstationarypurefilteredGaussian; energyvarianceu\u00b2/(8S_beta\u00b2)>0. Thusnotenergyeigenstationary isnotaretardedresponseadmissiongate.',scope='FREE-ONLY canonicalclock positive/adverse control atactualu64/S2/beta.016. ConstantCARsection andnocoupledPeierls here; NOT a replacement/evaluation ofSAMEinteractingYsourcefilter orphotonpole. Cutoffconvergence observed, no projecttest orfullPhi claim.',scientific_execution_revision='03b34911221ba1898315373edaa7c4c3bcac718462e7fe51a842560eb6933f87',formal_contract_read_revision='7650a3636f3d39a74243a986afb1683be8fae895c3f5afb77720b05330363a51',script_snapshot=Path(__file__).read_text(),elapsed_seconds=time.monotonic()-start)\nout=Path('/home/administrator/substrate-222/proposals/P256-qed-backward/induced_pure_filter_free_clock_receipt.json');out.write_text(json.dumps(report,indent=2)+'\\n');print(json.dumps({'rows':rows,'elapsed_seconds':report['elapsed_seconds']},indent=2));print('Natural output:',out)\n",
+  "elapsed_seconds": 0.027418773854151368
+}

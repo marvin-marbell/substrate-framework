@@ -1,0 +1,3005 @@
+{
+  "branch": "NEW covariant Wilson/Haar induced law, conditional Phi frame",
+  "parameters": {
+    "spatial_size": 1048576,
+    "time_slices": 256,
+    "beta_power": 120,
+    "kappa_power": 200,
+    "gram": [
+      0.4187253908699568,
+      0.0632221974274214,
+      0.0632221974274214,
+      0.0632221974274214
+    ],
+    "masses": [
+      0.7,
+      1.0,
+      1.4
+    ],
+    "spacings": [
+      0.02,
+      0.01,
+      0.005
+    ],
+    "energy_ratios": [
+      0.15,
+      0.5,
+      1.0
+    ],
+    "angles": [
+      0.4,
+      1.2,
+      2.2
+    ]
+  },
+  "microscopic_action": "S=sum_species barpsi [I-kappa H(U,gamma)] psi; dmu_gauge=product dtheta/(2pi). One active Wilson species plus explicitly counted massive auxiliaries. NO bare electric, magnetic, or plaquette coefficient.",
+  "source_at_import": {
+    "covariant_induced_photon.py": "249a0e8a1360f038fcc97eaf88e893d0c41ceff41554facd8e1ff70e8d857c95",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459"
+  },
+  "frame": {
+    "gram": [
+      0.4187253908699568,
+      0.0632221974274214,
+      0.0632221974274214,
+      0.0632221974274214
+    ],
+    "clifford_defect": 0.0,
+    "hermiticity_defect": 0.0,
+    "status": "Selected prepared frame CONDITIONAL; no new-law Phi/Root transfer claimed"
+  },
+  "loops": {
+    "closed_rooted_words_per_site": 168,
+    "vanishing_backtracking_words": 120,
+    "nonzero_plaquette_words_per_site": 48,
+    "individual_spin_traces": [
+      -8.0
+    ],
+    "beta_over_N_kappa4": 16.0,
+    "derivation": "Saux=-N log det(I-kH)=N sum k^n Tr(H^n)/n. Each geometric plaquette has four starts and two orientations, spin trace -8; (1/4)*4*(-8)*(U+Udagger)=-16 cos(theta).",
+    "winding": "Even extents >=6 exclude length-four winding; ALL longer winding words included in the uniform norm tail.",
+    "norm_proof": "For each mu, Hmu=2[Pminus Tmu+Pplus Tmu^dagger], norm 2 since spin projectors are orthogonal and commute with unitary shifts. Triangle inequality gives ||H||<=8 for every link field."
+  },
+  "bounds": {
+    "volume_four": 295147905179352825856,
+    "auxiliary_count": "6250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "auxiliary_count_decimal_digits": 919,
+    "kappa": "1e-200",
+    "beta_induced": 1e+120,
+    "bare_electric": 0,
+    "bare_magnetic": 0,
+    "uniform_logdet_tail_log10": -255.49163161460922,
+    "uniform_tail_formula": "|R| <= (4VN/6)*(8k)^6/(1-(8k)^2), even bipartite box. det has positive real eigenvalues/complex conjugate pairs since Re D>=1-8k>0 and gamma5 hermiticity.",
+    "retained_bounded_observable_absolute_error_log10": -254.88957162328126,
+    "heavy_mass_gap_lattice_log10": 199.69897000433602,
+    "heavy_gap_formula": "m0aux=1/(2k)-4; free pole Eaux=log(1+m0aux), no additional low-energy charged species. Singular-value gap D>=1-8k uniformly.",
+    "heavy_pole_energy_lattice": 459.8238714182492,
+    "chart_radius": 1e-40,
+    "compact_vs_gaussian_slab_action_error": 1.2592977287652384e-18,
+    "prepared_gaussian_chart_tail_log_upper": -4.681337853647907e+32,
+    "chart_escape_log_upper": -1.2207031249986673e+36,
+    "chart_entropy_upper": 1.3324667526101677e+24,
+    "weak_coupling_volume_gap_budget": 9.695868870858855e-68,
+    "finite_window": "Open finite temporal slab, gauge-averaged Coulomb-chart Gaussian boundary packets, coexact photons and localized torons; no thermodynamic phase or exact asymptotic scattering claim.",
+    "compact_bound_proof": "On |A_link|<=delta in temporal gauge, |1-cos x-x^2/2|<=x^4/24, |curl A|<=4delta. Gauge-averaging restores Gauss invariance. Outside paths must move at least delta/2 in one spatial link from supported boundary data: Cauchy-Schwarz and 1-cos x>=2x^2/pi^2 give temporal barrier; the stated 1/32 bound is weaker. Torus Haar volume, Gaussian normalization and active determinant ratio enter the explicit entropy term. This pays chart leakage rather than inferring a phase from a Hessian.",
+    "gaussian_bound_proof": "Nonzero coexact vacuum variances <=1/(2 beta qmin); a one-photon Hermite factor is paid by weakening the exponent by 64. Torons are localized prepared boundary packets, not omitted zero modes.",
+    "perturbative_status": "weak_coupling_volume_gap_budget is a conservative scale budget, NOT a proved all-orders connected-amplitude remainder. Tree Compton below is the exact leading connected coefficient; no exact finite-g scattering precision is promoted."
+  },
+  "reflection_positive": {
+    "active_kappa_range": [
+      0.12411888979367032,
+      0.1248905293249106
+    ],
+    "spatial_B_lower": 0.25065682405053646,
+    "positivity": true,
+    "bare_gauge_kernel": "constant Haar convolution, positive rank-one operator",
+    "proof": "Wilson r=1 temporal hoppings are 2k Pplus/Pminus. Reflection exchanges psi and barpsi with gamma0; expanding each crossing hopping exponential is a sum of reflected Grassmann squares with nonnegative k powers. Positive-side action and its reflection factor separately. Haar integration pairs reflected gauge links with their adjoints. The spatial fermion B=I-k sum_j(Tj+Tjdagger) obeys B>=1-6k>0, giving the positive one-step Wilson transfer construction. Tensoring a FINITE Naux+1 species preserves it even for the enormous explicit Naux. Gauge averaging is an orthogonal Gauss projector. Integrating auxiliaries is taking the same positive expectation restricted to retained observables, so its nonlocal determinant action preserves RP; it is NOT licensed as a new one-step gauge-only Markov kernel.",
+    "source": "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-113/issue-3/General-proof-of-Osterwalder-Schrader-positivity-for-the-Wilson-action/cmp/1104160284.pdf",
+    "source_access": "Full PDF blocked by provider HTML challenge; primary Springer abstract checked, local crossing-projector and B positivity argument supplied independently.",
+    "nonlocal_time_price": "Uniform full finite-slab logdet tail bounds normalized retained correlations; no truncation of higher-time loops into a polynomial propagator, hence no claimed ghost pole from such a truncation.",
+    "operator_scope": "Finite spatial volume: bounded positive transfer on compact Haar L2 tensored with finite-dimensional fermion Fock space, not a finite-dimensional Haar Hilbert space. log(T) only on nonzero spectral subspace."
+  },
+  "rotor": {
+    "beta": 1e+120,
+    "electric_levels_lattice": [
+      5.000000000000002e-121,
+      2.0000000000000006e-120,
+      4.500000000000001e-120,
+      8.000000000000003e-120
+    ],
+    "beta_times_levels": [
+      0.5000000000000001,
+      2.0000000000000004,
+      4.500000000000001,
+      8.000000000000002
+    ],
+    "exact_formula": "En=-log[I_n(beta)/I_0(beta)]; integer Haar Fourier states exp(in theta) have unit norm.",
+    "omitted_scaled_integral_tail_upper": 1.0760372320042276e-31,
+    "wrong_sign_control": "beta<0 gives I_1(beta)/I_0(beta)<0: NOT a positive one-step electric transfer eigenvalue."
+  },
+  "photon_transfer": [
+    {
+      "q": 0.03,
+      "polarizations": 2,
+      "energy_lattice": 0.029997750253082156,
+      "energy_over_q": 0.9999250084360719,
+      "photon_spectral_weight": 1.666541706969637e-119,
+      "external_LSZ_factor_without_charge": 0.9999250163089269,
+      "actual_Hermite_transfer_normalized": [
+        [
+          0.9999999999999979,
+          1.270638558923661e-17,
+          -2.8602401900784977e-16
+        ],
+        [
+          -5.693815992911083e-17,
+          0.9704477168078113,
+          9.069556641379752e-17
+        ],
+        [
+          -5.791085919400433e-16,
+          -2.977753859031571e-17,
+          0.9417687710574946
+        ]
+      ],
+      "quantum_transfer_residual": 2.504434741386522e-15,
+      "state": "psi0=(beta*sinh(E)/pi)^1/4 exp[-beta*sinh(E)Q^2/2]; psi1=sqrt(2beta*sinh(E))*Q psi0. For each epsilon dot qhat=0, multiply the full physical Gaussian vacuum by this normalized Hermite factor and average gauge orbits. Curl observable extracts it; longitudinal states are not a third photon.",
+      "propagator": "G_T(p0,q)=1/[beta*(4sin(p0/2)^2+sum_j 4sin(qj/2)^2)]; positive spectral weight 1/(2beta sinh E).",
+      "compact_status": "Finite-slab prepared full-state Gaussian transfer controlled by explicit chart action/leakage bounds; matrix is the Gaussian reference whose error is PAID, not a full compact spectral diagonalization."
+    },
+    {
+      "q": 0.1,
+      "polarizations": 2,
+      "energy_lattice": 0.09991677063782435,
+      "energy_over_q": 0.9991677063782435,
+      "photon_spectral_weight": 4.9958482247729826e-120,
+      "external_LSZ_factor_without_charge": 0.9991686756659498,
+      "actual_Hermite_transfer_normalized": [
+        [
+          0.9999999999999979,
+          2.3732249686721106e-17,
+          1.951607767133202e-17
+        ],
+        [
+          1.2659176511892107e-17,
+          0.9049127302111831,
+          -1.6286761182981292e-17
+        ],
+        [
+          -3.7952912623455177e-16,
+          -1.0025387517959479e-16,
+          0.8188670492982588
+        ]
+      ],
+      "quantum_transfer_residual": 2.3462578334406326e-15,
+      "state": "psi0=(beta*sinh(E)/pi)^1/4 exp[-beta*sinh(E)Q^2/2]; psi1=sqrt(2beta*sinh(E))*Q psi0. For each epsilon dot qhat=0, multiply the full physical Gaussian vacuum by this normalized Hermite factor and average gauge orbits. Curl observable extracts it; longitudinal states are not a third photon.",
+      "propagator": "G_T(p0,q)=1/[beta*(4sin(p0/2)^2+sum_j 4sin(qj/2)^2)]; positive spectral weight 1/(2beta sinh E).",
+      "compact_status": "Finite-slab prepared full-state Gaussian transfer controlled by explicit chart action/leakage bounds; matrix is the Gaussian reference whose error is PAID, not a full compact spectral diagonalization."
+    },
+    {
+      "q": 0.2,
+      "polarizations": 2,
+      "energy_lattice": 0.1993366418026458,
+      "energy_over_q": 0.9966832090132289,
+      "photon_spectral_weight": 2.4917848700242775e-120,
+      "external_LSZ_factor_without_charge": 0.996698578392968,
+      "actual_Hermite_transfer_normalized": [
+        [
+          0.9999999999999979,
+          -1.574571280707065e-17,
+          4.0760683132068574e-16
+        ],
+        [
+          -1.8718693197815017e-17,
+          0.8192740450131192,
+          -4.013285836262034e-18
+        ],
+        [
+          1.5808226228116028e-16,
+          2.3366821170598e-17,
+          0.6712099608321594
+        ]
+      ],
+      "quantum_transfer_residual": 2.759078949951237e-15,
+      "state": "psi0=(beta*sinh(E)/pi)^1/4 exp[-beta*sinh(E)Q^2/2]; psi1=sqrt(2beta*sinh(E))*Q psi0. For each epsilon dot qhat=0, multiply the full physical Gaussian vacuum by this normalized Hermite factor and average gauge orbits. Curl observable extracts it; longitudinal states are not a third photon.",
+      "propagator": "G_T(p0,q)=1/[beta*(4sin(p0/2)^2+sum_j 4sin(qj/2)^2)]; positive spectral weight 1/(2beta sinh E).",
+      "compact_status": "Finite-slab prepared full-state Gaussian transfer controlled by explicit chart action/leakage bounds; matrix is the Gaussian reference whose error is PAID, not a full compact spectral diagonalization."
+    }
+  ],
+  "common_cone": [
+    {
+      "a": 0.02,
+      "photon_energy_lattice": 0.003741654112829211,
+      "fermion_relativistic_defect": -9.116578718438384e-06,
+      "photon_cone_defect": -8.749985347389355e-07,
+      "massless_fermion_cone": "At m0=0 both exact hypercubic symbols have leading p0^2+sum pj^2, coefficient 1; no fitted velocity. Massive finite-a O(am) and O(ap)^2 errors remain explicit."
+    },
+    {
+      "a": 0.01,
+      "photon_energy_lattice": 0.003741654112829211,
+      "fermion_relativistic_defect": -8.979111776220732e-06,
+      "photon_cone_defect": -8.749985347389355e-07,
+      "massless_fermion_cone": "At m0=0 both exact hypercubic symbols have leading p0^2+sum pj^2, coefficient 1; no fitted velocity. Massive finite-a O(am) and O(ap)^2 errors remain explicit."
+    },
+    {
+      "a": 0.005,
+      "photon_energy_lattice": 0.003741654112829211,
+      "fermion_relativistic_defect": -8.463855333715356e-06,
+      "photon_cone_defect": -8.749985347389355e-07,
+      "massless_fermion_cone": "At m0=0 both exact hypercubic symbols have leading p0^2+sum pj^2, coefficient 1; no fitted velocity. Massive finite-a O(am) and O(ap)^2 errors remain explicit."
+    }
+  ],
+  "compton": [
+    {
+      "a": 0.02,
+      "mass": 0.7,
+      "energy_ratio": 0.15,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.14824488118371415,
+      "exact_energy_defect": 7.676151381197371e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860972094212095
+      ],
+      "photon_LSZ_factors": [
+        0.9999996325001216,
+        0.9999996410498843
+      ],
+      "amplitude_squared_over_e4": 3.695997286235918,
+      "cross_section_over_e4": 0.011663631872227142,
+      "continuum_Klein_Nishina_over_e4": 0.01166668130327658,
+      "cross_section_relative_to_KN": 0.9997386205236803,
+      "Ward_in": 1.5537063293930873e-16,
+      "Ward_out": 1.4058653618659221e-16,
+      "double_Ward": 3.652642065522609e-18,
+      "adverse_controls": {
+        "contact": 3.194615013999111e-05,
+        "pole": 0.0011567637865024026,
+        "temporal_contact": 1.7266154947247e-07,
+        "residue_squared": 3.8009544718613757
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 0.7,
+      "energy_ratio": 0.15,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.13690707020808807,
+      "exact_energy_defect": 1.209969624493823e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.986095032245844
+      ],
+      "photon_LSZ_factors": [
+        0.9999996325001216,
+        0.9999996938555017
+      ],
+      "amplitude_squared_over_e4": 2.278249234441077,
+      "cross_section_over_e4": 0.006131900762697603,
+      "continuum_Klein_Nishina_over_e4": 0.006134595879118179,
+      "cross_section_relative_to_KN": 0.9995606692806367,
+      "Ward_in": 2.0338273455029164e-16,
+      "Ward_out": 1.8210952078901824e-16,
+      "double_Ward": 4.0829003650970875e-18,
+      "adverse_controls": {
+        "contact": 7.667381115768666e-05,
+        "pole": 0.0031594352543847454,
+        "temporal_contact": 1.5991977247140934e-07,
+        "residue_squared": 2.3429508058664887
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 0.7,
+      "energy_ratio": 0.15,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.1211394401150415,
+      "exact_energy_defect": 1.691355389077387e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860919636869606
+      ],
+      "photon_LSZ_factors": [
+        0.9999996325001216,
+        0.9999997603122405
+      ],
+      "amplitude_squared_over_e4": 2.7811326656314184,
+      "cross_section_over_e4": 0.005860494249967961,
+      "continuum_Klein_Nishina_over_e4": 0.005867004299931955,
+      "cross_section_relative_to_KN": 0.9988903962514449,
+      "Ward_in": 1.6104788067381386e-16,
+      "Ward_out": 1.655452393949211e-16,
+      "double_Ward": 1.0227197525899391e-18,
+      "adverse_controls": {
+        "contact": 6.676146791712321e-05,
+        "pole": 0.004690756293175384,
+        "temporal_contact": 1.4207026828871475e-07,
+        "residue_squared": 2.8601244905513656
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 0.7,
+      "energy_ratio": 0.5,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.4810169183652368,
+      "exact_energy_defect": 7.806255641895632e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860938914995573
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999962208506832
+      ],
+      "amplitude_squared_over_e4": 3.698409660351158,
+      "cross_section_over_e4": 0.011059400839884173,
+      "continuum_Klein_Nishina_over_e4": 0.011062866862105012,
+      "cross_section_relative_to_KN": 0.9996866976468178,
+      "Ward_in": 2.5890125750824956e-16,
+      "Ward_out": 2.582874645023586e-16,
+      "double_Ward": 6.6012576277516275e-18,
+      "adverse_controls": {
+        "contact": 0.00010694261383739685,
+        "pole": 0.0038042676231039075,
+        "temporal_contact": 1.875710738900938e-06,
+        "residue_squared": 3.8035024323513427
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 0.7,
+      "energy_ratio": 0.5,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.37914077658663653,
+      "exact_energy_defect": 5.204170427930421e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860731148651212
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999976521253963
+      ],
+      "amplitude_squared_over_e4": 2.4117802045047063,
+      "cross_section_over_e4": 0.0044805109482102656,
+      "continuum_Klein_Nishina_over_e4": 0.004489365175308593,
+      "cross_section_relative_to_KN": 0.9980277329304764,
+      "Ward_in": 7.871021822704423e-16,
+      "Ward_out": 6.496650782220621e-16,
+      "double_Ward": 1.61255396438037e-17,
+      "adverse_controls": {
+        "contact": 0.00026222128965287914,
+        "pole": 0.00959896277766586,
+        "temporal_contact": 1.5163530552507652e-06,
+        "residue_squared": 2.4803577043849336
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 0.7,
+      "energy_ratio": 0.5,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.27869265665157017,
+      "exact_energy_defect": 5.0306980803327406e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860506922728367
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999987313980329
+      ],
+      "amplitude_squared_over_e4": 3.3755998243248126,
+      "cross_section_over_e4": 0.003388337803689897,
+      "continuum_Klein_Nishina_over_e4": 0.003408044135473714,
+      "cross_section_relative_to_KN": 0.9942177005342456,
+      "Ward_in": 5.273339225224758e-16,
+      "Ward_out": 1.946211444745587e-16,
+      "double_Ward": 8.27304405515015e-18,
+      "adverse_controls": {
+        "contact": 0.00023256084502211883,
+        "pole": 0.012989082139481738,
+        "temporal_contact": 1.141494292174107e-06,
+        "residue_squared": 3.471654396890381
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 0.7,
+      "energy_ratio": 1.0,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.9268444763603209,
+      "exact_energy_defect": 1.5439038936193583e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860830898219094
+      ],
+      "photon_LSZ_factors": [
+        0.9999836669067629,
+        0.9999859691793513
+      ],
+      "amplitude_squared_over_e4": 3.7059252806048275,
+      "cross_section_over_e4": 0.010286821855980977,
+      "continuum_Klein_Nishina_over_e4": 0.010292012638383459,
+      "cross_section_relative_to_KN": 0.9994956494337052,
+      "Ward_in": 4.2028749348401447e-16,
+      "Ward_out": 4.0025950989636923e-16,
+      "double_Ward": 1.0388395246615465e-17,
+      "adverse_controls": {
+        "contact": 0.0002167180789254882,
+        "pole": 0.007467916617975666,
+        "temporal_contact": 7.327385224041113e-06,
+        "residue_squared": 3.8114448864989345
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 0.7,
+      "energy_ratio": 1.0,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.6106888524465275,
+      "exact_energy_defect": 5.204170427930421e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860088921128042
+      ],
+      "photon_LSZ_factors": [
+        0.9999836669067629,
+        0.9999939086657771
+      ],
+      "amplitude_squared_over_e4": 2.7440566849754915,
+      "cross_section_over_e4": 0.003306490873723792,
+      "continuum_Klein_Nishina_over_e4": 0.0033240138166494605,
+      "cross_section_relative_to_KN": 0.9947283784327554,
+      "Ward_in": 2.6576374910073256e-16,
+      "Ward_out": 1.740441990879511e-16,
+      "double_Ward": 4.038115886503586e-18,
+      "adverse_controls": {
+        "contact": 0.000555865364867633,
+        "pole": 0.01722714902004591,
+        "temporal_contact": 5.1942987463659605e-06,
+        "residue_squared": 2.822356354232503
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 0.7,
+      "energy_ratio": 1.0,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.38641658544704294,
+      "exact_energy_defect": 5.0306980803327406e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9859447033953092
+      ],
+      "photon_LSZ_factors": [
+        0.9999836669067629,
+        0.9999975611483206
+      ],
+      "amplitude_squared_over_e4": 4.586786359728674,
+      "cross_section_over_e4": 0.0022127993472502673,
+      "continuum_Klein_Nishina_over_e4": 0.002238526842311707,
+      "cross_section_relative_to_KN": 0.988506952619397,
+      "Ward_in": 3.4030309082185325e-16,
+      "Ward_out": 3.210609281986282e-16,
+      "double_Ward": 8.877533307287418e-18,
+      "adverse_controls": {
+        "contact": 0.0005031392300536699,
+        "pole": 0.021626710940651994,
+        "temporal_contact": 3.4427977754400154e-06,
+        "residue_squared": 4.7179396583268165
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.0,
+      "energy_ratio": 0.15,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.14824511233142423,
+      "exact_energy_defect": 6.158268339717665e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9801986733067554,
+        0.9801979981065352
+      ],
+      "photon_LSZ_factors": [
+        0.9999992500005063,
+        0.9999992674467053
+      ],
+      "amplitude_squared_over_e4": 3.6949844644062035,
+      "cross_section_over_e4": 0.005713645889332244,
+      "continuum_Klein_Nishina_over_e4": 0.005716673838605524,
+      "cross_section_relative_to_KN": 0.9994703302376932,
+      "Ward_in": 1.7529913972523574e-16,
+      "Ward_out": 1.9885257973255406e-16,
+      "double_Ward": 6.998252770142098e-18,
+      "adverse_controls": {
+        "contact": 6.480615436120168e-05,
+        "pole": 0.0016425783335251751,
+        "temporal_contact": 5.03389554129776e-07,
+        "residue_squared": 3.845793693328441
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.0,
+      "energy_ratio": 0.15,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.1369086990811031,
+      "exact_energy_defect": 1.6479873021779667e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9801986733067554,
+        0.9801936078519088
+      ],
+      "photon_LSZ_factors": [
+        0.9999992500005063,
+        0.9999993752006219
+      ],
+      "amplitude_squared_over_e4": 2.2774413869429733,
+      "cross_section_over_e4": 0.00300364069811987,
+      "continuum_Klein_Nishina_over_e4": 0.0030059519807679076,
+      "cross_section_relative_to_KN": 0.9992310979473974,
+      "Ward_in": 1.4880336637496233e-16,
+      "Ward_out": 1.5275327634049225e-16,
+      "double_Ward": 5.805800817336305e-18,
+      "adverse_controls": {
+        "contact": 0.00015553835634530273,
+        "pole": 0.004486338625755363,
+        "temporal_contact": 4.6626119437096706e-07,
+        "residue_squared": 2.3704043004768303
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.0,
+      "energy_ratio": 0.15,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.12114273975634955,
+      "exact_energy_defect": 2.3418766925686896e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9801986733067554,
+        0.9801874200280996
+      ],
+      "photon_LSZ_factors": [
+        0.9999992500005063,
+        0.9999995108147689
+      ],
+      "amplitude_squared_over_e4": 2.7793437269182686,
+      "cross_section_over_e4": 0.002869949586054442,
+      "continuum_Klein_Nishina_over_e4": 0.0028748321069666572,
+      "cross_section_relative_to_KN": 0.9983016326760845,
+      "Ward_in": 1.9247540390228574e-16,
+      "Ward_out": 3.3190251721737566e-16,
+      "double_Ward": 6.4070429744049654e-18,
+      "adverse_controls": {
+        "contact": 0.00013542224820015553,
+        "pole": 0.006660810513173744,
+        "temporal_contact": 4.142442973084241e-07,
+        "residue_squared": 2.8928112767647463
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.0,
+      "energy_ratio": 0.5,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.4810193159775608,
+      "exact_energy_defect": 5.0306980803327406e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9801986733067554,
+        0.9801913075623526
+      ],
+      "photon_LSZ_factors": [
+        0.9999916667291662,
+        0.9999922874007913
+      ],
+      "amplitude_squared_over_e4": 3.697126764037956,
+      "cross_section_over_e4": 0.005417432518300845,
+      "continuum_Klein_Nishina_over_e4": 0.005420804762431455,
+      "cross_section_relative_to_KN": 0.9993779071044983,
+      "Ward_in": 9.94332254466208e-17,
+      "Ward_out": 9.592627346998547e-17,
+      "double_Ward": 3.1382157309231805e-18,
+      "adverse_controls": {
+        "contact": 0.00021694191693828868,
+        "pole": 0.0054019401223616625,
+        "temporal_contact": 5.4688452562037935e-06,
+        "residue_squared": 3.8481617785344264
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.0,
+      "energy_ratio": 0.5,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.3791555273936073,
+      "exact_energy_defect": 5.204170427930421e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9801986733067554,
+        0.9801494119706011
+      ],
+      "photon_LSZ_factors": [
+        0.9999916667291662,
+        0.999995208056868
+      ],
+      "amplitude_squared_over_e4": 2.409250278021444,
+      "cross_section_over_e4": 0.002193342649198153,
+      "continuum_Klein_Nishina_over_e4": 0.00219978893590121,
+      "cross_section_relative_to_KN": 0.9970695885419498,
+      "Ward_in": 1.5403235557436586e-16,
+      "Ward_out": 1.265524846262056e-16,
+      "double_Ward": 5.0806668312636055e-18,
+      "adverse_controls": {
+        "contact": 0.0005318313722073768,
+        "pole": 0.013630145941125637,
+        "temporal_contact": 4.42253378055478e-06,
+        "residue_squared": 2.5077655045375473
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.0,
+      "energy_ratio": 0.5,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.27871821039895056,
+      "exact_energy_defect": 1.2663481374630692e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9801986733067554,
+        0.9801041965691237
+      ],
+      "photon_LSZ_factors": [
+        0.9999916667291662,
+        0.9999974105446745
+      ],
+      "amplitude_squared_over_e4": 3.3665911691661057,
+      "cross_section_over_e4": 0.0016561605617393658,
+      "continuum_Klein_Nishina_over_e4": 0.0016699416263821199,
+      "cross_section_relative_to_KN": 0.9917475770260243,
+      "Ward_in": 3.6260526802146926e-16,
+      "Ward_out": 4.429102247227289e-16,
+      "double_Ward": 1.2831461041669644e-17,
+      "adverse_controls": {
+        "contact": 0.00047147067590465455,
+        "pole": 0.018443869876221923,
+        "temporal_contact": 3.3303647785184653e-06,
+        "residue_squared": 3.5043986808935683
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.0,
+      "energy_ratio": 1.0,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.9268527344010201,
+      "exact_energy_defect": 1.457167719820518e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9801986733067554,
+        0.9801695258143657
+      ],
+      "photon_LSZ_factors": [
+        0.9999666676666344,
+        0.9999713655382478
+      ],
+      "amplitude_squared_over_e4": 3.7037225507272864,
+      "cross_section_over_e4": 0.005038199863477969,
+      "continuum_Klein_Nishina_over_e4": 0.005043086192807894,
+      "cross_section_relative_to_KN": 0.9990310835184825,
+      "Ward_in": 1.1436714324419163e-16,
+      "Ward_out": 1.507609519619795e-16,
+      "double_Ward": 3.646050622923065e-18,
+      "adverse_controls": {
+        "contact": 0.00043960922352958594,
+        "pole": 0.010603977283211295,
+        "temporal_contact": 2.1366949938495627e-05,
+        "residue_squared": 3.855466768241158
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.0,
+      "energy_ratio": 1.0,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.61074538214063,
+      "exact_energy_defect": 8.326672684688674e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9801986733067554,
+        0.9800199159161459
+      ],
+      "photon_LSZ_factors": [
+        0.9999666676666344,
+        0.9999875664750746
+      ],
+      "amplitude_squared_over_e4": 2.7368633633538115,
+      "cross_section_over_e4": 0.0016162725556925037,
+      "continuum_Klein_Nishina_over_e4": 0.0016287667701582356,
+      "cross_section_relative_to_KN": 0.9923290340307482,
+      "Ward_in": 2.4870002166560976e-16,
+      "Ward_out": 2.441142497794673e-16,
+      "double_Ward": 9.207545954044597e-18,
+      "adverse_controls": {
+        "contact": 0.0011266671625319899,
+        "pole": 0.024460444342503225,
+        "temporal_contact": 1.5161668985979832e-05,
+        "residue_squared": 2.8493372543553557
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.0,
+      "energy_ratio": 1.0,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.38651206992170517,
+      "exact_energy_defect": 6.245004513516506e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9801986733067554,
+        0.9798904863593535
+      ],
+      "photon_LSZ_factors": [
+        0.9999666676666344,
+        0.9999950203029779
+      ],
+      "amplitude_squared_over_e4": 4.562425555888397,
+      "cross_section_over_e4": 0.0010790412429060978,
+      "continuum_Klein_Nishina_over_e4": 0.0010968781527327363,
+      "cross_section_relative_to_KN": 0.9837384765279534,
+      "Ward_in": 1.421591071664921e-16,
+      "Ward_out": 3.2977693984160034e-16,
+      "double_Ward": 2.631154741848412e-18,
+      "adverse_controls": {
+        "contact": 0.0010187404764927482,
+        "pole": 0.030706281087266356,
+        "temporal_contact": 1.0057100931459664e-05,
+        "residue_squared": 4.7504791641846325
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.4,
+      "energy_ratio": 0.15,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.14824554397352516,
+      "exact_energy_defect": 1.1709383462843448e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9723883668012469,
+        0.9723870644105954
+      ],
+      "photon_LSZ_factors": [
+        0.9999985300019448,
+        0.99999856418809
+      ],
+      "amplitude_squared_over_e4": 3.693095450592503,
+      "cross_section_over_e4": 0.0029136661214118147,
+      "continuum_Klein_Nishina_over_e4": 0.002916670325819145,
+      "cross_section_relative_to_KN": 0.998969988352562,
+      "Ward_in": 1.0562486773039052e-16,
+      "Ward_out": 1.0278618289215721e-16,
+      "double_Ward": 5.505188043147603e-18,
+      "adverse_controls": {
+        "contact": 0.00012600774014089516,
+        "pole": 0.0022811399572503993,
+        "temporal_contact": 1.3813129916254282e-06,
+        "residue_squared": 3.905837124898355
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.4,
+      "energy_ratio": 0.15,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.13691174087992763,
+      "exact_energy_defect": 6.158268339717665e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9723883668012469,
+        0.9723785959517323
+      ],
+      "photon_LSZ_factors": [
+        0.9999985300019448,
+        0.9999987753394635
+      ],
+      "amplitude_squared_over_e4": 2.27603969297126,
+      "cross_section_over_e4": 0.001531597785315444,
+      "continuum_Klein_Nishina_over_e4": 0.0015336489697795447,
+      "cross_section_relative_to_KN": 0.9986625463163219,
+      "Ward_in": 1.3082013368818173e-16,
+      "Ward_out": 1.2080165835371378e-16,
+      "double_Ward": 6.276489237447797e-18,
+      "adverse_controls": {
+        "contact": 0.0003024184811009093,
+        "pole": 0.006230459824075626,
+        "temporal_contact": 1.279510648718901e-06,
+        "residue_squared": 2.4071714682128444
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.4,
+      "energy_ratio": 0.15,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.12114890179800071,
+      "exact_energy_defect": 6.852157730108388e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9723883668012469,
+        0.9723666597534216
+      ],
+      "photon_LSZ_factors": [
+        0.9999985300019448,
+        0.9999990410998089
+      ],
+      "amplitude_squared_over_e4": 2.7765902785931553,
+      "cross_section_over_e4": 0.0014629565495945746,
+      "continuum_Klein_Nishina_over_e4": 0.0014667510749829886,
+      "cross_section_relative_to_KN": 0.9974129724851518,
+      "Ward_in": 2.1798807604788944e-16,
+      "Ward_out": 3.4274949938907036e-16,
+      "double_Ward": 1.042668077556005e-17,
+      "adverse_controls": {
+        "contact": 0.0002632843335113721,
+        "pole": 0.009250349438187174,
+        "temporal_contact": 1.13686573585203e-06,
+        "residue_squared": 2.936595267255375
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.4,
+      "energy_ratio": 0.5,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.4810237912796799,
+      "exact_energy_defect": 1.0061396160665481e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9723883668012469,
+        0.9723741589254246
+      ],
+      "photon_LSZ_factors": [
+        0.9999836669067629,
+        0.9999848831250024
+      ],
+      "amplitude_squared_over_e4": 3.694753630945731,
+      "cross_section_over_e4": 0.0027624192814423585,
+      "continuum_Klein_Nishina_over_e4": 0.002765716715526253,
+      "cross_section_relative_to_KN": 0.9988077469881917,
+      "Ward_in": 1.752665660761941e-16,
+      "Ward_out": 1.037403963253947e-16,
+      "double_Ward": 6.3240684274413845e-18,
+      "adverse_controls": {
+        "contact": 0.00042180921047960134,
+        "pole": 0.007501887153427638,
+        "temporal_contact": 1.5007595359671346e-05,
+        "residue_squared": 3.9078657762585602
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.4,
+      "energy_ratio": 0.5,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.37918306354037906,
+      "exact_energy_defect": 3.469446951953614e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9723883668012469,
+        0.9722933466818312
+      ],
+      "photon_LSZ_factors": [
+        0.9999836669067629,
+        0.9999906064660977
+      ],
+      "amplitude_squared_over_e4": 2.4055120015289324,
+      "cross_section_over_e4": 0.0011175021638686695,
+      "continuum_Klein_Nishina_over_e4": 0.0011223412938271482,
+      "cross_section_relative_to_KN": 0.9956883614769467,
+      "Ward_in": 4.696444181458015e-16,
+      "Ward_out": 2.756573099096447e-16,
+      "double_Ward": 2.0239973464621613e-17,
+      "adverse_controls": {
+        "contact": 0.0010337766919712472,
+        "pole": 0.018928514414507852,
+        "temporal_contact": 1.2141689732391608e-05,
+        "residue_squared": 2.544443464297121
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.4,
+      "energy_ratio": 0.5,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.27876592033560454,
+      "exact_energy_defect": 3.122502256758253e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9723883668012469,
+        0.9722061280785272
+      ],
+      "photon_LSZ_factors": [
+        0.9999836669067629,
+        0.9999949229412274
+      ],
+      "amplitude_squared_over_e4": 3.354271862138555,
+      "cross_section_over_e4": 0.0008421785140253656,
+      "continuum_Klein_Nishina_over_e4": 0.0008520110338684285,
+      "cross_section_relative_to_KN": 0.9884596332063684,
+      "Ward_in": 1.946975390648929e-16,
+      "Ward_out": 5.240393902610175e-17,
+      "double_Ward": 4.303180637153896e-18,
+      "adverse_controls": {
+        "contact": 0.0009159072579110436,
+        "pole": 0.02561315537084877,
+        "temporal_contact": 9.147550434423192e-06,
+        "residue_squared": 3.5482870570142775
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.4,
+      "energy_ratio": 1.0,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.9268681214780061,
+      "exact_energy_defect": 5.204170427930421e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9723883668012469,
+        0.97233214266103
+      ],
+      "photon_LSZ_factors": [
+        0.9999346705080236,
+        0.9999438759800927
+      ],
+      "amplitude_squared_over_e4": 3.6996981114848806,
+      "cross_section_over_e4": 0.0025683432521383387,
+      "continuum_Klein_Nishina_over_e4": 0.0025730031595958647,
+      "cross_section_relative_to_KN": 0.9981889227612694,
+      "Ward_in": 4.972946179448442e-17,
+      "Ward_out": 7.204223369365417e-17,
+      "double_Ward": 2.5825629113830502e-18,
+      "adverse_controls": {
+        "contact": 0.0008546850726084611,
+        "pole": 0.014725563740078908,
+        "temporal_contact": 5.864611428705589e-05,
+        "residue_squared": 3.9139690506907145
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.4,
+      "energy_ratio": 1.0,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.6108508064225869,
+      "exact_energy_defect": 1.2836953722228372e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9723883668012469,
+        0.9720435894635417
+      ],
+      "photon_LSZ_factors": [
+        0.9999346705080236,
+        0.9999756221392928
+      ],
+      "amplitude_squared_over_e4": 2.726617624534548,
+      "cross_section_over_e4": 0.0008218646416016219,
+      "continuum_Klein_Nishina_over_e4": 0.0008310034541623651,
+      "cross_section_relative_to_KN": 0.9890026780093774,
+      "Ward_in": 3.0922437419862675e-16,
+      "Ward_out": 1.5468469827583573e-16,
+      "double_Ward": 1.0243883481760676e-17,
+      "adverse_controls": {
+        "contact": 0.002188059370072701,
+        "pole": 0.03396509950355507,
+        "temporal_contact": 4.166968329169211e-05,
+        "residue_squared": 2.8852049163656144
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.02,
+      "mass": 1.4,
+      "energy_ratio": 1.0,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.38669025809282137,
+      "exact_energy_defect": 6.591949208711867e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9723883668012469,
+        0.9717939529357376
+      ],
+      "photon_LSZ_factors": [
+        0.9999346705080236,
+        0.9999902308346543
+      ],
+      "amplitude_squared_over_e4": 4.529439949545759,
+      "cross_section_over_e4": 0.0005470511457390882,
+      "continuum_Klein_Nishina_over_e4": 0.0005596317105779268,
+      "cross_section_relative_to_KN": 0.9775199214035839,
+      "Ward_in": 2.5458795831038846e-16,
+      "Ward_out": 1.4465208968366484e-16,
+      "double_Ward": 1.2191835979860903e-18,
+      "adverse_controls": {
+        "contact": 0.0019756488905958752,
+        "pole": 0.04263525149719826,
+        "temporal_contact": 2.7671140626220985e-05,
+        "residue_squared": 4.793975290065159
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 0.7,
+      "energy_ratio": 0.15,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.14824471343107956,
+      "exact_energy_defect": 1.929879867024198e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930243580427348
+      ],
+      "photon_LSZ_factors": [
+        0.9999999081250076,
+        0.9999999102626523
+      ],
+      "amplitude_squared_over_e4": 3.696733940232055,
+      "cross_section_over_e4": 0.011665908702246278,
+      "continuum_Klein_Nishina_over_e4": 0.01166668130327658,
+      "cross_section_relative_to_KN": 0.9999337771376264,
+      "Ward_in": 4.749499885825777e-16,
+      "Ward_out": 4.66472852106256e-16,
+      "double_Ward": 6.225601655899046e-18,
+      "adverse_controls": {
+        "contact": 8.042646159465491e-06,
+        "pole": 0.0005824590592027264,
+        "temporal_contact": 2.1582546665541216e-08,
+        "residue_squared": 3.7488538740484847
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 0.7,
+      "energy_ratio": 0.15,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.1369058880890957,
+      "exact_energy_defect": 7.827939685345342e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930238060787928
+      ],
+      "photon_LSZ_factors": [
+        0.9999999081250076,
+        0.9999999234651813
+      ],
+      "amplitude_squared_over_e4": 2.2789237944766048,
+      "cross_section_over_e4": 0.006133605655714766,
+      "continuum_Klein_Nishina_over_e4": 0.006134595879118179,
+      "cross_section_relative_to_KN": 0.9998385837595621,
+      "Ward_in": 5.062136658044397e-16,
+      "Ward_out": 4.3796343634175206e-16,
+      "double_Ward": 4.157451937197656e-18,
+      "adverse_controls": {
+        "contact": 1.9303478859859603e-05,
+        "pole": 0.001590850314072802,
+        "temporal_contact": 1.9988916113487924e-08,
+        "residue_squared": 2.311055368569848
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 0.7,
+      "energy_ratio": 0.15,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.12113704552493729,
+      "exact_energy_defect": 1.6458188978329957e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.993023028137994
+      ],
+      "photon_LSZ_factors": [
+        0.9999999081250076,
+        0.9999999400804194
+      ],
+      "amplitude_squared_over_e4": 2.782915958689416,
+      "cross_section_over_e4": 0.005864022934243474,
+      "continuum_Klein_Nishina_over_e4": 0.005867004299931955,
+      "cross_section_relative_to_KN": 0.9994918419118058,
+      "Ward_in": 4.0242276502547166e-16,
+      "Ward_out": 7.774601510224022e-17,
+      "double_Ward": 8.496464811544109e-19,
+      "adverse_controls": {
+        "contact": 1.680910135104331e-05,
+        "pole": 0.0023619002365409263,
+        "temporal_contact": 1.775669715442711e-08,
+        "residue_squared": 2.8221556626566433
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 0.7,
+      "energy_ratio": 0.5,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.48101517764396345,
+      "exact_energy_defect": 1.9949319973733282e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930235168720043
+      ],
+      "photon_LSZ_factors": [
+        0.9999989791676045,
+        0.9999990552170989
+      ],
+      "amplitude_squared_over_e4": 3.6993576460526607,
+      "cross_section_over_e4": 0.011061932220311866,
+      "continuum_Klein_Nishina_over_e4": 0.011062866862105012,
+      "cross_section_relative_to_KN": 0.9999155154080045,
+      "Ward_in": 1.6017363161627668e-16,
+      "Ward_out": 1.37223767158485e-16,
+      "double_Ward": 1.795023761463885e-18,
+      "adverse_controls": {
+        "contact": 2.6923762574545457e-05,
+        "pole": 0.001915551041939298,
+        "temporal_contact": 2.3444858830293098e-07,
+        "residue_squared": 3.7515311345747038
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 0.7,
+      "energy_ratio": 0.5,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.37913006815868217,
+      "exact_energy_defect": 8.933825901280557e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930182494899554
+      ],
+      "photon_LSZ_factors": [
+        0.9999989791676045,
+        0.999999413063575
+      ],
+      "amplitude_squared_over_e4": 2.4144311615629936,
+      "cross_section_over_e4": 0.004485146457071995,
+      "continuum_Klein_Nishina_over_e4": 0.004489365175308593,
+      "cross_section_relative_to_KN": 0.9990602862382858,
+      "Ward_in": 2.8838167384984145e-16,
+      "Ward_out": 6.047641646931894e-17,
+      "double_Ward": 1.0937829791988853e-18,
+      "adverse_controls": {
+        "contact": 6.603140161136894e-05,
+        "pole": 0.00483335589314169,
+        "temporal_contact": 1.8946158986840202e-07,
+        "residue_squared": 2.44849406445434
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 0.7,
+      "energy_ratio": 0.5,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.278674108060666,
+      "exact_energy_defect": 7.546047120499111e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930125648882077
+      ],
+      "photon_LSZ_factors": [
+        0.9999989791676045,
+        0.9999996828914516
+      ],
+      "amplitude_squared_over_e4": 3.3858571626517566,
+      "cross_section_over_e4": 0.003398178443237451,
+      "continuum_Klein_Nishina_over_e4": 0.003408044135473714,
+      "cross_section_relative_to_KN": 0.9971051747441962,
+      "Ward_in": 2.646780586386854e-16,
+      "Ward_out": 3.472107818051265e-16,
+      "double_Ward": 3.0220987529494197e-18,
+      "adverse_controls": {
+        "contact": 5.8591408299451414e-05,
+        "pole": 0.006540407187760092,
+        "temporal_contact": 1.4257061626538926e-07,
+        "residue_squared": 3.433642790195265
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 0.7,
+      "energy_ratio": 1.0,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.9268384714491827,
+      "exact_energy_defect": 9.80118763926896e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930207784219724
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999964923070689
+      ],
+      "amplitude_squared_over_e4": 3.707589878855652,
+      "cross_section_over_e4": 0.01029048028471496,
+      "continuum_Klein_Nishina_over_e4": 0.010292012638383459,
+      "cross_section_relative_to_KN": 0.9998511123409639,
+      "Ward_in": 5.705395399333321e-17,
+      "Ward_out": 6.958241900711411e-17,
+      "double_Ward": 4.115338908507592e-19,
+      "adverse_controls": {
+        "contact": 5.456326436331297e-05,
+        "pole": 0.003760355412441779,
+        "temporal_contact": 9.157003251744914e-07,
+        "residue_squared": 3.7599321404630954
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 0.7,
+      "energy_ratio": 1.0,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.6106477806713201,
+      "exact_energy_defect": 4.2500725161431774e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930019667624957
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999984773650124
+      ],
+      "amplitude_squared_over_e4": 2.751905607318618,
+      "cross_section_over_e4": 0.003315444613713028,
+      "continuum_Klein_Nishina_over_e4": 0.0033240138166494605,
+      "cross_section_relative_to_KN": 0.9974220314929166,
+      "Ward_in": 2.516288673034849e-16,
+      "Ward_out": 2.664262133949658e-16,
+      "double_Ward": 2.602346140406749e-18,
+      "adverse_controls": {
+        "contact": 0.00014007659635056652,
+        "pole": 0.008674732932690405,
+        "temporal_contact": 6.483955163612884e-07,
+        "residue_squared": 2.790797691929452
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 0.7,
+      "energy_ratio": 1.0,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.3863472482255479,
+      "exact_energy_defect": 4.2500725161431774e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9929856928603619
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999993905048664
+      ],
+      "amplitude_squared_over_e4": 4.614785059594109,
+      "cross_section_over_e4": 0.002225516047089181,
+      "continuum_Klein_Nishina_over_e4": 0.002238526842311707,
+      "cross_section_relative_to_KN": 0.994187786817383,
+      "Ward_in": 3.090222058996761e-16,
+      "Ward_out": 1.0315530082863772e-16,
+      "double_Ward": 1.4156353794688645e-18,
+      "adverse_controls": {
+        "contact": 0.00012693939758782755,
+        "pole": 0.010890387147363005,
+        "temporal_contact": 4.293862182513662e-07,
+        "residue_squared": 4.68007296793946
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.0,
+      "energy_ratio": 0.15,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.14824477178264295,
+      "exact_energy_defect": 1.7824283715661693e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9900498337491681,
+        0.9900496615395415
+      ],
+      "photon_LSZ_factors": [
+        0.9999998125000316,
+        0.9999998168624272
+      ],
+      "amplitude_squared_over_e4": 3.6964773716418065,
+      "cross_section_over_e4": 0.005715906676565398,
+      "continuum_Klein_Nishina_over_e4": 0.005716673838605524,
+      "cross_section_relative_to_KN": 0.999865802726938,
+      "Ward_in": 4.426001437507904e-16,
+      "Ward_out": 3.8124431888862586e-16,
+      "double_Ward": 7.558481550389764e-18,
+      "adverse_controls": {
+        "contact": 1.6364391507083708e-05,
+        "pole": 0.0008295847971270358,
+        "temporal_contact": 6.292305691516785e-08,
+        "residue_squared": 3.7711546193452405
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.0,
+      "energy_ratio": 0.15,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.13690629927914474,
+      "exact_energy_defect": 5.681219383824043e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9900498337491681,
+        0.9900485418184818
+      ],
+      "photon_LSZ_factors": [
+        0.9999998125000316,
+        0.9999998438055655
+      ],
+      "amplitude_squared_over_e4": 2.2786702928042324,
+      "cross_section_over_e4": 0.003005151308543202,
+      "continuum_Klein_Nishina_over_e4": 0.0030059519807679076,
+      "cross_section_relative_to_KN": 0.9997336377194884,
+      "Ward_in": 7.773551884972989e-16,
+      "Ward_out": 4.881286778630531e-16,
+      "double_Ward": 9.965989024781948e-18,
+      "adverse_controls": {
+        "contact": 3.927652554965562e-05,
+        "pole": 0.0022658178737371463,
+        "temporal_contact": 5.827800935853485e-08,
+        "residue_squared": 2.324707117717927
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.0,
+      "energy_ratio": 0.15,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.12113787845732395,
+      "exact_energy_defect": 9.93129189996722e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9900498337491681,
+        0.990046963671318
+      ],
+      "photon_LSZ_factors": [
+        0.9999998125000316,
+        0.9999998777134668
+      ],
+      "amplitude_squared_over_e4": 2.7821920422032,
+      "cross_section_over_e4": 0.002872662829018811,
+      "continuum_Klein_Nishina_over_e4": 0.0028748321069666572,
+      "cross_section_relative_to_KN": 0.9992454244744973,
+      "Ward_in": 5.904223852464308e-16,
+      "Ward_out": 2.6115768170442925e-16,
+      "double_Ward": 4.9300283360512506e-18,
+      "adverse_controls": {
+        "contact": 3.420024063120638e-05,
+        "pole": 0.003364012806037874,
+        "temporal_contact": 5.1771334384495705e-08,
+        "residue_squared": 2.8384060365811745
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.0,
+      "energy_ratio": 0.5,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.48101578322827077,
+      "exact_energy_defect": 4.2500725161431774e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9900498337491681,
+        0.9900479551309256
+      ],
+      "photon_LSZ_factors": [
+        0.9999979166705729,
+        0.9999980718684817
+      ],
+      "amplitude_squared_over_e4": 3.6990243759816503,
+      "cross_section_over_e4": 0.005419910077062854,
+      "continuum_Klein_Nishina_over_e4": 0.005420804762431455,
+      "cross_section_relative_to_KN": 0.9998349534049259,
+      "Ward_in": 1.4902453825703998e-16,
+      "Ward_out": 1.365864690431653e-16,
+      "double_Ward": 2.1990959828654324e-18,
+      "adverse_controls": {
+        "contact": 5.478162270982525e-05,
+        "pole": 0.0027282768200845367,
+        "temporal_contact": 6.835427191148318e-07,
+        "residue_squared": 3.7737870625743852
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.0,
+      "energy_ratio": 0.5,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.37913379341500314,
+      "exact_energy_defect": 2.6020852139652106e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9900498337491681,
+        0.9900372696728119
+      ],
+      "photon_LSZ_factors": [
+        0.9999979166705729,
+        0.9999988021476806
+      ],
+      "amplitude_squared_over_e4": 2.413334925777288,
+      "cross_section_over_e4": 0.0021967731823103786,
+      "continuum_Klein_Nishina_over_e4": 0.00219978893590121,
+      "cross_section_relative_to_KN": 0.9986290713887984,
+      "Ward_in": 7.640974887215687e-16,
+      "Ward_out": 6.689104957008118e-16,
+      "double_Ward": 1.2625153483465324e-17,
+      "adverse_controls": {
+        "contact": 0.00013434091169369625,
+        "pole": 0.006884031606764623,
+        "temporal_contact": 5.524687176837819e-07,
+        "residue_squared": 2.46213492773952
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.0,
+      "energy_ratio": 0.5,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.2786805604850899,
+      "exact_energy_defect": 7.806255641895632e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9900498337491681,
+        0.99002573778927
+      ],
+      "photon_LSZ_factors": [
+        0.9999979166705729,
+        0.9999993528099204
+      ],
+      "amplitude_squared_over_e4": 3.3814946516797844,
+      "cross_section_over_e4": 0.0016630395296850474,
+      "continuum_Klein_Nishina_over_e4": 0.0016699416263821199,
+      "cross_section_relative_to_KN": 0.9958668634950878,
+      "Ward_in": 2.6083834573724373e-16,
+      "Ward_out": 3.10965227024998e-16,
+      "double_Ward": 4.998611961699167e-18,
+      "adverse_controls": {
+        "contact": 0.00011917914307364728,
+        "pole": 0.009315329625740165,
+        "temporal_contact": 4.1580155705648666e-07,
+        "residue_squared": 3.449908178834577
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.0,
+      "energy_ratio": 1.0,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.9268405617048567,
+      "exact_energy_defect": 2.2551405187698492e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9900498337491681,
+        0.9900423998601794
+      ],
+      "photon_LSZ_factors": [
+        0.9999916667291662,
+        0.9999928414342307
+      ],
+      "amplitude_squared_over_e4": 3.706997205092438,
+      "cross_section_over_e4": 0.005041692876195166,
+      "continuum_Klein_Nishina_over_e4": 0.005043086192807894,
+      "cross_section_relative_to_KN": 0.9997237174699265,
+      "Ward_in": 3.2377916526793667e-16,
+      "Ward_out": 3.3034213385030147e-16,
+      "double_Ward": 5.990905213275336e-18,
+      "adverse_controls": {
+        "contact": 0.00011101748282122168,
+        "pole": 0.0053557617597230715,
+        "temporal_contact": 2.6699614316646018e-06,
+        "residue_squared": 3.782029092772186
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.0,
+      "energy_ratio": 1.0,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.610662072910126,
+      "exact_energy_defect": 5.0306980803327406e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9900498337491681,
+        0.990004238880559
+      ],
+      "photon_LSZ_factors": [
+        0.9999916667291662,
+        0.9999968924406305
+      ],
+      "amplitude_squared_over_e4": 2.7486141039473417,
+      "cross_section_over_e4": 0.0016227104604742493,
+      "continuum_Klein_Nishina_over_e4": 0.0016287667701582356,
+      "cross_section_relative_to_KN": 0.9962816593542132,
+      "Ward_in": 3.5521776121266207e-16,
+      "Ward_out": 3.548320535773684e-16,
+      "double_Ward": 4.046513086082996e-18,
+      "adverse_controls": {
+        "contact": 0.00028489892058961805,
+        "pole": 0.012355031697459466,
+        "temporal_contact": 1.8914780697730238e-06,
+        "residue_squared": 2.8043331046398356
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.0,
+      "energy_ratio": 1.0,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.38637137179694675,
+      "exact_energy_defect": 7.112366251504909e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9900498337491681,
+        0.9899712258521716
+      ],
+      "photon_LSZ_factors": [
+        0.9999916667291662,
+        0.9999987559777517
+      ],
+      "amplitude_squared_over_e4": 4.602842036243911,
+      "cross_section_over_e4": 0.0010878150338239133,
+      "continuum_Klein_Nishina_over_e4": 0.0010968781527327363,
+      "cross_section_relative_to_KN": 0.9917373512397495,
+      "Ward_in": 5.989326836723729e-16,
+      "Ward_out": 4.870924174652438e-16,
+      "double_Ward": 6.479708403001688e-18,
+      "adverse_controls": {
+        "contact": 0.000258050014920441,
+        "pole": 0.01551056299427236,
+        "temporal_contact": 1.2530485351342699e-06,
+        "residue_squared": 4.696288436629881
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.4,
+      "energy_ratio": 0.15,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.14824488118371415,
+      "exact_energy_defect": 7.676151381197371e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860972094212095
+      ],
+      "photon_LSZ_factors": [
+        0.9999996325001216,
+        0.9999996410498843
+      ],
+      "amplitude_squared_over_e4": 3.695997286235918,
+      "cross_section_over_e4": 0.0029159079680567855,
+      "continuum_Klein_Nishina_over_e4": 0.002916670325819145,
+      "cross_section_relative_to_KN": 0.9997386205236803,
+      "Ward_in": 1.5537063293930873e-16,
+      "Ward_out": 1.4058653618659221e-16,
+      "double_Ward": 3.652642065522609e-18,
+      "adverse_controls": {
+        "contact": 3.194615013999111e-05,
+        "pole": 0.0011567637865024026,
+        "temporal_contact": 1.7266154947247e-07,
+        "residue_squared": 3.8009544718613757
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.4,
+      "energy_ratio": 0.15,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.13690707020808807,
+      "exact_energy_defect": 1.209969624493823e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.986095032245844
+      ],
+      "photon_LSZ_factors": [
+        0.9999996325001216,
+        0.9999996938555017
+      ],
+      "amplitude_squared_over_e4": 2.278249234441077,
+      "cross_section_over_e4": 0.0015329751906744008,
+      "continuum_Klein_Nishina_over_e4": 0.0015336489697795447,
+      "cross_section_relative_to_KN": 0.9995606692806367,
+      "Ward_in": 2.0338273455029164e-16,
+      "Ward_out": 1.8210952078901824e-16,
+      "double_Ward": 4.0829003650970875e-18,
+      "adverse_controls": {
+        "contact": 7.667381115768666e-05,
+        "pole": 0.0031594352543847454,
+        "temporal_contact": 1.5991977247140934e-07,
+        "residue_squared": 2.3429508058664887
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.4,
+      "energy_ratio": 0.15,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.1211394401150415,
+      "exact_energy_defect": 1.691355389077387e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860919636869606
+      ],
+      "photon_LSZ_factors": [
+        0.9999996325001216,
+        0.9999997603122405
+      ],
+      "amplitude_squared_over_e4": 2.7811326656314184,
+      "cross_section_over_e4": 0.0014651235624919903,
+      "continuum_Klein_Nishina_over_e4": 0.0014667510749829886,
+      "cross_section_relative_to_KN": 0.9988903962514449,
+      "Ward_in": 1.6104788067381386e-16,
+      "Ward_out": 1.655452393949211e-16,
+      "double_Ward": 1.0227197525899391e-18,
+      "adverse_controls": {
+        "contact": 6.676146791712321e-05,
+        "pole": 0.004690756293175384,
+        "temporal_contact": 1.4207026828871475e-07,
+        "residue_squared": 2.8601244905513656
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.4,
+      "energy_ratio": 0.5,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.4810169183652368,
+      "exact_energy_defect": 7.806255641895632e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860938914995573
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999962208506832
+      ],
+      "amplitude_squared_over_e4": 3.698409660351158,
+      "cross_section_over_e4": 0.0027648502099710433,
+      "continuum_Klein_Nishina_over_e4": 0.002765716715526253,
+      "cross_section_relative_to_KN": 0.9996866976468178,
+      "Ward_in": 2.5890125750824956e-16,
+      "Ward_out": 2.582874645023586e-16,
+      "double_Ward": 6.6012576277516275e-18,
+      "adverse_controls": {
+        "contact": 0.00010694261383739685,
+        "pole": 0.0038042676231039075,
+        "temporal_contact": 1.875710738900938e-06,
+        "residue_squared": 3.8035024323513427
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.4,
+      "energy_ratio": 0.5,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.37914077658663653,
+      "exact_energy_defect": 5.204170427930421e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860731148651212
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999976521253963
+      ],
+      "amplitude_squared_over_e4": 2.4117802045047063,
+      "cross_section_over_e4": 0.0011201277370525664,
+      "continuum_Klein_Nishina_over_e4": 0.0011223412938271482,
+      "cross_section_relative_to_KN": 0.9980277329304764,
+      "Ward_in": 7.871021822704423e-16,
+      "Ward_out": 6.496650782220621e-16,
+      "double_Ward": 1.61255396438037e-17,
+      "adverse_controls": {
+        "contact": 0.00026222128965287914,
+        "pole": 0.00959896277766586,
+        "temporal_contact": 1.5163530552507652e-06,
+        "residue_squared": 2.4803577043849336
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.4,
+      "energy_ratio": 0.5,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.27869265665157017,
+      "exact_energy_defect": 5.0306980803327406e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860506922728367
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999987313980329
+      ],
+      "amplitude_squared_over_e4": 3.3755998243248126,
+      "cross_section_over_e4": 0.0008470844509224743,
+      "continuum_Klein_Nishina_over_e4": 0.0008520110338684285,
+      "cross_section_relative_to_KN": 0.9942177005342456,
+      "Ward_in": 5.273339225224758e-16,
+      "Ward_out": 1.946211444745587e-16,
+      "double_Ward": 8.27304405515015e-18,
+      "adverse_controls": {
+        "contact": 0.00023256084502211883,
+        "pole": 0.012989082139481738,
+        "temporal_contact": 1.141494292174107e-06,
+        "residue_squared": 3.471654396890381
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.4,
+      "energy_ratio": 1.0,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.9268444763603209,
+      "exact_energy_defect": 1.5439038936193583e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860830898219094
+      ],
+      "photon_LSZ_factors": [
+        0.9999836669067629,
+        0.9999859691793513
+      ],
+      "amplitude_squared_over_e4": 3.7059252806048275,
+      "cross_section_over_e4": 0.0025717054639952442,
+      "continuum_Klein_Nishina_over_e4": 0.0025730031595958647,
+      "cross_section_relative_to_KN": 0.9994956494337052,
+      "Ward_in": 4.2028749348401447e-16,
+      "Ward_out": 4.0025950989636923e-16,
+      "double_Ward": 1.0388395246615465e-17,
+      "adverse_controls": {
+        "contact": 0.0002167180789254882,
+        "pole": 0.007467916617975666,
+        "temporal_contact": 7.327385224041113e-06,
+        "residue_squared": 3.8114448864989345
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.4,
+      "energy_ratio": 1.0,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.6106888524465275,
+      "exact_energy_defect": 5.204170427930421e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9860088921128042
+      ],
+      "photon_LSZ_factors": [
+        0.9999836669067629,
+        0.9999939086657771
+      ],
+      "amplitude_squared_over_e4": 2.7440566849754915,
+      "cross_section_over_e4": 0.000826622718430948,
+      "continuum_Klein_Nishina_over_e4": 0.0008310034541623651,
+      "cross_section_relative_to_KN": 0.9947283784327554,
+      "Ward_in": 2.6576374910073256e-16,
+      "Ward_out": 1.740441990879511e-16,
+      "double_Ward": 4.038115886503586e-18,
+      "adverse_controls": {
+        "contact": 0.000555865364867633,
+        "pole": 0.01722714902004591,
+        "temporal_contact": 5.1942987463659605e-06,
+        "residue_squared": 2.822356354232503
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.01,
+      "mass": 1.4,
+      "energy_ratio": 1.0,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.38641658544704294,
+      "exact_energy_defect": 5.0306980803327406e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.986097544262862,
+        0.9859447033953092
+      ],
+      "photon_LSZ_factors": [
+        0.9999836669067629,
+        0.9999975611483206
+      ],
+      "amplitude_squared_over_e4": 4.586786359728674,
+      "cross_section_over_e4": 0.0005531998368125668,
+      "continuum_Klein_Nishina_over_e4": 0.0005596317105779268,
+      "cross_section_relative_to_KN": 0.988506952619397,
+      "Ward_in": 3.4030309082185325e-16,
+      "Ward_out": 3.210609281986282e-16,
+      "double_Ward": 8.877533307287418e-18,
+      "adverse_controls": {
+        "contact": 0.0005031392300536699,
+        "pole": 0.021626710940651994,
+        "temporal_contact": 3.4427977754400154e-06,
+        "residue_squared": 4.7179396583268165
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 0.7,
+      "energy_ratio": 0.15,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.14824467123376403,
+      "exact_energy_defect": 5.312590645178972e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9965061178604149,
+        0.9965060964887166
+      ],
+      "photon_LSZ_factors": [
+        0.9999999770312505,
+        0.9999999775656745
+      ],
+      "amplitude_squared_over_e4": 3.6969202296174073,
+      "cross_section_over_e4": 0.011666484580277432,
+      "continuum_Klein_Nishina_over_e4": 0.01166668130327658,
+      "cross_section_relative_to_KN": 0.9999831380497988,
+      "Ward_in": 9.40961316905671e-17,
+      "Ward_out": 1.0687685130139153e-16,
+      "double_Ward": 6.356815277251978e-19,
+      "adverse_controls": {
+        "contact": 2.017711767887777e-06,
+        "pole": 0.0002922524110941006,
+        "temporal_contact": 2.6978095914755403e-09,
+        "residue_squared": 3.722889875386046
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 0.7,
+      "energy_ratio": 0.15,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.1369055907354992,
+      "exact_energy_defect": 2.377655364260711e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9965061178604149,
+        0.9965059575286337
+      ],
+      "photon_LSZ_factors": [
+        0.9999999770312505,
+        0.9999999808663774
+      ],
+      "amplitude_squared_over_e4": 2.279151538961007,
+      "cross_section_over_e4": 0.006134190804263246,
+      "continuum_Klein_Nishina_over_e4": 0.006134595879118179,
+      "cross_section_relative_to_KN": 0.9999339687792129,
+      "Ward_in": 1.9356595826054893e-16,
+      "Ward_out": 3.023762383497514e-16,
+      "double_Ward": 1.4328987163704518e-18,
+      "adverse_controls": {
+        "contact": 4.84283467526085e-06,
+        "pole": 0.0007982185185722362,
+        "temporal_contact": 2.498552874948017e-09,
+        "residue_squared": 2.2951621320074125
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 0.7,
+      "energy_ratio": 0.15,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.12113644319079415,
+      "exact_energy_defect": 1.22514845490862e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9965061178604149,
+        0.9965057616781734
+      ],
+      "photon_LSZ_factors": [
+        0.9999999770312505,
+        0.9999999850202531
+      ],
+      "amplitude_squared_over_e4": 2.783683452421606,
+      "cross_section_over_e4": 0.005865582548311329,
+      "continuum_Klein_Nishina_over_e4": 0.005867004299931955,
+      "cross_section_relative_to_KN": 0.9997576699201256,
+      "Ward_in": 2.851204871212481e-17,
+      "Ward_out": 3.999946701648793e-17,
+      "double_Ward": 1.886629998289265e-19,
+      "adverse_controls": {
+        "contact": 4.217191738624363e-06,
+        "pole": 0.0011850965490970158,
+        "temporal_contact": 2.219465835587072e-09,
+        "residue_squared": 2.803238810967861
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 0.7,
+      "energy_ratio": 0.5,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.48101473962561414,
+      "exact_energy_defect": 4.7704895589362195e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9965061178604149,
+        0.996505884719077
+      ],
+      "photon_LSZ_factors": [
+        0.9999997447917253,
+        0.9999997638045542
+      ],
+      "amplitude_squared_over_e4": 3.699606755034077,
+      "cross_section_over_e4": 0.01106260116407215,
+      "continuum_Klein_Nishina_over_e4": 0.011062866862105012,
+      "cross_section_relative_to_KN": 0.9999759828951958,
+      "Ward_in": 7.746407916809289e-17,
+      "Ward_out": 1.238198773207109e-16,
+      "double_Ward": 2.971098909881576e-19,
+      "adverse_controls": {
+        "contact": 6.75456874000516e-06,
+        "pole": 0.0009611405807835325,
+        "temporal_contact": 2.9305109941010748e-08,
+        "residue_squared": 3.72559938773085
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 0.7,
+      "energy_ratio": 0.5,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.37912737381410117,
+      "exact_energy_defect": 2.90132501357121e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9965061178604149,
+        0.9965045586236805
+      ],
+      "photon_LSZ_factors": [
+        0.9999997447917253,
+        0.9999998532679213
+      ],
+      "amplitude_squared_over_e4": 2.4156340048220453,
+      "cross_section_over_e4": 0.004487308214851254,
+      "continuum_Klein_Nishina_over_e4": 0.004489365175308593,
+      "cross_section_relative_to_KN": 0.9995418148497582,
+      "Ward_in": 5.269958157568974e-16,
+      "Ward_out": 5.541558164827456e-16,
+      "double_Ward": 3.788707967636958e-18,
+      "adverse_controls": {
+        "contact": 1.6567605821906447e-05,
+        "pole": 0.0024251712351106487,
+        "temporal_contact": 2.3677614947986494e-08,
+        "residue_squared": 2.432608526059468
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 0.7,
+      "energy_ratio": 0.5,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.2786694415076036,
+      "exact_energy_defect": 1.431146867680866e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9965061178604149,
+        0.9965031274951635
+      ],
+      "photon_LSZ_factors": [
+        0.9999997447917253,
+        0.999999920725501
+      ],
+      "amplitude_squared_over_e4": 3.390882963626189,
+      "cross_section_over_e4": 0.0034031078853771174,
+      "continuum_Klein_Nishina_over_e4": 0.003408044135473714,
+      "cross_section_relative_to_KN": 0.9985515885650611,
+      "Ward_in": 2.7820775733266e-16,
+      "Ward_out": 1.89953550907035e-16,
+      "double_Ward": 1.047640059269404e-18,
+      "adverse_controls": {
+        "contact": 1.4704448500332796e-05,
+        "pole": 0.003281700020297725,
+        "temporal_contact": 1.7814246965233813e-08,
+        "residue_squared": 3.4147149465555344
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 0.7,
+      "energy_ratio": 1.0,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.9268369583928894,
+      "exact_energy_defect": 1.7780915628762273e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9965061178604149,
+        0.9965051953000388
+      ],
+      "photon_LSZ_factors": [
+        0.9999989791676045,
+        0.9999991230775541
+      ],
+      "amplitude_squared_over_e4": 3.7080497875774037,
+      "cross_section_over_e4": 0.010291516066647561,
+      "continuum_Klein_Nishina_over_e4": 0.010292012638383459,
+      "cross_section_relative_to_KN": 0.9999517517366773,
+      "Ward_in": 8.689573642677439e-17,
+      "Ward_out": 6.506010692885813e-17,
+      "double_Ward": 3.9873523165033087e-19,
+      "adverse_controls": {
+        "contact": 1.3688964584122442e-05,
+        "pole": 0.0018867909037132286,
+        "temporal_contact": 1.1444825114565574e-07,
+        "residue_squared": 3.734114825519104
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 0.7,
+      "energy_ratio": 1.0,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.6106374396180466,
+      "exact_energy_defect": 1.6783449630075609e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9965061178604149,
+        0.9965004593038016
+      ],
+      "photon_LSZ_factors": [
+        0.9999989791676045,
+        0.9999996193537543
+      ],
+      "amplitude_squared_over_e4": 2.7556073084371127,
+      "cross_section_over_e4": 0.003319777683150576,
+      "continuum_Klein_Nishina_over_e4": 0.0033240138166494605,
+      "cross_section_relative_to_KN": 0.9987255969040603,
+      "Ward_in": 4.416285193378307e-16,
+      "Ward_out": 3.853787130287068e-16,
+      "double_Ward": 2.457613626151384e-19,
+      "adverse_controls": {
+        "contact": 3.515815623459478e-05,
+        "pole": 0.004352655666022056,
+        "temporal_contact": 8.099399060453941e-08,
+        "residue_squared": 2.774987765380719
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 0.7,
+      "energy_ratio": 1.0,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.38632979807545675,
+      "exact_energy_defect": 1.1405806854547507e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9965061178604149,
+        0.9964963622183062
+      ],
+      "photon_LSZ_factors": [
+        0.9999989791676045,
+        0.9999998476399182
+      ],
+      "amplitude_squared_over_e4": 4.628610216848236,
+      "cross_section_over_e4": 0.002231983971336291,
+      "continuum_Klein_Nishina_over_e4": 0.002238526842311707,
+      "cross_section_relative_to_KN": 0.997077153218918,
+      "Ward_in": 2.1242003634842923e-16,
+      "Ward_out": 1.2805825392785303e-16,
+      "double_Ward": 8.239938500122954e-20,
+      "adverse_controls": {
+        "contact": 3.1879214246146456e-05,
+        "pole": 0.00546441953604381,
+        "temporal_contact": 5.361440353138698e-08,
+        "residue_squared": 4.6611807234364155
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.0,
+      "energy_ratio": 0.15,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.14824468589271722,
+      "exact_energy_defect": 9.75781955236954e-18,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9950124791926824,
+        0.9950124357076183
+      ],
+      "photon_LSZ_factors": [
+        0.999999953125002,
+        0.9999999542156542
+      ],
+      "amplitude_squared_over_e4": 3.6968553555497414,
+      "cross_section_over_e4": 0.00571647917062893,
+      "continuum_Klein_Nishina_over_e4": 0.005716673838605524,
+      "cross_section_relative_to_KN": 0.9999659473354455,
+      "Ward_in": 3.130576205186492e-16,
+      "Ward_out": 3.44260772313496e-16,
+      "double_Ward": 3.112409796851414e-18,
+      "adverse_controls": {
+        "contact": 4.1116066143428665e-06,
+        "pole": 0.00041687677175811385,
+        "temporal_contact": 7.865344906359676e-09,
+        "residue_squared": 3.734010224728387
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.0,
+      "energy_ratio": 0.15,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.1369056940332277,
+      "exact_energy_defect": 4.0115480381963664e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9950124791926824,
+        0.9950121529649522
+      ],
+      "photon_LSZ_factors": [
+        0.999999953125002,
+        0.9999999609517325
+      ],
+      "amplitude_squared_over_e4": 2.2790629350673277,
+      "cross_section_over_e4": 0.003005641374422214,
+      "continuum_Klein_Nishina_over_e4": 0.0030059519807679076,
+      "cross_section_relative_to_KN": 0.9998966695583692,
+      "Ward_in": 5.472040820687076e-16,
+      "Ward_out": 5.837063053899398e-16,
+      "double_Ward": 4.8726757009533376e-18,
+      "adverse_controls": {
+        "contact": 9.868483431877025e-06,
+        "pole": 0.0011386007588238172,
+        "temporal_contact": 7.284486701724572e-09,
+        "residue_squared": 2.301969048675699
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.0,
+      "energy_ratio": 0.15,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.12113665243524384,
+      "exact_energy_defect": 2.5370330836160804e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9950124791926824,
+        0.9950117544667786
+      ],
+      "photon_LSZ_factors": [
+        0.999999953125002,
+        0.9999999694289831
+      ],
+      "amplitude_squared_over_e4": 2.783364726342615,
+      "cross_section_over_e4": 0.002873816166450224,
+      "continuum_Klein_Nishina_over_e4": 0.0028748321069666572,
+      "cross_section_relative_to_KN": 0.9996466087483956,
+      "Ward_in": 1.0811701493079597e-16,
+      "Ward_out": 4.487861409540993e-17,
+      "double_Ward": 4.088221790844756e-19,
+      "adverse_controls": {
+        "contact": 8.59345488071744e-06,
+        "pole": 0.0016904545807199113,
+        "temporal_contact": 6.470895271412743e-09,
+        "residue_squared": 2.8113404900164762
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.0,
+      "energy_ratio": 0.5,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.48101489179992835,
+      "exact_energy_defect": 2.0686577451023425e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9950124791926824,
+        0.9950120048191057
+      ],
+      "photon_LSZ_factors": [
+        0.9999994791669108,
+        0.9999995179682797
+      ],
+      "amplitude_squared_over_e4": 3.6995184979047893,
+      "cross_section_over_e4": 0.0054205581692158425,
+      "continuum_Klein_Nishina_over_e4": 0.005420804762431455,
+      "cross_section_relative_to_KN": 0.9999545098511348,
+      "Ward_in": 2.2059966832984875e-16,
+      "Ward_out": 1.1525252837755778e-16,
+      "double_Ward": 1.1744481694756983e-18,
+      "adverse_controls": {
+        "contact": 1.3764149079309509e-05,
+        "pole": 0.0013709964790430287,
+        "temporal_contact": 8.54388447124067e-08,
+        "residue_squared": 3.7367085532384934
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.0,
+      "energy_ratio": 0.5,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.37912830985453116,
+      "exact_energy_defect": 2.1120258320017626e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9950124791926824,
+        0.9950093066084947
+      ],
+      "photon_LSZ_factors": [
+        0.9999994791669108,
+        0.9999997005453405
+      ],
+      "amplitude_squared_over_e4": 2.415128564964621,
+      "cross_section_over_e4": 0.00219833332391157,
+      "continuum_Klein_Nishina_over_e4": 0.00219978893590121,
+      "cross_section_relative_to_KN": 0.9993382947036945,
+      "Ward_in": 4.964880193743109e-16,
+      "Ward_out": 3.814813679291984e-16,
+      "double_Ward": 6.91424561849017e-19,
+      "adverse_controls": {
+        "contact": 3.3759135382521084e-05,
+        "pole": 0.0034593274915617014,
+        "temporal_contact": 6.90372814252774e-08,
+        "residue_squared": 2.4394127906335115
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.0,
+      "energy_ratio": 0.5,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.2786710626803896,
+      "exact_energy_defect": 1.1709383462843448e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9950124791926824,
+        0.9950063946834928
+      ],
+      "photon_LSZ_factors": [
+        0.9999994791669108,
+        0.9999998382134379
+      ],
+      "amplitude_squared_over_e4": 3.3887374797864744,
+      "cross_section_over_e4": 0.0016664872848160535,
+      "continuum_Klein_Nishina_over_e4": 0.0016699416263821199,
+      "cross_section_relative_to_KN": 0.9979314596920671,
+      "Ward_in": 4.530337206924262e-16,
+      "Ward_out": 4.099403802611676e-16,
+      "double_Ward": 3.395483026244248e-18,
+      "adverse_controls": {
+        "contact": 2.9959544717115407e-05,
+        "pole": 0.004681100775496175,
+        "temporal_contact": 5.194538321619301e-08,
+        "residue_squared": 3.4228204611752093
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.0,
+      "energy_ratio": 1.0,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.9268374842013588,
+      "exact_energy_defect": 3.642919299551295e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9950124791926824,
+        0.9950106020542735
+      ],
+      "photon_LSZ_factors": [
+        0.9999979166705729,
+        0.9999982103617947
+      ],
+      "amplitude_squared_over_e4": 3.707883383891892,
+      "cross_section_over_e4": 0.005042657491067503,
+      "continuum_Klein_Nishina_over_e4": 0.005043086192807894,
+      "cross_section_relative_to_KN": 0.9999149921845472,
+      "Ward_in": 4.0709115974108694e-16,
+      "Ward_out": 4.46718773480645e-16,
+      "double_Ward": 4.127910116743924e-18,
+      "adverse_controls": {
+        "contact": 2.789452000269073e-05,
+        "pole": 0.002691365067853664,
+        "temporal_contact": 3.336863113848725e-07,
+        "residue_squared": 3.745184306713458
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.0,
+      "energy_ratio": 1.0,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.6106410326945739,
+      "exact_energy_defect": 2.6020852139652106e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9950124791926824,
+        0.995000965740457
+      ],
+      "photon_LSZ_factors": [
+        0.9999979166705729,
+        0.9999992231620622
+      ],
+      "amplitude_squared_over_e4": 2.7540391915512625,
+      "cross_section_over_e4": 0.0016257869132372776,
+      "continuum_Klein_Nishina_over_e4": 0.0016287667701582356,
+      "cross_section_relative_to_KN": 0.9981704827385025,
+      "Ward_in": 6.623652889559352e-16,
+      "Ward_out": 6.850391116751806e-16,
+      "double_Ward": 5.3581750873040726e-18,
+      "adverse_controls": {
+        "contact": 7.162972245117283e-05,
+        "pole": 0.006208718899307581,
+        "temporal_contact": 2.362032956000996e-07,
+        "residue_squared": 2.7817658462664205
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.0,
+      "energy_ratio": 1.0,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.3863358607278008,
+      "exact_energy_defect": 1.0234868508263162e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9950124791926824,
+        0.994992629409839
+      ],
+      "photon_LSZ_factors": [
+        0.9999979166705729,
+        0.9999996890513427
+      ],
+      "amplitude_squared_over_e4": 4.622699526124836,
+      "cross_section_over_e4": 0.0010923094252667273,
+      "continuum_Klein_Nishina_over_e4": 0.0010968781527327363,
+      "cross_section_relative_to_KN": 0.9958347903505721,
+      "Ward_in": 1.9275033268464805e-16,
+      "Ward_out": 4.894355288827742e-16,
+      "double_Ward": 2.7862262327555917e-18,
+      "adverse_controls": {
+        "contact": 6.493334961543141e-05,
+        "pole": 0.007794546437546753,
+        "temporal_contact": 1.5638345410156863e-07,
+        "residue_squared": 4.66927393599846
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.4,
+      "energy_ratio": 0.15,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.14824471343107956,
+      "exact_energy_defect": 1.929879867024198e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930243580427348
+      ],
+      "photon_LSZ_factors": [
+        0.9999999081250076,
+        0.9999999102626523
+      ],
+      "amplitude_squared_over_e4": 3.696733940232055,
+      "cross_section_over_e4": 0.0029164771755615694,
+      "continuum_Klein_Nishina_over_e4": 0.002916670325819145,
+      "cross_section_relative_to_KN": 0.9999337771376264,
+      "Ward_in": 4.749499885825777e-16,
+      "Ward_out": 4.66472852106256e-16,
+      "double_Ward": 6.225601655899046e-18,
+      "adverse_controls": {
+        "contact": 8.042646159465491e-06,
+        "pole": 0.0005824590592027264,
+        "temporal_contact": 2.1582546665541216e-08,
+        "residue_squared": 3.7488538740484847
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.4,
+      "energy_ratio": 0.15,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.1369058880890957,
+      "exact_energy_defect": 7.827939685345342e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930238060787928
+      ],
+      "photon_LSZ_factors": [
+        0.9999999081250076,
+        0.9999999234651813
+      ],
+      "amplitude_squared_over_e4": 2.2789237944766048,
+      "cross_section_over_e4": 0.0015334014139286914,
+      "continuum_Klein_Nishina_over_e4": 0.0015336489697795447,
+      "cross_section_relative_to_KN": 0.9998385837595621,
+      "Ward_in": 5.062136658044397e-16,
+      "Ward_out": 4.3796343634175206e-16,
+      "double_Ward": 4.157451937197656e-18,
+      "adverse_controls": {
+        "contact": 1.9303478859859603e-05,
+        "pole": 0.001590850314072802,
+        "temporal_contact": 1.9988916113487924e-08,
+        "residue_squared": 2.311055368569848
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.4,
+      "energy_ratio": 0.15,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.12113704552493729,
+      "exact_energy_defect": 1.6458188978329957e-16,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.993023028137994
+      ],
+      "photon_LSZ_factors": [
+        0.9999999081250076,
+        0.9999999400804194
+      ],
+      "amplitude_squared_over_e4": 2.782915958689416,
+      "cross_section_over_e4": 0.0014660057335608686,
+      "continuum_Klein_Nishina_over_e4": 0.0014667510749829886,
+      "cross_section_relative_to_KN": 0.9994918419118058,
+      "Ward_in": 4.0242276502547166e-16,
+      "Ward_out": 7.774601510224022e-17,
+      "double_Ward": 8.496464811544109e-19,
+      "adverse_controls": {
+        "contact": 1.680910135104331e-05,
+        "pole": 0.0023619002365409263,
+        "temporal_contact": 1.775669715442711e-08,
+        "residue_squared": 2.8221556626566433
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.4,
+      "energy_ratio": 0.5,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.48101517764396345,
+      "exact_energy_defect": 1.9949319973733282e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930235168720043
+      ],
+      "photon_LSZ_factors": [
+        0.9999989791676045,
+        0.9999990552170989
+      ],
+      "amplitude_squared_over_e4": 3.6993576460526607,
+      "cross_section_over_e4": 0.0027654830550779665,
+      "continuum_Klein_Nishina_over_e4": 0.002765716715526253,
+      "cross_section_relative_to_KN": 0.9999155154080045,
+      "Ward_in": 1.6017363161627668e-16,
+      "Ward_out": 1.37223767158485e-16,
+      "double_Ward": 1.795023761463885e-18,
+      "adverse_controls": {
+        "contact": 2.6923762574545457e-05,
+        "pole": 0.001915551041939298,
+        "temporal_contact": 2.3444858830293098e-07,
+        "residue_squared": 3.7515311345747038
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.4,
+      "energy_ratio": 0.5,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.37913006815868217,
+      "exact_energy_defect": 8.933825901280557e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930182494899554
+      ],
+      "photon_LSZ_factors": [
+        0.9999989791676045,
+        0.999999413063575
+      ],
+      "amplitude_squared_over_e4": 2.4144311615629936,
+      "cross_section_over_e4": 0.0011212866142679986,
+      "continuum_Klein_Nishina_over_e4": 0.0011223412938271482,
+      "cross_section_relative_to_KN": 0.9990602862382858,
+      "Ward_in": 2.8838167384984145e-16,
+      "Ward_out": 6.047641646931894e-17,
+      "double_Ward": 1.0937829791988853e-18,
+      "adverse_controls": {
+        "contact": 6.603140161136894e-05,
+        "pole": 0.00483335589314169,
+        "temporal_contact": 1.8946158986840202e-07,
+        "residue_squared": 2.44849406445434
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.4,
+      "energy_ratio": 0.5,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.278674108060666,
+      "exact_energy_defect": 7.546047120499111e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930125648882077
+      ],
+      "photon_LSZ_factors": [
+        0.9999989791676045,
+        0.9999996828914516
+      ],
+      "amplitude_squared_over_e4": 3.3858571626517566,
+      "cross_section_over_e4": 0.0008495446108093628,
+      "continuum_Klein_Nishina_over_e4": 0.0008520110338684285,
+      "cross_section_relative_to_KN": 0.9971051747441962,
+      "Ward_in": 2.646780586386854e-16,
+      "Ward_out": 3.472107818051265e-16,
+      "double_Ward": 3.0220987529494197e-18,
+      "adverse_controls": {
+        "contact": 5.8591408299451414e-05,
+        "pole": 0.006540407187760092,
+        "temporal_contact": 1.4257061626538926e-07,
+        "residue_squared": 3.433642790195265
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.4,
+      "energy_ratio": 1.0,
+      "angle": 0.4,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.9268384714491827,
+      "exact_energy_defect": 9.80118763926896e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930207784219724
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999964923070689
+      ],
+      "amplitude_squared_over_e4": 3.707589878855652,
+      "cross_section_over_e4": 0.00257262007117874,
+      "continuum_Klein_Nishina_over_e4": 0.0025730031595958647,
+      "cross_section_relative_to_KN": 0.9998511123409639,
+      "Ward_in": 5.705395399333321e-17,
+      "Ward_out": 6.958241900711411e-17,
+      "double_Ward": 4.115338908507592e-19,
+      "adverse_controls": {
+        "contact": 5.456326436331297e-05,
+        "pole": 0.003760355412441779,
+        "temporal_contact": 9.157003251744914e-07,
+        "residue_squared": 3.7599321404630954
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.4,
+      "energy_ratio": 1.0,
+      "angle": 1.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.6106477806713201,
+      "exact_energy_defect": 4.2500725161431774e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9930019667624957
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999984773650124
+      ],
+      "amplitude_squared_over_e4": 2.751905607318618,
+      "cross_section_over_e4": 0.000828861153428257,
+      "continuum_Klein_Nishina_over_e4": 0.0008310034541623651,
+      "cross_section_relative_to_KN": 0.9974220314929166,
+      "Ward_in": 2.516288673034849e-16,
+      "Ward_out": 2.664262133949658e-16,
+      "double_Ward": 2.602346140406749e-18,
+      "adverse_controls": {
+        "contact": 0.00014007659635056652,
+        "pole": 0.008674732932690405,
+        "temporal_contact": 6.483955163612884e-07,
+        "residue_squared": 2.790797691929452
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    },
+    {
+      "a": 0.005,
+      "mass": 1.4,
+      "energy_ratio": 1.0,
+      "angle": 2.2,
+      "axis": 2,
+      "outgoing_energy_over_mass": 0.3863472482255479,
+      "exact_energy_defect": 4.2500725161431774e-17,
+      "spin_multiplicity": 2,
+      "spin_normalization_defect": 3.1401849173675503e-16,
+      "fermion_pole_residues": [
+        0.9930244429332351,
+        0.9929856928603619
+      ],
+      "photon_LSZ_factors": [
+        0.9999959166816729,
+        0.9999993905048664
+      ],
+      "amplitude_squared_over_e4": 4.614785059594109,
+      "cross_section_over_e4": 0.0005563790117722952,
+      "continuum_Klein_Nishina_over_e4": 0.0005596317105779268,
+      "cross_section_relative_to_KN": 0.994187786817383,
+      "Ward_in": 3.090222058996761e-16,
+      "Ward_out": 1.0315530082863772e-16,
+      "double_Ward": 1.4156353794688645e-18,
+      "adverse_controls": {
+        "contact": 0.00012693939758782755,
+        "pole": 0.010890387147363005,
+        "temporal_contact": 4.293862182513662e-07,
+        "residue_squared": 4.68007296793946
+      },
+      "normalization": "External exact pole beta*R=(I+h/sinh E)/(2b), rank two positive; canonical spinors udagger u=1 carry b^(-1/2). Photon LSZ sqrt(E/sinh E)/sqrt(beta). Rate uses exact recoil and lattice group velocities.",
+      "scope": "Exact leading connected coefficient in induced weak-coupling finite prepared window; not an exact all-orders scattering amplitude."
+    }
+  ],
+  "hypercubic_consumer_rotation_spread": 0.0,
+  "current": "Vmu(pprime,p)=i gammamu cos((pprime+p)mu/2)+I sin((pprime+p)mu/2); qhat_mu Vmu=D(pprime)-D(p). Cmunu=delta_munu[I cos(Pmu)-i gammamu sin(Pmu)] INCLUDING temporal Wilson seagull. M=Vs S Vs+Vu S Vu-C.",
+  "debt": [
+    "Fundamental quantum Grassmann/Haar law and chosen a,m0,kappa,Naux are inputs.",
+    "Selected Phi Clifford frame not yet transported from an actual fluctuating-Phi/Root quantum law.",
+    "No infinite-volume compact Coulomb-phase or sharp interacting-pole claim.",
+    "Leading connected finite-energy Compton coefficient calculated; all-orders connected remainder not proved by the weak-coupling scale budget.",
+    "Finite packets replace asymptotic plane waves; momentum resolution 2pi/(L a), finite temporal observation and prepared chart prices explicit."
+  ],
+  "input_descriptor_sha256": "28a3f87c26469f9869af03638c0a020c90ca45d46f48d61d10cf9baa98e8bad3",
+  "runtime": {
+    "python": "3.12.3",
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "numpy": "2.5.3",
+    "elapsed_seconds": 0.519389655906707
+  }
+}

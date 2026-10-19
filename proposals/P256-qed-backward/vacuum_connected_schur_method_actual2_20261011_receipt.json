@@ -1,0 +1,111 @@
+{
+  "kind": "EXACT_VACUUM_CONNECTED_ENERGY_DEPENDENT_SCHUR_METHOD_BOUNDARY_CONTROL",
+  "method_only_not_native": true,
+  "H_exact": [
+    [
+      "0",
+      "0",
+      "6",
+      "0",
+      "1/2"
+    ],
+    [
+      "0",
+      "2",
+      "0",
+      "6",
+      "1/2"
+    ],
+    [
+      "6",
+      "0",
+      "3",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "6",
+      "0",
+      "3",
+      "0"
+    ],
+    [
+      "1/2",
+      "1/2",
+      "0",
+      "0",
+      "7"
+    ]
+  ],
+  "P_dimension": 2,
+  "Q_dimension": 3,
+  "coupling_parameter": 1,
+  "vacuum_scalar": "(145*z + 1011)/(4*(z + 3)*(z + 7))",
+  "connected_operator": [
+    [
+      "0",
+      "1/(4*(z + 7))"
+    ],
+    [
+      "1/(4*(z + 7))",
+      "0"
+    ]
+  ],
+  "scalar_subtraction_identity": "S(z)=K+(z-w0(z))I-(W(z)-w0(z)I)",
+  "connected_QP_offdiagonal_retained": true,
+  "zero_excited_diagonal_is_not_zero_connected_operator": true,
+  "absolute_W0_exceeds_reference_gap": true,
+  "shift_derivative_metric_exact": [
+    [
+      "(4*z**4 + 80*z**3 + 713*z**2 + 3702*z + 8829)/(4*(z + 3)**2*(z + 7)**2)",
+      "1/(4*(z + 7)**2)"
+    ],
+    [
+      "1/(4*(z + 7)**2)",
+      "(4*z**4 + 80*z**3 + 713*z**2 + 3702*z + 8829)/(4*(z + 3)**2*(z + 7)**2)"
+    ]
+  ],
+  "derivative_sign": "W_prime(z)=-Jdag(HQ+z)^-2 J; S_prime=I-W_prime, not I+W_prime",
+  "finite_positive_shift_controls": [
+    {
+      "positive_resolvent_shift": 5,
+      "whole_H_plus_shift_positive_by_Schur": true,
+      "exact_projected_resolvent": [
+        [
+          "119/57",
+          "1/57"
+        ],
+        [
+          "1/57",
+          "23/57"
+        ]
+      ],
+      "drop_connected_offdiagonal_defect_exact": "1/57",
+      "frozen_energy_kernel_is_wrong": true,
+      "missing_offdiagonal_secular_term_exact": "-1/2304"
+    },
+    {
+      "positive_resolvent_shift": 64,
+      "whole_H_plus_shift_positive_by_Schur": true,
+      "exact_projected_resolvent": [
+        [
+          "83452319/5295814502",
+          "4489/5295814502"
+        ],
+        [
+          "4489/5295814502",
+          "80902567/5295814502"
+        ]
+      ],
+      "drop_connected_offdiagonal_defect_exact": "4489/5295814502",
+      "frozen_energy_kernel_is_wrong": true,
+      "missing_offdiagonal_secular_term_exact": "-1/80656"
+    }
+  ],
+  "source_or_ground_or_physical_law_not_adopted": true,
+  "stationary_native_ground_or_physical1_phase_or_pole": false,
+  "z_is_resolvent_energy_shift_not_photon_frequency": true,
+  "campaign_complete": false,
+  "elapsed_seconds": 0.4061513500055298
+}

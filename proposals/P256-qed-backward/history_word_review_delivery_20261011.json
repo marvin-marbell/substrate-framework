@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "owner": "HistoryWordProofReview",
+  "status": "COMPLETE_SCOPED_INDEPENDENT_REVIEW_WITH_PACKET_CORRECTION",
+  "proof": "history_word_review_proof_20261011.json",
+  "interface": "history_word_review_interface_20261011.json",
+  "current_epoch": "history_word_review_actual2_20261011",
+  "interface_epoch_reference": "Interface was captured for actual1; delivery explicitly selects strengthened actual2. Both snapshots retained, no rebinding.",
+  "capsule": "history_word_review_actual2_20261011_capsule.json",
+  "receipt": "history_word_review_actual2_20261011_receipt.json",
+  "language": "history_word_review_language_20261011.json",
+  "natural_exit": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/history_word_review_consumer_20261011.py",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/history_word_review_actual2_20261011_request.json",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/history_word_review_actual2_20261011_receipt.json"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 4.329042452009162,
+    "natural_exit": true,
+    "timeout": false,
+    "reason_for_successor": "Strengthened packet adverse case reaches exact normalized packet Q form, factorization and word graph assertions; actual1 preserved."
+  },
+  "findings": [
+    "PACKET_INITIAL_PROPAGATOR"
+  ],
+  "correction": "Packet full factorization retains U(t1) at far right. Start n=1,E=B0,g=eta; first propagate E by exp(Cstar|t1|), then original insertion/interval/leading-U recurrence. Exact ground unaffected.",
+  "packet_observed": {
+    "initial_form": "2",
+    "initial_graph_squared": "2",
+    "full_word_form": "31/2",
+    "full_word_graph_squared": "52",
+    "correct_factorization_equals_direct_evolved_word": true,
+    "omitted_initial_propagator_changes_word": true
+  },
+  "controls": {
+    "new_method_words": 121,
+    "native_literal_rows": 15,
+    "adverse_cases": 8,
+    "native_delta_fullE": "-8128",
+    "tL": "-21/64",
+    "tT": "-43/64"
+  },
+  "tooling_addendum": "Representative frozen consumer diagnostics empty after actual Pyright project-interpreter configuration; initial missing-sympy report resolved without repo config edits. See language JSON.",
+  "hashes": {
+    "history_word_review_consumer_20261011.py": "a1fc0f906208735e1ed49ce0a647061f9dbe44996901b8c4d3cf22391e679acd",
+    "history_word_review_proof_20261011.json": "015dc2ce2d2b5e96941a04a09cdc115e50951f23097c77c3b25c0324d7aa3e94",
+    "history_word_review_interface_20261011.json": "bd1c2ddd33356c8f6996cd846aea350fa84a5f09cce1a419b1f353db04c5c9f9",
+    "history_word_review_actual2_20261011_request.json": "ac8fd1775597bddaf08bdd119fb68375d1ef99f02ace01c7c2de31781258b85b",
+    "history_word_review_actual2_20261011_receipt.json": "b4d3b56c5b29f01a84ba386911f7c2793ddd44050a5983ae463db501205df414",
+    "history_word_review_actual2_20261011_preexecution.zip": "c1eb739490b3ad26f6dc4c976ef15ed069623e0ca10fe289956ca879ee642759",
+    "history_word_review_actual2_20261011_executed.zip": "c30181265e05aa7ef0bf59c8c5ce9751453354d3b9d82485b61b679dab26ef49",
+    "history_word_review_actual2_20261011_capsule.json": "c11ceae1f88ea682957a83710debef1c368ae153936f60df8d090eb8ac535b87",
+    "history_word_review_language_20261011.json": "0c83cfb105b53caa371fbc67089e58380fd05307395603598ec62cfce5455a08"
+  },
+  "parent_selected_checks": "Final selected LSP diagnostics and integrated new review receipt binding; no old producer/solver/checker rerun.",
+  "target_edits": false,
+  "shared_plan_docs_edits": false,
+  "scientific_admission": false,
+  "native_minimizing_ground_or_fullH_evolution": false,
+  "same_staticGNS_or_ground_phase_atom_promotion": false
+}

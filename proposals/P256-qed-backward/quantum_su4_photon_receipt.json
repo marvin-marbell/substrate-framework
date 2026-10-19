@@ -1,0 +1,3070 @@
+{
+  "model": "Two-cell actual continuous SU4 Gauss + compact U1 two-path EFT",
+  "parameters": {
+    "cutoffs": [
+      "minimal"
+    ],
+    "R": [
+      1
+    ],
+    "numbers": [
+      3,
+      4,
+      5
+    ],
+    "lambdas": [
+      1.0
+    ],
+    "inertias": [
+      2.0
+    ],
+    "heavy_sign": -1,
+    "ue4": 0.3,
+    "ue1": 0.4,
+    "magnetic": 0.7,
+    "stiffness": 2.0,
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.3,
+    "heavy_m": null,
+    "heavy_r": null,
+    "heavy_v": null,
+    "levels": 8,
+    "max_ground_rank": 32,
+    "tol": 1e-10,
+    "photon_steps": 12,
+    "resolvent_tol": 1e-09,
+    "identity_tol": 2e-06,
+    "gap_fraction": 0.2,
+    "maxiter": 6000,
+    "seed": 222,
+    "operators_only": false
+  },
+  "hypotheses": [
+    "Fundamental simultaneous adjoint orbit declared EFT, not full60 field quantum phase",
+    "Two parallel EM paths; colour U and U dagger tied by explicit flat-colour-loop EFT constraint",
+    "One colour canonical momentum; all native physical states retained for every independent ell",
+    "Primitive Pauli fullCAR/code and neutral boundary marker unchanged",
+    "J0 omitted, no compressed PUP Higgs product"
+  ],
+  "source_interpretation": "PRIMARY independent finite external light-matter sources; quantum magnetic potential stays dynamical and source-independent. Optional apply magnetic_background explicitly chooses additional external curl.",
+  "excluded_claims": [
+    "3D photon",
+    "Lorentz invariance",
+    "on-shell S matrix",
+    "recoil scattering",
+    "full phase",
+    "canonical QED"
+  ],
+  "selected_frame_real": [
+    [
+      [
+        0.0,
+        0.0,
+        0.6483983251503319,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.6483983251503319
+      ],
+      [
+        0.6483983251503319,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.6483983251503319,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.23863957694084134,
+        0.0,
+        0.0
+      ],
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.0,
+        -0.23863957694084134
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        -0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.23863957694084134,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        -0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        -0.0,
+        0.23863957694084134
+      ]
+    ]
+  ],
+  "selected_frame_imaginary": [
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        -0.23863957694084134,
+        0.0,
+        0.0
+      ],
+      [
+        0.23863957694084134,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.23863957694084134
+      ],
+      [
+        0.0,
+        0.0,
+        -0.23863957694084134,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  ],
+  "selected_gram": [
+    0.42042038805775556,
+    0.05694884768250374,
+    0.05694884768250374,
+    0.05694884768250374
+  ],
+  "links": [
+    {
+      "cutoff": [
+        "1",
+        "4",
+        "bar4"
+      ],
+      "dimension": 33,
+      "dimensions": {
+        "1": 1,
+        "4": 4,
+        "bar4": 4
+      },
+      "casimirs": {
+        "1": 0.0,
+        "4": 1.875,
+        "bar4": 1.875,
+        "6": 2.4999999999999996,
+        "10": 4.5,
+        "bar10": 4.5,
+        "15": 4.0
+      },
+      "lie_residual": 3.8718637878417907e-16,
+      "hermiticity_residual": 0.0,
+      "electric_lie_residual": 3.925231146709438e-16,
+      "casimir_residual": 3.076740298213702e-15,
+      "cg_intertwiner_residual": 2.7194799110210365e-16,
+      "cg_isometry_residual": 8.222140951789457e-16,
+      "centre_residual": 5.684383067706609e-15,
+      "multiplication_commutator_residual": 0.0,
+      "adjoint_commutator_residual": 0.0,
+      "left_right_residual": 0.0,
+      "compressed_unitarity_defect": 5.5,
+      "haar_inner_product": "exact Schur delta_rr delta_ac delta_bd; no quadrature",
+      "alignment_J": 0.0,
+      "alignment_scope": "omitted, not factorized compressed U"
+    }
+  ],
+  "runs": [
+    {
+      "cutoff": "minimal",
+      "R": 1,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "NH": 4,
+      "NL": 3,
+      "charge": -1,
+      "dimension": 392160,
+      "base_dimension": 130720,
+      "boundary_rep": "4",
+      "boundary_dimension": 4,
+      "tensor_shapes": {
+        "1": [
+          1320,
+          1,
+          1,
+          4,
+          3
+        ],
+        "4": [
+          640,
+          4,
+          4,
+          4,
+          3
+        ],
+        "bar4": [
+          1320,
+          4,
+          4,
+          4,
+          3
+        ]
+      },
+      "operators": {
+        "hermiticity": 4.9506741726839365e-17,
+        "pure_gradient_covariance": 1.2751240295102075e-15,
+        "current_derivative": 6.544887338977614e-11,
+        "contact_derivative": 1.3033702353473692e-08,
+        "density_current_Ward": 1.0032061239253197e-15,
+        "density_contact_Ward": 4.8636744100207585e-15,
+        "orientation_matches_individual_ell_slots": 0.0,
+        "formal_S_identity_old_hop": 4.3827004895380515e-18,
+        "full_Lie_Gauss_square_residual": 9.067589113778142e-16,
+        "angular_Gauss_positive_square_expectation": 3.4470459892524214,
+        "heavy_source_current_norm": 0.0,
+        "wrong_Gauss_defect": 1.1055709681267916,
+        "wrong_heavy_EM_defect": 0.3923983230539796,
+        "wrapping_defect": 0.41279564152042963,
+        "no_loop_wrapping": true,
+        "heavy_EM_neutral": true,
+        "complete_old_domain_each_ell": true
+      },
+      "spectrum": {
+        "energies": [
+          -0.5240486984277062,
+          -0.3089793152799993,
+          -0.20025403610734574,
+          0.12632625984236714,
+          0.16765294917541057,
+          0.16919893612420953,
+          0.198233657377291,
+          0.20143899776380753
+        ],
+        "full_H_residuals": [
+          3.00066490513705e-15,
+          3.0408176066380156e-15,
+          2.8468421134104784e-15,
+          9.403816128857907e-15,
+          3.2438602463316558e-15,
+          4.71305311574675e-15,
+          1.0666729251997915e-13,
+          1.649535446707591e-13
+        ],
+        "residual_limit": 1e-10,
+        "residual_scale": "max(1,abs(E))",
+        "orthogonality": 7.081716534455018e-15,
+        "ground_rank": 1,
+        "measured_complement_gap": 0.21506938314756158,
+        "degeneracy_resolution": 2e-09,
+        "independent_deflated_ground_completion": [
+          {
+            "candidate_energy": -0.3089793152801446,
+            "full_H_residual": 1.457454086434195e-13,
+            "existing_rank": 1
+          }
+        ],
+        "interpretation": "finite same-H Ritz multiplet and measured complement, not infinite gap"
+      },
+      "ground_photon": {
+        "ensemble": "normalized projector onto measured full ground rank",
+        "ell_values": [
+          -1,
+          0,
+          1
+        ],
+        "ell_probabilities": [
+          0.1564124739546226,
+          0.6870619296139064,
+          0.1565255964314725
+        ],
+        "sinB_eigenvalues": [
+          -0.7071067811865475,
+          -3.0357660829594124e-18,
+          0.7071067811865475
+        ],
+        "sinB_probabilities": [
+          0.3435755669942075,
+          0.31284886601158435,
+          0.3435755669942075
+        ],
+        "ell_nleft_joint_probabilities": [
+          [
+            6.020192320094043e-11,
+            1.3404800461427628e-09,
+            2.974622507641184e-09
+          ],
+          [
+            3.2496681614837626e-05,
+            0.0003543147552157727,
+            0.0003164120663889147
+          ],
+          [
+            0.15631018960491458,
+            0.6866305674698078,
+            0.15620203732075516
+          ],
+          [
+            6.978760789266797e-05,
+            7.704604840117053e-05,
+            7.144069705811799e-06
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "photon_reduced_purity": 0.9997956683169903,
+        "ell_nleft_colour_joint_probabilities": {
+          "1": [
+            [
+              5.294932246348726e-13,
+              1.2903625537084209e-11,
+              2.9775099026687904e-11
+            ],
+            [
+              2.364739606231497e-06,
+              2.7690202661754292e-05,
+              2.1930252074894956e-05
+            ],
+            [
+              0.15615590518760777,
+              0.6859539113383258,
+              0.15604801539322982
+            ],
+            [
+              6.33092694270812e-06,
+              7.828447710951796e-06,
+              6.729996055311494e-07
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "4": [
+            [
+              8.458426678550436e-34,
+              9.672422975354424e-34,
+              1.8281915898296743e-33
+            ],
+            [
+              1.6717554504734398e-10,
+              1.9700434916613658e-09,
+              1.5317298191853816e-09
+            ],
+            [
+              7.633541512838438e-05,
+              0.0003340860198180328,
+              7.59662001018937e-05
+            ],
+            [
+              6.345621808444633e-05,
+              6.921701475280917e-05,
+              6.471020401882662e-06
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "bar4": [
+            [
+              5.967242997630557e-11,
+              1.3275764206056787e-09,
+              2.944847408614496e-09
+            ],
+            [
+              3.0131774833061068e-05,
+              0.0003266225825105266,
+              0.0002944802825842001
+            ],
+            [
+              7.794900217709132e-05,
+              0.00034257011166483086,
+              7.805572742370651e-05
+            ],
+            [
+              4.6286551347071603e-10,
+              5.859374095953618e-10,
+              4.9698397989227394e-11
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "ell_joint_matter_colour_independence_defect": 0.0003485127707444854,
+        "measured_photon_matter_colour_correlated": true,
+        "means": {
+          "ell": 0.00011312247684954271,
+          "sinB": -2.7538735181131813e-17,
+          "nleft": 1.9994507454719814,
+          "colour_C2": 0.0033287821294261384
+        },
+        "connected_correlations": {
+          "ell_nleft": -0.00034650261876812826,
+          "ell_colour_C2": 0.0003879446715159446,
+          "sinB_nleft": 1.7195977009826644e-18,
+          "sinB_colour_C2": 2.197841828101634e-19
+        },
+        "ell_matter_joint_independence_defect": 0.00036069002871676816,
+        "measured_ell_matter_correlated": true,
+        "ell_cutoff_shell_probability": 0.3129380703860951
+      },
+      "photon_response": [
+        {
+          "observable": "ell",
+          "finite_low_eigenstate_projection": true,
+          "active_poles": [
+            {
+              "energy": 0.2150693831477069,
+              "weight": 7.026780280277931e-06,
+              "full_H_residual": 3.038876518483005e-15
+            },
+            {
+              "energy": 0.32379466232036047,
+              "weight": 1.8149196454220992e-06,
+              "full_H_residual": 2.8820096921005726e-15
+            },
+            {
+              "energy": 0.6503749582700733,
+              "weight": 3.9396624866108403e-10,
+              "full_H_residual": 9.41132560371761e-15
+            },
+            {
+              "energy": 0.6917016476031168,
+              "weight": 5.4572067686203525e-08,
+              "full_H_residual": 3.249714795141738e-15
+            },
+            {
+              "energy": 0.6932476345519157,
+              "weight": 6.107703412110481e-05,
+              "full_H_residual": 4.7304904847980705e-15
+            },
+            {
+              "energy": 0.7222823558049972,
+              "weight": 1.76124961706803e-07,
+              "full_H_residual": 1.0666825850379008e-13
+            }
+          ],
+          "full_action_zeroth_moment": 0.3129380575893226,
+          "full_action_first_moment": 0.23005025540027463,
+          "half_double_commutator": 0.23005025540027302,
+          "energy_sumrule_residual": 1.609823385706477e-15,
+          "total_equal_time_weight": 0.3129380703860201,
+          "elastic_weight": 1.2796694768575327e-08,
+          "equal_time_closure_residual": 2.7755575615628914e-15,
+          "seen_inelastic_weight": 7.014982504244651e-05,
+          "unseen_inelastic_weight": 0.31286790776428014,
+          "source_active_Krylov": {
+            "finite_source_Krylov_projection": true,
+            "requested_steps": 12,
+            "columns": [
+              {
+                "column": 0,
+                "weight": 0.3129380575893226,
+                "projected_zeroth_moment": 0.3129380575893225,
+                "projected_first_moment": 0.23005025540028687,
+                "poles": [
+                  {
+                    "energy": 0.2189024567150982,
+                    "weight": 7.752963892586878e-06,
+                    "full_H_residual": 0.04931254467309023
+                  },
+                  {
+                    "energy": 0.5106427859675883,
+                    "weight": 6.485285826674486e-06,
+                    "full_H_residual": 0.4360747504797442
+                  },
+                  {
+                    "energy": 0.7344783648987152,
+                    "weight": 0.3127281429966381,
+                    "full_H_residual": 0.003730051458646316
+                  },
+                  {
+                    "energy": 1.1629086388368757,
+                    "weight": 1.1022216750823758e-05,
+                    "full_H_residual": 0.7799339631970355
+                  },
+                  {
+                    "energy": 1.6689876899328573,
+                    "weight": 0.00012572426784077144,
+                    "full_H_residual": 0.3301417034144247
+                  },
+                  {
+                    "energy": 2.064500893840547,
+                    "weight": 4.266646472760918e-05,
+                    "full_H_residual": 0.5385933744701221
+                  },
+                  {
+                    "energy": 2.5598938278126604,
+                    "weight": 1.505234103578372e-05,
+                    "full_H_residual": 0.4448690038203277
+                  },
+                  {
+                    "energy": 3.2101878047404604,
+                    "weight": 1.156067244202831e-06,
+                    "full_H_residual": 0.5303487103517861
+                  },
+                  {
+                    "energy": 3.8538133439015603,
+                    "weight": 5.3794958335696044e-08,
+                    "full_H_residual": 0.6864523301436719
+                  },
+                  {
+                    "energy": 4.633979239570191,
+                    "weight": 1.1840598488788068e-09,
+                    "full_H_residual": 0.6921316325017957
+                  },
+                  {
+                    "energy": 5.594604813172693,
+                    "weight": 6.338664043699426e-12,
+                    "full_H_residual": 0.7448326987467314
+                  },
+                  {
+                    "energy": 6.697956400902791,
+                    "weight": 9.196490724555631e-15,
+                    "full_H_residual": 0.7388865658443132
+                  }
+                ]
+              }
+            ],
+            "interpretation": "Positive Ritz quadrature, not exact eigenstate poles. Full-action zeroth/first moments fix total source weight; finite quadrature does not resolve the unseen exact spectral measure."
+          },
+          "interpretation": "Positive same-H low eigenstate Lehmann poles; unseen weight retained, no complete spectral claim"
+        },
+        {
+          "observable": "sin",
+          "finite_low_eigenstate_projection": true,
+          "active_poles": [
+            {
+              "energy": 0.2150693831477069,
+              "weight": 8.535260866077659e-08,
+              "full_H_residual": 3.038876518483005e-15
+            },
+            {
+              "energy": 0.32379466232036047,
+              "weight": 8.235211197731996e-08,
+              "full_H_residual": 2.8820096921005726e-15
+            },
+            {
+              "energy": 0.6503749582700733,
+              "weight": 1.7948311779880217e-09,
+              "full_H_residual": 9.41132560371761e-15
+            },
+            {
+              "energy": 0.6917016476031168,
+              "weight": 1.4818014277537211e-07,
+              "full_H_residual": 3.249714795141738e-15
+            },
+            {
+              "energy": 0.6932476345519157,
+              "weight": 0.00014904026572190414,
+              "full_H_residual": 4.7304904847980705e-15
+            },
+            {
+              "energy": 0.7222823558049972,
+              "weight": 2.2653127688937356e-07,
+              "full_H_residual": 1.0666825850379008e-13
+            }
+          ],
+          "full_action_zeroth_moment": 0.34357556699414293,
+          "full_action_first_moment": 0.25238908796499876,
+          "half_double_commutator": 0.2523890879650058,
+          "energy_sumrule_residual": 7.049916206369744e-15,
+          "total_equal_time_weight": 0.34357556699414304,
+          "elastic_weight": 3.8000107137506615e-31,
+          "equal_time_closure_residual": 1.1102230246251565e-16,
+          "seen_inelastic_weight": 0.00014958447669338498,
+          "unseen_inelastic_weight": 0.34342598251744955,
+          "source_active_Krylov": {
+            "finite_source_Krylov_projection": true,
+            "requested_steps": 12,
+            "columns": [
+              {
+                "column": 0,
+                "weight": 0.34357556699414293,
+                "projected_zeroth_moment": 0.343575566994143,
+                "projected_first_moment": 0.25238908796501314,
+                "poles": [
+                  {
+                    "energy": 0.2344152372248355,
+                    "weight": 1.337305461644871e-07,
+                    "full_H_residual": 0.09113730779975317
+                  },
+                  {
+                    "energy": 0.7210028025705493,
+                    "weight": 0.0024317188963501792,
+                    "full_H_residual": 0.1585752693803303
+                  },
+                  {
+                    "energy": 0.7345548032481171,
+                    "weight": 0.34111348210791104,
+                    "full_H_residual": 0.013834019397507143
+                  },
+                  {
+                    "energy": 1.4952581835948844,
+                    "weight": 6.022714047151477e-06,
+                    "full_H_residual": 0.5338733147582594
+                  },
+                  {
+                    "energy": 1.8903344254905758,
+                    "weight": 7.669582579593837e-06,
+                    "full_H_residual": 0.7364423611770352
+                  },
+                  {
+                    "energy": 2.3995888860867938,
+                    "weight": 7.929722944775492e-06,
+                    "full_H_residual": 0.6152354803898461
+                  },
+                  {
+                    "energy": 3.0381779555240196,
+                    "weight": 7.2978930420529785e-06,
+                    "full_H_residual": 0.5255812132862596
+                  },
+                  {
+                    "energy": 3.418594028411039,
+                    "weight": 1.2581156680542734e-06,
+                    "full_H_residual": 0.7270996879161353
+                  },
+                  {
+                    "energy": 4.208857061818577,
+                    "weight": 5.35763478317588e-08,
+                    "full_H_residual": 0.5384583229697011
+                  },
+                  {
+                    "energy": 5.029290561508878,
+                    "weight": 6.471932998641351e-10,
+                    "full_H_residual": 0.8458851480614384
+                  },
+                  {
+                    "energy": 5.863598380700963,
+                    "weight": 7.498529595778157e-12,
+                    "full_H_residual": 0.922970532657118
+                  },
+                  {
+                    "energy": 6.961365543486777,
+                    "weight": 1.4248691692264425e-14,
+                    "full_H_residual": 0.7378661513310663
+                  }
+                ]
+              }
+            ],
+            "interpretation": "Positive Ritz quadrature, not exact eigenstate poles. Full-action zeroth/first moments fix total source weight; finite quadrature does not resolve the unseen exact spectral measure."
+          },
+          "interpretation": "Positive same-H low eigenstate Lehmann poles; unseen weight retained, no complete spectral claim"
+        }
+      ],
+      "matter_current_response": {
+        "source_owner": "Light matter Peierls derivatives only; dynamical -K cosB unchanged",
+        "source_vectors": [
+          [
+            1.0,
+            -1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        "source_meaning": [
+          "gradient",
+          "curl"
+        ],
+        "finite_external_source": true,
+        "on_shell_photon_S_matrix": false,
+        "frequency": 0.04301387662951232,
+        "measured_gap": 0.21506938314756158,
+        "entries": [
+          {
+            "left": 0,
+            "right": 0,
+            "kernel": {
+              "norm": 3.4217687889847095e-06,
+              "trace": [
+                -3.4217687889847095e-06,
+                -4.743384504624082e-20
+              ],
+              "singular_values": [
+                3.4217687889847095e-06
+              ]
+            },
+            "contact": {
+              "norm": 0.0024378443776676625,
+              "trace": [
+                0.0024378443776676625,
+                -8.809142651444724e-20
+              ],
+              "singular_values": [
+                0.0024378443776676625
+              ]
+            },
+            "pair": {
+              "norm": 0.0024412661464566473,
+              "trace": [
+                0.0024412661464566473,
+                -4.0657581468206416e-20
+              ],
+              "singular_values": [
+                0.0024412661464566473
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          },
+          {
+            "left": 0,
+            "right": 1,
+            "kernel": {
+              "norm": 2.328201118622172e-07,
+              "trace": [
+                -2.328201118622172e-07,
+                4.531626267810507e-20
+              ],
+              "singular_values": [
+                2.328201118622172e-07
+              ]
+            },
+            "contact": {
+              "norm": 0.0001363803626915689,
+              "trace": [
+                0.0001363803626915689,
+                4.701032857261367e-20
+              ],
+              "singular_values": [
+                0.0001363803626915689
+              ]
+            },
+            "pair": {
+              "norm": 0.00013661318280343114,
+              "trace": [
+                0.00013661318280343114,
+                1.6940658945086007e-21
+              ],
+              "singular_values": [
+                0.00013661318280343114
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          },
+          {
+            "left": 1,
+            "right": 0,
+            "kernel": {
+              "norm": 2.328201309807537e-07,
+              "trace": [
+                -2.328201309807537e-07,
+                4.489274620447792e-20
+              ],
+              "singular_values": [
+                2.328201309807537e-07
+              ]
+            },
+            "contact": {
+              "norm": 0.0001363803626915689,
+              "trace": [
+                0.0001363803626915689,
+                4.701032857261367e-20
+              ],
+              "singular_values": [
+                0.0001363803626915689
+              ]
+            },
+            "pair": {
+              "norm": 0.00013661318282254966,
+              "trace": [
+                0.00013661318282254966,
+                2.117582368135751e-21
+              ],
+              "singular_values": [
+                0.00013661318282254966
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          },
+          {
+            "left": 1,
+            "right": 1,
+            "kernel": {
+              "norm": 0.0021457214264115846,
+              "trace": [
+                0.0021457214264115846,
+                -8.555032767268433e-20
+              ],
+              "singular_values": [
+                0.0021457214264115846
+              ]
+            },
+            "contact": {
+              "norm": 0.0024378443776676625,
+              "trace": [
+                0.0024378443776676625,
+                -8.809142651444724e-20
+              ],
+              "singular_values": [
+                0.0024378443776676625
+              ]
+            },
+            "pair": {
+              "norm": 0.0002921229512560776,
+              "trace": [
+                0.0002921229512560776,
+                -2.541098841762901e-21
+              ],
+              "singular_values": [
+                0.0002921229512560776
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          }
+        ],
+        "whole_kernel_norm": 0.002145724180008658,
+        "pure_gradient": {
+          "kernel_norm": 4.510285160715021e-17,
+          "contact_norm": 0.0024378443776676625,
+          "pair_norm": 0.0024378443776676174,
+          "exact_density_solution_residual": 2.1552713616354236e-15,
+          "solve_agreement": 1.2576256127991305e-11,
+          "omitted_contact_wrong_norm": 0.0024378443776676174,
+          "frozen_ground_intermediates_wrong_norm": 0.0024378443776676625,
+          "omitted_contact_breaks_Ward": true,
+          "frozen_ground_breaks_Ward": true
+        },
+        "preconditioner": "full diagonal H, projected on both sides; positive absolute shifted diagonal",
+        "full_action_source_sumrules": [
+          {
+            "source": [
+              1.0,
+              -1.0
+            ],
+            "full_action_total": {
+              "norm": 0.0020055966500812966,
+              "trace": [
+                0.0020055966500812966,
+                0.0
+              ],
+              "singular_values": [
+                0.0020055966500812966
+              ]
+            },
+            "elastic": {
+              "norm": 9.809178933375436e-38,
+              "trace": [
+                9.809178933375436e-38,
+                0.0
+              ],
+              "singular_values": [
+                9.809178933375436e-38
+              ]
+            },
+            "complete_complement_zeroth": {
+              "norm": 0.0020055966500812966,
+              "trace": [
+                0.0020055966500812966,
+                0.0
+              ],
+              "singular_values": [
+                0.0020055966500812966
+              ]
+            },
+            "complete_complement_first": {
+              "norm": 0.003494738437047347,
+              "trace": [
+                0.003494738437047347,
+                1.1011428314305904e-20
+              ],
+              "singular_values": [
+                0.003494738437047347
+              ]
+            },
+            "half_double_commutator": {
+              "norm": 0.0034947384370473383,
+              "trace": [
+                0.0034947384370473383,
+                2.329340604949326e-21
+              ],
+              "singular_values": [
+                0.0034947384370473383
+              ]
+            },
+            "closure_residual": 0.0,
+            "first_sumrule_residual": 8.673621725166102e-18
+          },
+          {
+            "source": [
+              1.0,
+              1.0
+            ],
+            "full_action_total": {
+              "norm": 0.0003386060826443268,
+              "trace": [
+                0.0003386060826443268,
+                0.0
+              ],
+              "singular_values": [
+                0.0003386060826443268
+              ]
+            },
+            "elastic": {
+              "norm": 4.114208703933594e-36,
+              "trace": [
+                4.114208703933594e-36,
+                0.0
+              ],
+              "singular_values": [
+                4.114208703933594e-36
+              ]
+            },
+            "complete_complement_zeroth": {
+              "norm": 0.0003386060826443268,
+              "trace": [
+                0.0003386060826443268,
+                0.0
+              ],
+              "singular_values": [
+                0.0003386060826443268
+              ]
+            },
+            "complete_complement_first": {
+              "norm": 0.0008110718920969825,
+              "trace": [
+                0.0008110718920969825,
+                1.3234889800848443e-21
+              ],
+              "singular_values": [
+                0.0008110718920969825
+              ]
+            },
+            "half_double_commutator": {
+              "norm": 0.0008110718920969871,
+              "trace": [
+                0.0008110718920969871,
+                5.135137242729196e-21
+              ],
+              "singular_values": [
+                0.0008110718920969871
+              ]
+            },
+            "closure_residual": 0.0,
+            "first_sumrule_residual": 4.662070899864842e-18
+          }
+        ],
+        "complete_domain_dimension": 392160,
+        "resolvent_receipts": [
+          {
+            "frequency": 0.0,
+            "column": 0,
+            "iterations": 33,
+            "status": 0,
+            "absolute_residual": 2.5489137012486188e-11,
+            "relative_residual": 5.691586413683584e-10,
+            "ground_leakage": 4.111981966164459e-17
+          },
+          {
+            "frequency": -0.0,
+            "column": 0,
+            "iterations": 33,
+            "status": 0,
+            "absolute_residual": 2.5489137012486188e-11,
+            "relative_residual": 5.691586413683584e-10,
+            "ground_leakage": 4.111981966164459e-17
+          },
+          {
+            "frequency": 0.0,
+            "column": 0,
+            "iterations": 33,
+            "status": 0,
+            "absolute_residual": 2.5489137012486188e-11,
+            "relative_residual": 5.691586413683584e-10,
+            "ground_leakage": 4.111981966164459e-17
+          },
+          {
+            "frequency": 0.04301387662951232,
+            "column": 0,
+            "iterations": 34,
+            "status": 0,
+            "absolute_residual": 3.4328882797307825e-11,
+            "relative_residual": 7.66545382962087e-10,
+            "ground_leakage": 1.0489658207512652e-17
+          },
+          {
+            "frequency": -0.04301387662951232,
+            "column": 0,
+            "iterations": 31,
+            "status": 0,
+            "absolute_residual": 2.9421146562523635e-11,
+            "relative_residual": 6.569582876353325e-10,
+            "ground_leakage": 1.6401086512249656e-18
+          },
+          {
+            "frequency": 0.04301387662951232,
+            "column": 0,
+            "iterations": 33,
+            "status": 0,
+            "absolute_residual": 1.7073846393842622e-11,
+            "relative_residual": 9.278632891575537e-10,
+            "ground_leakage": 1.1053934471081547e-17
+          },
+          {
+            "frequency": -0.04301387662951232,
+            "column": 0,
+            "iterations": 31,
+            "status": 0,
+            "absolute_residual": 2.9421146562523635e-11,
+            "relative_residual": 6.569582876353325e-10,
+            "ground_leakage": 1.6401086512249656e-18
+          },
+          {
+            "frequency": 0.04301387662951232,
+            "column": 0,
+            "iterations": 34,
+            "status": 0,
+            "absolute_residual": 3.4328882797307825e-11,
+            "relative_residual": 7.66545382962087e-10,
+            "ground_leakage": 1.0489658207512652e-17
+          },
+          {
+            "frequency": -0.04301387662951232,
+            "column": 0,
+            "iterations": 31,
+            "status": 0,
+            "absolute_residual": 8.825433377999982e-12,
+            "relative_residual": 4.796104787088319e-10,
+            "ground_leakage": 4.289207659680517e-18
+          },
+          {
+            "frequency": 0.04301387662951232,
+            "column": 0,
+            "iterations": 33,
+            "status": 0,
+            "absolute_residual": 1.7073846393842622e-11,
+            "relative_residual": 9.278632891575537e-10,
+            "ground_leakage": 1.1053934471081547e-17
+          },
+          {
+            "frequency": -0.04301387662951232,
+            "column": 0,
+            "iterations": 31,
+            "status": 0,
+            "absolute_residual": 8.825433377999982e-12,
+            "relative_residual": 4.796104787088319e-10,
+            "ground_leakage": 4.289207659680517e-18
+          }
+        ]
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "R": 1,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "NH": 4,
+      "NL": 4,
+      "charge": 0,
+      "dimension": 122172,
+      "base_dimension": 40724,
+      "boundary_rep": "1",
+      "boundary_dimension": 1,
+      "tensor_shapes": {
+        "1": [
+          1812,
+          1,
+          1,
+          1,
+          3
+        ],
+        "4": [
+          1216,
+          4,
+          4,
+          1,
+          3
+        ],
+        "bar4": [
+          1216,
+          4,
+          4,
+          1,
+          3
+        ]
+      },
+      "operators": {
+        "hermiticity": 6.288372600415926e-17,
+        "pure_gradient_covariance": 1.0075328404188101e-15,
+        "current_derivative": 6.995513605445095e-11,
+        "contact_derivative": 1.16262754273098e-08,
+        "density_current_Ward": 1.5060788298592712e-15,
+        "density_contact_Ward": 7.576122329871544e-15,
+        "orientation_matches_individual_ell_slots": 0.0,
+        "formal_S_identity_old_hop": 4.572840636851039e-18,
+        "full_Lie_Gauss_square_residual": 7.368496258020871e-16,
+        "angular_Gauss_positive_square_expectation": 3.0235697913403254,
+        "heavy_source_current_norm": 0.0,
+        "wrong_Gauss_defect": 1.0074476903984775,
+        "wrong_heavy_EM_defect": 0.36359093107640644,
+        "wrapping_defect": 0.4127790873630104,
+        "no_loop_wrapping": true,
+        "heavy_EM_neutral": true,
+        "complete_old_domain_each_ell": true
+      },
+      "spectrum": {
+        "energies": [
+          -0.8088148686117883,
+          -0.5080249326741506,
+          -0.5079954208209657,
+          -0.07654229057965879,
+          -0.07564090466312537,
+          -0.07444718992855888,
+          0.05091192005405936,
+          0.05279048994170745
+        ],
+        "full_H_residuals": [
+          2.3888947329231316e-15,
+          3.255268867538749e-15,
+          2.7940034026035635e-15,
+          1.9266935041177608e-15,
+          2.5899400443381583e-15,
+          1.9981271017357458e-15,
+          1.4040906198554856e-13,
+          2.56275559761881e-13
+        ],
+        "residual_limit": 1e-10,
+        "residual_scale": "max(1,abs(E))",
+        "orthogonality": 3.1445299853323004e-15,
+        "ground_rank": 1,
+        "measured_complement_gap": 0.3007899359376377,
+        "degeneracy_resolution": 2e-09,
+        "independent_deflated_ground_completion": [
+          {
+            "candidate_energy": -0.5080249326741197,
+            "full_H_residual": 1.954213790501593e-13,
+            "existing_rank": 1
+          }
+        ],
+        "interpretation": "finite same-H Ritz multiplet and measured complement, not infinite gap"
+      },
+      "ground_photon": {
+        "ensemble": "normalized projector onto measured full ground rank",
+        "ell_values": [
+          -1,
+          0,
+          1
+        ],
+        "ell_probabilities": [
+          0.15644288090837483,
+          0.6871142381832531,
+          0.15644288090837505
+        ],
+        "sinB_eigenvalues": [
+          -0.7071067811865475,
+          -3.0357660829594124e-18,
+          0.7071067811865475
+        ],
+        "sinB_probabilities": [
+          0.3435909158395145,
+          0.31281816832097065,
+          0.3435909158395145
+        ],
+        "ell_nleft_joint_probabilities": [
+          [
+            1.484690630987754e-11,
+            3.276848699895486e-10,
+            7.284411903204484e-10
+          ],
+          [
+            1.498270504275913e-05,
+            0.00016184723866701251,
+            0.00014621734707442698
+          ],
+          [
+            0.1562816801129716,
+            0.6867905430505251,
+            0.15628168011297155
+          ],
+          [
+            0.00014621734707442682,
+            0.0001618472386670129,
+            1.4982705042759131e-05
+          ],
+          [
+            7.28441190320464e-10,
+            3.2768486998953894e-10,
+            1.4846906309875264e-11
+          ]
+        ],
+        "photon_reduced_purity": 0.9998446320010677,
+        "ell_nleft_colour_joint_probabilities": {
+          "1": [
+            [
+              3.026097289966851e-13,
+              7.308913687754748e-12,
+              1.6824412635198685e-11
+            ],
+            [
+              1.5510068601627031e-06,
+              1.8070031612746287e-05,
+              1.4550466695120766e-05
+            ],
+            [
+              0.15614840721706136,
+              0.6862058633509361,
+              0.1561484072170613
+            ],
+            [
+              1.4550466695120696e-05,
+              1.8070031612746395e-05,
+              1.551006860162708e-06
+            ],
+            [
+              1.6824412635186823e-11,
+              7.30891368774269e-12,
+              3.0260972899718426e-13
+            ]
+          ],
+          "4": [
+            [
+              5.178080693682074e-35,
+              6.145705337456508e-35,
+              9.830471279846165e-35
+            ],
+            [
+              9.447265076651856e-11,
+              1.1108636847488262e-09,
+              8.744254647732545e-10
+            ],
+            [
+              6.678372057876068e-05,
+              0.0002923398498058837,
+              6.648917532953597e-05
+            ],
+            [
+              0.00013166600595384138,
+              0.00014377609619058176,
+              1.3431603709945664e-05
+            ],
+            [
+              7.116167776852771e-10,
+              3.203759563017963e-10,
+              1.4544296580878078e-11
+            ]
+          ],
+          "bar4": [
+            [
+              1.4544296580880855e-11,
+              3.2037595630179385e-10,
+              7.116167776852496e-10
+            ],
+            [
+              1.3431603709945662e-05,
+              0.0001437760961905817,
+              0.00013166600595384146
+            ],
+            [
+              6.648917532953593e-05,
+              0.0002923398498058839,
+              6.678372057876066e-05
+            ],
+            [
+              8.744254647733177e-10,
+              1.1108636847488051e-09,
+              9.447265076651454e-11
+            ],
+            [
+              8.781092322724687e-35,
+              5.923107554099721e-35,
+              3.792950583227709e-35
+            ]
+          ]
+        },
+        "ell_joint_matter_colour_independence_defect": 0.00021208851642191796,
+        "measured_photon_matter_colour_correlated": true,
+        "means": {
+          "ell": -4.972591551820319e-17,
+          "sinB": -5.854691307847594e-18,
+          "nleft": 1.9999999999999747,
+          "colour_C2": 0.002679335917002664
+        },
+        "connected_correlations": {
+          "ell_nleft": -0.0002624721384403388,
+          "ell_colour_C2": 1.1046970200464964e-19,
+          "sinB_nleft": 1.0842025960721082e-18,
+          "sinB_colour_C2": 4.1441611168140814e-22
+        },
+        "ell_matter_joint_independence_defect": 0.00022306046056371607,
+        "measured_ell_matter_correlated": true,
+        "ell_cutoff_shell_probability": 0.3128857618167499
+      },
+      "photon_response": [
+        {
+          "observable": "ell",
+          "finite_low_eigenstate_projection": true,
+          "active_poles": [
+            {
+              "energy": 0.3007899359376377,
+              "weight": 8.609057545617763e-06,
+              "full_H_residual": 3.265869473488803e-15
+            },
+            {
+              "energy": 0.7343676786832294,
+              "weight": 0.31270869175538013,
+              "full_H_residual": 2.009828451186733e-15
+            }
+          ],
+          "full_action_zeroth_moment": 0.3128857618167335,
+          "full_action_first_moment": 0.22996124537474097,
+          "half_double_commutator": 0.229961245374743,
+          "energy_sumrule_residual": 2.0261570199409107e-15,
+          "total_equal_time_weight": 0.3128857618167335,
+          "elastic_weight": 2.472666674123481e-33,
+          "equal_time_closure_residual": 0.0,
+          "seen_inelastic_weight": 0.31271730081292576,
+          "unseen_inelastic_weight": 0.00016846100380774054,
+          "source_active_Krylov": {
+            "finite_source_Krylov_projection": true,
+            "requested_steps": 12,
+            "columns": [
+              {
+                "column": 0,
+                "weight": 0.3128857618167335,
+                "projected_zeroth_moment": 0.3128857618167334,
+                "projected_first_moment": 0.2299612453747452,
+                "poles": [
+                  {
+                    "energy": 0.30079117526958027,
+                    "weight": 8.609218000027306e-06,
+                    "full_H_residual": 0.0017424168113227062
+                  },
+                  {
+                    "energy": 0.7343676889160105,
+                    "weight": 0.3127087341166098,
+                    "full_H_residual": 0.0001307093039515312
+                  },
+                  {
+                    "energy": 0.9967498368857536,
+                    "weight": 8.06006740498838e-07,
+                    "full_H_residual": 0.1795970609137498
+                  },
+                  {
+                    "energy": 1.6975473447752056,
+                    "weight": 0.00010280674177618311,
+                    "full_H_residual": 0.0988472353134846
+                  },
+                  {
+                    "energy": 1.9350078003088345,
+                    "weight": 3.6767588469612905e-05,
+                    "full_H_residual": 0.2812103138347258
+                  },
+                  {
+                    "energy": 2.360665173111058,
+                    "weight": 2.1928254050559948e-05,
+                    "full_H_residual": 0.3240033157829689
+                  },
+                  {
+                    "energy": 2.7480865367238883,
+                    "weight": 5.339683863088496e-06,
+                    "full_H_residual": 0.4324861478228833
+                  },
+                  {
+                    "energy": 3.2879703093031725,
+                    "weight": 7.230708696404893e-07,
+                    "full_H_residual": 0.4529155509738201
+                  },
+                  {
+                    "energy": 3.7995181831692126,
+                    "weight": 4.478360268354386e-08,
+                    "full_H_residual": 0.6003686221418767
+                  },
+                  {
+                    "energy": 4.40581817431025,
+                    "weight": 2.332704207305523e-09,
+                    "full_H_residual": 0.4562430237281083
+                  },
+                  {
+                    "energy": 5.169405043680573,
+                    "weight": 2.0007908627556344e-11,
+                    "full_H_residual": 0.422708929025937
+                  },
+                  {
+                    "energy": 5.993869170101815,
+                    "weight": 3.9262801392566736e-14,
+                    "full_H_residual": 0.44536285457884967
+                  }
+                ]
+              }
+            ],
+            "interpretation": "Positive Ritz quadrature, not exact eigenstate poles. Full-action zeroth/first moments fix total source weight; finite quadrature does not resolve the unseen exact spectral measure."
+          },
+          "interpretation": "Positive same-H low eigenstate Lehmann poles; unseen weight retained, no complete spectral claim"
+        },
+        {
+          "observable": "sin",
+          "finite_low_eigenstate_projection": true,
+          "active_poles": [
+            {
+              "energy": 0.3007899359376377,
+              "weight": 2.970222631175221e-07,
+              "full_H_residual": 3.265869473488803e-15
+            },
+            {
+              "energy": 0.7343676786832294,
+              "weight": 0.34356730075105235,
+              "full_H_residual": 2.009828451186733e-15
+            }
+          ],
+          "full_action_zeroth_moment": 0.34359091583948814,
+          "full_action_first_moment": 0.2523608736674441,
+          "half_double_commutator": 0.2523608736674451,
+          "energy_sumrule_residual": 9.992007221626409e-16,
+          "total_equal_time_weight": 0.34359091583948814,
+          "elastic_weight": 4.4776608704479945e-34,
+          "equal_time_closure_residual": 0.0,
+          "seen_inelastic_weight": 0.34356759777331547,
+          "unseen_inelastic_weight": 2.3318066172672847e-05,
+          "source_active_Krylov": {
+            "finite_source_Krylov_projection": true,
+            "requested_steps": 12,
+            "columns": [
+              {
+                "column": 0,
+                "weight": 0.34359091583948814,
+                "projected_zeroth_moment": 0.3435909158394881,
+                "projected_first_moment": 0.2523608736674461,
+                "poles": [
+                  {
+                    "energy": 0.30080517557169084,
+                    "weight": 2.970872416585341e-07,
+                    "full_H_residual": 0.006604194577030173
+                  },
+                  {
+                    "energy": 0.7343676811332397,
+                    "weight": 0.3435673101865947,
+                    "full_H_residual": 7.023834444576542e-05
+                  },
+                  {
+                    "energy": 1.0492628863761793,
+                    "weight": 1.0309582836693987e-07,
+                    "full_H_residual": 0.30937306724343594
+                  },
+                  {
+                    "energy": 1.692225771619268,
+                    "weight": 7.428891271333421e-06,
+                    "full_H_residual": 0.11507105347621892
+                  },
+                  {
+                    "energy": 2.159795601287507,
+                    "weight": 2.7472583680419024e-06,
+                    "full_H_residual": 0.5222609556275067
+                  },
+                  {
+                    "energy": 2.484693547156958,
+                    "weight": 5.233321802602334e-06,
+                    "full_H_residual": 0.41570256240647613
+                  },
+                  {
+                    "energy": 3.07480057196003,
+                    "weight": 6.605298269246162e-06,
+                    "full_H_residual": 0.2672372931440009
+                  },
+                  {
+                    "energy": 3.429924195329387,
+                    "weight": 1.128507489016276e-06,
+                    "full_H_residual": 0.39102339929484653
+                  },
+                  {
+                    "energy": 4.140752752569795,
+                    "weight": 6.061546878036221e-08,
+                    "full_H_residual": 0.35616441404204274
+                  },
+                  {
+                    "energy": 4.721067583743211,
+                    "weight": 1.4994100790498973e-09,
+                    "full_H_residual": 0.6720795450933988
+                  },
+                  {
+                    "energy": 5.2881004626561285,
+                    "weight": 7.753749745017907e-11,
+                    "full_H_residual": 0.4861316914907392
+                  },
+                  {
+                    "energy": 6.096225581075408,
+                    "weight": 2.0681776696325105e-13,
+                    "full_H_residual": 0.35944169288940647
+                  }
+                ]
+              }
+            ],
+            "interpretation": "Positive Ritz quadrature, not exact eigenstate poles. Full-action zeroth/first moments fix total source weight; finite quadrature does not resolve the unseen exact spectral measure."
+          },
+          "interpretation": "Positive same-H low eigenstate Lehmann poles; unseen weight retained, no complete spectral claim"
+        }
+      ],
+      "matter_current_response": {
+        "source_owner": "Light matter Peierls derivatives only; dynamical -K cosB unchanged",
+        "source_vectors": [
+          [
+            1.0,
+            -1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        "source_meaning": [
+          "gradient",
+          "curl"
+        ],
+        "finite_external_source": true,
+        "on_shell_photon_S_matrix": false,
+        "frequency": 0.060157987187527545,
+        "measured_gap": 0.3007899359376377,
+        "entries": [
+          {
+            "left": 0,
+            "right": 0,
+            "kernel": {
+              "norm": 4.364150393415143e-06,
+              "trace": [
+                -4.364150393415143e-06,
+                -2.0328790734103208e-19
+              ],
+              "singular_values": [
+                4.364150393415143e-06
+              ]
+            },
+            "contact": {
+              "norm": 0.0020639208404492583,
+              "trace": [
+                0.0020639208404492583,
+                -1.8973538018496328e-19
+              ],
+              "singular_values": [
+                0.0020639208404492583
+              ]
+            },
+            "pair": {
+              "norm": 0.0020682849908426736,
+              "trace": [
+                0.0020682849908426736,
+                1.3552527156068805e-20
+              ],
+              "singular_values": [
+                0.0020682849908426736
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          },
+          {
+            "left": 0,
+            "right": 1,
+            "kernel": {
+              "norm": 2.9382632146332673e-07,
+              "trace": [
+                -2.9382632146332673e-07,
+                -8.470329472543003e-22
+              ],
+              "singular_values": [
+                2.9382632146332673e-07
+              ]
+            },
+            "contact": {
+              "norm": 0.00011454973801318979,
+              "trace": [
+                0.00011454973801318979,
+                -3.3881317890172014e-21
+              ],
+              "singular_values": [
+                0.00011454973801318979
+              ]
+            },
+            "pair": {
+              "norm": 0.00011484356433465312,
+              "trace": [
+                0.00011484356433465312,
+                -2.541098841762901e-21
+              ],
+              "singular_values": [
+                0.00011484356433465312
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          },
+          {
+            "left": 1,
+            "right": 0,
+            "kernel": {
+              "norm": 2.938263659812439e-07,
+              "trace": [
+                -2.938263659812439e-07,
+                -1.2705494208814505e-21
+              ],
+              "singular_values": [
+                2.938263659812439e-07
+              ]
+            },
+            "contact": {
+              "norm": 0.00011454973801318979,
+              "trace": [
+                0.00011454973801318979,
+                -3.3881317890172014e-21
+              ],
+              "singular_values": [
+                0.00011454973801318979
+              ]
+            },
+            "pair": {
+              "norm": 0.00011484356437917103,
+              "trace": [
+                0.00011484356437917103,
+                -2.117582368135751e-21
+              ],
+              "singular_values": [
+                0.00011484356437917103
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          },
+          {
+            "left": 1,
+            "right": 1,
+            "kernel": {
+              "norm": 0.0018098366077545932,
+              "trace": [
+                0.0018098366077545932,
+                -1.8973538018496328e-19
+              ],
+              "singular_values": [
+                0.0018098366077545932
+              ]
+            },
+            "contact": {
+              "norm": 0.0020639208404492583,
+              "trace": [
+                0.0020639208404492583,
+                -1.8973538018496328e-19
+              ],
+              "singular_values": [
+                0.0020639208404492583
+              ]
+            },
+            "pair": {
+              "norm": 0.0002540842326946651,
+              "trace": [
+                0.0002540842326946651,
+                0.0
+              ],
+              "singular_values": [
+                0.0002540842326946651
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          }
+        ],
+        "whole_kernel_norm": 0.0018098419171975078,
+        "pure_gradient": {
+          "kernel_norm": 1.951684373664077e-17,
+          "contact_norm": 0.0020639208404492583,
+          "pair_norm": 0.002063920840449278,
+          "exact_density_solution_residual": 1.7038730459241494e-15,
+          "solve_agreement": 1.2711068855540225e-11,
+          "omitted_contact_wrong_norm": 0.002063920840449278,
+          "frozen_ground_intermediates_wrong_norm": 0.0020639208404492583,
+          "omitted_contact_breaks_Ward": true,
+          "frozen_ground_breaks_Ward": true
+        },
+        "preconditioner": "full diagonal H, projected on both sides; positive absolute shifted diagonal",
+        "full_action_source_sumrules": [
+          {
+            "source": [
+              1.0,
+              -1.0
+            ],
+            "full_action_total": {
+              "norm": 0.001822821432630823,
+              "trace": [
+                0.001822821432630823,
+                0.0
+              ],
+              "singular_values": [
+                0.001822821432630823
+              ]
+            },
+            "elastic": {
+              "norm": 3.5496093256209086e-37,
+              "trace": [
+                3.5496093256209086e-37,
+                0.0
+              ],
+              "singular_values": [
+                3.5496093256209086e-37
+              ]
+            },
+            "complete_complement_zeroth": {
+              "norm": 0.001822821432630823,
+              "trace": [
+                0.001822821432630823,
+                0.0
+              ],
+              "singular_values": [
+                0.001822821432630823
+              ]
+            },
+            "complete_complement_first": {
+              "norm": 0.0033113303533806905,
+              "trace": [
+                0.0033113303533806905,
+                -4.235164736271502e-21
+              ],
+              "singular_values": [
+                0.0033113303533806905
+              ]
+            },
+            "half_double_commutator": {
+              "norm": 0.0033113303533806974,
+              "trace": [
+                0.0033113303533806974,
+                2.964615315390051e-21
+              ],
+              "singular_values": [
+                0.0033113303533806974
+              ]
+            },
+            "closure_residual": 0.0,
+            "first_sumrule_residual": 6.938897639143676e-18
+          },
+          {
+            "source": [
+              1.0,
+              1.0
+            ],
+            "full_action_total": {
+              "norm": 0.0003077657088497847,
+              "trace": [
+                0.0003077657088497847,
+                0.0
+              ],
+              "singular_values": [
+                0.0003077657088497847
+              ]
+            },
+            "elastic": {
+              "norm": 2.9030868441232954e-39,
+              "trace": [
+                2.9030868441232954e-39,
+                0.0
+              ],
+              "singular_values": [
+                2.9030868441232954e-39
+              ]
+            },
+            "complete_complement_zeroth": {
+              "norm": 0.0003077657088497847,
+              "trace": [
+                0.0003077657088497847,
+                0.0
+              ],
+              "singular_values": [
+                0.0003077657088497847
+              ]
+            },
+            "complete_complement_first": {
+              "norm": 0.0007602111241220874,
+              "trace": [
+                0.0007602111241220874,
+                -3.282252670610414e-21
+              ],
+              "singular_values": [
+                0.0007602111241220874
+              ]
+            },
+            "half_double_commutator": {
+              "norm": 0.000760211124122085,
+              "trace": [
+                0.000760211124122085,
+                6.3527471044072525e-21
+              ],
+              "singular_values": [
+                0.000760211124122085
+              ]
+            },
+            "closure_residual": 0.0,
+            "first_sumrule_residual": 2.3852642392826286e-18
+          }
+        ],
+        "complete_domain_dimension": 122172,
+        "resolvent_receipts": [
+          {
+            "frequency": 0.0,
+            "column": 0,
+            "iterations": 22,
+            "status": 0,
+            "absolute_residual": 2.8067337812202188e-11,
+            "relative_residual": 6.573991808104685e-10,
+            "ground_leakage": 1.4373040583566977e-18
+          },
+          {
+            "frequency": -0.0,
+            "column": 0,
+            "iterations": 22,
+            "status": 0,
+            "absolute_residual": 2.8067337812202188e-11,
+            "relative_residual": 6.573991808104685e-10,
+            "ground_leakage": 1.4373040583566977e-18
+          },
+          {
+            "frequency": 0.0,
+            "column": 0,
+            "iterations": 22,
+            "status": 0,
+            "absolute_residual": 2.8067337812202188e-11,
+            "relative_residual": 6.573991808104685e-10,
+            "ground_leakage": 1.4373040583566977e-18
+          },
+          {
+            "frequency": 0.060157987187527545,
+            "column": 0,
+            "iterations": 23,
+            "status": 0,
+            "absolute_residual": 2.844302611807453e-11,
+            "relative_residual": 6.661986325494637e-10,
+            "ground_leakage": 2.2853838733542225e-18
+          },
+          {
+            "frequency": -0.060157987187527545,
+            "column": 0,
+            "iterations": 21,
+            "status": 0,
+            "absolute_residual": 3.7617148703586656e-11,
+            "relative_residual": 8.810768911404336e-10,
+            "ground_leakage": 1.389806118490205e-18
+          },
+          {
+            "frequency": 0.060157987187527545,
+            "column": 0,
+            "iterations": 24,
+            "status": 0,
+            "absolute_residual": 7.1611655271016754e-12,
+            "relative_residual": 4.0820056146705265e-10,
+            "ground_leakage": 7.612979107717502e-20
+          },
+          {
+            "frequency": -0.060157987187527545,
+            "column": 0,
+            "iterations": 21,
+            "status": 0,
+            "absolute_residual": 3.7617148703586656e-11,
+            "relative_residual": 8.810768911404336e-10,
+            "ground_leakage": 1.389806118490205e-18
+          },
+          {
+            "frequency": 0.060157987187527545,
+            "column": 0,
+            "iterations": 23,
+            "status": 0,
+            "absolute_residual": 2.844302611807453e-11,
+            "relative_residual": 6.661986325494637e-10,
+            "ground_leakage": 2.2853838733542225e-18
+          },
+          {
+            "frequency": -0.060157987187527545,
+            "column": 0,
+            "iterations": 22,
+            "status": 0,
+            "absolute_residual": 1.1454744731075775e-11,
+            "relative_residual": 6.529430457920633e-10,
+            "ground_leakage": 2.8488056042178073e-19
+          },
+          {
+            "frequency": 0.060157987187527545,
+            "column": 0,
+            "iterations": 24,
+            "status": 0,
+            "absolute_residual": 7.1611655271016754e-12,
+            "relative_residual": 4.0820056146705265e-10,
+            "ground_leakage": 7.612979107717502e-20
+          },
+          {
+            "frequency": -0.060157987187527545,
+            "column": 0,
+            "iterations": 22,
+            "status": 0,
+            "absolute_residual": 1.1454744731075775e-11,
+            "relative_residual": 6.529430457920633e-10,
+            "ground_leakage": 2.8488056042178073e-19
+          }
+        ]
+      }
+    },
+    {
+      "cutoff": "minimal",
+      "R": 1,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "NH": 4,
+      "NL": 5,
+      "charge": 1,
+      "dimension": 392160,
+      "base_dimension": 130720,
+      "boundary_rep": "bar4",
+      "boundary_dimension": 4,
+      "tensor_shapes": {
+        "1": [
+          1320,
+          1,
+          1,
+          4,
+          3
+        ],
+        "4": [
+          1320,
+          4,
+          4,
+          4,
+          3
+        ],
+        "bar4": [
+          640,
+          4,
+          4,
+          4,
+          3
+        ]
+      },
+      "operators": {
+        "hermiticity": 1.3140333526676018e-17,
+        "pure_gradient_covariance": 1.2992731077785284e-15,
+        "current_derivative": 6.545642120156773e-11,
+        "contact_derivative": 1.2995774323127856e-08,
+        "density_current_Ward": 2.7724060039441128e-15,
+        "density_contact_Ward": 1.4291622605252015e-14,
+        "orientation_matches_individual_ell_slots": 0.0,
+        "formal_S_identity_old_hop": 4.380466710545658e-18,
+        "full_Lie_Gauss_square_residual": 9.062954678200485e-16,
+        "angular_Gauss_positive_square_expectation": 3.4461054291452937,
+        "heavy_source_current_norm": 0.0,
+        "wrong_Gauss_defect": 1.1062986680258917,
+        "wrong_heavy_EM_defect": 0.39361692323931124,
+        "wrapping_defect": 0.4128037129750453,
+        "no_loop_wrapping": true,
+        "heavy_EM_neutral": true,
+        "complete_old_domain_each_ell": true
+      },
+      "spectrum": {
+        "energies": [
+          -0.524048698427708,
+          -0.3089793152800002,
+          -0.20025403610734577,
+          0.12632625984236756,
+          0.16765294917541065,
+          0.16919893612420853,
+          0.1982336573772909,
+          0.20143899776380797
+        ],
+        "full_H_residuals": [
+          4.3786523396816716e-15,
+          2.2798219740134203e-15,
+          2.9865701433915957e-15,
+          2.4503947165631566e-15,
+          2.5913850549904988e-15,
+          3.538954712781637e-15,
+          1.5872604407342917e-13,
+          8.593815037317842e-14
+        ],
+        "residual_limit": 1e-10,
+        "residual_scale": "max(1,abs(E))",
+        "orthogonality": 3.932156705223045e-15,
+        "ground_rank": 1,
+        "measured_complement_gap": 0.21506938314756285,
+        "degeneracy_resolution": 2e-09,
+        "independent_deflated_ground_completion": [
+          {
+            "candidate_energy": -0.3089793152801451,
+            "full_H_residual": 1.462205298660237e-13,
+            "existing_rank": 1
+          }
+        ],
+        "interpretation": "finite same-H Ritz multiplet and measured complement, not infinite gap"
+      },
+      "ground_photon": {
+        "ensemble": "normalized projector onto measured full ground rank",
+        "ell_values": [
+          -1,
+          0,
+          1
+        ],
+        "ell_probabilities": [
+          0.15652559643147265,
+          0.6870619296139034,
+          0.15641247395462243
+        ],
+        "sinB_eigenvalues": [
+          -0.7071067811865475,
+          -3.0357660829594124e-18,
+          0.7071067811865475
+        ],
+        "sinB_probabilities": [
+          0.34357556699420755,
+          0.3128488660115843,
+          0.3435755669942077
+        ],
+        "ell_nleft_joint_probabilities": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            7.1440697058119146e-06,
+            7.704604840117113e-05,
+            6.978760789266733e-05
+          ],
+          [
+            0.15620203732075524,
+            0.686630567469808,
+            0.15631018960491472
+          ],
+          [
+            0.0003164120663889137,
+            0.00035431475521577137,
+            3.249668161483749e-05
+          ],
+          [
+            2.9746225076390127e-09,
+            1.3404800461421489e-09,
+            6.020192320092783e-11
+          ]
+        ],
+        "photon_reduced_purity": 0.9997956683169908,
+        "ell_nleft_colour_joint_probabilities": {
+          "1": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              6.72999605531251e-07,
+              7.82844771095231e-06,
+              6.330926942707567e-06
+            ],
+            [
+              0.1560480153932299,
+              0.6859539113383261,
+              0.1561559051876079
+            ],
+            [
+              2.1930252074894583e-05,
+              2.7690202661753804e-05,
+              2.3647396062314482e-06
+            ],
+            [
+              2.9775099025360344e-11,
+              1.2903625536584293e-11,
+              5.294932246146597e-13
+            ]
+          ],
+          "4": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              4.9698397989239104e-11,
+              5.85937409596001e-10,
+              4.628655134713475e-10
+            ],
+            [
+              7.805572742370658e-05,
+              0.0003425701116648314,
+              7.794900217709133e-05
+            ],
+            [
+              0.00029448028258419943,
+              0.00032662258251052586,
+              3.013177483306097e-05
+            ],
+            [
+              2.9448474086136524e-09,
+              1.3275764206055645e-09,
+              5.967242997631317e-11
+            ]
+          ],
+          "bar4": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              6.471020401882676e-06,
+              6.92170147528092e-05,
+              6.345621808444629e-05
+            ],
+            [
+              7.596620010189372e-05,
+              0.00033408601981803316,
+              7.633541512838426e-05
+            ],
+            [
+              1.5317298191859907e-09,
+              1.970043491661218e-09,
+              1.6717554504732028e-10
+            ],
+            [
+              6.957156032418897e-33,
+              3.454143177962606e-33,
+              1.4308549646467238e-33
+            ]
+          ]
+        },
+        "ell_joint_matter_colour_independence_defect": 0.0003485127707459082,
+        "measured_photon_matter_colour_correlated": true,
+        "means": {
+          "ell": -0.00011312247684945381,
+          "sinB": 7.806255641895632e-17,
+          "nleft": 2.0005492545276367,
+          "colour_C2": 0.0033287821294261635
+        },
+        "connected_correlations": {
+          "ell_nleft": -0.0003465026187705403,
+          "ell_colour_C2": -0.0003879446715159475,
+          "sinB_nleft": 8.197060298337829e-18,
+          "sinB_colour_C2": 1.4919167712555565e-18
+        },
+        "ell_matter_joint_independence_defect": 0.0003606900287181591,
+        "measured_ell_matter_correlated": true,
+        "ell_cutoff_shell_probability": 0.3129380703860951
+      },
+      "photon_response": [
+        {
+          "observable": "ell",
+          "finite_low_eigenstate_projection": true,
+          "active_poles": [
+            {
+              "energy": 0.21506938314770774,
+              "weight": 7.02678028027737e-06,
+              "full_H_residual": 2.3051414159012242e-15
+            },
+            {
+              "energy": 0.3237946623203622,
+              "weight": 1.814919645421363e-06,
+              "full_H_residual": 2.9713361249285314e-15
+            },
+            {
+              "energy": 0.6503749582700755,
+              "weight": 3.9396624868166444e-10,
+              "full_H_residual": 2.4787318148472284e-15
+            },
+            {
+              "energy": 0.6917016476031186,
+              "weight": 5.457206768437431e-08,
+              "full_H_residual": 2.6020030097486704e-15
+            },
+            {
+              "energy": 0.6932476345519165,
+              "weight": 6.107703412111194e-05,
+              "full_H_residual": 3.54663640390731e-15
+            },
+            {
+              "energy": 0.7222823558049989,
+              "weight": 1.761249616776726e-07,
+              "full_H_residual": 1.5872562405603576e-13
+            }
+          ],
+          "full_action_zeroth_moment": 0.31293805758933013,
+          "full_action_first_moment": 0.23005025540027263,
+          "half_double_commutator": 0.23005025540027443,
+          "energy_sumrule_residual": 1.8041124150158794e-15,
+          "total_equal_time_weight": 0.31293807038602633,
+          "elastic_weight": 1.2796694768555213e-08,
+          "equal_time_closure_residual": 1.4432899320127035e-15,
+          "seen_inelastic_weight": 7.014982504242141e-05,
+          "unseen_inelastic_weight": 0.3128679077642877,
+          "source_active_Krylov": {
+            "finite_source_Krylov_projection": true,
+            "requested_steps": 12,
+            "columns": [
+              {
+                "column": 0,
+                "weight": 0.31293805758933013,
+                "projected_zeroth_moment": 0.3129380575893302,
+                "projected_first_moment": 0.2300502554002876,
+                "poles": [
+                  {
+                    "energy": 0.21890245671536743,
+                    "weight": 7.752963892626754e-06,
+                    "full_H_residual": 0.049312544677157934
+                  },
+                  {
+                    "energy": 0.5106427859891678,
+                    "weight": 6.4852858283275115e-06,
+                    "full_H_residual": 0.43607475052395
+                  },
+                  {
+                    "energy": 0.7344783648987014,
+                    "weight": 0.31272814299664536,
+                    "full_H_residual": 0.003730051459094215
+                  },
+                  {
+                    "energy": 1.1629086389122707,
+                    "weight": 1.1022216751654039e-05,
+                    "full_H_residual": 0.7799339633323191
+                  },
+                  {
+                    "energy": 1.6689876899473983,
+                    "weight": 0.0001257242678445379,
+                    "full_H_residual": 0.33014170349258565
+                  },
+                  {
+                    "energy": 2.064500893881773,
+                    "weight": 4.2666464723538664e-05,
+                    "full_H_residual": 0.5385933745996877
+                  },
+                  {
+                    "energy": 2.559893827843286,
+                    "weight": 1.5052341034060735e-05,
+                    "full_H_residual": 0.4448690039323794
+                  },
+                  {
+                    "energy": 3.210187804789636,
+                    "weight": 1.1560672440216845e-06,
+                    "full_H_residual": 0.5303487104405895
+                  },
+                  {
+                    "energy": 3.853813343996232,
+                    "weight": 5.379495831240962e-08,
+                    "full_H_residual": 0.686452330293019
+                  },
+                  {
+                    "energy": 4.6339792396875765,
+                    "weight": 1.1840598481727678e-09,
+                    "full_H_residual": 0.6921316327002383
+                  },
+                  {
+                    "energy": 5.594604813359047,
+                    "weight": 6.338664037517606e-12,
+                    "full_H_residual": 0.7448326990078032
+                  },
+                  {
+                    "energy": 6.697956401226226,
+                    "weight": 9.19649070773459e-15,
+                    "full_H_residual": 0.7388865663163919
+                  }
+                ]
+              }
+            ],
+            "interpretation": "Positive Ritz quadrature, not exact eigenstate poles. Full-action zeroth/first moments fix total source weight; finite quadrature does not resolve the unseen exact spectral measure."
+          },
+          "interpretation": "Positive same-H low eigenstate Lehmann poles; unseen weight retained, no complete spectral claim"
+        },
+        {
+          "observable": "sin",
+          "finite_low_eigenstate_projection": true,
+          "active_poles": [
+            {
+              "energy": 0.21506938314770774,
+              "weight": 8.53526086608177e-08,
+              "full_H_residual": 2.3051414159012242e-15
+            },
+            {
+              "energy": 0.3237946623203622,
+              "weight": 8.235211197738589e-08,
+              "full_H_residual": 2.9713361249285314e-15
+            },
+            {
+              "energy": 0.6503749582700755,
+              "weight": 1.7948311780381234e-09,
+              "full_H_residual": 2.4787318148472284e-15
+            },
+            {
+              "energy": 0.6917016476031186,
+              "weight": 1.4818014277219225e-07,
+              "full_H_residual": 2.6020030097486704e-15
+            },
+            {
+              "energy": 0.6932476345519165,
+              "weight": 0.00014904026572191476,
+              "full_H_residual": 3.54663640390731e-15
+            },
+            {
+              "energy": 0.7222823558049989,
+              "weight": 2.265312768546709e-07,
+              "full_H_residual": 1.5872562405603576e-13
+            }
+          ],
+          "full_action_zeroth_moment": 0.343575566994142,
+          "full_action_first_moment": 0.2523890879650005,
+          "half_double_commutator": 0.2523890879650067,
+          "energy_sumrule_residual": 6.217248937900877e-15,
+          "total_equal_time_weight": 0.343575566994142,
+          "elastic_weight": 3.257786484885847e-30,
+          "equal_time_closure_residual": 0.0,
+          "seen_inelastic_weight": 0.00014958447669335788,
+          "unseen_inelastic_weight": 0.34342598251744866,
+          "source_active_Krylov": {
+            "finite_source_Krylov_projection": true,
+            "requested_steps": 12,
+            "columns": [
+              {
+                "column": 0,
+                "weight": 0.343575566994142,
+                "projected_zeroth_moment": 0.34357556699414205,
+                "projected_first_moment": 0.25238908796501386,
+                "poles": [
+                  {
+                    "energy": 0.23441523722477758,
+                    "weight": 1.3373054616421668e-07,
+                    "full_H_residual": 0.09113730779920201
+                  },
+                  {
+                    "energy": 0.721002802570388,
+                    "weight": 0.0024317188962869555,
+                    "full_H_residual": 0.1585752693799393
+                  },
+                  {
+                    "energy": 0.7345548032481198,
+                    "weight": 0.3411134821079733,
+                    "full_H_residual": 0.013834019397299403
+                  },
+                  {
+                    "energy": 1.4952581835928198,
+                    "weight": 6.022714047086482e-06,
+                    "full_H_residual": 0.5338733147618925
+                  },
+                  {
+                    "energy": 1.8903344254863856,
+                    "weight": 7.669582579598912e-06,
+                    "full_H_residual": 0.7364423611745828
+                  },
+                  {
+                    "energy": 2.399588886083597,
+                    "weight": 7.929722944809264e-06,
+                    "full_H_residual": 0.6152354803842949
+                  },
+                  {
+                    "energy": 3.0381779555213964,
+                    "weight": 7.2978930420385425e-06,
+                    "full_H_residual": 0.5255812132866162
+                  },
+                  {
+                    "energy": 3.418594028405628,
+                    "weight": 1.2581156680972143e-06,
+                    "full_H_residual": 0.72709968790697
+                  },
+                  {
+                    "energy": 4.20885706181501,
+                    "weight": 5.35763478324947e-08,
+                    "full_H_residual": 0.5384583229670716
+                  },
+                  {
+                    "energy": 5.02929056149783,
+                    "weight": 6.471932998936883e-10,
+                    "full_H_residual": 0.8458851480601072
+                  },
+                  {
+                    "energy": 5.863598380682951,
+                    "weight": 7.49852959649632e-12,
+                    "full_H_residual": 0.9229705326376125
+                  },
+                  {
+                    "energy": 6.961365543464502,
+                    "weight": 1.424869169431771e-14,
+                    "full_H_residual": 0.7378661513006101
+                  }
+                ]
+              }
+            ],
+            "interpretation": "Positive Ritz quadrature, not exact eigenstate poles. Full-action zeroth/first moments fix total source weight; finite quadrature does not resolve the unseen exact spectral measure."
+          },
+          "interpretation": "Positive same-H low eigenstate Lehmann poles; unseen weight retained, no complete spectral claim"
+        }
+      ],
+      "matter_current_response": {
+        "source_owner": "Light matter Peierls derivatives only; dynamical -K cosB unchanged",
+        "source_vectors": [
+          [
+            1.0,
+            -1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        "source_meaning": [
+          "gradient",
+          "curl"
+        ],
+        "finite_external_source": true,
+        "on_shell_photon_S_matrix": false,
+        "frequency": 0.043013876629512574,
+        "measured_gap": 0.21506938314756285,
+        "entries": [
+          {
+            "left": 0,
+            "right": 0,
+            "kernel": {
+              "norm": 3.421768788957171e-06,
+              "trace": [
+                -3.421768788957171e-06,
+                -1.4907779871675686e-19
+              ],
+              "singular_values": [
+                3.421768788957171e-06
+              ]
+            },
+            "contact": {
+              "norm": 0.002437844377667678,
+              "trace": [
+                0.002437844377667678,
+                -1.3552527156068805e-19
+              ],
+              "singular_values": [
+                0.002437844377667678
+              ]
+            },
+            "pair": {
+              "norm": 0.002441266146456635,
+              "trace": [
+                0.002441266146456635,
+                1.3552527156068805e-20
+              ],
+              "singular_values": [
+                0.002441266146456635
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          },
+          {
+            "left": 0,
+            "right": 1,
+            "kernel": {
+              "norm": 2.328201118627051e-07,
+              "trace": [
+                -2.328201118627051e-07,
+                -1.1434944787933055e-20
+              ],
+              "singular_values": [
+                2.328201118627051e-07
+              ]
+            },
+            "contact": {
+              "norm": 0.00013638036269156782,
+              "trace": [
+                0.00013638036269156782,
+                -7.623296525288703e-21
+              ],
+              "singular_values": [
+                0.00013638036269156782
+              ]
+            },
+            "pair": {
+              "norm": 0.00013661318280343054,
+              "trace": [
+                0.00013661318280343054,
+                3.8116482626443515e-21
+              ],
+              "singular_values": [
+                0.00013661318280343054
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          },
+          {
+            "left": 1,
+            "right": 0,
+            "kernel": {
+              "norm": 2.328201309817295e-07,
+              "trace": [
+                -2.328201309817295e-07,
+                -1.4823076576950256e-20
+              ],
+              "singular_values": [
+                2.328201309817295e-07
+              ]
+            },
+            "contact": {
+              "norm": 0.00013638036269156782,
+              "trace": [
+                0.00013638036269156782,
+                -7.623296525288703e-21
+              ],
+              "singular_values": [
+                0.00013638036269156782
+              ]
+            },
+            "pair": {
+              "norm": 0.00013661318282254955,
+              "trace": [
+                0.00013661318282254955,
+                7.199780051661553e-21
+              ],
+              "singular_values": [
+                0.00013661318282254955
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          },
+          {
+            "left": 1,
+            "right": 1,
+            "kernel": {
+              "norm": 0.0021457214264116015,
+              "trace": [
+                0.0021457214264116015,
+                -1.4823076576950256e-19
+              ],
+              "singular_values": [
+                0.0021457214264116015
+              ]
+            },
+            "contact": {
+              "norm": 0.002437844377667678,
+              "trace": [
+                0.002437844377667678,
+                -1.3552527156068805e-19
+              ],
+              "singular_values": [
+                0.002437844377667678
+              ]
+            },
+            "pair": {
+              "norm": 0.00029212295125607653,
+              "trace": [
+                0.00029212295125607653,
+                1.2705494208814505e-20
+              ],
+              "singular_values": [
+                0.00029212295125607653
+              ]
+            },
+            "born": {
+              "norm": 0.0,
+              "trace": [
+                0.0,
+                0.0
+              ],
+              "singular_values": [
+                0.0
+              ]
+            }
+          }
+        ],
+        "whole_kernel_norm": 0.002145724180008675,
+        "pure_gradient": {
+          "kernel_norm": 3.7296852671225923e-17,
+          "contact_norm": 0.002437844377667678,
+          "pair_norm": 0.002437844377667641,
+          "exact_density_solution_residual": 2.5089962869073803e-15,
+          "solve_agreement": 1.2576290910829715e-11,
+          "omitted_contact_wrong_norm": 0.002437844377667641,
+          "frozen_ground_intermediates_wrong_norm": 0.002437844377667678,
+          "omitted_contact_breaks_Ward": true,
+          "frozen_ground_breaks_Ward": true
+        },
+        "preconditioner": "full diagonal H, projected on both sides; positive absolute shifted diagonal",
+        "full_action_source_sumrules": [
+          {
+            "source": [
+              1.0,
+              -1.0
+            ],
+            "full_action_total": {
+              "norm": 0.002005596650081304,
+              "trace": [
+                0.002005596650081304,
+                0.0
+              ],
+              "singular_values": [
+                0.002005596650081304
+              ]
+            },
+            "elastic": {
+              "norm": 4.72026414646161e-36,
+              "trace": [
+                4.72026414646161e-36,
+                0.0
+              ],
+              "singular_values": [
+                4.72026414646161e-36
+              ]
+            },
+            "complete_complement_zeroth": {
+              "norm": 0.002005596650081304,
+              "trace": [
+                0.002005596650081304,
+                0.0
+              ],
+              "singular_values": [
+                0.002005596650081304
+              ]
+            },
+            "complete_complement_first": {
+              "norm": 0.0034947384370473734,
+              "trace": [
+                0.0034947384370473734,
+                -9.846758011831241e-21
+              ],
+              "singular_values": [
+                0.0034947384370473734
+              ]
+            },
+            "half_double_commutator": {
+              "norm": 0.0034947384370473565,
+              "trace": [
+                0.0034947384370473565,
+                2.355810384551023e-21
+              ],
+              "singular_values": [
+                0.0034947384370473565
+              ]
+            },
+            "closure_residual": 0.0,
+            "first_sumrule_residual": 1.691355829264757e-17
+          },
+          {
+            "source": [
+              1.0,
+              1.0
+            ],
+            "full_action_total": {
+              "norm": 0.00033860608264432707,
+              "trace": [
+                0.00033860608264432707,
+                0.0
+              ],
+              "singular_values": [
+                0.00033860608264432707
+              ]
+            },
+            "elastic": {
+              "norm": 1.2485546896358691e-36,
+              "trace": [
+                1.2485546896358691e-36,
+                0.0
+              ],
+              "singular_values": [
+                1.2485546896358691e-36
+              ]
+            },
+            "complete_complement_zeroth": {
+              "norm": 0.00033860608264432707,
+              "trace": [
+                0.00033860608264432707,
+                0.0
+              ],
+              "singular_values": [
+                0.00033860608264432707
+              ]
+            },
+            "complete_complement_first": {
+              "norm": 0.0008110718920969796,
+              "trace": [
+                0.0008110718920969796,
+                1.5881867761018131e-21
+              ],
+              "singular_values": [
+                0.0008110718920969796
+              ]
+            },
+            "half_double_commutator": {
+              "norm": 0.0008110718920969835,
+              "trace": [
+                0.0008110718920969835,
+                1.6940658945086007e-21
+              ],
+              "singular_values": [
+                0.0008110718920969835
+              ]
+            },
+            "closure_residual": 0.0,
+            "first_sumrule_residual": 3.903127822383893e-18
+          }
+        ],
+        "complete_domain_dimension": 392160,
+        "resolvent_receipts": [
+          {
+            "frequency": 0.0,
+            "column": 0,
+            "iterations": 33,
+            "status": 0,
+            "absolute_residual": 2.548913702102066e-11,
+            "relative_residual": 5.691586415589247e-10,
+            "ground_leakage": 3.033200460037506e-17
+          },
+          {
+            "frequency": -0.0,
+            "column": 0,
+            "iterations": 33,
+            "status": 0,
+            "absolute_residual": 2.548913702102066e-11,
+            "relative_residual": 5.691586415589247e-10,
+            "ground_leakage": 3.033200460037506e-17
+          },
+          {
+            "frequency": 0.0,
+            "column": 0,
+            "iterations": 33,
+            "status": 0,
+            "absolute_residual": 2.548913702102066e-11,
+            "relative_residual": 5.691586415589247e-10,
+            "ground_leakage": 3.033200460037506e-17
+          },
+          {
+            "frequency": 0.043013876629512574,
+            "column": 0,
+            "iterations": 34,
+            "status": 0,
+            "absolute_residual": 3.4328882800842484e-11,
+            "relative_residual": 7.66545383041009e-10,
+            "ground_leakage": 2.837184983924294e-17
+          },
+          {
+            "frequency": -0.043013876629512574,
+            "column": 0,
+            "iterations": 31,
+            "status": 0,
+            "absolute_residual": 2.942114664969188e-11,
+            "relative_residual": 6.569582895817479e-10,
+            "ground_leakage": 5.6821465182849064e-18
+          },
+          {
+            "frequency": 0.043013876629512574,
+            "column": 0,
+            "iterations": 33,
+            "status": 0,
+            "absolute_residual": 1.7073846426553447e-11,
+            "relative_residual": 9.278632909352052e-10,
+            "ground_leakage": 5.9730912629095325e-18
+          },
+          {
+            "frequency": -0.043013876629512574,
+            "column": 0,
+            "iterations": 31,
+            "status": 0,
+            "absolute_residual": 2.942114664969188e-11,
+            "relative_residual": 6.569582895817479e-10,
+            "ground_leakage": 5.6821465182849064e-18
+          },
+          {
+            "frequency": 0.043013876629512574,
+            "column": 0,
+            "iterations": 34,
+            "status": 0,
+            "absolute_residual": 3.4328882800842484e-11,
+            "relative_residual": 7.66545383041009e-10,
+            "ground_leakage": 2.837184983924294e-17
+          },
+          {
+            "frequency": -0.043013876629512574,
+            "column": 0,
+            "iterations": 31,
+            "status": 0,
+            "absolute_residual": 8.825433433893515e-12,
+            "relative_residual": 4.796104817463224e-10,
+            "ground_leakage": 2.5682165023639357e-18
+          },
+          {
+            "frequency": 0.043013876629512574,
+            "column": 0,
+            "iterations": 33,
+            "status": 0,
+            "absolute_residual": 1.7073846426553447e-11,
+            "relative_residual": 9.278632909352052e-10,
+            "ground_leakage": 5.9730912629095325e-18
+          },
+          {
+            "frequency": -0.043013876629512574,
+            "column": 0,
+            "iterations": 31,
+            "status": 0,
+            "absolute_residual": 8.825433433893515e-12,
+            "relative_residual": 4.796104817463224e-10,
+            "ground_leakage": 2.5682165023639357e-18
+          }
+        ]
+      }
+    }
+  ],
+  "charged_differences": [
+    {
+      "cutoff": "minimal",
+      "R": 1,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "NL": 3,
+      "charge": -1,
+      "neutral_energy": -0.8088148686117883,
+      "charged_energy": -0.5240486984277062,
+      "finite_energy_difference": 0.2847661701840821,
+      "interpretation": "Actual same-parameter finite coupled-H ground Ritz energy difference, not positive infinite-gap theorem"
+    },
+    {
+      "cutoff": "minimal",
+      "R": 1,
+      "Lambda": 1.0,
+      "inertia": 2.0,
+      "NL": 5,
+      "charge": 1,
+      "neutral_energy": -0.8088148686117883,
+      "charged_energy": -0.524048698427708,
+      "finite_energy_difference": 0.28476617018408035,
+      "interpretation": "Actual same-parameter finite coupled-H ground Ritz energy difference, not positive infinite-gap theorem"
+    }
+  ],
+  "source_sha256": {
+    "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+    "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+    "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "quantum_su4_gauss.py": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+    "quantum_su4_photon.py": "5b3acd65f24c365ba1a77d2a350591033eba23480208208bc254b50485272eb3",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286"
+  }
+}

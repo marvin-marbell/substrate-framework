@@ -1,0 +1,57 @@
+{
+  "kind": "SAME_SELECTED_LAW_CURRENT_OBSERVABLE_PROJECTION_ON_OWN_NEW_STATES",
+  "method": "Pure model rebuilt; no evolution or producer rerun; source-state/law inputs below exactly same as own actual1",
+  "code": "import json,numpy as np\nfrom pathlib import Path\nimport rich_colour_vector_loop_20261015_model as m\np=json.loads(Path('rich_colour_vector_loop_20261015_actual3_input.json').read_text());model=m.build(p);data=np.load('rich_review_wave16_20261015_actual1_result.npz');out={}\nfor name in ['neutral','lepton','baryon']:\n h,j,k=m.law(model['sectors'][name],model['operators'][name],model['geometry'][name],model['rotor'],model['scalar'],model['parameters']);base=data[name+'_baselines'];em=data[name+'_EM_states'];field=data[name+'_field_states']\n def values(states):return [float(np.vdot(states[:,i],j@states[:,i]).real-np.vdot(base[:,i],j@base[:,i]).real) for i in range(states.shape[1])]\n out[name]=dict(EM_current_excess=values(em),field_only_current_excess=values(field))\nprint(json.dumps(out))\n",
+  "code_sha256": "befabe1bb0c3077d084f2b05478cddaef28f089ea06fa8c540b4c9354d8c66fe",
+  "state_npz_sha256": "c1e1faa59cd346b721c153a45c898686f6aea106902b8109c084658afff7a8d6",
+  "model_sha256": "0038f94d49777d5b1c4f364e5372023229306b6797c7cd695be70fb040310ba5",
+  "owner_input_sha256": "0380f0f982d804d8723a64a436abdf95c0dc3d76bb50077a5755f3b1569f1c88",
+  "returncode": 0,
+  "natural_exit": true,
+  "elapsed_seconds": 10.900416415999644,
+  "stderr": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_colour_vector_loop_20261015_model.py:79: FutureWarning: Input has data type int64, but the output has been cast to float64.  In the future, the output data type will match the input. To avoid this warning, set the `dtype` parameter to `None` to have the output dtype match the input, or set it to the desired output data type.\n  L2=sparse.diags([l*(l+1) for l,m in basis]), parity=sparse.csr_matrix(parity), T=sparse.csr_matrix(time_unitary),\n/home/administrator/substrate-222/proposals/P256-qed-backward/rich_colour_vector_loop_20261015_model.py:119: FutureWarning: Input has data type int64, but the output has been cast to float64.  In the future, the output data type will match the input. To avoid this warning, set the `dtype` parameter to `None` to have the output dtype match the input, or set it to the desired output data type.\n  diagonal = lambda x:project(sector,sparse.kron(sparse.diags(x),sparse.eye(19)))\n",
+  "observations": {
+    "neutral": {
+      "EM_current_excess": [
+        0.07799349704341788,
+        0.008133645464985193,
+        0.08005462616103079,
+        0.05677738859570748
+      ],
+      "field_only_current_excess": [
+        2.311115933264683e-33,
+        1.4295533869488446e-17,
+        -1.1254283248195548e-16,
+        2.687298846041361e-16
+      ]
+    },
+    "lepton": {
+      "EM_current_excess": [
+        0.06924319101919885,
+        0.005536128797935598,
+        0.06847243141963381,
+        0.06410637072628611
+      ],
+      "field_only_current_excess": [
+        -7.703719777548943e-34,
+        8.582984854527825e-18,
+        -1.0594677516344949e-16,
+        -1.5879684004200994e-16
+      ]
+    },
+    "baryon": {
+      "EM_current_excess": [
+        0.11203932422315693,
+        0.07238446190104963,
+        0.0053753240643199035,
+        0.09578292488602631
+      ],
+      "field_only_current_excess": [
+        1.1555579666323415e-33,
+        -3.554951486797017e-17,
+        4.834506143666314e-16,
+        -7.68617140979165e-16
+      ]
+    }
+  }
+}

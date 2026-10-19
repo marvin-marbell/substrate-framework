@@ -1,0 +1,221 @@
+{
+  "kind": "NEW_SELECTED_REVISION_BOUND_DIAGNOSTICS",
+  "returncode": 1,
+  "natural_exit": true,
+  "elapsed_seconds": 12.437230208015535,
+  "selected_files": {
+    "vacuum_connected_native_scientist_20261011.py": "a676d89e6e87e31f92068bb136d4b5561d3c4299d3ba45b28c55a00130236b1d",
+    "vacuum_operator_review_control_20261011.py": "ce67e5b26eccd609471507103a1b309432d367015110233154d0b985ab41ea36",
+    "vacuum_operator_review_execute_20261011.py": "7e5da2927334d7ae6b485a7653cd1433a7b6aea8f40f2dbd7b3e3e8e932f9fd4",
+    "weyl_ground_review_control_20261011.py": "a148a81e3a0a461c8c67bff0c3b6208de87bfea5b92abfa28b2daa9d8bc2e234",
+    "weyl_ground_review_execute_20261011.py": "6cc306fd21d0d031572ad9d17f1c5583ee4a5840c2ef2c8d93ade95eddad2a40",
+    "vacuum_weyl_parent_consumer_20261011.py": "be907a5d24e8523bf22a4740c29c3f5f928cc5635c8316c69175874755f31a36"
+  },
+  "config": {
+    "include": [
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/vacuum_connected_native_scientist_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/vacuum_operator_review_control_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/vacuum_operator_review_execute_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_execute_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/vacuum_weyl_parent_consumer_20261011.py"
+    ],
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward"
+    ],
+    "venvPath": "/home/administrator/substrate-framework",
+    "venv": ".venv",
+    "pythonVersion": "3.12",
+    "typeCheckingMode": "basic"
+  },
+  "diagnostics": {
+    "version": "1.1.414",
+    "time": "1791724257122",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Type \"tuple[int, ...]\" is not assignable to return type \"tuple[int, int, int]\"\n\u00a0\u00a0\"tuple[int, ...]\" is not assignable to \"tuple[int, int, int]\"\n\u00a0\u00a0\u00a0\u00a0Tuple size mismatch; expected 3 but received indeterminate",
+        "range": {
+          "start": {
+            "line": 32,
+            "character": 15
+          },
+          "end": {
+            "line": 32,
+            "character": 23
+          }
+        },
+        "rule": "reportReturnType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Type \"dict[tuple[int, ...], Fraction]\" is not assignable to return type \"dict[tuple[int, int, int], Fraction]\"\n\u00a0\u00a0\"dict[tuple[int, ...], Fraction]\" is not assignable to \"dict[tuple[int, int, int], Fraction]\"\n\u00a0\u00a0\u00a0\u00a0Type parameter \"_KT@dict\" is invariant, but \"tuple[int, ...]\" is not the same as \"tuple[int, int, int]\"",
+        "range": {
+          "start": {
+            "line": 41,
+            "character": 15
+          },
+          "end": {
+            "line": 41,
+            "character": 18
+          }
+        },
+        "rule": "reportReturnType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Argument of type \"dict[tuple[tuple[int, ...], int], Any]\" cannot be assigned to parameter \"flow\" of type \"dict[tuple[tuple[int, int, int], int], Fraction]\" in function \"div\"\n\u00a0\u00a0\"dict[tuple[tuple[int, ...], int], Any]\" is not assignable to \"dict[tuple[tuple[int, int, int], int], Fraction]\"\n\u00a0\u00a0\u00a0\u00a0Type parameter \"_KT@dict\" is invariant, but \"tuple[tuple[int, ...], int]\" is not the same as \"tuple[tuple[int, int, int], int]\"",
+        "range": {
+          "start": {
+            "line": 46,
+            "character": 14
+          },
+          "end": {
+            "line": 46,
+            "character": 16
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Argument of type \"tuple[int, ...]\" cannot be assigned to parameter \"x\" of type \"tuple[int, int, int]\" in function \"circulation\"\n\u00a0\u00a0\"tuple[int, ...]\" is not assignable to \"tuple[int, int, int]\"\n\u00a0\u00a0\u00a0\u00a0Tuple size mismatch; expected 3 but received indeterminate",
+        "range": {
+          "start": {
+            "line": 49,
+            "character": 25
+          },
+          "end": {
+            "line": 49,
+            "character": 26
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Argument of type \"dict[tuple[tuple[int, int, int], Literal[0]], Fraction]\" cannot be assigned to parameter \"flow\" of type \"dict[tuple[tuple[int, int, int], int], Fraction]\" in function \"div\"\n\u00a0\u00a0\"dict[tuple[tuple[int, int, int], Literal[0]], Fraction]\" is not assignable to \"dict[tuple[tuple[int, int, int], int], Fraction]\"\n\u00a0\u00a0\u00a0\u00a0Type parameter \"_KT@dict\" is invariant, but \"tuple[tuple[int, int, int], Literal[0]]\" is not the same as \"tuple[tuple[int, int, int], int]\"",
+        "range": {
+          "start": {
+            "line": 63,
+            "character": 13
+          },
+          "end": {
+            "line": 63,
+            "character": 14
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Argument of type \"tuple[int, ...]\" cannot be assigned to parameter \"key\" of type \"tuple[int, int, int]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[int, ...]\" is not assignable to \"tuple[int, int, int]\"\n\u00a0\u00a0\u00a0\u00a0Tuple size mismatch; expected 3 but received indeterminate",
+        "range": {
+          "start": {
+            "line": 73,
+            "character": 38
+          },
+          "end": {
+            "line": 73,
+            "character": 43
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Argument of type \"dict[tuple[tuple[int, ...], int], Any]\" cannot be assigned to parameter \"flow\" of type \"dict[tuple[tuple[int, int, int], int], Fraction]\" in function \"div\"\n\u00a0\u00a0\"dict[tuple[tuple[int, ...], int], Any]\" is not assignable to \"dict[tuple[tuple[int, int, int], int], Fraction]\"\n\u00a0\u00a0\u00a0\u00a0Type parameter \"_KT@dict\" is invariant, but \"tuple[tuple[int, ...], int]\" is not the same as \"tuple[tuple[int, int, int], int]\"",
+        "range": {
+          "start": {
+            "line": 76,
+            "character": 14
+          },
+          "end": {
+            "line": 76,
+            "character": 24
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Argument of type \"tuple[int, ...]\" cannot be assigned to parameter \"key\" of type \"tuple[int, int, int]\" in function \"__getitem__\"\n\u00a0\u00a0\"tuple[int, ...]\" is not assignable to \"tuple[int, int, int]\"\n\u00a0\u00a0\u00a0\u00a0Tuple size mismatch; expected 3 but received indeterminate",
+        "range": {
+          "start": {
+            "line": 77,
+            "character": 18
+          },
+          "end": {
+            "line": 77,
+            "character": 23
+          }
+        },
+        "rule": "reportArgumentType"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"det\" for class \"MatrixElement\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+        "range": {
+          "start": {
+            "line": 136,
+            "character": 33
+          },
+          "end": {
+            "line": 136,
+            "character": 36
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"det\" for class \"list[Unknown]\"\n\u00a0\u00a0Attribute \"det\" is unknown",
+        "range": {
+          "start": {
+            "line": 136,
+            "character": 33
+          },
+          "end": {
+            "line": 136,
+            "character": 36
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/weyl_ground_review_control_20261011.py",
+        "severity": "error",
+        "message": "Operator \">\" not supported for types \"Unknown | Self@AssocOp | Expr | Basic\" and \"Literal[0]\"\n\u00a0\u00a0Operator \">\" not supported for types \"AssocOp*\" and \"Literal[0]\" when expected type is \"object\"\n\u00a0\u00a0Operator \">\" not supported for types \"Basic\" and \"Literal[0]\" when expected type is \"object\"",
+        "range": {
+          "start": {
+            "line": 137,
+            "character": 14
+          },
+          "end": {
+            "line": 137,
+            "character": 19
+          }
+        },
+        "rule": "reportOperatorIssue"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 6,
+      "errorCount": 11,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 11.768
+    }
+  },
+  "stderr": ""
+}

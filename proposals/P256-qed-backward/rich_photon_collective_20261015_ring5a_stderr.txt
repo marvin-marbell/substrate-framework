@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_compute.py", line 148, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_compute.py", line 143, in run
+    arms['coupled_pulse'],receipt=lanczos(hamiltonian,arms['coupled_pulse'],c['trajectory_krylov'],dt);steps['coupled_pulse'].append(receipt)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_model.py", line 105, in lanczos
+    vectors.append(v);w=operator@v-last*previous;value=float(np.vdot(v,w).real);w-=value*v
+                        ~~~~~~~~^~
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 656, in __matmul__
+    return self.__mul__(other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 546, in __mul__
+    return self.dot(x)
+           ^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 643, in dot
+    return self.matvec(x)
+           ^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 391, in matvec
+    return self._shared_matvec(x)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 353, in _shared_matvec
+    y = self._rmatvec(x) if adjoint else self._matvec(x)
+                                         ^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/linalg/_interface.py", line 891, in _matvec
+    return self.__matvec_impl(x)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_model.py", line 93, in apply
+    if term.nnz:result+=(term@(matter@x).T).T
+                         ~~~~^~~~~~~~~~~~~
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_base.py", line 1010, in __matmul__
+    return self._matmul_dispatch(other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_base.py", line 902, in _matmul_dispatch
+    return self._matmul_multivector(other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_compressed.py", line 409, in _matmul_multivector
+    other.ravel(), result.ravel())
+    ^^^^^^^^^^^^^
+KeyboardInterrupt

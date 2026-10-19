@@ -1,0 +1,20 @@
+{
+  "kind":"GAUGE_EXACT_TENSOR_STATE_FINITE_RESPONSE_INTERFACE",
+  "owner":"TensorPhotonRoot",
+  "prefix":"rich_periodic_tensor_20261015_",
+  "root":"/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "governor":{"plan":"issue222-rich-backward-candidates-20261014","captured_revision":"11ca7cb459198e8013f8814439fbcc7545d99a8b13df366900fa537677fd2001","template":"general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe","work_item":"photon-candidate"},
+  "read_first":["rich_periodic_tensor_20261015_synthesis.json","rich_periodic_tensor_20261015_equations.json","rich_periodic_tensor_20261015_manifest.json"],
+  "representation":"Actual physics-tenpy1.1.1 U(1)-block-symmetric MPS/MPO, all8 Fock4 plus24 link3 local dimensions. Integer charges explicitly encode N8,Sz0,allGauss0. Explicit JW across matter factors; no guessed intrinsic grading. Fresh seeds, no borrowed evolved arrays.",
+  "first_construction":"Full-H polynomial images add missing sectors before bond32/64 DMRG. Declared exploratory truncation, full-H variance not PHP variance.",
+  "second_construction":"Coherent product over12 independent periodic2link winding factors [1+.25(UeUf+h.c.)], compressed block tensor, then SAME-H image expansion and bond128 DMRG. These are state factors, NOT magnetic Hamiltonian terms.",
+  "state_files":"*_chi32_state.pkl,*_chi64_state.pkl,*_loopgas_state.pkl are actual finite TeNPy MPS with numerical block tensors, Schmidt spectra and boundary charges, not sampled coefficient dictionaries. Use isolated env interpreter. Raw sampled configurations/amplitudes separately witness Gauss and outside-old-support, not a replacement state.",
+  "spectral_files":"q100_response.npz and q110_response.npz are latest completed construction; first_ansatz_outputs.zip freezes first construction's arrays. Order F_T1,F_T2,jQ_T1,jQ_T2. gram,shifted_H,omega,coefficients,source_overlaps,raw_joint_weights,contact,frequencies,joint_chi,current_twist_response,source_means retain complex response weights. Current twist response=joint_chi current block+contact.",
+  "response_scope":"Finite four-source-MPS Ritz linearization with declared source compression, not exact stationary Lehmann response if vacuum full-H residual remains. Two independent transverse directions at non-equivalentq100/q110; no continuum/massless/propagation claim.",
+  "exits":"attempt1..7 and loopgas exits report actual science child return codes, not wrapper-only0. Failed source capsules retained; attempt2_tensor_checkpoint_capsule.zip preserves first real tensor checkpoint and boundary-gauged charge reporting mistake. attempt5 and first loopgas natural0 responses are REJECTED normalization mismatches preserved in rejected_mixed_norm_response_capsule.zip; final attempt7 and loopgas use physically normed K/G plus actual H-image scaling benchmark.",
+  "dependency":"Only geometry/source convention and other pure functions imported from frozen rich_periodic_photon_20261015_model.py; copied/hashes in source capsules. No ancestor producer/checker CLI or evolved-output replay.",
+  "commands":["/home/administrator/substrate-framework/.venv/bin/python rich_periodic_tensor_20261015_capture.py reproduction","/home/administrator/substrate-framework/.venv/bin/python rich_periodic_tensor_20261015_loopcapture.py"],
+  "bootstrap":"Create the prefix-owned rich_periodic_tensor_20261015_env with Python3.12 venv, install -r rich_periodic_tensor_20261015_requirements.txt inside it; do not downgrade or alter active runtime. Original actual run used isolated system-site-packages venv.",
+  "Wilson_arrays":"winding_plaquette_joint_covariance has rows sine-Wilson two-link transverse winding source, four-link plaquette source; columns F_T1,F_T2,jQ_T1,jQ_T2. Equal-time connected complex covariances, not dynamically extracted Wilson bands. All24 wrapping arcs remain.",
+  "restrictions":"No graph/public/plan mutations, no active-environment changes, no fit, bareB/Maxwell term, hidden spin-charge switch or Nature claim. Private prefix env only."
+}

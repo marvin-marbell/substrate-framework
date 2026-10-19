@@ -1,0 +1,27 @@
+{
+  "kind": "Parent exact static Root carrier maximum-coupling gap calibration discriminator",
+  "program_utf8": "import json,hashlib,numpy as np,math\nfrom pathlib import Path\nimport covariant_canonical_gauss_boundary_kernel as s\nR=Path.cwd()\nassert hashlib.sha256((R/\"covariant_root_transfer.py\").read_bytes()).hexdigest()==\"6911f0283dc0f84f4cc05202deb67dcd3266d5c64ca1a05e149f1567451e0f9c\"\nassert hashlib.sha256((R/\"covariant_prepared_gauss_state.py\").read_bytes()).hexdigest()==\"2a0ecfb2341fceb7866d5062cf33d1da71b2fafa4b148829d21d14f0650fe307\"\ngamma,_=s.phi_frame(s.Parameters());kappa=.1248905293249106\nhalf,pref,T=s.physical_spatial_onebody(gamma,kappa,[np.eye(4,dtype=complex)]*3,[np.zeros((4,4),complex)]*4,np.eye(4))\neig=np.linalg.eigvalsh(T);B=1/(2*kappa)-3\nneutral=s.exterior(half,s.occupations(4,2));charged=s.exterior(half,s.occupations(4,3))\nkn=np.linalg.eigvalsh(neutral@neutral);kc=np.linalg.eigvalsh(charged@charged)\nsingle=-math.log(kc[-1]/kn[-1]);pair=-math.log(kn[-2]/kn[-1])\nprint(json.dumps(dict(scope=\"STATIC Root6911 scalar identity-link fiber at NEW comparison Source2a MAXIMUMcoupling; not an evaluated macroK, not proof centralcoupling equals this maximum\",supplier_source_sha256=hashlib.sha256(s.OWN_BYTES).hexdigest(),kappa_maximum=kappa,B_min=B,point_onebody_T_eigenvalues=eig.tolist(),point_charged_transfer_gap=single,point_neutral_transfer_pair_gap=pair,formula_single_logB=math.log(B),formula_pair_2logB=2*math.log(B),B_required_for_gap_point01=math.exp(.01),kappa_required_for_gap_point01=1/(2*(math.exp(.01)+3)),physical_gap_if_generator_is_minuslogK_over_a_point01=single/.01)))\n",
+  "program_sha256": "ce5bf40be71d8c2323a6610814a912508d790a56b85d5415bba32704b3859da6",
+  "natural_exit": 0,
+  "stderr": "",
+  "observed": {
+    "scope": "STATIC Root6911 scalar identity-link fiber at NEW comparison Source2a MAXIMUMcoupling; not an evaluated macroK, not proof centralcoupling equals this maximum",
+    "supplier_source_sha256": "741fbc1f196061cb7f0e2c479770e992304ac2de90492f002ef4cbd931315d50",
+    "kappa_maximum": 0.1248905293249106,
+    "B_min": 1.00350613215209,
+    "point_onebody_T_eigenvalues": [
+      0.9965061178604149,
+      0.9965061178604153,
+      1.0035061321520893,
+      1.0035061321520895
+    ],
+    "point_charged_transfer_gap": 0.0035000000000003557,
+    "point_neutral_transfer_pair_gap": 0.0069999999999977615,
+    "formula_single_logB": 0.0034999999999996314,
+    "formula_pair_2logB": 0.006999999999999263,
+    "B_required_for_gap_point01": 1.010050167084168,
+    "kappa_required_for_gap_point01": 0.12468671940919021,
+    "physical_gap_if_generator_is_minuslogK_over_a_point01": 0.35000000000003556
+  },
+  "claim_limit": "Comparison maximumkappa is not silently retagged to actual macrocentralcoupling. Static transfer gap, no interacting/mass/pole/commoncone claim. The .02 uniformneutralgap premise needs actual kappa<=1/(2(exp(.01)+3)); revised conservative gap may still suffice for cold trace but cannot be claimed as .02."
+}

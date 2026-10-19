@@ -1,0 +1,18 @@
+{
+  "kind": "NEW_NATIVE_NORMAL_TANGENT_COST_METHOD_INPUT_NOT_GROUND_OR_GAP",
+  "source_text": "\"\"\"Native 60-direction tangent-cost discriminator, not a quantum gap theorem.\"\"\"\nfrom pathlib import Path\nimport hashlib\nimport importlib.util\nimport json\nimport sympy as s\n\nROOT = Path('/home/administrator/substrate-222/proposals/P256-qed-backward')\nsource = ROOT / 'quantum_minimum_sea_source_20261012.py'\nspec = importlib.util.spec_from_file_location('native_parameterized_sea', source)\nassert spec is not None and spec.loader is not None\nmodule = importlib.util.module_from_spec(spec)\nspec.loader.exec_module(module)\na = [s.Rational(1, 8), s.Rational(1, 3), s.Rational(2, 3), s.Integer(1)]\nC, generators, L, G, left, P, orbit_eigen = module.centre_geometry(a)\nzero = s.zeros(4)\ndirections = [[generators[j] if mu == v else zero for mu in range(4)] for v in range(4) for j in range(15)]\noutputs = []\nnorm_rows = []\nfor mu in range(4):\n    norm_rows.append([s.simplify(s.trace(C[mu] * X[mu]) / 2) for X in directions])\n    outputs.append((16, [C[mu]*X[mu]+X[mu]*C[mu]-s.trace(C[mu]*X[mu])*s.eye(4)/2 for X in directions]))\nfor mu in range(4):\n    for nu in range(4):\n        if mu != nu:\n            outputs.append((4, [C[mu]*X[nu]+X[nu]*C[mu]+X[mu]*C[nu]+C[nu]*X[mu] for X in directions]))\nD = s.zeros(60)\nfor weight, matrices in outputs:\n    vectors = s.Matrix(16, 60, lambda r, j: matrices[j][r//4, r%4])\n    D += weight * vectors.H * vectors\nD = D.applyfunc(s.simplify)\nR = s.Matrix(norm_rows)\nQ = (D + 64*R.T*R).applyfunc(s.simplify)\nassert D == D.H and Q == Q.H\nassert (Q*L).applyfunc(s.simplify) == s.zeros(60, 15)\nassert D.rank() == 41 and Q.rank() == 45\nassert L.rank() == 15\nassert R*L == s.zeros(4,15)\nassert all(e > 0 for e in orbit_eigen)\nassert all(x > s.Rational(1,128) for x in [v*v for v in a])\nassert sum(v**4 for v in a) < 4\nencoded = json.dumps([[str(v) for v in Q.row(i)] for i in range(60)], separators=(',', ':'))\nprint(json.dumps({'kind':'EXACT_NATIVE_NORMAL_TANGENT_COST_METHOD_NOT_FULLH_GAP',\n    'native_source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),\n    'amplitudes':[str(v) for v in a], 'cartesian_directions':60,\n    'ordered_Jordan_defect_linearized_rank':41, 'with_norm_vector_cost_rank':45,\n    'gauge_orbit_nullity':15, 'all_gauge_orbit_vectors_exactly_annihilated':True,\n    'deleted_norm_cost_extra_four_flat_directions_rejected':True,\n    'link_alignment_orbit_Gram_eigenvalues':[str(v) for v in orbit_eigen],\n    'Q_exact_entries_sha256':hashlib.sha256(encoded.encode()).hexdigest(),\n    'Q_PSD_reason':'Exact sum of positive weighted Hermitian Gram matrices, not eigenvalue numerics.',\n    'Q_is_full_quantum_Hessian_or_gap':False, 'uniform_in_xstar_or_N_gap_paid':False,\n    'actual_ground_or_lowband_transfer_proved':False,\n    'wholeP0_magnetic_phase_or_IR_atom':False, 'law_or_SOURCE_adopted':False,\n    'campaign_complete':False}))\n",
+  "source_sha256": "ceb228df305555388977a2ed3d5154a7f94dbfefc975fd507fb304ec128d33c8",
+  "native_input": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/quantum_minimum_sea_source_20261012.py",
+    "sha256": "84a265c05f88355b449cea6339c8d72056397c0a23aae8925c805e82ec9ee344"
+  },
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "11d4a5702e910f6cdd05798167b21e1b76519b5b1823d78a461e635761012bab",
+    "accepted_scoped_science": "11d4a5702e910f6cdd05798167b21e1b76519b5b1823d78a461e635761012bab",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "original_scientists_reviews_not_rebound": true
+  }
+}

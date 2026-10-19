@@ -1,0 +1,142 @@
+{
+  "kind": "INDEPENDENT_MAGNETIC_HISTORY_SCOPE_REVIEW_NOT_SCIENTIFIC_ADMISSION",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "22e95b85359c1b2e26cda7b6260f96982f2ae23cf83b25753189b3fdb90b4443",
+    "accepted_scoped_science": "e12065ad4cbcff8723111399bca46eba091f7cbdcff340334c98b91c6e868617",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "requirement_ids": ["outcome", "verification"],
+    "parent_sole_plan_state_docs_owner": true
+  },
+  "revision_binding": {
+    "contract_sha256": "0c497a88371303693d78c2ad34a52a16a2d0d4a431a5cb526c25b9f7b2c030c9",
+    "proof_sha256": "ba64144a8469d7f979e4cfecb9e068e6a0535917f6f31542a3a97e29ce49ace8",
+    "consumer_sha256": "08c73bf7c01529db860e674377c974a70a9642962f10b27350fa15b352fc4c60",
+    "original_receipt_sha256": "2267a42e68a6af94dc916c7be6e0c8c33bccaacb158b94b797dce2db98453839",
+    "original_preexecution_sha256": "9cccb44be9781038fc0e4c48ac02de452773fde99d7c3207879c4f4250bed93f",
+    "original_executed_sha256": "c75050dac39fe6d63d68301d391f69a2a16ec47bc204145ea4352e386a7f102b",
+    "postexecution_review_snapshot_sha256": "8234b752e75128ea2e3b84707d9a53044ba909d25691f00a309d978a80042e6d",
+    "snapshot_is_preexecution": false,
+    "all_contract_target_pins_and_all_original_receipt_input_members_in_both_archives": "Verified by NEW independent control; complete dictionaries in review receipt and capsule. Original frozen source read from actual1 preexecution archive. No old producer/checker/main/solver/root/eigensolver import or execution."
+  },
+  "verdicts": [
+    {
+      "field": "material_signed_gauge_complete_route.all_N_derivation: longitudinal/transverse geometry",
+      "verdict": "VALID",
+      "scope": "Even N>=4 fixed-tangential slab, central normal length1 k and boundary0 normal plane l, interior Gauss D with +source/-target. Exact cross -1/(N-1), +1/(N-1); no scalar magnetic-source identification."
+    },
+    {
+      "field": "material_signed_gauge_complete_route.all_N_derivation: all-character electric heat and factor",
+      "verdict": "CONDITIONAL",
+      "scope": "Exact conditional charged-affine electric Gaussian for raw-closed histories, ONE character shared throughout, native HE64 with collective HC64 counted once, same half-time excursions, fixed admissible initial fullrho0. Relative connected electric factor expm1(32beta/(N-1)) is VALID within this scope. It is not the interacting canonical physical word weight or Gibbs influence."
+    },
+    {
+      "field": "material_signed_gauge_complete_route.conditional_all_N_bound",
+      "verdict": "CONDITIONAL",
+      "scope": "At every finite b0, uniformly 0<beta<=b0, expm1(32beta/(N-1))<=32b0 exp(32b0/(N-1))/(N-1)->0. For growing betaN the required gate is betaN/(N-1)->0, not beta-infinity uniformity."
+    },
+    {
+      "field": "legal_local_insertion.abstract, patch, Gauss; native local_form",
+      "verdict": "VALID",
+      "scope": "Bounded smooth dressed active CAR insertion, canonical Ns and Ref4 preserved, raw fullE and collective density updates, affine plus section/minus gluing, SU4-covariant endpoints and invariant denominator, physical reducing membership. Exact pointwise noncommuting probes and canonical masks are not thermal replacements. Smooth core preservation only; no whole closed form-domain extension. N4 distance1 is a finite form control, not a macroscopic bulk-distance statement."
+    },
+    {
+      "field": "native_forms[*].boundary_plane_is_tangential_magnetic_source=false",
+      "verdict": "VALID",
+      "scope": "The normal-plane intermediate reservoir history uses dynamic x edges and changes interior rho. Actual magnetic source changes fixed tangential z boundary links and nonzero boundary yz loop curvature. They are different operators and domains."
+    },
+    {
+      "field": "achieved_flags.signed_conditional_electric_epsilon_N=true with actual_magnetic_normalized_epsilon_N=false",
+      "verdict": "VALID",
+      "scope": "Paired flags properly restrict achievement. Calling this conditional factor actual normalized magnetic epsilon, native Gibbs local-state convergence, mixed dynamics, wholeP0, phase, stiffness, IRatom or photon would be INVALID. No such promotion is supported by the reviewed target."
+    }
+  ],
+  "independent_derivation": {
+    "geometry": {
+      "D": "Interior rows of +source/-target incidence, all open-x existing edges except fixed tangential boundary links. r=(N-2)N^2, M=3N^3-5N^2, d=M-r=2N^3-3N^2. LI=DD^T is positive definite: D^Tlambda=0 forces interior lambda equal along connected edges and zero at boundary.",
+      "plane_solution": "l=1 on normal edges (0,y,z)->(1,y,z), zero otherwise. Dl=-1 at every x1 interior site. phi_l(x)=-(N-1-x)/(N-1) for 1<=x<=N-2 and phi_l(0)=phi_l(N-1)=0 solves LI phi_l=Dl. Tangential differences vanish, interior second differences vanish except the x1 forcing. Uniqueness proves P l=D^Tphi_l. At any non-boundary normal edge k, phi_l(c)-phi_l(c+1)=-1/(N-1).",
+      "cross": "P=D^TLI^-1D and Q=I-P are orthogonal projectors. k.l=0, so k.P l=-1/(N-1), Qk.Ql=k.l-k.P l=+1/(N-1). Also ||Pl||^2=N^2(N-2)/(N-1), ||Ql||^2=N^2/(N-1). These are exact all-N identities; new N4/6/8 rational full-graph incidence controls verify every interior row."
+    },
+    "affine_all_character_heat": {
+      "section": "E=-i derivative and DE=rho imply Psi(y+D^Tlambda)=exp(+i lambda.rho)f(y). Raw primitive deck 2pi n decomposes as 2pi Qn+2pi D^TLI^-1Dn. Consequently reduced gluing is exp(+2pi i b.n)exp(-2pi i (LI^-1Dn).rho). For charged forward k, Delta rho=Dk and k.Qn=k.n-(Dk).LI^-1Dn; integer k.n makes the native charged intertwiner preserve this minus density cocycle.",
+      "raw_flow": "A charged hop shifts full E by RAW k and changes collective rho by Dk while retaining the SAME b. A trace history requires total RAW flow0; occupation/divergence closure alone is insufficient. Initial e0=D^TLI^-1rho0 plus a transverse momentum is shifted by cumulative raw v_j; rho_j=rho0+Dv_j.",
+      "tiling": "With primitive cycle Gram G and detG=detLI, electric labels are C(m+b) plus affine initial twist. Sum_m integral_[0,1)^d db is ONE R^d integral after translation by that twist. Completing the square in G, not independently at each interval, yields tE(beta)=(pi/(64beta))^(d/2)/sqrt(detLI).",
+      "formula": "E_rho0[v]/tE(beta)=exp{-64 sum_j t_j ||D^TLI^-1rho0+P v_j||^2 -64 sum_j t_j ||Q(v_j-vbar)||^2}, beta=sum_j t_j, vbar=sum_j t_j v_j/beta. The initial transverse shift disappears after the single continuum integral; the initial longitudinal rho generally remains. HE64=64Pi^2+64rhoLI^-1rho already contains HC once."
+    },
+    "history_interference": {
+      "general_schedule": "Let f,g be excursion indicators with durations a*beta,b*beta and overlap c*beta, p=k.P l, q=Qk.Ql. In the SAME-background four-heat connected ratio R=E_rho0[fk+gl] E_rho0[0]/(E_rho0[fk] E_rho0[gl]), joint-minus-independent ACTION is DeltaS=128beta[c p+(c-ab)q]. Arbitrary rho0 linear and baseline terms cancel in this conditional inclusion-exclusion, without setting rho0=0 and without making a Gibbs assertion.",
+      "same_half": "a=b=c=1/2: HC cross64beta p=-64beta/(N-1); transverse memory cross32beta q=+32beta/(N-1). DeltaS=-32beta/(N-1), hence R=exp(+32beta/(N-1)), R-1=expm1(32beta/(N-1)). The signs are ACTION signs; the ratio reverses them.",
+      "opposite_half": "a=b=1/2,c=0: HC cross0; transverse cross=-32beta q=-32beta/(N-1). Total is unchanged. Because raw k.l=0, q=-p and DeltaS=128beta ab p for ANY overlap. Thus overlap does alter the HC/memory split but does NOT alter the total for these disjoint raw supports at fixed durations. This is an independently derived refinement, not an invalidation of the target same-half calculation.",
+      "changed_duration": "a=1/4,b=1/2 gives DeltaS=16beta p=-16beta/(N-1), not the factor32. General raw supports need the full c-dependent formula; overlap independence is not universal.",
+      "initial_background": "Native masks with paired checkerboard species give rho0=0; canonical stripe singlets give rho0=+/-128 and demonstrate that canonical constraints do not force rho0=0. Each individual heat has 128 sum t_j <D^TLI^-1rho0,Pv_j> plus baseline64beta||D^TLI^-1rho0||^2. The pure electric four-heat conditional ratio cancels these at a COMMON fixed rho0; Gibbs summation, denominator/cumulants and full quantum CAR/Phi/SU4 weights need not. E_joint/(E_k E_l) without the baseline E_0 leaves an extra +64beta||D^TLI^-1rho0||^2 in log ratio as well as free-heat normalization. Target correctly restricts its explicit witness to rho0=0."
+    },
+    "source_membership": {
+      "canonical_CAR": "Independent full bitmasks contain64 distinct charged species each2V, neutral2V and Ref4. Transfer c_source^dag c_target preserves each Ns; its inverse restores mask with sign product1. Delta fullrho=+1 at source,-1 at target matches the native Dk convention. The boundary normal plane is a legal auxiliary1 product of N^2 such transfers, with canonical occupations preserved; the inverse plane returns RAW flow and occupation to zero net change.",
+      "SU4": "For arbitrary endpoint g_x,g_y in SU4, Phi_x->g_xPhi_xg_x^dag, U->g_xUg_y^dag and B=(F_xU+UF_y)/2 transforms as g_x B g_y^dag. CAR contraction is invariant; the smooth radius denominator is invariant. Gauge-invariant insertion commutes with compact all-site SU4 projection and therefore preserves its physical reducing subspace. Wedge4/0 initial occupancies are singlets since detg=1; field/colour are still quantum operators. The new noncommuting probe checks this covariance algebra, not a full thermal projection.",
+      "norm_and_core": "For b=|c0|+|ci|>0, ||B||<=b(r_x+r_y)/2, ||CAR+h.c.||<=8||B||. Division by8b sqrt(1+r_x^2+r_y^2) gives a bounded selfadjoint insertion with norm<=1. Smooth equivariant cores are preserved by smooth invariant multiplication and integer dressed paths. This does not prove preservation of the entire closed native quadratic form domain."
+    }
+  },
+  "load_bearing_findings": [
+    {
+      "classification": "SUPPORTED_TARGET_SCOPE_NOT_INVALIDATING_DEFECT",
+      "field": "material_signed_gauge_complete_route.all_N_derivation; native_forms[*].reset_b_wrongcase_exponent",
+      "trigger": "Resample character/momentum independently at each hop or interval, discarding transverse history variance",
+      "actual": "Same-half cross ACTION becomes HC-only -64beta/(N-1), not -32beta/(N-1).",
+      "consequence": "Wrong signed conditional influence factor and cancellation. New exact symbolic control rejects this wrongcase.",
+      "correction": "Keep one common character/momentum integral through the entire RAW-closed history."
+    },
+    {
+      "classification": "SUPPORTED_TARGET_SCOPE_NOT_INVALIDATING_DEFECT",
+      "field": "native_forms[*].double_HC_wrongcase_exponent",
+      "trigger": "Add a second HC64 after using fullE64 heat",
+      "actual": "Same-half ACTION cross becomes -96beta/(N-1).",
+      "consequence": "Collective longitudinal energy is counted twice.",
+      "correction": "Use fullE heat OR transverse heat plus collective HC once."
+    },
+    {
+      "classification": "SCOPE_CLARIFICATION",
+      "field": "material_signed_gauge_complete_route.why_signed; native_forms[*].all64_initial_fullrho_zero",
+      "trigger": "Interpret the exhibited rho0=0 mask as the native Gibbs initial density, or extend the raw two-copy ratio to nonzero rho0 without a common baseline",
+      "actual": "Canonical stripe masks have nonzero +/-128 fullrho. Individual histories have background dependence. A same-background normalized four-heat conditional ratio cancels it, but does not calculate a Gibbs average.",
+      "consequence": "False replacement of all native initial charge sectors by the selected trial; unnormalized ratio has extra baseline action.",
+      "correction": "Name fixed admissible background and four-heat normalization explicitly when generalizing; retain native Gibbs fullrho sum as unpaid."
+    },
+    {
+      "classification": "SCOPE_CLARIFICATION",
+      "field": "material_signed_gauge_complete_route.all_N_derivation: identical half-time schedule",
+      "trigger": "Assume moving the two disjoint RAW excursions to opposite half-times changes the total factor, or apply factor32 to different durations",
+      "actual": "For raw k.l=0, fixed half durations give the SAME total for all overlap, though HC/memory pieces change. Quarter/half durations give factor16.",
+      "consequence": "An overlap-only adverse control would fail to discriminate the total in this geometry; a duration change or nonzero raw overlap does discriminate.",
+      "correction": "Use DeltaS=128beta[c p+(c-ab)q], not an unqualified timing rule."
+    },
+    {
+      "classification": "INVALID_PROMOTION_IF_TRIGGERED_TARGET_ALREADY_DISCLAIMS",
+      "field": "material_signed_gauge_complete_route.complete_quantum_gate; achieved_flags.actual_magnetic_normalized_epsilon_N",
+      "trigger": "Promote expm1 electric pair factor to actual magnetic source J covariance or complete normalized A-inserted history sum",
+      "actual": "Normal boundary plane is not fixed tangential magnetic J; W_N and X_N, fullPhi/SU4 propagation, all canonical sectors and initialrho sums, normalized cumulants and local reservoir/domain bridge remain unbounded/unconstructed.",
+      "consequence": "No native magnetic epsilon_N, local-state/mixed-dynamics/wholeP0 convergence, phase/stiffness/IRatom or photon follows.",
+      "correction": "Retain CONDITIONAL scope and false achievement flags until full normalized native quantum gates and the actual local reservoir bridge are proved."
+    }
+  ],
+  "invalidating_findings_within_exact_claimed_scope": [],
+  "delivery": {
+    "source": "magnetic_history_review_control_20261011.py",
+    "source_sha256": "974b516dd460c3af2015733c4eaf6432af35c804b0bc9edc41c03d51fe2f6dfa",
+    "input": "magnetic_history_review_input_20261011.json",
+    "input_sha256": "3db4290172a8939ea296ed59ccba24fe1c9ca68f1b8f94e25e497d80ac6ad697",
+    "execute": "magnetic_history_review_execute_20261011.py",
+    "execute_sha256": "b3fbe20535989663b2fbd7d1d8627b6f21469e3e016d3b856eabbf5dad22fd07",
+    "receipt": "magnetic_history_review_actual1_20261011_receipt.json",
+    "receipt_sha256": "15043c790e7a12cf6ac677f2f941d689562f544eb84b3e29f41b442d4e5a6135",
+    "capsule": "magnetic_history_review_actual1_20261011_capsule.json",
+    "preexecution_sha256": "db30c7257835421e97131dce83268c47c78727391f47334d6a88a521ad533444",
+    "executed_sha256": "f02d994b7d8b62c636fe5b16cb7176a965c5d0dd192d859a71b6042468e055a5",
+    "observed": {"returncode": 0, "natural_exit": true, "elapsed_seconds": 16.012522239005193, "sources_inputs_unchanged": true, "stderr_empty": true},
+    "controls": ["Exact native N4/6/8 incidence rows and all-N analytic geometry", "Complete independent canonical CAR masks/signs and boundary normal excursion", "Arbitrary fullrho symbolic background and canonical nonzero stripe", "Same-half/opposite-half/quarter-half history schedules", "Reset-b and doubleHC wrongcases", "Noncommuting endpoint SU4 covariance", "Both original archive input-member SHA dictionaries and postexecution snapshot pin"],
+    "language_intelligence": "magnetic_history_review_language_20261011.json: real direct Pyright JSON-RPC symbols and published diagnostics on representative target source before own code; mounted LSP unavailable, default Pyright did not resolve sympy. Positive structural AST local_form query succeeded. Not a clean diagnostics claim.",
+    "parent_checks": "Selected diagnostics for the two own-prefix Python files in project interpreter environment; capsule/hash review. No old entrypoint rerun.",
+    "no_target_plan_state_memory_docs_layout_edits": true,
+    "no_scientific_admission": true
+  }
+}

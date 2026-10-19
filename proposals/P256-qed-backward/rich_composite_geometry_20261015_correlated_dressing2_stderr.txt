@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_geometry_20261015_dressing.py", line 46, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_geometry_20261015_dressing.py", line 29, in main
+    storage,labels,raw_probes,generators,basis=construct(primitive,omega,config,scalar,rotor,out);probes=source_coordinates(storage,raw_probes,len(labels),p['scalar_points']);del raw_probes,omega;gc.collect()
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_geometry_20261015_dressing_basis.py", line 55, in construct
+    if block is None:block=storage[label] if label in storage else storage.create(label,OperatorBlock())
+                           ~~~~~~~^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_geometry_20261015_dressing_store.py", line 32, in __getitem__
+    self.flush(True);self.cache=load(self.path(label));self.cache_key=label
+    ^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_geometry_20261015_dressing_store.py", line 24, in flush
+    self.meta[self.cache_key]=self.summary(self.cache);save(self.path(self.cache_key),self.cache);self.dirty=False
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_geometry_20261015_compile.py", line 14, in save
+    with open(path,'xb') as f:pickle.dump(value,f,protocol=5)
+         ^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/home/administrator/substrate-222/proposals/P256-qed-backward/rich_composite_geometry_20261015_correlated_dressing2_bodyblock_00000.pkl'

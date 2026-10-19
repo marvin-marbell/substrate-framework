@@ -1,0 +1,36 @@
+{
+  "actual_Nuniform_lowband_transport_proved": false,
+  "campaign_complete": false,
+  "elapsed_seconds": 1.696542117,
+  "epoch": "charged_body_transport_actual2_20261012",
+  "kind": "EXACT_PARENT_SELECTED_CHARGED_EPOCH_BINDING_AND_ANTECEDENT_NORMALIZATION_NOT_LOW_BAND_TRANSPORT",
+  "natural_returncode": 0,
+  "new_paired_mass_lower_is_exact_twice_old_cos_sin_pair_lower": true,
+  "novel_magnetic_successor_or_IR_mechanism": false,
+  "outputs_verified": 4,
+  "physical1_phase_stiffness_atom_admitted": false,
+  "pre_members": 21,
+  "selected_capsule_sha256": "709c0a96a7a692d3599b2a6bb7adf661f6ef69417b2cd6abd9a5bb6967efc222",
+  "wholeP0_integer_loop_moments_are_exact_twice_accepted_antecedent": true,
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "accepted_scoped_science": "4084310261f5f3d8a9978fcca58bca8c458808a0602940ec00c4eb5876620c64",
+    "template": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "original_child_capture_not_rebound": "11d4a5702e910f6cdd05798167b21e1b76519b5b1823d78a461e635761012bab"
+  },
+  "antecedent": {
+    "path": "ground_magnetic_order_proof_20261012.json",
+    "section": "construction2_irreducible_ground_energy_form",
+    "scope": "same integer face unitary, entire ground block removal, first and second moments, finite local positive-band Cauchy lower; no spatial IR mechanism"
+  },
+  "withdrawn_claim": "The summed integer U/U* moment route is a novel materially distinct magnetic successor.",
+  "retained_scope": "New proposed uniform coercivity envelope and exact whole-form parity Schur/IMS are pending independent review; no actual N-uniform low-band approximation proved.",
+  "next_action": "ChargedBodyTransport resumed the original low-band/exterior task in new own-prefix epoch; original selected source/proof/interface/capsule retained immutable.",
+  "verification_source_text": "import json,hashlib,zipfile\nfrom pathlib import Path\nimport sympy as s\nr=Path('/home/administrator/substrate-222/proposals/P256-qed-backward')\nname='charged_body_transport_actual2_20261012'\nc=json.loads((r/(name+'_capsule.json')).read_text())\ndef sh(b): return hashlib.sha256(b).hexdigest()\nfor key in ('preexecution','executed'):\n assert sh((r/c[key]['path']).read_bytes())==c[key]['sha256']\nwith zipfile.ZipFile(r/c['preexecution']['path']) as pre, zipfile.ZipFile(r/c['executed']['path']) as exe:\n pnames=pre.namelist(); enames=exe.namelist()\n assert len(pnames)==len(set(pnames)) and len(enames)==len(set(enames))\n assert set(pnames)=={'inputs/'+Path(p).name for p in c['input_hashes']}\n assert len(pnames)==len(c['input_hashes'])\n for p,h in c['input_hashes'].items():\n  b=pre.read('inputs/'+Path(p).name)\n  assert sh(b)==h and exe.read('inputs/'+Path(p).name)==b\n  assert c['post_input_unchanged'][p] is True\n for n,h in c['outputs'].items():\n  b=exe.read('outputs/'+n)\n  assert sh(b)==h and sh((r/n).read_bytes())==h\n exit=json.loads(exe.read('outputs/'+name+'_exit.json'))\n assert exit['natural_returncode']==c['natural_returncode']==0\n assert exit['timeout_or_signal_intervention'] is False\n assert exit['elapsed_seconds']==c['elapsed_seconds']\n receipt=json.loads(exe.read('outputs/'+name+'_receipt.json'))\n T=s.Symbol('T',nonnegative=True)\n old1=s.Integer(256); old2=16384*T+65536\n new1=s.Integer(512); new2=32768*T+131072\n assert s.expand(new1-2*old1)==0 and s.expand(new2-2*old2)==0\n assert s.simplify(new1**2/new2-2*old1**2/old2)==0\n print(json.dumps({'kind':'EXACT_PARENT_SELECTED_CHARGED_EPOCH_BINDING_AND_ANTECEDENT_NORMALIZATION_NOT_LOW_BAND_TRANSPORT','epoch':name,'pre_members':len(pnames),'outputs_verified':len(c['outputs']),'natural_returncode':0,'elapsed_seconds':exit['elapsed_seconds'],'selected_capsule_sha256':sh((r/(name+'_capsule.json')).read_bytes()),'wholeP0_integer_loop_moments_are_exact_twice_accepted_antecedent':True,'new_paired_mass_lower_is_exact_twice_old_cos_sin_pair_lower':True,'novel_magnetic_successor_or_IR_mechanism':False,'actual_Nuniform_lowband_transport_proved':False,'physical1_phase_stiffness_atom_admitted':False,'campaign_complete':False},sort_keys=True))\n",
+  "verification_returncode": 0,
+  "verification_stderr": "",
+  "old_main_or_producer_replayed": false,
+  "original_sources_reviews_or_epochs_rebound": false
+}

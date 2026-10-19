@@ -1,0 +1,60 @@
+{
+  "assignment":"photon-candidate + interaction-candidate, rich induced quantum field instead of another local gap",
+  "governing_plan":{"id":"issue222-rich-backward-candidates-20261014","revision":"87bedd8343641b2540426b62d725c656fa893e956a9ec2b56ba08082c518ab3e","template":"general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe","items":["photon-candidate","interaction-candidate"],"writer":"parent only; subagent bound and read, did not revise shared plan"},
+  "scientific_result":"Constructed and executed a materially richer finite projected induction candidate: primitive 3D curl-electric dynamics plus exact retained CAR two-loop Hubbard matter, actual quantum current/contact/density and full-H matter-field feedback, with no bare magnetic restoring term. Its field-bright branch scales linearly with lattice momentum over the finite selected q family and differs from finitebox bare-E poles. This is NOT established bulk photons, a compact parent gauge phase or a common charged spin-half source.",
+  "mechanism": {
+    "primitive_law":"H= g² lambda f0² Pphi²/2 + H_two_loops(phi), lambda=4sin²(pi n/Lx), f0²=2/V. H_two_loops uses actual eight-site Hubbard hops including two closing edges and a connecting bridge. No frequency, local curvature or precomputed polarization D is installed.",
+    "two_field_legs":"Actual normalized 3D periodic face-cochains m_z and m_y at momentum along x have E=Cm along y,z, Gram lambda I2 and exact divergence zero. The selected simultaneous two-leg law is Hxy tensor I+I tensor Hxz with distinct spatially rotated inducing clusters. Exact independent-copy factorization is derived, not common-matter field factorization. Reviewer independently evaluated both physical electric-source legs under this exact disjoint-copy law.",
+    "canonical_normalization":"Normalized cosine mode Phi and face amplitude M obey [Phi,M]=i. Selected antinode loop sees phi=f0 Phi. Therefore M=f0 Pphi and H_E=g² lambda f0² Pphi²/2. Omitting f0² would be a wrong canonical theory, not a velocity adjustment. Actual mode arrays and curl Gram retained in actual1_geometry.npz.",
+    "matter_quantum_feedback":"Original cluster retains all64 configurations with Nup=Ndown=1 on8 sites, including doublons. Joint retains every represented amplitude/electric/matter state; phi-dependent hops and microscopic J,K are not frozen. Reduced-matter purity .986495 at n1 and nonzero [J,E]g norm .0536896 demonstrate joint mixing. Full quantum gap .0214367 differs from frozen actual cluster-state gap .0433140 by about50%.",
+    "charge_reference_correction":"Each inducing cluster contains two particles of SAME charge+1, hence net+2. Nup=Ndown is NOT neutral. No ions, compensating background, longitudinal field or charge Gauss sector is represented. It is a fixed-number inducing cluster state, not the Frame/Collision common Gauss state. Only transverse divergence-free E is claimed.",
+    "large_gauge_CAR":"All ring flux concentrated on closing edges gives matter H(phi+2pi)=H(phi), measured difference norm1.96e-15. Global16-orbital bit CAR signs, no independently sewn ring signs. Projected field coordinate is noncompact and Dirichlet, not independently compactified Fourier rotors and not a physical large-gauge quotient."
+  },
+  "executed_actual_q_family": {
+    "fixed_geometry":[64,4,4],"fixed_g":10,"fixed_hops":{"t":1,"bridge":0.35,"U":3},
+    "n":[1,2,3],"field_bright_gaps":[0.021436729284961764,0.042903764716324844,0.06420098719706369],
+    "gap_over_sqrt_lambda":[0.2184404455560609,0.21885848011924536,0.21877182444671667],
+    "interpretation":"Finite q-family soft branch with actual quantum field dynamics, NOT a coupled multi-q propagation packet or a thermodynamic cone. At n3 the lowest excitation is matter-dark .0482361; the field-bright branch is spectral column2, not column1.",
+    "n1_bright_residues":{"flux":0.04148147924501141,"electric":0.010582538631234602,"current":0.0026507150392997424,"density":3.584197155484844e-8,"contact":1.0321126404121885},
+    "n3_bright_flux_residue":0.11421901434936411
+  },
+  "source_current_consumer": {
+    "operators":["sin(phi)","physical normalized electric leg","J=dHmatter/dphi","rho=n0-n1"],
+    "response":"Full microscopic-H sparse resolvent tensor at omega=.01714938 eta=.02, not16-state window. Real flux/current response -.3219186 and imaginary -.3902342; finite density response and contact retained.",
+    "actual_current_insertion":"exp(-i .08 J)|g>, same-H evolution at t=0,1,3,8,16. At t16 electric energy .005892179 versus .005550368 at t0, with opposite matter energy change; field -.000637796, current -.04779998, density .02756957. Norm deviation below7e-13; total energy unchanged within numerical roundoff.",
+    "scope":"Actual quantum current/charge/field consumer from this NEW law, not an isolated positive stiffness coefficient, archived G/D join, N±1 electron state or scattering cross section."
+  },
+  "executed_wrong_cases": {
+    "bare_E_no_matter":"n1/2/3 true first box gaps .000705054/.002813426/.006304812 scale lambda, not sqrt(lambda); all current/contact zero.",
+    "charge_zero_matter_retained":"At n1 same bare gap .000705054, purity1, same actual matter Hilbert retained but flux coupling removed.",
+    "actual_loop_cut":"Both physical closing edges removed: n1 .000705054, current/contact0; open chains cannot restore flux.",
+    "amplitude_box":"Actual bright gap pi=.0214367293,2pi=.0214367293,3pi=.0214357980. Bare true first gap scales 1/W²: .000705054,.000176321,.0000783698. The raw sinphi threshold-selected bare3pi firstbright index3 is NOT its true first gap.",
+    "multiwell_adverse":"3pi box has near-degenerate ground triplet at zero gaps ~1e-14. Noncompact periodic loop landscape does not confine a unique global field ground. Corrected chosen ground rms3.12051 is basis-dependent within ground subspace; original raw rms5.76394 also exposed this delocalization. Surviving local periodic flux-bright gap is NOT global isolated-ground evidence.",
+    "frozen_actual_matter":"Full quantum n1 .0214367 vs microscopic phi0 ground projection .0433140. Frozen static matter materially misses virtual current feedback.",
+    "changed_actual_bridge":"Bridge0.9 gives .0209096 instead of .0214367; material hopping change, not velocity fit.",
+    "sparse_density_failure":"Same fixed number of inducing loops, volume1024->4096, q unchanged: gap .0214367->.0106572, approximately halves. Original sparse defect clusters do NOT demonstrate bulk speed independent of volume."
+  },
+  "material_design_after_density_failure": {
+    "change":"Add a second real independent charged Hubbard supplier cluster sharing the quantum phi while doubling volume1024->2048 (64x4x8). No q-dependent g or hopping changes. Each supplier retains an explicitly stated low-energy microscopic subspace; tensor products of ALL retained supplier/electric states remain quantum.",
+    "coarse_projection_failure":"At n1 r8 one/two gaps .043273/.042831 are close to frozen .043314, so low-state truncation silently removes major virtual feedback. r16 one/two .030896/.030651 still differ substantially from full64 one .021437. Do not promote density preservation as proof projection converged.",
+    "complete_shell_fork":"Requested32 implies actual33 states to keep the complete degenerate shell. One supplier gap .0227523347 is about6.14% above original full64 .0214367293. Two suppliers with matched density yield q1 .0224766957 and q2 .0454162194, gap/sqrtlambda .229038/.231675. This qualitative density-preserving soft branch is considerably closer but not full64² or proven converged.",
+    "same_retained_quantum_dimension":104544,
+    "corrected_r33_n1":"QR+Rayleigh-Ritz orthonormal_error1.62e-15, ground residual7.37e-15; bright flux/electric/current/density weights .01995715/.01093985/.00619764/6.50403e-8.",
+    "reviewer_independent_projection_witness":"ScientificReviewWave5 independently reports r12 at distinct geometry: matched-density gap ratio.99109 but +44% versus full64, discarded-H ground residual~.159 and discarded microscopic J-source norm~.729/1.038. This author synthesis labels those numbers reviewer-reported, not independently rerun. They establish missing transitions despite apparent density scaling."
+  },
+  "numerical_correction": {
+    "finding":"Raw complex eigsh near-degenerate 3pi columns had orthonormal_error .216245; refined two-supplier raw33 had .0274886. Energies useful, raw per-column degenerate residues withdrawn.",
+    "fix":"Joint.spectrum now QR orthonormalizes the selected eigenspace and Rayleigh-Ritz diagonalizes the actual H there. No physical parameter/law change.",
+    "new_correct_capture":"Corrected3pi orthonormal_error4.09e-15, residual8.15e-15; full first bright triplet residue sums flux .0414797631,electric .0105811581,current .0026506001,density3.58374e-8. Uses sums over orthonormal complete near-degenerate groups, not arbitrary independent columns.",
+    "source_revision_boundary":"Original actual1/density/refine capsules contain model0b436cfc. Current model464712b0 differs ONLY selected eigenspectrum orthogonalization. correct_actual1 binds current source464712b0 and selected invalidated evidence. Original natural exits are not relabelled as current-source full reruns."
+  },
+  "executed_evidence": [
+    {"capsule":"rich_soft_field_20261014_actual1_capsule.zip","exit":0,"natural":true,"seconds":16.420475959777832,"model_sha":"0b436cfc49f48477e0cee11b8b8931e101e102c05b01f808ca6debf43b04e6dd","result_sha":"9f5ca969af53f0b4780da64f90305e5b37341bcf99ee2d06c0dd3dc2cfc65837"},
+    {"capsule":"rich_soft_field_20261014_density_actual1_capsule.zip","exit":0,"natural":true,"seconds":14.486545085906982,"density_sha":"853a0e152de82e83193f2f2adc31af7f3de4c233c51df66bed4841af7e87a36b","result_sha":"e0b691abeb42b69e3bd395a6d2c87632c7b50e805cb0a35c93ac8845de377b3c"},
+    {"capsule":"rich_soft_field_20261014_refine_actual1_capsule.zip","exit":0,"natural":true,"seconds":62.999661922454834,"result_sha":"3dd8a847e1d209dfdb64fb13dcda025ca4003b77372786682b586ecd92aadecd"},
+    {"capsule":"rich_soft_field_20261014_correct_actual1_capsule.zip","exit":0,"natural":true,"seconds":47.680031061172485,"model_sha":"464712b0a520e48fa0bc8c0d594d3ea0ba9580cdec240bddc342489bb75ff93f","result_sha":"b1c00c3904043ba12af274eb681e4e7b398f5f3899d754547c1177b724e8fe98"}
+  ],
+  "open_assumptions":["Primitive quantum commutators, CAR, charge/spin, Hubbard hops/U and electric coefficient inputs", "Noncompact cosine single-q projection, not full compact gauge geometry", "No ionic/background or longitudinal sourced Gauss sector", "Two transverse branches use distinct matter clusters, not common nonlinear matter factorization", "Periodic flux potential yields multiwell degeneracy, not a unique global field ground", "Density-preserving33-state supplier projection still has quantitative virtual/current debt", "No coupled multi-q wavepacket propagation or finite photon scattering state", "No charged spin-half mass, Dirac dynamics, g2 or proton identified"],
+  "language_and_verification":"Pre-edit actual Pyright symbols/definition/diagnostic and positive structural AST exercised; native LSP device unavailable. Assigned NEW scientific consumers executed and captured. Reviewer ONCE final Pyright1.1.414 selected22 files natural exit1/128errors, stable bytes: owned model7 diagnostics (SciPy offsets/tol stub argument contracts and Optional matrix shape); other7 owned Python files0 reported errors. No all-clean claim, no diagnostic rerun or warning suppression. Full report rich_review_wave5_20261014_diagnostics.json. No builds, tests, linters or formatters run by author.",
+  "handoff":"NEW model,density,equations,interface,synthesis and four natural source/input/output capsules delivered to ScientificReviewWave5. No old source/capsule/shared README edits, archived producer replay, graph convergence claim, nested agent or old-role wake."
+}

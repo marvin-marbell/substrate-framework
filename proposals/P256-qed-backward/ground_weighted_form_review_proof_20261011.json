@@ -1,0 +1,148 @@
+{
+  "kind": "INDEPENDENT_NATIVE_WEIGHTED_FORM_REVIEW_NOT_SCIENTIFIC_ADMISSION",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_contract_revision": "93a731f2881b84318bd1fa639fbea27b9ab438d3019ab77fb985a2f5b6f11395",
+    "template": {
+      "id": "general",
+      "revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe"
+    },
+    "work_item": "induced-photon",
+    "requirements": [
+      "outcome",
+      "verification"
+    ],
+    "parent_sole_integration_writer": true
+  },
+  "target": {
+    "contract_sha256": "821f79b473a73a49e73503ef3eb2017f53f6c9f504fb5aec43a61e61f44c50d5",
+    "postexecution_snapshot": {
+      "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/ground_word_transport_parent_review_postexecution_snapshot_20261011.zip",
+      "sha256": "bd4a676897e6a1235150cd77f9a6b4cbb729facea63b2239b195ef14024c73b9",
+      "is_preexecution": false
+    },
+    "original_target_pins": {
+      "ground_word_transport_consumer_20261011.py": "27c0b1d9c4ad68ba905366f1a48b89b349b20f378418d68081717865400b1a3b",
+      "ground_word_transport_execute_20261011.py": "ad68e48b26b11a7439f2e519cbfc8d4f468f23138b12d2284be312b4f9fa6e1e",
+      "ground_word_transport_proof_20261011.json": "027059f948f5e4ba2c2afa862101a31302920d0b9563c8303a01582005f4f54f",
+      "ground_word_transport_language_20261011.json": "de92555c1b61efa3f1285464259ddec48fa459496556908586609b596649d901",
+      "ground_word_transport_actual2_20261011_request.json": "c0e47a9abab906e9b9e8b85dbd6c6dccde7e5b8d0f6ccae4b8348367edac48c7",
+      "ground_word_transport_actual2_20261011_receipt.json": "19caff8c2d31c1b17db395f034142c8303527ecc69edcd2761d26c4270feda45",
+      "ground_word_transport_actual2_20261011_capsule.json": "ba82d147889e0f760b1aab9ae67b6dcde309967750c84a82cb24e8b2353a9572",
+      "ground_word_transport_actual2_20261011_preexecution.zip": "c8b019c1b5429f6673f7ed04b2bc9ea775e7ca6d40dc4d678aeadce894adc069",
+      "ground_word_transport_actual2_20261011_executed.zip": "db412f85992ea4a7e54a00b4e65c63e14b7ab754c1ee48ef35bc3adc051be1d6",
+      "ground_word_transport_delivery_20261011.json": "150469b30d4e931ef82d43ee958d615236525a84c039f2cb23345b3a13cfb456"
+    },
+    "reviewed_section": "weighted_local_full_core_attempt",
+    "original_artifacts_edited_or_rerun": false
+  },
+  "verdict": {
+    "coercivity": "VALID at stated finite native smooth-core/form scope; all65 coefficients and ordered Jordan retained",
+    "insertion": "VALID for precisely declared M W_closedE normal form; not arbitrary kinetic spectral cutoffs",
+    "current_diagonal": "VALID with explicit native coefficient/incidence bound below, replacing unevaluated fixed-microscopic-constant assertion",
+    "closed_Friedrichs_evolution": "NOT established by this independent audit; requires separate mixed graph/form approximation and unitary-limit construction",
+    "weighted_reduced_electric_warning": "Weighted fullE cannot be replaced by weighted HE plus weighted HC alone; weighted transverse/longitudinal cross term is mandatory",
+    "admission": false
+  },
+  "hypotheses": [
+    "Every even N>=4, original periodic/AP law, exact pinned heavy(-lambda)/active1/aux63 profiles, each species canonical 2V and inert Ref4; fullrho=sum64(n_s-2), no bare U1 B2.",
+    "Phi_mu=sum15 q_muA T_A, Tr(T_AT_B)=delta_AB/2; s_x=|q_x|^2/2 and r_x=sqrt(s_x). Four fields, ordered16 Jordan pairs.",
+    "Finite physical Bloch character is arbitrary. Ambient U1 covariant fullE is restricted to its affine Gauss section; commutator locality follows from unreduced generators, not from Lplus locality.",
+    "Htheta weights site kinetic/Jordan/onsite equally by theta_x; link kinetics by tail theta; native hopping/alignment by endpoint average; colour plaquette by FOUR-corner average.",
+    "Initial calculation is on invariant smooth compact-Phi sections in the finite CAR bundle over Phi x compact U1 cycles x SU4 links, with fixed canonical and physical reducing projection; no preservation of this core by evolution is presumed.",
+    "For insertion M and its first derivatives are bounded and physical/deck periodic, support finite; W_h=exp(ih.fullE) with Dh=0, commuting with Phi/Haar/fullE generators and scalar potentials. Bounded second derivatives are needed separately for H graph commutators, not for this insertion form alone."
+  ],
+  "weights": {
+    "epsilon": "log(2)/4",
+    "theta": "exp(-epsilon periodic_l1_distance(x,0))",
+    "sum_bound": "coth(epsilon/2)^3 < 4096: 2^-1/4<7/8 implies coth(epsilon/2)<15",
+    "derivative_union_diameter": 2,
+    "derivative_endpoint_weight_ratio": "<=sqrt2<2",
+    "matter_overlap_union_diameter": 4,
+    "matter_overlap_weight_ratio": "<=2",
+    "derivative_current_allocation": "delta_Xd^2/theta_d <=8 theta_z for every endpoint z of differentiated native term",
+    "corners": "Four distinct corners and four distinct edges on all even N>=4; corner average versus each incident link tail within sqrt2; each link belongs4 positive plaquettes; AP phases have modulus1"
+  },
+  "coercivity": {
+    "B": "4[lambda w_heavy+w_active+63w_aux], w=abs(onsite)+2 sum_native_paths(abs(c0)+abs(ci)); B<512lambda",
+    "weighted_matter": "abs(Hmat_theta)<=sqrt2 B sum theta r <1024lambda sum theta r, including N4 separate directed length2 collisions",
+    "Jordan": "lambda r_x^4 <=VJ_x<=16lambda r_x^4; lower from PSD4 Gram, upper from HS anticommutator bound",
+    "Young": "r^4/2-1024r+6144=(r-8)^2(r^2+16r+192)/2>=0 for r>=0",
+    "definitions": "Ptheta=1+Kphi_theta+Khaar_theta+KE_theta+(lambda/2)sum theta r^4+F Wtheta; Qtheta=Htheta+8192lambda sumtheta+1",
+    "bounds": "Ptheta+2048lambda sumtheta <=Qtheta <=33Ptheta+14336lambda sumtheta. Thus original looser16384 upper is valid. Norm scalar terms implicitly multiply ||psi||^2.",
+    "ground_expectation": "Conditional on pinned translation-averaged minimizing cluster/vanishing-excess packets and their local moments, qQtheta(Omega) is volume independent; coefficient controls are not ground expectation computations."
+  },
+  "insertion": {
+    "P": "qP(Apsi)<=2 a^2 qP(psi)+2 Dtheta ||psi||^2, a=||M||, Dtheta=sum_supported derivative_generators k theta ||dM||_infty^2",
+    "Q": "qQ(Apsi)<=66 a^2 qQ(psi)+(66Dtheta+16384lambda sumtheta a^2)||psi||^2",
+    "mechanism": "Scalar Jordan/alignment/colour plaquette and radial potential commute with the CAR multiplier M; W_closedE commutes with derivatives and shifts only the U1 arguments of M. No matter potential is incorrectly assumed to commute with M: it is paid using coercivity/comparability.",
+    "domain": "Core identity plus closure requires the actual finite core to be form dense. Arbitrary W_Phi or momentum spectral cutoffs are not included. min_theta on a fixed supported patch has reciprocal <=exp(epsilon max_distance_to_weight_centre); not merely patch diameter if the patch is translated far away."
+  },
+  "full_current": {
+    "identity": "b(psi,psi)=<psi,i[H,Htheta]psi>=(i/2)sum_XY(theta_Y-theta_X)<psi,[h_X,h_Y]psi>. Each term is counted unordered once. On scalar/vector Hermitian potentials [kD*D,V], integration by parts gives current <=2k abs(delta) ||Dpsi|| ||(DV)psi|| with no second-derivative term left in the diagonal form.",
+    "cancellations": [
+      "Kphi_x/Jordan_x cancels exactly with identical theta_x; all scalar potentials commute each other and matter multiplication.",
+      "Kphi_x/onsite_all65,x also cancels with identical theta_x; including these currents as nonzero would overcount.",
+      "All kinetic families commute before physical restriction; restricted generators inherit the ambient identity."
+    ],
+    "matter_grouping": "Aux63 are aggregated as the exact sum of distinct species operators with load63 in b_X; this is a norm allocation, not species removal. Onsite b_X=4 load abs(mass onsite), bond b_X=4 load abs(mass)(abs(c0)+abs(ci)), ||T_X||<=b_X sum_endpoint r; sum_X containing z b_X<=B.",
+    "native_jets": {
+      "Phi_matter": "abs(d_q T_X)<=b_X, at most60 coordinate generators per endpoint",
+      "Haar_matter": "abs(d_E4 T_X)<=b_X(r_x+r_y), per literal edge occurrence and actual left generator; at most15 generators, path length<=2",
+      "fullE_matter": "abs(d_E T_X)<=b_X(r_x+r_y) on charged literal path edges only; same connection changes rho and fullE",
+      "Phi_alignment": "abs(d_q V_e)<=4alpha(r_x+r_y), alpha=F/40",
+      "Haar_alignment": "abs(d_E4 V_e)<=4alpha(s_x+s_y)",
+      "Haar_plaquette": "abs(d_E4 V_face)<=2beta, beta=7F/10; trace HS bound with ||T_A||HS=1/sqrt2 and ||U||HS=2"
+    },
+    "incidences": {
+      "Phi_path": 30,
+      "Phi_alignment": 6,
+      "Haar_path": 7,
+      "Haar_alignment": 1,
+      "Haar_plaquette": 4,
+      "fullE_charged_path": 6,
+      "kinetic_total_conservative": 54,
+      "positive_edges_per_site": 3,
+      "alignment_endpoints_incidence": 6
+    },
+    "ordered_CAR": "Even CAR terms on disjoint endpoint sets commute, including different species. Noncommuting coefficients on overlapping endpoint sets satisfy ||[T_X,T_Y]||<=2||T_X||||T_Y||. Ordered bilinear identity checked on all65 actual canonical masks. Union diameter<=4 and endpoint allocation give <=32B^2 sum_z theta_z r_z^2. There is no need for a false commuting-CAR or independent source assumption.",
+    "radial_allocations": "sum theta r^2 <=(4096+2/lambda) qP; sum theta r^4 <=(2/lambda)qP. Cauchy/Young per native generator allocates its kinetic budget plus derivative coefficient squares. Native current inventory alone would not imply these bounds.",
+    "constant": "kphi=4chi,kH=3chi/20,kE=64,alpha=F/40,beta=7F/10,S=4096,Z=S+2/lambda; C=54+480kphi B^2 S+(184320kphi alpha^2+480kH B^2+32kE B^2+32B^2)Z+46080kH alpha^2/lambda+2880kH beta^2 S <2^16448.",
+    "allocations": {
+      "Phi_matter": "480kphi B^2 S:60 coordinates, two endpoints, delta allocation<=8, sum b_X^2<=B^2",
+      "Phi_alignment": "184320kphi alpha^2 Z: squared jet<=32alpha^2(sx+sy),60 coordinates per endpoint,two differentiated endpoints,delta allocation8,endpoint incidence6",
+      "Haar_matter": "480kH B^2 Z: squared jet<=2b_X^2(sx+sy),15 generators,length<=2,delta allocation8",
+      "fullE_matter": "32kE B^2 Z: same without15 Haar generators",
+      "matter_matter": "32B^2 Z from unordered overlapping endpoint allocation",
+      "Haar_alignment": "46080kH alpha^2/lambda from squared jet<=32alpha^2(rx^4+ry^4),15 generators,delta8,incidence6,radial coefficient2/lambda",
+      "Haar_plaquette": "2880kH beta^2 S: squared jet<=4beta^2,delta^2/theta_e<=4theta_e,15 generators,4 faces/edge,3 edges/site"
+    },
+    "form_bound": "abs(b(psi,psi))<=C qP(psi)<=C qQ(psi), all N and characters. Hermitian polarization/Riesz extends this diagonal current to a bounded mixed form on completed Q form space, conditional on the stated common-core form density; this does not identify it automatically with a differentiated Friedrichs evolution."
+  },
+  "adverse_controls": {
+    "wrong_weight": "Different site Phi kinetic/Jordan weights leave homogeneous quartic radial-gradient current. Physical contrary family: invariant radial shell R<|q_x|<R+1 times exp(iR^2|q_x|), normalized in R60, invariant Haar and canonical local singlet spectators with checkerboard affine fullrho. Quartic homogeneity gives leading current proportional R^5, while native P costs O(R^4) as R->infinity at fixed law/N. Alignment costs O(FR^2); other site/currents lower degree cannot cancel leading term. Thus no uniform form constant for the mismatched law. CLI exact Gaussian compression demonstrates scaling separately; it is not itself a gauge-invariant ground experiment.",
+    "wrong_cross": "Weighted electric energy contains128<E_T,theta E_L>; ordinary unweighted Hodge orthogonality does not remove it. CLI actual all64 fullrho/checkerboard plus closed circulation and nonzero harmonic-character coefficients rejects the omitted cross term.",
+    "wrong_exterior": "A charged path t has t_T=-t_L outside its literal support. Their tails cancel in fullE only with complete quadratic cross terms; separately freezing HC or truncating exterior terms changes the weighted law.",
+    "wrong_corner": "CLI includes actual four-corner average against every incident link tail, rejecting an unjustified endpoint-only plaquette support allocation via explicit support/ratio provenance.",
+    "wrong_CAR": "Native shared endpoint CAR commutator nonzero in all65 canonical species; treating path factors as independent commuting variables is rejected."
+  },
+  "closed_domain_antecedents": [
+    "Construct closed positive weighted form and prove common smooth physical core is form dense. Finite theta_min may occur in approximation constants, not final current C.",
+    "Graph identity for mixed H/Q requires a common graph-core approximation and control of potential/kinetic graph norm; merely bounded abstract current form does not prove differentiated unitary identity.",
+    "Gauge/affine/canonical projections must reduce both forms and regularizations, using ambient physical sections rather than singular quotient ellipticity assertions.",
+    "A bounded spectral compression can differentiate only after graph identity on Ran 1_[1,R](Q) is justified; convergence to original H requires a proven closed-form/strong-resolvent/unitary limit. This reviewer has not exercised quantum evolution or accepted those hypotheses."
+  ],
+  "unpaid": [
+    "physical native ground/source construction",
+    "same static full GNS versus enlarged history identification",
+    "exterior/static local approximation",
+    "dense generator range at thermodynamic limit",
+    "phase/stiffness",
+    "IR atom",
+    "photon pole/commoncone",
+    "SOURCE"
+  ],
+  "execution_scope": "Only new independent coefficient/form CLI is executed with real immutable preexecution/executed capsules; no old source imported/executed, no quantum evolution/ground solver, parent final diagnostics only.",
+  "scientific_admission": false,
+  "campaign_complete": false
+}

@@ -1,0 +1,60 @@
+{
+  "verdict": "ACCEPT bounded NEW full-rotor law, exact same-charge PH/Gauss/HS route and executed physical responses; NOT certify interacting thermal equilibration or photon poles",
+  "target_source_sha256": {
+    "rich_unitary_rotor_photon_20261016_thermal.py": "74508535bd3fb25c777db98ac13a36daa9efa7845470cf313647ac4acf792744",
+    "rich_unitary_rotor_photon_20261016_bridge.py": "6888d3ca2814d3640b675f741d8c1804ad5a27ea9593e3bcf8dd26a75dcfbedb"
+  },
+  "own_cases": [
+    "rotor",
+    "rotor64",
+    "thermal_audit",
+    "bridge",
+    "bridge_owner"
+  ],
+  "observed_physics": {
+    "original_PH_onsite_error": 0.0,
+    "exact_Gauss_trotter_trace_error": 4.440892098500626e-15,
+    "missing_twist_Z": 7.80876722455217,
+    "correct_Z": 6.562718972032403,
+    "fullV64_Gauss": 0,
+    "fullV64_source_E": -16.991090859630045,
+    "fullV64_source_residual2": 265.46255621957454,
+    "physical_phase_kick_Edot": 0.01950995506386599,
+    "bare_HE_V_Edot": 0.0,
+    "full_Fock_unequal_time_error": 7.596761922695573e-16,
+    "bridge_response_max_standardized_error": 1.7001682383228247,
+    "bridge_Hastings_error": 1.0658141036401503e-14
+  },
+  "falsifiers": [
+    "same-charge hole determinant square complex; cannot replace conjugate pair",
+    "omitted fermion holonomy and wrong rotor boundary change projected trace",
+    "missing onsite +U/4/site changes original model",
+    "equal-slice free-path initialization yields EE0=128 and EE_nonzero_lag0, versus exact16",
+    "dropping actual hopping makes physical Ephase-kick response vanish"
+  ],
+  "limitations": [
+    "PH variables opposite charge are not new physical species; original same-charge law preserved",
+    "Gauss trace fixes total original N64, not canonical Nup=Ndown32",
+    "small thermal benchmark I.7/beta1.2 is distinct from V64 physical I16",
+    "own V64 state is normalized finite-support (1-.035Hhop)Neel in unbounded Hilbert; not thermal/ground",
+    "V64 exact source survival moments <f exp[-it(H-Eref)] f> are NOT stationary Heisenberg EE; genuine separate kick response Edot executed",
+    "full V64 outgoing H supports retained for derivative order only, not claimed full finite-time propagation",
+    "thermal point-current insertion is not exact finite-dt partition source derivative without Frechet",
+    "first producer thermal sampler superseded; own actual corrected bridge physically checked, finite interacting-chain convergence not certified",
+    "no Maxwell/Lorentz/c/real-time photon/stability assertion"
+  ],
+  "corrected_producer_raw_audit": {
+    "owner_natural_exit": 0,
+    "owner_seconds": 494.46856594085693,
+    "own_raw_audit_natural_exit": 0,
+    "artifact": "rich_review_wave43_20261016_corrected_raw_result.json",
+    "all_five_case_arrays_finite": true,
+    "EE_q_pairing_error": 0,
+    "beta1_M8_T1_JJ_midpoint_two_seeds": [0.3690821562563504, 0.37002393299090697],
+    "beta1_M8_T1_EE_midpoint_two_seeds": [-0.695078691688209, 40.08946578393529],
+    "max_interseed_combined_block_SEM_EE": 2.6574119947724033,
+    "max_interseed_combined_block_SEM_JJ": 3.2990701538581195,
+    "classification": "Actual finite-chain unequal-imaginary-time interacting response, noisy direct EE, not certified equilibration or decay/pole. Raw audit only, not an independently rerun state."
+  },
+  "corrected_countercase_note": "Original fixed-path wrong determinant had an unrelated positive quadrature scalar; corrected exact fixed-path scalar, preserved superseded capsule. PH/quadrature/thermal results unchanged."
+}

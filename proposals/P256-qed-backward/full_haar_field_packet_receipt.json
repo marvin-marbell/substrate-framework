@@ -1,0 +1,845 @@
+{
+  "status": "normalized_all_Haar_all_phase_full_coordinate_Gauss_trial_NOT_ground_or_phase",
+  "source_sha256": {
+    "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+    "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+    "full_band_gauss_section.py": "1bb48d986e83c5df3b707ad74337a2f4b0ec6a4495af90ba87b6a8e68eb366cb",
+    "full_band_packet_bound.py": "9b8e6f0d4c20d875389bd38d76d273be8d431a18cbe0331f9925daa72a8450d9",
+    "full_haar_field_packet.py": "26da553446f9a631c82e6987e105ffc5ae8acd5e67fb41dc379671b8c205b2c0",
+    "gauss_charge_intertwiner.py": "861008cb7dea64d2b2e0cef513c62de1d55539a1527a5b6fea8b5b879ea956fa",
+    "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "quantum_su4_gauss.py": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286",
+    "full_band_gauss_section.md": "1b7706e6944c1416dbe00dd09b5d3ad516cdadc9378a03a353237664e5bcfa3f",
+    "gauss_born_bundle.py": "ed0b037ba52293f60e311d09831903511db0daf3447038cd61bdef4ed2072515",
+    "full_field_charge_bound.py": "b86f5fe62f2a838f2a5cd84e70c1b3e74e801aef91cd2dda6d4ce123e58541bf",
+    "quantum_su4_photon.py": "ffadad919f74fe510484530037d4ae11b7860046fa384aa721839d2771d5c0bf",
+    "full_band_packet_bound.md": "9fde8dd4f98905fb84019cca18a715b6d81a00c5a44a4a8d45cb4f7f50f13520",
+    "gauss_born_bundle.md": "58962ca9b44e22e3345a14f6d0484c3aeef580ae76c98af747b3304d26c805f0",
+    "full_field_charge_bound.md": "f47cbc7759350b21b5a28703bd01aa8e5e4bbfd1a19621dd13d9cfcd63288c57",
+    "full_haar_field_packet.md": "8f12a3bd9680bdc12d252c2d09ea4cc2d7ae81cc8337574fe647c4464fc2dc29"
+  },
+  "parameters": {
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.3,
+    "stiffness": 2.0,
+    "Jpref": 0.2,
+    "ue4": 0.3,
+    "ue1": 0.4,
+    "magnetic": 0.7,
+    "initial_field_radius": 0.2,
+    "field_radius": null
+  },
+  "law_owner": "unchanged FullBandGaussSection.onebody; unchanged full_band_packet_bound quadratic form",
+  "primitive_dimension": 4900,
+  "NH": 4,
+  "NL": 4,
+  "field_coordinates": 120,
+  "packet": {
+    "scalar_density": "SU4^2 Haar average of normalized field-only compact 120-ball density",
+    "field_normalizer": "pi^60 R^120 Gamma(5)/Gamma(65)",
+    "colour_scalar": "constant 1 on genuine normalized SU4 Haar",
+    "EM_scalars": "constant 1 on both normalized circles; full T^2",
+    "matter": "actual FullBandGaussSection.state, including heavy whole-negative top4/light bottom4",
+    "normalization": "exact Fubini and pointwise section norm; no quadrature surrogate"
+  },
+  "field_support_repair": {
+    "initial_radius": 0.2,
+    "first_rejection": "Failed all-Haar positive-anticommutator inequality c*(b-2R)>F+sqrt(2)*p*R",
+    "first_valid_bound": null,
+    "route": "all_Haar_all_phase_field_support_repair",
+    "candidate_rule": "76 deterministic field radii .005:.001:.080; each accepted only by analytic uniform inequalities",
+    "valid_candidate_count": 47,
+    "rejected_candidates": [
+      {
+        "radius": 0.052,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.053,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.054,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.055,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.056,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.057,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.057999999999999996,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.059,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.06,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.061,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.062,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.063,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.064,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.065,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.066,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.067,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.068,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.069,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.07,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.07100000000000001,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.07200000000000001,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.07300000000000001,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.07400000000000001,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.07500000000000001,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.07600000000000001,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.07700000000000001,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.078,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.079,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      },
+      {
+        "radius": 0.08,
+        "reason": "Failed strictly negative all-Haar uniform leading-energy inequality"
+      }
+    ],
+    "no_U_or_phase_samples_in_certificate": true
+  },
+  "quantitative_trial": {
+    "radius": 0.033,
+    "anchor": {
+      "b_lower": 0.6483983249328432,
+      "b_upper": 0.6483983253678206,
+      "b_anchor": 0.6483983251503319,
+      "outward_margin": 2.1748874565922103e-10,
+      "onsite_min": 0.32000000000000006,
+      "onsite_max": 0.32000000000000006,
+      "heavy_onsite": 0.32000000000000006,
+      "light_onsite": 0.32000000000000006,
+      "path_norm": 0.16155494421403513,
+      "path_component_abs": [
+        0.06,
+        0.15,
+        0.0,
+        0.0
+      ],
+      "endpoint_operator_upper": 0.07469983626763486,
+      "rho_anchor": 1.0874437282961051,
+      "gram_anchor": 0.6107091229901986
+    },
+    "temporal_absolute_eigenvalue_lower": 0.5823983249328433,
+    "local_gap_lower": 1.1647966498656865,
+    "all_U_A_endpoint_operator_upper": 0.08223945164244013,
+    "anticommutator_m0": 0.10412801233606976,
+    "onebody_operator_Emax": 0.31084691576014273,
+    "global_gap_lower": 0.20825602467213952,
+    "compressed_beta_lower": 0.33498164870459113,
+    "each_principal_cosine_squared_lower": 0.6674908243522956,
+    "each_species_filled_overlap_squared_lower": 0.19850945646575813,
+    "actual_Pauli_joint_projection_weight_lower": 0.039406004306330726,
+    "gram_Frobenius_upper": 0.6835694090577416,
+    "elastic_upper": 0.46726713699954997,
+    "exact_full_W_upper": 10.04315318622461,
+    "alignment_upper": 0.25107882965561523,
+    "heavy_KyFan_onsite_upper": -0.8000816654767197,
+    "light_KyFan_onsite_upper": -0.8000816654767197,
+    "C_Lambda": -0.0817356988215544,
+    "field_onebody_derivatives_each_component": [
+      0.7000000000000002,
+      0.15,
+      0.0,
+      0.0
+    ],
+    "section_derivatives": {
+      "field_each_component": [
+        85.02902229056205,
+        14.513510655634434,
+        0.0,
+        0.0
+      ],
+      "colour_each": 5.626604964921127,
+      "phase_each": 1.9893052628768126
+    },
+    "section_metric_upper": {
+      "fields": 223217.2986972034,
+      "colour": 474.88025146912616,
+      "phases": 7.914670857818769
+    },
+    "scalar_envelope_fisher": {
+      "fields": 4701561.065197429,
+      "colour": 0.0,
+      "phases": 0.0
+    },
+    "magnetic_exact_packet_expectation": 0.0,
+    "field_log_normalizer": -542.656078603208,
+    "scalar_amplitude_log_upper": 271.328039301604,
+    "trial_total_rho_support_upper": 1.584546716432227,
+    "T_sqrt_Lambda": 2462389.181947316,
+    "B_constant": 144.0470096123016,
+    "bound": "E0 <= Etrial <= C*Lambda + T*sqrt(Lambda) + B; Lambda>=1",
+    "strict_negative_for_Lambda_greater_than": 907590264801555.6,
+    "negative_energy_at_four_times_threshold": -148365049074533.6
+  },
+  "primitive_point_controls": {
+    "projection_weight": 0.9878280309382526,
+    "all30_colour_Gauss": [
+      7.442305979010256e-16,
+      7.403318001592851e-16,
+      5.159729019053733e-16,
+      9.738321108015577e-16,
+      5.848462888457798e-16,
+      5.72531471657789e-16,
+      7.354906021212058e-16,
+      7.427758101035104e-16,
+      6.922576763672757e-16,
+      8.872801292065582e-16,
+      6.064532571258994e-16,
+      5.959680347723653e-16,
+      5.9939425180864505e-16,
+      7.672162111555187e-16,
+      9.138848602607665e-16,
+      4.971633806018789e-16,
+      5.215685192374162e-16,
+      5.737923108908024e-16,
+      7.773234952988674e-16,
+      5.130260668896679e-16,
+      5.197154538989361e-16,
+      5.467402218884005e-16,
+      5.172753774035412e-16,
+      4.690114021429165e-16,
+      7.065021646390189e-16,
+      4.913326621824006e-16,
+      5.171980433331401e-16,
+      5.696936182247461e-16,
+      8.814056198200478e-16,
+      6.511768918601673e-16
+    ],
+    "both_EM_Gauss": [
+      3.9179026277328065e-16,
+      3.9179026277328065e-16
+    ],
+    "occupied_energies": [
+      {
+        "occupied_energy": -0.8332251024928201,
+        "full_primitive_H_residual": 7.164520965316823e-16
+      },
+      {
+        "occupied_energy": -0.8324888642188228,
+        "full_primitive_H_residual": 7.215840606718581e-16
+      }
+    ]
+  },
+  "actual_number_polynomial_representation": {
+    "all_8192_same_species_matrix_unit_commutators": 0.0,
+    "all_4096_cross_species_commutators": 0.0,
+    "all128_unit_adjoints": 0.0,
+    "exact_fourth_root_word_arithmetic": true,
+    "exact_words_vs_float_owner_units": 8.30814836211045e-15,
+    "initial_local_complementary_filled_occupation_residuals": [
+      9.432881973339412e-16,
+      1.7508040824805582e-15
+    ],
+    "actual_degree_four_number_polynomial_controls": [
+      {
+        "idempotence": 1.7185681462056042e-16,
+        "occupied_number": 3.7821833802434225e-16
+      },
+      {
+        "idempotence": 4.51467907243603e-16,
+        "occupied_number": 4.500785783415104e-16
+      }
+    ],
+    "supplied_Slater_signs": false
+  },
+  "finite_principal_angle_control": {
+    "observed_projection_weight": 0.9878280309382526,
+    "species": [
+      {
+        "anticommutator_min": 0.16394242140979087,
+        "compressed_beta_min": 0.9952669644472878,
+        "principal_cosine_squared_min": 0.9976334822236439,
+        "global_gap": 0.33255195970632745
+      },
+      {
+        "anticommutator_min": 0.16995534772515966,
+        "compressed_beta_min": 0.9965006617553174,
+        "principal_cosine_squared_min": 0.9982503308776588,
+        "global_gap": 0.3437125408317739
+      }
+    ],
+    "finite_point_NOT_uniform_certificate": true
+  },
+  "invariant_amplitude_bounds": {
+    "evaluation_Lambda": 3630361059206222.5,
+    "evaluated_energy_upper": -148365049074533.6,
+    "energy_lower": -3.2886843385983884e+16,
+    "ground_or_minimizing_sequence_total_rho_mean_lower": 0.010608303865906391,
+    "asymptotic_total_rho_mean_lower": 0.02121660773179228,
+    "ground_or_minimizing_sequence_sum_rho_fourth_moment_upper": 90.98039676868905,
+    "rho_definition": "rho_x=sqrt(sum_mu Tr Phi_xmu^2/4); invariant volume sum, not local order"
+  },
+  "actual_point": {
+    "fields_real": [
+      [
+        [
+          [
+            -0.0026752275410691284,
+            0.000396420454347279,
+            0.6504071094985799,
+            0.002224791894169705
+          ],
+          [
+            0.000396420454347279,
+            0.001145353176572404,
+            0.0008942908329999876,
+            0.6473404709499319
+          ],
+          [
+            0.6504071094985799,
+            0.0008942908329999876,
+            0.001262841103077186,
+            -0.0022746582653914065
+          ],
+          [
+            0.002224791894169705,
+            0.6473404709499319,
+            -0.0022746582653914065,
+            0.0002670332614195387
+          ]
+        ],
+        [
+          [
+            -0.002060067458799654,
+            0.23941394850274078,
+            0.0021811963814174218,
+            0.0020718169274216987
+          ],
+          [
+            0.23941394850274078,
+            0.0012568748784036845,
+            0.0005222655998354559,
+            -0.0013903256360900521
+          ],
+          [
+            0.0021811963814174218,
+            0.0005222655998354559,
+            0.0010143008926645199,
+            -0.24097604361654512
+          ],
+          [
+            0.0020718169274216987,
+            -0.0013903256360900521,
+            -0.24097604361654512,
+            -0.0002111083122685504
+          ]
+        ],
+        [
+          [
+            -0.0013877143985187705,
+            0.001130824045451135,
+            0.002293052573976835,
+            0.001861322786013884
+          ],
+          [
+            0.001130824045451135,
+            0.001333502374719229,
+            0.0001357408779090779,
+            -0.0016841979165951556
+          ],
+          [
+            0.002293052573976835,
+            0.0001357408779090779,
+            0.0007376009788385859,
+            -0.0023334085270901037
+          ],
+          [
+            0.001861322786013884,
+            -0.0016841979165951556,
+            -0.0023334085270901037,
+            -0.0006833889550390445
+          ]
+        ],
+        [
+          [
+            0.23796274226285508,
+            0.0014558818314699881,
+            0.0023412474990946153,
+            0.0015991533498394327
+          ],
+          [
+            0.0014558818314699881,
+            -0.2372664686594005,
+            -0.00025455237354401095,
+            -0.0019313123620598417
+          ],
+          [
+            0.0023412474990946153,
+            -0.00025455237354401095,
+            -0.23819915365017716,
+            -0.002265568721928506
+          ],
+          [
+            0.0015991533498394327,
+            -0.0019313123620598417,
+            -0.002265568721928506,
+            0.23750288004672254
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            5.2835781990269676e-05,
+            0.0017405204471268186,
+            0.6507227682871846,
+            0.0012925871430720841
+          ],
+          [
+            0.0017405204471268186,
+            0.0013745930327545468,
+            -0.0006377785708379391,
+            0.6462735167352462
+          ],
+          [
+            0.6507227682871846,
+            -0.0006377785708379391,
+            0.00013101827494716443,
+            -0.002134830674506394
+          ],
+          [
+            0.0012925871430720841,
+            0.6462735167352462,
+            -0.002134830674506394,
+            -0.0015584470896919808
+          ]
+        ],
+        [
+          [
+            0.0007810393794595956,
+            0.24061641450461985,
+            0.002243106021255011,
+            0.0009501352628838173
+          ],
+          [
+            0.24061641450461985,
+            0.0013379154079959695,
+            -0.0010032983305964028,
+            -0.0022593141081388916
+          ],
+          [
+            0.002243106021255011,
+            -0.0010032983305964028,
+            -0.0001820241582175876,
+            -0.24058440096324787
+          ],
+          [
+            0.0009501352628838173,
+            -0.0022593141081388916,
+            -0.24058440096324787,
+            -0.0019369306292379776
+          ]
+        ],
+        [
+          [
+            0.00148755923649382,
+            0.002158272386729391,
+            0.0020994942879972067,
+            0.0005813050886421834
+          ],
+          [
+            0.002158272386729391,
+            0.0012640936760462507,
+            -0.0013409638474680343,
+            -0.0023310952037253244
+          ],
+          [
+            0.0020994942879972067,
+            -0.0013409638474680343,
+            -0.000490013114306146,
+            -0.0017008238580677989
+          ],
+          [
+            0.0005813050886421834,
+            -0.0023310952037253244,
+            -0.0017008238580677989,
+            -0.002261639798233925
+          ]
+        ],
+        [
+          [
+            0.24079235741458874,
+            0.0022797878004252184,
+            0.0018975949825846326,
+            0.00019633633165143456
+          ],
+          [
+            0.0022797878004252184,
+            -0.23748439961537474,
+            -0.0016414006243220733,
+            -0.0023381588668026114
+          ],
+          [
+            0.0018975949825846326,
+            -0.0016414006243220733,
+            -0.2394239749376645,
+            -0.0014096042781219767
+          ],
+          [
+            0.00019633633165143456,
+            -0.0023381588668026114,
+            -0.0014096042781219767,
+            0.2361160171384505
+          ]
+        ]
+      ]
+    ],
+    "fields_imag": [
+      [
+        [
+          [
+            0.0,
+            -0.0013230447920923039,
+            -0.002328787549988512,
+            -0.0017157317139206362
+          ],
+          [
+            0.0013230447920923039,
+            0.0,
+            8.997223903021278e-05,
+            0.001833134233596483
+          ],
+          [
+            0.002328787549988512,
+            -8.997223903021278e-05,
+            0.0,
+            0.0023020386773148645
+          ],
+          [
+            0.0017157317139206362,
+            -0.001833134233596483,
+            -0.0023020386773148645,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            -0.0016257861995207224,
+            -0.0023394794085257443,
+            -0.0014269418447202186
+          ],
+          [
+            0.0016257861995207224,
+            0.0,
+            0.00047749875975254113,
+            0.0020500180084490668
+          ],
+          [
+            0.0023394794085257443,
+            -0.00047749875975254113,
+            0.0,
+            0.0021975183584938985
+          ],
+          [
+            0.0014269418447202186,
+            -0.0020500180084490668,
+            -0.0021975183584938985,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            -0.2405229683781164,
+            -0.002285221066622498,
+            -0.0010985362565296146
+          ],
+          [
+            0.2405229683781164,
+            0.0,
+            0.0008517686388293107,
+            0.0022099878048882802
+          ],
+          [
+            0.002285221066622498,
+            -0.0008517686388293107,
+            0.0,
+            0.24067156599820153
+          ],
+          [
+            0.0010985362565296146,
+            -0.0022099878048882802,
+            -0.24067156599820153,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            -0.0020887086955271657,
+            -0.002167518880850809,
+            -0.0007396323661129983
+          ],
+          [
+            0.0020887086955271657,
+            0.0,
+            0.0012023911442129052,
+            0.0023086024338592895
+          ],
+          [
+            0.002167518880850809,
+            -0.0012023911442129052,
+            0.0,
+            0.0018100463096761426
+          ],
+          [
+            0.0007396323661129983,
+            -0.0023086024338592895,
+            -0.0018100463096761426,
+            0.0
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            0.0,
+            -0.002236037818495036,
+            -0.0019896405784367885,
+            -0.0003601943046084816
+          ],
+          [
+            0.002236037818495036,
+            0.0,
+            0.00151963205814505,
+            0.00234312408972265
+          ],
+          [
+            0.0019896405784367885,
+            -0.00151963205814505,
+            0.0,
+            0.001537851839240635
+          ],
+          [
+            0.0003601943046084816,
+            -0.00234312408972265,
+            -0.001537851839240635,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            -0.0023212885560005337,
+            -0.001756524536420086,
+            2.9243713380619938e-05
+          ],
+          [
+            0.0023212885560005337,
+            0.0,
+            0.0017946839250556203,
+            0.002312594359055405
+          ],
+          [
+            0.001756524536420086,
+            -0.0017946839250556203,
+            0.0,
+            0.0012229624919695356
+          ],
+          [
+            -2.9243713380619938e-05,
+            -0.002312594359055405,
+            -0.0012229624919695356,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            -0.2409816710605865,
+            -0.0014746426791098818,
+            0.00041786984773494617
+          ],
+          [
+            0.2409816710605865,
+            0.0,
+            0.0020199105700664547,
+            0.002217860828768984
+          ],
+          [
+            0.0014746426791098818,
+            -0.0020199105700664547,
+            0.0,
+            0.23951369737849942
+          ],
+          [
+            -0.00041786984773494617,
+            -0.002217860828768984,
+            -0.23951369737849942,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            -0.002297876891678261,
+            -0.001151820800170422,
+            0.0007948947983944955
+          ],
+          [
+            0.002297876891678261,
+            0.0,
+            0.0021890590996129808,
+            0.0020615535548314506
+          ],
+          [
+            0.001151820800170422,
+            -0.0021890590996129808,
+            0.0,
+            0.0005010104639846697
+          ],
+          [
+            -0.0007948947983944955,
+            -0.0020615535548314506,
+            -0.0005010104639846697,
+            0.0
+          ]
+        ]
+      ]
+    ],
+    "link_real": [
+      [
+        -0.5845932029624716,
+        0.010685404037331203,
+        0.43144816833205313,
+        0.08944706520037748
+      ],
+      [
+        0.02197949139326028,
+        0.6732970580613684,
+        -0.5572670912827596,
+        -0.028801788044524143
+      ],
+      [
+        0.5414897271743992,
+        -0.49644552713945617,
+        -0.126073093055437,
+        0.22398161296403873
+      ],
+      [
+        -0.1015871916012342,
+        -0.1837893939662864,
+        -0.18306058148498622,
+        -0.1376727039874135
+      ]
+    ],
+    "link_imag": [
+      [
+        0.36774435529863225,
+        0.0732943929785489,
+        0.06349277447195421,
+        -0.5651097224914345
+      ],
+      [
+        0.08949850716982741,
+        -0.10815753739028604,
+        0.2881228642758814,
+        -0.36344050261933364
+      ],
+      [
+        0.016912144746790453,
+        0.12159650585527637,
+        0.20552587564556957,
+        -0.580479034740496
+      ],
+      [
+        0.45902580820229444,
+        0.48421519990863626,
+        0.5697484206572406,
+        0.36558752165726577
+      ]
+    ],
+    "phases": [
+      2.137,
+      -1.081
+    ]
+  },
+  "limits": [
+    "two cells/one colour link/two parallel EM paths, not a 3D theorem",
+    "Cartesian kinetic replaces selected-orbit inertia; no second rotor kinetic",
+    "uniform proof uses operator inequalities, not finite U/A extrema",
+    "scalar colour/EM Fisher is zero; all section colour/EM/Berry costs remain",
+    "negative energy and invariant average amplitude do not prove a full phase, charged lower gap or physical half-spin"
+  ]
+}

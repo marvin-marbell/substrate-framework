@@ -1,0 +1,23 @@
+{
+  "kind": "AUTHORITATIVE_GEOMETRY_BINDING_OF_EXACT_WINDING_PROBE",
+  "captured_governor": "efd1a1f937e92f04704903209971b6fba3d24da85bf8e1dce0e4dc91bc2d3aba",
+  "inline_script": "import json,sys,numpy as np\nfrom pathlib import Path\nr=json.loads(Path(sys.argv[1]).read_text())['result']; z=np.load(sys.argv[2]); sites=z['sites']; D=z['D']; N=4\nliteral=np.array([(x,y,z) for x in range(N) for y in range(N) for z in range(N)])\nassert np.array_equal(sites,literal)\nexpected=np.zeros_like(D); lookup={tuple(x):i for i,x in enumerate(sites)}\nfor i,x in enumerate(sites):\n for mu in range(3):\n  y=x.copy(); y[mu]=(y[mu]+1)%N; expected[i,3*i+mu]=1; expected[lookup[tuple(y)],3*i+mu]=-1\nassert np.array_equal(D,expected)\nfor row in r['rows']:\n k=np.zeros(192,dtype=np.int64)\n for e,v in row['character']: k[e]=v\n assert np.all(D@k==0)\nassert all(row['winding']!=[0,0,0] for row in r['rows'])\nk=np.zeros(192,dtype=np.int64)\nfor e,v in r['known_contractible_plaquette_positive_control']['character']: k[e]=v\nassert np.all(D@k==0)\nprint(json.dumps(dict(actual_site_order_exact=True,actual_D_orientation_exact=True,all96_modes_actual_Gauss_closed=True,positive_contractible_control_actual_Gauss_closed=True,scope='Binding of previous exact character classification to authoritative N4 geometry, not a new source execution or infrared inference.')))\n",
+  "inline_script_sha256": "21921be7229890eab7f2823980f1ad59842e5eb45f56969401b678c2e2299ba6",
+  "input_sha256": {
+    "joined_phi_u1_unbiased_character_homology_control_receipt_20261010.json": "6d44bebe18c14b32ec8b154227b713be1cd5db73c151216283d6c80cb207ed05",
+    "joined_phi_u1_ground_photon_collective_delivered_actual_20261010.npz": "f8a0793adcbf4909402cd089471aa8c33fc74a31b66e99618f8baaab8d6dfb65"
+  },
+  "inputs_unchanged": true,
+  "returncode": 0,
+  "natural_exit": true,
+  "wall_seconds": 0.2381173470057547,
+  "stderr": "",
+  "result": {
+    "actual_site_order_exact": true,
+    "actual_D_orientation_exact": true,
+    "all96_modes_actual_Gauss_closed": true,
+    "positive_contractible_control_actual_Gauss_closed": true,
+    "scope": "Binding of previous exact character classification to authoritative N4 geometry, not a new source execution or infrared inference."
+  },
+  "physics_claim": "All96 retained nonzero g-mode characters have nonzero N4 homology; none establishes a local zero-winding plaquette g-mode. The winding lines are NOT pure harmonic modes, since each has coexact norm15/4. No claim about N>4 vanishing or lack of a phase."
+}

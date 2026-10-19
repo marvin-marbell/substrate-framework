@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave11_20261015_consumer.py", line 239, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave11_20261015_consumer.py", line 233, in main
+    out.write_text(json.dumps(result, default=plain, indent=2) + '\n')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 440, in _iterencode
+    yield from _iterencode(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 430, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave11_20261015_consumer.py", line 34, in plain
+    raise TypeError(type(value).__name__)
+TypeError: complex

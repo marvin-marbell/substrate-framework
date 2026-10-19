@@ -1,0 +1,42 @@
+{
+  "kind": "IMMUTABLE_INDEPENDENT_REVIEW_PLUS_ONE_SAME_H_MODE_EXPERIMENT",
+  "law": "neutral-mott-cube-uniform-physical-edge-qlink3-20261015",
+  "governor": {
+    "plan_id": "issue222-rich-backward-candidates-20261014",
+    "captured_revision": "c6d4fb23ba079b007bf66162034c552827c51191a084b1ee66109b0d54d8e267",
+    "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_items": [
+      "independent-review",
+      "photon-candidate"
+    ],
+    "requirements": [
+      "outcome",
+      "verification"
+    ],
+    "writer": "parent only"
+  },
+  "commands": {
+    "finite": "python rich_review_wave26_20261015_capture.py finite",
+    "reference_and_low_Codd_probe": "python rich_review_wave26_20261015_capture.py mode",
+    "source_aligned_continuation_of_same_mode_probe": "python rich_review_wave26_20261015_source_capture.py"
+  },
+  "execution_order": [
+    "finite",
+    "send/read provisional_synthesis",
+    "mode",
+    "source_mode"
+  ],
+  "prerequisite": "Use scientific Python named in receipts. Exclusive outputs deliberately refuse overwrite; reproduce in a clean copied capsule directory. No author producer/checker execution.",
+  "input": "rich_review_wave26_20261015_input.json",
+  "source_continuation_input": "rich_review_wave26_20261015_source_input.json",
+  "owned_reference": "rich_review_wave26_20261015_mode_states.npz:reference",
+  "results": [
+    "rich_review_wave26_20261015_finite_result.json",
+    "rich_review_wave26_20261015_mode_result.json",
+    "rich_review_wave26_20261015_source_mode_result.json"
+  ],
+  "state_ownership": "All reviewer dynamics and reference/mode vectors actually computed by these executables. Imported NeutralCube constructs frozen same H, seed and measurements only; no evolved author states. Source continuation reads only own newly computed stationary reference.",
+  "source_stability": "Original consumer/input immutable across finite and mode; separate immutable continuation pins its own source plus computed reference bytes.",
+  "group_scope": "No complete degenerate group or all-pole claim. Selected source bright eigenray only; low four C- returned vectors explicitly not a complete spectral window.",
+  "interpretation": "Charge-pair admixture observed by diagonal D, not a proved real-on-shell/virtual classification. No photon closure."
+}

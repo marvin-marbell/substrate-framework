@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave7_20261014_scalar.py", line 102, in <module>
+    main()
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave7_20261014_scalar.py", line 92, in main
+    quantum = inspect(p)
+              ^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave7_20261014_scalar.py", line 85, in inspect
+    'odd_S2_residual': float(sp.linalg.norm(sp.kron(sp.csr_matrix(model['matter']['S2']), sp.eye(model['nphi']))[addix][:, addix] - .75 * sp.eye(len(addix)))),
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/scipy/sparse/_coo.py", line 1945, in __getitem__
+    raise TypeError("'coo_matrix' object is not subscriptable")
+TypeError: 'coo_matrix' object is not subscriptable

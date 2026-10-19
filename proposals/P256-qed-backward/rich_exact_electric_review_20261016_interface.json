@@ -1,0 +1,200 @@
+{
+  "kind": "INDEPENDENT_GENUINE_EXACT_ELECTRIC_COUPLED_REVIEW",
+  "law": "OLD48 CAR8/global g/R/r5 plus eight real nonparallel transverse noncompact fields, NOT Common CAR64/native/local47",
+  "scope": "OWN fresh N4 neutral and N5 addition, field-initial-label cut1/IR3 If2, both0->6 and2->4 channels. N3/removal and cut2 COUPLED dynamics are NOT independently rerun. This is distinct from Common CAR64/native/47 and all old states.",
+  "parameters": {
+    "k": [
+      0.19,
+      0.31,
+      0.43
+    ],
+    "radial_nodes": [
+      0.3,
+      0.6,
+      0.9,
+      1.2,
+      1.5
+    ],
+    "radial_mass": 2.0,
+    "radial_stiffness": 3.0,
+    "radial_centre": 0.9,
+    "material_inertia": 3.0,
+    "electric_inertia": 4.0,
+    "root_coupling": 0.7,
+    "angular_level": 1,
+    "field_total_cut": 1,
+    "cavity_inertia": 2.0,
+    "material_scale": 1.0,
+    "material_level": 1,
+    "wave_number_scale": 1.0
+  },
+  "T": 0.04,
+  "dt": 0.01,
+  "author_states_used": false,
+  "own_fresh_states": [
+    "N4 analytic neutral",
+    "N5 own canonical CAR/Wilson addition component0"
+  ],
+  "source": {
+    "component": 0,
+    "create": true,
+    "raw_weight": 0.8999357501402575,
+    "own_literal_CAR_Wilson_vs_pure_source_error": 1.3571678930993406e-16
+  },
+  "charged_excess_Pi06": 7.553801240832991e-06,
+  "charged_excess_Pi24": -2.3773239306858386e-06,
+  "initial_ray_comparison": {
+    "neutral_squared_overlap": 1.0,
+    "charged_squared_overlap": 0.9702305429176582,
+    "selected_source_weight_cut1": 0.8999357501402575,
+    "selected_source_weight_cut2": 0.9275483612729702,
+    "scope": "Own Wilson/CAR source into cut2 labels only, SAME neutral physical ray and angular/radial inputs. No cut2 coupled evolution, no field-convergence conclusion."
+  },
+  "matched_preparation": {
+    "initial_Pi6_finite_PaP_shift": 0.017147619920481867,
+    "initial_Pi6_fullW_shift": 0.0,
+    "old_fixedH_same_oldray_temporal_full_minus_OFF": 0.00013314683972795796,
+    "old_fixedH_OFF_temporal_echo": -8.57373851196469e-07,
+    "exactU0_same_oldray_temporal_full_minus_OFF": 0.0001322400804225285,
+    "exactU0_same_oldray_OFF_temporal_echo": 1.0408340855860843e-17,
+    "exactU0_DIFFERENT_fullWray_temporal_full_minus_OFF": 9.191629992560978e-06,
+    "initial_oldray_vs_fullW_physical_squared_overlap": 0.9894370606456039,
+    "wrong_prep_assertion": "Finite exp(i eps P a P) is NOT full Weyl preparation: other-mode Pi changes initially",
+    "integration": [
+      {
+        "method": "Own Arnoldi12, two-pass full orthogonalization, exponential-midpoint time ordering",
+        "T": 0.04,
+        "dt": 0.01,
+        "steps": 4,
+        "records": [
+          {
+            "arnoldi_dimension": 12,
+            "projected_H_antihermitian_norm": 2.917504094557007e-13,
+            "terminal_image_diagnostic": 3.412767934818907e-20,
+            "norm_defect": -2.7200464103316335e-14,
+            "absolute_midpoint": 0.005
+          },
+          {
+            "arnoldi_dimension": 12,
+            "projected_H_antihermitian_norm": 3.9104898213047974e-13,
+            "terminal_image_diagnostic": 3.412251070229267e-20,
+            "norm_defect": 5.662137425588298e-15,
+            "absolute_midpoint": 0.015
+          },
+          {
+            "arnoldi_dimension": 12,
+            "projected_H_antihermitian_norm": 4.0131633222810185e-13,
+            "terminal_image_diagnostic": 3.4112319036650416e-20,
+            "norm_defect": 1.099120794378905e-14,
+            "absolute_midpoint": 0.025
+          },
+          {
+            "arnoldi_dimension": 12,
+            "projected_H_antihermitian_norm": 2.903154513072176e-13,
+            "terminal_image_diagnostic": 3.409739020848494e-20,
+            "norm_defect": 5.773159728050814e-15,
+            "absolute_midpoint": 0.035
+          }
+        ]
+      },
+      {
+        "arnoldi_dimension": 18,
+        "projected_H_antihermitian_norm": 2.9795556961938555e-14,
+        "terminal_image_diagnostic": 1.0651714687368674e-32,
+        "norm_defect": 4.440892098500626e-16
+      },
+      {
+        "arnoldi_dimension": 24,
+        "projected_H_antihermitian_norm": 5.138206090170121e-13,
+        "terminal_image_diagnostic": 1.1543353377973572e-34,
+        "norm_defect": -1.2878587085651816e-14
+      },
+      {
+        "arnoldi_dimension": 24,
+        "projected_H_antihermitian_norm": 3.9118338531127873e-13,
+        "terminal_image_diagnostic": 1.441073346725563e-34,
+        "norm_defect": -1.176836406102666e-14
+      },
+      {
+        "arnoldi_dimension": 24,
+        "projected_H_antihermitian_norm": 3.151268680174977e-14,
+        "terminal_image_diagnostic": 4.0591259284928376e-44,
+        "norm_defect": 7.771561172376096e-16
+      },
+      {
+        "arnoldi_dimension": 24,
+        "projected_H_antihermitian_norm": 6.231462577923903e-14,
+        "terminal_image_diagnostic": 1.9051723446271773e-42,
+        "norm_defect": 2.220446049250313e-16
+      }
+    ],
+    "interpretation": "Three FRESH cases: old fixed projectedH on finitePaP ray; exactU0 interaction-picture family on SAME finitePaP ray; DIFFERENT fullW ray. Do not credit the preparation change to free-solver improvement. Both coupled approximations remain finite Galerkin families."
+  },
+  "selected_own_image_bounds": {
+    "field_shell": {
+      "target_shape": [
+        56,
+        20,
+        5,
+        10,
+        165
+      ],
+      "absolute_time": 0.04,
+      "angular_extension": false,
+      "HI_compression_error": 1.7685597263591588e-15,
+      "H0_connection_compression_error": 0.0,
+      "physical_H_compression_error": 1.7808010031590683e-15,
+      "claim": "separate orthogonal angular or field expanded-shell lower bound, fixed positive-r5 regulator; not full infinite Peierls image norm",
+      "HI_outgoing_lower_bound": 1.3829541014437299,
+      "H0_basis_connection_outside_norm_NOT_error": 0.5197649643734361,
+      "full_H_outside_norm_NOT_error": 1.4616929527778308,
+      "interacting_mode0_canonical_debt": {
+        "source_norm": 1.790998533516365,
+        "Pi_dot_minus_source": 1.1842713257939246,
+        "a_dot_minus_Pi_over_I": 0.9235527348744047
+      }
+    },
+    "angular_shell": {
+      "target_shape": [
+        56,
+        56,
+        5,
+        35,
+        9
+      ],
+      "absolute_time": 0.04,
+      "angular_extension": true,
+      "HI_compression_error": 4.333909761397719e-15,
+      "H0_connection_compression_error": 0.0,
+      "physical_H_compression_error": 4.3399757396531465e-15,
+      "claim": "separate orthogonal angular or field expanded-shell lower bound, fixed positive-r5 regulator; not full infinite Peierls image norm",
+      "HI_outgoing_lower_bound": 2.42757093761161,
+      "H0_basis_connection_outside_norm_NOT_error": 0.0,
+      "full_H_outside_norm_NOT_error": 2.42757093761161
+    }
+  },
+  "commands": {
+    "coupled1": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_consume.py"
+    ],
+    "images2": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_exact_electric_review_20261016_images.py"
+    ]
+  },
+  "source_input_capsules": [
+    "rich_exact_electric_review_20261016_coupled1_source_capsule.zip",
+    "rich_exact_electric_review_20261016_images2_source_capsule.zip"
+  ],
+  "verification_scope": "Independent coupled propagation/observers/source preparation and physical protocol overlaps; pure frozen operator/image helpers reused with hashes, no producer CLI or author evolved-state inputs.",
+  "limits": "Finite coupled moving Galerkin state family only. No full-H closure/angular-field convergence/photon/Maxwell/ground/physicalmass/local47 claim; N3/removal and cut2 coupled trajectories not independently rerun.",
+  "reported_producer_dt02_comparison": {
+    "source": "rich_exact_electric_picture_20261016_synthesis.txt lines37-38, REPORTED not own author-state rerun",
+    "reported_Pi06": 7.63796747e-06,
+    "reported_Pi24": -2.40401171e-06,
+    "own_dt01_minus_reported_Pi06": -8.416622916700967e-08,
+    "own_dt01_minus_reported_Pi24": 2.6687779314161476e-08,
+    "interpretation": "About1.1% response change; common finite positive scale/sign, NOT completed time-step convergence or exact agreement."
+  }
+}

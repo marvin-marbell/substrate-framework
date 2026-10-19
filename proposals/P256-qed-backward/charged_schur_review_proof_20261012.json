@@ -1,0 +1,71 @@
+{
+  "kind": "REVISION_BOUND_INDEPENDENT_CONDITIONAL_SCHUR_CURRENT_REVIEW_NOT_SCIENCE_ADMISSION",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "revision": "3fc02d01a95d53a814f2cd560e1eaedaf8f2d248db7e7054a138e2d9fdaf2d97",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "requirements": ["outcome", "verification"],
+    "accepted_scoped_science_unchanged": "03e7a09a0dd929f32f3522cf9d7d30b76fe3f5d7c985576fc7cf8fdf2c8c6cc8"
+  },
+  "target_bindings": {
+    "native_charged_body_four_edge_proof_20261012.json": "6c9a9af72d481505c56deaca4f047ea5072af7436d5339ef1981565518c5cd2e",
+    "native_charged_body_four_edge_consumer_20261012.py": "6ecd4254602152af71930b93907afad9717bff339fe9e794133db3a4558e4372",
+    "native_charged_body_interface_20261012.json": "524c06d99eb9f9760b1f40e76522306d6e624f4fd948dc0414002c5e5c602f01",
+    "native_charged_body_four_edge_actual3_20261012_receipt.json": "dab7b4d81b1ba6aeb9c8fe71a400478f893906c47337d00b13a96ec19b406932",
+    "native_charged_body_four_edge_bound_correction_20261012.json": "5573385521a9c162442093a8fb1b155341159f81c3577c8e1693328c4c73c3b5",
+    "neutral_body_parent_primitive_profiles_20261012.json": "36f653729d91d0d8c021e708faed651098eb8e1e3e0a062d6f362e114fbf3c72"
+  },
+  "verdicts": {
+    "abstract_same_center_Schur_theorem": "ESTABLISHED_AS_STATED_WITH_PRECISE_BLOCK_DOMAIN",
+    "corrected_incident_hopping_and_selected_current_coefficients": "ESTABLISHED_FIXED_BODY_LOCAL_CONSTANTS",
+    "fixed_four_edge_graph_shell_remainder": "ESTABLISHED_CONDITIONAL_EXACT_OPERATOR_BOUND_NOT_EXACT_FLOAT_PROJECTOR",
+    "full_torus_frozen_exterior_sea_N_uniform_local_QHP_bound": "REFUTED_REMOTE_EXTERIOR_HOPPING",
+    "length2_cross_patch_PHP_zero": "ESTABLISHED_ONLY_UNDER_EXPLICIT_FIXED_PATCH_NUMBER_OR_EXTERIOR_OCCUPATION_EMBEDDING",
+    "originating_connected_ground_response": "OPEN_INPUT_TRANSITIONS_UNPAID"
+  },
+  "exact_Schur_proof": {
+    "spaces": "Hilbert space HP direct-sum HQ, orthogonal projection P. Complement means space HQ, not a finite set of one-step outgoing rows. Q=1-P denotes a projection; D is its Hamiltonian.",
+    "domain": "A and D selfadjoint on their own domains, B:HP->HQ bounded. H=[[A,B*,],[B,D]] on D(A) direct-sum D(D) is selfadjoint by bounded perturbation. Finite-dimensional shell A is sufficient but not necessary. Selfadjoint full H alone is not an assumption-free authorization to treat an arbitrary QHQ compression as selfadjoint: establish this domain decomposition. For finite-rank P with ran P subset D(H), the bounded off-diagonal reduction supplies selfadjoint diagonal blocks.",
+    "same_center": "Fix one real lambda, eta>0, T=H-lambda+i eta, TA=A-lambda+i eta, TD=D-lambda+i eta. RF=T^-1, RA=TA^-1, RD=TD^-1 all have norm <=eta^-1. No spectrum positivity, ground vector, complement gap, finite-dimensional complement, or commuting block is required.",
+    "elimination": "Solve TD y+B x=0 to get y=-RD B x. Thus P RF P=(TA-B* RD B)^-1=G. Sigma=B* RD B has norm <=||B||^2/eta. G is a compression of RF so ||G||<=eta^-1, not a small-Sigma or Neumann-series assumption.",
+    "resolvent_identity": "G-RA=RA Sigma G. Therefore ||P RF P-RA||<=||B||^2/eta^3<=Ctotal^2/eta^3. Bilinear error for identical x_a,x_b in HP is <=||x_a||||x_b|| Ctotal^2/eta^3. This is exact, including all complex cross entries and arbitrary noncommutation.",
+    "extra_PHP": "If evaluated A0 differs from actual PHP=A0+K, the Schur bound to A0 needs an additional ||K||/eta^2 term. B alone does not pay K: B=0 with K nonzero is an exact falsifier. A field-form error not bounded in operator norm needs a separate form-resolvent estimate; the bounded-K expression does not pretend otherwise.",
+    "reference_shift": "Changing lambda to lambda+delta adds at most |delta|/eta^2 for identical sources. This is not paid by B. Neither full E0 nor full P0 equals a compressed ground energy/projector by this theorem.",
+    "finite_shell": "The 10384 reported outgoing NN rows contain ran B for the NN finite shell, but are not an invariant or full complement. The theorem permits an arbitrary selfadjoint continuation on HQ and hence does not substitute the outgoing finite matrix for D. The existing 681-dimensional numeric A and NN response remain FLOAT observations at their own center and sources."
+  },
+  "source_leakage_proof": {
+    "premise": "For each actual same-source u_a in HP+HQ, ||u_a||<=CJ; x_a=P u_a, y_a=Q u_a. A fixed orthogonal connected subtraction preserves norm, but the same subtraction and same ground/source must be used in both consumers.",
+    "expansion": "u_a* RF u_b-x_a* RA x_b=x_a*(P RF P-RA)x_b+x_a*RF y_b+y_a*RF x_b+y_a*RF y_b.",
+    "bound": "The last three terms each have modulus <=CJ^2/eta, yielding CJ^2[Ctotal^2/eta^3+3/eta]. A sharper observed leakage bound is (||x_a||||y_b||+||y_a||||x_b||+||y_a||||y_b||)/eta, but observed NN shell QJ norms cannot replace full native y norms. CJ is a genuine full selected-link current bound, not an NN-only measured norm.",
+    "unpaid": "Original source=(1-fullP0)J fullground and numerical source=(1-shellP0)P J_NN P shellground differ in ground, projector, current compression and body. This expansion never bounds those differences unless separately quantified. If connected subtraction is not compatible with P, x=P u need not equal (1-shellP0)PJ P g."
+  },
+  "native_count_derivation": {
+    "point": "s=1/2,r=1/3, exact fixed four-dimensional Clifford endpoint beta/alpha matrices, physical hopping1; active1+aux63 identical hopping profiles, distinct onsite masses. Four nonzero entries per beta or alpha component. Every electric transporter/unit-modulus AP factor has norm1. Each CAR bilinear has norm<=1; restriction to the symmetric auxiliary sector cannot increase operator norm.",
+    "internal": "Four positive NN links, each plus adjoint, times4 entries per component, times64 species. Cinternal=64*8*2*sum_axes0,1(|s c0_NN|+|r ci_NN|)=5158339024440535/274877906944.",
+    "boundary": "For each of six native axis/length profiles, each of4 vertices contributes one positive path starting there and one ending there. Each such path includes its adjoint and4 component entries, hence factor4*2*2*4=64 outside species. Cboundary=64_species*4_sites*16*sum_six_profiles(|s c0|+|r ci|)=34192625878349967/274877906944. This is conservative because interior NN paths are counted twice; the earlier starts-only half bound is withdrawn.",
+    "unique_count": "For even N>=4 square z0, NN positive incidence is6+6+8=20 and length2 is8+8+8=24, so44 positive paths and88 adjoint orientations. Exact displacements2 cannot connect two square vertices, including N4 aliases. AP seam phases must be retained but cannot enlarge absolute sums. N4 length2 opposite endpoints alias while differing directed electric histories remain distinct.",
+    "current": "For any selected positive edge of axis a, one length1 path and exactly two straight length2 paths contain that edge, each with incidence1. Each has adjoint and4 component entries, so a sharper CJ_edge=64*8*(|s c0_a1|+|r ci_a1|+2|s c0_a2|+2|r ci_a2|). C_J=Cboundary is a valid oversized bound. No extra length2 multiplicity is omitted. For length<=2 at least one endpoint is a selected edge vertex; the source comment suggesting both endpoints outside describes no additional path in this native law.",
+    "PHP_length2": "On an embedding retaining exactly8 patch particles per species, a single crossing hop changes that number by1 and therefore has PHP=0. Also PHP=0 if its exterior endpoint occupation is fixed. The path can nevertheless traverse a retained link, so QHP and QJ are generally nonzero. It is not diagonal in the native Fock/flux basis. For a different projection admitting transfer between exterior and patch sectors, PHP can be non-diagonal and must be added to A; B alone is insufficient."
+  },
+  "finding_remote_exterior": {
+    "severity": "LOAD_BEARING_SCOPE_CORRECTION",
+    "target": "native_charged_body_four_edge_proof_20261012.json Schur_remainder_proof entries2,5 and native_charged_body_interface_20261012.json complete_native_current_scope/N_uniform claims",
+    "trigger": "Embed finite patch shell as P_shell tensor |onsite_exterior_sea><onsite_exterior_sea| in the full torus, then treat disjoint exterior hopping as if it belonged only to QHQ.",
+    "mechanism": "Exterior beta hopping kills a uniformly filled negative-beta sea, but the native NN i r ci alpha mixes an occupied negative mode into an empty positive mode on another exterior site. This changes exterior mask and shared flux, so it lies in Q and QHP is nonzero. There are3N^3-20 disjoint positive NN paths; only2 of4 alpha entries have occupied negative sources per orientation, giving2 forward and2 adjoint targets per species. Orthogonal CAR species/masks and link-flow histories give exact squared norm64*4*(3N^3-20)*(r ci_NN)^2 on the normalized sea. The aux63 symmetric first-transfer amplitudes sqrt63 give load63, not4096. Actual1's overcounted8 factor is withdrawn by the epoch2 correction and literal CAR count.",
+    "consequence": "This lower bound grows as N^3 and exceeds the fixed Ctotal^2 at a finite evenN found in the independent receipt. Local incident counts cannot bound full-torus QHP for frozen exterior sea. Full-torus scalar response conclusion is withdrawn; abstract eta^-3 theorem and local coefficient arithmetic survive.",
+    "legitimate_scope_one": "Full four-edge graph operator, fixed candidate body, active canonical8 and aux63 symmetric canonical8 module, shared E4. Unbounded diagonal E^2 and onsite are reducing for finite shell; only bounded four-edge hopping escapes. Selfadjoint complement and Cinternal bound are valid; Ctotal is harmlessly oversized. This is not the full native torus.",
+    "legitimate_scope_two": "Explicit projection reducing every disjoint exterior Hamiltonian term, for example local patch-number/shell projection tensor exterior identity where domain and Gauss restriction permit it. Disjoint exterior hopping then commutes with P, leaving only incident bounded couplings; but A=PHP contains exterior Hamiltonian and is generally not the scalar681 matrix. A source-state spectral/factorization reduction must be proved before using the old numerical scalar response. No exterior invariant vector or backend is assumed.",
+    "correcting_direction": "Parent addendum withdraws local Ctotal as full-torus frozen-sea QHP bound. Retain four-edge operator result; any future full-torus reduction must explicitly construct reducing P and transport A, sources and reference. Do not silently insert exterior factorization. Original bytes remain frozen."
+  },
+  "body_and_mass_predicates": {
+    "body": "Pinned actual Clifford_window=null, actual_BO_remainder=null. Ground local moment bounds and fullPhi/Haar polynomial trial derivative prices are not point support or actual-ground Berry/Born-Huang errors. Candidate s,r are unadopted.",
+    "mass": "Parent identities Mcharged(k)=m_min+sum_axis4c2(cos k-1)^2 and Clifford h(k)^2=(s^2 M(k)^2+r^2 sum D_axis(k)^2)I imply point/flat-link onebody separation>=2s m_min. Active m_min=56294995342133/281474976710656 and auxiliary=562949953421313/281474976710656. These do not pay interacting fullH gap, quantum body, source shift or complement spectral inputs.",
+    "originating_family": "Inherited analytic finite globally minimizing-character translation-averaged originating family remains ground authority. No numerical-ground prerequisite is invented. Point matrix, fixed sea, trial polynomial and lowest shell eigenvector are not that family. Complete fullP0, rho weights, SU4 moving occupation/frame sections, U1 minimizing characters/packets, neutral -Lambda full canonical sea, Ref and quantum Phi/Haar forms remain unpaid transitions.",
+    "IR": "Huge eta^-3 or eta^-1 upper is an insufficient control, not a no-go, phase exclusion, stiffness value, atom or campaign closure."
+  },
+  "control_scope": "New rational complex2+3 full-complement matrices, exact Schur identity/PSD bounds, noncommutation, complex-source leakage, wrong center and omittedPHP controls; independently enumerated N4/6/8 allnative path/current/AP incidence and exact disjoint exterior CAR/source-growth witness. No original main/solver/root/checker is imported or rerun. Numerical matrix diagnostics are not needed for these exact finite controls.",
+  "scientific_admission": false,
+  "campaign_complete": false
+}

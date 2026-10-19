@@ -1,0 +1,78 @@
+{
+  "kind": "ACTUAL_TREE_SOURCE_CLIFFORD_ORBIT_QUANTITATIVE_INTERFACE_NOT_STATE_OR_DOMAIN_EQUIVALENCE",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_revision": "32fd1409abbc013242735994b8a4a9e64f5bbf3c36a9dd6f3257ac2b54cae88f",
+    "template": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "requirements": [
+      "outcome",
+      "verification"
+    ],
+    "parent_sole_plan_writer": true
+  },
+  "constant": {
+    "C_orbit": "2305843009213693952",
+    "C_orbit_power": 61,
+    "threshold_target_power": 80,
+    "target_passed": true
+  },
+  "same_nu_expectation": {
+    "definition": "d_orbit=E_nu min_UinSU4 sum_mu ||Phi_mu^tree-sqrt(xstar_mu) U Gamma_mu Udagger||HS^2",
+    "bound": "d_orbit <=2*d2+2^61*eta <2^-97",
+    "pointwise_B_bound": "dist_HS^2(B,O_xstar)<=2^59*(DeltaJ+64||xB-xstar||_2^2)",
+    "conservative_expected_T": "<=2eta from separately supplied bounds",
+    "optional_stronger_combined_T": "<=eta from independent body-review combined inequality; gives2^60 instead",
+    "same_measure": "originating canonical rho_N, translated partition/root volume-biased nu retained; no independent copies or frozen field"
+  },
+  "exact_minimizer_relation": {
+    "distance_formula": "||Phi||tupleHS^2+4sum_mu xstar_mu-2 max_UinSU4 sum_mu sqrt(xstar_mu) Tr(Phi_mu U Gamma_mu Udagger)",
+    "covariance": "dist(VPhiVdagger,O)=dist(Phi,O); M(VPhiVdagger)=V M(Phi)Vdagger",
+    "selection": "Borel nearest-orbit tuple and SU4 representative available; only covariant minimizer set guaranteed globally. Constructed good-branch tuple is equivariant. No equivariant single selector at Phi=0.",
+    "stabilizer": "full common SU4 stabilizer Z4; no independent component frames",
+    "derivative_graph": "Unavailable; no sharp projector/domain or differentiable global gauge fixing inferred"
+  },
+  "proof": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/clifford_source_geometry_proof_20261012.json",
+    "sha256": "cf3f2c5e196158862e77a6b0bef70fa1dda749982cc2b66bcc7e375faa0f99fd"
+  },
+  "consumer": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/clifford_source_geometry_consumer_20261012.py",
+    "sha256": "db45b87a8bd806b26bbcc8523a008f579eceeecea3b56752f1cfa718789b2927"
+  },
+  "capsule": {
+    "path": "/home/administrator/substrate-222/proposals/P256-qed-backward/clifford_source_geometry_actual1_20261012_capsule.json",
+    "sha256": "e390c19a7b8fb772c5beec23e9357af6bb68664e9c81ee01eb4d290a74cfed47"
+  },
+  "preexecution": "2f5352ea6614ab79dfb6e01c9389d1bb56f989413c821fdd74826754c802d697",
+  "executed": "f99da347f7d087a7ce5f046c54676497c6501454e1d08ce539e45a2ab5c8eccc",
+  "receipt": {
+    "path": "clifford_source_geometry_actual1_20261012_receipt.json",
+    "sha256": "c9fc824cd18487f15a2f713211704a99c8f5e66bfda10b01c6806a7c75d1220d"
+  },
+  "execution": {
+    "natural_exit": true,
+    "returncode": 0,
+    "wall_seconds": 3.4929283470264636,
+    "inputs_unchanged": true,
+    "controls": "Unequal norm analogs, common polar+word-averaged intertwiner, bad nearzero component, independent wrong frames with zero self residual/nonzero crosses, same-atom rare huge Phi and zero B; exact mean/probability ratio>2^150 and paid gates pass"
+  },
+  "unpaid": [
+    "actual Phi-frame/state identity",
+    "full-H/domain unitary transport",
+    "wholeP0 source or magnetic Gram",
+    "charged phase selection",
+    "sharp IR atom/commoncone/Compton",
+    "global differentiable gauge fixing",
+    "law/ansatz/ground adoption"
+  ],
+  "language_intelligence": {
+    "native_LSP_symbols_definition": "Exercised pyright-langserver rooted at project on native_clifford; mounted xd://lsp unavailable",
+    "AST": "Positive ast_grep native_clifford function declaration",
+    "diagnostics": "Parent-owned, not run"
+  },
+  "memory": "Parent-owned governing plan pinned; explicit bind attempt exceeded memory CLI output limit. No plan writes or independent governing plan.",
+  "scientific_admission": false,
+  "campaign_complete": false
+}

@@ -1,0 +1,54 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_global_normal_source_reprice.py",
+    "--output",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_global_normal_source_reprice_receipt.json"
+  ],
+  "cwd": "/home/administrator/substrate-222",
+  "returncode": 0,
+  "natural_exit": true,
+  "timeout": false,
+  "wall_seconds": 3.11859351000021,
+  "stdout": "{\n  \"eta\": \"1638767.52536270934133796172016\",\n  \"repriced_Rayleigh\": \"4.38191747147871178058442571571e-128\",\n  \"repriced_clocks\": [\n    {\n      \"time\": \"0\",\n      \"complex_error_upper\": \"0.0\",\n      \"reference\": \"UNCHANGED archived free-band reference, ONLY the no-U1 Phi law\",\n      \"no_U1_raw_modulus_lower\": \"0.5\",\n      \"no_U1_raw_probability_lower\": \"0.25\",\n      \"below_two_to_minus37\": true\n    },\n    {\n      \"time\": \"1/4096\",\n      \"complex_error_upper\": \"4.27921628074092947322697823799e-131\",\n      \"reference\": \"UNCHANGED archived free-band reference, ONLY the no-U1 Phi law\",\n      \"no_U1_raw_modulus_lower\": \"0.499999111002341710488787156105\",\n      \"no_U1_raw_probability_lower\": \"0.249999111003132027325231390649\",\n      \"below_two_to_minus37\": true\n    },\n    {\n      \"time\": \"4096\",\n      \"complex_error_upper\": \"7.17933358527072138130952309261e-124\",\n      \"reference\": \"UNCHANGED archived free-band reference, ONLY the no-U1 Phi law\",\n      \"no_U1_raw_modulus_lower\": \"0.0777984873425647284323926064562\",\n      \"no_U1_raw_probability_lower\": \"0.00605260463279120426056264631052\",\n      \"below_two_to_minus37\": true\n    }\n  ],\n  \"U1_coupling_residual\": \"4.4661572063709473751405475178e-909\",\n  \"new_U1_clocks\": [\n    {\n      \"time\": \"0\",\n      \"raw_twoleg_comparison_error_upper\": \"1.28169176685552823334147701694e-919\"\n    },\n    {\n      \"time\": \"1/4096\",\n      \"raw_twoleg_comparison_error_upper\": \"4.27921628074092947322697823799e-131\"\n    },\n    {\n      \"time\": \"4096\",\n      \"raw_twoleg_comparison_error_upper\": \"7.17933358527072138130952309261e-124\"\n    }\n  ],\n  \"Coulomb_control\": {\n    \"complete_zero_charge\": 0.0,\n    \"actual_extreme_Fock_energy\": 33538072.799999967,\n    \"wrong_one_flavour_upper\": 18432.0\n  },\n  \"Pi_control\": {\n    \"all_real_modes\": 129,\n    \"density_variance\": \"2\",\n    \"exact_mean_HE\": \"1032\",\n    \"exact_norm_HEpsi_squared\": \"1081536\"\n  },\n  \"nonlinear_controls\": [\n    {\n      \"role\": \"active filled charged\",\n      \"actual_nonlinear_difference_norm\": 1.0764552731255084e-05,\n      \"repaired_upper\": 0.00022322843928568423,\n      \"wrong_frozen_Phi_colour_difference\": 1.0764552731255084e-05\n    },\n    {\n      \"role\": \"auxiliary filled charged\",\n      \"actual_nonlinear_difference_norm\": 1.125571710046604e-05,\n      \"repaired_upper\": 0.00022505276051096976,\n      \"wrong_frozen_Phi_colour_difference\": 1.125571710046604e-05\n    }\n  ],\n  \"elapsed_seconds\": 0.6014257589995395\n}\n",
+  "stderr": "",
+  "source_sha256_before": "7456a0e9c9b7eb22959cbd2ff929697dd1bcafe97fec26650830b5f97e6da715",
+  "source_sha256_after": "7456a0e9c9b7eb22959cbd2ff929697dd1bcafe97fec26650830b5f97e6da715",
+  "receipt_sha256": "14f50709506112ee0f9957d59d1d0661e66133cbdf27665c324095ba6359581a",
+  "pyright": {
+    "command": [
+      "pyright",
+      "--project",
+      "/tmp/issue222-source-reprice-pyright.json",
+      "--pythonpath",
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "--outputjson"
+    ],
+    "selected_file": "/home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_global_normal_source_reprice.py",
+    "config": {
+      "include": [
+        "../home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_global_normal_source_reprice.py"
+      ],
+      "extraPaths": [
+        "/home/administrator/substrate-222/proposals/P256-qed-backward"
+      ],
+      "pythonVersion": "3.12",
+      "typeCheckingMode": "basic"
+    },
+    "returncode": 0,
+    "result": {
+      "version": "1.1.414",
+      "time": "1791581681920",
+      "generalDiagnostics": [],
+      "summary": {
+        "filesAnalyzed": 1,
+        "errorCount": 0,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 8.808
+      }
+    },
+    "stderr": ""
+  },
+  "scope": "Conditional replacement Phi prices plus NEW uniformallchargedU1 comparison only; physicalglobalcert/bodypropagatorOPEN"
+}

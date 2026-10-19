@@ -1,0 +1,113 @@
+{
+  "kind": "Actual Root whole/half scalar discrimination using spatial loop stiffness",
+  "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+  "plan_revision_at_execution": "8bb4ee6390d11011229713f9a6b2b21ea1761b493f80beaa8d3e5b3047f99ec4",
+  "runtime_executable": "/home/administrator/substrate-framework/.venv/bin/python",
+  "natural_exit_codes": [
+    0,
+    0
+  ],
+  "sources": {
+    "covariant_canonical_gauss_boundary_kernel.py": "741fbc1f196061cb7f0e2c479770e992304ac2de90492f002ef4cbd931315d50",
+    "covariant_root_transfer.py": "6911f0283dc0f84f4cc05202deb67dcd3266d5c64ca1a05e149f1567451e0f9c",
+    "covariant_relative_ring_boundary.py": "a32c71d4583487453758f369f555fd49e0926ef74e8464317c3cbfdc17dbdc45"
+  },
+  "raw_program": "import json,numpy as np\nfrom scipy.linalg import eigh\nimport covariant_relative_ring_boundary as ring\ns=ring.supplier; gamma,_=s.phi_frame(s.Parameters());V=4\nsites=[(x,y) for x in range(2) for y in range(2)];index={p:i for i,p in enumerate(sites)}\ndef one(theta,k):\n links=[]\n for axis in [0,1]:\n  M=np.zeros((V,V),complex)\n  for i,p in enumerate(sites):\n   q=list(p);q[axis]=(q[axis]+1)%2;M[i,index[tuple(q)]]=np.exp(1j*theta) if axis==0 and i==0 else 1.\n  links.append(np.kron(M,np.eye(4)))\n links.append(np.eye(4*V))\n h,p,T=s.physical_spatial_onebody(gamma,k,tuple(links),[np.zeros((4*V,4*V),complex)]*4,np.eye(4*V))\n vals=eigh(T,eigvals_only=True)\n return 2*np.log(p)+np.log(vals[-2*V:]).sum(), np.log(vals[-2*V:]).sum(),2*np.log(p)\nrows=[];theta=.5\n# one phased x-edge gives two plaquettes with opposite flux; remaining2 zero\nplaquette_cost=2*(1-np.cos(theta))\nfor k in [.04,.02,.01,.005]:\n a=one(0.,k);b=one(theta,k);delta=a[0]-b[0]\n rows.append(dict(kappa=k,raw_full_prefactor_fixedN_valence_energy_change=float(delta),delta_div_kappa4_plaquette=float(delta/(k**4*plaquette_cost)),expected_temporal_reference_coefficient=16.,prefactor_energy_change=float(a[2]-b[2]),valence_exterior_energy_change=float(a[1]-b[1])))\nprint(json.dumps(dict(geometry='2x2x1 periodic full4V Root onebody; one phasedxedge',theta=theta,plaquette_cost=float(plaquette_cost),rows=rows,scope='Fixed-field auxiliary topvalence eigenvalue derivative; noGauss/fulljointK/compactfield/source/pole admission'),indent=2))\n",
+  "repaired_geometry_program": "import json,numpy as np\nfrom scipy.linalg import eigh\nimport covariant_relative_ring_boundary as ring\ns=ring.supplier; gamma,_=s.phi_frame(s.Parameters());nx=4;ny=3;V=nx*ny\nsites=[(x,y) for x in range(nx) for y in range(ny)];index={p:i for i,p in enumerate(sites)}\ndef one(theta,k):\n links=[]\n for axis in [0,1]:\n  M=np.zeros((V,V),complex)\n  for i,p in enumerate(sites):\n   q=list(p);q[axis]=(q[axis]+1)%([nx,ny][axis]);M[i,index[tuple(q)]]=np.exp(1j*(theta if p==(0,0) else -theta)) if axis==0 and p in [(0,0),(1,0)] else 1.\n  links.append(np.kron(M,np.eye(4)))\n links.append(np.eye(4*V))\n h,p,T=s.physical_spatial_onebody(gamma,k,tuple(links),[np.zeros((4*V,4*V),complex)]*4,np.eye(4*V))\n vals=eigh(T,eigvals_only=True)\n return 2*np.log(p)+np.log(vals[-2*V:]).sum(), np.log(vals[-2*V:]).sum(),2*np.log(p)\nrows=[];theta=.5\n# two opposite consecutive x-edges: all x/y torons unchanged; four plaquettes with flux +-theta\nplaquette_cost=4*(1-np.cos(theta))\nfor k in [.04,.02,.01,.005]:\n a=one(0.,k);b=one(theta,k);delta=a[0]-b[0]\n rows.append(dict(kappa=k,raw_full_prefactor_fixedN_valence_energy_change=float(delta),delta_div_kappa4_plaquette=float(delta/(k**4*plaquette_cost)),expected_temporal_reference_coefficient=16.,prefactor_energy_change=float(a[2]-b[2]),valence_exterior_energy_change=float(a[1]-b[1])))\nprint(json.dumps(dict(geometry='4x3x1 periodic full4V Root onebody; two opposite consecutivexedge phases, EVERY toron unchanged',theta=theta,plaquette_cost=float(plaquette_cost),rows=rows,scope='Fixed-field auxiliary topvalence eigenvalue derivative; noGauss/fulljointK/compactfield/source/pole admission'),indent=2))\n",
+  "short_torus_adverse": {
+    "geometry": "2x2x1 periodic full4V Root onebody; one phasedxedge",
+    "theta": 0.5,
+    "plaquette_cost": 0.24483487621925448,
+    "rows": [
+      {
+        "kappa": 0.04,
+        "raw_full_prefactor_fixedN_valence_energy_change": -0.004821561584826384,
+        "delta_div_kappa4_plaquette": -7692.623384203499,
+        "expected_temporal_reference_coefficient": 16.0,
+        "prefactor_energy_change": -0.0019230166602639542,
+        "valence_exterior_energy_change": -0.002898544924558877
+      },
+      {
+        "kappa": 0.02,
+        "raw_full_prefactor_fixedN_valence_energy_change": -0.0010725146246954864,
+        "delta_div_kappa4_plaquette": -27378.519383586216,
+        "expected_temporal_reference_coefficient": 16.0,
+        "prefactor_energy_change": -0.0004287531337610062,
+        "valence_exterior_energy_change": -0.0006437614909273748
+      },
+      {
+        "kappa": 0.01,
+        "raw_full_prefactor_fixedN_valence_energy_change": -0.00025549368581323506,
+        "delta_div_kappa4_plaquette": -104353.46865551762,
+        "expected_temporal_reference_coefficient": 16.0,
+        "prefactor_energy_change": -0.00010218344586121475,
+        "valence_exterior_energy_change": -0.00015331023996267845
+      },
+      {
+        "kappa": 0.005,
+        "raw_full_prefactor_fixedN_valence_energy_change": -6.248526817387301e-05,
+        "delta_div_kappa4_plaquette": -408342.26978621277,
+        "expected_temporal_reference_coefficient": 16.0,
+        "prefactor_energy_change": -2.499327263194573e-05,
+        "valence_exterior_energy_change": -3.7491995534821854e-05
+      }
+    ],
+    "scope": "Fixed-field auxiliary topvalence eigenvalue derivative; noGauss/fulljointK/compactfield/source/pole admission"
+  },
+  "toron_preserving_local_curl": {
+    "geometry": "4x3x1 periodic full4V Root onebody; two opposite consecutivexedge phases, EVERY toron unchanged",
+    "theta": 0.5,
+    "plaquette_cost": 0.48966975243850897,
+    "rows": [
+      {
+        "kappa": 0.04,
+        "raw_full_prefactor_fixedN_valence_energy_change": 1.601440061449466e-05,
+        "delta_div_kappa4_plaquette": 12.775192277825118,
+        "expected_temporal_reference_coefficient": 16.0,
+        "prefactor_energy_change": -1.573384710695791e-05,
+        "valence_exterior_energy_change": 3.174824769303086e-05,
+        "correct_half_prefactor_valence_energy_change": 2.3881324139551907e-05,
+        "correct_half_prefactor_delta_div_kappa4_plaquette": 19.050885204889028
+      },
+      {
+        "kappa": 0.02,
+        "raw_full_prefactor_fixedN_valence_energy_change": 9.767059623300156e-07,
+        "delta_div_kappa4_plaquette": 12.466386241264042,
+        "expected_temporal_reference_coefficient": 16.0,
+        "prefactor_energy_change": -7.744911272311583e-07,
+        "valence_exterior_energy_change": 1.751197089561174e-06,
+        "correct_half_prefactor_valence_energy_change": 1.3639515259455948e-06,
+        "correct_half_prefactor_delta_div_kappa4_plaquette": 17.409074166226898
+      },
+      {
+        "kappa": 0.01,
+        "raw_full_prefactor_fixedN_valence_energy_change": 5.993177865093458e-08,
+        "delta_div_kappa4_plaquette": 12.239224161280127,
+        "expected_temporal_reference_coefficient": 16.0,
+        "prefactor_energy_change": -4.34147011674213e-08,
+        "valence_exterior_energy_change": 1.0334649402921059e-07,
+        "correct_half_prefactor_valence_energy_change": 8.163914344549994e-08,
+        "correct_half_prefactor_delta_div_kappa4_plaquette": 16.672286380554393
+      },
+      {
+        "kappa": 0.005,
+        "raw_full_prefactor_fixedN_valence_energy_change": 3.709260454343166e-09,
+        "delta_div_kappa4_plaquette": 12.120039470263869,
+        "expected_temporal_reference_coefficient": 16.0,
+        "prefactor_energy_change": -2.5756605737115024e-09,
+        "valence_exterior_energy_change": 6.2849210280546686e-09,
+        "correct_half_prefactor_valence_energy_change": 4.997090741198917e-09,
+        "correct_half_prefactor_delta_div_kappa4_plaquette": 16.328035673231206
+      }
+    ],
+    "scope": "Fixed-field auxiliary topvalence eigenvalue derivative; noGauss/fulljointK/compactfield/source/pole admission"
+  },
+  "actual_contract": "physical_spatial_onebody returns sqrt(T4), WHOLE det(Bplus), T4. Correct microscopic SF=sqrt(detBplus)*Gamma(sqrtT4), so fixed-N valence whole eigenvalue=detBplus*prod(T4val). Passing whole det as each half scalar instead gives detBplus\u00b2*prod(T4val).",
+  "decision": "The probe discriminates WHOLE detB from SF-half sqrt(detB): incorrectly passing whole det as each of TWO half scalars gives a magnetic coefficient tending12 instead16. Parent initially misdiagnosed the completed relative-ring weights; withdrawn after counting FOUR h factors in L,M. Existing complete_pair uses pwhole_z*pwhole_w, the CORRECT four-half product, and Wwhole squared, the correct common two-clock scaling. Actual native holonomy weights need not change. Owner migrates misleading ring_half interface to true half scalars with squared products/fourth powers so completed weights remain algebraically identical. Frozen supplier/Source2a/Root bytes retained; no actual wrong direct two-half consumer established.",
+  "limitations": [
+    "Raw fixed-field valence operator eigenvalue; not full interacting Gauss or source operator.",
+    "First 2x2 torus probe changes short spatial torons and is NOT a plaquette-only/instability verdict.",
+    "4x3x1 zero-toron curl probe separates that confound; double-precision finite-kappa coefficients are numerical probes, not interval macro proofs.",
+    "The scalar-stage interface is misleading, but the actual completed four-half grouping was correct. The artificial wrong-two-half probe is not a physical unequal-cone verdict on those completed native modules."
+  ]
+}

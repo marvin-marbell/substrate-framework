@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_repair.py", line 159, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_repair.py", line 140, in run
+    for _ in range(count):states[grid],receipt=advance(h,states[grid],dt,directions,request[grid+'_step_defect_tolerance']);steps[grid].extend(receipt)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_repair.py", line 44, in advance
+    middle,left=advance(operator,state,duration/2,directions,tolerance/2,depth+1);out,right=advance(operator,middle,duration/2,directions,tolerance/2,depth+1)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_repair.py", line 44, in advance
+    middle,left=advance(operator,state,duration/2,directions,tolerance/2,depth+1);out,right=advance(operator,middle,duration/2,directions,tolerance/2,depth+1)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_repair.py", line 44, in advance
+    middle,left=advance(operator,state,duration/2,directions,tolerance/2,depth+1);out,right=advance(operator,middle,duration/2,directions,tolerance/2,depth+1)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 7 more times]
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_photon_collective_20261015_repair.py", line 43, in advance
+    if depth>=10:raise RuntimeError(f'Cannot meet local defect indicator: {receipt}')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Cannot meet local defect indicator: {'duration': 6.103515625e-05, 'directions': 28, 'endpoint_residual': 2.9834264193655387e-18, 'integrated_residual_estimate': 1.9663278335196217e-22, 'residual_quadrature_reported_error': 2.732912356929141e-23, 'measured_reorthogonalization_correction_allowance': 2.3804301245262057e-15, 'local_defect_indicator': 2.3804303484881124e-15, 'norm': 0.9999999999993144, 'meaning': 'Duhamel integrated physical Krylov residual estimate plus measured recurrence corrections; quadrature/roundoff NOT a rigorous machine-proof bound. Independent temporal-grid full-state/observable comparisons remain separately measured.'}

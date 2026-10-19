@@ -1,0 +1,40 @@
+{
+  "law_id": "rich-photon-literal-gauss-cube-transport-20261015",
+  "owner_prefix": "rich_photon_gauss_transport_20261015_",
+  "governor": {
+    "plan_id": "issue222-rich-backward-candidates-20261014",
+    "actual_launch_revision": "b8b88c61c08e2622b9a2b7f5355f5259c1e37ca98c344bccf6263896549353d4",
+    "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "photon-candidate",
+    "requirements": ["outcome", "verification"],
+    "parent_sole_plan_writer": true
+  },
+  "frozen_dependency": {
+    "module": "rich_photon_fullq_20261014_model.py",
+    "sha256": "f3af36d79727738822ed2d19b04bf6905c90de0110265717570e7868828dbf02",
+    "pure_APIs_used": ["Parameters", "Sector", "geometry"],
+    "no_old_cli_or_output_reuse": true,
+    "other_transitive_pure_helper": "rich_photon_20261014_loop.py CAR hop only; exact bytes pinned in source capsules"
+  },
+  "new_python_API": {
+    "module": "rich_photon_gauss_transport_20261015_model.py",
+    "constructor": "CubeExperiment(cutoff=1)",
+    "sector": "Actual fullq Sector(Parameters(geometry='cube',cutoff=1,hopping=1,repulsion=4,electric_inertia=1,reference_particles=2,anchor=0,background='integer_ions'),1,1)",
+    "fields": ["sector.H", "Hoff", "Hcut", "Wleft", "Bleft", "Cleft", "Wright", "Cright", "ER", "EL", "Ebridge", "HR", "HL", "HRoff", "HRcut", "HLcut", "powerR", "powerER"],
+    "seed": "seed() returns the newly declared full-H neutral zero-electric preparation, not an eigenstate",
+    "algebra": "algebra() computes exact all-retained-basis Gauss/current/locality/factorization errors",
+    "measure": "measure(states) accepts dimension-by-two complex columns in baseline,pulse order; returns actual energy owners, powers, every physical density/current, Wilson coherence and boundary occupation",
+    "physical_face": "oriented_face(positions,edges,side) defines actual yz products at x=side independently of tree coordinates"
+  },
+  "consumer": {
+    "script": "rich_photon_gauss_transport_20261015_consume.py",
+    "argument": "rich_photon_gauss_transport_20261015_actual_input.json",
+    "first_output": "rich_photon_gauss_transport_20261015_provisional_synthesis.json at the first inter-region discriminator",
+    "final_output": "rich_photon_gauss_transport_20261015_actual_result.json",
+    "states": "rich_photon_gauss_transport_20261015_actual_states.npz, arrays initial,endpoint,independent_endpoint,times,states; column0 baseline,column1 pulse",
+    "execution": "NEW capture wrapper preserves exact sources/input/output/stdout/stderr, observed natural or interrupted exit. No old producer replay."
+  },
+  "units_and_signs": "hbar=t=charge=spacing=epsilon=1; U=4; oriented increasing-coordinate edges; J=-i(T-Tdagger), dotE=J, dotrho=-BJ; pulse exp(-i alpha Bleft)",
+  "integration_boundary": "DISTINCT finite H/state/charge law from CAR36/CommonCarrierMotion, induced oscillator and body408. ER/HR transport observations cannot be pasted into those laws as a propagator D, charged G, global vacuum or source success. A future shared-H consumer must explicitly migrate the primitive physical law and recompute its own declared state. No such integration is delivered here.",
+  "limits": "Finite L1 projected neutral cube; not a rotor/thermodynamic cutoff study, massless photon, momentum dispersion, free electron or positron. No source family or broad spectra required before the actual first transport test."
+}

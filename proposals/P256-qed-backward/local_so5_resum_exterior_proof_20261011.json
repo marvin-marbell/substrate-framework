@@ -1,0 +1,53 @@
+{
+  "kind": "EXPLICIT_FREE_MINMAX_EXTERIOR_CERTIFICATE_ATTEMPT_NOT_GROUND_ADMISSION",
+  "source_sha256": "c9a20e0094c6c96d082e9c4a7ac155f068935e8b411833942465939d1dd46477",
+  "input": "local_so5_resum_actual02_20261011_receipt.json",
+  "input_sha256": "83fad0192f83beb628c06b2a94b1c283c9c2ae0babbe92dd545f1fd004ca9d19",
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "local_so5_resum_exterior_20261011.py",
+    "--receipt",
+    "local_so5_resum_actual02_20261011_receipt.json"
+  ],
+  "profiles": [
+    {
+      "role": "active",
+      "replicas": 2,
+      "native_wedge_eigenvalues": [
+        -38.78712975154622,
+        -8.25982976132062,
+        2.6624519578385644e-16,
+        2.5122250019294957e-15,
+        8.259829761320622,
+        38.787129751546246
+      ],
+      "harmonic_ground_free": -77.57425950309243,
+      "first_free_excitation": 30.527299990225597
+    },
+    {
+      "role": "auxiliary",
+      "replicas": 126,
+      "native_wedge_eigenvalues": [
+        -40.65628632232196,
+        -8.259829761320619,
+        -1.3205980539808238e-15,
+        1.223259568192559e-15,
+        8.259829761320617,
+        40.65628632232198
+      ],
+      "harmonic_ground_free": -5122.692076612567,
+      "first_free_excitation": 32.396456561001344
+    }
+  ],
+  "derivation": "A generic SO5 generator in vector5 has weights {-omega1,-omega2,0,omega2,omega1}. Harmonic rankn ground weight is -n*omega1 and next weight is -(n-1)*omega1-omega2. Both are tracefree because contraction lands in degree n-2 with minimal energy -(n-2)*omega1. In product active2/aux126 the lowest free excitation is min of these two free gaps. H_full=H_free+64rho^2 implies minmax lambda2(full)>=lambda2(free). This is a genuine sufficient exterior comparison, not positivity of H-E.",
+  "free_product_minimum_numeric": -5200.266336115659,
+  "second_free_threshold_numeric": -5169.739036125434,
+  "actual_Ritz_energy": -5124.366594725318,
+  "margin_threshold_minus_Ritz": -45.37244140011626,
+  "Temple_separation_sufficient_test_passed": false,
+  "ground_certificate_available": false,
+  "reason": "Free comparison threshold does not separate Ritz from all exterior levels.",
+  "ritz_stage_retained": true,
+  "L_equals_H_minus_E_positive_assumed": false,
+  "source_and_input_unchanged": true
+}

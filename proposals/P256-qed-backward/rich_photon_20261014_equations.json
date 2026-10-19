@@ -1,0 +1,50 @@
+{
+  "law_id": "rich-photon-hubbard-plaquette-links-v1-20261014",
+  "microscopic_hypothesis": "Quantized cubic links coupled to three real charged molecular plaquettes per cell. Each plaquette is a distinct four-site spinful Hubbard ring with two fermions and compensating ionic charge. Ring sites on different molecules are distinct; electromagnetic links are shared.",
+  "microscopic_H": "H = sum_links E_l^2/(2 epsilon_b) + sum_plaquettes [sum_edges,spin (-t exp(i e theta_edge)c^dagger_next,spin c_edge,spin+h.c.) + U sum_sites n_up n_down]. There is NO bare B^2 or cosine magnetic plaquette term.",
+  "microscopic_scope": "Exact isolated matter ring and exact source derivatives. Full compact link plus ring many-body ground, nonlinear quantum corrections and microscopic Gauss projection are NOT solved by this calculation.",
+  "parameters": {"t":1,"U":4,"epsilon_b":1,"e":1,"a":1,"hbar":1,"fermions_per_ring":2,"rings_per_cell":3},
+  "source_conventions": {
+    "phases": "theta=(theta0,theta1,theta2,theta3) oriented +i,+j,-i,-j around square",
+    "current": "J_l=-partial H/partial theta_l=-i e (T_l-T_l^dagger)",
+    "contact": "C_l=partial^2 H/partial theta_l^2=-e^2(T_l+T_l^dagger)",
+    "density": "rho_s=e(n_up+n_down-1/2)",
+    "continuity": "dot rho_s=i[H,rho_s]=J_(s-1)-J_s",
+    "gauge": "The chosen Peierls sign determines charge/gauge transformation conventions. Replacing e by -e reverses rho and J but not Pi. Electron peer's charge sign must be reconciled explicitly, not by a mass normalization.",
+    "frequency": "z=omega+i eta, eta>0; retarded Fourier e^{-i omega t}",
+    "momentum": "q in [-pi,pi]^3, link midpoint convention; qhat_i=2 sin(q_i/2)"
+  },
+  "exact_ring_response": {
+    "ground": "Unique 28-dimensional two-fermion sector ground; all other 27 eigenstates retained, including triplets, particle-hole configurations and double occupancy.",
+    "transition": "v_na=<0|O_a|n>, O=(rho0,rho1,rho2,rho3,J0,J1,J2,J3), Delta_n=E_n-E_0",
+    "chi": "chi_ab(z)=sum_n[v_na conjugate(v_nb)/(z-Delta_n)-conjugate(v_na)v_nb/(z+Delta_n)]",
+    "edge_Pi": "K_edge(z)=diag(<C_l>)+chi_JJ(z). Both frequency poles and native contact remain; no static-only Ward envelope and no manually subtracted K(0).",
+    "virtual_pairs": "These are actual intraring particle-hole and double-occupancy quantum states. This is not a hidden relativistic Dirac electron/positron sea; that target remains open."
+  },
+  "finite_q_embedding": {
+    "R": "R_0i=exp(-i q_j/2), R_1j=exp(i q_i/2), R_2i=-exp(i q_j/2), R_3j=-exp(-i q_i/2), all others zero",
+    "density_phase": "Plaquette site coordinates (-1/2,-1/2),(1/2,-1/2),(1/2,1/2),(-1/2,1/2) in axes i,j; density source phases exp(i q.x_s)",
+    "Pi": "Pi(q,z)=sum_ij R_ij^dagger K_edge(z) R_ij, ij=(xy,xz,yz)",
+    "D": "D(q,z)=[Pi(q,z)-epsilon_b z^2 I_3]^{-1}; D_T=F^dagger D F with F orthonormal and F^dagger qhat=0. Project AFTER full inversion.",
+    "four_current": "density_current_response returns chi(rho,Jx,Jy,Jz), spatial contact and spectral continuity residual. chi has no density contact; Pi=contact+chi_JJ.",
+    "induced_static": "C4 ring symmetry plus exact pure-gauge cancellation leaves K_edge(0)=kappa ones(4,4). Thus Pi(q,0)=kappa(|qhat|^2 I-qhat qhat^T), kappa=0.23351859895900084 from exact interacting ring, not inserted Maxwell term."
+  },
+  "actual_finite_collective_realization": {
+    "status": "A defined finite quadratic quantized Hamiltonian with exact correlated-ring transition energies/residues. Its normal modes and finite-time feedback are solved exactly. Interpreting it as the complete nonlinear Hubbard/link model is an amplitude-linear-response closure, NOT a proven controlled approximation at epsilon_b=1.",
+    "coordinates": "Mass-normalized field Q_A=sqrt(epsilon_b) A and transition coordinates x_n; every current-active pole of every ring orientation retained. A complex q realization abbreviates the equivalent real +/-q pair.",
+    "H": "H_collective=(P^dagger P+Q^dagger M Q)/2; M=[[C(q)/epsilon_b,-b/sqrt(epsilon_b)],[-b^dagger/sqrt(epsilon_b),diag(Delta_n^2)]], b_n=sqrt(2 Delta_n) conjugate(v_nJ R). Eliminating x gives exactly the retarded D inverse above.",
+    "feedback": "Field motion drives pair coordinates; pair coordinates drive the field back. This is not an externally prescribed free sea or an inert susceptibility endpoint.",
+    "spectral": "D=sum_modes u_A u_A^dagger/(lambda_mode-z^2), with u_A=field eigenvector/sqrt(epsilon_b). Positive nonzero eigenvalues carry positive weights; sum of three field residues=3/epsilon_b. Zero longitudinal gauge mode is not a third photon.",
+    "linearized_Gauss": "n=(sqrt(epsilon_b) qhat, diag(Delta^-2)b^dagger qhat) obeys M n=0. G=n^dagger P is conserved. Physical quadratic sector is G=0 modulo Q->Q+n lambda. Transverse field observables remove the zero gauge orbit. This is distinct from proving the full compact microscopic Gauss-ground projection.",
+    "causality": "Finite Hermitian stable collective realization supplies upper-half-plane analytic retarded D with full matter/field poles; finite-frequency tensors are evaluated, not replaced by a two-pole ultraviolet Maxwell model. No infinite-volume relativistic light-cone theorem is claimed."
+  },
+  "comparators": {
+    "frozen": "Drop chi_JJ while retaining contact. This wrong fixed/no-feedback model generates a q=0 mass and nearly 1.933 frequencies instead of soft photon branches.",
+    "free": "Set Hubbard repulsion U=0 with the same ring geometry, source and electric inertia. Its poles differ from interacting U=4; free sea cannot be relabelled as the correlated candidate.",
+    "decoupled": "Set microscopic link_charge=0 in H(theta), leaving matter and primitive electric inertia intact. J and contact both vanish; execute the same polarization/collective_matrix APIs. Pi=0 and three zero field restoring eigenvalues result. No magnetic dispersion survives."
+  },
+  "join": "One literal compatible next law is shared quantized links plus these same Hubbard rings plus the peer's charged Peierls hopping on those links. This is explicitly a NEW combined law. Recompute joint ground, G, D, J and contact; standalone peer cavity restoration must be removed rather than superposed. Alternative: construct mobile odd-charge N=1/3 defects and inter-ring motion directly in this ring law. No such charged source or recoil mass is fabricated here.",
+  "open_inputs": ["Why a vacuum contains this charged molecular architecture/ionic background", "Origin of t,U and primitive electric inertia", "Microscopic full quantum gauge-invariant ground and nonlinear interloop backreaction", "A mobile spin-half charged carrier with negative-energy/relativistic virtual-pair sector", "Common emergent charged/photon cone without speed fitting", "Continuum and infinite-volume behavior"],
+  "historical_distinction": "The old improved-Phi induced sea and its 64-flavor or 1+63 profiles remain historical different laws. Their positive response and 8.008646% cone mismatch motivate changing representation, not tuning their coefficient. No legacy quadrature was re-executed. Three real plaquette molecules per cell are an explicit unexplained microscopic architecture, not 64 auxiliaries silently credited as natural law.",
+  "language_evidence": "Project-root /home/administrator/substrate-222 pyright-langserver actual initialize/documentSymbol on induced_photon_response.py returned ResponseConfig and other symbols. A definition probe returned null (not counted positive). Positive mounted AST query for SpectralResponse returned six actual symbol hits. No final build/lint/tests/formatter or diagnostic verification run; reviewer owns selected final checks."
+}

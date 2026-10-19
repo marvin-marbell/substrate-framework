@@ -1,0 +1,107 @@
+{
+  "candidate": "COMPOSITE_ELASTIC_BREATHER_V1",
+  "parameters": {
+    "candidate": "COMPOSITE_ELASTIC_BREATHER_V1",
+    "N": 10,
+    "phonon_levels": 14,
+    "hopping": 0.25,
+    "omega": 1.0,
+    "binding_g": 1.2,
+    "range": 1.0,
+    "spin_J": 0.4,
+    "alpha": 0.05,
+    "coulomb_softening": 0.5,
+    "charges": [
+      0.6666666666666666,
+      0.6666666666666666,
+      -0.3333333333333333
+    ],
+    "lanczos_steps": 90,
+    "frequencies": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "eta": 0.03,
+    "units": "hbar=1; lattice spacing a=1; primitive constituent mass for magnetic moment m=1; energy in oscillator omega-reference units",
+    "state_domain": "three distinct primitive CAR flavors, one each; hard-core spatial configurations; Sz=+1/2 block; one dynamical neutral deformation mode; periodic 1D ring",
+    "target_reference": "charged fermionic spin-half composite with finite size, electromagnetic structure, internal correlations and a strong binding sector; not positive-charge electron",
+    "law_distinction": "new separate carrier-and-elastic-deformation hypothesis, not old SU4 law, QCD action, CURRENT427 or body408"
+  },
+  "translation_dispersion_and_elastic_vertices": [
+    {
+      "momentum_mode": 0,
+      "k": 0.0,
+      "energy": -2.9204596478102958,
+      "full_H_residual": 3.217554303323391e-11,
+      "translation_sector_dimension": 3024
+    },
+    {
+      "momentum_mode": 1,
+      "k": 0.6283185307179586,
+      "energy": -2.919138172673468,
+      "full_H_residual": 2.0800306053266674e-11,
+      "translation_sector_dimension": 3024,
+      "recoil_energy": 0.0013214751368275657,
+      "small_k_mass_estimator": 149.37253264988527,
+      "elastic_density_vertex_real": 0.5573450840581639,
+      "elastic_density_vertex_imag": 0.0010601413247820286,
+      "elastic_density_vertex_abs": 0.5573460923191533,
+      "elastic_current_vertex_real": 0.0011722042805532595,
+      "elastic_current_vertex_imag": 2.229681815536574e-06,
+      "elastic_Ward_vertex_abs_error": 4.259263913479876e-14,
+      "contact_ground_expectation": 0.05654971038199409
+    },
+    {
+      "momentum_mode": 2,
+      "k": 1.2566370614359172,
+      "energy": -2.91568542768168,
+      "full_H_residual": 5.597041725376709e-11,
+      "translation_sector_dimension": 3024,
+      "recoil_energy": 0.004774220128615614,
+      "small_k_mass_estimator": 165.38163947545095,
+      "elastic_density_vertex_real": 0.010088697640294185,
+      "elastic_density_vertex_imag": -6.103929482085407e-15,
+      "elastic_density_vertex_abs": 0.010088697640294185,
+      "elastic_current_vertex_real": 3.8329017134897124e-05,
+      "elastic_current_vertex_imag": -2.2368446071091563e-17,
+      "elastic_Ward_vertex_abs_error": 1.1431469920436507e-13,
+      "contact_ground_expectation": 0.05114969355400416
+    }
+  ],
+  "all_single_fragment_threshold_exact": -1.5,
+  "binding_below_all_single_fragments": 1.4204596478102958,
+  "no_breather_energy": -1.3441034818400985,
+  "no_breather_pair_single_controls": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "fragment_energy": -1.460163821341335,
+      "binding_below_fragment": -0.11606033950123651
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "fragment_energy": -1.4717460864107057,
+      "binding_below_fragment": -0.12764260457060717
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "fragment_energy": -1.4717460864107057,
+      "binding_below_fragment": -0.12764260457060717
+    }
+  ],
+  "phase_note": "eigenvector phases arbitrary; modulus is phase-independent; Ward identity uses same states",
+  "mass_note": "finite lattice dispersion curvature estimator, not relativistic/proton physical mass",
+  "neutral_reference_note": "omega n zero-point convention: vacuum=0 in each domain; pair load of singleton K=0, so a separated singleton does not independently dress the shared oscillator",
+  "finite_ring_threshold_note": "energies of fragments are same N domain; true infinite-separation threshold remains open"
+}

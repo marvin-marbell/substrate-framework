@@ -1,0 +1,332 @@
+{
+  "kind": "INDEPENDENT_REVIEW_EXECUTED_CONTROL_CAPSULE",
+  "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+  "captured_revision": "dc9242dc91e41c0707a90bc266c5d5656b4f460e82c740cfcdb26350725bdfe8",
+  "execution": {
+    "command": [
+      "/home/administrator/substrate-framework/.venv/bin/python",
+      "/home/administrator/substrate-222/proposals/P256-qed-backward/lift_action_review_control_20261011.py"
+    ],
+    "returncode": 0,
+    "natural_exit": true,
+    "elapsed_seconds": 3.9751404960115906,
+    "source_sha256": "ab7c9b0f7e39c3d9fdb0ea0c548a05af506f35b1f48828750fb30b674f9f0540",
+    "source_unchanged": true,
+    "stdout_sha256": "e0e887738b77f119f9d23633ce7c6231508b52b6fef2df517820ff8776ad6948",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source_utf8": "\"\"\"Independent bounded controls for the pinned compact-lift action review.\n\nImports pure jet/profile helpers only. Never runs a historical main/solver.\nNative 70/924 controls do not evaluate the N4 field wave or full H variance.\n\"\"\"\nfrom __future__ import annotations\nimport ast\nfrom fractions import Fraction as Q\nimport hashlib\nimport itertools\nimport json\nimport math\nfrom pathlib import Path\nimport sys\nimport numpy as np\nfrom scipy.linalg import expm\nfrom scipy.sparse import csr_matrix\nimport physical_ground_lift_source_20261011 as lift\n\nROOT = Path(__file__).resolve().parent\nPINS = {\n    'physical_ground_lift_source_20261011.py': '31b1c270bf341f75f2364580cd6f646f1d66fda54d93e9b3b227b6ab3985763e',\n    'physical_ground_lift_actual3_20261011_proof.json': 'b5db95dd2c56822c32d8975232a7ca60d946a5c62a482164aeb4afb51fa07b17',\n    'physical_ground_lift_domain_supplement_20261011.json': 'ad4b7399dfdf22c09b1d6f5abf6163c29bdfb479c16c4d6724f8f9e59acc0d58',\n    'physical_ground_lift_actual3_20261011_natural_exit.json': '2bd90fe94474dbfb078e1e71a2bec6af51b7d18b7bc7f14751eed3accb636fe9',\n}\n\ndef digest(path: Path) -> str:\n    return hashlib.sha256(path.read_bytes()).hexdigest()\n\ndef basis() -> list[np.ndarray]:\n    out = []\n    for i in range(4):\n        for j in range(i+1, 4):\n            a = np.zeros((4,4), complex); a[i,j] = a[j,i] = .5; out.append(a)\n            a = np.zeros((4,4), complex); a[i,j] = -.5j; a[j,i] = .5j; out.append(a)\n    for k in range(1,4):\n        out.append(np.diag([1.]*k+[-float(k)]+[0.]*(3-k))/math.sqrt(2*k*(k+1)))\n    return out\n\ndef car_matrix(h: np.ndarray, particles: int) -> tuple[csr_matrix, list[int]]:\n    masks = [sum(1 << j for j in row) for row in itertools.combinations(range(len(h)),particles)]\n    index = {m:i for i,m in enumerate(masks)}\n    rr, cc, vv = [], [], []\n    for col,m in enumerate(masks):\n        for p,q in zip(*np.nonzero(h)):\n            result = lift.primitive.car(m,int(p),int(q))\n            if result is not None:\n                target,sign = result; rr.append(index[target]);cc.append(col);vv.append(sign*h[p,q])\n    return csr_matrix((vv,(rr,cc)),shape=(len(masks),len(masks))), masks\n\ndef ceil_log2(n: int) -> int:\n    return (n-1).bit_length()\n\ndef main() -> None:\n    inherited = json.loads((ROOT/'physical_ground_lift_actual3_20261011_natural_exit.json').read_text())\n    pins = {**inherited['source_input_sha256'], **PINS}\n    hashes = {name:digest(ROOT/name) for name in pins}\n    if hashes != pins: raise ArithmeticError('Pinned target/supplier bytes changed')\n    proof = json.loads((ROOT/'physical_ground_lift_actual3_20261011_proof.json').read_text())\n    centre = np.array([[[complex(*z) for z in row] for row in m] for m in proof['configuration_binding']['Phi_binary_components']])\n    b = basis(); R = float(lift.R)\n    # A bounded one-species transport fixture, not a replacement for the g fibre.\n    trial = object.__new__(lift.LiftedGround)\n    trial.centre = centre\n    trial.wstar,_ = lift.frame_jet([lift.Jet(x) for x in centre])\n    gamma = centre[1]/centre[1,0,3].real\n    trial.spin = np.column_stack([np.eye(4)[:,0],gamma@np.eye(4)[:,0],np.eye(4)[:,1],gamma@np.eye(4)[:,1]])\n    point = np.broadcast_to(centre,(2,4,4,4)).copy()\n    point[0,0] += R/5*b[1]\n    direction = np.zeros_like(point); direction[0,0] = b[1]\n    fj = [[lift.Jet(point[x,m],direction[x,m]) for m in range(4)] for x in range(2)]\n    f = lift.source_shape_jet(fj,lift.Jet(np.eye(4)),trial,R)\n    w,_ = lift.frame_jet(fj[0]); left,right = trial.transport_jet(w,lift.Jet(np.eye(4)),lift.Jet(0.))\n    U = lift.exterior_jet(lift.block_jet(left,right),4)\n    joined = U*f\n    independent_dd = f.dd*U.v+2*f.d*U.d+f.v*U.dd\n    product_error = float(np.linalg.norm(joined.dd-independent_dd)/max(1.,np.linalg.norm(joined.dd)))\n    cross = float(np.linalg.norm(2*f.d*U.d))\n    missing_frame = float(np.linalg.norm(joined.dd-f.dd*U.v))\n    if product_error > 1e-14 or min(cross,missing_frame) <= 1: raise ArithmeticError(dict(product_error=product_error,cross=cross,missing_frame=missing_frame))\n    # Nonmatching point in the Haar direction makes both scalar and fibre vary.\n    point[1,2] += R/6*1j*(b[6]@centre[2]-centre[2]@b[6])\n    uj = lift.Jet(np.eye(4),1j*b[6],-b[6]@b[6])\n    hf = lift.source_shape_jet([[lift.Jet(x) for x in side] for side in point],uj,trial,R)\n    hw,_ = lift.frame_jet([lift.Jet(x) for x in point[0]])\n    hl,hr = trial.transport_jet(hw,uj,lift.Jet(0.))\n    hu = lift.exterior_jet(lift.block_jet(hl,hr),4)\n    hj = hu*hf\n    haar_cross = float(np.linalg.norm(2*hf.d*hu.d))\n    haar_error = float(np.linalg.norm(hj.dd-(hf.dd*hu.v+2*hf.d*hu.d+hf.v*hu.dd))/max(1.,np.linalg.norm(hj.dd)))\n    if haar_cross <= 1 or haar_error > 1e-14: raise ArithmeticError(dict(haar_cross=haar_cross,haar_error=haar_error))\n    # Exact one-dimensional support crossing: root frame is fixed here.\n    boundaries = []\n    for t in [0., .5, 1.-2**-10, 1., 1.+2**-10, 1.5]:\n        p = np.broadcast_to(centre,(2,4,4,4)).copy(); dp = np.zeros_like(p)\n        dp[1,3] = math.sqrt(2)*R*b[0];p += t*dp\n        z = lift.source_shape_jet([[lift.Jet(p[x,m],dp[x,m]) for m in range(4)] for x in range(2)],lift.Jet(np.eye(4)),trial,R)\n        inside = t < 1\n        a = max(1-t*t,0.)\n        expected = [a**4, -8*t*a**3 if inside else 0., (-8*a**3+48*t*t*a*a) if inside else 0.]\n        observed = [float(z.v.real),float(z.d.real),float(z.dd.real)]\n        err = max(abs(v-e) for v,e in zip(observed,expected))\n        if err > 1e-7 or (t>=1 and max(abs(v) for v in observed)>1e-20): raise ArithmeticError('Boundary control failed')\n        boundaries.append(dict(t=t,jet=observed,analytic_jet=expected,error=err))\n    # Electric full canonical matrix, background and beta cross paid once.\n    occup = list(itertools.combinations(range(8),4))\n    rho = np.array([sum(i<4 for i in row)-2 for row in occup])\n    beta = Q(1,1024); r = rho.astype(float)\n    electric = 64*(r+float(beta))**2\n    electric_join = 64*r*r+128*float(beta)*r+64*float(beta)**2\n    electric_error = float(np.linalg.norm(electric-electric_join))\n    wrong_beta_gap = float(np.linalg.norm(electric-(64*r*r+64*float(beta)**2)))\n    if electric_error != 0 or wrong_beta_gap <= 0: raise ArithmeticError('Electric join failed')\n    # Independent literal profiles and intermediate ordered Wilson matrices.\n    cfg = json.loads((ROOT/lift.primitive.INPUTS[1]).read_text())['input_descriptor']['original_micro_config_UNCHANGED']\n    frame,scale = lift.primitive.frozen.exact_frame((ROOT/lift.primitive.INPUTS[0]).read_bytes())\n    profiles = lift.primitive.frozen.profiles(cfg,frame,scale)\n    neutral_band = lift.primitive.frozen.RotationBand(a=cfg['a'],m=cfg['heavy_m'],r=cfg['heavy_r'],v=cfg['heavy_v'],improved=False)\n    neutral_on,neutral_paths = lift.primitive.frozen.scalar_paths(neutral_band)\n    profile_caps = []\n    for profile in profiles:\n        onsite = profile['onsite']/scale\n        sums = [sum(abs(re)+abs(im) for re,im in path['coefficients']) for path in profile['paths']]\n        # op norm <= entrywise l1; |Phi_mu,ij|<4, Wilsons unitary.\n        per_site = 16*4*abs(onsite)+sum(2*16*4*s for s in sums)\n        profile_caps.append(dict(role=profile['role'],count=profile['count'],onsite=str(onsite),paths=len(sums),per_site_entrywise_CAR_upper=str(per_site)))\n    charged_cap = sum(Q(p['per_site_entrywise_CAR_upper'])*p['count'] for p in profile_caps)\n    neutral_cap = 16*4*Q(neutral_on)+sum(2*16*4*sum(Q(float(abs(z.real)))+Q(float(abs(z.imag))) for z in cs) for _,cs in neutral_paths)\n    if charged_cap >= 2**30 or neutral_cap >= 2**30: raise ArithmeticError('Matter arithmetic failed')\n    u1,u2 = expm(.37j*b[0]),expm(.29j*b[4])\n    ordered_gap = float(np.linalg.norm(u1@u2-u2@u1))\n    if ordered_gap <= 1e-4: raise ArithmeticError('Ordered link control failed')\n    hroles = []\n    for p in profiles:\n        path = p['paths'][0]\n        coeff = np.array([complex(float(re),float(im)) for re,im in path['coefficients']])\n        tmat = sum(coeff[m]*(centre[m]@u1+u1@centre[m])/2 for m in range(4))\n        one = np.block([[float(p['onsite']/scale)*centre[0],tmat],[tmat.conj().T,float(p['onsite']/scale)*centre[0]]])\n        hroles.append(car_matrix(one,4)[0])\n    role_gap = float(np.linalg.norm((hroles[0]-hroles[1]).toarray()))\n    if role_gap <= 1: raise ArithmeticError('Distinct role control failed')\n    # Three-site canonical six-particle control reaches a genuine exterior.\n    h3 = np.zeros((12,12),complex); h3[4:8,8:12] = centre[1]@u2;h3[8:12,4:8] = h3[4:8,8:12].conj().T\n    H3,masks3 = car_matrix(h3,6)\n    seedmask = sum(1<<j for j in [0,1,4,5,8,9])\n    seed = np.zeros(len(masks3),complex);seed[masks3.index(seedmask)] = 1\n    action = H3@seed\n    exterior_indices = np.array([(m&255).bit_count()!=4 for m in masks3])\n    exterior_norm = float(np.linalg.norm(action[exterior_indices]))\n    if exterior_norm <= 0: raise ArithmeticError('Intercell exterior failed')\n    # Exact rational arithmetic for geometry, normalizer and complete N4 cap.\n    sf = Q(float(-centre[0,0,0].real));rf = Q(float(centre[1,0,3].real))\n    gap = min(2*(sf-4*rf*rf),8*rf*rf)\n    assert gap-32*lift.R > Q(1,16) and rf > Q(1,8)\n    pi_upper = Q(22,7)\n    assert 128*pi_upper*pi_upper < 36**2 and 72**15 < 2**93\n    box_body_ratio = Q(135,2**11) # 135 * 2^40 * 2^-75 / R.\n    assert box_body_ratio < Q(1,8) and box_body_ratio**2 < Q(1,4)\n    v,e,m = 64,192,32\n    terms = {\n        'Phi_complete_scalar_frame_Berry': -4096+ceil_log2(4*60*v)+16384*v+240,\n        'Haar_complete_transport_scalar_cross': -4096+ceil_log2(15*e)+16384*v+240,\n        'fullE64_longitudinal_and_transverse': ceil_log2(64*e)+16384*v+240,\n        'neutral_all_canonical2V_onsite_paths': 8192+ceil_log2(v)+30,\n        'charged_actual1_aux63_all_onsite_one_two_paths': ceil_log2(v)+30,\n        'Jordan_full_support':8192+ceil_log2(v)+30,\n        'alignment_full_support':10240+ceil_log2(v)+30,\n        'colour_plaquette_full_Haar_support':10240+ceil_log2(v)+30,\n    }\n    assert terms == proof['N4_complete_action_upper']['term_log2_upper']\n    bound = max(terms.values())+ceil_log2(len(terms))\n    assert bound == 1048833\n    eta = Q(274877906944,2204801412260314559041)\n    assert 0 < eta < 1 and (1-eta)**2 <= 1-eta\n    own_ast = ast.parse(Path(__file__).read_bytes())\n    functions = [n.name for n in ast.walk(own_ast) if isinstance(n,ast.FunctionDef)]\n    result = dict(kind='INDEPENDENT_BOUNDED_NATIVE_ACTION_AND_EXACT_RATIONAL_CONTROL_NOT_FULLFIELD_NUMERICS',\n        source_sha256=digest(Path(__file__)),input_sha256=hashes,runtime=dict(executable=sys.executable,python=sys.version,numpy=np.__version__),\n        controls=dict(native70_product_error=product_error,native70_Phi_cross_norm=cross,native70_missing_frame_gap=missing_frame,\n            native70_Haar_product_error=haar_error,native70_Haar_cross_norm=haar_cross,boundary=boundaries,\n            native70_electric_join_error=electric_error,native70_wrong_drop_beta_cross_gap=wrong_beta_gap,\n            ordered_two_Wilson_wrong_order_gap=ordered_gap,distinct_active_aux_native70_action_gap=role_gap,\n            native924_intercell_exterior_action_norm=exterior_norm,neutral_path_count=len(neutral_paths),profiles=profile_caps),\n        rational=dict(exact_frame_gap=str(gap),charged_per_site_CAR_upper=str(charged_cap),neutral_per_site_CAR_upper=str(neutral_cap),\n            diameter_square_upper=str(128*pi_upper*pi_upper),total_volume_cube_bound='72^15 < 2^93',\n            normalizer_box_body_ratio=str(box_body_ratio),Z_lower_exponent=-10094*m,\n            sqrt_support_over_Z_exponent=str(Q(360*v+10094*m,2)),term_log2_upper=terms,norm_upper_exponent=bound,\n            infidelity=str(eta),projected_x_normalizer_lower=str(1-eta),graph_vector_error='sqrt(2 eta), once; M=32'),\n        AST_positive_functions=functions,scope='Pure helpers, native70 one-species jets, native924 three-site CAR, exact rational uppers. No g eigensolver, historical main, fullfield normalization, H residual or variance.')\n    print(json.dumps(result,indent=2))\n\nif __name__ == '__main__':\n    main()\n",
+  "stdout": "{\n  \"kind\": \"INDEPENDENT_BOUNDED_NATIVE_ACTION_AND_EXACT_RATIONAL_CONTROL_NOT_FULLFIELD_NUMERICS\",\n  \"source_sha256\": \"ab7c9b0f7e39c3d9fdb0ea0c548a05af506f35b1f48828750fb30b674f9f0540\",\n  \"input_sha256\": {\n    \"physical_ground_lift_execute_20261011.py\": \"383d2d4bdd4563f00ff91ccf301102652c5a2d9aea604ac827a7c2aeaf689aae\",\n    \"local_so5_resum_actual04_20261011_state.npz\": \"dd06400e1b7f70df935cf7ca02cf5ebf598481a8d5e209d1241aba5ed3fea2a2\",\n    \"joined_phi_u1_ground_photon_collective_delivered_actual_20261010.npz\": \"f8a0793adcbf4909402cd089471aa8c33fc74a31b66e99618f8baaab8d6dfb65\",\n    \"induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json\": \"5b97862fc7fca21b8797d549d7d4dfdde58b101e8c46c7a7cfb6531a669c4354\",\n    \"local_so5_resum_actual04_20261011_receipt.json\": \"a31c2d5be2a368b7de703d92461e230af59adf7e8ee8f4eaca0944fe4f556fc1\",\n    \"local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json\": \"102966f32c49f40d79d55343925a630e30a9cf7e4a8074cf8628142ba9c5b6e8\",\n    \"physical_singlet_circuit_delivery_20261011.json\": \"bb739465e317cec16ceb6b3cccb7458629ad2c62e890fa8c8bab98a8b2da9c12\",\n    \"physical_singlet_circuit_epoch4_proof_20261011.json\": \"56d7a2fbd1bac380ff714db20e66f68a5fb2e07788dcf2701a13741e1898c038\",\n    \"joined_phi_u1_full_physical_source_local_ground_parent_packet_20261011.json\": \"21a89ec16c08c421c64ee180ee3a2154350d66c7a7d9ed5f369c8955c95767ae\",\n    \"harmonic_car_bridge_derivation_20261011.json\": \"ed3978df114bf55e7d84ea93b2f671b6a5baaf3e808a589ec464161269afdba3\",\n    \"physical_source_binding_parent_actual1_20261011_receipt.json\": \"d2bf4efcaa88594707767a599cf7c6a229ffb72044ab4ad1d6a9ff0cf1f0389b\",\n    \"rotation_band.py\": \"db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459\",\n    \"bosonic_statistics.py\": \"6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95\",\n    \"compton.py\": \"0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46\",\n    \"lattice_compton.py\": \"1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0\",\n    \"pauli_compton.py\": \"add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850\",\n    \"sea_selection.py\": \"1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2\",\n    \"soft_budget.py\": \"bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286\",\n    \"local_orbital_stability.py\": \"bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d\",\n    \"joined_phi_u1_bulk_flux_ring_consumer.py\": \"49526302cea3ccf70465332621f4d2dc502f9de9db9415296933152e2f37e997\",\n    \"bulk_electric_phase_consumer.py\": \"23d922d99198199a47da5b246089ec899fa1d61165459d25880c6ec5ba517af1\",\n    \"harmonic_car_bridge_scientist_20261011.py\": \"f0661dcdc6a49efbe1b635089436f9684a6c97926741ab7aceb2f78e577e28bf\",\n    \"physical_ground_lift_source_20261011.py\": \"31b1c270bf341f75f2364580cd6f646f1d66fda54d93e9b3b227b6ab3985763e\",\n    \"physical_ground_lift_actual3_20261011_proof.json\": \"b5db95dd2c56822c32d8975232a7ca60d946a5c62a482164aeb4afb51fa07b17\",\n    \"physical_ground_lift_domain_supplement_20261011.json\": \"ad4b7399dfdf22c09b1d6f5abf6163c29bdfb479c16c4d6724f8f9e59acc0d58\",\n    \"physical_ground_lift_actual3_20261011_natural_exit.json\": \"2bd90fe94474dbfb078e1e71a2bec6af51b7d18b7bc7f14751eed3accb636fe9\"\n  },\n  \"runtime\": {\n    \"executable\": \"/home/administrator/substrate-framework/.venv/bin/python\",\n    \"python\": \"3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]\",\n    \"numpy\": \"2.5.3\"\n  },\n  \"controls\": {\n    \"native70_product_error\": 2.958504504243913e-24,\n    \"native70_Phi_cross_norm\": 423100786.6799827,\n    \"native70_missing_frame_gap\": 423100785.75714153,\n    \"native70_Haar_product_error\": 7.911966343727712e-25,\n    \"native70_Haar_cross_norm\": 23865673.1964993,\n    \"boundary\": [\n      {\n        \"t\": 0.0,\n        \"jet\": [\n          1.0,\n          0.0,\n          -8.000000000000004\n        ],\n        \"analytic_jet\": [\n          1.0,\n          -0.0,\n          -8.0\n        ],\n        \"error\": 3.552713678800501e-15\n      },\n      {\n        \"t\": 0.5,\n        \"jet\": [\n          0.3164062499999999,\n          -1.6875,\n          3.3750000000000044\n        ],\n        \"analytic_jet\": [\n          0.31640625,\n          -1.6875,\n          3.375\n        ],\n        \"error\": 4.440892098500626e-15\n      },\n      {\n        \"t\": 0.9990234375,\n        \"jet\": [\n          1.4523514328829508e-11,\n          -5.945925347219336e-08,\n          0.00018251007683996913\n        ],\n        \"analytic_jet\": [\n          1.4523514328842723e-11,\n          -5.945925347223391e-08,\n          0.000182510076840052\n        ],\n        \"error\": 8.286015103220468e-17\n      },\n      {\n        \"t\": 1.0,\n        \"jet\": [\n          0.0,\n          0.0,\n          0.0\n        ],\n        \"analytic_jet\": [\n          0.0,\n          0.0,\n          0.0\n        ],\n        \"error\": 0.0\n      },\n      {\n        \"t\": 1.0009765625,\n        \"jet\": [\n          0.0,\n          0.0,\n          0.0\n        ],\n        \"analytic_jet\": [\n          0.0,\n          0.0,\n          0.0\n        ],\n        \"error\": 0.0\n      },\n      {\n        \"t\": 1.5,\n        \"jet\": [\n          0.0,\n          0.0,\n          0.0\n        ],\n        \"analytic_jet\": [\n          0.0,\n          0.0,\n          0.0\n        ],\n        \"error\": 0.0\n      }\n    ],\n    \"native70_electric_join_error\": 0.0,\n    \"native70_wrong_drop_beta_cross_gap\": 0.7905694150420949,\n    \"ordered_two_Wilson_wrong_order_gap\": 0.03784817836208766,\n    \"distinct_active_aux_native70_action_gap\": 12.243691467664718,\n    \"native924_intercell_exterior_action_norm\": 0.6439213663213729,\n    \"neutral_path_count\": 3,\n    \"profiles\": [\n      {\n        \"role\": \"active\",\n        \"count\": 1,\n        \"onsite\": \"2446017547615601/70368744177664\",\n        \"paths\": 6,\n        \"per_site_entrywise_CAR_upper\": \"26483264839360231/2199023255552\"\n      },\n      {\n        \"role\": \"auxiliary\",\n        \"count\": 63,\n        \"onsite\": \"643170321783849/17592186044416\",\n        \"paths\": 6,\n        \"per_site_entrywise_CAR_upper\": \"26736592318399821/2199023255552\"\n      }\n    ]\n  },\n  \"rational\": {\n    \"exact_frame_gap\": \"150521544446014778757457172423/633825300114114700748351602688\",\n    \"charged_per_site_CAR_upper\": \"855444290449274477/1099511627776\",\n    \"neutral_per_site_CAR_upper\": \"913738143146967/137438953472\",\n    \"diameter_square_upper\": \"61952/49\",\n    \"total_volume_cube_bound\": \"72^15 < 2^93\",\n    \"normalizer_box_body_ratio\": \"135/2048\",\n    \"Z_lower_exponent\": -323008,\n    \"sqrt_support_over_Z_exponent\": \"173024\",\n    \"term_log2_upper\": {\n      \"Phi_complete_scalar_frame_Berry\": 1044734,\n      \"Haar_complete_transport_scalar_cross\": 1044732,\n      \"fullE64_longitudinal_and_transverse\": 1048830,\n      \"neutral_all_canonical2V_onsite_paths\": 8228,\n      \"charged_actual1_aux63_all_onsite_one_two_paths\": 36,\n      \"Jordan_full_support\": 8228,\n      \"alignment_full_support\": 10276,\n      \"colour_plaquette_full_Haar_support\": 10276\n    },\n    \"norm_upper_exponent\": 1048833,\n    \"infidelity\": \"274877906944/2204801412260314559041\",\n    \"projected_x_normalizer_lower\": \"2204801411985436652097/2204801412260314559041\",\n    \"graph_vector_error\": \"sqrt(2 eta), once; M=32\"\n  },\n  \"AST_positive_functions\": [\n    \"digest\",\n    \"basis\",\n    \"car_matrix\",\n    \"ceil_log2\",\n    \"main\"\n  ],\n  \"scope\": \"Pure helpers, native70 one-species jets, native924 three-site CAR, exact rational uppers. No g eigensolver, historical main, fullfield normalization, H residual or variance.\"\n}\n",
+  "stderr": "",
+  "result": {
+    "kind": "INDEPENDENT_BOUNDED_NATIVE_ACTION_AND_EXACT_RATIONAL_CONTROL_NOT_FULLFIELD_NUMERICS",
+    "source_sha256": "ab7c9b0f7e39c3d9fdb0ea0c548a05af506f35b1f48828750fb30b674f9f0540",
+    "input_sha256": {
+      "physical_ground_lift_execute_20261011.py": "383d2d4bdd4563f00ff91ccf301102652c5a2d9aea604ac827a7c2aeaf689aae",
+      "local_so5_resum_actual04_20261011_state.npz": "dd06400e1b7f70df935cf7ca02cf5ebf598481a8d5e209d1241aba5ed3fea2a2",
+      "joined_phi_u1_ground_photon_collective_delivered_actual_20261010.npz": "f8a0793adcbf4909402cd089471aa8c33fc74a31b66e99618f8baaab8d6dfb65",
+      "induced_phi_uniform_selfconsistent_full_normal_quantum_final_actual_receipt.json": "5b97862fc7fca21b8797d549d7d4dfdde58b101e8c46c7a7cfb6531a669c4354",
+      "local_so5_resum_actual04_20261011_receipt.json": "a31c2d5be2a368b7de703d92461e230af59adf7e8ee8f4eaca0944fe4f556fc1",
+      "local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json": "102966f32c49f40d79d55343925a630e30a9cf7e4a8074cf8628142ba9c5b6e8",
+      "physical_singlet_circuit_delivery_20261011.json": "bb739465e317cec16ceb6b3cccb7458629ad2c62e890fa8c8bab98a8b2da9c12",
+      "physical_singlet_circuit_epoch4_proof_20261011.json": "56d7a2fbd1bac380ff714db20e66f68a5fb2e07788dcf2701a13741e1898c038",
+      "joined_phi_u1_full_physical_source_local_ground_parent_packet_20261011.json": "21a89ec16c08c421c64ee180ee3a2154350d66c7a7d9ed5f369c8955c95767ae",
+      "harmonic_car_bridge_derivation_20261011.json": "ed3978df114bf55e7d84ea93b2f671b6a5baaf3e808a589ec464161269afdba3",
+      "physical_source_binding_parent_actual1_20261011_receipt.json": "d2bf4efcaa88594707767a599cf7c6a229ffb72044ab4ad1d6a9ff0cf1f0389b",
+      "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+      "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+      "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+      "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+      "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+      "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+      "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286",
+      "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+      "joined_phi_u1_bulk_flux_ring_consumer.py": "49526302cea3ccf70465332621f4d2dc502f9de9db9415296933152e2f37e997",
+      "bulk_electric_phase_consumer.py": "23d922d99198199a47da5b246089ec899fa1d61165459d25880c6ec5ba517af1",
+      "harmonic_car_bridge_scientist_20261011.py": "f0661dcdc6a49efbe1b635089436f9684a6c97926741ab7aceb2f78e577e28bf",
+      "physical_ground_lift_source_20261011.py": "31b1c270bf341f75f2364580cd6f646f1d66fda54d93e9b3b227b6ab3985763e",
+      "physical_ground_lift_actual3_20261011_proof.json": "b5db95dd2c56822c32d8975232a7ca60d946a5c62a482164aeb4afb51fa07b17",
+      "physical_ground_lift_domain_supplement_20261011.json": "ad4b7399dfdf22c09b1d6f5abf6163c29bdfb479c16c4d6724f8f9e59acc0d58",
+      "physical_ground_lift_actual3_20261011_natural_exit.json": "2bd90fe94474dbfb078e1e71a2bec6af51b7d18b7bc7f14751eed3accb636fe9"
+    },
+    "runtime": {
+      "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "numpy": "2.5.3"
+    },
+    "controls": {
+      "native70_product_error": 2.958504504243913e-24,
+      "native70_Phi_cross_norm": 423100786.6799827,
+      "native70_missing_frame_gap": 423100785.75714153,
+      "native70_Haar_product_error": 7.911966343727712e-25,
+      "native70_Haar_cross_norm": 23865673.1964993,
+      "boundary": [
+        {
+          "t": 0.0,
+          "jet": [
+            1.0,
+            0.0,
+            -8.000000000000004
+          ],
+          "analytic_jet": [
+            1.0,
+            -0.0,
+            -8.0
+          ],
+          "error": 3.552713678800501e-15
+        },
+        {
+          "t": 0.5,
+          "jet": [
+            0.3164062499999999,
+            -1.6875,
+            3.3750000000000044
+          ],
+          "analytic_jet": [
+            0.31640625,
+            -1.6875,
+            3.375
+          ],
+          "error": 4.440892098500626e-15
+        },
+        {
+          "t": 0.9990234375,
+          "jet": [
+            1.4523514328829508e-11,
+            -5.945925347219336e-08,
+            0.00018251007683996913
+          ],
+          "analytic_jet": [
+            1.4523514328842723e-11,
+            -5.945925347223391e-08,
+            0.000182510076840052
+          ],
+          "error": 8.286015103220468e-17
+        },
+        {
+          "t": 1.0,
+          "jet": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "analytic_jet": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "error": 0.0
+        },
+        {
+          "t": 1.0009765625,
+          "jet": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "analytic_jet": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "error": 0.0
+        },
+        {
+          "t": 1.5,
+          "jet": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "analytic_jet": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "error": 0.0
+        }
+      ],
+      "native70_electric_join_error": 0.0,
+      "native70_wrong_drop_beta_cross_gap": 0.7905694150420949,
+      "ordered_two_Wilson_wrong_order_gap": 0.03784817836208766,
+      "distinct_active_aux_native70_action_gap": 12.243691467664718,
+      "native924_intercell_exterior_action_norm": 0.6439213663213729,
+      "neutral_path_count": 3,
+      "profiles": [
+        {
+          "role": "active",
+          "count": 1,
+          "onsite": "2446017547615601/70368744177664",
+          "paths": 6,
+          "per_site_entrywise_CAR_upper": "26483264839360231/2199023255552"
+        },
+        {
+          "role": "auxiliary",
+          "count": 63,
+          "onsite": "643170321783849/17592186044416",
+          "paths": 6,
+          "per_site_entrywise_CAR_upper": "26736592318399821/2199023255552"
+        }
+      ]
+    },
+    "rational": {
+      "exact_frame_gap": "150521544446014778757457172423/633825300114114700748351602688",
+      "charged_per_site_CAR_upper": "855444290449274477/1099511627776",
+      "neutral_per_site_CAR_upper": "913738143146967/137438953472",
+      "diameter_square_upper": "61952/49",
+      "total_volume_cube_bound": "72^15 < 2^93",
+      "normalizer_box_body_ratio": "135/2048",
+      "Z_lower_exponent": -323008,
+      "sqrt_support_over_Z_exponent": "173024",
+      "term_log2_upper": {
+        "Phi_complete_scalar_frame_Berry": 1044734,
+        "Haar_complete_transport_scalar_cross": 1044732,
+        "fullE64_longitudinal_and_transverse": 1048830,
+        "neutral_all_canonical2V_onsite_paths": 8228,
+        "charged_actual1_aux63_all_onsite_one_two_paths": 36,
+        "Jordan_full_support": 8228,
+        "alignment_full_support": 10276,
+        "colour_plaquette_full_Haar_support": 10276
+      },
+      "norm_upper_exponent": 1048833,
+      "infidelity": "274877906944/2204801412260314559041",
+      "projected_x_normalizer_lower": "2204801411985436652097/2204801412260314559041",
+      "graph_vector_error": "sqrt(2 eta), once; M=32"
+    },
+    "AST_positive_functions": [
+      "digest",
+      "basis",
+      "car_matrix",
+      "ceil_log2",
+      "main"
+    ],
+    "scope": "Pure helpers, native70 one-species jets, native924 three-site CAR, exact rational uppers. No g eigensolver, historical main, fullfield normalization, H residual or variance."
+  },
+  "language_probe": {
+    "root": "/home/administrator/substrate-222",
+    "marker": "pyproject.toml",
+    "server": "/home/administrator/.local/bin/pyright-langserver",
+    "initialize_server_info": null,
+    "symbols_count": 291,
+    "definition": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": [
+        {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/physical_ground_lift_source_20261011.py",
+          "range": {
+            "start": {
+              "line": 71,
+              "character": 31
+            },
+            "end": {
+              "line": 71,
+              "character": 32
+            }
+          }
+        }
+      ]
+    },
+    "server_exit": 0,
+    "AST_functions": [
+      "polynomial_pair",
+      "spectral_jet",
+      "frame_jet",
+      "exterior",
+      "exterior_jet",
+      "native_slot_map",
+      "harmonic_amplitude",
+      "source_shape",
+      "source_shape_jet",
+      "block_jet",
+      "joined_jet_controls",
+      "run",
+      "proof_record",
+      "__init__",
+      "__add__",
+      "__neg__",
+      "__sub__",
+      "__mul__",
+      "__matmul__",
+      "adj",
+      "conj",
+      "power",
+      "item",
+      "__init__",
+      "transport",
+      "transport_jet",
+      "component",
+      "descend"
+    ],
+    "target_sha256": "31b1c270bf341f75f2364580cd6f646f1d66fda54d93e9b3b227b6ab3985763e",
+    "diagnostics": "Not requested: parent final diagnostics owns this assignment.",
+    "failed_attempts": [
+      {
+        "root": "/home/administrator/substrate-222",
+        "marker": "pyproject.toml",
+        "server": "/home/administrator/.local/bin/pyright-langserver",
+        "initialize_server_info": null,
+        "symbols_count": 0,
+        "definition": {
+          "jsonrpc": "2.0",
+          "id": 3,
+          "result": null
+        },
+        "server_exit": 0,
+        "AST_functions": [
+          "polynomial_pair",
+          "spectral_jet",
+          "frame_jet",
+          "exterior",
+          "exterior_jet",
+          "native_slot_map",
+          "harmonic_amplitude",
+          "source_shape",
+          "source_shape_jet",
+          "block_jet",
+          "joined_jet_controls",
+          "run",
+          "proof_record",
+          "__init__",
+          "__add__",
+          "__neg__",
+          "__sub__",
+          "__mul__",
+          "__matmul__",
+          "adj",
+          "conj",
+          "power",
+          "item",
+          "__init__",
+          "transport",
+          "transport_jet",
+          "component",
+          "descend"
+        ],
+        "target_sha256": "31b1c270bf341f75f2364580cd6f646f1d66fda54d93e9b3b227b6ab3985763e",
+        "diagnostics": "Not requested: parent final diagnostics owns this assignment."
+      }
+    ],
+    "spectral_jet_definition": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": [
+        {
+          "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/physical_ground_lift_source_20261011.py",
+          "range": {
+            "start": {
+              "line": 53,
+              "character": 4
+            },
+            "end": {
+              "line": 53,
+              "character": 16
+            }
+          }
+        }
+      ]
+    }
+  },
+  "preserved_failed_epoch": "lift_action_review_attempt1_20261011_capsule.json",
+  "correction": "Attempt1 required absolute floating equality for reordered sums. Attempt2 independently compares relative norm <=1e-14 while retaining omission controls >1. This is not a change to any target or physical tolerance."
+}

@@ -1,0 +1,10 @@
+{
+  "attempt": "integrated_repair_smoke2",
+  "natural_exit": 1,
+  "elapsed_seconds": 25.82158398628235,
+  "all_sources_unchanged": true,
+  "shared_model_sha256": "c33fe45b0bf610bc84b494cfb67507d75c572d58b95d24c1dbf2bb3971614f77",
+  "scope": "Actual frozen full47 Model loaded. Empty OFF lab_source constructor and matrix-element call returned. Native MPO.apply(compression_method=zip_up) on the exact-zero operator then attempted zero SVD and raised RuntimeError: SVD found no singular values. The later zero-image assertion was not reached; no expensive trajectory started.",
+  "interpretation": "This does not refute the repaired empty-graph constructor or make the physical OFF source nonzero. Zero source cannot be normalized or compressed through an algorithm requiring nonzero singular values.",
+  "changed_application_epoch": "Own smoke3 uses exact native apply_naively for the zero image with no SVD/canonicalization/normalization. exp(0) is separately exercised through EXISTING PhysicalOperatorSum(empty Hamiltonian), since native MPO has no evolve method by design. No shared files or physical source coefficients changed by49."
+}

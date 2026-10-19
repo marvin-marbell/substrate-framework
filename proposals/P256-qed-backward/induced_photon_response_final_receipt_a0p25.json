@@ -1,0 +1,1951 @@
+{
+  "schema": 1,
+  "branch": "NEW equal-mass charged-light seas, no bare magnetic Maxwell, primitive electric rotor, large-N RPA",
+  "assigned_plan_epoch": "03b34911221ba1898315373edaa7c4c3bcac718462e7fe51a842560eb6933f87",
+  "config": {
+    "a": 0.25,
+    "m": 0.2,
+    "r": 0.12,
+    "v": 0.4990360130634525,
+    "g0": 0.4187253908699568,
+    "gs": 0.0632221974274214,
+    "flavors": 64,
+    "inertia": 1.0,
+    "orders": [
+      10,
+      12
+    ],
+    "q_values": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "omega_values": [
+      0.02,
+      0.04,
+      0.08
+    ],
+    "species": []
+  },
+  "band": {
+    "a": 0.25,
+    "m": 0.2,
+    "e": 1.0,
+    "r": 0.12,
+    "v": 0.4990360130634525,
+    "improved": true
+  },
+  "metric": {
+    "G": [
+      [
+        0.4187253908699568,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0632221974274214,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0632221974274214,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0632221974274214
+      ]
+    ],
+    "g0": 0.4187253908699568,
+    "gs": 0.0632221974274214,
+    "frame_provenance": "selected scalar Phi mean from original heavy full10 Gram; not recalculated new-flavor vacuum"
+  },
+  "Peierls": {
+    "onsite": 2.3600000000000003,
+    "path_lengths": [
+      1,
+      2,
+      1,
+      2,
+      1,
+      2
+    ],
+    "supplier": "ImprovedPhiLaw.paths scalar coefficients from RotationBand.couplings, no endpoint Gamma"
+  },
+  "charged_species": [
+    {
+      "count": 64,
+      "m": 0.2,
+      "gap": 0.12941798806502236,
+      "role": "Contains tagged active electron/positron"
+    }
+  ],
+  "epsilon": 24.634079849958187,
+  "kappa": 0.46468761389011454,
+  "photon_speed": 0.1373448488999755,
+  "transverse_residue": 0.040594168976102324,
+  "epsilon_sea": 0.3770949976555967,
+  "kappa_sea": 0.00726074396703304,
+  "epsilon_bare": 0.5,
+  "charged_cone": 0.12547773800550577,
+  "charged_gap": 0.12941798806502236,
+  "speed_ratio": 1.0945754289414193,
+  "mass_decoupling": {
+    "omega": 0.05176719522600895,
+    "species": [
+      {
+        "count": 64,
+        "m": 0.2,
+        "gap": 0.12941798806502236,
+        "electric_fraction": 0.9797029155119489,
+        "retarded_relative_frequency_remainder": 0.04166666666666668
+      }
+    ],
+    "total_retarded_relative_frequency_remainder_upper": 0.040820954812997884,
+    "scope": "Heavy production thresholds and low-frequency dynamic decoupling, NOT removal of their static UV loop coefficient or proof of their origin"
+  },
+  "units": {
+    "a": "physical lattice spacing",
+    "momentum": "physical inverse length; theta=a*p",
+    "omega": "energy with hbar=1",
+    "A": "physical, A_link=a*A",
+    "measure": "d^3theta/(2pi)^3/a^3",
+    "charge": 1,
+    "inertia": "Physical electric-density UE_phys; microscopic link term (inertia/a)*Pi_link^2, epsilon_b=1/(2inertia)",
+    "action": "1/2 int dt d^3x [epsilon E^2-kappa B^2]",
+    "pole": "Coulomb-constrained 2x2 F: eps_b*x I-Kstatic+N/a sum W*x/[Delta*(Delta^2-x)]-x*d*d^T/chi",
+    "residue": "[dF/domega^2]^-1; mode leg sqrt(Z/(2omega))",
+    "longitudinal": "Coulomb rho(q)rho(-q)/(2 [epsilon_b*qhat_phys^2+N*chi00/a^3])"
+  },
+  "raw_grids": [
+    {
+      "order": 10,
+      "BZ_points": 232000,
+      "quadrature": "Gauss tensor cells on exact dyadic cubical shells, all eight octants",
+      "zero": {
+        "q": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qtheta": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "contact_link": [
+          0.26651354488531975,
+          0.26651354488531986,
+          0.26651354488531975
+        ],
+        "paramagnetic_static_link": [
+          [
+            0.2665135448464891,
+            -6.382679410354308e-20,
+            1.1145711474010442e-20
+          ],
+          [
+            -6.382679410354308e-20,
+            0.26651354484649264,
+            1.9441047131727766e-19
+          ],
+          [
+            1.1145711474010442e-20,
+            1.9441047131727766e-19,
+            0.2665135448464917
+          ]
+        ],
+        "static_link": [
+          [
+            3.8830660908928394e-11,
+            6.382679410354308e-20,
+            -1.1145711474010442e-20
+          ],
+          [
+            6.382679410354308e-20,
+            3.8827219217552056e-11,
+            -1.9441047131727766e-19
+          ],
+          [
+            -1.1145711474010442e-20,
+            -1.9441047131727766e-19,
+            3.8828051884820525e-11
+          ]
+        ],
+        "static_raw_link": [
+          [
+            3.8830660908928394e-11,
+            6.382679410354308e-20,
+            -1.1145711474010442e-20
+          ],
+          [
+            6.382679410354308e-20,
+            3.8827219217552056e-11,
+            -1.9441047131727766e-19
+          ],
+          [
+            -1.1145711474010442e-20,
+            -1.9441047131727766e-19,
+            3.8828051884820525e-11
+          ]
+        ],
+        "identity_vs_raw_contact_difference_link": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "static_evaluation": "At nonzero q, exact bulk periodic identity: integral B(0)-B(q)+C(q)-C(0); raw unsubtracted contact-minus-poles retained",
+        "epsilon_link": [
+          [
+            0.0942737493967335,
+            -2.304200593786737e-19,
+            3.1672099438734534e-20
+          ],
+          [
+            -2.304200593786737e-19,
+            0.09427374939673888,
+            -3.766530728215146e-20
+          ],
+          [
+            3.1672099438734534e-20,
+            -3.766530728215146e-20,
+            0.09427374939673838
+          ]
+        ],
+        "density_static_link": 0.0,
+        "density_static_physical": 0.0,
+        "epsilon_longitudinal_static": null,
+        "vertex_Ward_error": 0.0,
+        "spectral_density_Ward_error": 0.0,
+        "mixed_density_current_Ward_error": 0.0,
+        "pure_gradient_static_form": 0.0,
+        "pure_gradient_static_raw_form": 0.0,
+        "wrong_short_path_vertex_error": 0.0,
+        "species": [
+          {
+            "count": 64,
+            "m": 0.2,
+            "gap": 0.12941798806502236
+          }
+        ],
+        "pair_threshold": 0.25890205505242114
+      },
+      "zero_frequency_grid": [
+        {
+          "omega_Euclidean": 0.02,
+          "epsilon_sea_physical": [
+            0.3767642099330274,
+            0.37676420993302223,
+            0.37676420993302234
+          ]
+        },
+        {
+          "omega_Euclidean": 0.04,
+          "epsilon_sea_physical": [
+            0.37578163712427715,
+            0.37578163712428747,
+            0.37578163712428647
+          ]
+        },
+        {
+          "omega_Euclidean": 0.08,
+          "epsilon_sea_physical": [
+            0.37199045360678734,
+            0.37199045360679195,
+            0.37199045360679034
+          ]
+        }
+      ],
+      "finite_q": [
+        {
+          "q": [
+            0.05,
+            0.0,
+            0.0
+          ],
+          "qtheta": [
+            0.0125,
+            0.0,
+            0.0
+          ],
+          "contact_link": [
+            0.26651289346800694,
+            0.26651354488531986,
+            0.26651354488531975
+          ],
+          "paramagnetic_static_link": [
+            [
+              0.26651289342921386,
+              9.644583983156575e-19,
+              2.0888508877156393e-19
+            ],
+            [
+              9.037312951326982e-20,
+              0.2665090072319699,
+              8.392563105073725e-20
+            ],
+            [
+              -4.685178268689105e-19,
+              3.981814719269831e-19,
+              0.26650900723196186
+            ]
+          ],
+          "static_link": [
+            [
+              -1.7640973513824294e-14,
+              9.433658048169059e-24,
+              -4.494294331281227e-20
+            ],
+            [
+              -1.0467838464716978e-23,
+              4.53761455254976e-06,
+              -1.0293409613540783e-25
+            ],
+            [
+              4.4952631338077876e-20,
+              1.630168069086188e-24,
+              4.537614552549159e-06
+            ]
+          ],
+          "static_raw_link": [
+            [
+              3.879307985954483e-11,
+              -9.644583983156575e-19,
+              -2.0888508877156393e-19
+            ],
+            [
+              -9.037312951326982e-20,
+              4.537653349956372e-06,
+              -8.392563105073725e-20
+            ],
+            [
+              4.685178268689105e-19,
+              -3.981814719269831e-19,
+              4.537653357894467e-06
+            ]
+          ],
+          "identity_vs_raw_contact_difference_link": [
+            [
+              -3.8810720833058657e-11,
+              9.644678319737057e-19,
+              1.6394214545875166e-19
+            ],
+            [
+              9.03626616748051e-20,
+              -3.8797406612259625e-11,
+              8.392552811664111e-20
+            ],
+            [
+              -4.235651955308326e-19,
+              3.981831020950522e-19,
+              -3.8805345307432054e-11
+            ]
+          ],
+          "static_evaluation": "At nonzero q, exact bulk periodic identity: integral B(0)-B(q)+C(q)-C(0); raw unsubtracted contact-minus-poles retained",
+          "epsilon_link": [
+            [
+              0.09426582590275612,
+              1.2336356175419694e-19,
+              -1.728793360256713e-20
+            ],
+            [
+              -9.682590732328094e-20,
+              0.09425834003340423,
+              2.9108536249149865e-20
+            ],
+            [
+              -1.4030951596281913e-19,
+              4.8471257575973564e-20,
+              0.09425834003340525
+            ]
+          ],
+          "density_static_link": 1.472884351399189e-05,
+          "density_static_physical": 0.06032934303331078,
+          "epsilon_longitudinal_static": 24.63205143110743,
+          "vertex_Ward_error": 8.81239525796218e-16,
+          "spectral_density_Ward_error": 7.262645778215583e-22,
+          "mixed_density_current_Ward_error": 2.442250758562814e-22,
+          "pure_gradient_static_form": -2.7563662210694817e-18,
+          "pure_gradient_static_raw_form": 6.061339803741924e-15,
+          "wrong_short_path_vertex_error": 7.580741834614657e-08,
+          "species": [
+            {
+              "count": 64,
+              "m": 0.2,
+              "gap": 0.12941798806502236
+            }
+          ],
+          "pair_threshold": 0.2589780454157098,
+          "modes": {
+            "q": [
+              0.05,
+              0.0,
+              0.0
+            ],
+            "omega": 0.006867178523656987,
+            "residue": 0.04059242537448042,
+            "pair_threshold": 0.2589780454157098,
+            "two_polarizations": [
+              {
+                "omega": 0.006867178523656771,
+                "residue": 0.04059242537448042,
+                "local_omega": 0.006867527182679295,
+                "epsilon": 24.630135048553036,
+                "scalar_polarization": -2.740292256643371e-20,
+                "kappa": 0.46465778038103783,
+                "polarization": [
+                  0.0,
+                  1.069419499214707e-06,
+                  -0.9999999999994282
+                ],
+                "inverse_residual": -8.456776945193502e-18
+              },
+              {
+                "omega": 0.006867178523657203,
+                "residue": 0.04059242537448041,
+                "local_omega": 0.006867527182679749,
+                "epsilon": 24.630135048553043,
+                "scalar_polarization": 1.0618965873208741e-19,
+                "kappa": 0.4646577803810994,
+                "polarization": [
+                  0.0,
+                  -0.9999999999991958,
+                  -1.2683787890977794e-06
+                ],
+                "inverse_residual": -3.7730235602769055e-17
+              }
+            ],
+            "pair_threshold_kind": "Numerical minimum of exact interband gaps on the reported 3D quadrature",
+            "pair_threshold_lower": 0.2588359761300447,
+            "polarization_speed_splitting": 6.283862319378386e-14,
+            "quadrature_order": 10,
+            "quadrature_points": 232000
+          },
+          "dynamic": [
+            {
+              "omega_Euclidean": 0.02,
+              "kernel_diagonal_link": [
+                3.7673306252539174e-05,
+                4.220793405868006e-05,
+                4.220793406289891e-05
+              ],
+              "kernel_identity_diagonal_link": [
+                3.767326744180677e-05,
+                4.2207895261270334e-05,
+                4.220789525755109e-05
+              ],
+              "density_link": 1.4715928481614832e-05,
+              "temporal_Ward_defect": 6.063174726747561e-15,
+              "temporal_Ward_identity_defect": -9.23251850436774e-19
+            },
+            {
+              "omega_Euclidean": 0.04,
+              "kernel_diagonal_link": [
+                0.0001503002657350927,
+                0.00015482602297745007,
+                0.00015482602297284265
+              ],
+              "kernel_identity_diagonal_link": [
+                0.0001503002269243603,
+                0.00015482598418004034,
+                0.00015482598416749482
+              ],
+              "density_link": 1.4677565420624416e-05,
+              "temporal_Ward_defect": 6.063028348866363e-15,
+              "temporal_Ward_identity_defect": -1.06962725009232e-18
+            },
+            {
+              "omega_Euclidean": 0.08,
+              "kernel_diagonal_link": [
+                0.0005951378144991581,
+                0.0005996293626591709,
+                0.0005996293626578386
+              ],
+              "kernel_identity_diagonal_link": [
+                0.0005951377756884257,
+                0.0005996293238617612,
+                0.0005996293238524908
+              ],
+              "density_link": 1.4529541663926067e-05,
+              "temporal_Ward_defect": 6.06168962983684e-15,
+              "temporal_Ward_identity_defect": -2.4083396621705903e-18
+            }
+          ]
+        },
+        {
+          "q": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "qtheta": [
+            0.025,
+            0.0,
+            0.0
+          ],
+          "contact_link": [
+            0.2665109393178598,
+            0.26651354488531986,
+            0.26651354488531975
+          ],
+          "paramagnetic_static_link": [
+            [
+              0.2665109392791223,
+              -7.414196046440449e-19,
+              1.196998604920638e-20
+            ],
+            [
+              8.545494934558203e-19,
+              0.2664953985895327,
+              -2.213892691104887e-19
+            ],
+            [
+              2.617748515405233e-20,
+              -7.235081317161639e-20,
+              0.26649539858953575
+            ]
+          ],
+          "static_link": [
+            [
+              -7.056359944334149e-14,
+              2.4094003162080734e-23,
+              1.2046843392790662e-20
+            ],
+            [
+              -2.878058940146356e-23,
+              1.8146256963055626e-05,
+              1.087767242952624e-23
+            ],
+            [
+              -1.2031634806568517e-20,
+              1.8495873374061984e-23,
+              1.8146256963055416e-05
+            ]
+          ],
+          "static_raw_link": [
+            [
+              3.873751319716234e-11,
+              7.414196046440449e-19,
+              -1.196998604920638e-20
+            ],
+            [
+              -8.545494934558203e-19,
+              1.8146295787169198e-05,
+              2.213892691104887e-19
+            ],
+            [
+              -2.617748515405233e-20,
+              7.235081317161639e-20,
+              1.8146295784005062e-05
+            ]
+          ],
+          "identity_vs_raw_contact_difference_link": [
+            [
+              -3.8808076796605685e-11,
+              -7.413955106408828e-19,
+              2.4016829441997042e-20
+            ],
+            [
+              8.545207128664188e-19,
+              -3.882411357125095e-11,
+              -2.2137839143805917e-19
+            ],
+            [
+              1.4145850347483813e-20,
+              -7.233231729824233e-20,
+              -3.882094964569494e-11
+            ]
+          ],
+          "static_evaluation": "At nonzero q, exact bulk periodic identity: integral B(0)-B(q)+C(q)-C(0); raw unsubtracted contact-minus-poles retained",
+          "epsilon_link": [
+            [
+              0.09424207967242466,
+              -1.4903192462496096e-19,
+              -1.665287834691935e-20
+            ],
+            [
+              1.3382558806776652e-20,
+              0.09421218199837668,
+              4.079781392024643e-20
+            ],
+            [
+              -4.698688064777172e-20,
+              7.022335566596424e-21,
+              0.09421218199837723
+            ]
+          ],
+          "density_static_link": 5.889823208314752e-05,
+          "density_static_physical": 0.24124715861257223,
+          "epsilon_longitudinal_static": 24.625972396141456,
+          "vertex_Ward_error": 1.0755285551056204e-15,
+          "spectral_density_Ward_error": 2.2830184906463564e-21,
+          "mixed_density_current_Ward_error": 5.889525961377557e-22,
+          "pure_gradient_static_form": -4.409995270777252e-17,
+          "pure_gradient_static_raw_form": 2.4209684787739008e-14,
+          "wrong_short_path_vertex_error": 6.064415795613287e-07,
+          "species": [
+            {
+              "count": 64,
+              "m": 0.2,
+              "gap": 0.12941798806502236
+            }
+          ],
+          "pair_threshold": 0.2592058739120514,
+          "modes": {
+            "q": [
+              0.1,
+              0.0,
+              0.0
+            ],
+            "omega": 0.013733973509172756,
+            "residue": 0.04058719417506872,
+            "pair_threshold": 0.2592058739120514,
+            "two_polarizations": [
+              {
+                "omega": 0.013733973509172647,
+                "residue": 0.04058719417506873,
+                "local_omega": 0.013736760204165747,
+                "epsilon": 24.6183185915839,
+                "scalar_polarization": 9.349585311738066e-20,
+                "kappa": 0.4645683740196155,
+                "polarization": [
+                  0.0,
+                  5.115402607222829e-05,
+                  -0.9999999986916328
+                ],
+                "inverse_residual": -1.1796119615080563e-16
+              },
+              {
+                "omega": 0.013733973509172865,
+                "residue": 0.040587194175068717,
+                "local_omega": 0.013736760204165827,
+                "epsilon": 24.618318591583908,
+                "scalar_polarization": -1.3073167470954174e-20,
+                "kappa": 0.464568374019621,
+                "polarization": [
+                  0.0,
+                  -0.9999999988425183,
+                  -4.81140687540327e-05
+                ],
+                "inverse_residual": -7.632783311565983e-17
+              }
+            ],
+            "pair_threshold_kind": "Numerical minimum of exact interband gaps on the reported 3D quadrature",
+            "pair_threshold_lower": 0.2588359761300447,
+            "polarization_speed_splitting": 1.5987211554602254e-14,
+            "quadrature_order": 10,
+            "quadrature_points": 232000
+          },
+          "dynamic": [
+            {
+              "omega_Euclidean": 0.02,
+              "kernel_diagonal_link": [
+                3.766385514814008e-05,
+                5.57981833687049e-05,
+                5.5798183364486054e-05
+              ],
+              "kernel_identity_diagonal_link": [
+                3.766381634007221e-05,
+                5.579814454459431e-05,
+                5.5798144543539596e-05
+              ],
+              "density_link": 5.88466481177639e-05,
+              "temporal_Ward_defect": 2.4209072700035036e-14,
+              "temporal_Ward_identity_defect": -4.4706461821808526e-17
+            },
+            {
+              "omega_Euclidean": 0.04,
+              "kernel_diagonal_link": [
+                0.0001502630191433374,
+                0.0001683619186605978,
+                0.00016836191866176353
+              ],
+              "kernel_identity_diagonal_link": [
+                0.00015026298033526952,
+                0.0001683618798364872,
+                0.00016836187984081707
+              ],
+              "density_link": 5.869341968063878e-05,
+              "temporal_Ward_defect": 2.420314524287949e-14,
+              "temporal_Ward_identity_defect": -5.0633922286077765e-17
+            },
+            {
+              "omega_Euclidean": 0.08,
+              "kernel_diagonal_link": [
+                0.0005949970966413476,
+                0.0006129593581483683,
+                0.0006129593581521431
+              ],
+              "kernel_identity_diagonal_link": [
+                0.0005949970578332797,
+                0.0006129593193242577,
+                0.0006129593193311966
+              ],
+              "density_link": 5.810215518742856e-05,
+              "temporal_Ward_defect": 2.4209730156420783e-14,
+              "temporal_Ward_identity_defect": -4.4048942570335025e-17
+            }
+          ]
+        },
+        {
+          "q": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "qtheta": [
+            0.05,
+            0.0,
+            0.0
+          ],
+          "contact_link": [
+            0.26650312424388417,
+            0.26651354488531986,
+            0.26651354488531975
+          ],
+          "paramagnetic_static_link": [
+            [
+              0.2665031242053513,
+              6.123988173430696e-19,
+              3.489035323143222e-19
+            ],
+            [
+              -9.597224569017386e-19,
+              0.2664410268061031,
+              -3.10247521133341e-19
+            ],
+            [
+              -6.0390037948167435e-19,
+              2.3541380216462774e-19,
+              0.2664410268061037
+            ]
+          ],
+          "static_link": [
+            [
+              -2.8193034956987496e-13,
+              -1.1131686789786099e-22,
+              -3.865191479536317e-21
+            ],
+            [
+              3.8104442265619916e-22,
+              7.251804040256847e-05,
+              7.446792395554755e-23
+            ],
+            [
+              3.883121849650454e-21,
+              -3.4127503266445107e-25,
+              7.251804040256847e-05
+            ]
+          ],
+          "static_raw_link": [
+            [
+              3.8532843582572696e-11,
+              -6.123988173430696e-19,
+              -3.489035323143222e-19
+            ],
+            [
+              9.597224569017386e-19,
+              7.251807921676567e-05,
+              3.10247521133341e-19
+            ],
+            [
+              6.0390037948167435e-19,
+              -2.3541380216462774e-19,
+              7.251807921604403e-05
+            ]
+          ],
+          "identity_vs_raw_contact_difference_link": [
+            [
+              -3.881477393214257e-11,
+              6.122875004751717e-19,
+              3.450383408347859e-19
+            ],
+            [
+              -9.593414124790824e-19,
+              -3.881419720407151e-11,
+              -3.1017305320938545e-19
+            ],
+            [
+              -6.000172576320239e-19,
+              2.3541346088959507e-19,
+              -3.8813475559105505e-11
+            ]
+          ],
+          "static_evaluation": "At nonzero q, exact bulk periodic identity: integral B(0)-B(q)+C(q)-C(0); raw unsubtracted contact-minus-poles retained",
+          "epsilon_link": [
+            [
+              0.09414745648533061,
+              -1.8785271686466798e-19,
+              -4.2792159863477816e-20
+            ],
+            [
+              2.396984616623017e-20,
+              0.09402859274293307,
+              -1.0063475944635863e-19
+            ],
+            [
+              3.0587533108112776e-20,
+              -8.713413706593396e-20,
+              0.09402859274293293
+            ]
+          ],
+          "density_static_link": 0.00023531961016582293,
+          "density_static_physical": 0.9638691232392107,
+          "epsilon_longitudinal_static": 24.601748860245024,
+          "vertex_Ward_error": 1.033895191682177e-15,
+          "spectral_density_Ward_error": 3.255782891008717e-21,
+          "mixed_density_current_Ward_error": 1.078643518769148e-21,
+          "pure_gradient_static_form": -7.046790474369673e-16,
+          "pure_gradient_static_raw_form": 9.631204143942361e-14,
+          "wrong_short_path_vertex_error": 4.850964120062251e-06,
+          "species": [
+            {
+              "count": 64,
+              "m": 0.2,
+              "gap": 0.12941798806502236
+            }
+          ],
+          "pair_threshold": 0.260115058974153,
+          "modes": {
+            "q": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "omega": 0.027464878769467592,
+            "residue": 0.040566263787146166,
+            "pair_threshold": 0.260115058974153,
+            "two_polarizations": [
+              {
+                "omega": 0.027464878769467484,
+                "residue": 0.040566263787146166,
+                "local_omega": 0.027487090413353513,
+                "epsilon": 24.57131974219142,
+                "scalar_polarization": -3.200287848573494e-20,
+                "kappa": 0.46421216138451415,
+                "polarization": [
+                  0.0,
+                  4.163863340982914e-06,
+                  -0.9999999999913312
+                ],
+                "inverse_residual": -5.23886489743492e-16
+              },
+              {
+                "omega": 0.027464878769467696,
+                "residue": 0.040566263787146166,
+                "local_omega": 0.02748709041335351,
+                "epsilon": 24.571319742191427,
+                "scalar_polarization": -5.496295095479057e-20,
+                "kappa": 0.46421216138451427,
+                "polarization": [
+                  0.0,
+                  -0.99999999223933,
+                  0.00012458467035425237
+                ],
+                "inverse_residual": -3.8510861285156145e-16
+              }
+            ],
+            "pair_threshold_kind": "Numerical minimum of exact interband gaps on the reported 3D quadrature",
+            "pair_threshold_lower": 0.2588359761300447,
+            "polarization_speed_splitting": 7.771561172376096e-15,
+            "quadrature_order": 10,
+            "quadrature_points": 232000
+          },
+          "dynamic": [
+            {
+              "omega_Euclidean": 0.02,
+              "kernel_diagonal_link": [
+                3.7626193980011546e-05,
+                0.00011009680864476623,
+                0.00011009680864626503
+              ],
+              "kernel_identity_diagonal_link": [
+                3.762615516522683e-05,
+                0.00011009676983059213,
+                0.00011009676983281258
+              ],
+              "density_link": 0.00023511448340470429,
+              "temporal_Ward_defect": 9.624512433781095e-14,
+              "temporal_Ward_identity_defect": -7.716231127376873e-16
+            },
+            {
+              "omega_Euclidean": 0.04,
+              "kernel_diagonal_link": [
+                0.00015011458841962533,
+                0.00022244433793910945,
+                0.00022244433793172647
+              ],
+              "kernel_identity_diagonal_link": [
+                0.0001501145496048406,
+                0.00022244429912493535,
+                0.00022244429911827401
+              ],
+              "density_link": 0.00023450512288003146,
+              "temporal_Ward_defect": 9.627464374042523e-14,
+              "temporal_Ward_identity_defect": -7.421037233582993e-16
+            },
+            {
+              "omega_Euclidean": 0.08,
+              "kernel_diagonal_link": [
+                0.0005944362010383841,
+                0.0006662225482759743,
+                0.000666222548269868
+              ],
+              "kernel_identity_diagonal_link": [
+                0.0005944361622235994,
+                0.0006662225094618002,
+                0.0006662225094564156
+              ],
+              "density_link": 0.00023215325466503046,
+              "temporal_Ward_defect": 9.635075542114798e-14,
+              "temporal_Ward_identity_defect": -6.659921485146656e-16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "BZ_points": 400896,
+      "quadrature": "Gauss tensor cells on exact dyadic cubical shells, all eight octants",
+      "zero": {
+        "q": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qtheta": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "contact_link": [
+          0.266513544880289,
+          0.2665135448802891,
+          0.2665135448802891
+        ],
+        "paramagnetic_static_link": [
+          [
+            0.26651354488036433,
+            -1.362203671208064e-19,
+            2.1449048940066527e-19
+          ],
+          [
+            -1.362203671208064e-19,
+            0.2665135448803567,
+            -3.640993399891909e-20
+          ],
+          [
+            2.1449048940066527e-19,
+            -3.640993399891909e-20,
+            0.2665135448803652
+          ]
+        ],
+        "static_link": [
+          [
+            -7.532863222081687e-14,
+            1.362203671208064e-19,
+            -2.1449048940066527e-19
+          ],
+          [
+            1.362203671208064e-19,
+            -6.761258219967203e-14,
+            3.640993399891909e-20
+          ],
+          [
+            -2.1449048940066527e-19,
+            3.640993399891909e-20,
+            -7.610578833805448e-14
+          ]
+        ],
+        "static_raw_link": [
+          [
+            -7.532863222081687e-14,
+            1.362203671208064e-19,
+            -2.1449048940066527e-19
+          ],
+          [
+            1.362203671208064e-19,
+            -6.761258219967203e-14,
+            3.640993399891909e-20
+          ],
+          [
+            -2.1449048940066527e-19,
+            3.640993399891909e-20,
+            -7.610578833805448e-14
+          ]
+        ],
+        "identity_vs_raw_contact_difference_link": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "static_evaluation": "At nonzero q, exact bulk periodic identity: integral B(0)-B(q)+C(q)-C(0); raw unsubtracted contact-minus-poles retained",
+        "epsilon_link": [
+          [
+            0.09427374941389773,
+            -8.525633254663548e-20,
+            7.135140360105183e-20
+          ],
+          [
+            -8.525633254663548e-20,
+            0.09427374941389999,
+            -1.2235535794648376e-19
+          ],
+          [
+            7.135140360105183e-20,
+            -1.2235535794648376e-19,
+            0.09427374941389985
+          ]
+        ],
+        "density_static_link": 0.0,
+        "density_static_physical": 0.0,
+        "epsilon_longitudinal_static": null,
+        "vertex_Ward_error": 0.0,
+        "spectral_density_Ward_error": 0.0,
+        "mixed_density_current_Ward_error": 0.0,
+        "pure_gradient_static_form": 0.0,
+        "pure_gradient_static_raw_form": 0.0,
+        "wrong_short_path_vertex_error": 0.0,
+        "species": [
+          {
+            "count": 64,
+            "m": 0.2,
+            "gap": 0.12941798806502236
+          }
+        ],
+        "pair_threshold": 0.2588689765569667
+      },
+      "zero_frequency_grid": [
+        {
+          "omega_Euclidean": 0.02,
+          "epsilon_sea_physical": [
+            0.37676421000166993,
+            0.37676421000167765,
+            0.3767642100016837
+          ]
+        },
+        {
+          "omega_Euclidean": 0.04,
+          "epsilon_sea_physical": [
+            0.3757816371929299,
+            0.37578163719291174,
+            0.37578163719291446
+          ]
+        },
+        {
+          "omega_Euclidean": 0.08,
+          "epsilon_sea_physical": [
+            0.3719904536753393,
+            0.37199045367534755,
+            0.37199045367536054
+          ]
+        }
+      ],
+      "finite_q": [
+        {
+          "q": [
+            0.05,
+            0.0,
+            0.0
+          ],
+          "qtheta": [
+            0.0125,
+            0.0,
+            0.0
+          ],
+          "contact_link": [
+            0.2665128934629791,
+            0.2665135448802891,
+            0.2665135448802891
+          ],
+          "paramagnetic_static_link": [
+            [
+              0.2665128934630643,
+              3.2439408140221267e-19,
+              5.165128770042128e-20
+            ],
+            [
+              3.3275501623874554e-19,
+              0.2665090072658387,
+              4.047446122990242e-20
+            ],
+            [
+              -7.015190552979604e-19,
+              6.609431275220107e-20,
+              0.2665090072658339
+            ]
+          ],
+          "static_link": [
+            [
+              2.449671950049038e-16,
+              -5.2656660426220523e-23,
+              -1.1117087418697484e-20
+            ],
+            [
+              6.974722671118456e-23,
+              4.5376145523575816e-06,
+              -1.1836043195215507e-24
+            ],
+            [
+              1.1118065995584444e-20,
+              7.372474067440348e-25,
+              4.53761455235822e-06
+            ]
+          ],
+          "static_raw_link": [
+            [
+              -8.520961713998076e-14,
+              -3.2439408140221267e-19,
+              -5.165128770042128e-20
+            ],
+            [
+              -3.3275501623874554e-19,
+              4.5376144504061244e-06,
+              -4.047446122990242e-20
+            ],
+            [
+              7.015190552979604e-19,
+              -6.609431275220107e-20,
+              4.537614455235595e-06
+            ]
+          ],
+          "identity_vs_raw_contact_difference_link": [
+            [
+              8.545458433498567e-14,
+              3.2434142474178645e-19,
+              4.05342002817238e-20
+            ],
+            [
+              3.328247634654567e-19,
+              1.0195145712355545e-13,
+              4.0473277625582896e-20
+            ],
+            [
+              -6.90400989302376e-19,
+              6.609504999960781e-20,
+              9.712262562927825e-14
+            ]
+          ],
+          "static_evaluation": "At nonzero q, exact bulk periodic identity: integral B(0)-B(q)+C(q)-C(0); raw unsubtracted contact-minus-poles retained",
+          "epsilon_link": [
+            [
+              0.0942658259198951,
+              1.4670056622741205e-19,
+              -3.318393815174816e-20
+            ],
+            [
+              3.5729319122986664e-20,
+              0.09425834005056302,
+              6.6597273211404266e-21
+            ],
+            [
+              1.3791608373200273e-19,
+              2.8632862640119556e-20,
+              0.09425834005056091
+            ]
+          ],
+          "density_static_link": 1.4728843516669611e-05,
+          "density_static_physical": 0.06032934304427873,
+          "epsilon_longitudinal_static": 24.632051435494667,
+          "vertex_Ward_error": 1.0980799602933189e-15,
+          "spectral_density_Ward_error": 5.285684114213847e-22,
+          "mixed_density_current_Ward_error": 1.6088662914156388e-22,
+          "pure_gradient_static_form": 3.8275625835077864e-20,
+          "pure_gradient_static_raw_form": -1.3313829319615034e-17,
+          "wrong_short_path_vertex_error": 7.576672825574358e-08,
+          "species": [
+            {
+              "count": 64,
+              "m": 0.2,
+              "gap": 0.12941798806502236
+            }
+          ],
+          "pair_threshold": 0.25894498375012975,
+          "modes": {
+            "q": [
+              0.05,
+              0.0,
+              0.0
+            ],
+            "omega": 0.006867178522899859,
+            "residue": 0.04059242536724535,
+            "pair_threshold": 0.25894498375012975,
+            "two_polarizations": [
+              {
+                "omega": 0.0068671785228996175,
+                "residue": 0.04059242536724536,
+                "local_omega": 0.006867527181922032,
+                "epsilon": 24.630135052944937,
+                "scalar_polarization": -4.2776496501216667e-20,
+                "kappa": 0.4646577803614199,
+                "polarization": [
+                  0.0,
+                  -0.9999999999973208,
+                  -2.3148412916227333e-06
+                ],
+                "inverse_residual": -1.3010426060333025e-18
+              },
+              {
+                "omega": 0.006867178522900101,
+                "residue": 0.04059242536724534,
+                "local_omega": 0.006867527181922516,
+                "epsilon": 24.630135052944937,
+                "scalar_polarization": 6.071753335635686e-20,
+                "kappa": 0.4646577803614854,
+                "polarization": [
+                  0.0,
+                  -1.2148973272386318e-06,
+                  -0.9999999999992621
+                ],
+                "inverse_residual": -5.204170428189023e-18
+              }
+            ],
+            "pair_threshold_kind": "Numerical minimum of exact interband gaps on the reported 3D quadrature",
+            "pair_threshold_lower": 0.2588359761300447,
+            "polarization_speed_splitting": 7.038813976123492e-14,
+            "quadrature_order": 12,
+            "quadrature_points": 400896
+          },
+          "dynamic": [
+            {
+              "omega_Euclidean": 0.02,
+              "kernel_diagonal_link": [
+                3.7673267355819995e-05,
+                4.220789516556911e-05,
+                4.220789516884427e-05
+              ],
+              "kernel_identity_diagonal_link": [
+                3.7673267441251657e-05,
+                4.2207895267543094e-05,
+                4.220789526598878e-05
+              ],
+              "density_link": 1.4715928484292308e-05,
+              "temporal_Ward_defect": -1.5429500881986357e-17,
+              "temporal_Ward_identity_defect": -2.0809771444884417e-18
+            },
+            {
+              "omega_Euclidean": 0.04,
+              "kernel_diagonal_link": [
+                0.00015030022687495537,
+                0.00015482598411420412,
+                0.00015482598410543336
+              ],
+              "kernel_identity_diagonal_link": [
+                0.00015030022696038703,
+                0.0001548259842161781,
+                0.00015482598420257787
+              ],
+              "density_link": 1.4677565423301152e-05,
+              "temporal_Ward_defect": -1.3071822723612189e-17,
+              "temporal_Ward_identity_defect": 2.766985323438882e-19
+            },
+            {
+              "omega_Euclidean": 0.08,
+              "kernel_diagonal_link": [
+                0.0005951377757421605,
+                0.0005996293238827999,
+                0.0005996293238852979
+              ],
+              "kernel_identity_diagonal_link": [
+                0.0005951377758275922,
+                0.0005996293239847739,
+                0.0005996293239824424
+              ],
+              "density_link": 1.4529541666599772e-05,
+              "temporal_Ward_defect": -1.1124096931180527e-17,
+              "temporal_Ward_identity_defect": 2.2244276334980003e-18
+            }
+          ]
+        },
+        {
+          "q": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "qtheta": [
+            0.025,
+            0.0,
+            0.0
+          ],
+          "contact_link": [
+            0.26651093931283065,
+            0.2665135448802891,
+            0.2665135448802891
+          ],
+          "paramagnetic_static_link": [
+            [
+              0.26651093931291836,
+              1.002470964762062e-18,
+              -2.5881374861253652e-19
+            ],
+            [
+              -8.605758313746637e-19,
+              0.2664953986234029,
+              -7.644372677341319e-20
+            ],
+            [
+              4.731106057552627e-19,
+              -1.039513692434455e-19,
+              0.26649539862339305
+            ]
+          ],
+          "static_link": [
+            [
+              1.0276754221330438e-15,
+              9.448543083848974e-23,
+              -6.852905810974893e-21
+            ],
+            [
+              -1.0146200199436581e-22,
+              1.8146256962303515e-05,
+              1.0104715457814781e-23
+            ],
+            [
+              6.840324022131172e-21,
+              7.07373909941741e-24,
+              1.814625696230355e-05
+            ]
+          ],
+          "static_raw_link": [
+            [
+              -8.770761894538737e-14,
+              -1.002470964762062e-18,
+              2.5881374861253652e-19
+            ],
+            [
+              8.605758313746637e-19,
+              1.814625688623117e-05,
+              7.644372677341319e-20
+            ],
+            [
+              -4.731106057552627e-19,
+              1.039513692434455e-19,
+              1.8146256896056645e-05
+            ]
+          ],
+          "identity_vs_raw_contact_difference_link": [
+            [
+              8.873529436752041e-14,
+              1.0025654501929004e-18,
+              -2.656666544235114e-19
+            ],
+            [
+              -8.606772933766581e-19,
+              7.607234408916509e-14,
+              -7.643362205795537e-20
+            ],
+            [
+              4.799509297773939e-19,
+              -1.0394429550434609e-19,
+              6.624690420255035e-14
+            ]
+          ],
+          "static_evaluation": "At nonzero q, exact bulk periodic identity: integral B(0)-B(q)+C(q)-C(0); raw unsubtracted contact-minus-poles retained",
+          "epsilon_link": [
+            [
+              0.09424207968950703,
+              6.157151389503351e-20,
+              9.994190518995559e-20
+            ],
+            [
+              5.660836638035773e-21,
+              0.09421218201553003,
+              2.8398282168224176e-20
+            ],
+            [
+              -7.32946306634273e-20,
+              9.938357867800303e-20,
+              0.09421218201552962
+            ]
+          ],
+          "density_static_link": 5.889823209382426e-05,
+          "density_static_physical": 0.24124715865630417,
+          "epsilon_longitudinal_static": 24.62597240051488,
+          "vertex_Ward_error": 1.0859368959614812e-15,
+          "spectral_density_Ward_error": 1.2374621963793294e-21,
+          "mixed_density_current_Ward_error": 4.235164736271502e-22,
+          "pure_gradient_static_form": 6.422636865541007e-19,
+          "pure_gradient_static_raw_form": -5.48144068346261e-17,
+          "wrong_short_path_vertex_error": 6.061160672094466e-07,
+          "species": [
+            {
+              "count": 64,
+              "m": 0.2,
+              "gap": 0.12941798806502236
+            }
+          ],
+          "pair_threshold": 0.2591728626101496,
+          "modes": {
+            "q": [
+              0.1,
+              0.0,
+              0.0
+            ],
+            "omega": 0.013733973507664674,
+            "residue": 0.040587194167839735,
+            "pair_threshold": 0.2591728626101496,
+            "two_polarizations": [
+              {
+                "omega": 0.013733973507664312,
+                "residue": 0.04058719416783974,
+                "local_omega": 0.013736760202655723,
+                "epsilon": 24.618318595976255,
+                "scalar_polarization": -1.184083495005235e-19,
+                "kappa": 0.46456837400036677,
+                "polarization": [
+                  0.0,
+                  -1.652958979680771e-05,
+                  -0.9999999998633864
+                ],
+                "inverse_residual": -1.9428902928665165e-16
+              },
+              {
+                "omega": 0.013733973507665037,
+                "residue": 0.040587194167839735,
+                "local_omega": 0.01373676020265571,
+                "epsilon": 24.618318595976255,
+                "scalar_polarization": -2.5162281894935434e-19,
+                "kappa": 0.4645683740003659,
+                "polarization": [
+                  0.0,
+                  -0.9999999999689098,
+                  7.885475554630419e-06
+                ],
+                "inverse_residual": 2.107689023254112e-16
+              }
+            ],
+            "pair_threshold_kind": "Numerical minimum of exact interband gaps on the reported 3D quadrature",
+            "pair_threshold_lower": 0.2588359761300447,
+            "polarization_speed_splitting": 5.284661597215745e-14,
+            "quadrature_order": 12,
+            "quadrature_points": 400896
+          },
+          "dynamic": [
+            {
+              "omega_Euclidean": 0.02,
+              "kernel_diagonal_link": [
+                3.7663816337962785e-05,
+                5.5798144509289216e-05,
+                5.57981444982425e-05
+              ],
+              "kernel_identity_diagonal_link": [
+                3.7663816426725116e-05,
+                5.579814458533949e-05,
+                5.57981445644673e-05
+              ],
+              "density_link": 5.884664812843967e-05,
+              "temporal_Ward_defect": -5.0295085946118893e-17,
+              "temporal_Ward_identity_defect": 5.1784815068269745e-18
+            },
+            {
+              "omega_Euclidean": 0.04,
+              "kernel_diagonal_link": [
+                0.00015026298035869523,
+                0.00016836187980223682,
+                0.00016836187980273642
+              ],
+              "kernel_identity_diagonal_link": [
+                0.00015026298044745756,
+                0.0001683618798782871,
+                0.00016836187986896123
+              ],
+              "density_link": 5.869341969131157e-05,
+              "temporal_Ward_defect": -5.307008168660974e-17,
+              "temporal_Ward_identity_defect": 2.403482457613679e-18
+            },
+            {
+              "omega_Euclidean": 0.08,
+              "kernel_diagonal_link": [
+                0.000594997057916602,
+                0.0006129593193812677,
+                0.0006129593193747174
+              ],
+              "kernel_identity_diagonal_link": [
+                0.0005949970580053643,
+                0.000612959319457318,
+                0.0006129593194409422
+              ],
+              "density_link": 5.810215519808928e-05,
+              "temporal_Ward_defect": -6.020381963816506e-17,
+              "temporal_Ward_identity_defect": -4.730308433500844e-18
+            }
+          ]
+        },
+        {
+          "q": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "qtheta": [
+            0.05,
+            0.0,
+            0.0
+          ],
+          "contact_link": [
+            0.2665031242388546,
+            0.2665135448802891,
+            0.2665135448802891
+          ],
+          "paramagnetic_static_link": [
+            [
+              0.2665031242389283,
+              1.5391787643446184e-19,
+              -5.579154541674711e-19
+            ],
+            [
+              -6.294574153606201e-20,
+              0.26644102683996534,
+              8.223225521388321e-21
+            ],
+            [
+              3.0774672493016857e-19,
+              -8.992346991156461e-20,
+              0.2664410268399603
+            ]
+          ],
+          "static_link": [
+            [
+              4.051043808098295e-15,
+              4.703812906262046e-22,
+              -4.552424237663115e-21
+            ],
+            [
+              -2.5730461669654913e-22,
+              7.251804039935778e-05,
+              8.535939901653971e-23
+            ],
+            [
+              4.638159900744139e-21,
+              1.8049433129069113e-22,
+              7.251804039935885e-05
+            ]
+          ],
+          "static_raw_link": [
+            [
+              -7.37188088351104e-14,
+              -1.5391787643446184e-19,
+              5.579154541674711e-19
+            ],
+            [
+              6.294574153606201e-20,
+              7.251804032376574e-05,
+              -8.223225521388321e-21
+            ],
+            [
+              -3.0774672493016857e-19,
+              8.992346991156461e-20,
+              7.251804032881726e-05
+            ]
+          ],
+          "identity_vs_raw_contact_difference_link": [
+            [
+              7.776985264320869e-14,
+              1.5438825772508805e-19,
+              -5.624678784051343e-19
+            ],
+            [
+              -6.320304615275856e-20,
+              7.559203913862222e-14,
+              8.308584920404861e-21
+            ],
+            [
+              3.123848848309127e-19,
+              -8.974297558027392e-20,
+              7.054159502622309e-14
+            ]
+          ],
+          "static_evaluation": "At nonzero q, exact bulk periodic identity: integral B(0)-B(q)+C(q)-C(0); raw unsubtracted contact-minus-poles retained",
+          "epsilon_link": [
+            [
+              0.09414745650220095,
+              2.6535916512123864e-19,
+              1.0622994184971411e-19
+            ],
+            [
+              1.0228368408349734e-19,
+              0.09402859276010106,
+              3.989098996592255e-20
+            ],
+            [
+              -5.131563391386259e-20,
+              3.311824417741091e-20,
+              0.09402859276010005
+            ]
+          ],
+          "density_static_link": 0.00023531961020798736,
+          "density_static_physical": 0.9638691234119162,
+          "epsilon_longitudinal_static": 24.60174886456356,
+          "vertex_Ward_error": 1.0998146837692957e-15,
+          "spectral_density_Ward_error": 1.6675961149069038e-21,
+          "mixed_density_current_Ward_error": 6.815968247436948e-22,
+          "pure_gradient_static_form": 1.0125499777414393e-17,
+          "pure_gradient_static_raw_form": -1.8425863007429932e-16,
+          "wrong_short_path_vertex_error": 4.848360326548985e-06,
+          "species": [
+            {
+              "count": 64,
+              "m": 0.2,
+              "gap": 0.12941798806502236
+            }
+          ],
+          "pair_threshold": 0.26008224725691276,
+          "modes": {
+            "q": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "omega": 0.027464878766410433,
+            "residue": 0.04056626377994198,
+            "pair_threshold": 0.26008224725691276,
+            "two_polarizations": [
+              {
+                "omega": 0.027464878766410405,
+                "residue": 0.040566263779941984,
+                "local_omega": 0.02748709041028745,
+                "epsilon": 24.57131974658555,
+                "scalar_polarization": -4.2904885330079527e-20,
+                "kappa": 0.4642121613639683,
+                "polarization": [
+                  0.0,
+                  0.00019113404457903296,
+                  -0.9999999817338884
+                ],
+                "inverse_residual": -5.793976307097774e-16
+              },
+              {
+                "omega": 0.02746487876641046,
+                "residue": 0.04056626377994198,
+                "local_omega": 0.02748709041028725,
+                "epsilon": 24.57131974658555,
+                "scalar_polarization": -1.8509514775771132e-20,
+                "kappa": 0.46421216136396165,
+                "polarization": [
+                  0.0,
+                  -0.9999999800493842,
+                  -0.0001997529260373149
+                ],
+                "inverse_residual": -7.667477871796956e-16
+              }
+            ],
+            "pair_threshold_kind": "Numerical minimum of exact interband gaps on the reported 3D quadrature",
+            "pair_threshold_lower": 0.2588359761300447,
+            "polarization_speed_splitting": 1.9984014443252818e-15,
+            "quadrature_order": 12,
+            "quadrature_points": 400896
+          },
+          "dynamic": [
+            {
+              "omega_Euclidean": 0.02,
+              "kernel_diagonal_link": [
+                3.762615541114123e-05,
+                0.00011009676973838811,
+                0.00011009676973711136
+              ],
+              "kernel_identity_diagonal_link": [
+                3.762615548891235e-05,
+                0.0001100967698139943,
+                0.00011009676980766603
+              ],
+              "density_link": 0.00023511448344686487,
+              "temporal_Ward_defect": -1.738294116896178e-16,
+              "temporal_Ward_identity_defect": 2.0557886676555895e-17
+            },
+            {
+              "omega_Euclidean": 0.04,
+              "kernel_diagonal_link": [
+                0.00015011454985142114,
+                0.00022244429905482477,
+                0.00022244429904361152
+              ],
+              "kernel_identity_diagonal_link": [
+                0.00015011454992919226,
+                0.00022244429913043096,
+                0.0002224442991141662
+              ],
+              "density_link": 0.00023450512292218028,
+              "temporal_Ward_defect": -1.93218909059665e-16,
+              "temporal_Ward_identity_defect": 1.1683760716189005e-18
+            },
+            {
+              "omega_Euclidean": 0.08,
+              "kernel_diagonal_link": [
+                0.000594436162532741,
+                0.0006662225094897778,
+                0.0006662225094871688
+              ],
+              "kernel_identity_diagonal_link": [
+                0.0005944361626105121,
+                0.000666222509565384,
+                0.0006662225095577234
+              ],
+              "density_link": 0.00023215325470713144,
+              "temporal_Ward_defect": -1.6274552235365225e-16,
+              "temporal_Ward_identity_defect": 3.1641762777631643e-17
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "controls": {
+    "missing_contact_static_defect_link": 0.2665135448803652,
+    "missing_poles_static_defect_link": 0.2665135448802891,
+    "half_poles_static_defect_link": 0.13325677244011075,
+    "constant_A_alias_by_order": [
+      3.8830660908928394e-11,
+      7.610578833805448e-14
+    ],
+    "actual_vertex_Ward_max": 1.0998146837692957e-15,
+    "wrong_vertex_max": 4.848360326548985e-06,
+    "density_mixed_Ward_max": 6.815968247436948e-22,
+    "pole_remainder_at_smallest_q": 5.076922350344404e-05,
+    "oblique_q": {
+      "q": [
+        0.07,
+        0.05,
+        0.03
+      ],
+      "qtheta": [
+        0.0175,
+        0.0125,
+        0.0075
+      ],
+      "contact_link": [
+        0.26651226811831996,
+        0.2665128934629795,
+        0.26651331036810266
+      ],
+      "paramagnetic_static_link": [
+        [
+          0.26650609786350954,
+          6.3516779614203355e-06,
+          3.8110256035003032e-06
+        ],
+        [
+          6.351677961418438e-06,
+          0.2665023678538915,
+          2.7221813172665323e-06
+        ],
+        [
+          3.8110256035001914e-06,
+          2.7221813172663527e-06,
+          0.2664998811177787
+        ]
+      ],
+      "static_link": [
+        [
+          6.170254886636069e-06,
+          -6.3516779614243395e-06,
+          -3.811025603500001e-06
+        ],
+        [
+          -6.351677961424341e-06,
+          1.0525609164489606e-05,
+          -2.7221813172676936e-06
+        ],
+        [
+          -3.8110256035e-06,
+          -2.7221813172676995e-06,
+          1.342925040363835e-05
+        ]
+      ],
+      "static_raw_link": [
+        [
+          6.1702548104225485e-06,
+          -6.3516779614203355e-06,
+          -3.8110256035003032e-06
+        ],
+        [
+          -6.351677961418438e-06,
+          1.0525609088041232e-05,
+          -2.7221813172665323e-06
+        ],
+        [
+          -3.8110256035001914e-06,
+          -2.7221813172663527e-06,
+          1.3429250323937492e-05
+        ]
+      ],
+      "identity_vs_raw_contact_difference_link": [
+        [
+          7.621352076454986e-14,
+          -4.003924741671078e-18,
+          3.023907621697852e-19
+        ],
+        [
+          -5.902972609415219e-18,
+          7.644837420170327e-14,
+          -1.1612821706856458e-18
+        ],
+        [
+          1.9142944607947188e-19,
+          -1.3467823861343375e-18,
+          7.970085874641538e-14
+        ]
+      ],
+      "static_evaluation": "At nonzero q, exact bulk periodic identity: integral B(0)-B(q)+C(q)-C(0); raw unsubtracted contact-minus-poles retained",
+      "epsilon_link": [
+        [
+          0.09423728921022902,
+          1.1011572966257906e-05,
+          6.607008870317578e-06
+        ],
+        [
+          1.1011572966257934e-05,
+          0.0942301111992646,
+          4.7193617931614266e-06
+        ],
+        [
+          6.607008870317538e-06,
+          4.71936179316141e-06,
+          0.09422532561884846
+        ]
+      ],
+      "density_static_link": 4.8890282834806995e-05,
+      "density_static_physical": 0.20025459849136945,
+      "epsilon_longitudinal_static": 24.627530463089045,
+      "vertex_Ward_error": 2.275957200481571e-15,
+      "spectral_density_Ward_error": 1.4144788474656773e-21,
+      "mixed_density_current_Ward_error": 4.690114073175667e-22,
+      "pure_gradient_static_form": 4.5879461550266445e-20,
+      "pure_gradient_static_raw_form": -3.97196333339255e-17,
+      "wrong_short_path_vertex_error": 3.000343963407634e-07,
+      "species": [
+        {
+          "count": 64,
+          "m": 0.2,
+          "gap": 0.12941798806502236
+        }
+      ],
+      "pair_threshold": 0.2591211967752783
+    },
+    "native_path": {
+      "current_Bloch_error": 1.512904028985041e-16,
+      "contact_Bloch_error": 1.1149557758020516e-16,
+      "actual_derivative_error": 4.9175675764909043e-11
+    },
+    "canonical_oscillator": {
+      "q": [
+        0.05,
+        0.0,
+        0.0
+      ],
+      "canonical": "H=1/(2eps_b)(P+s.p)^2+sum Delta(x^2+p^2)/2+K A^2/2",
+      "full_spectral_omega": 0.0068671785228996175,
+      "compressed_symplectic": [
+        {
+          "bins": 16,
+          "omega": 0.00686718470969897,
+          "residue": 0.04059257169320624,
+          "relative_full_spectral_error": 9.009230401701984e-07,
+          "positive_Hessian_min": 4.7158225837123326e-05
+        },
+        {
+          "bins": 32,
+          "omega": 0.006867180117050281,
+          "residue": 0.040592463071359185,
+          "relative_full_spectral_error": 2.321405594418735e-07,
+          "positive_Hessian_min": 4.7158162760010715e-05
+        },
+        {
+          "bins": 64,
+          "omega": 0.00686717892813568,
+          "residue": 0.04059243495180232,
+          "relative_full_spectral_error": 5.9010561770378445e-08,
+          "positive_Hessian_min": 4.715814643103071e-05
+        }
+      ],
+      "identity_vs_raw_contact_difference_link": 1.0195145712355545e-13,
+      "quantum_scope": "Canonical oscillator discretizes the continuous-BZ identity law; differs from finite-node raw contact by reported alias, not an exact finite-box filled sea",
+      "missing_contact_static": -0.26650900726573673,
+      "missing_poles_static": 0.2665135448802891,
+      "missing_contact_positive_stiffness": false,
+      "missing_poles_nonzero_static_defect": true
+    }
+  },
+  "convergence": {
+    "epsilon_relative": 1.8204682206146572e-10,
+    "kappa_smallest_q_relative": 4.221589744446419e-11,
+    "constant_A_alias_final": 7.610578833805448e-14
+  },
+  "validity": {
+    "quadratic_collective": "large-N/RPA only; not exact interacting photon",
+    "frequency_gap": 0.2588359761300447,
+    "finite_q_threshold": "Numerical exact-band interband gap minima in every raw row/mode; analytic 2M lower bound also returned; no exact continuum threshold claim",
+    "frequency_remainder_Euclidean": "q0: eps_E=sum g2/[Delta*(Delta^2+omega_E^2)], relative <=omega_E^2/(4M^2)",
+    "frequency_remainder_retarded": "q0 belowpairgap: relative <=omega^2/(4M^2-omega^2); finite-q numerical spectral denominator evaluated directly, conservative gap lower bound remains 2M",
+    "field_remainder": "improved mass <=sqrt(g0)*r*a^3*sum p_j^4/4; kinetic <=v*sqrt(gs)*a^2*sum |p_j|^3/6",
+    "Cartesian_Phi_remainder": {
+      "Phi_matrix_radius": 2.5e-13,
+      "law": "Each Cartesian endpoint matrix operator-norm perturbation <=eta",
+      "onebody_operator_error": 2.9871080391903576e-12,
+      "current_operator_error": 2.5771080391903575e-12,
+      "contact_operator_error": 2.937108039190358e-12,
+      "remaining_interband_gap": 0.2588359761240705,
+      "projector_operator_error": 2.3081088525024176e-11,
+      "epsilon_physical_error_upper": 0.00025476520833254696,
+      "static_kernel_physical_error_upper": 1.043781243608823e-05,
+      "kappa_at_smallest_q_error_upper": 0.004175179338466448,
+      "assumptions": "Gap-preserving deterministic uniform Phi ball. No original Root-vacuum concentration claim; no old volume bounds copied."
+    },
+    "Root_transfer": "No frozen huge-volume/Root theorem transferred to this changed quantum law"
+  },
+  "assumptions": {
+    "quantum": "CAR charged fields and local canonical tangent oscillators, hbar=1 input. Compact U1 prepared-state completion is a separate microscopic branch, not an admitted stationary photon phase.",
+    "flavor": "Total N charged species with explicit mass spectrum; tagged excitation in first filled flavor, all N lower doublets filled; no extra species or repeated bubble",
+    "dynamics": "Physical UE_phys electric density kept, link term UE_phys/a Pi_link^2; bare curl^2 removed. Sea collective oscillator creates stiffness.",
+    "vacuum": "Filled lower doublets at fixed selected Phi mean; new species backreaction not yet self-consistently admitted",
+    "normal_transfer": "Original Phi/SU4/source fluctuation bounds do not automatically apply; new-law admission remains coupled debt"
+  },
+  "source_hashes": {
+    "induced_photon_response.py": "01f70abc8fafe4944aa35ab0127ca4bbb4d2eb70f26b363ce14f7349dabb6596",
+    "improved_phi_band.py": "da97aa8d9bcdb578db966533714b05a45d3747cca3f0b9dd253afb79bff76a76",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "bosonic_original_law_join.py": "8e107f1fecb8483200c1520b8afd0032a653c24bae5b81d1ecad36a81d0cdd9e",
+    "reference_photon_current_scattering.py": "b0afc7a8497ea17d26969e57f2296e8537535f55bc6eebb6ac567e9097707963"
+  },
+  "input_sha256": "9081e7e813066f0da2901261bfb0b7d5f05189f469c496a575dbc65e261d56b1",
+  "runtime": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+    "numpy": "2.5.3",
+    "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.39"
+  },
+  "elapsed_seconds": 121.50575757026672
+}

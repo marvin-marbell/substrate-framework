@@ -1,0 +1,114 @@
+{
+  "kind": "CURRENT_SIX_SOURCE_REVISION_BOUND_SELECTED_DIAGNOSTIC",
+  "selected_files": [
+    "vacuum_connected_schur_method_control_20261011.py",
+    "regular_field_graph_pole_boundary_parent_control_20261011.py",
+    "vacuum_connected_native_scientist_20261011.py",
+    "vacuum_connected_native_execute_20261011.py",
+    "fractional_flux_ir_consumer.py",
+    "fractional_flux_ir_capsule.py"
+  ],
+  "source_sha256": {
+    "vacuum_connected_schur_method_control_20261011.py": "f217e7d6d08a2a7af1bfaa96dfa30f07dfcd66a61aea817ba1b107d029f6c0fd",
+    "regular_field_graph_pole_boundary_parent_control_20261011.py": "4817993fc5b735885ce55d18dd3cbec09b8cb0fb0b04256b6aead79edcd52e2b",
+    "vacuum_connected_native_scientist_20261011.py": "a2618c53a90d6ecc15bc12bbfceab16d3640c342e507debe7de85f98a9fd3681",
+    "vacuum_connected_native_execute_20261011.py": "7c0fa8eaa2e45ee89097ca84dc5cfc6d5ebbfde18b0cfafe79cabc643220d32d",
+    "fractional_flux_ir_consumer.py": "f1dc5aa8baace1f126c148055c855efc20cd7ecddc354e619eebce7f10a22226",
+    "fractional_flux_ir_capsule.py": "a33f7bf7f41a8cb32e9c79797a6e78ec8cdc5bea8662729c3e993f714fdd6fa4"
+  },
+  "configuration": {
+    "include": [
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/vacuum_connected_schur_method_control_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/regular_field_graph_pole_boundary_parent_control_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/vacuum_connected_native_scientist_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/vacuum_connected_native_execute_20261011.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/fractional_flux_ir_consumer.py",
+      "../../home/administrator/substrate-222/proposals/P256-qed-backward/fractional_flux_ir_capsule.py"
+    ],
+    "extraPaths": [
+      "/home/administrator/substrate-222/proposals/P256-qed-backward"
+    ],
+    "venvPath": "/home/administrator/substrate-framework",
+    "venv": ".venv",
+    "pythonVersion": "3.12",
+    "typeCheckingMode": "basic"
+  },
+  "config_path": "/tmp/issue222-vacuum-weyl-final-z1j09n9l/pyrightconfig.json",
+  "natural_exit": true,
+  "returncode": 1,
+  "elapsed_seconds": 17.658900349983014,
+  "summary": {
+    "filesAnalyzed": 6,
+    "errorCount": 4,
+    "warningCount": 0,
+    "informationCount": 0,
+    "timeInSec": 16.968
+  },
+  "diagnostics": [
+    {
+      "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/fractional_flux_ir_consumer.py",
+      "severity": "error",
+      "message": "Type \"NDArray[Any] | Literal[0]\" is not assignable to return type \"ndarray[_AnyShape, dtype[Any]]\"\n\u00a0\u00a0Type \"NDArray[Any] | Literal[0]\" is not assignable to type \"ndarray[_AnyShape, dtype[Any]]\"\n\u00a0\u00a0\u00a0\u00a0\"Literal[0]\" is not assignable to \"ndarray[_AnyShape, dtype[Any]]\"",
+      "range": {
+        "start": {
+          "line": 21,
+          "character": 11
+        },
+        "end": {
+          "line": 21,
+          "character": 75
+        }
+      },
+      "rule": "reportReturnType"
+    },
+    {
+      "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/fractional_flux_ir_consumer.py",
+      "severity": "error",
+      "message": "Cannot access attribute \"real\" for class \"ndarray[_AnyShape, dtype[Incomplete]]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"ndarray[_AnyShape, dtype[Incomplete]]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Incomplete]]\" is not assignable to \"None\"",
+      "range": {
+        "start": {
+          "line": 34,
+          "character": 44
+        },
+        "end": {
+          "line": 34,
+          "character": 48
+        }
+      },
+      "rule": "reportAttributeAccessIssue"
+    },
+    {
+      "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/fractional_flux_ir_consumer.py",
+      "severity": "error",
+      "message": "Argument of type \"float\" cannot be assigned to parameter \"rho\" of type \"ndarray[_AnyShape, dtype[Any]]\" in function \"longitudinal\"\n\u00a0\u00a0\"float\" is not assignable to \"ndarray[_AnyShape, dtype[Any]]\"",
+      "range": {
+        "start": {
+          "line": 83,
+          "character": 22
+        },
+        "end": {
+          "line": 83,
+          "character": 25
+        }
+      },
+      "rule": "reportArgumentType"
+    },
+    {
+      "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/fractional_flux_ir_consumer.py",
+      "severity": "error",
+      "message": "Argument of type \"float\" cannot be assigned to parameter \"rho\" of type \"ndarray[_AnyShape, dtype[Any]]\" in function \"longitudinal\"\n\u00a0\u00a0\"float\" is not assignable to \"ndarray[_AnyShape, dtype[Any]]\"",
+      "range": {
+        "start": {
+          "line": 126,
+          "character": 30
+        },
+        "end": {
+          "line": 126,
+          "character": 45
+        }
+      },
+      "rule": "reportArgumentType"
+    }
+  ],
+  "stderr": ""
+}

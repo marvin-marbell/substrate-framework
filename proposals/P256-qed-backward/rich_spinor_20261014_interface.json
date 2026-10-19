@@ -1,0 +1,25 @@
+{
+  "law_id": "octahedron-neutral-orientor-spin-transfer-v1",
+  "module": "rich_spinor_20261014_model.py",
+  "identity_rule": "A consumer must construct an explicitly NEW coupled root from this Hamiltonian/current/contact and its own declared electromagnetic coordinates. This is not a permission to splice into old Hubbard/Phi or claim identity with rich_charged_gauss/rich_photon states.",
+  "functions": {
+    "Parameters": "p_gap,d_gap,rotor_gap,orientation,rotor_spin,charging; immutable dataclass; defaults1.4,3.2,2.0,.85,1.1,2.3",
+    "build_sector(params,number)": "Dense pure H_N, states, spin[3], commuting position[3], angular[3], parity, geometric hopping, parameters/law. CAR basis combinations of12 modes; mode=2*site+spin; neutral4 index FASTEST. Dimensions N0=4,N1=48,N2=264. number and physicalcharge=-number explicit.",
+    "solve(sector)": "Adds COMPLETE orthonormal Hermitian energies/vectors with parity/Jz resolution inside exact degeneracies. Full cubic dynamics does NOT conserve continuous total angular momentum; angular is a diagnostic operator only.",
+    "current(sector,q,epsilon)": "Dense dimNx dimN number/link-phase current J(q,epsilon); exact straight-line integral over all offsite electronic hopping. q[3] real inverse-length; epsilon[3] may be complex. Physical electron EMcurrent=-returnvalue because A_phase=-A_EM.",
+    "contact(sector,qout,epsout,qin,epsin)": "Dense mixed second source derivative, outgoing complex conjugate included; do not conjugate outgoing epsilon again. Physical EMcontact same returnvalue.",
+    "spin_current(sector,q,epsilon,axis)": "Dense anticommutator {primitiveS_axis,J}/2, axis0/1/2. Physical charged-spin flux=-returnvalue; spin torque is i[H,S], not zero.",
+    "scattering(sector,initial,final,qin,epsin,qout,epsout,omega,eta=.025,virtual=None)": "Exact molecular current/contact Kramers-Heisenberg response. Sector solved; full48 intermediates default. omega_out=omega+E_i-E_f. virtual parameter is only for an explicitly labeled OMITTED-SECTOR comparator. No recoil or dynamical photon feedback.",
+    "car_source(origin,destination,mode,creation)": "Canonical exact c_mode^dagger (creation=True) or c_mode (False), destination<-origin with neutralorientor untouched; positive reference normalization and exchange sign from CAR.",
+    "charged_spectral(sectors,ground_indices=(0,1))": "Requires solved N0,N1,N2 dictionary. Returns addition amplitudes[nground,264,12],removal amplitudes[nground,4,12],addition energies[nground,264],removal energies[nground,4]. Full neutral and charge virtual sectors; incoherent doublet average. Negative removal poles are holes.",
+    "charged_green(data,omega,eta=.025)": "Full retarded12x12 spin/site G_ab at z=omega+i eta. Not a pole fit; keep source amplitudes if receiver needs projected orbitals. Caller responsible for positive eta.",
+    "line_profile(q,epsilon,r1,r2)": "Exact dimensionless oriented link phase for plane-wave probe, including sinc. Useful when replacing external phase by explicit quantum-link or two-polarization coordinates in a NEW root."
+  },
+  "serialized_full_evidence": {
+    "actual1": "rich_spinor_20261014_actual1_states.npz: everybranch H,V,E,spin,angular,position,parity, currentxyz; selectedbranch full chargedaddition/removal spectralarrays and N0/N2 fullH/V/E/bases; finiteq spin-current and contact examples.",
+    "actual2": "rich_spinor_20261014_actual2_states.npz: complete dynamic/control H/V/E and exact full static current+contact tensors; result.json has full angle/frequency/regulator/helicity scan and exact full-H time response.",
+    "source_hash": "3c7148f7136a9cd7430b2b121aca393feba54bfe75fd2d40fa0bcda079d490e1",
+    "conventions_authority": "rich_spinor_20261014_equations.json; especially numberphase vs physical negative charge and cubic not exactSO3."
+  },
+  "not_supplied": ["Self-consistent propagating D(q,omega)", "Actual spatial lattice/recoil G(k,omega)", "Gauss-constrained electromagnetic electric/magnetic state", "Relativistic antiparticle interpretation", "Classical substrate/fermion/spin origin"]
+}

@@ -1,0 +1,337 @@
+{
+  "schema": 1,
+  "kind": "NATIVE_GROUND_SENSITIVE_ISOTYPIC_RESET_TAIL_AND_TWO_THRESHOLD_CONSUMER",
+  "clifford_carrier": {
+    "scope": "exact native Cl4 orbit/normal-tube algebra and metric",
+    "Clifford_generated_M4_rank": 16,
+    "centralizer_SU4": "Z4 exactly",
+    "Phi_fields_centre_class": 0,
+    "HS_orbit_inertia_eigenvalues": {
+      "6": 4,
+      "2": 4,
+      "4": 6,
+      "8": 1
+    },
+    "q_metric_min_at_orbit": 4,
+    "normal_dimension": 45,
+    "declared_tube_relative_radius": "1/65536",
+    "product_cos_normal_profile_H1_gradient_upper": "34789235097600",
+    "scaled_orbit_Jordan_over_lambda_R4": 256,
+    "tube_Jordan_bound_two_sites": "2^16 lambda R^4",
+    "tube_alignment_plus_external_diagonal_bound": "512 alpha R^2",
+    "no_Gauss_to_SO60_angular_bound": true,
+    "tube_global_injectivity_and_normalization_proof": "analytic in reset proof, not inferred from metric samples"
+  },
+  "SU4_centre_and_highest_weight": {
+    "all_boundary_admissible_centre_pairs": "(q,-q); no others occur in Phi_x,Phi_y,internal-link Hilbert",
+    "minimal_link_Dynkin_by_q": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "minimal_link_C2": [
+      "0",
+      "15/8",
+      "5/2",
+      "15/8"
+    ],
+    "carrier_Phi_choice": "sigma_x=mu_x+lambda*, sigma_y=mu_y+lambda (Cartan highest components)",
+    "CG_existence": "Cartan highest-vector component + compact-representation Hom reciprocity; explicit fundamental/adjoint CG below",
+    "positive_exact_highest_weight_controls": 64,
+    "norm_independent_of_magnetic_dimension": "normalized Peter-Weyl isometries and normalized CG; I_Dmu retained"
+  },
+  "CG_and_annihilation_Gauss": {
+    "scope": "actual native SU4 representation/CG/Gauss controls; NOT H truncation",
+    "mu_x_mu_y": [
+      "4",
+      "4bar"
+    ],
+    "link": "4 x 4bar",
+    "Phi_irreps": [
+      "15",
+      "15"
+    ],
+    "CG_isometry_and_intertwiner_max_defect": [
+      5.551115123125783e-17,
+      5.551115123125783e-17
+    ],
+    "external_dual_Gauss_annihilation_norms": [
+      3.978502822471757e-17,
+      3.978502822471757e-17
+    ],
+    "multiplicity_Kraus_Gauss_annihilation_norm": 0.0,
+    "source_and_reset_norm": 1,
+    "wrong_magnetic_reset_Gauss_defect_squared": 0.7500000000000002,
+    "CAR_U1_Ref_unchanged": "Kraus acts Phi/link multiplicity ONLY; identities on these sectors"
+  },
+  "ground_variational_and_cutoff_gates": {
+    "carrier_energy": "A q^(2/3)+B q^(1/3)+C, q=1+C2(mu_x)+C2(mu_y)",
+    "R": "2^-2048 q^(1/6)",
+    "A_exact": "316912650057057350374175866880",
+    "B_exact_sha256": "8f5894dfcc8d6f96ee39c0e6c341704258e10ab44b7f67ce250a0685e755ae88",
+    "B_bits": 6151,
+    "C_exact_sha256": "b4916b1f8d49b4fcec016191b0abe75ed4d6cd76da02fe64acbc2c55516c8e3b",
+    "first_ground_h_tail": "E[h 1_{h> M}] <= A Cq^(2/3) (Ch/M)^(1/3)+B Cq^(1/3)(Ch/M)^(2/3)+C Ch/M + complete boundary costs",
+    "tail_is_not_arbitrary_high_moment": true,
+    "two_threshold_bootstrap_strict_stages": [
+      {
+        "input_h_and_external_Casimir_moment_p": "1",
+        "carrier_tail_exponent": "1/3",
+        "Phi_U_low_high_current_exponent": "3/4",
+        "two_threshold_result_h_moment_supremum_not_endpoint": "4/3",
+        "lift_from_local_graph_proved_in_packet": true
+      },
+      {
+        "input_h_and_external_Casimir_moment_p": "5/4",
+        "carrier_tail_exponent": "7/12",
+        "Phi_U_low_high_current_exponent": "7/8",
+        "two_threshold_result_h_moment_supremum_not_endpoint": "19/12",
+        "lift_from_local_graph_proved_in_packet": true
+      },
+      {
+        "input_h_and_external_Casimir_moment_p": "3/2",
+        "carrier_tail_exponent": "5/6",
+        "Phi_U_low_high_current_exponent": "1",
+        "two_threshold_result_h_moment_supremum_not_endpoint": "11/6",
+        "lift_from_local_graph_proved_in_packet": true
+      },
+      {
+        "input_h_and_external_Casimir_moment_p": "7/4",
+        "carrier_tail_exponent": "13/12",
+        "Phi_U_low_high_current_exponent": "9/8",
+        "two_threshold_result_h_moment_supremum_not_endpoint": "25/12",
+        "lift_from_local_graph_proved_in_packet": true
+      },
+      {
+        "input_h_and_external_Casimir_moment_p": "2",
+        "carrier_tail_exponent": "4/3",
+        "Phi_U_low_high_current_exponent": "5/4",
+        "two_threshold_result_h_moment_supremum_not_endpoint": "9/4",
+        "lift_from_local_graph_proved_in_packet": true
+      }
+    ],
+    "supported_first_graph_lift": "1<=p<=2 for local h^p to internal Haar Casimir^p and radial r^(4p); higher lift not silently assumed",
+    "current_gate": {
+      "Phi": "||P>2M Phi P<=M|| <= c M^-1/2",
+      "U": "||P>2M U P<=M|| <= c M^-1/2+c/M",
+      "Phi_U": "||P>2M Phi U P<=M|| <= c M^-1/4; full Phi*Haar derivative retained",
+      "Casimir_U": "P_{q>2J} U P_{q<=J}=0 for J>=64 via native tensor-Casimir support"
+    },
+    "actual_cutoff_exterior_retry": [
+      {
+        "radial_moment_order": "4",
+        "cone_R_M2_union_norm_exponent": "1",
+        "complete_triangle_action_M_exponent": "6",
+        "both_vanish_in_this_route": false,
+        "proved_by_reset_bootstrap_and_graph_lift": true
+      },
+      {
+        "radial_moment_order": "7",
+        "cone_R_M2_union_norm_exponent": "-1/2",
+        "complete_triangle_action_M_exponent": "9/2",
+        "both_vanish_in_this_route": false,
+        "proved_by_reset_bootstrap_and_graph_lift": true
+      },
+      {
+        "radial_moment_order": "8",
+        "cone_R_M2_union_norm_exponent": "-1",
+        "complete_triangle_action_M_exponent": "4",
+        "both_vanish_in_this_route": false,
+        "proved_by_reset_bootstrap_and_graph_lift": true
+      },
+      {
+        "radial_moment_order": "10",
+        "cone_R_M2_union_norm_exponent": "-2",
+        "complete_triangle_action_M_exponent": "3",
+        "both_vanish_in_this_route": false,
+        "proved_by_reset_bootstrap_and_graph_lift": false
+      },
+      {
+        "radial_moment_order": "16",
+        "cone_R_M2_union_norm_exponent": "-5",
+        "complete_triangle_action_M_exponent": "0",
+        "both_vanish_in_this_route": false,
+        "proved_by_reset_bootstrap_and_graph_lift": false
+      },
+      {
+        "radial_moment_order": "17",
+        "cone_R_M2_union_norm_exponent": "-11/2",
+        "complete_triangle_action_M_exponent": "-1/2",
+        "both_vanish_in_this_route": true,
+        "proved_by_reset_bootstrap_and_graph_lift": false
+      }
+    ],
+    "precise_remaining_operator_gate": "R^3 quadratic-action triangle at R~M^2 still grows; Phi U current contains Phi*d_Haar, and first local graph lift does not supply r^p>16 or excitation-local summation/static density",
+    "same_static_exterior_or_range_closed": false
+  },
+  "native_boundary_and_Casimir_budgets": {
+    "all65_loads": [
+      1,
+      1,
+      63
+    ],
+    "Ref4_existing_charge_conservatively_included": true,
+    "B_sha256": "1b7c9eb9ac198a7bb987e3c704521cc26565c2a07ca9c9efc43863c9debf62c1",
+    "B_lt_512lambda": true,
+    "R0_sha256": "a153d204bc8c0a9a2e4b609dc4ffa1cf2f6e39861b5a5e85abfd8a5c6deff18e",
+    "C4_sha256": "1fead4c2fb7f8d83d82b64eb89c1efed5c448295fd90e7aafe75504ec1efa727",
+    "Ch": "1+67 R0+14 alpha sqrt(C4)",
+    "Cq_exact_sha256": "658cb77370f103d0b4f606d1e515a1bdbdea66aa5c33a52e965830a542330a77",
+    "Cq": "1+100 R0/kHaar+2090880",
+    "boundary_alignment_edges": 10,
+    "external_link_plaquette_faces": 4,
+    "D_alignment": "20 alpha (Ch*C4/lambda)^(1/4)",
+    "D_inside_matter": "2B (Ch/lambda)^(1/4)",
+    "D_outside_matter": "4B C4^(1/4)",
+    "D_plaquette": "32 beta",
+    "complete_boundary_variation": "3D sqrt(p)+D_outside p^(3/4)+D_plaquette p; outside-Phi internal-U paths NOT parity-killed",
+    "fullE_U1_CAR_kinetics_outside_block_unchanged": true
+  },
+  "native_Phi_U_and_Casimir_threshold_jets": {
+    "Cfund_exact": "15/8",
+    "Phi_times_full15_Haar_first_jet_HS_squared": "15/2",
+    "Phi_U_commutator_retains_nonzero_mixed_derivative": true,
+    "exact_fundamental_dual_Pieri_threshold_controls": 712,
+    "centre_pairs_preserved": true,
+    "casimir_two_threshold_native_charge_checks": [
+      64,
+      64,
+      256
+    ],
+    "principal_current_order": "r~h^1/4, Haar derivative~h^1/2, product~h^3/4; energy gap gives h^-1/4",
+    "scope": "actual native coefficient/tensor controls plus analytic block spectral gate, NOT numerical H spectrum"
+  },
+  "native_radial_IMS_assessment": {
+    "native_identity": "q_L(f Omega)=kphi <sum |grad_q f|^2> for scalar radial f; all other full-H terms commute f",
+    "cutoff": "eta(r/M)=1 for r<=M,0 for r>=2M; r=|q|/sqrt2; grad_q r squared=1/2; eta phase derivative<=pi",
+    "rows": [
+      {
+        "field_r_cutoff": 4,
+        "patch_radius_div_fixed_cone_constant": 16,
+        "patch_sites": 35937,
+        "source_norm_tail_squared_div_C8": "35937/65536",
+        "exact_ground_excitation_form_tail_div_kphi_C8_upper": "35937/131072",
+        "core_inserted_tail_form_first_term_div_a_gA_sqrt_C8": 0.7405100286552928,
+        "full_action_first_derivative_triangle_exponent": 3
+      },
+      {
+        "field_r_cutoff": 16,
+        "patch_radius_div_fixed_cone_constant": 256,
+        "patch_sites": 135005697,
+        "source_norm_tail_squared_div_C8": "135005697/4294967296",
+        "exact_ground_excitation_form_tail_div_kphi_C8_upper": "135005697/137438953472",
+        "core_inserted_tail_form_first_term_div_a_gA_sqrt_C8": 0.177294848569972,
+        "full_action_first_derivative_triangle_exponent": 3
+      },
+      {
+        "field_r_cutoff": 64,
+        "patch_radius_div_fixed_cone_constant": 4096,
+        "patch_sites": 549957165057,
+        "source_norm_tail_squared_div_C8": "549957165057/281474976710656",
+        "exact_ground_excitation_form_tail_div_kphi_C8_upper": "549957165057/144115188075855872",
+        "core_inserted_tail_form_first_term_div_a_gA_sqrt_C8": 0.04420226626602248,
+        "full_action_first_derivative_triangle_exponent": 3
+      }
+    ],
+    "crop_excitation_form_scaling_at_radial8": "ground O(M^-4); A Omega graph source tail O(M^-1)+O(M^-4)",
+    "actual_original_U_crop_comparison": "U A Omega and U chi A Omega are uniformly close in norm AND excitation form because U preserves L form; the cropped vector is STILL evolved by ORIGINAL fullH",
+    "missing_unitary_static_boundary": "No uniformly compared Dirichlet/compressed finite-patch evolution or THIS static-core B_R(t). IMS small form is NOT small graph/action; (U-1)chi A Omega need not vanish with R.",
+    "same_static_exterior_or_range_closed": false
+  },
+  "profile_member_sha256": "1c79b1a74c4236079645ebf9765a48c1c2263ec7b7209e9f103704c98752da94",
+  "proof_sha256": "937316463510e1fc265c7632a8754c00d7900bdf69f931271a18c6565c2e66b6",
+  "captured_revision": "a319a0439db328ae73e4b304aedf85d48d0c720270c0f001831ed7d57f6b52cb",
+  "assignment_layer": {
+    "captured_parent_reported": "BOOK000273",
+    "current_parent_reported": "BOOKc097",
+    "source": "parent IRC; parent sole writer, no memory rebind"
+  },
+  "source_input_sha256_before": {
+    "ground_magnetic_parent_integration_actual6_20261011_capsule.json": "edb74d94060e9a9ecd841d8f0735b1bcafd80e495747bb345ef28c20510abe24",
+    "ground_magnetic_parent_integration_actual6_20261011_receipt.json": "b563dcc693550054efcbe44c1c71624ecc3b677c7414eb0d9dc5fa072ae1646e",
+    "ground_weighted_form_review_proof_20261011.json": "a5acd76ef883ee18119a7f315d792fb6541e38d881a329ccc9dd43dc0c1c24e2",
+    "ground_word_domain_review_proof_20261011.json": "79fe5a38f485543ee49aa3fb98a506005baa05b4e8b5fafe288be070eabfbcfa",
+    "ground_word_parent_graph_packet_qualification_20261011.json": "67212a6de6e6b21c3a765fe8e260ac65e19967218e75ab3a6d10c87192da28c0",
+    "ground_word_parent_weighted_form_qualification_20261011.json": "5a0495e1646671136f096b7c790d30816824374c84478077eba0f0163a6ce1f1",
+    "ground_word_transport_proof_20261011.json": "027059f948f5e4ba2c2afa862101a31302920d0b9563c8303a01582005f4f54f",
+    "history_join_parent_execute_20261012.py": "12f9a2cafdb9efb6e4f2c8c407de1c21daa4c41b46a6883e3958394535bf88fe",
+    "joined_phi_u1_ground_magnetic_weighted_parent_packet_20261011.json": "b9185975b2e0056ebf859eeeca8bc3625bbc1dffb7eb3df7292ebfe09b3105e2",
+    "joined_phi_u1_ground_magnetic_weighted_parent_review_20261011.json": "7b95bd6bd11b440041e35fc421cb080bc9934ce575039232b5264fba5852ca03",
+    "joined_phi_u1_ground_magnetic_weighted_scoped_acceptance_20261011.json": "ad835aeb35bae5d6abb1efc6f069c7e5b10e6214c6003022d7113a9105d53db1",
+    "joined_phi_u1_uniform_gauss_limit_epoch4_20261010_actual_executed_inputs.zip": "8af45d28d48ae0ab8302dcea11cdb9356af972a5373ae2568008ff0a99587649",
+    "native_static_exterior_actual3_20261011_capsule.json": "a712bef464476bf554d2255989e14bc7a92055c2ed11791ce75c8a43ba4eb5de",
+    "native_static_exterior_actual3_20261011_receipt.json": "790bcd25cbd3e8bd44a04a22f80c9d3aeee902a227944f581100420a5188b6de",
+    "native_static_exterior_contract_20261011.json": "3b280bf0f6970fa8a51eb0781531f430ed77dc6344194ac0b9ddedda5281110e",
+    "native_static_exterior_delivery_20261011.json": "a4bae3d082be01aa9757053c4db92a7bd55ce60d51f5dd09ef3da305de326ec9",
+    "native_static_exterior_execute_20261011.py": "947fb874937c86b34773cb0336bfcf033b42fd86aab3c41752e9f88b498cbf4d",
+    "native_static_exterior_language_20261011.json": "bb4e92b0ecfbf3f884b4b8b7110843efd72e918703120308525110e6dd7f6f39",
+    "native_static_exterior_reset_consumer_20261011.py": "1be4abebfc7665facefc6f7b5f3955be2771f36cdccb75634c7f81e768b877f0",
+    "native_static_exterior_reset_consumer_parenttyped_20261012.py": "4106327b9faa54f11995bb1fd2dedffe32f1d4aaa6a6c6ffd9af3a51821f4aa6",
+    "native_static_exterior_reset_contract_20261011.json": "22d388b0bc7ce7ed15d03d21f921872b7d39c2efdf905606475846369a360d1c",
+    "native_static_exterior_reset_interface_20261011.json": "7ff1fa74eb51a60dfedac21aca5ff505a2616da1c6da18c171318f0557ab9a24",
+    "native_static_exterior_reset_language_20261011.json": "933ec3682964c9acceebe8fdf83883d8c3f235a467fcf4e61fe5a73f53ccb66a",
+    "native_static_exterior_reset_proof_20261011.json": "937316463510e1fc265c7632a8754c00d7900bdf69f931271a18c6565c2e66b6",
+    "weighted_evolution_closure_proof_20261011.json": "40a82a3de1ce02ee64b04982b29fb8b78e6ff28aec1c6d954adb3c4b47ae0cbd",
+    "weighted_evolution_parent_ground_family_qualification_20261011.json": "43fc063c6c458c4691fd2c16703d02b808cbec62810e68e56ac623d365473c41",
+    "weighted_graph_review_proof_20261011.json": "ed65c624fb737f26f2e148dbe72181d843d802ee4e690536c03315bff506b90e",
+    "weighted_unitary_review_graph_discharge_addendum_20261011.json": "1e8154f5b1f9c53204b424fd7aa73a7c5d31bdbd3c06f5614580f3797570fc8c",
+    "weighted_unitary_review_proof_20261011.json": "2a8f63b77e6248f258f9d0c290d2573278aa8e6e4015bb5b7791e8d5ddc7dec6"
+  },
+  "source_input_sha256_after": {
+    "ground_magnetic_parent_integration_actual6_20261011_capsule.json": "edb74d94060e9a9ecd841d8f0735b1bcafd80e495747bb345ef28c20510abe24",
+    "ground_magnetic_parent_integration_actual6_20261011_receipt.json": "b563dcc693550054efcbe44c1c71624ecc3b677c7414eb0d9dc5fa072ae1646e",
+    "ground_weighted_form_review_proof_20261011.json": "a5acd76ef883ee18119a7f315d792fb6541e38d881a329ccc9dd43dc0c1c24e2",
+    "ground_word_domain_review_proof_20261011.json": "79fe5a38f485543ee49aa3fb98a506005baa05b4e8b5fafe288be070eabfbcfa",
+    "ground_word_parent_graph_packet_qualification_20261011.json": "67212a6de6e6b21c3a765fe8e260ac65e19967218e75ab3a6d10c87192da28c0",
+    "ground_word_parent_weighted_form_qualification_20261011.json": "5a0495e1646671136f096b7c790d30816824374c84478077eba0f0163a6ce1f1",
+    "ground_word_transport_proof_20261011.json": "027059f948f5e4ba2c2afa862101a31302920d0b9563c8303a01582005f4f54f",
+    "history_join_parent_execute_20261012.py": "12f9a2cafdb9efb6e4f2c8c407de1c21daa4c41b46a6883e3958394535bf88fe",
+    "joined_phi_u1_ground_magnetic_weighted_parent_packet_20261011.json": "b9185975b2e0056ebf859eeeca8bc3625bbc1dffb7eb3df7292ebfe09b3105e2",
+    "joined_phi_u1_ground_magnetic_weighted_parent_review_20261011.json": "7b95bd6bd11b440041e35fc421cb080bc9934ce575039232b5264fba5852ca03",
+    "joined_phi_u1_ground_magnetic_weighted_scoped_acceptance_20261011.json": "ad835aeb35bae5d6abb1efc6f069c7e5b10e6214c6003022d7113a9105d53db1",
+    "joined_phi_u1_uniform_gauss_limit_epoch4_20261010_actual_executed_inputs.zip": "8af45d28d48ae0ab8302dcea11cdb9356af972a5373ae2568008ff0a99587649",
+    "native_static_exterior_actual3_20261011_capsule.json": "a712bef464476bf554d2255989e14bc7a92055c2ed11791ce75c8a43ba4eb5de",
+    "native_static_exterior_actual3_20261011_receipt.json": "790bcd25cbd3e8bd44a04a22f80c9d3aeee902a227944f581100420a5188b6de",
+    "native_static_exterior_contract_20261011.json": "3b280bf0f6970fa8a51eb0781531f430ed77dc6344194ac0b9ddedda5281110e",
+    "native_static_exterior_delivery_20261011.json": "a4bae3d082be01aa9757053c4db92a7bd55ce60d51f5dd09ef3da305de326ec9",
+    "native_static_exterior_execute_20261011.py": "947fb874937c86b34773cb0336bfcf033b42fd86aab3c41752e9f88b498cbf4d",
+    "native_static_exterior_language_20261011.json": "bb4e92b0ecfbf3f884b4b8b7110843efd72e918703120308525110e6dd7f6f39",
+    "native_static_exterior_reset_consumer_20261011.py": "1be4abebfc7665facefc6f7b5f3955be2771f36cdccb75634c7f81e768b877f0",
+    "native_static_exterior_reset_consumer_parenttyped_20261012.py": "4106327b9faa54f11995bb1fd2dedffe32f1d4aaa6a6c6ffd9af3a51821f4aa6",
+    "native_static_exterior_reset_contract_20261011.json": "22d388b0bc7ce7ed15d03d21f921872b7d39c2efdf905606475846369a360d1c",
+    "native_static_exterior_reset_interface_20261011.json": "7ff1fa74eb51a60dfedac21aca5ff505a2616da1c6da18c171318f0557ab9a24",
+    "native_static_exterior_reset_language_20261011.json": "933ec3682964c9acceebe8fdf83883d8c3f235a467fcf4e61fe5a73f53ccb66a",
+    "native_static_exterior_reset_proof_20261011.json": "937316463510e1fc265c7632a8754c00d7900bdf69f931271a18c6565c2e66b6",
+    "weighted_evolution_closure_proof_20261011.json": "40a82a3de1ce02ee64b04982b29fb8b78e6ff28aec1c6d954adb3c4b47ae0cbd",
+    "weighted_evolution_parent_ground_family_qualification_20261011.json": "43fc063c6c458c4691fd2c16703d02b808cbec62810e68e56ac623d365473c41",
+    "weighted_graph_review_proof_20261011.json": "ed65c624fb737f26f2e148dbe72181d843d802ee4e690536c03315bff506b90e",
+    "weighted_unitary_review_graph_discharge_addendum_20261011.json": "1e8154f5b1f9c53204b424fd7aa73a7c5d31bdbd3c06f5614580f3797570fc8c",
+    "weighted_unitary_review_proof_20261011.json": "2a8f63b77e6248f258f9d0c290d2573278aa8e6e4015bb5b7791e8d5ddc7dec6"
+  },
+  "runtime": {
+    "python": "/home/administrator/substrate-framework/.venv/bin/python",
+    "numpy": "2.5.3",
+    "sympy": "1.14.0",
+    "elapsed_seconds": 3.8617375640023965
+  },
+  "native_H_or_ground_U_numerics": false,
+  "finite_representation_controls_are_H_truncation": false,
+  "source_coupling_boundary_adoption": false
+}

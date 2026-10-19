@@ -1,0 +1,17 @@
+{
+  "kind": "PARENT_REVIEW_EXIT_AND_CLOCK_OWNER_CORRECTION_NOT_SCIENCE_CHANGE",
+  "failed_epoch": "history_operator_reset_parent_canonical_carrier_join_actual5_20261012",
+  "failed_capsule": {
+    "path": "history_operator_reset_parent_canonical_carrier_join_actual5_20261012_capsule.json",
+    "sha256": "28eb896d62c854310ad041fdd52065ee0623c16c7696b9841b931d31b0bd49f0"
+  },
+  "failed_stderr": {
+    "path": "history_operator_reset_parent_canonical_carrier_join_actual5_20261012_stderr.txt",
+    "sha256": "a0882bfefc91a250f33300a45e975116bb469ff5026a4b0a067ae9fe0f7546d4"
+  },
+  "natural_exit": true,
+  "returncode": 1,
+  "cause": "QuantumBoundarySign natural exit records started/finished timestamps but no monotonic elapsed_seconds; CarrierSupport uses exit_code rather than returncode. Parent previously assumed one common exit schema.",
+  "replacement": "Explicit source-selected returncode_key/elapsed_seconds_key; retain timestamp interval without inventing a monotonic duration. All natural-exit and rc0 checks remain mandatory.",
+  "original_epochs_not_modified_or_rebound": true
+}

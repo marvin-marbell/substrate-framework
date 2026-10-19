@@ -1,0 +1,877 @@
+{
+  "source_sha256": {
+    "original_centre_charge.py": "37745e237aad5435162f4b44d99efd336fac9933de03aca8dd48719dfdcb7ae5",
+    "original_centre_charge.md": "e24047710f1b7fbbaaf443bf9cbf327d059868a72494466ba3c4d9fdebf59279",
+    "bulk_flat_holonomy_bound.py": "b9a6f096ac5cede629e18aa15fa615e19165998fa398119e19123683144d30f5",
+    "bulk_flat_holonomy_bound.md": "1e394f12117af814893ef840cfbd8993c1c9f1fd4dcec0fe128158e69a01585b",
+    "bulk_quantum_selection.py": "0dcdb45b755cc805186e72d1db70cc32bf392fa1a35c2e42d8dd99ff43b8f24f",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "unrestricted_field_minimum.py": "443840b860a0adfb4fd5455ecf9188ddb63b31fae252619568a60ed4a9915301"
+  },
+  "source_bindings_unchanged": true,
+  "governing_plan": "issue-222-continuing-backward-20260930",
+  "assignment_plan_revision": "e1874737294f261dfc305be3f8d054bd1223a1a3142bdf1a70c6d6cc136b76a4",
+  "native_law": "u4*(-Delta_SU4)+(J/8)*Lambda^(5/4)*W; Tr(TaTb)=delta_ab/2; all SU4 points retained",
+  "candidate_trajectory": {
+    "u4_prefactor": 0.3,
+    "u4_power": -0.5,
+    "original_heavy_coefficient": "Lambda",
+    "field_kinetic_original": "sqrtLambda/2",
+    "compatible_alternative_field_kinetic": "Lambda^(-1/2)/2; separately changed law, no phase assumption"
+  },
+  "source_selection": {
+    "spacing": 1.0,
+    "grid": 32,
+    "stiffness": 2.0,
+    "Gram": [
+      [
+        0.4187253908699568,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0632221974274214,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0632221974274214,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0632221974274214
+      ]
+    ],
+    "value": -0.561966275105561,
+    "status": "source finite-grid full-rank frame; not interval continuum Gstar",
+    "added_local_CAR_selector_energy_used": false
+  },
+  "geometric_controls": {
+    "Gram_diagonal": [
+      0.41872539086995675,
+      0.0632221974274214,
+      0.0632221974274214,
+      0.0632221974274214
+    ],
+    "Clifford_residual": 0.0,
+    "commutator_eigenvalues": [
+      2.4593980679044313e-17,
+      0.25288878970968537,
+      0.2528887897096858,
+      0.2528887897096858,
+      0.5057775794193707,
+      0.5057775794193708,
+      0.5057775794193713,
+      0.7586663691290577,
+      1.6749015634798268,
+      1.9277903531895122,
+      1.9277903531895126,
+      1.9277903531895133,
+      2.180679142899196,
+      2.1806791428991987,
+      2.1806791428991996,
+      2.4335679326088844
+    ],
+    "scalar_commutant_dimension": 1,
+    "ell_min": 0.25288878970968537,
+    "ell_max": 2.4335679326088844,
+    "local_W_quadratic_eigenvalues": [
+      0.12644439485484257,
+      0.12644439485484288,
+      0.12644439485484293,
+      0.25288878970968526,
+      0.2528887897096854,
+      0.25288878970968587,
+      0.3793331845645285,
+      0.8374507817399137,
+      0.9638951765947561,
+      0.9638951765947561,
+      0.9638951765947564,
+      1.090339571449599,
+      1.090339571449599,
+      1.0903395714495994,
+      1.2167839663044422
+    ],
+    "W_zero_set": [
+      "I",
+      "iI",
+      "-I",
+      "-iI"
+    ],
+    "centre_minima_not_deleted": true
+  },
+  "native_SU4_controls": {
+    "seed": 222970,
+    "all15_derivatives_at_noncentral_controls": true,
+    "noncentral_W": [
+      4.586071403459551,
+      0.731369680229703,
+      0.5215844189833128
+    ],
+    "centre_W": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "packet_derivative_relative_error": 8.864358312585805e-10,
+    "potential_derivative_error": 1.8300723912622083e-09,
+    "kinetic_Fierz_relative_error": 3.570738115128319e-16,
+    "centre_character_relative_error": 2.0126633107898362e-16,
+    "native_near_point_derivatives": [
+      {
+        "charge": 0,
+        "real": [
+          0.01308890193560649,
+          0.23313977563362753,
+          0.03172273236327189,
+          0.13836837383411152,
+          -0.07799999984713414,
+          -0.26275504543483913,
+          -0.20233387891819687,
+          -0.08129669848427365,
+          0.23975735164730322,
+          0.26323265755215547,
+          0.056973662158425836,
+          -0.12123441554663507,
+          -0.1821565520409357,
+          0.2990466974463718,
+          -0.04129308101976038
+        ],
+        "imaginary": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "charge": 1,
+        "real": [
+          0.013088901652131718,
+          0.23313977564698452,
+          0.031722732450988604,
+          0.1383683734809055,
+          -0.07799999996321313,
+          -0.2627550452755847,
+          -0.2023338788642579,
+          -0.08129669837127615,
+          0.2397573516738694,
+          0.26323265793477285,
+          0.056973661804998944,
+          -0.12123441552860117,
+          -0.18215655230999828,
+          0.29904669749478446,
+          -0.041293080995150735
+        ],
+        "imaginary": [
+          2.681270088448247e-08,
+          -1.2584800550223164e-09,
+          -8.296009057481191e-09,
+          3.341085115225477e-08,
+          1.0977682503283577e-08,
+          -1.5068576359269717e-08,
+          -5.1060537860091616e-09,
+          -1.0689560318463732e-08,
+          -2.507731248919147e-09,
+          -3.6184295413342225e-08,
+          3.34300328189254e-08,
+          -1.7082775972636322e-09,
+          2.5445426901538284e-08,
+          -4.572839517304523e-09,
+          -2.3285663535094825e-09
+        ]
+      },
+      {
+        "charge": 2,
+        "real": [
+          0.01308890136865114,
+          0.23313977566023814,
+          0.03172273253869125,
+          0.13836837312763808,
+          -0.07800000007925754,
+          -0.26275504511621367,
+          -0.20233387881022924,
+          -0.08129669825824257,
+          0.23975735170032925,
+          0.26323265831727344,
+          0.056973661451546795,
+          -0.12123441551051349,
+          -0.18215655257898003,
+          0.29904669754306457,
+          -0.04129308097052277
+        ],
+        "imaginary": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "charge": 3,
+        "real": [
+          0.013088901652131718,
+          0.23313977564698452,
+          0.031722732450988604,
+          0.1383683734809055,
+          -0.07799999996321313,
+          -0.2627550452755847,
+          -0.2023338788642579,
+          -0.08129669837127615,
+          0.2397573516738694,
+          0.26323265793477285,
+          0.056973661804998944,
+          -0.12123441552860117,
+          -0.18215655230999828,
+          0.29904669749478446,
+          -0.041293080995150735
+        ],
+        "imaginary": [
+          -2.681270088448247e-08,
+          1.2584800550223164e-09,
+          8.296009057481191e-09,
+          -3.341085115225477e-08,
+          -1.0977682503283577e-08,
+          1.5068576359269717e-08,
+          5.1060537860091616e-09,
+          1.0689560318463732e-08,
+          2.507731248919147e-09,
+          3.6184295413342225e-08,
+          -3.34300328189254e-08,
+          1.7082775972636322e-09,
+          -2.5445426901538284e-08,
+          4.572839517304523e-09,
+          2.3285663535094825e-09
+        ]
+      }
+    ],
+    "endpoint_SU4_covariance_error": 0.0,
+    "reference_pair_norm": 1.0,
+    "reference_pair_Casimir_extra": 1.875,
+    "all15_cross_inner_products_real": [
+      0.0,
+      0.0,
+      0.0,
+      -4.336808689942018e-19,
+      0.0,
+      0.0,
+      -8.673617379884035e-19,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.734723475976807e-18,
+      0.0,
+      -6.776263578034403e-20,
+      -7.521652571618187e-19
+    ],
+    "all15_cross_inner_products_imaginary": [
+      6.938893903907228e-18,
+      -1.734723475976807e-18,
+      -9.974659986866641e-18,
+      0.0,
+      -6.938893903907228e-18,
+      -6.938893903907228e-18,
+      1.734723475976807e-17,
+      -9.540979117872439e-18,
+      -2.0816681711721685e-17,
+      1.3877787807814457e-17,
+      -1.734723475976807e-18,
+      0.0,
+      -4.336808689942018e-18,
+      2.6454533008646308e-17,
+      2.7755575615628914e-17
+    ],
+    "arbitrary_neutral_section_kinetic_extra": 1.8749999999999147,
+    "full_left_right_Gauss_derivative_error": 3.763686603968462e-11,
+    "packet_reference_frame_isotropy_error": 9.498173310182827e-17,
+    "packet_reference_all15_Gauss_error": 1.8538533137991577e-09,
+    "two_distinct_edge_path_Casimir_extra": 3.7499999999999987,
+    "path_all30_cross_inner_product_error": 3.334043499409915e-16,
+    "wrong_reference_representation_residual": 0.6758280245538126
+  },
+  "rows": [
+    {
+      "Lambda": 1.0,
+      "u4": 0.3,
+      "alignment_multiplier": 0.025,
+      "eta": 4.0,
+      "colour_plaquette_multiplier": 0.7,
+      "Haar_packet_estimates": [
+        {
+          "grid": 96,
+          "eta": 4.0,
+          "Haar_mass": 1.0000000000000002,
+          "sector_norms": [
+            2.3981742648208914e-07,
+            2.3978710345498876e-07,
+            2.3975698305453715e-07,
+            2.3978710345498876e-07
+          ],
+          "sector_Casimir": [
+            11.521018106169757,
+            11.522854325702266,
+            11.524668592799374,
+            11.522854325702266
+          ],
+          "sector_W": [
+            2.0883883579330744,
+            2.0881792644696264,
+            2.087972466882321,
+            2.0881792644696264
+          ],
+          "one_well_norm": 5.994678852791271e-08,
+          "one_well_Casimir": 11.522848722569456,
+          "one_well_W": 2.088179851543051,
+          "status": "full-torus deterministic quadrature estimate, not rigorous interval",
+          "sector_trial_energies": [
+            3.5085151407992536,
+            3.5090607793224207,
+            3.50959988951187,
+            3.5090607793224207
+          ],
+          "one_well_trial_energy": 3.509059113059413,
+          "fund_antifund_trial_energy_difference": 0.0
+        },
+        {
+          "grid": 128,
+          "eta": 4.0,
+          "Haar_mass": 1.0,
+          "sector_norms": [
+            2.398174264820891e-07,
+            2.397871034549886e-07,
+            2.3975698305453726e-07,
+            2.397871034549886e-07
+          ],
+          "sector_Casimir": [
+            11.521018106169755,
+            11.522854325702275,
+            11.524668592799372,
+            11.522854325702275
+          ],
+          "sector_W": [
+            2.0883883579330744,
+            2.088179264469626,
+            2.0879724668823187,
+            2.088179264469626
+          ],
+          "one_well_norm": 5.994678852791274e-08,
+          "one_well_Casimir": 11.522848722569456,
+          "one_well_W": 2.0881798515430514,
+          "status": "full-torus deterministic quadrature estimate, not rigorous interval",
+          "sector_trial_energies": [
+            3.508515140799253,
+            3.5090607793224233,
+            3.5095998895118696,
+            3.5090607793224233
+          ],
+          "one_well_trial_energy": 3.509059113059413,
+          "fund_antifund_trial_energy_difference": 0.0
+        },
+        {
+          "grid": 160,
+          "eta": 4.0,
+          "Haar_mass": 1.0000000000000007,
+          "sector_norms": [
+            2.3981742648208924e-07,
+            2.397871034549888e-07,
+            2.397569830545371e-07,
+            2.397871034549888e-07
+          ],
+          "sector_Casimir": [
+            11.521018106169755,
+            11.522854325702264,
+            11.524668592799378,
+            11.522854325702264
+          ],
+          "sector_W": [
+            2.088388357933074,
+            2.088179264469625,
+            2.087972466882322,
+            2.088179264469625
+          ],
+          "one_well_norm": 5.994678852791266e-08,
+          "one_well_Casimir": 11.522848722569474,
+          "one_well_W": 2.088179851543053,
+          "status": "full-torus deterministic quadrature estimate, not rigorous interval",
+          "sector_trial_energies": [
+            3.508515140799253,
+            3.5090607793224198,
+            3.509599889511871,
+            3.5090607793224198
+          ],
+          "one_well_trial_energy": 3.5090591130594184,
+          "fund_antifund_trial_energy_difference": 0.0
+        }
+      ],
+      "refinement_diagnostic": {
+        "norm_max_relative_difference": 8.881784197001252e-16,
+        "energy_max_relative_difference": 1.0124400522599413e-15,
+        "interval_error_certificate": false
+      },
+      "rigorous_smooth_packet_bound": {
+        "eta": 4.0,
+        "normalized_Haar_volume": 460460660.7030835,
+        "seed_norm_rigorous_lower": 9.260921155263742e-15,
+        "Haar_Jacobian_lower_in_unit_ball": 0.6039679955782548,
+        "offdiagonal_seed_overlap_rigorous_upper": 8.502348869750339e-05,
+        "overlap_to_norm_rigorous_upper": 9180888949.602768,
+        "trace_deficit_expectation_upper": 4.722338597148685,
+        "one_well_kinetic_upper": 4.5,
+        "one_well_potential_upper": 0.5746065888471132,
+        "one_well_trial_energy_upper": 5.0746065888471135,
+        "four_sector_common_trial_upper": null,
+        "each_sector_trial_deviation_from_one_well_upper": null,
+        "four_sector_trial_spread_upper": null,
+        "positive_norm_certificate": false,
+        "status": "analytic inequalities; floating coefficients are not outward-rounded intervals",
+        "actual_ground_energy_computed": false
+      },
+      "frozen_single_link_harmonic_ground": 0.9775209587265729,
+      "frozen_single_link_harmonic_first_gap": 0.06159003040789375,
+      "harmonic_scope": "frozen-field single-link quadratic form only, not full Gauss/BH spectrum",
+      "exact_scalar_fundamental_ground_splitting_interval": [
+        0.0,
+        0.5625
+      ],
+      "exact_scalar_antifundamental_ground_splitting_interval": [
+        0.0,
+        0.5625
+      ],
+      "full_original_external_pair_energy_difference_upper_per_distinct_edge": 0.5625,
+      "full_original_pair_difference_lower_bound_proved": false
+    },
+    {
+      "Lambda": 16.0,
+      "u4": 0.075,
+      "alignment_multiplier": 0.8,
+      "eta": 5.261995357689892,
+      "colour_plaquette_multiplier": 22.4,
+      "Haar_packet_estimates": [
+        {
+          "grid": 96,
+          "eta": 5.261995357689892,
+          "Haar_mass": 1.0000000000000002,
+          "sector_norms": [
+            3.12466214669718e-08,
+            3.124659470655456e-08,
+            3.124656795449482e-08,
+            3.124659470655456e-08
+          ],
+          "sector_Casimir": [
+            16.24348052360805,
+            16.243498678674598,
+            16.243516822484622,
+            16.243498678674598
+          ],
+          "sector_W": [
+            1.6508355067423266,
+            1.6508340930821723,
+            1.650832680279856,
+            1.6508340930821723
+          ],
+          "one_well_norm": 7.811648677160987e-09,
+          "one_well_Casimir": 16.243498675852695,
+          "one_well_W": 1.6508340932972352,
+          "status": "full-torus deterministic quadrature estimate, not rigorous interval",
+          "sector_trial_energies": [
+            2.538929444664465,
+            2.538929675366333,
+            2.5389299059102317,
+            2.538929675366333
+          ],
+          "one_well_trial_energy": 2.5389296753267407,
+          "fund_antifund_trial_energy_difference": 0.0
+        },
+        {
+          "grid": 128,
+          "eta": 5.261995357689892,
+          "Haar_mass": 1.0,
+          "sector_norms": [
+            3.124662146697178e-08,
+            3.124659470655455e-08,
+            3.124656795449482e-08,
+            3.124659470655455e-08
+          ],
+          "sector_Casimir": [
+            16.243480523608056,
+            16.243498678674595,
+            16.243516822484615,
+            16.243498678674595
+          ],
+          "sector_W": [
+            1.6508355067423275,
+            1.6508340930821719,
+            1.6508326802798552,
+            1.6508340930821719
+          ],
+          "one_well_norm": 7.81164867716099e-09,
+          "one_well_Casimir": 16.2434986758527,
+          "one_well_W": 1.6508340932972354,
+          "status": "full-torus deterministic quadrature estimate, not rigorous interval",
+          "sector_trial_energies": [
+            2.538929444664466,
+            2.538929675366332,
+            2.5389299059102304,
+            2.538929675366332
+          ],
+          "one_well_trial_energy": 2.5389296753267407,
+          "fund_antifund_trial_energy_difference": 0.0
+        },
+        {
+          "grid": 160,
+          "eta": 5.261995357689892,
+          "Haar_mass": 1.0000000000000007,
+          "sector_norms": [
+            3.1246621466971795e-08,
+            3.124659470655457e-08,
+            3.124656795449483e-08,
+            3.124659470655457e-08
+          ],
+          "sector_Casimir": [
+            16.24348052360806,
+            16.243498678674587,
+            16.243516822484608,
+            16.243498678674587
+          ],
+          "sector_W": [
+            1.6508355067423268,
+            1.6508340930821714,
+            1.6508326802798539,
+            1.6508340930821714
+          ],
+          "one_well_norm": 7.811648677160992e-09,
+          "one_well_Casimir": 16.243498675852692,
+          "one_well_W": 1.6508340932972358,
+          "status": "full-torus deterministic quadrature estimate, not rigorous interval",
+          "sector_trial_energies": [
+            2.5389294446644657,
+            2.5389296753663313,
+            2.538929905910229,
+            2.5389296753663313
+          ],
+          "one_well_trial_energy": 2.5389296753267407,
+          "fund_antifund_trial_energy_difference": 0.0
+        }
+      ],
+      "refinement_diagnostic": {
+        "norm_max_relative_difference": 6.661338147750939e-16,
+        "energy_max_relative_difference": 5.24735884377461e-16,
+        "interval_error_certificate": false
+      },
+      "rigorous_smooth_packet_bound": {
+        "eta": 5.261995357689892,
+        "normalized_Haar_volume": 460460660.7030835,
+        "seed_norm_rigorous_lower": 1.1843380086927287e-15,
+        "Haar_Jacobian_lower_in_unit_ball": 0.6039679955782548,
+        "offdiagonal_seed_overlap_rigorous_upper": 4.418889836824633e-06,
+        "overlap_to_norm_rigorous_upper": 3731105313.171702,
+        "trace_deficit_expectation_upper": 3.811248541137933,
+        "one_well_kinetic_upper": 1.479936194350282,
+        "one_well_potential_upper": 14.839891572665067,
+        "one_well_trial_energy_upper": 16.319827767015347,
+        "four_sector_common_trial_upper": null,
+        "each_sector_trial_deviation_from_one_well_upper": null,
+        "four_sector_trial_spread_upper": null,
+        "positive_norm_certificate": false,
+        "status": "analytic inequalities; floating coefficients are not outward-rounded intervals",
+        "actual_ground_energy_computed": false
+      },
+      "frozen_single_link_harmonic_ground": 2.7648467946701394,
+      "frozen_single_link_harmonic_first_gap": 0.17420291261962934,
+      "harmonic_scope": "frozen-field single-link quadratic form only, not full Gauss/BH spectrum",
+      "exact_scalar_fundamental_ground_splitting_interval": [
+        0.0,
+        0.140625
+      ],
+      "exact_scalar_antifundamental_ground_splitting_interval": [
+        0.0,
+        0.140625
+      ],
+      "full_original_external_pair_energy_difference_upper_per_distinct_edge": 0.140625,
+      "full_original_pair_difference_lower_bound_proved": false
+    },
+    {
+      "Lambda": 256.0,
+      "u4": 0.01875,
+      "alignment_multiplier": 25.6,
+      "eta": 59.53268159991448,
+      "colour_plaquette_multiplier": 716.8,
+      "Haar_packet_estimates": [
+        {
+          "grid": 96,
+          "eta": 59.53268159991448,
+          "Haar_mass": 1.0000000000000002,
+          "sector_norms": [
+            4.1003833323502766e-16,
+            4.1003833323502766e-16,
+            4.1003833323502766e-16,
+            4.1003833323502766e-16
+          ],
+          "sector_Casimir": [
+            219.7338484195263,
+            219.7338484195263,
+            219.7338484195263,
+            219.7338484195263
+          ],
+          "sector_W": [
+            0.16196564767686614,
+            0.16196564767686614,
+            0.16196564767686614,
+            0.16196564767686614
+          ],
+          "one_well_norm": 1.0250958330875671e-16,
+          "one_well_Casimir": 219.733848419526,
+          "one_well_W": 0.16196564767686578,
+          "status": "full-torus deterministic quadrature estimate, not rigorous interval",
+          "sector_trial_energies": [
+            8.266330238393891,
+            8.266330238393891,
+            8.266330238393891,
+            8.266330238393891
+          ],
+          "one_well_trial_energy": 8.266330238393877,
+          "fund_antifund_trial_energy_difference": 0.0
+        },
+        {
+          "grid": 128,
+          "eta": 59.53268159991448,
+          "Haar_mass": 1.0,
+          "sector_norms": [
+            4.1003835313815243e-16,
+            4.1003835313815243e-16,
+            4.1003835313815243e-16,
+            4.1003835313815243e-16
+          ],
+          "sector_Casimir": [
+            219.7338120033565,
+            219.7338120033565,
+            219.7338120033565,
+            219.7338120033565
+          ],
+          "sector_W": [
+            0.1619656215817415,
+            0.1619656215817415,
+            0.1619656215817415,
+            0.1619656215817415
+          ],
+          "one_well_norm": 1.0250958828453837e-16,
+          "one_well_Casimir": 219.7338120033567,
+          "one_well_W": 0.16196562158174166,
+          "status": "full-torus deterministic quadrature estimate, not rigorous interval",
+          "sector_trial_energies": [
+            8.266328887555517,
+            8.266328887555517,
+            8.266328887555517,
+            8.266328887555517
+          ],
+          "one_well_trial_energy": 8.266328887555524,
+          "fund_antifund_trial_energy_difference": 0.0
+        },
+        {
+          "grid": 160,
+          "eta": 59.53268159991448,
+          "Haar_mass": 1.0000000000000007,
+          "sector_norms": [
+            4.100383531381538e-16,
+            4.100383531381538e-16,
+            4.100383531381538e-16,
+            4.100383531381538e-16
+          ],
+          "sector_Casimir": [
+            219.7338120033562,
+            219.7338120033562,
+            219.7338120033562,
+            219.7338120033562
+          ],
+          "sector_W": [
+            0.1619656215817412,
+            0.1619656215817412,
+            0.1619656215817412,
+            0.1619656215817412
+          ],
+          "one_well_norm": 1.0250958828453826e-16,
+          "one_well_Casimir": 219.73381200335618,
+          "one_well_W": 0.16196562158174127,
+          "status": "full-torus deterministic quadrature estimate, not rigorous interval",
+          "sector_trial_energies": [
+            8.266328887555503,
+            8.266328887555503,
+            8.266328887555503,
+            8.266328887555503
+          ],
+          "one_well_trial_energy": 8.266328887555506,
+          "fund_antifund_trial_energy_difference": 0.0
+        }
+      ],
+      "refinement_diagnostic": {
+        "norm_max_relative_difference": 3.3306690738754696e-15,
+        "energy_max_relative_difference": 1.7191252499759177e-15,
+        "interval_error_certificate": false
+      },
+      "rigorous_smooth_packet_bound": {
+        "eta": 59.53268159991448,
+        "normalized_Haar_volume": 460460660.7030835,
+        "seed_norm_rigorous_lower": 1.4840149670219988e-23,
+        "Haar_Jacobian_lower_in_unit_ball": 0.6039679955782548,
+        "offdiagonal_seed_overlap_rigorous_upper": 2.622008862722428e-61,
+        "overlap_to_norm_rigorous_upper": 1.7668345137947383e-38,
+        "trace_deficit_expectation_upper": 0.5100616270801915,
+        "one_well_kinetic_upper": 4.185891674993987,
+        "one_well_potential_upper": 63.55300450901327,
+        "one_well_trial_energy_upper": 67.73889618400726,
+        "four_sector_common_trial_upper": 67.73889618400726,
+        "each_sector_trial_deviation_from_one_well_upper": 2.3843865124492034e-35,
+        "four_sector_trial_spread_upper": 4.7687730248984067e-35,
+        "positive_norm_certificate": true,
+        "status": "analytic inequalities; floating coefficients are not outward-rounded intervals",
+        "actual_ground_energy_computed": false
+      },
+      "frozen_single_link_harmonic_ground": 7.820167669812583,
+      "frozen_single_link_harmonic_first_gap": 0.49272024326315,
+      "harmonic_scope": "frozen-field single-link quadratic form only, not full Gauss/BH spectrum",
+      "exact_scalar_fundamental_ground_splitting_interval": [
+        0.0,
+        0.03515625
+      ],
+      "exact_scalar_antifundamental_ground_splitting_interval": [
+        0.0,
+        0.03515625
+      ],
+      "full_original_external_pair_energy_difference_upper_per_distinct_edge": 0.03515625,
+      "full_original_pair_difference_lower_bound_proved": false
+    }
+  ],
+  "rotation_boundary": {
+    "compensator_endpoint_real": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "compensator_endpoint_imaginary": [
+      [
+        1.2246467991473532e-16,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.2246467991473532e-16,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.2246467991473532e-16,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        -1.2246467991473532e-16
+      ]
+    ],
+    "localized_fundamental_centre_character_at_minusI": -1,
+    "antifundamental_reference_centre_character_at_minusI": -1,
+    "co_rotated_pair_centre_character": 1,
+    "restored_compact_gauge_Berry_loop_error": 0.0,
+    "full_physical_restored_rotation": 1,
+    "fixed_reference_operation_not_equal_to_co_rotation": true,
+    "mechanical_half_spin_derived": false,
+    "limitation": "A localized projective factor needs mobile charge and symmetry factorization; not supplied by this matrix lift."
+  },
+  "full_Gauss_pair_theorem": {
+    "references": "spectator fundamental at L and antifundamental at R, not original light-CAR insertion",
+    "section": "M_gamma(U)=ordered_product_gamma(U)/2 tensor arbitrary exact neutral physical state",
+    "pointwise_norm": 1.0,
+    "reference_Casimir": 1.875,
+    "bound": "E_external_fund_antifund(gamma)-E_neutral <= len(gamma)*15*u4/8 for simple paths",
+    "original_heavy_light_and_all_field_derivatives_retained": true,
+    "global_Gauss_includes_field_link_matter_and_reference": true,
+    "external_pair_net_centre_character": 0,
+    "zero_momentum_Gauss_generators_deleted": false,
+    "no_background_charge_deleted": true,
+    "exact_neutral_ground_numerically_computed": false
+  },
+  "free_rotor_adverse": {
+    "alignment": 0.0,
+    "exact_scalar_neutral_ground": 0.0,
+    "exact_scalar_fundamental_ground": "15*u4/8",
+    "exact_scalar_antifundamental_ground": "15*u4/8",
+    "implication": "Equal localized trial upper energies never imply equal true sector grounds; the fullSU4 free rotor has strictly positive splitting for every u4>0."
+  },
+  "analytic_results": [
+    "actual weighted-Clifford native W has exactly four centre minima",
+    "global smooth centre-character packets have exact full-Haar normal/energy formulas and analytic trial bounds",
+    "scalar single-link sector ground splitting 0<=E_fund-E_trivial<=15u4/8, same for antifund",
+    "full original non-scalar Gauss Hamiltonian has exact external-reference-pair upper cost per simple-path edge"
+  ],
+  "missing_premises": [
+    "No actual original-light creator/propagating charged-sector embedding is derived.",
+    "At fixed Lambda the path bound is linear in separation; it is not deconfinement.",
+    "No uniform thermodynamic path-independent bound or plaquette phase/tunnelling theorem is proved.",
+    "Full original scalar/matrix angular q0, heavy Berry and Born-Huang terms are not discarded; their mobile-light transfer remains open.",
+    "No charged lower gap, photon pole, mechanical half-spin or joined QED completion."
+  ],
+  "quantum_ground_computed": false,
+  "Z4_replacement_law_used": false,
+  "all_checks_pass": true,
+  "campaign_complete": false
+}

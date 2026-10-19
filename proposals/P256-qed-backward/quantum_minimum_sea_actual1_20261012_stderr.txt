@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/quantum_minimum_sea_source_20261012.py", line 300, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/quantum_minimum_sea_source_20261012.py", line 281, in main
+    controls={'minimum':norm_minimum_control(profiles[0]),'geometry':parameterized_geometry_control(),
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/quantum_minimum_sea_source_20261012.py", line 47, in parameterized_geometry_control
+    c,t,L,G,left,P,eigen=centre_geometry(a)
+                         ^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/quantum_minimum_sea_source_20261012.py", line 42, in centre_geometry
+    assert P*P==P and P*L==s.zeros(60,15) and s.trace(P)==45
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,38 @@
+{
+  "kind": "SCALAR_TRANSFER_MASS_GENERATION_CANDIDATE_NOT_SELF_BOUND_ELECTRON",
+  "candidate": "neutral_scalar_transfer_on_physical_frame_Fock_20261014",
+  "governor": {
+    "plan_id": "issue222-rich-backward-candidates-20261014",
+    "captured_revision": "a501cf6c1963589733de24fbc2de49af67a7e44b2d3776134e5e9d558d01d024",
+    "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "parent_sole_plan_writer": true
+  },
+  "mechanism": "Filled matter gains interchannel-transfer energy by correlating a neutral quantum scalar with channel coherence. Positive single-well quadratic/quartic elastic energy and scalar kinetic energy oppose this. Unlike a supplied constant mass flip, the full occupied reference and N+/-1 sectors select their own joint scalar-Fock states and distributions. Adding a charge can reduce the preferred scalar amplitude by changing actual fermion occupation. Finite mean(phi)=0 is compatible with quantum bimodality; no branch/sign is chosen by hand.",
+  "source_of_physical_spin": {
+    "raw": "Hraw=L2(SU2)_(j=0,1/2,1) x Fock(two colour-doublet channels), dimension 14*16=224. Primitive charged creation is scalar under physical left rotations and carries right colour.",
+    "Gauss": "G_a=R_a+C_a. P maps full physical16 into ker(sum G_a^2). The physical dressed source d_tm^dag=P^dag [epsilon_(alpha beta) D^(1/2)_(m alpha)(U) c_(t beta)^dag] P, with the exact source-generated occupation basis retained.",
+    "physical_rotation": "S_a=P^dag L_a P is the LEFT frame-coordinate generator. Odd N1 and N3 have S^2=3/4 from this projection, not from an inserted physical spin matrix. Neutral scalar commutes with S.",
+    "reused_pure_helpers": "rich_frame_holonomy_20261014_model.raw_frame and paths; transitive rich_frame_gauss_20261014_model.angular/cg. No old producer or archived CLI executed."
+  },
+  "Hamiltonian": {
+    "full": "H(k)=Hscalar tensor I_F + H0(k) tensor I_phi + g T tensor phi, with implementation ordered Fock then phi; full16 scalar-Fock space and all N0..4, not a selected positive band.",
+    "scalar": "Hscalar=pi_phi^2/(2 I_phi)+K phi^2/2+u phi^4/4. K,u,I_phi>0 supplied primitive elastic/kinetic inputs. Dirichlet finite difference interior grid [-wall,wall] is the scalar regulator. No negative bare scalar quadratic, harmonic spatial trap or constant mass-flip coefficient.",
+    "transfer": "T=sum_(m=+-1/2)(d_(0m)^dag d_(1m)+d_(1m)^dag d_(0m)); in code source d denotes creation. This operator is a physical rotation scalar and preserves N.",
+    "holonomy": "B_(a,t,m)=exp(-i theta S_a) d_(t,m)^dag exp(i theta S_a)-exp(i theta S_a) d_(t,m)^dag exp(-i theta S_a). F_a=(hop/2) sum_(t,m) eta_t d_(t,m)^dag B_(a,t,m)^dag with eta=(+1,-1). H0=sum_a(exp(i k_a)F_a+h.c.)+lambda sum S_a^2.",
+    "symmetry": "Channel-1 parity Z=(-1)^(N_channel1) reverses T and preserves H0. Scalar reflection R phi R=-phi. Combined Z R preserves H(k). A unique ground state therefore has mean(phi)=0. A degenerate ground reference is the entire ground projector, not a hand-selected sign.",
+    "current": "J_a=dH/dk_a=i(exp(i k_a)F_a-h.c.) tensor I_phi; contact C_a=d2H/dk_a2=-(exp(i k_a)F_a+h.c.) tensor I_phi. g phi T is k-independent. These are actual uniform Peierls-link phase derivatives, not Noether S or field-coordinate derivatives. The finite fixed-k cell is not a demonstrated propagating bulk current or EM field."
+  },
+  "reference_and_sources": {
+    "neutral": "rho2=full spectral ground projector of H|N2 divided by its complete degeneracy (energy tolerance explicitly 1e-9). All finite occupied/virtual interchannel states retained. Constant ionic charge +2 neutralizes N2 for charge bookkeeping only; no ionic trap or ionic profile is in this H.",
+    "charges": "Q=2-N. N3 addition has charge -1; N1 removal +1. Positivity requires E3-E2>0 and E1-E2>0 without sector energy repinning; the actual full five-sector ground energies are recorded.",
+    "Green": "G_ab(z)=Tr rho2 [d_a (z+E2-H3)^-1 d_b^dag + d_b^dag (z-E2+H1)^-1 d_a]. Entire finite N1/N3 spectra and all four physical source columns are kept; addition-plus-removal Gram must equal I4.",
+    "field_feedback": "Record probability(phi), phi2, phi4, phi*T, scalar kinetic/elastic/transfer energy components for N1/N2/N3, source-energy residues, and source-conditioned scalar distribution. Charge-induced reduction or increase in phi2 is an actual quantum profile change in the collective scalar coordinate, not spatial self-localization.",
+    "comparators": "g=0 repeats quantum ground/source preparation with the scalar decoupled. frozen_phi=sqrt(mean_phi2_dynamic_neutral) replaces phi only in g T phi by a constant and retains a quantum elastic spectator. This frozen model is knowingly nonequivalent, not an approximation promoted to the delivered quantum state."
+  },
+  "scope_and_unexplained_inputs": [
+    "One quantum scalar amplitude and one fixed Bloch cell; no autonomous spatial scalar strain field, translationally free COM, charged localization length, self-binding, recoil or 3D deformable core is demonstrated.",
+    "Primitive colour/CAR/centre sewing, two channels, frame law, balanced holonomy paths, theta, hop, g, K, u, I_phi and lambda are declared material/representation inputs, not derived electron constants.",
+    "lambda S^2 supplies a positive frame-kinetic contribution to charged gap. Its coefficient is not derived; energy decomposition and g=0 comparator prevent relabelling it as generated mass.",
+    "No electromagnetic photon, sourced Maxwell Gauss law, g2, Lorentz rest-mass matching, epsilon fit, mc2 normalization, proton/nature claim or campaign closure. This is a mass-generation/feedback candidate to join to a separately constructed common mobile field-current law."
+  ]
+}

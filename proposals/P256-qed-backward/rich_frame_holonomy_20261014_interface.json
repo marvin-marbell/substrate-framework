@@ -1,0 +1,17 @@
+{
+  "candidate_id":"physical-frame-conjugated-scalar-source-two-channel-positive-C-current-sourced-fock-v2",
+  "module":"rich_frame_holonomy_20261014_model.py",
+  "functions":{
+    "raw_frame()":"Returns raw224 basis, exact physical P224x16, physical N16x16, physical LEFT S[3]16x16, dressed creation source[4]16x16, raw creation source[4]224x224, raw left[3]14x14, right+colour G[3]224x224, and bare[4]. Basis physical16 is full dressed CAR bit order channel0-spin0,channel0-spin1,channel1-spin0,channel1-spin1. Sources are CREATION matrices; annihilation uses conjugate transpose.",
+    "paths(frame,theta,imbalance=0)":"Returns3x4 creation-source path differences R ddag Rdag-Rdag ddag R; scalar contamination retained when imbalance nonzero. Each path pair acts on same source; no predeclared gamma.",
+    "canonical_c(source)":"Full16 canonical Fock particle-hole C and source intertwiner4x4. Full physical C in current-sourced law is kron(C,neutral_occupancy_parity).",
+    "local(frame,p,k=(0,0,0),imbalance=0)":"Interacting64 H, current[3], dressed source[4], physical frame S[3], total internal J[3], N and field. Parameter k is a one-cell Fourier family, not a proven interacting bulk momentum sector. It is only used as a scoped inertia comparator.",
+    "two_site(frame,p,angle=0)":"Actual1024 two-cell H, current and contact first/second derivatives of the SAME scalar edge-source angle, source[8], physical frame S[3], N and neutral field. Full two-site Fock256 x neutral4. All occupation sectors retained; fixed x-edge geometry is not free 3D COM."
+  },
+  "parameters":"See rich_frame_holonomy_20261014_input.json: mass1.2,hop.7,theta.37,frame_cost.19,omega.8,feedback.17,field_cutoff1,pulse.43. hbar=edge length=1, supplied energy unit; charge primitive -1, neutralizing background2 per cell.",
+  "state_semantics":"Local exact N2 and actual two-cell exact N4 correlated ground states are distinct regulators of this same operator construction. Their energies/sources/responses are not spliced. Addition/removal use own originating filled reference, with no energy repinning. On one cell N3 has relative charge-1 and N1 relative charge+1; the hole is not a separately installed positron field.",
+  "serialized":"actual4_result.json contains all source poles/weights, G at z=3+.07i, full same-sector retarded current spectra, C/source/Noether/centre results, imbalance controls, conditional curvature and actual two-cell external-source event. Complex matrices serialize as Python complex strings; no claimed external photon normalization.",
+  "compatible_join":"A peer must rebuild the same full Fock/right-Gauss/C/source/path and field Hamiltonian or explicitly declare a different law. The neutral vector4 oscillator is not a spatial photon D. Do not multiply these current responses by unrelated induced-field tensors or import Maxwell B2 under a derivation label.",
+  "exact_author_capsule":"rich_frame_holonomy_20261014_actual4_capsule.zip",
+  "final_diagnostics":"Independent reviewer-owned; author performed direct Pyright pre-edit navigation and positive AST, not final build/lint/test/formatter."
+}

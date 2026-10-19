@@ -1,0 +1,62 @@
+{
+  "kind": "EXACT_REGULAR_FIELD_GRAPH_AND_CONTACT_SPECTRAL_ATOM_DISCRIMINATOR",
+  "scope": "two spectral models, not the native law or an interacting ground",
+  "ground_and_insertion_domain_assumed_in_model": true,
+  "graph": [
+    "LTheta=-2igE",
+    "LE=iJ",
+    "mu_E=energy^2 mu_Theta/(4g^2)",
+    "mu_J=energy^4 mu_Theta/(4g^2)"
+  ],
+  "atomic_field_measure": "(g/q) delta_q",
+  "atomless_field_measure": "4g/(3q^2) denergy on [q/2,sqrt(7)q/2]",
+  "shared_field_first_moment": "g",
+  "shared_field_third_moment": "g*q**2",
+  "shared_contact": "q**2/(2*g)",
+  "responses": [
+    {
+      "model": "one_atom",
+      "field_moments_0_to_4": [
+        "g/q",
+        "g",
+        "g*q",
+        "g*q**2",
+        "g*q**3"
+      ],
+      "electric_norm_squared": "q/(4*g)",
+      "current_norm_squared": "q**3/(4*g)",
+      "current_inverse_moment": "q**2/(4*g)",
+      "external_phase_contact_minus_two_inverse": "0"
+    },
+    {
+      "model": "no_atoms",
+      "field_moments_0_to_4": [
+        "2*g*(-1 + sqrt(7))/(3*q)",
+        "g",
+        "g*q*(-1 + 7*sqrt(7))/18",
+        "g*q**2",
+        "g*q**3*(-1 + 49*sqrt(7))/120"
+      ],
+      "electric_norm_squared": "q*(-1 + 7*sqrt(7))/(72*g)",
+      "current_norm_squared": "q**3*(-1 + 49*sqrt(7))/(480*g)",
+      "current_inverse_moment": "q**2/(4*g)",
+      "external_phase_contact_minus_two_inverse": "0"
+    }
+  ],
+  "euclidean_correlations": {
+    "atom": "2*g/(omega**2 + q**2)",
+    "continuum": "4*g*log((omega**2 + 7*q**2/4)/(omega**2 + q**2/4))/(3*q**2)"
+  },
+  "omega_is_model_euclidean_frequency_not_fourhop_resolvent_shift": true,
+  "three_spatial_dimensional_local_IR_weight": {
+    "atom": "g/2",
+    "continuum": "-g/3 + sqrt(7)*g/3"
+  },
+  "entire_ground_block": "adding r delta_0 to mu_Theta changes m0 but none of these positive-energy moments; remove whole P0, not only the mean",
+  "regular_linear_source": "norm^2 of sTheta is s^2 m0, not sharp-character mass1",
+  "wrong_inference_graph_contact_regular_IR_implies_atom_rejected": true,
+  "neither_gapless_support_nor_static_phase_cancellation_identifies_a_pole": true,
+  "native_ground_phase_stiffness_pole_adopted": false,
+  "campaign_complete": false,
+  "elapsed_seconds": 0.8705371819960419
+}

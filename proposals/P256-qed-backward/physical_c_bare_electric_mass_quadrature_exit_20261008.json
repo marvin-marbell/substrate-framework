@@ -1,0 +1,672 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "physical_c_bare_electric_mass.py",
+    "--investigation",
+    "quadrature",
+    "--output",
+    "physical_c_bare_electric_mass_quadrature_20261008.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "natural_exit_observed": true,
+  "completion_evidence": "bg_1249 completed naturally with terminal capsule_written, no timeout/cancellation",
+  "process_wall_seconds": 249.45,
+  "capsule": "physical_c_bare_electric_mass_quadrature_20261008.json",
+  "capsule_sha256": "bfbb0a5cdd3b80591eede13e4c1caa657e917c3525608539f4db493256a31c8e",
+  "execution": {
+    "input_json": "{\"NEW_Coulomb_coefficient\":0.02,\"arguments\":{\"investigation\":\"quadrature\",\"mass\":null,\"mass_tolerance\":0.002,\"output\":\"physical_c_bare_electric_mass_quadrature_20261008.json\",\"quadrature_order\":null,\"scan_normal_order\":1,\"scan_photon_grade\":0,\"selected_new_mass\":-1.1134192897656376,\"selected_reference_mass\":-1.1806176541281859,\"spacing\":0.01,\"target_physical\":1.0},\"core_epoch\":\"6a66ca3a45b05e8df46cc1cec90aa775d97cd60341186639fdaf1dfd5fce9e64\",\"electric_coefficient\":0.02,\"exact89_Coulomb_coefficient\":0.01,\"exact_REFERENCE89_epoch\":\"89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2\",\"full_default_parameters\":{\"bare_mass\":-2.0282053185612114,\"centre_penalty\":10.0,\"chart_radius\":0.02,\"colour_order\":1,\"colour_sigma\":0.003,\"electric_coefficient\":0.02,\"normal_order\":3,\"normal_sigma\":0.01,\"outside_couplings\":[0.07,0.02,0.03],\"outside_quartic\":0.02,\"photon_grade\":1,\"prefix_steps\":4,\"quadrature_order\":2,\"spacing\":0.01},\"no_source_fitted_shift\":true,\"original_bare_mass\":-2.0282053185612114,\"pinned_template_revision\":\"89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe\",\"plan_id\":\"issue-222-induced-photon-continuation-20261008\",\"scan_uses_complete_KN_KC_eigenpairs\":true,\"scoped_work_items\":[\"joined-explanatory-campaign\",\"shared-compton-transfer\"],\"target_transfer\":0.01}",
+    "input_sha256": "ed199742c398f116de65906d02620ea8855a5c39ab447abb45f12d5050e672e2",
+    "source_at_IMPORT": {
+      "physical_c_bare_electric_mass.py": "d390663d9c378ea00a0887ef92b12b19a99a99197a4c2ed21069178c9af7342a",
+      "physical_c_bare_electric_kernel.py": "6a66ca3a45b05e8df46cc1cec90aa775d97cd60341186639fdaf1dfd5fce9e64",
+      "captured_reference89.py": "89fb263bedabf82c64fb432bb66d672ffc5a4d612abf6ba237c9dc80fa49b6d2",
+      "captured_ledger.py": "567985093c8e3e512d78b064427996aa92a5a7abab36886d7cf21b4e1d623c87",
+      "captured_Alpha56/physical_alpha_compton.py": "56e1c611bffe17964644b47b6aca7ed496a195c8f4795e76e657ee2c01c3ff04",
+      "captured_Alpha56/sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+      "captured_Alpha56/rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459"
+    },
+    "capsule_hashes_at_IMPORT": {
+      "physical_c_real_cover_kernel_smooth_packet_capsule.json": "e6242d6801be2806624305469f21732c5d25473a672dbc17d0255692c1b2f57b",
+      "physical_c_completed_ledger_same_halfstep_capsule.json": "0aaaf5d58e3073d12337c34b4b2c7915e990d70e22382ccd8e93eb737d353f3a",
+      "physical_alpha_compton_Cartesian_final_native_capsule.json": "569e932d9cee150395fa4a27dd9a4355dace8b7de367db9c271b6c7bcca84d51"
+    },
+    "startup_unchanged": {
+      "physical_c_bare_electric_mass.py": true,
+      "physical_c_bare_electric_kernel.py": true,
+      "physical_c_real_cover_kernel_smooth_packet_capsule.json": true,
+      "physical_c_completed_ledger_same_halfstep_capsule.json": true,
+      "physical_alpha_compton_Cartesian_final_native_capsule.json": true
+    },
+    "runtime": {
+      "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.39",
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    },
+    "runtime_seconds": 246.53628039360046
+  },
+  "actual_quadrature_convergence_rows": [
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -2.0282053185612114,
+      "transfer_coupling": "full",
+      "orders": [
+        2,
+        3
+      ],
+      "addition_gap_change_TRANSFER": -0.024531007969279817,
+      "neutral_lambda_relative_change": 0.04300968536264271,
+      "pureS_mean_change_PHYSICAL": 0.29914839191355114
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -2.0282053185612114,
+      "transfer_coupling": "full",
+      "orders": [
+        3,
+        4
+      ],
+      "addition_gap_change_TRANSFER": -0.0013648297817739352,
+      "neutral_lambda_relative_change": -0.0007629818668443145,
+      "pureS_mean_change_PHYSICAL": -0.09803018246258333
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -1.1806176541281859,
+      "transfer_coupling": "full",
+      "orders": [
+        2,
+        3
+      ],
+      "addition_gap_change_TRANSFER": -0.02616209047437154,
+      "neutral_lambda_relative_change": 0.04219866646956283,
+      "pureS_mean_change_PHYSICAL": 0.23707018033954697
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -1.1806176541281859,
+      "transfer_coupling": "full",
+      "orders": [
+        3,
+        4
+      ],
+      "addition_gap_change_TRANSFER": -0.0013640731236448655,
+      "neutral_lambda_relative_change": -0.0007501701228497248,
+      "pureS_mean_change_PHYSICAL": -0.09654677818655344
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -2.0282053185612114,
+      "transfer_coupling": "full",
+      "orders": [
+        2,
+        3
+      ],
+      "addition_gap_change_TRANSFER": -0.02029035885925004,
+      "neutral_lambda_relative_change": 0.04231648774641639,
+      "pureS_mean_change_PHYSICAL": 0.30756372828222567
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -2.0282053185612114,
+      "transfer_coupling": "full",
+      "orders": [
+        3,
+        4
+      ],
+      "addition_gap_change_TRANSFER": -0.0013407770770382244,
+      "neutral_lambda_relative_change": -0.0007533437617992522,
+      "pureS_mean_change_PHYSICAL": -0.09676824968534703
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -1.1134192897656376,
+      "transfer_coupling": "full",
+      "orders": [
+        2,
+        3
+      ],
+      "addition_gap_change_TRANSFER": -0.02170728135166855,
+      "neutral_lambda_relative_change": 0.04142384803132759,
+      "pureS_mean_change_PHYSICAL": 0.23929883399086194
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -1.1134192897656376,
+      "transfer_coupling": "full",
+      "orders": [
+        3,
+        4
+      ],
+      "addition_gap_change_TRANSFER": -0.001339854902144083,
+      "neutral_lambda_relative_change": -0.000739261809905023,
+      "pureS_mean_change_PHYSICAL": -0.0951357549749332
+    }
+  ],
+  "source_spectrum_summaries": [
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -2.0282053185612114,
+      "quadrature_order": 2,
+      "field_points": 32,
+      "gaps_TRANSFER": {
+        "5": [
+          0.2556018622640291
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 26.73289533188976,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999921437811,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.33822691013032813
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 225.76536399129705,
+          "literal_TRANSFER_Pe0_4_fraction": 0.999948377972195,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 5.153709417069751e-12
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -2.0282053185612114,
+      "quadrature_order": 3,
+      "field_points": 243,
+      "gaps_TRANSFER": {
+        "5": [
+          0.23107085429474927
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.032043723803312,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999907233823,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.39350026080405365
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 226.32092276724288,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999386672447653,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 3.601520653959904e-09
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -2.0282053185612114,
+      "quadrature_order": 4,
+      "field_points": 1024,
+      "gaps_TRANSFER": {
+        "5": [
+          0.22970602451297534
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 26.93401354134073,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999908581938,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.39353171539933607
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 226.24261752419088,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999389427291887,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 3.5958458086281043e-09
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -1.1806176541281859,
+      "quadrature_order": 2,
+      "field_points": 32,
+      "gaps_TRANSFER": {
+        "5": [
+          0.2554653032005803
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 26.78931228679745,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999922158791,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.34545044789737545
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 225.5593673206399,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999488897887289,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 4.787151986059599e-12
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -1.1806176541281859,
+      "quadrature_order": 3,
+      "field_points": 243,
+      "gaps_TRANSFER": {
+        "5": [
+          0.22930321272620877
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.026382467136997,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999908928359,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.3862529332339033
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 225.96966541445028,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999394185382023,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 3.423557214062609e-09
+        }
+      ]
+    },
+    {
+      "construction": "exact_REFERENCE89_RPA",
+      "mass": -1.1806176541281859,
+      "quadrature_order": 4,
+      "field_points": 1024,
+      "gaps_TRANSFER": {
+        "5": [
+          0.2279391396025639
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 26.929835688950444,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999910228546,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.3862358444422093
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 225.89284400784916,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999396859363507,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 3.4177810347591328e-09
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -2.0282053185612114,
+      "quadrature_order": 2,
+      "field_points": 32,
+      "gaps_TRANSFER": {
+        "5": [
+          0.253890219164192
+        ],
+        "3": [
+          0.253890219164192
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 26.821017055346964,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999998475401,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.3368832052273797
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 26.821017055346886,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999998475401,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.3368832052273799
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.45843712075617,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999947142257,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 2.371259185858788e-10
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.45843712075616,
+          "literal_TRANSFER_Pe0_4_fraction": 0.999999994714226,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 2.371259185595807e-10
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -2.0282053185612114,
+      "quadrature_order": 3,
+      "field_points": 243,
+      "gaps_TRANSFER": {
+        "5": [
+          0.23359986030494198
+        ],
+        "3": [
+          0.2335998603049417
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.12858078362919,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999983281305,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.39356652417339166
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.128580783629175,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999983281305,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.39356652417339144
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.942115350794204,
+          "literal_TRANSFER_Pe0_4_fraction": 0.999999992652352,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 1.3446033674100629e-08
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.94211535079422,
+          "literal_TRANSFER_Pe0_4_fraction": 0.999999992652352,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 1.3446033674082022e-08
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -2.0282053185612114,
+      "quadrature_order": 4,
+      "field_points": 1024,
+      "gaps_TRANSFER": {
+        "5": [
+          0.23225908322790376
+        ],
+        "3": [
+          0.23225908322790376
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.031812533943842,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999983729857,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.39361980834619037
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.031812533943807,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999983729855,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.39361980834619004
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.86425614564564,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999927123854,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 1.3435226520971443e-08
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.86425614564566,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999927123854,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 1.3435226520976462e-08
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -1.1134192897656376,
+      "quadrature_order": 2,
+      "field_points": 32,
+      "gaps_TRANSFER": {
+        "5": [
+          0.2537236530149942
+        ],
+        "3": [
+          0.2537236530149944
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 26.89719193140619,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999996262368,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.3447844734200824
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 26.89719193140617,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999996262368,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.344784473420083
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.25224555626503,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999950495477,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 2.0589790439157837e-10
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.25224555626503,
+          "literal_TRANSFER_Pe0_4_fraction": 0.999999995049548,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 2.0589790437340198e-10
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -1.1134192897656376,
+      "quadrature_order": 3,
+      "field_points": 243,
+      "gaps_TRANSFER": {
+        "5": [
+          0.23201637166332567
+        ],
+        "3": [
+          0.2320163716633254
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.136490765397053,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999984356935,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.385515773292587
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.13649076539703,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999984356935,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.3855157732925871
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.57690734840763,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999931343376,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 1.2985065583308608e-08
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.57690734840767,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999931343374,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 1.2985065583299926e-08
+        }
+      ]
+    },
+    {
+      "construction": "NEW_bare_electric",
+      "mass": -1.1134192897656376,
+      "quadrature_order": 4,
+      "field_points": 1024,
+      "gaps_TRANSFER": {
+        "5": [
+          0.2306765167611816
+        ],
+        "3": [
+          0.2306765167611813
+        ]
+      },
+      "negative": false,
+      "source_rows": [
+        {
+          "number": 5,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.04135501042212,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999984776416,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.38551675691211285
+        },
+        {
+          "number": 3,
+          "preparation": "original_neutral_packet_no_photon_insertion",
+          "fullsource_mean_PHYSICAL": 27.0413550104221,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999984776416,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 0.38551675691211285
+        },
+        {
+          "number": 5,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.50066457257761,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999931895613,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 1.2974108521074597e-08
+        },
+        {
+          "number": 3,
+          "preparation": "original_reference_photon_packet",
+          "fullsource_mean_PHYSICAL": 55.50066457257763,
+          "literal_TRANSFER_Pe0_4_fraction": 0.9999999931895613,
+          "literal_PHYSICAL_Pe0_4_fraction": 0.0,
+          "negative_energy_fraction": 0.0,
+          "gap_source_weight": 1.2974108521070074e-08
+        }
+      ]
+    }
+  ],
+  "reviewed_outcome": "Quadrature2 bias is material but Q4 gaps remain .22794-.23226 TRANSFER; Q3-to-Q4 drift about .00134-.00136 TRANSFER is not a convergence certificate. Same basis/law/source; no target root/physical electronpole.",
+  "next_discriminating_control": "Q4 explicit harmonic/coexact transfercoupling deletion keeping all fields/heat/full Coulomb/full-phase Psi.",
+  "language_tooling": {
+    "pyright_langserver": "1.1.414",
+    "scoped_diagnostics": [],
+    "actual_complete_case_definition_resolved": true,
+    "positive_projected_transfer_factor_AST": true
+  }
+}

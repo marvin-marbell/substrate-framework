@@ -1,0 +1,33 @@
+{
+  "candidate_id": "rich_frame_transport_20261014_cubic_frame_gauss_peierls_v1",
+  "law": "Exact right-colour-Gauss FrameGauss source; field-coordinate left Noether spin; cubic tight-binding extension with same-source Peierls field legs and finite Gaussian longitudinal Gauss energy.",
+  "units": "hbar=1; q=-1; energy in the local model's inverse-inertia units; length units use r=1.1 and Gaussian width=.35; no c or mass conversion.",
+  "modules": {
+    "model_dependency": "rich_frame_gauss_20261014_model.py (imported for pure constructor functions only)",
+    "native_consumer": "rich_frame_transport_20261014_calculate.py",
+    "input": "rich_frame_transport_20261014_input.json",
+    "equations": "rich_frame_transport_20261014_equations.json",
+    "synthesis": "rich_frame_transport_20261014_synthesis.json"
+  },
+  "run": {
+    "python": "/home/administrator/substrate-framework/.venv/bin/python",
+    "command": "/home/administrator/substrate-framework/.venv/bin/python proposals/P256-qed-backward/rich_frame_transport_20261014_calculate.py",
+    "capture_command": "/home/administrator/substrate-framework/.venv/bin/python proposals/P256-qed-backward/rich_frame_transport_20261014_capture.py",
+    "working_directory": "/home/administrator/substrate-222"
+  },
+  "functionality": {
+    "source": "Exact Gauss-projected dressed source from the same frame constructor, both N=0 to N=1 channels, physical left differential S and the two-channel N=1 to N=2 CAR map.",
+    "mobile_state": "Single charged source on eight open cubic sites; each site carries all l=1 M/K rotor states, N=1 physical frame doublet and all four vector oscillator states at total occupation cutoff one.",
+    "observables": "Same-H strict opposite-corner probability, site distribution, all Cartesian currents, vector-field energy and physical source-frame S_z; no outgoing global source postselection.",
+    "controls": "Identical-seed no-pulse evolution; all Cartesian hopping/current links removed; field-coordinate Peierls dependence removed while bare hopping remains.",
+    "adjacent_charge": "Same-source neutral-to-charged G(z) at .9+.07i plus exact N=1 to N=2 source-sector energies and two-channel CAR closure."
+  },
+  "artifacts": {
+    "result": "rich_frame_transport_20261014_result.json",
+    "exit_receipt": "rich_frame_transport_20261014_exit.json",
+    "stdout": "rich_frame_transport_20261014_stdout.txt",
+    "stderr": "rich_frame_transport_20261014_stderr.txt",
+    "capsule": "rich_frame_transport_20261014_capsule.zip"
+  },
+  "compatibility": "This is a fresh finite law assembled from the FrameGauss pure constructor; no wave5 collision states, old producer CLI, photon D, source labels, or archived event data are imported. It is not yet the requested two-species common-H interaction."
+}

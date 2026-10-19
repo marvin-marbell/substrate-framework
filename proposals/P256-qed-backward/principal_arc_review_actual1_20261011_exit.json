@@ -1,0 +1,26 @@
+{
+  "kind": "NEW_INDEPENDENT_CONTROL_FAILED_SERIALIZATION",
+  "returncode": 1,
+  "natural_exit": true,
+  "elapsed_seconds": 0.14236371897277422,
+  "source_input_sha256": {
+    "smoothed_flux_normalized_principal_proof_20261011.json": "46761d987fc11f9dc2ac9867bdd5c9e4cf80c67a527a25e14e12b1b2cae2ee49",
+    "phase_arc_parent_proof_20261011.json": "4d03c24483e50b0b15d6cee8d7b9d4760399a2d998dc1e07c1725c2dfe132535",
+    "phase_arc_parent_control_20261011.py": "f9d8a76b3a1494ba4fa4a967ec2b1d77ed4375c07936b5ed6cb8192f1c8ba3d5",
+    "phase_arc_parent_actual1_20261011_receipt.json": "13e3ddc2cb715c1bf3f4ce8d9a84b1d1864309f3df84340dd72504e1932c2ea5",
+    "phase_arc_parent_actual1_20261011_executed.zip": "45e42b36905133be21a99ab9eb32b394400d461a360c31a470861deff92c76b5",
+    "filtered_flux_parent_proof_20261011.json": "6d8f11a778cff784e76367d410454a20877461115f913c6ee158883ac7176140",
+    "filtered_flux_parent_control_20261011.py": "ae1fa7ed2fbef7e491963aba53abde517eb7ede36d36afcca908941091d6a5f8",
+    "filtered_flux_parent_actual1_20261011_receipt.json": "a9061ba1a3f061f6229321a99c9f3bc5e5bec56581019248ec93ace7f213ef34",
+    "filtered_flux_parent_actual1_20261011_executed.zip": "b8d2bf958b6cd135063017241629d7564c2d9c53ce189bcf7e02790c1a05ecd2",
+    "joined_phi_u1_uniform_sharp_gauss_proof_20261010.json": "fb99f8b2accadee1f868922a972d0dbbb46dacc06b88fef61dfe4bc8e3d44dfb",
+    "joined_phi_u1_uniform_gauss_limit_mathreview_UniformLimitProofReview_epoch4_20261010.json": "e66f1c082e13fb1c965d8f535936ac29a4bb06ac0f450627cd208969e47259aa",
+    "principal_arc_review_control_20261011.py": "bba58e06f815a644cd9b1192a95c7bd70dc4065c6e27351fefb232947b97940d"
+  },
+  "request_sha256": "814d9639bedf02e9114cdc438bfed6eb898edcbfd7f6b32c4a59038c36488aed",
+  "preexecution_sha256": "4d2f3f04de8caa40294f82e2dc8606bf0c16b49f72c44c43f089aaedce90ed75",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/principal_arc_review_control_20261011.py\", line 149, in <module>\n    main()\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/principal_arc_review_control_20261011.py\", line 142, in main\n    json.dump(result, stream, indent=2)\n  File \"/usr/lib/python3.12/json/__init__.py\", line 179, in dump\n    for chunk in iterable:\n  File \"/usr/lib/python3.12/json/encoder.py\", line 432, in _iterencode\n    yield from _iterencode_dict(o, _current_indent_level)\n  File \"/usr/lib/python3.12/json/encoder.py\", line 406, in _iterencode_dict\n    yield from chunks\n  File \"/usr/lib/python3.12/json/encoder.py\", line 406, in _iterencode_dict\n    yield from chunks\n  File \"/usr/lib/python3.12/json/encoder.py\", line 326, in _iterencode_list\n    yield from chunks\n  File \"/usr/lib/python3.12/json/encoder.py\", line 326, in _iterencode_list\n    yield from chunks\n  File \"/usr/lib/python3.12/json/encoder.py\", line 439, in _iterencode\n    o = _default(o)\n        ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type Fraction is not JSON serializable\n",
+  "receipt_complete": false,
+  "cause": "Fraction-valued equal-time Gram sent directly to JSON encoder; assertions reached but complete receipt absent; not accepted execution evidence"
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "PRIMARY_EM_OWN_STATE_FIELD_CUT_WITNESS",
+  "code": "import json,numpy as np\nfrom pathlib import Path\nfrom scipy.linalg import expm\nfrom rich_spatial_colour_em_20261015_fields import field_shell,phase_values\np=json.loads(Path('rich_spatial_colour_em_20261015_charge_construct1_input.json').read_text());f=field_shell(p['em_cut'],p['em_basis_scale']);n=f['dimension'];x=np.load('rich_review_wave19_20261015_em_actual1_result.npz')['lepton_raw_normalized_source'].reshape(-1,n);k=.21;v=np.array([0.,0.,1.,0.,.37,0.]);phase=np.diag([1j**sum(a) for a in f['basis']]);u=expm(-1j*k*sum(a*b for a,b in zip(v,f['Pi'])));cont=phase@phase_values(v[None,:],-k,f)[0]@phase.conj().T\nans=dict(CCR_defects=[float(np.linalg.norm(a@b-b@a-1j*np.eye(n))) for a,b in zip(f['Q'],f['Pi'])],Q0_Q2_commutator=float(np.linalg.norm(f['Q'][0]@f['Q'][2]-f['Q'][2]@f['Q'][0])),bare_Pi_squared_spectrum=np.linalg.eigvalsh(f['H_E']).tolist(),own_finite_Pi_drive_vs_continuous_projection=float(np.linalg.norm(x@u.T-x@cont.T)),continuous_Pi_drive_omitted_norm_squared=float(np.linalg.norm(x)**2-np.linalg.norm(x@cont.T)**2),finite_Pi_drive_norm=float(np.linalg.norm(x@u.T)**2))\nprint(json.dumps(ans))\n",
+  "code_sha256": "def70d7e8d455166825257b73e22c09db3ae2c639064a319d76d66a8bfd677cf",
+  "state_sha256": "49f300322b75fbd959616584d53e6fb2ba88a8e9c168ff4b8811a7cfca46598e",
+  "natural_exit": true,
+  "returncode": 0,
+  "observations": {
+    "CCR_defects": [
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0
+    ],
+    "Q0_Q2_commutator": 0.7071067811865474,
+    "bare_Pi_squared_spectrum": [
+      1.4999999999999998,
+      1.9999999999999998,
+      1.9999999999999998,
+      1.9999999999999998,
+      2.0,
+      2.0,
+      2.0
+    ],
+    "own_finite_Pi_drive_vs_continuous_projection": 0.0034258592365051196,
+    "continuous_Pi_drive_omitted_norm_squared": 0.0017843282505306535,
+    "finite_Pi_drive_norm": 1.000000000000004
+  },
+  "meaning": "Continuous momentum displacement projection is compared without renormalizing/postselecting it. Actual finite field-only impulse remains unitary; matter-only t0 observables unchanged. CCR/noncommuting-coordinate/bare-Pi\u00b2 artifacts and physical source-force mismatch remain finite-cut limits, not photons or repaired currents."
+}

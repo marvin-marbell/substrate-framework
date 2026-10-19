@@ -1,0 +1,112 @@
+{
+  "kind": "INDEPENDENT_FROZEN_LOCAL_REPRESENTATION_REVIEW_WITH_NEW_EXACT_PHASE_BINDING_NO_ADMISSION",
+  "reviewer": "LocalRepresentationRecovery",
+  "verdict": "CONDITIONAL",
+  "exact_scope": "Selected frozen two-site one-edge tree, fixed native canonical spin-number sector, harmonic active2 x auxiliary126, and its incoming external-u numerical Ritz branch. Original labelled freeframe requires explicit native-phase binding supplied by a NEW artifact; no fullground, bulk phase/stiffness, photon/pole, commoncone, or originalSOURCE verdict.",
+  "plan": {
+    "id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "review_governor": "79c6cef8ec862dc66cbffa8dbc8906bbf50920510994df754e8a81a9738d3645",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "requirement_ids": [
+      "outcome",
+      "verification"
+    ],
+    "accepted_science_unchanged": "909367f513e90e70209a1bf9dff3635f40b08f1a00add291fecc531a7887c06d",
+    "parent_owns_plan_docs_integration": true
+  },
+  "frozen_input_sha256": {
+    "local_so5_resum_delivery_20261011.json": "17358bd018e60a9e154b4826344ae6907f4088d7f55b67016f89131b892a467b",
+    "local_so5_resum_proof_20261011.json": "2c126c9c6a4f942f4f2aeb0961ba12927359aa5dd01aa668b938c8280320c778",
+    "local_so5_resum_source_20261011.py": "7f73170ca3a33782b5b391a6f6d3b6e0e3b7bf385c2f03cc2b5f7696fde8e009",
+    "local_so5_resum_actual04_20261011_receipt.json": "a31c2d5be2a368b7de703d92461e230af59adf7e8ee8f4eaca0944fe4f556fc1",
+    "local_so5_resum_freeframe_proof_20261011.json": "a63812d27615d5f5f7e316ddad13710d5d4100a519d89268b27e9b79cac81451"
+  },
+  "claims": [
+    {
+      "claim": "Exact canonical Cl2 split and selected highest harmonic compression",
+      "verdict": "VALID",
+      "literal_evidence": "Independent Jordan-Wigner CAR on all16 occupations; exact wedge2 invariant vector5 plus inert1; four native generators preserve G and generate Lie dimension10; ac is G-null. Therefore ac^tensor n is symmetric tracefree, lies in highest SO5 harmonic n, and collective A/B/C/rho preserve it. SO4 branching l=0..n,jL=jR=l/2 yields dimension sum(l+1)^2. Active2=14, auxiliary126=690880, tensor9672320. Spin count128=2*(1+63); distinct exact m retained. Inert1, other occupation/irreducible sectors are not certified ground competitors. New trace-kernel n1/n2/n3 controls do not reuse producer/checker."
+    },
+    {
+      "claim": "Exact CG normalization/Casimir recurrence and phases",
+      "verdict": "VALID",
+      "literal_evidence": "B=2 times a unit SO5 coset generator, C5=n(n+3), C4=l(l+2). Summing both antisymmetric (+,-)/(-,+) product-CG weights gives average (l+2)^2/(l+1)^2 over the (l+1)^2 source states; reverse average is f_(l-1)^2. Unique boundary f_-1=0 solution is f_l^2=(n-l)(n+l+3)(l+1)/(2(l+2)), f_n=0. Independent exact Fraction check includes n126. Native G-trace-kernel restrictions match frozen compressed mixed A/B/C/rho plus rho-square spectra through n3 to1.43e-14; source moments through fourth power to2.85e-14. Wrong sqrt2 forward factor is rejected. General-n representation assertion is analytic harmonic/branching argument, not numerical interval extrapolation."
+    },
+    {
+      "claim": "Frozen U diagonalizes source.native_controls B in the literally stated same native phase",
+      "verdict": "INVALID",
+      "literal_finding": "Frozen source lines61,70-71 uses Bsource=wedge(kron(x,-z)); in [ac,ab,cd,bd,(ad+bc)/sqrt2], Bsource=-2(anti zero^T+zero anti^T). Frozen freeframe source line47 instead uses +2(anti zero^T+zero anti^T). For frozen Bplus column v=(0,1/2,-1/2,0,1/sqrt2), Bsource v=-2v, not +2v. Consequently frozen U satisfies U\u2020Hsource U=diag(-2e,-2c0,0,2c0,2e), not its labelled D. Exact control first naturally failed at this literal identity; failure retained, not classified as runtime defect. This is an invalid same-phase supporting assertion, NOT invalidity of the physical spectral pair or selected representation.",
+      "smallest_correction": "Explicitly bind physical/source native phases using NEW independently proven Ucorr=diag(1,1,1,1,-1)Ufrozen; do not relabel frozen proof bytes as corrected."
+    },
+    {
+      "claim": "New corrected native free5 joint energy/density pair, exact binary binding",
+      "verdict": "VALID",
+      "artifact": "local_so5_rep_review_recovered_corrected_freeframe_20261011_proof.json",
+      "artifact_sha256": "102966f32c49f40d79d55343925a630e30a9cf7e4a8074cf8628142ba9c5b6e8",
+      "literal_evidence": "Independent Hadamard/rational binary Phi reconstruction, gamma and exact spin unitary give two identical natural Cl2 hopping blocks [[-c0,id],[id,c0]], with c0=-4.1299148806603085 and d=-5.1684869936139375. Exact binary masses match BOTH frozen active/aux fractions. Natural physical H=mA-c0Bsource+dC, and Ufrozen correctly diagonalizes that phase. One-particle S=diag(1,-1,-1,1) maps physical H to Hsource=mA+c0Bsource+dC, fixes A,C,rho and source ac up to sign. Wedge phase is F=diag(1,1,1,1,-1) up to common sign. Ucorr=F Ufrozen exactly gives Ucorr\u2020Ucorr=I, Hsource Ucorr=Ucorr D and Ucorr\u2020rho Ucorr=Rfrozen modulo e\u00b2=m\u00b2+d\u00b2. D=[-2e,2c0,0,-2c0,2e]; both B columns retain density amplitudes d/(2e),m/(sqrt2 e),-d/(2e). F preserves G and its tensor powers preserve every highest harmonic/source. Free energy-density pair reusable after NEW input binding; no parent output-row inertia or Ritz rounding approval."
+    },
+    {
+      "claim": "Complete selected128 action versus PHP square and numerical Ritz scope",
+      "verdict": "VALID",
+      "literal_evidence": "Source Block lines250-259 forms all14*690880 diagonal entries, complete active/aux sparse edges, and64(rho_active+rho_aux+u)^2. Independent small70-dimensional extracted action matches explicit Kronecker H to1.54e-14. Source ritz lines272-278 applies complete selected H once and measures ||Hpsi-mu psi||\u00b2, not (PHP)\u00b2. Frozen actual04 reports mu=-5124.3665947253185, residual5.679061256489609e-8, variance3.2251736754961336e-15. Old actual04 exit receipt was inspected (natural0), not rerun. These are finite-float numerical Ritz/residual observations, not certified minimum, gap, roundoff interval, or ambient full-H ground. A residual-small eigenvector can be excited; largest=False supplies no certified lower exterior."
+    },
+    {
+      "claim": "Zero probability and connected density semantics",
+      "verdict": "VALID",
+      "literal_evidence": "density_moments lines217-223 checks exactly rho_active+rho_aux==0, giving P_rho0=sum|basis><basis| on total charge zero; each fixed wedge2 replica rho=Nleft-1, so total rho=Nleft-128. At u=0 this equals kernel of selected64rho\u00b2, NOT spectralground Q0 of H. Frozen probability0.5138615210388255 is total-density/electric-zero at u0. At nonzero u it remains rho-zero, not kernel of64(rho+u)\u00b2. Native hopping does not commute with this projector; independent small example commutator norm12.696456198483105. rho_connected_weight computes ||rho psi||\u00b2-<rho>\u00b2, removing only |psi><psi| mean component, not an entire possibly degenerate spectral ground block. Explicit degenerate-ground counterexample gives mean-subtracted weight1 but excited-projector weight0. Therefore no ground-positive spectral weight is certified; ambiguous whole_zero_block field must be described with its literal density meaning."
+    },
+    {
+      "claim": "Incoming external-u response and bare constant",
+      "verdict": "VALID",
+      "literal_evidence": "Every diagonal contains64(rho+u)\u00b2=64rho\u00b2+128u rho+64u\u00b2 once, by exact polynomial expansion. New small finite-float control agrees to1e-12; constant bare curvature is128, not extra repeated cost. Frozen actual04 finite-difference branch curvature10.177550739172148 at delta.01 is numerical response to a local external boundary electric probe, not variation of a bulk beta coordinate/stiffness. Solver residuals divided by delta\u00b2 are not energy-error bounds or interval enclosures. A positive same-ground Lehmann interpretation requires an absent minimum/exterior and whole-ground-block certificate."
+    },
+    {
+      "claim": "Reciprocal support allocation and failed operator-norm criterion",
+      "verdict": "VALID",
+      "literal_evidence": "For every evenN>=4: a matched dimer has1 selected+10 external one-links, reciprocal touched-block weights allocate5 external primitives; length2 includes endpoints AND intermediate vertices, yielding16 distinct touching primitive paths and allocated weight6. Transverse contributions12 paths*1/3=4, longitudinal4*1/2=2; every primitive path is allocated exactly once globally. Independent n4/n6 controls reject endpoint-only allocation which misses4 intermediate-only paths. Frozen 18 is pre-overlap incidence, not16 distinct final paths. Ratio5*2380.390879814207/37.384333659310514=318.3674345391702 defeats ONLY sufficient whole-operator triangle route with optimistic bare-gap proxy. It does not prove actual instability/no-go or reject source/rooted/connected/resolvent/gapless routes. Shared electric/Gauss, fullPhi/colour, and two-link operator cost remain unpaid nonnegative terms, not zero."
+    }
+  ],
+  "literal_assumptions": [
+    "Frozen binary Phi frame, selected axis0 nearest-one-link tree and hopping1 are conditional input, not fullPhi/beta ground selection.",
+    "Each Dirac copy decomposes into two equivalent native Cl2 spin replicas for this selected mass/one-edge subalgebra; active1 and auxiliary63 have distinct exact onsite masses and cannot be folded into one common-mass role.",
+    "Canonical wedge2 and its vector5 component, then top symmetric G-traceless harmonic, are selected invariant sectors only; invariance does not compare energies with inert1, other occupations, other irreps or lattice sectors.",
+    "General-n CG uses standard unit-normalized SO5/SO4 Lie generators and the fixed native n1 antisymmetric vector phases; exact recurrence plus harmonic branching is the proof, finite small tensor checks are controls.",
+    "Free e is positive real root of exact e\u00b2=m\u00b2+d\u00b2; m>0,c0<0, and no rounded e\u00b2 is substituted.",
+    "NEW exact native-phase binding is required if frozen physical Ufrozen and source Bsource are used in the same consumer; no frozen artifact is silently rebound.",
+    "Numerical Ritz quantities remain finite-float reports. No implicit spectral-ground projector, interval rounding certificate, uniform gap, or ground positivity.",
+    "Matching product normalization is disjoint matter-factor normalization only; shared electric/Gauss and colour/Phi embedding are additional obligations.",
+    "Reciprocal length2 accounting includes the middle vertex and treats positive-axis primitive paths with their Hamiltonian multiplicity, including N4 periodic reverse endpoints.",
+    "Parent new D+64R\u2020P_rows R lower form was only inspected at its energy/density interface after request; its inertia certificate and Ritz upper/rounding were not reviewed or approved here."
+  ],
+  "own_controls": {
+    "bounded_control_source": "local_so5_rep_review_recovered_control_20261011.py",
+    "bounded_control_source_sha256": "cabd0d7a543bf881219c2963695b02f155890ab09ed0e2bd1575885411b1ccd9",
+    "bounded_control_receipt": "local_so5_rep_review_recovered_control_20261011_receipt.json",
+    "natural_exit": 0,
+    "wall_seconds_reported": 5.89,
+    "corrected_binding_source": "local_so5_rep_review_recovered_corrected_freeframe_20261011.py",
+    "corrected_binding_source_sha256": "043e2aea918a83f826ab5c188ac6fd025a77d7bf3db334bd290f3091034f2af3",
+    "corrected_binding_natural_exit": 0,
+    "corrected_binding_wall_seconds_reported": 1.92,
+    "first_control_failure": "local_so5_rep_review_recovered_control_failed01_20261011_exit.json",
+    "first_control_failure_natural_exit": 1,
+    "old_9_6M_producer_checker_Root_runs": false
+  },
+  "tooling_limitations": [
+    "xd://lsp is not mounted; standard-library AST parsed frozen Python and extracted only bounded algebra/action functions. No production edit or diagnostic approval claimed.",
+    "Ambient eval Python lacks numpy; all scientific controls used specified substrate-framework venv. Failed ambient import made no scientific observation."
+  ],
+  "common_debt_retained": [
+    "fullground",
+    "phase/IRatom",
+    "sameground sharp photon",
+    "commoncone",
+    "originalSOURCE"
+  ],
+  "source_law_scope_adoption": false,
+  "campaign_complete": false,
+  "production_edits": false,
+  "parent_admission_unchanged": true
+}

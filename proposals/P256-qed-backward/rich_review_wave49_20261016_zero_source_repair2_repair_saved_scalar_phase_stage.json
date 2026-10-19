@@ -1,0 +1,71 @@
+{
+  "binding": {
+    "base_operator_sha256": "cc6eb96a1d442b19ee3c4719370a3b6b257e75eb6ea956c7ab836f9ce432b803",
+    "law_signature": "ef583eaed75747e066a4415778b1285fabc163d1b96f4b5a02e4ac60bc3b098d",
+    "basis_order_sha256": "853f94a607cd96c8850ad44897f2c87ce31a93e2386036854e5b49f8844c33bc",
+    "input_state_sha256": "a3f480cc7282b9b5bf2bfeb7c2e951a0d064f85821a07ac2036bb71d1f76df5d",
+    "dt": 0.02,
+    "steps": 1,
+    "chi": 16,
+    "initial_physical_time": 0.0,
+    "final_physical_time": 0.02,
+    "law_variant": "explicit_filtered_or_control_H",
+    "operator_terms_sha256": "d93fe64cd7253c87fa96e1649a1fd78f4fea070055bc7d93316a02170c85f6bf"
+  },
+  "completed_steps": 1,
+  "removed": 0.6931471805599475,
+  "ledgers": [
+    {
+      "dt": 0.02,
+      "chi": 16,
+      "groups": 1,
+      "stages": [
+        {
+          "reverse": false,
+          "group": 0,
+          "stage": 0,
+          "centering_energy": 3.700000000000001,
+          "svd_eps": 5.377645764301227e-32,
+          "pre_normalization_norm2": 4.000000000000016
+        },
+        {
+          "reverse": false,
+          "group": 0,
+          "stage": 1,
+          "centering_energy": 3.700000000000001,
+          "svd_eps": 3.055546124824561e-32,
+          "pre_normalization_norm2": 1.0000000000000004
+        },
+        {
+          "reverse": true,
+          "group": 0,
+          "stage": 0,
+          "centering_energy": 3.7000000000000006,
+          "svd_eps": 1.4738924587744237e-31,
+          "pre_normalization_norm2": 0.9999999999999998
+        },
+        {
+          "reverse": true,
+          "group": 0,
+          "stage": 1,
+          "centering_energy": 3.7000000000000006,
+          "svd_eps": 5.930049162598924e-32,
+          "pre_normalization_norm2": 1.0000000000000002
+        }
+      ],
+      "log_removed_raw_norm_factor": 0.6931471805599475,
+      "restored_scalar_phase_exponent": 0.07400000000000001,
+      "centering_phase_restored": true,
+      "method": "Exact same operator SUM and exact RK2-polynomial factorization, NOT exact exponential evolution. Symmetric Hermitian-group splitting plus MPS compression; finite dt/bond errors. Scalar centering phases restored; removed raw norm product retained separately. No full-MPO/variance claim."
+    }
+  ],
+  "raw_file": "rich_review_wave49_20261016_zero_source_repair2_repair_saved_scalar_phase_state_s001.npz",
+  "raw_sha256": "93040b99f025ee74f2e11c347669aab16894af8235fc2e506312fb86566d91a7",
+  "generation": {
+    "storage_source_sha256": "fefa86cff60eae2fd0098ffede4ef506d53fb2b6362951a8a1ee00b3b6ccbd0a",
+    "evolve_source_sha256": "ac2f9582f3e6c85560040b4150dbd5d1a3ad10662b5e4312e90f59794353b013",
+    "source_input_receipt": "rich_review_wave49_20261016_integrated_repair_positive2_input.json"
+  },
+  "meaning": "Own physically executed stage only; not a producer state. B tensors contain all phases. Removed real raw normalization factors are retained separately, not interpreted as Born probabilities or convergence bounds.",
+  "completed_physical_time": 0.02
+}

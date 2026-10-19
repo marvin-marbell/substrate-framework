@@ -1,0 +1,100 @@
+{
+  "kind": "INDEPENDENT_FRACTIONAL_SAME_L_AND_FULL_GROUND_FIXED_EPSILON_VIRIAL_PROOF_REVIEW_NOT_ADMISSION",
+  "owner": "FractionalVirialProofReview",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "captured_contract_revision": "32c0cf4122ecc698980c34fb7f2202ba5c3fe29484b5733f5f158f56e332c045",
+    "accepted_scoped_science": "1b17acc8bcc51c39d0d1208975f45e7ecfda24b72705300e6c52954a280ad8b6",
+    "template_id": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item_id": "induced-photon",
+    "requirements": [
+      "outcome",
+      "verification"
+    ],
+    "parent_only_plan_writer": true
+  },
+  "frozen_targets": {
+    "full_loop_graph_proof_20261012.json": "d21fd6cc5908f070077bf826d8d8a3f8bc1d9f11e035fda22db8561c263040c9",
+    "full_loop_graph_strict_moment_addendum_20261012.json": "31d369a1df19e86c256c7ffa3c2a331146693b5e3d7cec67f738083374d05887",
+    "full_loop_graph_spectral_consumer_20261012.json": "d6178ac30052d4e8c65da4559d3d83667375d00e2bc6813676d8ea318160b196",
+    "full_loop_graph_virial_attempt_proof_20261012.json": "bbc7939cec524eb6ab8df782c60e2dac68ff992ffa1556a89976cdfbb4919cc2",
+    "full_loop_graph_virial_actual1_20261012_capsule.json": "1924eb62a54841a3a3fa7fede8c836d3b36a5ae29508c5e187f0aac88cdf5dd3",
+    "full_loop_graph_virial_actual1_20261012_receipt.json": "c1da277badd450415f5c70e8fecafced07e2d05f5cdbdc76633780964d907cfa"
+  },
+  "overall_verdict": "VALID_PAID_FRACTIONAL_SOURCE_CONDITIONAL_ON_SAME_L_CUTOFF_GRAPH_ENDPOINT; VALID_FINITE_FORM_STATIONARITY; FAILED_UNIFORM_WEIGHTED_KINETIC_GATE; PHYSICAL_IR_OPEN",
+  "premises": [
+    "Exact inherited globally minimizing finite fullH ground family, canonical2V for all65 species, Ref4, compatible continuous characters, original Gauss/deck/AP and translation averaging. Analytical inherited grounds, never numerically fabricated.",
+    "Inherited scalar radial interpolation supplies C85 and source vector bound S=2b sqrt(C85), with uniform TOTAL tail S M^-1/4. This is a statement in the unchanged SAME full-history Hilbert space, not a globally defined unbounded insertion.",
+    "For every fixed M, the separately reviewed complete-primitive endpoint gives u_M in D(L), ||L u_M||<=Cg M^4, on that SAME inherited L>=0. This slice proves what follows from that endpoint; FullPrimitiveGraphReview owns its full-primitive proof, counts, constants and Friedrichs passage.",
+    "All constants are finite at the pinned native law. No uniformity under changing couplings/chi, source rescaling, independent generator or finite-P0 transport is assumed."
+  ],
+  "fractional_proof": {
+    "monotone_difference": "The fixed eta satisfies 0<=eta<=1 and eta(r/(2M))>=eta(r/M). Multiplying the four endpoint cutoffs preserves 0<=chi_M<=chi_2M<=1. Scalar chi commutes the CAR-valued A, so pointwise ||(chi_2M-chi_M)A psi||<=||(1-chi_M)A psi|| in the density/purification norm. This yields ||u_2M-u_M||<=S M^-1/4 in the SAME limiting representation. More generally the existing source-tail finite-family witness gives this for any K>=M. A naive triangle from two unrelated tail bounds only gives S(1+2^-1/4)M^-1/4; the smaller declared constant requires this multiplier/order argument, not triangle.",
+    "spectral_tail_and_layercake": "For T>=1, ||1_(L>T)u||<=||u-u_M||+T^-1||L u_M||<=S M^-1/4+Cg M^4/T. Choose M=T^(4/17)>=1; both terms have power T^-1/17. This balances exponents, not the exact constant-minimizing M (which depends on S/Cg). Thus mu_u((T,infinity))<=(S+Cg)^2 T^-2/17. On [0,1] integral E^(2s)dmu<=S^2. On (1,infinity), layer cake integral=mu((1,infinity))+2s integral_1^infinity T^(2s-1)mu((T,infinity))dT, or equivalently use full layer cake from0 with low part <=S^2; the latter gives G_s^2=S^2+[s/(1/17-s)](S+Cg)^2 for 0<s<1/17. No extra boundary mass is double counted in the full layer-cake route.",
+    "dyadic_graph_completion": "Let d_n=u_(2^(n+1)M)-u_(2^n M). Each d_n belongs D(L), ||d_n||<=S(2^n M)^-1/4 and ||L d_n||<=Cg[(2^(n+1)M)^4+(2^n M)^4]=17Cg(2^n M)^4. Spectral Holder gives ||L^s d_n||<=||d_n||^(1-s)||L d_n||^s, hence S^(1-s)(17Cg)^s(2^n M)^-beta_s, beta_s=(1-17s)/4. The geometric series has K_s=S^(1-s)(17Cg)^s/(1-2^-beta_s). Its graph-norm sum and closedness of L^s identify the norm limit u and give ||L^s(u-u_M)||<=K_s M^-beta_s for every starting M>=1. This independently pays D(L^s); it does not upgrade to Q(L)=D(L^1/2), D(L), or original interposed-source domains.",
+    "whole_P0": "Fix L first, then P0=1_{0}(L), Q0=1-P0. These spectral projections commute L^s and contract both norms. Thus j=Q0u, j_M=Q0u_M inherit every estimate; projecting onto any I subset[delta,infinity), delta>0, contracts again. Entire P0 is removed, including degeneracy. Subtracting a distinguished Omega alone is not equivalent, and no finite P0 is transported. j may vanish.",
+    "endpoint_nonpayment": "At s=1/17, layer cake has logarithmically divergent bound and beta_s=0 makes the dyadic graph series non-summable. An abstract SAME-L witness with energies E_n=2^(17n/4), masses |u_n|^2=2^-n/2 and u_(2^N) truncated at n<=N satisfies TOTAL tail O(M^-1/4) and graph O(M^4), yet each E_n^(2/17)|u_n|^2=1, so the endpoint moment diverges. This is a countermodel to endpoint inference from the two inequalities, NOT a native-ground counterexample.",
+    "weighted_resolvent_correction": "For x=L^s j_a, y=L^s j_b, x_M=x+e_a, y_M=y+e_b, ||e_a||<=K_sa M^-beta, ||x||<=G_sa, the expansion has two linear errors plus <e_a,R e_b>. With ||R||<=1/eta, safe error is eta^-1[K_sa G_sb M^-beta+G_sa K_sb M^-beta+K_sa K_sb M^-2beta]. For equal G,K this is eta^-1(2GK M^-beta+K^2 M^-2beta). The long original proof omits the last term unless G is explicitly also a uniform cutoff endpoint bound. The pinned spectral_consumer addendum explicitly corrects it and must govern consumption. The unweighted error needs no extra quadratic term because both j and j_M have the same TOTAL bound S, permitting an asymmetric two-term expansion. Positiveband improves eta^-1 to(delta+eta)^-1.",
+    "complex_and_time_consumer": "Gamma_s(-eta)=<L^s j_a,I,(L+eta)^-1 L^s j_b,I> is a positive semidefinite Hermitian complex Gram, with all imaginary cross entries retained; neither realification nor positivity of each cross entry is licensed. For z outside [delta,infinity), the resolvent norm is bounded by distance(z,[delta,infinity))^-1. Since |exp(-ix)-1|<=min(2,|x|)<=2^(1-s)|x|^s, ||(exp(-itL)-1)j_I||<=2^(1-s)|t|^s G_s, and the actual SAME-L two-source time kernel differs by <=S_a 2^(1-s)|t|^s G_sb. This is spectral regularity, not a calculated native trajectory.",
+    "physical_boundary": "The tail controls ultraviolet source mass and Holder real-time source regularity. It supplies no lower IR mass/residue, principal or TOTAL momentum density, photon, two polarizations, common cone, Coulomb law, physical1 phase, controlled physical1 gapped branch, original fullHeff or law adoption. A gapped positive-band source obeys every inequality."
+  },
+  "virial_proof": {
+    "actual_field_and_metric": "Use the full60 Cartesian Phi coordinates per site with Tr(T_A T_B)=delta_AB/2, y=r^2=|q|^2/2. For t=1+y and a=epsilon t^(7/2), f=t^3/(1+a), v=q f. Dv=f I+f_y q q^T; tangential eigenvalue f>0, radial eigenvalue f+2y f_y=t^2(1+7y+a)/(1+a)^2>0. Although f_y can become negative, both eigenvalues remain positive. Radial speed r f is monotone and bounded by epsilon^-1, and for each fixed positive epsilon all required jets are bounded. The direct native radius factor is essential; using y=|q|^2 doubles the displayed Laplacian correction.",
+    "global_flow_and_halfdensity": "For fixed epsilon the bounded globally Lipschitz vector field has complete signed-time flow F_tau, globally a C-infinity diffeomorphism with inverse F_-tau. At finite N take the product over all Phi sites. The unitary pullback is (U_tau psi)(q)=det DF_-tau(q)^(1/2) psi(F_-tau(q)); its derivative at0 is -(v.grad+div(v)/2), so its generator is D_v=-i(v.grad+div(v)/2). The Jacobian half-density cannot be omitted: it is responsible for the quantum Delta div term. For bounded tau, DF and inverse are bounded and the corresponding higher jets are bounded; the transformed gradient plus bounded half-density gradient preserves the finite kinetic form domain.",
+    "physical_form_invariance": "SU4 conjugation acts orthogonally in the full native HS metric and preserves r. Therefore the radial flow is equivariant and its Jacobian is invariant; U_tau commutes the Gauss unitaries and preserves their invariant physical subspace. It acts identically on CAR, Ref, U1 coordinates and SU4 links, so species number, occupation densities, deck/AP and compatible continuous character remain unchanged. Ambient Phi kinetic is varied before restriction, retaining all angular/isotypic energy; no Berry/angular term is deleted. The Phi-independent Haar/fullE/HC and colour-plaquette pieces commute the product radial action.",
+    "finite_form_stationarity": "At fixed epsilon and finite N, bounded flow displacement leaves Jordan quartic growth comparable, with derivative O_epsilon(1+r^3); paired alignment derivative is O_epsilon(1+r_x+r_y), and full matter derivative is bounded O_epsilon(1) per native endpoint. Bounded Dv/higher jets control the kinetic-form difference quotient by the paid unweighted finite Phi kinetic and constant. Inherited finite moments and form budget dominate these derivatives. Signed-tau variations stay in the same physical Friedrichs form domain/fibre. Exact global ground minimality then gives derivative zero from both sides. This is a valid weak FORM identity, requiring neither D_v Omega in D(H), D(H^2) nor numerical ground. Constants may depend on finite N and epsilon at this stationarity step.",
+    "commutator_sign": "On smooth ambient test functions, i[H,D_v]=2kP sum p.sym(Dv).p-(kP/2)sum Delta_q(div_q v)-sum v.grad VJordan-paired_v_grad Valign-D_v Hmat. The independent arbitrary-vector-field 2D operator computation controls the sign and quantum term, not just a point jet. Form stationarity identifies the expectation by the preceding variation. Hence <4sum f J+paired alignment> = positive weighted kinetic -(kP/2)<sum Delta div v>-<D_v Hmat>. The positive weighted kinetic is on the RIGHT. Dropping it gives a LOWER bound on the left, never the needed upper bound.",
+    "global_paired_alignment": "For each bond X=Phi_x, Y=Ad_U Phi_y, equivariance gives v(Y)=Ad_U v(Phi_y). The derivative of alpha||X-Y||_HS^2 is 2alpha <v(X)-v(Y),X-Y>_HS>=0, because sym Dv is positive throughout the ambient Cartesian space (the HS metric differs by a constant1/2). Pair both endpoint variations globally; do not freeze neighbors or replace the conditional full ground by a local ground. The large F alignment genuinely has favorable sign, but this does not bound the positive weighted kinetic.",
+    "Jordan_and_all65_matter": "Euler homogeneity gives v.grad J=4fJ>=4lambda f r^4 using inherited full Jordan coercivity. Hmat derivative replaces every native endpoint Phi by f Phi, retaining the full ordered onsite/nearest/two-link/adjoint/AP blocks and all65 scales. With w_s=|onsite_s|+2 sum_paths(|c0|+|ci|), B=4(lambda w_neutral+w_active+63w_aux)<512lambda, entry-l1/CAR estimates bound |D_v Hmat|<=B sum r f<=8B sum(1+r^7). The two elementary branches r<=1 and r>=1 prove the last inequality uniformly in epsilon. Neutral has only3 nearest profiles while active+aux have6 nearest/two-link profiles and distinct onsite masses; neutral ground cost is retained. Translation averaging and division by V pay this RHS via accepted radial8.5. No factorization of full energy correlations is made.",
+    "quantum_correction": "Since y=|q|^2/2, div v=d f+2y f_y and Delta g(y)=d g_y+2y g_yy. Thus Delta div v=d(d+2)f_y+4(d+2)y f_yy+4y^2 f_yyy, d=60. Direct differentiation yields P1=3-a/2, P2=3a^2/4-71a/4+6, P3=-15a^3/8+225a^2/2-1095a/8+6 in f^(j)=t^(3-j)P_j(a)/(1+a)^(j+1). Coefficient-l1 J1=7/2,J2=49/2,J3=1029/4 give |Delta div v|<=20125 t^2 uniformly in epsilon. At epsilon0 the exact polynomial is12672y^2+23808y+11160. Its expectation is paid by radial4, but its sign is not presumed favorable for positive epsilon.",
+    "unpaid_kinetic_gate": "K_epsilon=(2kP/V)<sum p.sym(Dv_epsilon).p> is finite for each fixed epsilon since Dv is bounded. The immediate estimate uses sup||Dv|| times the unweighted kinetic. At a=1, t=epsilon^-2/7 gives tangential eigenvalue f=epsilon^-6/7/2, so no uniform bound follows from this estimate. At epsilon0 the weight grows like r^6, exposing the unpaid joint weighted Phi kinetic r^6 pPhi^2. Its quartic-homogeneity scaling corresponds to h^(5/2), not a proven operator equivalence; the inherited strict p<9/4 moment budget cannot simply be used for it. Stationarity links radial10 to that term but does not bound either. Without uniform K_epsilon, epsilon->0, radial10/16 iteration, and full bare-source D(L)/Q(L) remain unjustified.",
+    "scalar_h_substitution_invalid": "Weighted scalar integration introduces Re<f Omega,h Omega>. Omega is a fullH ground and h is only a local scalar Phi/internal-Haar summand, so h Omega=Eglob Omega is false in general. FullH= h+surrounding terms gives correlation terms that are not Eglob/V times a scalar moment. Existing higher scalar graph inequalities remain valid at their stated scope, but do not supply a scalar-h eigenstate identity for the full ground.",
+    "Gaussian_scope": "Exact displaced phased Schwartz packets for H=p^2+x^4, v=x^7 are tuned to <i[H,D]>=14<p x^6 p>-105<x^4>-4<x^10>=0. Their radial10 and weighted kinetic grow, and their nonconstant (Hpsi)/psi proves they are not ground eigenvectors. They are quantum method controls rejecting the sign/drop step and ground-substitution inference, not native groundstates, not uniform-native-budget constructions, and not a no-go for actual native radial10, higher graph or another ground route."
+  },
+  "strict_moment_qualification": {
+    "original_witness": "The target addendum E_n^2=2^(9n)/n^2 pays E2 but generally fails accepted E4. Therefore it is a valid separation for the expressly narrower E2 assumptions, not a countermodel satisfying EVERY inherited budget.",
+    "corrected_simultaneous_witness": "On n>=1, R_n=2^n, p_n=2^(-9n)/(4n), choose E_n^2=2^(4n)/n^2; place residual mass at R=E=0. Every radial t<9 has finite expectation (1/4)sum2^(-(9-t)n)/n. E2 has terms2^(-5n)/(4n^3), and E4 has terms2^-n/(4n^5), both summable. The required R^8 E2 has terms2^(3n)/(4n^3), which do not even tend to0. Radial9 is harmonic divergent and radial10 diverges. This is an exact single-law premise implication control including E4, not a native ground. Possible operator cancellations mean these scalar moments are payment needs of the displayed triangle proof, not logical necessary conditions for D(L)."
+  },
+  "findings": [
+    {
+      "id": "FV_WEIGHTED_KERNEL_QUADRATIC_ERROR",
+      "severity": "corrected_by_pinned_addendum",
+      "target": "full_loop_graph_proof_20261012.json positiveband_consumer.energy_dependent_kernel",
+      "target_sha256": "d21fd6cc5908f070077bf826d8d8a3f8bc1d9f11e035fda22db8561c263040c9",
+      "trigger": "Using uncut G_s as automatic cutoff weighted-vector norm bound",
+      "consequence": "The two-linear-term bound can fail; scalar x=y=1, errors1 gives actual3 versus bound2.",
+      "smallest_correction": "Consume the pinned spectral_consumer safe bound including K_a K_b M^-2beta, or prove a separate uniform cutoff endpoint G. Do not mutate frozen proof."
+    },
+    {
+      "id": "FV_STRICT_E4_WITNESS_SCOPE",
+      "severity": "counterexample_scope_correction",
+      "target": "full_loop_graph_strict_moment_addendum_20261012.json mixed_fullE_boundary",
+      "target_sha256": "31d369a1df19e86c256c7ffa3c2a331146693b5e3d7cec67f738083374d05887",
+      "trigger": "Describing its E2-only witness as paying all accepted kinetic budgets including E_c4",
+      "consequence": "That witness has divergent E4 and cannot establish nonimplication under the full inherited premises.",
+      "smallest_correction": "Keep original frozen; use the E_n^2=2^(4n)/n^2 single-law witness above and the precise triangle-payment nonpromotion scope."
+    },
+    {
+      "id": "FV_UNIFORM_KINETIC_GATE",
+      "severity": "retained_failed_guard_not_new_no_go",
+      "target": "full_loop_graph_virial_attempt_proof_20261012.json exact_failed_new_gate",
+      "target_sha256": "bbc7939cec524eb6ab8df782c60e2dac68ff992ffa1556a89976cdfbb4919cc2",
+      "trigger": "Dropping the positive RHS weighted kinetic or making an unbounded epsilon limit",
+      "consequence": "No upper radial10 bound follows; no fullgraph/radial16/ground no-go is established either.",
+      "smallest_correction": "Retain fixed-epsilon finite form stationarity and explicitly unpaid uniform K_epsilon. Withdraw the parent upper-inference; preserve the independent fractional successor."
+    }
+  ],
+  "verification_scope": "Own independent exact CLI only: complex Gram/wholeP0, missing K2 wrong case, balancing/interpolation powers and endpoint spectral countermodel, direct native radial contractions and arbitrary-vector-field differential commutator, SU4 matrix equivariance, all65 literal coefficients, Schwartz quantum virial and non-ground/fullH-summand controls. No producer/root/main/eigensolver/old checker or test suite is executed.",
+  "language_tooling": {
+    "evidence": "fractional_virial_review_language_20261012.json",
+    "real_server": "pyright-langserver direct JSON-RPC because xd://lsp absent",
+    "project_root": "/home/administrator/substrate-222",
+    "AST_positive": "sp.diff($$$ARGS) on known virial consumer",
+    "post_edit_diagnostics": "Parent owns final selected-file diagnostics; not run here"
+  },
+  "original_targets_modified": false,
+  "shared_plan_or_README_modified": false,
+  "scientific_admission": false,
+  "campaign_complete": false
+}

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_em_20261015_react.py", line 156, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_em_20261015_react.py", line 89, in main
+    base_state=propagate(h,base_state,t-previous,phase_energy);pulse=propagate(h,pulse,t-previous,phase_energy);previous=t
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_spatial_colour_em_20261015_react.py", line 33, in propagate
+    shifted=h-phase_energy*sparse.eye(h.shape[0],format='csr')
+            ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'FactorOperator' and 'csr_matrix'

@@ -1,0 +1,14 @@
+{
+ "kind":"EXACT_NATIVE_FOUR_EDGE_LAPLACE_RATIONAL_TIME_REQUEST",
+ "governor":{"plan_id":"issue-222-induced-photon-delta13-continuation-20261008","revision":"8115649c915772d522c604be80732ccebdb58383b34cfa1738e0466466d429d9","work_item":"induced-photon"},
+ "incoming_raw_flow":[0,0,0,0],"z_exact":["0","64"],
+ "cube":{"lower_exact":"0","upper_exact":"1/64","subdivisions_per_axis":4,"step_exact":"1/256","midpoint_rule":true},
+ "required_t_exact":["0","1/512","1/256","3/512","1/128","5/512","3/256","7/512","1/64","9/512","5/256","11/512","3/128","13/512","7/256","15/512","1/32","17/512","9/256","19/512","5/128","21/512"],
+ "roles":["active","aux"],"orientations":["creation","annihilation"],"matrix_shape":[2,2],
+ "duration_definition":"For each vertex sum the subset of tau1,tau2,tau3 lying strictly between its first and second incident insertion; no equal-time substitution. All midpoint durations are listed, with zero as adverse/control support.",
+ "box_derivative_requirement":"Optional exact-g first-moment upper cap; absent it, global functional-calculus sup(x exp(-t x)) <= 1/(2t) for x>=charged floor>0, plus contraction difference <=1 at t=0. This bounds all endpoint entries, not a moment heat proxy.",
+ "infinite_tail":"Outside cube union tau_j>T: L1-hop-product times exp[-sum_j(64*j+ncharged_j*c+z)tau_j]. Integrated union bound explicit; ncharged2=4 for opposite edges, otherwise2. c=-5120-E0upper.",
+ "kernel_convention":"Gplus[q,p]=<g,c_q exp[-t(H257,-1/2-E0)] c_pdagger g>; Gminus[q,p]=<g,c_pdagger exp[-t(H255,+1/2-E0)] c_q g>. Both have row annihilation index q and column creation index p. Native p0,1, one labelled spin replica.",
+ "spin_assignments":16,"copy_counts":{"active":1,"aux":63},"orders":24,"cycle_orientations":2,
+ "no_phase_or_pole_claim":true
+}

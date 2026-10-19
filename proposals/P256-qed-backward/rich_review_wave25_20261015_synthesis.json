@@ -1,0 +1,92 @@
+{
+  "kind": "INDEPENDENT_POSITIVE_FINITE_GAUGE_TRANSPORT_SURVIVES_ONE_L2_CONTINUATION",
+  "governor": {
+    "plan_id": "issue222-rich-backward-candidates-20261014",
+    "launch_revision": "fbc5d613dcc248118658f2c81e30b3ebb77fe63eb6bb63e942029fb644faed95",
+    "template": "general@89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "independent-review",
+    "requirements": ["outcome", "verification"],
+    "parent_sole_plan_writer": true
+  },
+  "target_capsule_verified_sha256": "f98cf61d31e01dfdba8b49929ec659d9090dc9eb0da2564522f3117e6c05bdfb",
+  "verdict": "Positive actual finite spatial gauge/matter transport independently observed at L1, and its existence, positive t4 right electric/owned-energy response and matter/current response survive exactly one unchanged-protocol L2 continuation. L1 is strongly boundary limited. L2 substantially reduces, but does not eliminate, retained-boundary occupation. No rotor/continuum convergence verdict.",
+  "first_finite_verdict": "rich_review_wave25_20261015_provisional_synthesis.json was written after natural L1 exit and before L2 launch; the finite mechanism finding was not withheld for a convergence campaign.",
+  "independence": {
+    "consumer": "rich_review_wave25_20261015_consume.py",
+    "pure_helpers_only": ["rich_photon_fullq_20261014_model.py Parameters/Sector", "transitive rich_photon_20261014_loop.py CAR hop"],
+    "new_own_construction": "Physical yz source product; regional ER/HR/Hoff/HRoff/Hcut/HRcut; primitive J; exact physical support/continuity/locality checks; ion-matched seed and unitary pulse; actual full-H dynamics; Chebyshev resolution. No CubeExperiment algebra/seed/measure APIs or producer CLI/evolved states/results consumed as observations.",
+    "inputs": "rich_review_wave25_20261015_input.json; cutoff argument1 then2; full Nup=Ndown1 cube8sites/12edges, five chords; t1 U4 electric inertia1, static ions[1,0,0,0,1,0,0,0], alpha0.7, time0..4 in nine samples, hbar=charge=spacing=1.",
+    "state": "At BOTH cutoffs construct a new neutral zero-physical-E basis spin-up(0,0,0)/spin-down(1,0,0), apply exp(-i0.7 Bleft) in that newly constructed full sector. No L1 state embedding, eigenspace projection, re-grounding, fitted pulse or work matching. Measured seed H variance6: explicitly NONSTATIONARY prepared state, not eigenvacuum. Initial matter reduced-state distance L1=2.220446049250313e-16, L2=0. Both initial right ER/HR differences exactly0."
+  },
+  "physical_and_projected_locality": {
+    "source_cycle": [-1,1,0,-1,0,1,0,0,0,0,0,0],
+    "source_edges": [0,1,3,5],
+    "receiver_edges": [8,9,10,11],
+    "bridges": [2,4,6,7],
+    "observed_at_both_L": "Every all-retained-basis maximum-entry residual is exactly0: complete physical-cycle E shift with unchanged matter, closure and Gauss; every primitive hop changes physical E by its one link and density by its endpoint charge; actual dotE=J and density continuity; full H reconstruction and HL+HR=H. Source commutators with EACH right physical E, density, directed hop AND adjoint and HR are0. Thus projection has been checked on actual disjoint-region consumer operators, not assumed to preserve an abstract tensor product.",
+    "ownership": "ER is only right face electric energy; HR assigns electric AND hopping link energies by mean endpoint x and Hubbard by site. Bridges are split half. Raw HR need not be positive, so response/work ratios are finite redistribution observations, not monotone efficiencies."
+  },
+  "genuine_same_state_controls": {
+    "no_hop": "Own Hoff=all E2/2+Hubbard and HRoff=weighted E2/2+right Hubbard. [Hoff,ER]=[Hoff,HRoff]=[Bleft,HRoff]=0, all exact. Initial right differences0. Therefore same-state receiver energy/electric excess0 for all t.",
+    "path_cut": "Own Hcut removes exactly and ONLY forward/backward hopping on all four physical x bridges, retaining electric/Hubbard terms; own HRcut=HRoff+right hopping, HLcut=Hcut-HRcut. Independently measured [HLcut,HRcut]=[HLcut,ER]=[Bleft,HRcut]=[Bleft,ER]=0, all exact, at BOTH cutoffs. Evolution factors; pulse unitary commutes with the entire right receiver trajectory. Thus same-state receiver excess0 for every t. This exact proof replaces redundant control trajectories; no control state is measured using coupled HR."
+  },
+  "results_columns": "Every pair is [baseline,pulse]. Work is each model's actual initial <H> pulse-minus-baseline, never fitted or matched. Times sampled every0.5; sampled maxima are not continuous-time supremum claims.",
+  "L1": {
+    "dimension": 15552,
+    "work": 0.45126791550690554,
+    "t4_ER_raw": [0.8851691330204097,0.9075963287696344],
+    "t4_delta_ER": 0.022427195749224693,
+    "t4_HR_raw": [0.013553978210601053,0.12249058702411211],
+    "t4_delta_HR": 0.10893660881351105,
+    "delta_ER_over_actual_work": 0.04969818366996556,
+    "delta_HR_over_actual_work": 0.2414011833549998,
+    "max_right_current_excess": 0.024160971621915935,
+    "max_right_density_excess": 0.01805356305200012,
+    "ANYchord_boundary_initial": [0.0,0.22563395775345277],
+    "ANYchord_boundary_endpoint": [0.8748030516800125,0.8983676262521461],
+    "ANYchord_boundary_sample_max": [0.9306769368521524,0.9426625818848263],
+    "resolution": {"Chebyshev_enclosure":[-6.0,48.5],"degree":184,"analytic_tail_excluding_roundoff":1.0117984729617267e-12,"endpoint_state_difference_per_column":[9.652389119646362e-15,8.549558638451582e-15]},
+    "natural_exit": true,
+    "returncode": 0
+  },
+  "one_L2_continuation": {
+    "dimension": 200000,
+    "work": 0.4892884118295684,
+    "t4_ER_raw": [1.1206985329379693,1.1571042846801094],
+    "t4_delta_ER": 0.03640575174214011,
+    "t4_HR_raw": [-0.0004455553695780162,0.09285367421784657],
+    "t4_delta_HR": 0.09329922958742459,
+    "delta_ER_over_actual_work": 0.07440550575479635,
+    "delta_HR_over_actual_work": 0.19068350553931182,
+    "max_right_current_excess": 0.022079834960208367,
+    "max_right_density_excess": 0.01769799845842518,
+    "ANYchord_boundary_initial": [0.0,0.007056018358297062],
+    "ANYchord_boundary_endpoint": [0.12930919882033526,0.15613787971574297],
+    "ANYchord_boundary_sample_max": [0.13349708269555258,0.1580113457848441],
+    "resolution": {"Chebyshev_enclosure":[-6.0,124.5],"degree":414,"analytic_tail_excluding_roundoff":1.8035142154909767e-12,"endpoint_state_difference_per_column":[6.053741465156691e-14,5.877307358118943e-14],"max_norm_drift":9.603429163007604e-14,"max_H_drift":5.706546346573305e-14},
+    "natural_exit": true,
+    "returncode": 0,
+    "scope_decision": "Survives requested qualitative finite-mechanism reliability discriminator. The actual response amplitudes and actual work change; do not claim decimal convergence. ANYchord boundary0.158 remains non-negligible and is NOT omitted norm or a rigorous rotor error. No L3, sweep or eigenground run."
+  },
+  "qualitative_time_comparison": "Both models show positive ER/HR excess at each sample t>=1 through4 and right current/density response. Do NOT claim all-time positivity: at t0.5, L1 deltaER=-1.7164120354740131e-6 while L2=+8.321782800635447e-7; deltaHR=-0.00012822973954967985 and -0.0001993093425099799 respectively. These small early sign differences are exposed, not erased by work normalization.",
+  "execution_and_errors": {
+    "actual_cases": "Exactly L1 plus one L2; each primary SciPy adaptive scaled-Taylor action independently resolved with one global Chebyshev action of the SAME full-H case. Both natural exits0, frozen helpers and review science source/input unchanged before/after each run.",
+    "stderr": "Each science case emits the same two SciPy sparse integer-density-diagonal FutureWarnings, preserved verbatim; no runtime exception. L1 scientific elapsed2.0884s and L2=55.9705s; wrapper elapsed3.0827s and59.2905s.",
+    "language": "Installed rooted Pyright LSP symbols and definition exercised before edits; positive structural AST class query. Final explicit two-new-file Pyright1.1.414 with project scientific Python: natural exit0, filesAnalyzed2, errors0/warnings0. Rooted direct LSP natural exit0 but default interpreter published THREE unresolved numpy/scipy import errors for consumer; capture clean. Do not call the LSP environment clean. Full diagnostic evidence retained.",
+    "artifact_reduction": "An initial post-science reduction cell tried numpy in the separate eval environment and failed ModuleNotFoundError; repeated only that reduction using standard-library arithmetic, no science rerun or installation."
+  },
+  "artifacts": {
+    "input": "rich_review_wave25_20261015_input.json",
+    "consumer": "rich_review_wave25_20261015_consume.py",
+    "capture": "rich_review_wave25_20261015_capture.py",
+    "results": ["rich_review_wave25_20261015_L1_result.json","rich_review_wave25_20261015_L2_result.json"],
+    "states": ["rich_review_wave25_20261015_L1_states.npz","rich_review_wave25_20261015_L2_states.npz"],
+    "exits": ["rich_review_wave25_20261015_L1_exit.json","rich_review_wave25_20261015_L2_exit.json"],
+    "source_capsules": ["rich_review_wave25_20261015_L1_source_capsule.zip","rich_review_wave25_20261015_L2_source_capsule.zip"],
+    "diagnostics": "rich_review_wave25_20261015_language_final.json",
+    "manifest": "rich_review_wave25_20261015_manifest.json",
+    "delivery_capsule": "rich_review_wave25_20261015_delivery_capsule.zip",
+    "receipt": "rich_review_wave25_20261015_delivery_receipt.json"
+  },
+  "no_promotion": "No supplied Maxwell B2 and no massless/two-photon/polarization/speed/light-cone/continuum/rotor convergence/vacuum/CAR36/Nature claim. Finite prepared-state spatial transport is the positive result. Distinct H/state/charge law remains distinct from the other campaign constructions."
+}

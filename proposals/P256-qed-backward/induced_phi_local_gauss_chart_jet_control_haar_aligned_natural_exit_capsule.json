@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_local_gauss_chart_jet_control.py",
+    "--output",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_local_gauss_chart_jet_control_haar_aligned_receipt.json"
+  ],
+  "cwd": "/home/administrator/substrate-222/proposals/P256-qed-backward",
+  "observed_returncode": 0,
+  "natural_exit": true,
+  "source_sha256": "1da0881333e602184c3d0b1aa9e647a43b04eeecf5b8abe012db245a7265e49c",
+  "receipt_sha256": "611aa4d15d58b46a150d0709966ff8a1f7b2eb72f4307364090f5fab5e66cfa9",
+  "stdout": "{\n  \"output\": \"/home/administrator/substrate-222/proposals/P256-qed-backward/induced_phi_local_gauss_chart_jet_control_haar_aligned_receipt.json\",\n  \"exact_envelopes\": {\n    \"R\": \"1/1048576\",\n    \"F1\": \"4353/2048\",\n    \"F2\": \"1025\",\n    \"F3\": \"3153920\",\n    \"body_Phi_D1_upper\": \"521\",\n    \"body_Phi_D2_upper\": \"1578002\",\n    \"body_link_D1_upper\": \"18\",\n    \"body_link_D2_upper\": \"52\",\n    \"body_D1_upper\": \"539\",\n    \"body_D2_upper\": \"1578054\",\n    \"intrinsic_Haar_body_D1_upper\": \"1053/2\",\n    \"intrinsic_Haar_body_D2_upper\": \"1578005\",\n    \"derived_D1_price\": \"4096\",\n    \"derived_D2_price\": \"16777216\"\n  },\n  \"finite_controls\": {\n    \"test_couplings_exact\": [\n      \"1/4\",\n      \"1/16\",\n      \"1/16\",\n      \"1/16\"\n    ],\n    \"test_radius\": 9.5367431640625e-07,\n    \"arbitrary_local_group_base_max_angle_norm\": 3.6797693130671023,\n    \"physical_Haar_angles_restricted\": false,\n    \"exact_recipe_floating_Q_metric_defect\": 5.216323645551883e-16,\n    \"exact_recipe_floating_Qcart_metric_defect\": 1.6651612610094872e-15,\n    \"exact_recipe_floating_normal_orbit_defect\": 9.995211015279797e-17,\n    \"Cart_rotation_metric_defect\": 1.0031044761380319e-15,\n    \"physical_body_Phi_differential_defect\": 1.3769812140016341e-16,\n    \"physical_body_link_differential_defect\": 1.1874018726062294e-15,\n    \"wrong_omitted_local_frame_error\": 0.1694569587011189,\n    \"wrong_omitted_link_target_error\": 1.58113883008419,\n    \"wrong_Phi_metric_normalization_error\": 0.55045292421505,\n    \"polar_fast_frame_derivative_term_norm\": 7.2601432947516535e-09,\n    \"status\": \"Floating noncommuting all64-site/all192-link structural controls, not interval or global input certificates\"\n  }\n}\n",
+  "stderr": "",
+  "integration_correction": "Actual source angles cover full product Haar. Added intrinsic left-invariant body coefficient bounds and arbitrary Ubase controls; did not restrict source to near-identity theta. Source restriction only compact s,f,C. Prior local-coordinate control retained as historical separate receipts.",
+  "language_intelligence": {
+    "AST_positive": "expm_frechet($$$ARGS) via ast_grep in the actual producer",
+    "LSP_navigation": "actual normal_geometry and solve_mean resolved in project; code_actions available, no import action offered",
+    "LSP_diagnostics": "adapter failed: all language servers failed (pyright); not claimed clean",
+    "project_Pyright_CLI": {
+      "command": "pyright --pythonpath /home/administrator/substrate-framework/.venv/bin/python --outputjson proposals/P256-qed-backward/induced_phi_local_gauss_chart_jet_control.py",
+      "cwd": "/home/administrator/substrate-222",
+      "version": "1.1.414",
+      "observed_returncode": 0,
+      "filesAnalyzed": 1,
+      "errors": 0,
+      "warnings": 0,
+      "scope": "explicit actual source file argument, supported project interpreter; no temporary source copy"
+    },
+    "prior_invalid_CLI_invocation": "--outputjson and --stats are mutually exclusive; initial CLI exited4 before analysis, corrected selection/options without source changes"
+  },
+  "historical_prior_control": {
+    "source_sha256": "736cdd435fc7ead37c8ba0119fbe8a2cb44864acb701e24266c01f7b4ae245be",
+    "receipt": "induced_phi_local_gauss_chart_jet_control_receipt.json",
+    "receipt_sha256": "ce08e6639cbd25e094e388cd93e3d2718a8631883ee3df6a47a3411ac639dfda",
+    "exit_capsule": "induced_phi_local_gauss_chart_jet_control_natural_exit_capsule.json",
+    "exit_sha256": "2bb98db37690dc5c0e1a4309aa7f806755449b85a7bcc94b02da39393c7ea72b"
+  },
+  "scope": "Derived conditional body-frame D-jet/Q0 ingredient plus floating controls; no root/global input/tube/injectivity/D-inverse/Haar determinant/full action/source propagation or campaign certification."
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "OWNED_CONSUMER_EQUATIONS_NOT_NEW_MICROSCOPIC_LAW",
+  "microscopic_H": "H=sum13 E_e^2/(2I)+(U/2)sum8(n_x-1)^2+sum12(T_e+T_e†), I=16,U=4,t=1; T_e=-sum_s c_b,s† U_e c_a,s. Finite E_e in {-1,0,1}, including real outward boundary at0.",
+  "Gauss": "D E+rho=0; D_tail,e=+1,D_head,e=-1; rho=n-1; physical_Q=1-n=-rho. Boundary E=8-N.",
+  "motion": "Jflux=-i(T-T†), dot E=Jflux, dotrho=-D Jflux, conventional physical charge current jQ=-Jflux, dotQ=-D jQ. Physical field F=E/I, dotF=Jflux/I.",
+  "measurement_boundary": "Primitive active-edge set A fixes H_A=HE+HU+sum_(e in A)(T_e+T_e†). J_A,e=-i(T_e-T_e†) if e in A else0. K_A,e=-(T_e+T_e†) if e in A else0. Never measure absent-edge full-H J as control motion. Hcut removes precisely the four x bridges; no U=I bare hopping.",
+  "contact_convention": "H_A(theta)=exp(i theta E_e) H_A exp(-i theta E_e); first derivative=-J_A,e, second derivative=K_A,e. This phase convention is explicit, not a change of current sign.",
+  "power": "dot(E_e²/(2I))={E_e,J_A,e}/(2I). For I16 this is {E,J}/32; expectation=Re< E J >/16. Owned right energy uses endpoint-average weights and its actual active-edge H_R,A; dotH_R,A=i[H_A,H_R,A].",
+  "charged_preparation": "S0=B0† maps neutral (4,4) to addition (5,4), raw source S0Ω; psi=S0Ω/sqrt(<Ω|S0†S0|Ω>). Creation physical charge=-1, not rho=+1 relabelled positive physical charge.",
+  "intervention": "psi_p=exp[-i alpha ImW_right]psi, alpha0.8. ImW=(W-W†)/(2i) is a pure-field right-yz-face Hermitian operator. Its unitary commutes all matter-local densities; on-site matter equality holds at t0 even for entangled psi. A source insertion OΩ is not this operational unitary.",
+  "operational_response": "delta_pulse O(t)=[<O(t)>psi_p-<O(0)>psi_p]-[<O(t)>psi-<O(0)>psi]. Compare newly prepared charged states to their OWN t0, never to neutral Ω or presumed zero offsite source overlap. Cut [Hcut,Qright]=0 defeats charge-change; no assertion that every field/correlation is zero.",
+  "ordered_raw": "M4=<Ω|B_sink(t3) JQ(t2) F(t1) B_source†(0)|Ω>,0<t1<t2<t3. Calculated as <Ω(t3)|S_sink† Uc(t3-t2) JQ_c Uc(t2-t1) F_c Uc(t1) S0|Ω>. No -i, timeordering, LSZ or amputation is applied.",
+  "connected": "C4=M4-GJ*f-GF*j-G*JF+2G*j*f, where G=<B_sink(t3)B_source†(0)>, GJ/GF are the corresponding complete ordered threepoints, f=<F(t1)>,j=<JQ(t2)>,JF=<JQ(t2)F(t1)> in the uncharged same-H reference evolution. These are all charge-allowed cumulant partitions; other partitions carry nonzero total charge and vanish.",
+  "cut_time_semantics": "Ω is generally not Hcut eigenstate. All charged and neutral chains propagate with Hcut, including neutral bra Ω(t3), background onepoints and JF. Never replace by full-H E0 eigenphase. Cut current probe on a removed bridge is exactly0 by its own active H, hence its selected J-based correlation also0 for that operator-level reason, not a blanket no-correlation theorem.",
+  "signed_branch": "Selected new fourpoint is addition/positive-frequency branch with raw Wilson-CAR weights. Ancestor removal convention is conjugated negative-frequency transposed spatial branch, not an event probability or positive spectral intensity.",
+  "resolution": "Independent Taylor expm_multiply and Chebyshev on complete Gershgorin-enclosed blocks; finite Bessel tail estimate separately recorded from floating-point differences. Exact sparse commutators bind Gauss, current, contact and power to actual variant. No independently solved neutral ground claim.",
+  "nonclaims": ["physical Noether spin", "on-shell Compton", "event probability", "photons", "irreducible Dyson input", "global ground", "Nature"]
+}

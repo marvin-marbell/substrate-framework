@@ -1,0 +1,1122 @@
+{
+  "scope": "finite open four-cell planar p_z=0 spinor/compact-photon quantum join; NOT continuum QED or a 3D phase",
+  "units": "hbar=a=1; m,r,v,K,UE,Delta and frequency energies; E,B,n dimensionless; static susceptibility inverse energy",
+  "couplings": {
+    "m": 0.8,
+    "r": 0.04,
+    "v": 0.08,
+    "K": 0.888888888888889,
+    "UE": 0.0072,
+    "Delta": 2.2
+  },
+  "boundary_conditions": "open square; four internal oriented noncyclic electric rotors; fixed outward boundary E=N-8 at cell0; no exterior dynamical photon; background2 per cell; neutral marker leaf",
+  "operator_owner": "actual EdgeWords Pauli code states and primitive paths + compact Gauss electric loop shift",
+  "state_owner": "sparse eigsh ground multiplets of same nonlinear interacting Hamiltonian",
+  "code_matrix_unit_law_residual": 8.881784197001252e-16,
+  "selection_theorem": "Q_eta R_eta gives H_- equivalent H_+ + Delta + K(W+Wdag); ||W||<=1; margin>=Delta-2K>0 in every N sector",
+  "charged_gap_status": "finite sparse energies plus a rigorous sufficient onsite/trace-norm bound; not a continuum theorem",
+  "rigorous_charged_gap_lower_bound": 0.24360000000000004,
+  "analytic_positive_charged_gap_condition_satisfied": true,
+  "photon_response": "H_source=-j B; exact connected sum rules; positive Lanczos quadrature; converged projected static resolvent",
+  "cases": [
+    {
+      "N": 8,
+      "cutoff": 1,
+      "dimension": 22626,
+      "Hamiltonian_nonzeros": 471314,
+      "boundary_flux": 0,
+      "marker_occupation": 0,
+      "marker_EM_charge": 0,
+      "ground_energy": -7.671213844451153,
+      "hermiticity_residual": 0.0,
+      "T_squared_residual": 0.0,
+      "H_time_reversal_residual": 1.3322676295501878e-15,
+      "B_time_reversal_odd_residual": 8.881784197001252e-16,
+      "spectrum": {
+        "resolved_ground_energies": [
+          -7.671213844451153
+        ],
+        "ground_eigen_residuals": [
+          1.1981441419215618e-10
+        ],
+        "ground_multiplicity": 1,
+        "gap_above_ground_multiplet": 0.6378248635853314,
+        "first_complement_energy": -7.033388980865837,
+        "first_complement_eigen_residual": 9.105382927292737e-09,
+        "complement_ground_leakage": 1.2924014832112155e-16,
+        "deflation_energy_penalty": 18.77777777777777,
+        "deflated_ritz_energy": -7.033388980865847,
+        "T_partner_self_overlap": null,
+        "T_partner_eigen_residual": null
+      },
+      "B_response": {
+        "connected_variance": 0.2539442579875353,
+        "zero_energy_connected_weight": -1.1479437019748901e-41,
+        "inelastic_weight": 0.2539442579875353,
+        "energy_moment": 0.1634999664288727,
+        "half_double_commutator": 0.1634999664289325,
+        "equal_time_sum_rule_residual": 5.551115123125783e-17,
+        "energy_sum_rule_residual": 1.1102230246251565e-16,
+        "double_commutator_residual": 5.978550987606468e-14,
+        "static_susceptibility": 0.7941306493992132,
+        "static_resolvent_residual": 5.845780131045391e-10,
+        "lanczos_steps": 24,
+        "lanczos_static_susceptibility": 0.7941306493992121,
+        "spectral_scope": "positive Lanczos quadrature, NOT an enumerated exact full spectrum",
+        "poles": [
+          {
+            "energy": 0.6378248635853002,
+            "weight": 0.2529659246222094
+          },
+          {
+            "energy": 1.7563651635183515,
+            "weight": 3.348948015540624e-05
+          },
+          {
+            "energy": 1.954309116266693,
+            "weight": 0.0006650590357039699
+          },
+          {
+            "energy": 2.7887591925605455,
+            "weight": 0.00015586394419207975
+          },
+          {
+            "energy": 2.8690657578029786,
+            "weight": 0.0001132845762260379
+          },
+          {
+            "energy": 3.023777521692299,
+            "weight": 9.192316073565883e-06
+          },
+          {
+            "energy": 3.6954692610074837,
+            "weight": 5.001967479397935e-07
+          },
+          {
+            "energy": 3.9515462286291743,
+            "weight": 1.0401564897898378e-07
+          },
+          {
+            "energy": 4.192032186698127,
+            "weight": 3.697869666974343e-07
+          },
+          {
+            "energy": 4.598030917654888,
+            "weight": 4.498550419913543e-07
+          },
+          {
+            "energy": 4.780572763421438,
+            "weight": 1.899833171084939e-08
+          },
+          {
+            "energy": 5.570963373500539,
+            "weight": 4.303723913383494e-10
+          },
+          {
+            "energy": 6.310650575763584,
+            "weight": 5.33520565974455e-10
+          },
+          {
+            "energy": 6.462613750193084,
+            "weight": 1.9562749777306377e-10
+          }
+        ]
+      },
+      "matter_rotor_purity": 0.9899920171454647,
+      "linear_entanglement_entropy": 0.010007982854535302,
+      "cutoff_shell_probability": 0.494619310965984,
+      "loop_raise_loss": 0.2473109924154716,
+      "loop_lower_loss": 0.24731099241537957,
+      "adverse_controls": {
+        "wrong_boundary_flux_rejected": true,
+        "wrong_marker_EM_charge_rejected": null,
+        "wrong_rotor_transport_sign_rejected": true,
+        "wrong_primitive_cycle_sign_rejected": true,
+        "wrong_code_path_matrix_element_rejected": true,
+        "actual_wrong_rotor_example": {
+          "source": 0,
+          "target": 6,
+          "initial_fields": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "wrong_fields": [
+            2,
+            1,
+            1,
+            -1
+          ],
+          "wrong_Gauss_residual": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        },
+        "actual_wrong_code_path_example": {
+          "source": 0,
+          "target": 12,
+          "correct_code_path_residual": 4.440892098500626e-16,
+          "reversed_path_sign_residual": 1.9999999999999991
+        }
+      }
+    },
+    {
+      "N": 7,
+      "cutoff": 1,
+      "dimension": 18348,
+      "Hamiltonian_nonzeros": 372376,
+      "boundary_flux": -1,
+      "marker_occupation": 1,
+      "marker_EM_charge": 0,
+      "ground_energy": -6.789608609802066,
+      "hermiticity_residual": 0.0,
+      "T_squared_residual": 0.0,
+      "H_time_reversal_residual": 2.220446049250313e-15,
+      "B_time_reversal_odd_residual": 1.3322676295501878e-15,
+      "spectrum": {
+        "resolved_ground_energies": [
+          -6.789608609802066,
+          -6.78960860980207
+        ],
+        "ground_eigen_residuals": [
+          1.3381967899579971e-08,
+          1.3381967921190911e-08
+        ],
+        "ground_multiplicity": 2,
+        "gap_above_ground_multiplet": 0.16000676419423954,
+        "first_complement_energy": -6.629601845607839,
+        "first_complement_eigen_residual": 2.4408852834965315e-11,
+        "complement_ground_leakage": 8.633950800082575e-16,
+        "deflation_energy_penalty": 16.784977777777772,
+        "deflated_ritz_energy": -6.629601845607836,
+        "T_partner_self_overlap": 4.2682230478494056e-17,
+        "T_partner_eigen_residual": 1.3381967917199648e-08
+      },
+      "B_response": {
+        "connected_variance": 0.25398641994299914,
+        "zero_energy_connected_weight": 2.089341577886873e-09,
+        "inelastic_weight": 0.2539864178536575,
+        "energy_moment": 0.16499932293541922,
+        "half_double_commutator": 0.16499932291786745,
+        "equal_time_sum_rule_residual": 1.1102230246251565e-16,
+        "energy_sum_rule_residual": 8.326672684688674e-17,
+        "double_commutator_residual": 1.755176559647964e-11,
+        "static_susceptibility": 0.7901091171214714,
+        "static_resolvent_residual": 6.115282571141167e-10,
+        "lanczos_steps": 24,
+        "lanczos_static_susceptibility": 0.7901091166695435,
+        "spectral_scope": "positive Lanczos quadrature, NOT an enumerated exact full spectrum",
+        "poles": [
+          {
+            "energy": 0.17632865082261218,
+            "weight": 1.4946476834663726e-05
+          },
+          {
+            "energy": 0.1865097386583673,
+            "weight": 0.0002883235390419929
+          },
+          {
+            "energy": 0.6407627981719282,
+            "weight": 0.25033032316124454
+          },
+          {
+            "energy": 0.9507274636063053,
+            "weight": 3.1650267796423664e-05
+          },
+          {
+            "energy": 1.0573990253271943,
+            "weight": 0.0022014742845420905
+          },
+          {
+            "energy": 1.1372792045111733,
+            "weight": 0.0002669133453442032
+          },
+          {
+            "energy": 1.8771460283140522,
+            "weight": 0.00017403765019408563
+          },
+          {
+            "energy": 1.9798691336751133,
+            "weight": 0.00043376372397085255
+          },
+          {
+            "energy": 2.687002713355584,
+            "weight": 5.035154537001742e-05
+          },
+          {
+            "energy": 2.860023705125205,
+            "weight": 0.0001930273258174633
+          },
+          {
+            "energy": 3.431977474613805,
+            "weight": 8.08431460838879e-07
+          },
+          {
+            "energy": 4.071208979746974,
+            "weight": 4.168160255425386e-07
+          },
+          {
+            "energy": 4.590196013687999,
+            "weight": 3.7594325585412586e-07
+          },
+          {
+            "energy": 4.989848997972249,
+            "weight": 4.81103927031342e-09
+          },
+          {
+            "energy": 6.006055354082999,
+            "weight": 1.6060717026019678e-10
+          },
+          {
+            "energy": 6.395232321430334,
+            "weight": 3.707578690963073e-10
+          }
+        ]
+      },
+      "matter_rotor_purity": 0.9566288033236672,
+      "linear_entanglement_entropy": 0.043371196676332824,
+      "cutoff_shell_probability": 0.5030248688926412,
+      "loop_raise_loss": 0.251522792489997,
+      "loop_lower_loss": 0.25152279250079446,
+      "adverse_controls": {
+        "wrong_boundary_flux_rejected": true,
+        "wrong_marker_EM_charge_rejected": true,
+        "wrong_rotor_transport_sign_rejected": true,
+        "wrong_primitive_cycle_sign_rejected": true,
+        "wrong_code_path_matrix_element_rejected": true,
+        "actual_wrong_rotor_example": {
+          "source": 0,
+          "target": 6,
+          "initial_fields": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "wrong_fields": [
+            2,
+            1,
+            1,
+            -1
+          ],
+          "wrong_Gauss_residual": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        },
+        "actual_wrong_code_path_example": {
+          "source": 0,
+          "target": 12,
+          "correct_code_path_residual": 4.440892098500626e-16,
+          "reversed_path_sign_residual": 1.9999999999999991
+        }
+      }
+    },
+    {
+      "N": 9,
+      "cutoff": 1,
+      "dimension": 18348,
+      "Hamiltonian_nonzeros": 372376,
+      "boundary_flux": 1,
+      "marker_occupation": 1,
+      "marker_EM_charge": 0,
+      "ground_energy": -6.789608609802038,
+      "hermiticity_residual": 0.0,
+      "T_squared_residual": 0.0,
+      "H_time_reversal_residual": 1.3322676295501878e-15,
+      "B_time_reversal_odd_residual": 8.881784197001252e-16,
+      "spectrum": {
+        "resolved_ground_energies": [
+          -6.789608609802038,
+          -6.789608609802099
+        ],
+        "ground_eigen_residuals": [
+          8.767445327191097e-09,
+          8.767445305543763e-09
+        ],
+        "ground_multiplicity": 2,
+        "gap_above_ground_multiplet": 0.16000676419424398,
+        "first_complement_energy": -6.629601845607839,
+        "first_complement_eigen_residual": 1.63121447382991e-11,
+        "complement_ground_leakage": 7.863537428392296e-16,
+        "deflation_energy_penalty": 16.784977777777772,
+        "deflated_ritz_energy": -6.629601845607831,
+        "T_partner_self_overlap": 5.858974197725455e-17,
+        "T_partner_eigen_residual": 8.76744531078722e-09
+      },
+      "B_response": {
+        "connected_variance": 0.2539864181453394,
+        "zero_energy_connected_weight": 3.3204953803328206e-10,
+        "inelastic_weight": 0.25398641781328957,
+        "energy_moment": 0.16499932292292188,
+        "half_double_commutator": 0.16499932292712405,
+        "equal_time_sum_rule_residual": 2.7755575615628914e-16,
+        "energy_sum_rule_residual": 1.1102230246251565e-16,
+        "double_commutator_residual": 4.202166392630602e-12,
+        "static_susceptibility": 0.7901091169136074,
+        "static_resolvent_residual": 5.891976965814819e-10,
+        "lanczos_steps": 24,
+        "lanczos_static_susceptibility": 0.7901091164640563,
+        "spectral_scope": "positive Lanczos quadrature, NOT an enumerated exact full spectrum",
+        "poles": [
+          {
+            "energy": 0.1763092473744698,
+            "weight": 1.4884064382926938e-05
+          },
+          {
+            "energy": 0.18650851452187195,
+            "weight": 0.00028838589430895415
+          },
+          {
+            "energy": 0.6407627943796048,
+            "weight": 0.25033030756506824
+          },
+          {
+            "energy": 0.9403943349029832,
+            "weight": 2.3702471672767065e-05
+          },
+          {
+            "energy": 1.0565390083973158,
+            "weight": 0.002182374930636576
+          },
+          {
+            "energy": 1.1342046403624844,
+            "weight": 0.0002939476453726317
+          },
+          {
+            "energy": 1.8754071115385234,
+            "weight": 0.00016835556726998345
+          },
+          {
+            "energy": 1.9791381401816441,
+            "weight": 0.00043942806425135137
+          },
+          {
+            "energy": 2.684406315843837,
+            "weight": 4.9145134563203846e-05
+          },
+          {
+            "energy": 2.859435921372618,
+            "weight": 0.00019425543442490114
+          },
+          {
+            "energy": 3.424348907475778,
+            "weight": 8.291966874705913e-07
+          },
+          {
+            "energy": 4.067363144445571,
+            "weight": 4.184528138510692e-07
+          },
+          {
+            "energy": 4.588334599594923,
+            "weight": 3.771433909578087e-07
+          },
+          {
+            "energy": 4.968147887116927,
+            "weight": 5.7127333590220596e-09
+          },
+          {
+            "energy": 5.992532254491484,
+            "weight": 1.6119648280127067e-10
+          },
+          {
+            "energy": 6.394112538788391,
+            "weight": 3.741579693361583e-10
+          }
+        ]
+      },
+      "matter_rotor_purity": 0.9566288052320436,
+      "linear_entanglement_entropy": 0.04337119476795637,
+      "cutoff_shell_probability": 0.503024868984664,
+      "loop_raise_loss": 0.2515227925325274,
+      "loop_lower_loss": 0.25152279255107757,
+      "adverse_controls": {
+        "wrong_boundary_flux_rejected": true,
+        "wrong_marker_EM_charge_rejected": true,
+        "wrong_rotor_transport_sign_rejected": true,
+        "wrong_primitive_cycle_sign_rejected": true,
+        "wrong_code_path_matrix_element_rejected": true,
+        "actual_wrong_rotor_example": {
+          "source": 1,
+          "target": 7,
+          "initial_fields": [
+            0,
+            1,
+            1,
+            -1
+          ],
+          "wrong_fields": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "wrong_Gauss_residual": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        },
+        "actual_wrong_code_path_example": {
+          "source": 0,
+          "target": 12,
+          "correct_code_path_residual": 4.440892098500626e-16,
+          "reversed_path_sign_residual": 1.9999999999999991
+        }
+      }
+    },
+    {
+      "N": 8,
+      "cutoff": 2,
+      "dimension": 48362,
+      "Hamiltonian_nonzeros": 1096994,
+      "boundary_flux": 0,
+      "marker_occupation": 0,
+      "marker_EM_charge": 0,
+      "ground_energy": -7.806456403482055,
+      "hermiticity_residual": 0.0,
+      "T_squared_residual": 0.0,
+      "H_time_reversal_residual": 1.3322676295501878e-15,
+      "B_time_reversal_odd_residual": 8.881784197001252e-16,
+      "spectrum": {
+        "resolved_ground_energies": [
+          -7.806456403482055
+        ],
+        "ground_eigen_residuals": [
+          2.107937989878198e-12
+        ],
+        "ground_multiplicity": 1,
+        "gap_above_ground_multiplet": 0.34710665391063067,
+        "first_complement_energy": -7.459349749571494,
+        "first_complement_eigen_residual": 2.748928437237077e-11,
+        "complement_ground_leakage": 6.237512207513678e-14,
+        "deflation_energy_penalty": 18.80657777777777,
+        "deflated_ritz_energy": -7.459349749571532,
+        "T_partner_self_overlap": null,
+        "T_partner_eigen_residual": null
+      },
+      "B_response": {
+        "connected_variance": 0.1764670510371692,
+        "zero_energy_connected_weight": 0.0,
+        "inelastic_weight": 0.17646705103716923,
+        "energy_moment": 0.07095209436513406,
+        "half_double_commutator": 0.0709520943651516,
+        "equal_time_sum_rule_residual": 2.7755575615628914e-17,
+        "energy_sum_rule_residual": 1.8041124150158794e-16,
+        "double_commutator_residual": 1.7541523789077473e-14,
+        "static_susceptibility": 0.972998188395576,
+        "static_resolvent_residual": 8.168382854419496e-10,
+        "lanczos_steps": 24,
+        "lanczos_static_susceptibility": 0.9729981883955697,
+        "spectral_scope": "positive Lanczos quadrature, NOT an enumerated exact full spectrum",
+        "poles": [
+          {
+            "energy": 0.3471066539105445,
+            "weight": 0.16595521009163577
+          },
+          {
+            "energy": 1.2354393678408024,
+            "weight": 0.010185694676312843
+          },
+          {
+            "energy": 1.7430055761744738,
+            "weight": 2.747069144119121e-05
+          },
+          {
+            "energy": 1.8335262265890344,
+            "weight": 6.685510897747439e-05
+          },
+          {
+            "energy": 2.240583137751026,
+            "weight": 9.367730823487463e-05
+          },
+          {
+            "energy": 2.3473563011637584,
+            "weight": 3.456153020164587e-05
+          },
+          {
+            "energy": 2.819382113457743,
+            "weight": 7.979532745095183e-05
+          },
+          {
+            "energy": 3.1641019370289585,
+            "weight": 1.178216866048526e-05
+          },
+          {
+            "energy": 3.31398741922434,
+            "weight": 1.1453148386604646e-05
+          },
+          {
+            "energy": 4.031576909877243,
+            "weight": 2.3281374901093151e-07
+          },
+          {
+            "energy": 4.555072006361199,
+            "weight": 1.8547396667739156e-07
+          },
+          {
+            "energy": 4.914100515908793,
+            "weight": 1.2994712943841495e-07
+          },
+          {
+            "energy": 5.3714166281396585,
+            "weight": 2.3479732257808613e-09
+          },
+          {
+            "energy": 6.304523203744004,
+            "weight": 3.1853539694888806e-10
+          },
+          {
+            "energy": 6.783964085710602,
+            "weight": 8.414550354118567e-11
+          }
+        ]
+      },
+      "matter_rotor_purity": 0.9858334747637201,
+      "linear_entanglement_entropy": 0.014166525236279925,
+      "cutoff_shell_probability": 0.14969190319186101,
+      "loop_raise_loss": 0.07484595159596852,
+      "loop_lower_loss": 0.07484595159596874,
+      "adverse_controls": {
+        "wrong_boundary_flux_rejected": true,
+        "wrong_marker_EM_charge_rejected": null,
+        "wrong_rotor_transport_sign_rejected": true,
+        "wrong_primitive_cycle_sign_rejected": true,
+        "wrong_code_path_matrix_element_rejected": true,
+        "actual_wrong_rotor_example": {
+          "source": 5,
+          "target": 8,
+          "initial_fields": [
+            0,
+            2,
+            0,
+            -2
+          ],
+          "wrong_fields": [
+            0,
+            3,
+            0,
+            -2
+          ],
+          "wrong_Gauss_residual": [
+            0,
+            2,
+            -2,
+            0
+          ]
+        },
+        "actual_wrong_code_path_example": {
+          "source": 0,
+          "target": 12,
+          "correct_code_path_residual": 4.440892098500626e-16,
+          "reversed_path_sign_residual": 1.9999999999999991
+        }
+      }
+    },
+    {
+      "N": 7,
+      "cutoff": 2,
+      "dimension": 41212,
+      "Hamiltonian_nonzeros": 919760,
+      "boundary_flux": -1,
+      "marker_occupation": 1,
+      "marker_EM_charge": 0,
+      "ground_energy": -6.935449287007368,
+      "hermiticity_residual": 0.0,
+      "T_squared_residual": 0.0,
+      "H_time_reversal_residual": 2.220446049250313e-15,
+      "B_time_reversal_odd_residual": 1.3322676295501878e-15,
+      "spectrum": {
+        "resolved_ground_energies": [
+          -6.935449287007368,
+          -6.935449287007376
+        ],
+        "ground_eigen_residuals": [
+          5.242703185576165e-10,
+          5.242703540118701e-10
+        ],
+        "ground_multiplicity": 2,
+        "gap_above_ground_multiplet": 0.04435564490119859,
+        "first_complement_energy": -6.89109364210622,
+        "first_complement_eigen_residual": 2.506726052751302e-10,
+        "complement_ground_leakage": 1.0267334707652206e-12,
+        "deflation_energy_penalty": 16.813777777777773,
+        "deflated_ritz_energy": -6.891093642106222,
+        "T_partner_self_overlap": 8.923393904067263e-17,
+        "T_partner_eigen_residual": 5.24270353398739e-10
+      },
+      "B_response": {
+        "connected_variance": 0.18610091707676354,
+        "zero_energy_connected_weight": 1.9035692958935215e-07,
+        "inelastic_weight": 0.18610072671983402,
+        "energy_moment": 0.08039161235283329,
+        "half_double_commutator": 0.08039161235212777,
+        "equal_time_sum_rule_residual": 5.551115123125783e-17,
+        "energy_sum_rule_residual": 5.551115123125783e-17,
+        "double_commutator_residual": 7.055189765736714e-13,
+        "static_susceptibility": 0.9555747938705381,
+        "static_resolvent_residual": 5.656552818709866e-10,
+        "lanczos_steps": 24,
+        "lanczos_static_susceptibility": 0.9555739137046276,
+        "spectral_scope": "positive Lanczos quadrature, NOT an enumerated exact full spectrum",
+        "poles": [
+          {
+            "energy": 0.06274140610713372,
+            "weight": 0.00017927365157565178
+          },
+          {
+            "energy": 0.35789591862645986,
+            "weight": 0.1447105463886705
+          },
+          {
+            "energy": 0.4411747540824711,
+            "weight": 0.0027010132565763313
+          },
+          {
+            "energy": 0.5035189299996348,
+            "weight": 0.02849064819196457
+          },
+          {
+            "energy": 0.6470897677101408,
+            "weight": 0.00022542374042254293
+          },
+          {
+            "energy": 1.2497059984269143,
+            "weight": 0.007871146385740315
+          },
+          {
+            "energy": 1.4737051184070047,
+            "weight": 0.0016492622583411368
+          },
+          {
+            "energy": 1.8396324137497233,
+            "weight": 9.663568649665553e-05
+          },
+          {
+            "energy": 2.3194584823845537,
+            "weight": 9.384132628451679e-05
+          },
+          {
+            "energy": 2.8186599715921257,
+            "weight": 6.088982059622478e-05
+          },
+          {
+            "energy": 3.230773598220106,
+            "weight": 2.1451736987636e-05
+          },
+          {
+            "energy": 3.7914955493721587,
+            "weight": 3.5215558935088757e-07
+          },
+          {
+            "energy": 4.51900568322619,
+            "weight": 1.5231499207810287e-07
+          },
+          {
+            "energy": 4.94222885177927,
+            "weight": 8.929521567944817e-08
+          },
+          {
+            "energy": 5.773695053963774,
+            "weight": 3.487346571510923e-10
+          },
+          {
+            "energy": 6.503792115457745,
+            "weight": 1.4532485365276226e-10
+          },
+          {
+            "energy": 6.937115958347449,
+            "weight": 1.6233672225035518e-11
+          }
+        ]
+      },
+      "matter_rotor_purity": 0.5763506660634419,
+      "linear_entanglement_entropy": 0.4236493339365581,
+      "cutoff_shell_probability": 0.17836160938486634,
+      "loop_raise_loss": 0.08918080469847878,
+      "loop_lower_loss": 0.08918080469484257,
+      "adverse_controls": {
+        "wrong_boundary_flux_rejected": true,
+        "wrong_marker_EM_charge_rejected": true,
+        "wrong_rotor_transport_sign_rejected": true,
+        "wrong_primitive_cycle_sign_rejected": true,
+        "wrong_code_path_matrix_element_rejected": true,
+        "actual_wrong_rotor_example": {
+          "source": 1,
+          "target": 7,
+          "initial_fields": [
+            1,
+            2,
+            0,
+            -2
+          ],
+          "wrong_fields": [
+            2,
+            2,
+            0,
+            -2
+          ],
+          "wrong_Gauss_residual": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        },
+        "actual_wrong_code_path_example": {
+          "source": 0,
+          "target": 12,
+          "correct_code_path_residual": 4.440892098500626e-16,
+          "reversed_path_sign_residual": 1.9999999999999991
+        }
+      }
+    },
+    {
+      "N": 9,
+      "cutoff": 2,
+      "dimension": 41212,
+      "Hamiltonian_nonzeros": 919760,
+      "boundary_flux": 1,
+      "marker_occupation": 1,
+      "marker_EM_charge": 0,
+      "ground_energy": -6.935449287007295,
+      "hermiticity_residual": 0.0,
+      "T_squared_residual": 0.0,
+      "H_time_reversal_residual": 1.3322676295501878e-15,
+      "B_time_reversal_odd_residual": 8.881784197001252e-16,
+      "spectrum": {
+        "resolved_ground_energies": [
+          -6.935449287007295,
+          -6.9354492870073265
+        ],
+        "ground_eigen_residuals": [
+          8.777806666966931e-10,
+          8.777806624176058e-10
+        ],
+        "ground_multiplicity": 2,
+        "gap_above_ground_multiplet": 0.044355644901224345,
+        "first_complement_energy": -6.891093642106226,
+        "first_complement_eigen_residual": 1.8385509100148413e-10,
+        "complement_ground_leakage": 4.528006399396327e-12,
+        "deflation_energy_penalty": 16.813777777777773,
+        "deflated_ritz_energy": -6.89109364210623,
+        "T_partner_self_overlap": 3.708205084872158e-17,
+        "T_partner_eigen_residual": 8.777806527837432e-10
+      },
+      "B_response": {
+        "connected_variance": 0.18610076506815187,
+        "zero_energy_connected_weight": 3.835226105354595e-08,
+        "inelastic_weight": 0.18610072671589076,
+        "energy_moment": 0.08039161235117566,
+        "half_double_commutator": 0.0803916123529067,
+        "equal_time_sum_rule_residual": 5.551115123125783e-17,
+        "energy_sum_rule_residual": 0.0,
+        "double_commutator_residual": 1.7310458622077363e-12,
+        "static_susceptibility": 0.9555747938513353,
+        "static_resolvent_residual": 5.837932366877219e-10,
+        "lanczos_steps": 24,
+        "lanczos_static_susceptibility": 0.955573907623826,
+        "spectral_scope": "positive Lanczos quadrature, NOT an enumerated exact full spectrum",
+        "poles": [
+          {
+            "energy": 0.06274180354188687,
+            "weight": 0.000179275796303745
+          },
+          {
+            "energy": 0.3579045742974132,
+            "weight": 0.1447711111017879
+          },
+          {
+            "energy": 0.45015567628788095,
+            "weight": 0.0034853476779246194
+          },
+          {
+            "energy": 0.5045979521374827,
+            "weight": 0.027693272379852852
+          },
+          {
+            "energy": 0.6596173693747953,
+            "weight": 0.00017832441474042906
+          },
+          {
+            "energy": 1.249837485298782,
+            "weight": 0.007880081085365021
+          },
+          {
+            "energy": 1.4748366413756455,
+            "weight": 0.0016431866134765057
+          },
+          {
+            "energy": 1.8481597366250897,
+            "weight": 9.436961725426395e-05
+          },
+          {
+            "energy": 2.3233994621638794,
+            "weight": 9.338571191402377e-05
+          },
+          {
+            "energy": 2.8226324287019584,
+            "weight": 6.0785386285401135e-05
+          },
+          {
+            "energy": 3.2354149087662805,
+            "weight": 2.1046280358435054e-05
+          },
+          {
+            "energy": 3.8346168847050066,
+            "weight": 3.053118703606665e-07
+          },
+          {
+            "energy": 4.5423910182174,
+            "weight": 1.5152447919824594e-07
+          },
+          {
+            "energy": 4.95324020260939,
+            "weight": 8.33997081988337e-08
+          },
+          {
+            "energy": 5.887759507230666,
+            "weight": 2.727538807180841e-10
+          },
+          {
+            "energy": 6.556202033055888,
+            "weight": 1.3258292780388055e-10
+          },
+          {
+            "energy": 7.008841430724069,
+            "weight": 9.151566191267536e-12
+          }
+        ]
+      },
+      "matter_rotor_purity": 0.5763507934196868,
+      "linear_entanglement_entropy": 0.42364920658031324,
+      "cutoff_shell_probability": 0.17836160939270496,
+      "loop_raise_loss": 0.08918080470419532,
+      "loop_lower_loss": 0.08918080469696599,
+      "adverse_controls": {
+        "wrong_boundary_flux_rejected": true,
+        "wrong_marker_EM_charge_rejected": true,
+        "wrong_rotor_transport_sign_rejected": true,
+        "wrong_primitive_cycle_sign_rejected": true,
+        "wrong_code_path_matrix_element_rejected": true,
+        "actual_wrong_rotor_example": {
+          "source": 4,
+          "target": 9,
+          "initial_fields": [
+            -1,
+            1,
+            0,
+            -2
+          ],
+          "wrong_fields": [
+            -1,
+            2,
+            0,
+            -2
+          ],
+          "wrong_Gauss_residual": [
+            0,
+            2,
+            -2,
+            0
+          ]
+        },
+        "actual_wrong_code_path_example": {
+          "source": 0,
+          "target": 12,
+          "correct_code_path_residual": 4.440892098500626e-16,
+          "reversed_path_sign_residual": 1.9999999999999991
+        }
+      }
+    }
+  ],
+  "charged_joins": [
+    {
+      "cutoff": 1,
+      "removal": {
+        "charged_gap": 0.8816052346490872,
+        "boundary_creator": [
+          {
+            "orbital": 0,
+            "creator_norm_squared": 0.5000000000032003,
+            "charged_ground_multiplet_weight": 0.4908337056943938,
+            "normalized_ground_overlap": 0.9816674113825042
+          },
+          {
+            "orbital": 1,
+            "creator_norm_squared": 0.5000000000024367,
+            "charged_ground_multiplet_weight": 0.4908337056936648,
+            "normalized_ground_overlap": 0.9816674113825455
+          },
+          {
+            "orbital": 2,
+            "creator_norm_squared": 0.49999999999690936,
+            "charged_ground_multiplet_weight": 0.49083370569005513,
+            "normalized_ground_overlap": 0.9816674113861782
+          },
+          {
+            "orbital": 3,
+            "creator_norm_squared": 0.49999999999762695,
+            "charged_ground_multiplet_weight": 0.4908337056907684,
+            "normalized_ground_overlap": 0.9816674113861958
+          }
+        ],
+        "B_static_difference_from_neutral": -0.004021532277741824,
+        "B_weight_difference_from_neutral": 4.215986612221556e-05
+      },
+      "addition": {
+        "charged_gap": 0.8816052346491157,
+        "boundary_creator": [
+          {
+            "orbital": 0,
+            "creator_norm_squared": 0.49999999999679823,
+            "charged_ground_multiplet_weight": 0.4908337056906183,
+            "normalized_ground_overlap": 0.9816674113875228
+          },
+          {
+            "orbital": 1,
+            "creator_norm_squared": 0.4999999999975619,
+            "charged_ground_multiplet_weight": 0.4908337056913553,
+            "normalized_ground_overlap": 0.9816674113874975
+          },
+          {
+            "orbital": 2,
+            "creator_norm_squared": 0.5000000000030892,
+            "charged_ground_multiplet_weight": 0.4908337056977994,
+            "normalized_ground_overlap": 0.9816674113895336
+          },
+          {
+            "orbital": 3,
+            "creator_norm_squared": 0.5000000000023719,
+            "charged_ground_multiplet_weight": 0.49083370569711615,
+            "normalized_ground_overlap": 0.9816674113895755
+          }
+        ],
+        "B_static_difference_from_neutral": -0.004021532485605772,
+        "B_weight_difference_from_neutral": 4.215982575428434e-05
+      }
+    },
+    {
+      "cutoff": 2,
+      "removal": {
+        "charged_gap": 0.8710071164746864,
+        "boundary_creator": [
+          {
+            "orbital": 0,
+            "creator_norm_squared": 0.5000000000000646,
+            "charged_ground_multiplet_weight": 0.37357238662766756,
+            "normalized_ground_overlap": 0.7471447732552385
+          },
+          {
+            "orbital": 1,
+            "creator_norm_squared": 0.4999999999999869,
+            "charged_ground_multiplet_weight": 0.37357238662755965,
+            "normalized_ground_overlap": 0.7471447732551388
+          },
+          {
+            "orbital": 2,
+            "creator_norm_squared": 0.4999999999999291,
+            "charged_ground_multiplet_weight": 0.37357238662751624,
+            "normalized_ground_overlap": 0.7471447732551384
+          },
+          {
+            "orbital": 3,
+            "creator_norm_squared": 0.5000000000000147,
+            "charged_ground_multiplet_weight": 0.37357238662763387,
+            "normalized_ground_overlap": 0.7471447732552459
+          }
+        ],
+        "B_static_difference_from_neutral": -0.017423394525037827,
+        "B_weight_difference_from_neutral": 0.009633675682664794
+      },
+      "addition": {
+        "charged_gap": 0.8710071164747601,
+        "boundary_creator": [
+          {
+            "orbital": 0,
+            "creator_norm_squared": 0.4999999999999336,
+            "charged_ground_multiplet_weight": 0.3735723866275017,
+            "normalized_ground_overlap": 0.7471447732551026
+          },
+          {
+            "orbital": 1,
+            "creator_norm_squared": 0.5000000000000114,
+            "charged_ground_multiplet_weight": 0.3735723866276005,
+            "normalized_ground_overlap": 0.7471447732551839
+          },
+          {
+            "orbital": 2,
+            "creator_norm_squared": 0.5000000000000691,
+            "charged_ground_multiplet_weight": 0.3735723866276145,
+            "normalized_ground_overlap": 0.7471447732551258
+          },
+          {
+            "orbital": 3,
+            "creator_norm_squared": 0.49999999999998346,
+            "charged_ground_multiplet_weight": 0.3735723866275077,
+            "normalized_ground_overlap": 0.7471447732550401
+          }
+        ],
+        "B_static_difference_from_neutral": -0.01742339454424069,
+        "B_weight_difference_from_neutral": 0.009633675678721532
+      }
+    }
+  ],
+  "cutoff_comparisons": [
+    {
+      "N": 8,
+      "from": 1,
+      "to": 2,
+      "ground_energy_change": -0.13524255903090143,
+      "embedded_ground_residual": 0.32853429565309156,
+      "large_spectrum_distance_upper_bound": 0.32853429565309156,
+      "B_static_change": 0.17886753899636276,
+      "B_weight_change": -0.07747720695036606
+    },
+    {
+      "N": 7,
+      "from": 1,
+      "to": 2,
+      "ground_energy_change": -0.14584067720530225,
+      "embedded_ground_residual": 0.33115782387652387,
+      "large_spectrum_distance_upper_bound": 0.33115782387652387,
+      "B_static_change": 0.16546567674906676,
+      "B_weight_change": -0.06788569113382348
+    },
+    {
+      "N": 9,
+      "from": 1,
+      "to": 2,
+      "ground_energy_change": -0.14584067720525695,
+      "embedded_ground_residual": 0.3311578239117212,
+      "large_spectrum_distance_upper_bound": 0.3311578239117212,
+      "B_static_change": 0.16546567693772785,
+      "B_weight_change": -0.06788569109739881
+    }
+  ],
+  "defect_sector_checks": [
+    {
+      "N": 8,
+      "cutoff": 1,
+      "operator_identity_residual": 8.881784197001252e-16,
+      "rigorous_defect_ground_margin_lower_bound": 0.4222222222222223,
+      "response_cross_sector_coupling": 0.0,
+      "cross_sector_reason": "actual S commutes with all Pauli transfers; B acts only on electric loop"
+    },
+    {
+      "N": 8,
+      "cutoff": 2,
+      "operator_identity_residual": 8.881784197001252e-16,
+      "rigorous_defect_ground_margin_lower_bound": 0.4222222222222223,
+      "response_cross_sector_coupling": 0.0,
+      "cross_sector_reason": "actual S commutes with all Pauli transfers; B acts only on electric loop"
+    }
+  ],
+  "source_sha256": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa"
+}

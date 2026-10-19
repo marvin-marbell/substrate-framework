@@ -1,0 +1,73 @@
+{
+  "exit": 1,
+  "diagnostics": {
+    "version": "1.1.414",
+    "time": "1792114889250",
+    "generalDiagnostics": [
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave39_20261016_enriched_observer.py",
+        "severity": "error",
+        "message": "Cannot access attribute \"real\" for class \"NDArray[Incomplete]\"\n\u00a0\u00a0No overloads for \"__get__\" match the provided arguments\n\u00a0\u00a0Argument of type \"NDArray[Incomplete]\" cannot be assigned to parameter \"obj\" of type \"None\" in function \"__get__\"\n\u00a0\u00a0\u00a0\u00a0\"ndarray[_AnyShape, dtype[Incomplete]]\" is not assignable to \"None\"",
+        "range": {
+          "start": {
+            "line": 16,
+            "character": 30
+          },
+          "end": {
+            "line": 16,
+            "character": 34
+          }
+        },
+        "rule": "reportAttributeAccessIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave39_20261016_enriched_observer.py",
+        "severity": "error",
+        "message": "Operator \">\" not supported for types \"int | float | str | list[Unknown]\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"list[Unknown]\" and \"float\"",
+        "range": {
+          "start": {
+            "line": 30,
+            "character": 11
+          },
+          "end": {
+            "line": 30,
+            "character": 56
+          }
+        },
+        "rule": "reportOperatorIssue"
+      },
+      {
+        "file": "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave39_20261016_enriched_observer.py",
+        "severity": "error",
+        "message": "Operator \">\" not supported for types \"int | float | str | list[Unknown]\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"str\" and \"float\"\n\u00a0\u00a0Operator \">\" not supported for types \"list[Unknown]\" and \"float\"",
+        "range": {
+          "start": {
+            "line": 30,
+            "character": 61
+          },
+          "end": {
+            "line": 30,
+            "character": 114
+          }
+        },
+        "rule": "reportOperatorIssue"
+      }
+    ],
+    "summary": {
+      "filesAnalyzed": 2,
+      "errorCount": 3,
+      "warningCount": 0,
+      "informationCount": 0,
+      "timeInSec": 3.691
+    }
+  },
+  "positive_AST": {
+    "rich_review_wave39_20261016_enriched_observer.py": [
+      "main",
+      "f"
+    ],
+    "rich_review_wave39_20261016_execute.py": [
+      "main"
+    ]
+  }
+}

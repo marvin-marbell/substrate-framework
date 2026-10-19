@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em.py", line 102, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em.py", line 88, in main
+    baseline=propagate(hs,initial,t,phase);x=propagate(hs,kicked,t,phase);bm=measurements(model,name,baseline);xm=measurements(model,name,x);joint=joint_receiver(x,effects,base['scalar'],rotor,field);records.append(dict(time=t,norm=norm(x)**2,excess={key:xm[key]-bm[key] for key in bm},current_excess=[mean(x,a)-mean(baseline,a) for a in curr],joint_probability_sum=float(joint.sum()),joint=joint.tolist()));xs.append(x);bs.append(baseline);receivers.append(joint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/administrator/substrate-222/proposals/P256-qed-backward/rich_review_wave19_20261015_em.py", line 32, in propagate
+    shifted=h-energy*sparse.eye(h.shape[0],format='csr');return expm_multiply(-1j*time*shifted,state,traceA=-1j*time*(h.trace()-energy*h.shape[0])) if time else state.copy()
+            ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'FactorOperator' and 'csr_matrix'

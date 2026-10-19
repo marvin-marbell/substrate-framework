@@ -1,0 +1,651 @@
+{
+  "source_sha256": {
+    "bosonic_statistics.py": "6a36ca6ed094e376b5d1bca3e8d6d02d46f014373729e65ae5c2359a6e346a95",
+    "centre_flux_sea.py": "b9fd12acd165a0af1003d49dfd34bf45bf481f0723dc393d1c702bb436fda5d1",
+    "compton.py": "0dfcae70efa116c2e72af5b2b44260407b35f0f9b86449ba40da8e01120f0f46",
+    "full_band_gauss_section.py": "1bb48d986e83c5df3b707ad74337a2f4b0ec6a4495af90ba87b6a8e68eb366cb",
+    "full_band_packet_bound.py": "9b8e6f0d4c20d875389bd38d76d273be8d431a18cbe0331f9925daa72a8450d9",
+    "full_field_charge_bound.py": "b86f5fe62f2a838f2a5cd84e70c1b3e74e801aef91cd2dda6d4ce123e58541bf",
+    "gauss_charge_intertwiner.py": "861008cb7dea64d2b2e0cef513c62de1d55539a1527a5b6fea8b5b879ea956fa",
+    "lattice_compton.py": "1498beacdd29601a887fe1f1aa3f7db0430345c654de53b5a4c765fc06cd94a0",
+    "local_orbital_stability.py": "bac696532abc443831f0202f84308c098777154e35bb9dc616fde54fae46bb2d",
+    "pair_full_field_charge_transfer.py": "b699fad8485d91502f2d6197dcd762fafe7b901af870399156e5f9eb1ab21c47",
+    "pair_full_field_concentration.py": "4a485d5ffd1d1c180c13858f09c3f3e3cdcd54242297f12897e4dc66336f5d25",
+    "pair_global_field_bound.py": "f419c53c881c6d66175a551e6ee2f074521c8fb726fffc17e5ae82eb9ef533f3",
+    "pair_separated_charge_transfer.py": "677cc98ede90ca8c5bfb393b6eb23f2d03e8d75ff6ad2ba2c7226a16d5d5a7cd",
+    "pauli_compton.py": "add1dead7ca5b9c2a811153ba312cb32742439bc3820ada17a47f9f872bb8850",
+    "quantum_spinor_plaquette.py": "160cecd65aa828f7f9e60e4479badced1787a507e6aa6a3c5e4e9c6a44c646fa",
+    "quantum_su4_gauss.py": "9e91c25bc4bcbc5f2306b38d4716b4e3af4664fc22757aedda527c056aea096b",
+    "rotation_band.py": "db7345cb9553e39183d4f20aac77ce3a45fa0a6678f02655328f90baa0f05459",
+    "sea_selection.py": "1d8e44382e240f3ef496521ffe03028a7c5732dd32e7039f8cc3cea6c5595bd2",
+    "soft_budget.py": "bd78c05d8f0f1d69b69c71304d1a5198535a1d444833e69a0c2fdebd36000286",
+    "unrestricted_field_minimum.py": "443840b860a0adfb4fd5455ecf9188ddb63b31fae252619568a60ed4a9915301",
+    "full_band_gauss_section.md": "1b7706e6944c1416dbe00dd09b5d3ad516cdadc9378a03a353237664e5bcfa3f",
+    "gauss_born_bundle.py": "ed0b037ba52293f60e311d09831903511db0daf3447038cd61bdef4ed2072515",
+    "quantum_su4_photon.py": "ffadad919f74fe510484530037d4ae11b7860046fa384aa721839d2771d5c0bf",
+    "full_band_packet_bound.md": "9fde8dd4f98905fb84019cca18a715b6d81a00c5a44a4a8d45cb4f7f50f13520",
+    "gauss_born_bundle.md": "58962ca9b44e22e3345a14f6d0484c3aeef580ae76c98af747b3304d26c805f0",
+    "full_field_charge_bound.md": "f47cbc7759350b21b5a28703bd01aa8e5e4bbfd1a19621dd13d9cfcd63288c57",
+    "centre_flux_sea.md": "402387490becf5756f587e9d640834ef32efee0cd6fd4da08ae542847aae8855",
+    "unrestricted_field_minimum.md": "c436da4b6829885d624ebebbfe776d7d1c1698b7afee538700c7a360aaba7563",
+    "pair_global_field_bound.md": "9448732e57ac2a833317cf9094e0c7b7c8930eb9bf55e3ff1ef7c6dc31f928f7",
+    "pair_full_field_concentration.md": "15dd0c7f6d185ba8ebab721c7c808a7b8001fed450095c1453ab7aefce51c69c",
+    "pair_separated_charge_transfer.md": "3ba24564ee01919daf98a97eab0261909b2ae872eeb458f4030d860f88ba7ed9",
+    "pair_full_field_charge_transfer.md": "05355d0b877ee52f422cc2cbf75c4f531abd9dc194bbc1089626aa74d6d671df",
+    "quantum_su4_photon.md": "8abcab4958b8b79295290d0d916aea75112a7858fab1e73e24e7d6be89027525",
+    "quantum_su4_gauss.md": "8b2bd7845d927f771fadf13fb01d3e1e00be1d63211ab65037743e33ad60ee41",
+    "gauss_charge_intertwiner.md": "45d5f71a88e70023c46d6cdd717268ebfaf1979a098b941a03b5189306700366"
+  },
+  "source_bindings_unchanged": true,
+  "governing_plan": "issue-222-continuing-backward-20260930",
+  "work_item": "campaign",
+  "exact_domain": "fullL2(R120 x SU4 x T2), NH4 NL4 neutral4900 -> NL3/5 full3920 x boundary4",
+  "separated_operator": "L insertion, R reference: hole exp(-iA0 or+iA1) Udagger cL; particle conjugate dressing",
+  "charged_extension": "same full-coordinate Hamiltonian; external compensating colour+EM source only at R",
+  "path_trial": "incoherent equal mixture of the two separately physical path images, each norm squared2",
+  "controls": [
+    [
+      {
+        "charge": -1,
+        "native_dimensions": [
+          4900,
+          15680
+        ],
+        "residuals": {
+          "norm_operator": 8.63028191269808e-14,
+          "colour_Gauss": 1.588274840704903e-16,
+          "EM_Gauss": 0.0,
+          "heavy_commutator": 9.942407008852608e-17,
+          "light_commutator": 1.225827657848794e-16,
+          "link_current": 2.3538467671296934e-16,
+          "full_link_kinetic_commutator": 3.1419922479331764e-08,
+          "full_phase_kinetic_commutator": 4.988368999533715e-09,
+          "corrected_full_colour_Gauss": 2.6109841019627015e-16,
+          "corrected_link_current_unchanged": 3.0545841712420567e-16,
+          "corrected_Cartesian_kinetic_commutator": 9.715631183531683e-08
+        },
+        "adverse": {
+          "omitted_boundary": 0.4995605097758612,
+          "wrong_phase_sign": 2.8123603525634286,
+          "omitted_colour_cross": 1.1626792215476411,
+          "reference_field_twist_missing_Cartesian_Gauss": 0.38054784989804086,
+          "reference_field_Cartesian_derivative": 0.984090621000604
+        },
+        "complete_local_light_Casimir_residual": 3.0638937272904945e-14,
+        "parallel_path_EM_cost_integrand_at_ground_norm2_by_n": [
+          0.2,
+          0.30000000000000004,
+          0.2,
+          -0.10000000000000003,
+          -0.6000000000000001
+        ],
+        "null_source_local_occupation": 0
+      },
+      {
+        "charge": 1,
+        "native_dimensions": [
+          4900,
+          15680
+        ],
+        "residuals": {
+          "norm_operator": 9.210622415106887e-14,
+          "colour_Gauss": 1.5993362560527942e-16,
+          "EM_Gauss": 0.0,
+          "heavy_commutator": 9.97532137720835e-17,
+          "light_commutator": 1.22753645348893e-16,
+          "link_current": 2.368176070990748e-16,
+          "full_link_kinetic_commutator": 3.1559537769364765e-08,
+          "full_phase_kinetic_commutator": 5.051592175372249e-09,
+          "corrected_full_colour_Gauss": 2.619144253899825e-16,
+          "corrected_link_current_unchanged": 2.7106796665405915e-16,
+          "corrected_Cartesian_kinetic_commutator": 9.93153406147342e-08
+        },
+        "adverse": {
+          "omitted_boundary": 0.5055375348292981,
+          "wrong_phase_sign": 2.844403144304497,
+          "omitted_colour_cross": 1.1634856633558441,
+          "reference_field_twist_missing_Cartesian_Gauss": 0.3849454515604121,
+          "reference_field_Cartesian_derivative": 0.9953384426353774
+        },
+        "complete_local_light_Casimir_residual": 3.0638937272904945e-14,
+        "parallel_path_EM_cost_integrand_at_ground_norm2_by_n": [
+          -0.6000000000000001,
+          -0.10000000000000003,
+          0.2,
+          0.30000000000000004,
+          0.2
+        ],
+        "null_source_local_occupation": 4
+      }
+    ],
+    [
+      {
+        "charge": -1,
+        "native_dimensions": [
+          4900,
+          15680
+        ],
+        "residuals": {
+          "norm_operator": 7.332497115575391e-14,
+          "colour_Gauss": 1.5568133765654758e-16,
+          "EM_Gauss": 0.0,
+          "heavy_commutator": 2.477215960320008e-16,
+          "light_commutator": 2.815424851086626e-16,
+          "link_current": 2.3402122246147887e-16,
+          "full_link_kinetic_commutator": 3.034811099554574e-08,
+          "full_phase_kinetic_commutator": 4.8846629967865924e-09,
+          "corrected_full_colour_Gauss": 3.193804850832205e-16,
+          "corrected_link_current_unchanged": 2.9900499214828145e-16,
+          "corrected_Cartesian_kinetic_commutator": 1.0356590578965364e-07
+        },
+        "adverse": {
+          "omitted_boundary": 0.4989324067825282,
+          "wrong_phase_sign": 2.812360352563429,
+          "omitted_colour_cross": 1.1626792215476407,
+          "reference_field_twist_missing_Cartesian_Gauss": 0.7244979632901775,
+          "reference_field_Cartesian_derivative": 0.9510926281713813
+        },
+        "complete_local_light_Casimir_residual": 3.0638937272904945e-14,
+        "parallel_path_EM_cost_integrand_at_ground_norm2_by_n": [
+          0.2,
+          0.30000000000000004,
+          0.2,
+          -0.10000000000000003,
+          -0.6000000000000001
+        ],
+        "null_source_local_occupation": 0
+      },
+      {
+        "charge": 1,
+        "native_dimensions": [
+          4900,
+          15680
+        ],
+        "residuals": {
+          "norm_operator": 6.007913920236438e-14,
+          "colour_Gauss": 1.582285057911015e-16,
+          "EM_Gauss": 0.0,
+          "heavy_commutator": 2.4967534456735633e-16,
+          "light_commutator": 2.787616636702389e-16,
+          "link_current": 2.0578254309635634e-16,
+          "full_link_kinetic_commutator": 3.10845452020688e-08,
+          "full_phase_kinetic_commutator": 4.858819291771258e-09,
+          "corrected_full_colour_Gauss": 3.227503784757652e-16,
+          "corrected_link_current_unchanged": 2.633349993655936e-16,
+          "corrected_Cartesian_kinetic_commutator": 1.0410736991865988e-07
+        },
+        "adverse": {
+          "omitted_boundary": 0.5045337158899362,
+          "wrong_phase_sign": 2.8444031443044953,
+          "omitted_colour_cross": 1.1634856633558435,
+          "reference_field_twist_missing_Cartesian_Gauss": 0.7365658956923001,
+          "reference_field_Cartesian_derivative": 0.95668589046284
+        },
+        "complete_local_light_Casimir_residual": 3.0638937272904945e-14,
+        "parallel_path_EM_cost_integrand_at_ground_norm2_by_n": [
+          -0.6000000000000001,
+          -0.10000000000000003,
+          0.2,
+          0.30000000000000004,
+          0.2
+        ],
+        "null_source_local_occupation": 4
+      }
+    ]
+  ],
+  "native_full_field_angular_control": {
+    "full_all30_Gauss_residual": 1.021281646296629e-15,
+    "omitted_Cartesian_angular_Gauss_defect": 0.7001117861447536,
+    "scope": "actual native section differential control, not an exact quantum ground"
+  },
+  "input_points": [
+    {
+      "all120_perturbation": [
+        [
+          [
+            -0.0027302133765697866,
+            0.012881391111492174,
+            0.00702768530549293,
+            -0.013505763953495167,
+            -0.0036153127712068647,
+            -0.011090419590001647,
+            -0.020216989158325746,
+            0.028893741849144963,
+            0.0042621481773262825,
+            0.0006937524605989144,
+            -0.016706498349230332,
+            -0.02849623329005568,
+            -0.01536082869860288,
+            -0.01152847002795336,
+            0.027315370959798933
+          ],
+          [
+            0.00036899842118131996,
+            0.00043049650647174366,
+            0.027547750042446664,
+            -0.024137877560859198,
+            0.02455284787338632,
+            0.0016581978683001294,
+            -0.01581855857735265,
+            -0.01069568017110651,
+            -0.04340610766363526,
+            0.009969474278844662,
+            0.02156178872316013,
+            -0.021211566537643303,
+            0.01348063714360935,
+            0.03450377392099258,
+            0.030337379249150174
+          ],
+          [
+            -0.03890695389455986,
+            0.030620380394910673,
+            -0.040234392141022327,
+            -0.005228187155555247,
+            0.007324446192252974,
+            0.01763158111426015,
+            0.014829228793734937,
+            -0.03878615047063885,
+            0.005943517213180324,
+            0.01228649409927127,
+            0.015085751913153079,
+            -0.014761933786363713,
+            -0.026185041094601007,
+            -0.0020812698579780716,
+            -0.03142953709366923
+          ],
+          [
+            0.01861326344771531,
+            -0.011262478396842357,
+            0.04200786202296516,
+            -0.0222886984354024,
+            -0.02272811274981219,
+            -0.00011915103808661848,
+            -0.03529038188510444,
+            -0.011493665094120387,
+            0.007264926132762426,
+            -0.00029687062644103156,
+            -0.002380550523732104,
+            0.0003353256407462357,
+            -0.003339592510233192,
+            0.023162405456921876,
+            -0.004637360986900964
+          ]
+        ],
+        [
+          [
+            0.013327820235506984,
+            -0.013078196667266595,
+            -0.015309853912013924,
+            -0.022199133096227515,
+            -0.022069241165781715,
+            -0.020775573190202647,
+            -0.053201042136278034,
+            -0.02704456382700808,
+            0.01423958200342071,
+            0.012155371339645088,
+            -0.014321096071813253,
+            0.022721467955649374,
+            -0.005670836680147616,
+            0.003944016047926804,
+            0.008009763246735161
+          ],
+          [
+            0.01094055029431875,
+            -0.007483970691658114,
+            -0.011527765687668818,
+            0.03726226353711328,
+            0.0036058638763399914,
+            -0.0029590742762893797,
+            0.01654120683103439,
+            -0.02114531549275654,
+            0.012792298131358999,
+            0.015365067925501743,
+            -0.00690698134123263,
+            -0.027019094998575702,
+            0.005458040352183043,
+            0.03211305545673874,
+            0.0255617127816804
+          ],
+          [
+            0.01057762487183706,
+            0.0030373474261994014,
+            -0.044114771645278474,
+            -0.0002806617596435505,
+            -0.058927480753667424,
+            -0.01439023670914909,
+            -0.02394414437656554,
+            -0.010067641357779402,
+            -0.011678402367314369,
+            0.03874901202602282,
+            0.0014539207566821723,
+            0.009379050980114942,
+            0.03424681668812851,
+            6.275527702199331e-05,
+            -0.017086191683044906
+          ],
+          [
+            0.020917122002635798,
+            -0.007120148107146971,
+            0.000864667434329714,
+            -0.004641160296340144,
+            -0.026930307661344754,
+            -0.0021511937935199026,
+            0.006447901006950948,
+            -0.009093067814511796,
+            0.013239183178858954,
+            0.012129616530778292,
+            -0.028700652731480175,
+            0.0034358250618607617,
+            0.013049778240196533,
+            0.019728642678097846,
+            0.006350987431184772
+          ]
+        ]
+      ],
+      "noncentral_link_real": [
+        [
+          0.8887392776979786,
+          -0.23751406633032254,
+          0.2345949347756929,
+          -0.06408916930412302
+        ],
+        [
+          0.2727040786299045,
+          0.8245307770377941,
+          -0.240193502652558,
+          -0.05346222375993702
+        ],
+        [
+          -0.1838083926959265,
+          0.33498247907067363,
+          0.8587284750271308,
+          0.05018439587792339
+        ],
+        [
+          0.04838965072724582,
+          -0.0012092932321606693,
+          -0.10256067956579955,
+          0.9407072410179093
+        ]
+      ],
+      "noncentral_link_imag": [
+        [
+          -0.07249688594644028,
+          0.07295819675199125,
+          0.1521727864881422,
+          0.2466821956177769
+        ],
+        [
+          -0.1577659646827572,
+          -0.3471480302621265,
+          0.19581124808850808,
+          -0.038554581116513456
+        ],
+        [
+          0.16750817374437307,
+          0.11978344020770623,
+          0.26590543170959974,
+          0.030909329438138414
+        ],
+        [
+          0.2035755680260729,
+          -0.10648293948826405,
+          0.08446721616964917,
+          0.20564978509397605
+        ]
+      ],
+      "phases": [
+        -1.087055855231112,
+        -1.3631784930327875
+      ]
+    },
+    {
+      "all120_perturbation": [
+        [
+          [
+            0.4258203642072664,
+            0.2019612941548589,
+            0.49403281285146555,
+            0.029698099551970034,
+            -0.2510047682326761,
+            0.14810208594513435,
+            -0.21814922152565328,
+            0.36716382550882526,
+            -0.23236259281024937,
+            0.3528819786977527,
+            -0.4341971402157069,
+            0.22724185487605889,
+            -0.1591919345578302,
+            -0.4157094004686826,
+            0.21243002502983524
+          ],
+          [
+            -0.2865687287293324,
+            0.07056804052669684,
+            0.07058321662019225,
+            0.5742807455344933,
+            0.4225740012001877,
+            -0.13969859680835012,
+            0.4019048137998945,
+            -0.020160327498430948,
+            -0.32376418787989236,
+            -0.21447130665529132,
+            0.7261099337592759,
+            0.031384590724917026,
+            -0.29197810006621305,
+            -0.21884561154897986,
+            0.05625263325782942
+          ],
+          [
+            -0.6473654301929507,
+            -0.25227432037111386,
+            -0.2747777885890963,
+            -0.16329373823403523,
+            -0.227323882275966,
+            0.4451819398143472,
+            0.6208130904338138,
+            -0.1751254583615434,
+            -0.05011996002425449,
+            -0.18282876431089304,
+            0.21912610583030054,
+            -0.09240784334729264,
+            -0.21194217057473838,
+            -0.19184650468063327,
+            -0.18033617362724705
+          ],
+          [
+            0.09948015973395208,
+            0.4244045975868155,
+            0.1387071596055272,
+            0.26904941253066067,
+            -0.14149174433655945,
+            0.066876040497109,
+            0.23862449770701682,
+            0.047459032511192455,
+            0.10861894400280582,
+            0.15480078163639693,
+            -0.3584719185975906,
+            -0.18691333490225362,
+            -0.37085417994265785,
+            -0.20598526654813257,
+            -0.28731099918517006
+          ]
+        ],
+        [
+          [
+            -0.15149893432277176,
+            -0.32762004698318065,
+            -0.057354567313616135,
+            0.297184954562515,
+            0.46930219196709744,
+            -0.0958592126929651,
+            -0.09942442480086705,
+            0.389872219611607,
+            0.4778278758275663,
+            0.4555807813134114,
+            -0.024809567218443636,
+            -0.10428269486518289,
+            -0.16222030246155691,
+            -0.07227398361685293,
+            -0.012388882253927444
+          ],
+          [
+            0.19425940283143525,
+            -0.20628165493173958,
+            -0.2698541490147952,
+            0.36968020537972346,
+            0.08827592520944623,
+            -0.42079068229492006,
+            -0.3581397570423175,
+            0.3779910483991789,
+            0.23385331752243452,
+            -0.39482638522723984,
+            -0.07657148228870617,
+            0.39616410969893656,
+            0.20680880646919775,
+            -0.1964507254212223,
+            0.1635327918137571
+          ],
+          [
+            0.5143519647537876,
+            -0.04444539248633841,
+            0.33111205261856236,
+            -0.17878087865471723,
+            -0.12453041213838549,
+            0.5018751931642138,
+            -0.04279886921259644,
+            -0.13279980895327315,
+            0.3172400380154558,
+            -0.32589290921907965,
+            0.14154493266981258,
+            0.001595152361329567,
+            -0.03778012324934648,
+            0.26026904861944006,
+            -0.045011460346967284
+          ],
+          [
+            0.2912050358438558,
+            0.19862982292814937,
+            -0.5307608576018014,
+            -0.10610199692367789,
+            0.6922171357542805,
+            0.495420114905354,
+            -0.11145215715979225,
+            0.0941274183516511,
+            0.0021099305736305865,
+            -0.10411532187867066,
+            -0.23644835472168108,
+            -0.2516018804827794,
+            0.02168937202034179,
+            -0.03454650507279508,
+            -0.43435858249383325
+          ]
+        ]
+      ],
+      "noncentral_link_real": [
+        [
+          0.8983736253821387,
+          -0.16197994431602455,
+          -0.14836845204438132,
+          -0.004235283653128707
+        ],
+        [
+          0.1466489502863795,
+          0.96573602992271,
+          0.03605058834520784,
+          0.18642108491703993
+        ],
+        [
+          0.1999903775624196,
+          -0.033069759572850584,
+          0.9561637508071527,
+          -0.1280881045341281
+        ],
+        [
+          0.015019115480015673,
+          -0.17390705529135875,
+          0.1514602265432012,
+          0.9095012256190951
+        ]
+      ],
+      "noncentral_link_imag": [
+        [
+          -0.33633960134038626,
+          -0.04963515363684944,
+          0.1676578649555181,
+          0.030968630574431187
+        ],
+        [
+          -0.08140720172416022,
+          0.04500456298203374,
+          0.03380726879543261,
+          0.0002558557701875658
+        ],
+        [
+          0.10046484622667275,
+          0.02578502702220758,
+          -0.027581216182478985,
+          -0.12936685267678336
+        ],
+        [
+          0.03677695474855701,
+          -0.06800895886490879,
+          -0.0973910896583658,
+          0.32238997414873527
+        ]
+      ],
+      "phases": [
+        2.4503896621327224,
+        0.050766042145475865
+      ]
+    }
+  ],
+  "bounds": [
+    {
+      "Lambda": 1e+20,
+      "exact_neutral_total_kinetic_upper": 2.6243406767784042e+19,
+      "light_cost_upper": 1.0710747878000944,
+      "colour_cross_absolute_upper": 4436502572.504386,
+      "both_separated_charged_ground_minus_neutral_ground_upper": 4436502574.337961,
+      "bound_scope": "finite each Lambda; conservative upper bound grows O(Lambda^5/12), not uniform in Lambda",
+      "uniform_bound_obstruction": "uncontrolled signed <Q_light,L dot J_field,L>; Gauss does not bound it by matter alone"
+    },
+    {
+      "Lambda": 1e+30,
+      "exact_neutral_total_kinetic_upper": 8.600050667374036e+26,
+      "light_cost_upper": 0.6633241390160404,
+      "colour_cross_absolute_upper": 25396925011761.812,
+      "both_separated_charged_ground_minus_neutral_ground_upper": 25396925011763.24,
+      "bound_scope": "finite each Lambda; conservative upper bound grows O(Lambda^5/12), not uniform in Lambda",
+      "uniform_bound_obstruction": "uncontrolled signed <Q_light,L dot J_field,L>; Gauss does not bound it by matter alone"
+    },
+    {
+      "Lambda": 1e+48,
+      "exact_neutral_total_kinetic_upper": 8.600014181810337e+41,
+      "light_cost_upper": 0.6290659380152623,
+      "colour_cross_absolute_upper": 8.031195824008871e+20,
+      "both_separated_charged_ground_minus_neutral_ground_upper": 8.031195824008871e+20,
+      "bound_scope": "finite each Lambda; conservative upper bound grows O(Lambda^5/12), not uniform in Lambda",
+      "uniform_bound_obstruction": "uncontrolled signed <Q_light,L dot J_field,L>; Gauss does not bound it by matter alone"
+    },
+    {
+      "Lambda": 1e+120,
+      "exact_neutral_total_kinetic_upper": 8.600014181773851e+101,
+      "light_cost_upper": 0.627897376185623,
+      "colour_cross_absolute_upper": 8.031195823991834e+50,
+      "both_separated_charged_ground_minus_neutral_ground_upper": 8.031195823991834e+50,
+      "bound_scope": "finite each Lambda; conservative upper bound grows O(Lambda^5/12), not uniform in Lambda",
+      "uniform_bound_obstruction": "uncontrolled signed <Q_light,L dot J_field,L>; Gauss does not bound it by matter alone"
+    }
+  ],
+  "all_checks_pass": true,
+  "campaign_complete": false,
+  "failed_uniform_bound": "EM loop cross cancels using exact Gauss; colour cross retains Cartesian angular momentum",
+  "correction_attempt": "reference field twist U exp(i beta Phi0,R), beta=.7: same colour cross, new Cartesian kinetic terms",
+  "limits": [
+    "Finite graph variational upper costs, not spectral charge gap, physical spin, mobile band or Coulomb excitation.",
+    "No uniform large-Lambda bound derived; finite each Lambda bound is valid but grows.",
+    "Native pointwise differential probes do not solve either full quantum ground.",
+    "No global no-go: only the pure-link and unitary reference-field-twist route diagnosed."
+  ]
+}

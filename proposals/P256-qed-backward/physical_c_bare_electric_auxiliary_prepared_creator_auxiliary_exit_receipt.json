@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/home/administrator/substrate-framework/.venv/bin/python",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_c_bare_electric_auxiliary_prepared_creator.py",
+    "--output",
+    "/home/administrator/substrate-222/proposals/P256-qed-backward/physical_c_bare_electric_auxiliary_prepared_creator_auxiliary_capsule.json"
+  ],
+  "natural_exit": true,
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/physical_c_bare_electric_auxiliary_prepared_creator.py\", line 156, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/physical_c_bare_electric_auxiliary_prepared_creator.py\", line 152, in main\n    background=continuum.normalized_background();cache={};cases=[run_order(order,cache,background) for order in (3,5)]\n                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/administrator/substrate-222/proposals/P256-qed-backward/physical_c_bare_electric_auxiliary_prepared_creator.py\", line 118, in run_order\n    sea_half+=R[i,l]*np.conj(sea_amplitudes[i])*sea_amplitudes[l]*math.sqrt(point_lambdas[i]*point_lambdas[l])*slater_inner(sea_rows[i],sea_rows[l],naux)\n                                                                  ^^^^\nNameError: name 'math' is not defined. Did you mean: 'Path'? Or did you forget to import 'math'?\n",
+  "elapsed_seconds": 30.591609954833984,
+  "source_at_launch": "29ac3e8148062d9d63f4bc113d8a78ecd5005a205e201aa57bdc1a7abccfb79a",
+  "source_unchanged_until_exit": true
+}

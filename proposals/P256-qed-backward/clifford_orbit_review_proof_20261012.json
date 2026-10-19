@@ -1,0 +1,112 @@
+{
+  "kind": "REVISION_BOUND_INDEPENDENT_CLIFFORD_ORBIT_PROOF_REVIEW_NOT_HILBERT_FRAME_PROMOTION",
+  "governor": {
+    "plan_id": "issue-222-induced-photon-delta13-continuation-20261008",
+    "parent_captured_revision": "f2549b02b58c6591e77f81d14fabc1c40c9f177fdefd5d6c09b3f8a716bf8e65",
+    "geometry_captured_revision": "32fd1409abbc013242735994b8a4a9e64f5bbf3c36a9dd6f3257ac2b54cae88f",
+    "template": "general",
+    "template_revision": "89cd9d45725622e0d65429eca9f2309508c255b54950c3a75498b6f913600efe",
+    "work_item": "induced-photon",
+    "requirements": [
+      "outcome",
+      "verification"
+    ],
+    "parent_sole_plan_writer": true
+  },
+  "frozen_targets": [
+    {
+      "name": "clifford_source_geometry_proof_20261012.json",
+      "sha256": "cf3f2c5e196158862e77a6b0bef70fa1dda749982cc2b66bcc7e375faa0f99fd"
+    },
+    {
+      "name": "clifford_source_geometry_interface_20261012.json",
+      "sha256": "257516083c7e604175221f2df857cbbabfe422368b9469f4194fd21f8a9a13b2"
+    },
+    {
+      "name": "body_probability_review_proof_20261012.json",
+      "sha256": "740722b4507889c9d6cb18051becae8b6a62d181b89114f60fb80f398d019971"
+    }
+  ],
+  "review_method": "Complete frozen proof/interface/antecedent reads; independent algebra below and NEW exact consumer. No original scientist consumer/solver/checker/backend executed; synthetic controls do not attest an actual physical state.",
+  "independent_derivations": [
+    {
+      "id": "normalized_defect",
+      "text": "Write R_mu=B_mu^2-x_mu I and delta=x-s. Tr R_mu=0, so ||R_mu+delta_mu I||HS^2=||R_mu||HS^2+4delta_mu^2 exactly. All s_mu>1/128 imply s_mu^-2<2^14 and (s_mu s_nu)^-1<2^14. Consequently K<2^14(S+Q+4||delta||^2), where S=sum4||R_mu||^2 and Q=sum12ordered||{B_mu,B_nu}||^2. Termwise this is <=2^12(16S+4Q+64||delta||^2)=2^12T. Thus the delivered weaker normalization estimate is sound and respects quarter-trace and all ordered terms."
+    },
+    {
+      "id": "first_sign_and_ranks",
+      "text": "T<2^-52 implies K<2^-40 and e=sqrt(K)<2^-20. Every Hermitian A_mu has ||A_mu||op<=sqrt(1+e)<2. Its square spectrum is bounded below by1-e>0. For scalar real nonzero lambda, |lambda-sign(lambda)|<=|lambda^2-1|, whence r1<=e. Since Tr A1=0 and |Tr(F1-A1)|<=2r1<2, and Tr F1 is an even integer in[-4,4], Tr F1=0, establishing exactly two positive/two negative eigenvalues."
+    },
+    {
+      "id": "commuting_projection_and_induction",
+      "text": "For already anticommuting Hermitian involutions Fk, Ad(Fk) are commuting selfadjoint involutions in HS space: Ad(Fk)Ad(Fl)=Ad(Fl)Ad(Fk), because the minus signs cancel in conjugation. Pk=(I-Ad(Fk))/2 is therefore an orthogonal HS projection and an op-norm contraction. Their product Cj lies in every minus eigenspace. Telescoping gives hj<=sum_k||Aj-PkAj||HS=(1/2)sum_k||{Aj,Fk}||HS. Since ||Aj||op<2, ||{Aj,Fk}||HS<=e+4rk, hence hj<=(j-1)e/2+2sum rk. Also Cj^2-Aj^2=Cj(Cj-Aj)+(Cj-Aj)Aj, with op norms<2, so square defect<=e+4hj. If this is<1 the sign exists and sign(Cj) anticommutes with all previous Fk by odd spectral calculus. Its distance from Cj is <=square defect, so rj<=e+5hj."
+    },
+    {
+      "id": "exact_constants",
+      "text": "Starting r1/e<=1, h2/e<=5/2 yields r2/e<=27/2<=14; using14 gives h3/e<=31 and r3/e<=156; then h4/e<=687/2 and r4/e<=3437/2<=1719. Square defects are at most11e,125e,1375e respectively, each<1. Every later Fj has zero trace by conjugation with F1; each has ranks(2,2). Sum(1,14,156,1719)^2=2979494<4194304=2^22. Since max s_mu<2, the simultaneous comparison error<=2sum rj^2<2^23K<=2^35T."
+    },
+    {
+      "id": "all_words_common_frame",
+      "text": "For a word of length r>0 choose a generator inside the word when r is even and one outside when r is odd (r=1,3 have an outside generator). Conjugation reverses its sign, so its trace vanishes. Each word is unitary; products of distinct words are plus/minus a nonempty word. The sixteen words thus have HS Gram4I16 and span M4(C), establishing irreducibility directly. The linear map S=1/16sum_word L(Fword)R(Gammaword_dagger) equals the group average for the32-element signed Clifford group because central +/- act identically on this Hom space. Group averaging is an orthogonal projection onto simultaneous intertwiners, not a sum of unrelated component intertwiners. To establish nonzero/image dimension without presuming equivalence: send every Gamma word to the corresponding F word. The common multiplication table and star rules define a unital *-automorphism of M4(C). Images of native matrix units form matrix units. Pick a unit vector in the rank-one image of E11 and transport by images of Ea1; the resulting orthonormal basis implements the automorphism by a unitary U. This proves S nonzero. Every intertwiner X satisfies Udagger X commuting with all Gamma words, hence scalar. Thus rank(S)=1 for EVERY irreducible4x4 complex Clifford tuple, including orientation reversed and arbitrarily phased implementers. For nonzero X, Xdagger X=alpha I, alpha>0. Normalize and multiply by any fourth root of det(U0)^-1 to obtain SU4. Unequal positive s only rescales components and never creates separate frames. Stabilizer is C* scalar unitaries intersect SU4={1,i,-1,-i}I=Z4."
+    },
+    {
+      "id": "bad_and_unbounded_branch",
+      "text": "No moment/UI/tube premise enters the matrix theorem. Sum s_mu<=2||s||2<4. Thus any native comparison C has ||C||tupleHS^2<16; B has ||B||tupleHS^2=4sum x<16+8||delta||2. Squared triangle gives dist^2<64+16||delta||2<=64+2sqrt(T). At T>=2^-52,64<=2^58T and sqrt(T)<=2^26T, so dist^2<(2^58+2^27)T<2^59T. This covers missing/zero components, wrong ranks and unbounded radii pointwise. Combining with good branch proves all-traceless-Hermitian-tuple bound2^59T."
+    },
+    {
+      "id": "same_nu_actual_measure",
+      "text": "For EACH original configuration, partition and root, dist^2(Phi_tree,O_s)<=2||Phi_tree-B||^2+2dist^2(B,O_s). Integrate in the original volume-biased translated-partition/root measure nu induced from canonical rho_N. No occupation/body/field independence or new measure is introduced. The exact retained antecedents are E_nu||Phi_tree-B||^2<=d2 and E_nu T<=eta conditional on the inherited physical realization and SAME-fstar full quantum upper in body_probability_review_proof740722b4. Therefore d_orbit<=2d2+2^60eta. Even consuming only the separately weaker bounds E DeltaJ<=eta and E||delta||^2<=eta/64 gives d_orbit<=2d2+2^61eta. With d2<2^-112 and eta<2^-159 the latter is<2^-111+2^-98=(1+2^-13)2^-98<2^-97. The theorem is an expectation, stronger than a bare matrix good-event probability, but still conditional on those antecedents and actualrho_N."
+    },
+    {
+      "id": "minimizer_covariance_and_selection",
+      "text": "O_s is compact continuous image of SU4, so distance is continuous and each minimizer fibre is nonempty compact. The argmin graph is closed; its compact-valued multifunction admits a Borel selection in this finite-dimensional Polish setting. One can instead apply measurable selection to the closed compact U-fibre of minimizers directly. Gauge conjugation carries O_s onto itself, giving exactly invariant distance and covariant minimizer SET. At Phi=0 the entire orbit minimizes, whereas a globally equivariant single tuple selector would have to be fixed by every SU4 conjugation. Only scalar matrices have that property; the nonzero traceless components of O_s do not. The sequential sign construction IS equivariant on its open good branch and supplies an orbit comparison frame, not generally a nearest frame. Its word-averaged Borel U representation must not be equated with the nearest-orbit selection."
+    },
+    {
+      "id": "literal_Hilbert_consumer",
+      "text": "An invariant nonnegative scalar distance observable is measurable and has finite expectation against the inherited physical marginal. The original density disintegration therefore gives a genuine actualrho_N-weighted expectation bound, not merely the earlier event probability. At most this furnishes an L2 residual norm in the direct-integral probability/fibre representation after a chosen measurable comparison, with the auxiliary root/partition retained. It does NOT produce an equivariant matrix-valued nearest observable or a source-frame ground identity. An arbitrary Borel U field need not preserve the Gauss-equivariant physical section or kinetic form/operator domains; no derivative estimate is provided. Even a measurable fibre unitary on an unreduced L2 space does not establish transport of full H, actual ground or wholeP0. Thus the delivered distance interface follows conditionally; any asserted Hilbert SOURCE/state-frame/domain identification does not follow."
+    }
+  ],
+  "findings": [
+    {
+      "id": "nearest_selector_equivalence_not_valid",
+      "severity": "SUPPORTING_SENTENCE_CORRECTION_NOT_DISTANCE_THEOREM_BLOCKER",
+      "target_revision": "cf3f2c5e196158862e77a6b0bef70fa1dda749982cc2b66bcc7e375faa0f99fd",
+      "target_location": "proof/minimizers_and_measurability, word equivalently",
+      "trigger": "Read the first-nonzero word-averaged good-branch U as a representative of the previously stated NEAREST orbit tuple. A triangular small perturbation with unequal radii repairs sequentially to F, but a shared rational plane rotation gives a strictly smaller total tuple distance.",
+      "consequence": "The constructive comparison U is not generally nearest; using that identification would falsely attest a nearest selection, although both independent measurable nearest existence and the distance bound remain valid.",
+      "smallest_repair": "Separate the two constructions: nearest Borel U exists by compact-fibre measurable selection; the first-nonzero word average gives a Borel U for the sequential comparison tuple only. Do not infer a derivative or state map."
+    }
+  ],
+  "verdict": {
+    "normalized_defect": "VALID",
+    "commuting_sign_construction_and_constants": "VALID",
+    "all16_common_SU4_and_Z4": "VALID_FOR_ALL_IRREDUCIBLE_4X4_CLIFFORD_TUPLES",
+    "pointwise_global_bound": "VALID_2^59T",
+    "actual_same_nu_distance": "CONDITIONALLY_VALID_2d2+2^61eta<2^-97; combined antecedent yields2^60",
+    "nearest_word_average_equivalence": "NOT_VALID; narrow supporting correction required",
+    "distance_minimizer_set_covariance": "VALID",
+    "globally_equivariant_single_selector": "IMPOSSIBLE_AT_Phi0",
+    "Hilbert_source_state_or_domain_map": "UNPAID_NOT_IMPLIED"
+  },
+  "unpaid": [
+    "actual source-frame/state identity",
+    "full-H form/operator-domain transport",
+    "actual fullH ground identification",
+    "wholeP0 source/magnetic/loop Gram",
+    "phase or charged ground selection",
+    "sharp IR atom/commoncone/Compton"
+  ],
+  "language_intelligence": {
+    "root": "/home/administrator/substrate-222",
+    "marker": "pyproject.toml",
+    "native_LSP_symbols": "common_intertwiner positive; document symbols and definition exercised before own source write",
+    "AST": "positive native common_intertwiner declaration",
+    "diagnostics": "Parent-owned, not run",
+    "mounted_LSP": "Unavailable; native pyright-langserver exercised"
+  },
+  "memory": "Status ready; explicit governing-plan bind failed at2MiB CLI output limit, reported to tool QA; supplied parent frozen plan remains authoritative. No plan writes.",
+  "scientific_admission": false,
+  "law_changed": false,
+  "SOURCE_adopted": false,
+  "campaign_complete": false
+}

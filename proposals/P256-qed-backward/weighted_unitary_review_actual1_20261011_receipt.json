@@ -1,0 +1,192 @@
+{
+  "scope": "INDEPENDENT_NATIVE_COEFFICIENT_AND_SEPARATE_SYNTHETIC_LIMIT_CONTROLS",
+  "coefficients": {
+    "scope": "native pinned all65 coefficient arithmetic, not evolution",
+    "role_weights_exact": [
+      "913738143146967/8796093022208",
+      "26483264839360231/140737488355328",
+      "26736592318399821/140737488355328"
+    ],
+    "species": 65,
+    "charged": 64,
+    "normalization": "Tr(T_A T_B)=delta_AB/2; s=|q|^2/2; canonical each2V; Ref4 inert",
+    "B": {
+      "sha256": "1b7c9eb9ac198a7bb987e3c704521cc26565c2a07ca9c9efc43863c9debf62c1",
+      "numerator_bits": 8245,
+      "denominator_bits": 45
+    },
+    "B_over_lambda_upper": 512,
+    "allocations": {
+      "kinetic": {
+        "sha256": "2fca346db656187102ce806ac732e06a62df0dbb2829e511a770556d398e1a6e",
+        "numerator_bits": 6,
+        "denominator_bits": 1
+      },
+      "Phi_matter": {
+        "sha256": "98fdd1bd91443d2c1b95e2895388abd19cb5a173f95df9a8400fe9c48448ccfa",
+        "numerator_bits": 16494,
+        "denominator_bits": 4166
+      },
+      "Phi_alignment": {
+        "sha256": "d5339e09bc5c29cd74522694bf7cb8ec89f6bc5c3ee03817998356d201e047a1",
+        "numerator_bits": 16408,
+        "denominator_bits": 3
+      },
+      "Haar_matter": {
+        "sha256": "b6f04ff6026c8b92cda34e7e0f72c41308853b1e9ce816b01d9592de2779f474",
+        "numerator_bits": 24696,
+        "denominator_bits": 12373
+      },
+      "fullE_matter": {
+        "sha256": "bad62cc214a4b5c06d2fc1d217c25c357e0e11908fd938d790c7fd308d11727f",
+        "numerator_bits": 24693,
+        "denominator_bits": 8269
+      },
+      "matter_matter": {
+        "sha256": "7363cdfb3271e7b22b6d3ceefbf7f6b5d36c0a93a4daafe01ae7903355e89aea",
+        "numerator_bits": 24693,
+        "denominator_bits": 8275
+      },
+      "Haar_alignment": {
+        "sha256": "90470141e95640e4d08390e4b1bb534b33e499f27365768f516a3c944dc5c491",
+        "numerator_bits": 8199,
+        "denominator_bits": 5
+      },
+      "Haar_plaquette": {
+        "sha256": "0969520d70f3f2ad7f46db384d5a727f81486012314f7d99c4596ef445b1232e",
+        "numerator_bits": 16409,
+        "denominator_bits": 5
+      }
+    },
+    "C_index": {
+      "sha256": "d643a5b629a4bafa3874c4fc768d16ff31feb5bf9138c23c004852e0ad8aaa5a",
+      "numerator_bits": 28799,
+      "denominator_bits": 12375
+    },
+    "Cstar": {
+      "sha256": "88ba0fb7ce06cc8fb86494fbb0382fa3124eba700b38a5418c6cc017402268e5",
+      "numerator_bits": 28778,
+      "denominator_bits": 8216
+    },
+    "each_allocation_le_Cstar_over_8": true,
+    "deleted_62_auxiliary_coefficient_defect": "828834361870394451/17592186044416",
+    "C_index_over_Cstar_float": 0.0
+  },
+  "mechanism": {
+    "scope": "synthetic exact noncommuting mechanism and infinite direct sum ONLY, never native fullH",
+    "current_C": 4,
+    "positive_principal_minors": [
+      "8",
+      "20",
+      "44",
+      "151",
+      "352",
+      "736",
+      "5492",
+      "8",
+      "20",
+      "44",
+      "151",
+      "352",
+      "736",
+      "5492"
+    ],
+    "correct_Q_cutoff_current": true,
+    "wrong_rotated_cutoff_defect_squared": "13689/8",
+    "outside_resolvent_identity_exact": true,
+    "deleted_outside_resolvent_rejected": true,
+    "incorrect_outside_unitary_distance": 1.9999999999999998,
+    "deleted_outside_unitary_norm": 0.0,
+    "energy_monotonicity_counterexample": {
+      "original": "569/100",
+      "compressed": "6"
+    },
+    "actual_REAL_expm_controls": [
+      {
+        "t": -0.17,
+        "Q": 8.663524643523765,
+        "bound": 16.77796072395881
+      },
+      {
+        "t": 0,
+        "Q": 8.500000000000002,
+        "bound": 8.500000000000002
+      },
+      {
+        "t": 0.31,
+        "Q": 8.228222098241181,
+        "bound": 29.372714450482746
+      }
+    ],
+    "infinite_form_not_graph_vector": {
+      "normalization": "zeta(4)^(-1/2)",
+      "Q_energy": "11*zeta(2)/zeta(4)",
+      "graph_divergence": "85/zeta(4) per block; sum diverges",
+      "tails": [
+        {
+          "cutoff": 2,
+          "Q_form_tail": 4.013842260813868,
+          "unitary_error_squared_bound": 0.07326178758324178,
+          "deleted_extension_t0_norm_loss_squared": 0.018315446895810446
+        },
+        {
+          "cutoff": 8,
+          "Q_form_tail": 1.1943124949855202,
+          "unitary_error_squared_bound": 0.001992255144737617,
+          "deleted_extension_t0_norm_loss_squared": 0.0004980637861844042
+        },
+        {
+          "cutoff": 32,
+          "Q_form_tail": 0.3126929494647142,
+          "unitary_error_squared_bound": 3.586957331890794e-05,
+          "deleted_extension_t0_norm_loss_squared": 8.967393329726984e-06
+        }
+      ]
+    },
+    "first_mean_not_graph_packets": [
+      {
+        "m": 2,
+        "first_energy": "1/2",
+        "graph_norm_squared": "2"
+      },
+      {
+        "m": 16,
+        "first_energy": "1/16",
+        "graph_norm_squared": "16"
+      },
+      {
+        "m": 128,
+        "first_energy": "1/128",
+        "graph_norm_squared": "128"
+      }
+    ]
+  },
+  "profile_member_sha256": "1c79b1a74c4236079645ebf9765a48c1c2263ec7b7209e9f103704c98752da94",
+  "executable": "/home/administrator/substrate-framework/.venv/bin/python",
+  "source_input_sha256_before": {
+    "weighted_evolution_closure_proof_20261011.json": "40a82a3de1ce02ee64b04982b29fb8b78e6ff28aec1c6d954adb3c4b47ae0cbd",
+    "weighted_evolution_closure_consumer_20261011.py": "1362cd1f3236931a66246f61b4d2d0e1f7a2cf87e4400c322af312a3d9d633a4",
+    "weighted_evolution_closure_actual1_20261011_receipt.json": "cd22b60e462ca4bd2c634651c5e654c41f87cf9021eaaa03fcd705f040ebc6c4",
+    "weighted_evolution_closure_actual1_20261011_capsule.json": "116bd590fa1f487c8f1149a37bc6a4ca73a1ed618d688b159dc5fb5d4662312a",
+    "weighted_evolution_closure_actual1_20261011_preexecution.zip": "e98c0ff09428850ed089cf9c0ca1a248485be95a85ba5d7a11fc442db1c47b1e",
+    "weighted_evolution_closure_actual1_20261011_executed.zip": "17f58876d7a02c70aab4ce854719041645cb79074b2a29fe61d61578e7571a6d",
+    "joined_phi_u1_uniform_gauss_limit_epoch4_20261010_actual_executed_inputs.zip": "8af45d28d48ae0ab8302dcea11cdb9356af972a5373ae2568008ff0a99587649",
+    "weighted_unitary_review_consumer_20261011.py": "dfae3b79d4eaa48706e281dc4a27edcd51dad1160830d90652da271cd0a38905",
+    "weighted_unitary_review_execute_20261011.py": "82f6e34b0e4ee9625af1f9dcb06d93f1b3ba72fff5d57a688bb58871096bf153",
+    "weighted_unitary_review_proof_20261011.json": "2a8f63b77e6248f258f9d0c290d2573278aa8e6e4015bb5b7791e8d5ddc7dec6",
+    "weighted_unitary_review_language_20261011.json": "524ecd67aa51848fca6cfd42e07d946500d72862f4cf527e6f2fee68d9cbe6a6"
+  },
+  "source_input_sha256_after": {
+    "weighted_evolution_closure_proof_20261011.json": "40a82a3de1ce02ee64b04982b29fb8b78e6ff28aec1c6d954adb3c4b47ae0cbd",
+    "weighted_evolution_closure_consumer_20261011.py": "1362cd1f3236931a66246f61b4d2d0e1f7a2cf87e4400c322af312a3d9d633a4",
+    "weighted_evolution_closure_actual1_20261011_receipt.json": "cd22b60e462ca4bd2c634651c5e654c41f87cf9021eaaa03fcd705f040ebc6c4",
+    "weighted_evolution_closure_actual1_20261011_capsule.json": "116bd590fa1f487c8f1149a37bc6a4ca73a1ed618d688b159dc5fb5d4662312a",
+    "weighted_evolution_closure_actual1_20261011_preexecution.zip": "e98c0ff09428850ed089cf9c0ca1a248485be95a85ba5d7a11fc442db1c47b1e",
+    "weighted_evolution_closure_actual1_20261011_executed.zip": "17f58876d7a02c70aab4ce854719041645cb79074b2a29fe61d61578e7571a6d",
+    "joined_phi_u1_uniform_gauss_limit_epoch4_20261010_actual_executed_inputs.zip": "8af45d28d48ae0ab8302dcea11cdb9356af972a5373ae2568008ff0a99587649",
+    "weighted_unitary_review_consumer_20261011.py": "dfae3b79d4eaa48706e281dc4a27edcd51dad1160830d90652da271cd0a38905",
+    "weighted_unitary_review_execute_20261011.py": "82f6e34b0e4ee9625af1f9dcb06d93f1b3ba72fff5d57a688bb58871096bf153",
+    "weighted_unitary_review_proof_20261011.json": "2a8f63b77e6248f258f9d0c290d2573278aa8e6e4015bb5b7791e8d5ddc7dec6",
+    "weighted_unitary_review_language_20261011.json": "524ecd67aa51848fca6cfd42e07d946500d72862f4cf527e6f2fee68d9cbe6a6"
+  }
+}

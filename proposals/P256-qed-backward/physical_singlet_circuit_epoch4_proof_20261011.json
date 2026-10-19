@@ -1,0 +1,277 @@
+{
+  "kind": "EXACT_FULL_PHI_GAUSS_CANONICAL_OPERATOR_SOURCE_AND_COMPLETE_D_H_DOMAIN_BOUND",
+  "source": [
+    "Psi0=f_eta(q) Z_N(t)^(-1/2) exp(-t Ccolour(U)/2) tensor neutral parity wedge4/wedge0 tensor product of32 local wedge2xwedge2 epsilon singlets tensor Ref4 tensor native compact beta0 integer k0.",
+    "f_eta(q)=(2pi eta)^(-15V) exp(-|q|\u00b2/(4eta)), eta2^-4200; t2^7168; Z_N(t)=integral_Haar exp(-t Ccolour) strictly positive. This exact integral-defined normalizer is not numerically evaluated.",
+    "Neutral parity is + when x+y+z even; matching X=(x,x+axis0) for parity+. U_n,X=exp(-epsilon_n [dGamma(-Lambda hhop,n,X),dGamma(Pparity)]) acts on ALL local Fock sectors. Global source has neutral canonical2V, no reference rank2 projector.",
+    "For each matching X let Hhop,c,X=sum_s=1..64 dGamma(T_s,X+adjoint), rho_y=sum_s(n_s,y-2), C_X=[rho_r^2+rho_c^2,Hhop,c,X]. U_c,X=exp(-epsilon_c C_X). All64 species and all0..4 local occupancies are acted on. Disjoint matching edges commute; this is one matching colour of a finite-depth circuit.",
+    "Psi=(product_X U_c,X)(product_X U_n,X)Psi0. Multiplication by gauge-covariant pointwise unitary preserves pointwise matter norm1, so exact global shared norm1. All colour and charged U1 Gauss constraints commute with the circuit. Ref4 remains inert; charged intercell n1/n3 sectors have nonzero tangent and finite-epsilon leakage.",
+    "T_X=sum_mu c_mu (Phi_mu,r U_X+U_X Phi_mu,c)/2 times exp(i theta_X) for charged, no U1 factor neutral. Two-link terms use endpoint fields and the ordered two-link Wilson product, NEVER a midpoint or a frozen frame.",
+    "Original real cover: choose a spanning-tree integral cycle matrix B, d=2V+1, G=B^T B. Product packet g_w(beta)=product_j norm_w^(-1/2) exp[-1/(1-(beta_j/w)^2)] for |beta_j|<w, zero elsewhere, w=1/(64 d TrG). Exact norm_w is the positive 1D squared-bump integral. Then |B beta|\u00b2<=TrG d w\u00b2 and 64E\u00b2 extra<=1/(64dTrG). FullE cross priced by2 times circuit energy plus2 packet energy, already within2^30/site. Native compact beta0 is not a real-cover L2vacuum or a beta minimizer."
+  ],
+  "primitive_binding": {
+    "neutral_improved": false,
+    "neutral_physical_scale": "-Lambda",
+    "charged_scale": 1,
+    "charged_roles": [
+      {
+        "role": "active",
+        "count": 1,
+        "fullPhi_onsite_scalar_exact": "2446017547615601/70368744177664",
+        "archived_frozen_frame_onsite_exact": "2961892062647335631959094750571/158456325028528675187087900672",
+        "path_count": 6
+      },
+      {
+        "role": "auxiliary",
+        "count": 63,
+        "fullPhi_onsite_scalar_exact": "643170321783849/17592186044416",
+        "archived_frozen_frame_onsite_exact": "778817418083908094804051015379/39614081257132168796771975168",
+        "path_count": 6
+      }
+    ],
+    "neutral_onsite_scalar": "6541478458755645/281474976710656",
+    "neutral_paths": [
+      {
+        "displacement": [
+          1,
+          0,
+          0
+        ],
+        "coefficients": [
+          [
+            "-1080863910568919/281474976710656",
+            "0"
+          ],
+          [
+            "0",
+            "-5404319552844595/562949953421312"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "displacement": [
+          0,
+          1,
+          0
+        ],
+        "coefficients": [
+          [
+            "-1080863910568919/281474976710656",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-5404319552844595/562949953421312"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "displacement": [
+          0,
+          0,
+          1
+        ],
+        "coefficients": [
+          [
+            "-1080863910568919/281474976710656",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-5404319552844595/562949953421312"
+          ]
+        ]
+      }
+    ]
+  },
+  "exact_energy_derivation": [
+    "Because matching neutral projector has only diagonal and matched offdiagonal blocks, all nonmatching nearest neutral hoppings have expectation0. Neutral has no two-link paths (actual improved=False). Onsite term is odd under global q->-q whereas projector diagonal is even, hence its full Gaussian integral0 even though Phi0 appears in matching generator.",
+    "Write T=sqrteta Tz; singularvalues sigma(Tz). Exact matched neutral expectation=-2 Lambda sqrteta sum_j sigma_j sin(2 alpha sigma_j). No eigenprojector defines the state; singularvalues are only used to evaluate its expectation. sin x>=x-x^3/6 yields per-site <=Lambda sqrteta[-2alpha M2+(4/3)alpha^3 M4].",
+    "Independent radial endpoints imply M2=15/4 sum_mu|c_mu|\u00b2 independent of U, even under the interacting colour Gibbs wave. Conditional on U, real and imaginary components of vec(Tz) form a centred real Gaussian with covariance Sigma. Wick gives E||Tz||HS4=(TrSigma)^2+2TrSigma\u00b2<=3M2\u00b2<2^24. Therefore M4=ETr[(Tz* Tz)^2]<=E||Tz||HS4<2^24. No unjustified pointwise32|z|\u00b2 estimate is needed.",
+    "Bosonic multiplication potentials are EXACTLY unchanged by the circuits: shared pointwise norm1. Jordan3000Lambda eta\u00b2, alignment(9/2)Feta, colour potential <=(7/5)(F/t)(450+48logt+24). Baseline has matter0 and E0, hence nonnegative; no variational upper substituted for baseline lower.",
+    "Charged matter, including all onsite and one/two paths, is bounded in absolute expectation by2^24 sqrteta/site. Per onsite/path CAR cap<=8||T||, coefficients<64, total all64 and6paths/site, Gaussian E|z|<=sqrt120;2^24 is conservative. Equal aux-pair onsite cancels only BEFORE the circuit; no cancellation asserted after it.",
+    "The paired epsilon singlet is a reused ingredient from bosonic_original_law_join.md406-425, NOT a new source algebra or cancellation of a different sea. For the full-H charged first variation at zero chargedstep, C_X Psi=2Hhop,X Psi. Onsite and field jets preserve local occupations and are orthogonal to this leakage; other one/two hops have different endpoint occupation defects unless they are the selected hop/adjoint. Initial fullE annihilates the compact source. Thus its full-H first derivative is -4||Hhop,X Psi||\u00b2. This does NOT certify finite-step monotonicity or stationarity; the strict final whole-H bound above instead independently prices every finite-step sector.",
+    "Full derivative energy uses ||d(fU)||\u00b2<=2||df||\u00b2+2|f|\u00b2||dU||\u00b2 for colour, and realpart<f*df,U*dU>=0 for radial Phi because U*dU antiHermitian (normalization derivative); either use the conservative2 bound. Source-jet caps below price neutral and full64 charged together with their cross terms, not independent-sea kinetic costs."
+  ],
+  "complete_action": [
+    "For A_X=-epsilon generator, J_d U=integral_0^1 exp((1-s)A)(J_d A)exp(sA) ds. J_d\u00b2 U includes the single J_d\u00b2A insertion plus both time-ordered J_dA insertions. Product circuit jets use Leibniz including every cross-copy and neutral/charged cross. No finite particle-hole tangent truncation is used: exp(A) is the exact finite-CAR exponential with its entire PH tower.",
+    "Put R_X=|q_endpoints|/sqrteta (120 coordinates). From literal coefficients<64, local CAR count<=512 and density cap32768, ||A_n||<=2^10 alpha R_X, ||A_c||<=2^35 delta R_X. RealCart first jets <=(2^10 alpha+2^35 delta)/sqrteta<2^-9/sqrteta; second generator Cart jets0. Ordered colour/U1 first and second jets <=2^-9 R_X (finite product lengths<=2); unitary first jet is bounded by these, second jet <=2^-9 R_X+2^-18 R_X\u00b2. These caps act in ALL local number sectors, not a wholeCAR operator cap independent of unbounded Phi.",
+    "At each Cart coordinate at most one matching gate pair contributes; at each colour/electric edge at most one matching gate pair contributes. Sum over120 endpoint Cartcoordinates and15 colour generators, E R_X\u00b2=120 and E R_X4=14640, absorbs squared derivatives and cross terms into2^30 chi/eta perV for Phi,2^30 chi perV for colour circuit,2^30 perV for full64E\u00b2. Full colour source energy cross already doubled to27chi t/4. This deliberately loose2^30 cap exceeds the above explicit summed moments.",
+    "H Psi = -4chi sum_Cart[(d\u00b2f)Upsi0+2(df)(dU)psi0+f(d\u00b2U)psi0] plus -(3chi/20)sum_colour[(X\u00b2g)U+2(Xg)(XU)+g X\u00b2U] fpsi0 plus -64sum_edge f g dtheta\u00b2Upsi0 plus [VJ+FW+sum_charged dGamma(h_s)-Lambda dGamma(h_n)]Psi. Here U includes both complete circuits and native Gauss section, so HE+HC is once-paid fullE, not two independent terms.",
+    "Ccolour<=24V, |X Ccolour|<=48V and |X\u00b2 Ccolour|<=96V are finite compact bounds (sum over faces); g derivatives contain t,t\u00b2. Radial derivatives are polynomial q/eta and q\u00b2/eta\u00b2. Circuit jets above are polynomial R up todegree2. Matter action is degree1 q with literal finite CAR cap; Jordan is degree4 q; alignment degree2 q, colour potential compact bounded. Thus every displayed complete-H action term is square integrable with explicit Gaussian moments E R^2k=product_j(120+2j), finite positive Z_N(t), and finite colour/U1 domains. Psi belongs D(H) on each finite N, original packets chosen Schwartz. This is a complete analytic action/domain bound, NOT a numerical full-H residual or variance.",
+    "A usable full action norm upper is the triangle sum of the L2 norms of the displayed polynomials: for each Cart derivative use |df/f|<=R/(2sqrteta), |d\u00b2f/f|<=R\u00b2/(4eta)+1/(2eta); colour ratios <=24tV and48tV+576t\u00b2V\u00b2; U jets above; matter <=2^30 Lambda sqrteta V R_all, VJ<=2^20 Lambda eta\u00b2 V R_all4, alignment<=2^20 Feta V R_all\u00b2, colour<=24FV. Gaussian moment products with dimension60V give all these finite numbers. This bound grows with V; no N-uniform variance claimed."
+  ],
+  "debt": [
+    "No numerical full-H variance computed; normupper is never called variance.",
+    "No stationary/minimizing ground, beta0 minimization, localSO5 cancellation, spectral pole, IRphase, commoncone or source adoption.",
+    "All-N strict energetic source is a variational milestone, not campaign closure.",
+    "Finite controls use rescaled fields and deliberately resolvable diagnostic steps; physical exponents handled by exact rational analytic pricing."
+  ],
+  "next_physical_decision": "Use this negative fullPhi/Gauss trial as a new comparison source; derive a stationary ground and same-ground insertion domains before positive Schur/spectral/phase claims.",
+  "campaign_complete": false,
+  "uniform_prices": {
+    "eta_trial": "2^-4200",
+    "alpha_neutral": "2^-20",
+    "epsilon_neutral": "alpha/(Lambda sqrteta)=2^-6112",
+    "delta_charged": "2^-100",
+    "epsilon_charged": "delta/sqrteta=2^2000",
+    "microscopic_parameters_unchanged": true,
+    "neutral_M2_exact": "508196055029096216528358240424035/1267650600228229401496703205376",
+    "neutral_M4_upper_exact": "16777216",
+    "positive_prices_log2_upper": {
+      "Phi_base": 110,
+      "Jordan": -196,
+      "alignment": 6043,
+      "colour_base_and_cross": 3075,
+      "colour_potential": 3092,
+      "all_field_circuit_and_cross": 135,
+      "colour_circuit": -4065,
+      "full_HE_HC": 31,
+      "all64_charged_matter_absolute": -2075
+    },
+    "neutral_negative_magnitude_log2_lower": 6072,
+    "total_energy_upper_per_site": "less than -2^6070",
+    "baseline_exact_energy": "nonnegative (same source before both circuits); every matter expectation0 and native electric0",
+    "Sharp_comparison": "Sharp exact matter0 and bosonic plus electric nonnegative, not its upper used as a lower",
+    "all_even_N_ge4": true,
+    "cases": [
+      {
+        "N": 4,
+        "V": 64,
+        "matching_edges": 32,
+        "neutral_canonical_particles": 128,
+        "charged_copies": 64,
+        "particles_each_charged": 128,
+        "charged_onsite_pairs": 2048,
+        "primitive_directed_charged_paths": {
+          "active": 384,
+          "auxiliary": 24192
+        },
+        "actual_even_parity_matching": true,
+        "strict_total_upper_log2_negative_magnitude_lower": 6076,
+        "original_cover_packet": {
+          "cycle_dimension": 129,
+          "actual_Gram_trace": 738,
+          "compact_beta_halfwidth_exact": "1/6092928",
+          "additional_64E2_upper_exact": "1/6092928",
+          "normalized_full_dimensional": true,
+          "beta0_is_not_real_cover_vacuum": true
+        }
+      },
+      {
+        "N": 6,
+        "V": 216,
+        "matching_edges": 108,
+        "neutral_canonical_particles": 432,
+        "charged_copies": 64,
+        "particles_each_charged": 432,
+        "charged_onsite_pairs": 6912,
+        "primitive_directed_charged_paths": {
+          "active": 1296,
+          "auxiliary": 81648
+        },
+        "actual_even_parity_matching": true,
+        "strict_total_upper_log2_negative_magnitude_lower": 6077,
+        "original_cover_packet": {
+          "cycle_dimension": 433,
+          "actual_Gram_trace": 3242,
+          "compact_beta_halfwidth_exact": "1/89842304",
+          "additional_64E2_upper_exact": "1/89842304",
+          "normalized_full_dimensional": true,
+          "beta0_is_not_real_cover_vacuum": true
+        }
+      }
+    ],
+    "full64_density_caps": {
+      "abs_rho_vertex": 128,
+      "rho_r2_plus_rho_c2": 32768,
+      "commutator_factor": 65536
+    },
+    "physical_floating_evaluation": false
+  },
+  "observed_controls": {
+    "kind": "ACTUAL_CAR_FINITE_FLOAT_CONTROLS_NOT_FULL_FIELD_ENERGY_INTEGRAL",
+    "charged_two_species_canonical_dimension": 4900,
+    "full_neutral_CAR_dimension": 256,
+    "norm": 1.0000000000000002,
+    "RDM_half_identity_error": 1.1102230246251565e-16,
+    "wedge_RDM_I6_over6_error": 5.551115123125783e-17,
+    "nonGaussian_number_variance_actual": 0,
+    "wrong_Wick_number_variance": 1,
+    "SU4_singlet_residual": 6.798699777552591e-17,
+    "actual_mass_difference_action_norm": 3.779562011241122,
+    "wrong_averaged_or_equal_roles_action_norm": 6.696967700439196e-15,
+    "fullrho_wrong_percopy_operator_difference": 6520.710027557108,
+    "tangent_C_equals_2H_error": 0.0,
+    "negative_H_derivative_exact_formula": -3321.8483799596966,
+    "observed_derivative": -3321.8454373808872,
+    "finite_charged_energy": -3.2167308111001445,
+    "SU4_covariance_error": 1.0931892067028527e-14,
+    "U1_Gauss_jet_error": 1.4850835958634874e-18,
+    "electric_second_derivative_action_norm": 3.8159756964591502,
+    "first_jet_error": 1.3109745076010458e-12,
+    "second_jet_error": 1.87546327284596e-07,
+    "neutral_energy_onebody": -0.13738265562954124,
+    "neutral_energy_fullCAR": -0.13738265562954127,
+    "full_neutral_number_sectors": {
+      "0": 0.0,
+      "1": 23.7217587057277,
+      "2": 58.10620463045756,
+      "3": 91.87397641003419,
+      "4": 106.08693002370912,
+      "5": 91.87397641003416,
+      "6": 58.106204630457555,
+      "7": 23.7217587057277,
+      "8": 0.0
+    },
+    "Phi_first_jet_error": 4.81647288562276e-13,
+    "Phi_second_jet_error": 1.533835900023959e-06,
+    "omitted_Phi_derivatives_action_gap": 8.955322408146435e-05,
+    "quadratic_charged_descent_rejected": "RDM=.5I gives Tr(h RDM)=0 for every traceless quadratic singlecopy h, also after any singlecopy orbital rotation",
+    "diagnostic_steps": {
+      "charged": 0.0009765625,
+      "neutral": 0.000244140625
+    },
+    "physical_steps": "NOT these diagnostic steps; exact symbolic physical alpha2^-20/delta2^-100",
+    "fullrho_wrong_finite_state_gap": 0.005024535668194747,
+    "charged_finite_total_vertex_charge_distribution": {
+      "-4": 5.170063358785877e-10,
+      "-3": 1.001705690557505e-07,
+      "-2": 1.310062540450717e-05,
+      "-1": 0.0015596914942184992,
+      "0": 0.9968542143856032,
+      "1": 0.0015596914942184992,
+      "2": 1.3100625404507168e-05,
+      "3": 1.0017056905575049e-07,
+      "4": 5.170063358785877e-10
+    },
+    "charged_Phi_first_jet_error": 7.291608134907704e-12,
+    "charged_Phi_second_jet_error": 3.1059221753903186e-06,
+    "charged_colour_first_jet_error": 7.57441623599255e-12,
+    "charged_colour_second_jet_error": 2.4091041635576157e-06
+  }
+}

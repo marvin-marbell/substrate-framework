@@ -1,0 +1,117 @@
+{
+  "project_root": "/home/administrator/substrate-222",
+  "manifest": "pyproject.toml",
+  "server": "Pyright language server1.1.414",
+  "interpreter": "/home/administrator/substrate-framework/.venv/bin/python",
+  "LSP_adapter_not_mounted": true,
+  "direct_stdio_LSP_used": true,
+  "positive_documentSymbol": true,
+  "positive_definition": {
+    "jsonrpc": "2.0",
+    "id": 4,
+    "result": [
+      {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/auxiliary_sector_energy_consumer_20261012.py",
+        "range": {
+          "start": {
+            "line": 228,
+            "character": 4
+          },
+          "end": {
+            "line": 228,
+            "character": 20
+          }
+        }
+      }
+    ]
+  },
+  "representative_original_diagnostics": [
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "uri": "file:///home/administrator/substrate-222/proposals/P256-qed-backward/auxiliary_sector_energy_consumer_20261012.py",
+        "version": 1,
+        "diagnostics": [
+          {
+            "range": {
+              "start": {
+                "line": 147,
+                "character": 51
+              },
+              "end": {
+                "line": 147,
+                "character": 59
+              }
+            },
+            "message": "Argument of type \"tuple[int, ...]\" cannot be assigned to parameter \"element\" of type \"tuple[Literal[0], Literal[0], Literal[0]]\" in function \"add\"\n\u00a0\u00a0\"tuple[int, ...]\" is not assignable to \"tuple[Literal[0], Literal[0], Literal[0]]\"\n\u00a0\u00a0\u00a0\u00a0Tuple size mismatch; expected 3 but received indeterminate",
+            "severity": 1,
+            "code": "reportArgumentType",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+            }
+          },
+          {
+            "range": {
+              "start": {
+                "line": 182,
+                "character": 10
+              },
+              "end": {
+                "line": 182,
+                "character": 85
+              }
+            },
+            "message": "No overloads for \"simplify\" match the provided arguments",
+            "severity": 1,
+            "code": "reportCallIssue",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportCallIssue"
+            },
+            "relatedInformation": [
+              {
+                "location": {
+                  "uri": "file:///home/administrator/substrate-framework/.venv/lib/python3.12/site-packages/sympy/simplify/simplify.py",
+                  "range": {
+                    "start": {
+                      "line": 432,
+                      "character": 4
+                    },
+                    "end": {
+                      "line": 432,
+                      "character": 12
+                    }
+                  }
+                },
+                "message": "Overload 4 is the closest match"
+              }
+            ]
+          },
+          {
+            "range": {
+              "start": {
+                "line": 182,
+                "character": 21
+              },
+              "end": {
+                "line": 182,
+                "character": 84
+              }
+            },
+            "message": "Argument of type \"Unknown | Expr | Any | Literal[0]\" cannot be assigned to parameter \"expr\" of type \"Basic\" in function \"simplify\"\n\u00a0\u00a0Type \"Unknown | Expr | Any | Literal[0]\" is not assignable to type \"Basic\"\n\u00a0\u00a0\u00a0\u00a0\"Literal[0]\" is not assignable to \"Basic\"",
+            "severity": 1,
+            "code": "reportArgumentType",
+            "source": "Pyright",
+            "codeDescription": {
+              "href": "https://github.com/microsoft/pyright/blob/main/docs/configuration.md#reportArgumentType"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "positive_AST": "ast-grep known def trial_comparison; Python3 standard AST known function",
+  "changed_source_diagnostics_owner": "Parent only; no midflight standalone check"
+}
